@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="fsr-reviews-homeland" class="original">FSR Reviews Homeland</a>
+    </h2>
+    <time datetime="2013-10-15" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/10">10</a>/15 13:32:33
+</time>
+
+    
+    <p>Film School Rejects&#8217; Inkoo Kang has been posting fantastic reviews of each new Homeland episode shortly after their premiere. Now at three articles, one whole review for each of the three episodes out to date, I have been thoroughly enjoying her examination of the plot lines, undertones, direction, and parallels present in this show almost as much as I enjoy watching each episode.</p>
+    
+    <p>If you haven&#8217;t ever seen Homeland, or haven&#8217;t caught up to the latest season yet, I cannot emphasize this point strongly enough: do <em>not</em> read her reviews; it would be a disservice to both her and the show should you read them having not seen every single show preluding it, and without a firm grasp of the show&#8217;s plot and undertones. If you have followed the show religiously though since its debut, I can&#8217;t recommend Kang&#8217;s articles strongly enough.</p>
+    
+    <ol>
+<li><a href="http://www.filmschoolrejects.com/features/homeland-review-season-three-premiere.php">&#8220;Homeland&#8221; Review: Season Three Premiere Reboots the Show</a></li>
+    <li><a href="http://www.filmschoolrejects.com/features/homeland-review-season-3-episode-2-uh-oh-ah.php">&#8220;Homeland&#8221; Review: Things That Make You Go Uh...Oh...Ah...</a></li>
+    <li><a href="http://www.filmschoolrejects.com/features/homeland-review-tower-of-david.php">&#8220;Homeland&#8221; Review: &#8220;You Belong Here&#8221; in the &#8220;Tower of David&#8221;</a></li>
+</div>
+</article>
+{% endblock %}

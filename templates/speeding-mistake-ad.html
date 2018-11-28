@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.loopinsight.com/2014/01/08/speeding-mistake-ad/" class="linkpost">Speeding Mistake Ad</a>
+    </h2>
+    <time datetime="2014-01-08" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/01">01</a>/08 10:12:25
+</time>
+
+    
+    <p>As a rule I avoid publishing links to articles I find on popular tech sites such as Jim Dalrymple&#8217;s when I do not have anything significant to add to the conversation, but I had to make an exception for this post. When I watched it earlier this morning, I immediately tried to discount it and distance myself from the discomfort it caused me. I have pushed the speed limit on occasion&#160;&#8212;&#160;albeit never so egregiously&#160;&#8212;&#160;and rarely thought about the potential consequences besides a speeding ticket. Everyone who owns a car ought to watch this video, and think long and hard about it next time they feel like punching it.</p>
+</div>
+</article>
+{% endblock %}

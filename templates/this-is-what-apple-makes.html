@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://peroty.com/blog/wrote-about/this-is-what-apple-makes/" class="linkpost">This is what Apple makes</a>
+    </h2>
+    <time datetime="2014-06-24" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/06">06</a>/24 07:18:02
+</time>
+
+    
+    <p>It&#8217;s often said, especially by those who profess to understand Apple on a fundamental level, that the company is not in the business of making strictly hardware or software, or even iPhones and Macs. However, although that realization comes readily enough, the gap it leaves explaining what, exactly, Apple does do if not build computers and operating systems, has proven elusive at best. After WWDC though, we have another great opportunity to inspect this underlying motivation, courtesy of Ben Alexander and Carl Holscher. Carl&#8217;s article is short, but that is because the point he makes is uncomplicated, and rightly so.</p>
+</div>
+</article>
+{% endblock %}

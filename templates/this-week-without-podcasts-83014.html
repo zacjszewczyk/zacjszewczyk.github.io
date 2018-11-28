@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="this-week-without-podcasts-83014" class="original">This Week Without Podcasts</a>
+    </h2>
+    <time datetime="2014-08-31" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/08">08</a>/31 07:22:43
+</time>
+
+    
+    <p>For the past five months I have continued publishing a series of articles dubbed &#8220;This Week in Podcasts&#8221;. Born of my love for the medium, I have curated these lists to great results, and to my great enjoyment. However, this week I find myself in an unfortunate position: although I have worked diligently to get through my growing queue of unplayed podcast episodes over the past week, I have yet to find anything that merits inclusion in this list. I have had the privilege of listening to some great shows, but nothing struck me as particularly excellent and worthy of mention, unfortunately. And so, I have nothing to share with you today. I apologize, and look forward to something more next week.</p>
+</div>
+</article>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.smashingmagazine.com/2009/08/20/typographic-design-survey-best-practices-from-the-best-blogs/" class="linkpost">Typographic Design Patterns and Best Practices</a>
+    </h2>
+    <time datetime="2014-10-03" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/10">10</a>/03 10:42:32
+</time>
+
+    
+    <p>A great companion to yesterday&#8217;s post, <a href="/blog/10-typeface-pairs-for-cash-poor-designers">10 Typeface Pairs for Cash-Poor Designers</a>, for those looking to improve the design of their site through the adoption of strong design principles. Despite its original publication date of 2009, the best practices Michael Martin puts forth here have retained their value over the years in an excellent resource for aspiring designers. I have applied some of these lessons, too, in the creation of my elusive latest project. Look for more on this soon.</p>
+</div>
+</article>
+{% endblock %}

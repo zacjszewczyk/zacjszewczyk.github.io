@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://daringfireball.net/2013/10/this_weeks_ipad_event" class="linkpost">John Gruber on Apple's October Event</a>
+    </h2>
+    <time datetime="2013-11-07" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/11">11</a>/07 19:11:47
+</time>
+
+    
+    <p>I realize I have come late to the party, but after just two weeks that does not change the relevancy of John Gruber&#8217;s article written in the wake of Apple&#8217;s October iPad event. Many wrote about a single aspect: Marco <a href="http://www.marco.org/2013/10/24/off">chimed in on the presentation itself</a>, and I devoted an entire article to the notion of <a href="/blog/the-ipad-pro">an upcoming iPad Pro</a>; others, <a href="http://www.loopinsight.com/2013/10/22/thoughts-on-the-apple-event/">such as Jim Dalrymple</a>, attempted the more monumental task of tackling the entire event; still others put forth more opinion-based pieces, such as Shawn Blanc&#8217;s <a href="http://shawnblanc.net/2013/10/best-in-class-built-to-last/"><em>Best in Class, Built to Last</em></a>. None, however, did such a good job as John in not only conveying his thoughts and observations regarding the event, but presenting both those ideas and Apple&#8217;s announcements in context born from years of experience in this industry.</p>
+    
+    <p>This is why John Gruber is so famous amongst the generation of writers, and why so many respect him; this is why I read Daring Fireball, for these impressively insightful pieces that inspire me to become a better writer myself. John gives me a bar to strive for, and one that I someday hope to reach.</p>
+</div>
+</article>
+{% endblock %}

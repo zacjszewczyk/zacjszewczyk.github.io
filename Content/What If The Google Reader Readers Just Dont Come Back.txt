@@ -1,0 +1,9 @@
+Type: linkpost
+Title: What If The Google Reader Readers Just Don't Come Back?
+Link: http://www.marco.org/2013/03/26/google-reader-readers
+Pubdate: 2013/03/26 16:45:58
+Author: Zac Szewczyk
+
+Marco Arment and MG Siegler on potential reader loss due to Google Reader's impending demise:  
+
+    "I'm a little worried about this possibility. Short-term, it will definitely be a problem. Long-term is the question."

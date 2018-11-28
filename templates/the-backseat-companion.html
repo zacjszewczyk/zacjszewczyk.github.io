@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://thebackseatcompanion.tumblr.com/" class="linkpost">The Backseat Companion</a>
+    </h2>
+    <time datetime="2014-03-18" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/03">03</a>/18 11:17:27
+</time>
+
+    
+    <p>It&#8217;s taken me way too long, but I finally got some time to read the backlog of email newsletters in my inbox. Alongside <a href="https://secure.huckberry.com/users/sign_up">Huckberry&#8217;s</a> and <a href="http://ben-evans.com/newsletter/">Benedict Evans&#8217; Mobile Newsletter</a>, today I read my first issue of The Backseat Companion&#160;&#8212;&#160;and let me tell you, I loved it. The Backseat Companion is everything a newsletter should be: interesting, informative, humorous&#160;&#8212;&#160;a joy to read, to be sure. If MailChimp isn&#8217;t your thing, you can also read <a href="https://medium.com/@backseatcomp">past issues on Medium</a>. Regardless of where you go though, you&#8217;ll have to head over to <a href="http://thebackseatcompanion.tumblr.com/">Gianfranco Lanzio and Diego Petrucci&#8217;s tumblr to subscribe</a>. Do yourself a favor and just head over there now though: you&#8217;ll be there soon enough anyways.</p>
+</div>
+</article>
+{% endblock %}

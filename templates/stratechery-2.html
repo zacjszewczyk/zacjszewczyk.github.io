@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://stratechery.com/2014/welcome-stratechery-20/" class="linkpost">Stratechery 2.0</a>
+    </h2>
+    <time datetime="2014-04-17" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/04">04</a>/17 15:42:55
+</time>
+
+    
+    <p>As of yesterday, Ben Thompson has gone indie: after <a href="/blog/ben-thompson-on-the-future-of-news-and-newspapers">a three-part series</a> examining the decline of newspapers and the role of individual writers in this new world order, he took his own words to heart in crafting an impressive business model consisting of three membership tiers, each chock-full of some very compelling offerings. Along with an excellent new weekly podcast called <a href="http://stratechery.fm">Stratechery.fm</a>&#160;&#8212;&#160;whose first episode, <a href="http://stratechery.fm/episode-001-welcome-to-stratechery-fm/">Welcome to Stratechery.fm</a>, I plan to cover at length in this week&#8217;s installment of This Week in Podcasts&#160;&#8212;&#160;he intends to publish much more often and in this way make writing for Stratechery his full-time job. I <a href="https://stratechery.com/membership/">became a member</a>, and I hope you will too; we could use more intelligent analysis in the tech industry these days, and Ben Thompson is just the man for the job.</p>
+</div>
+</article>
+{% endblock %}

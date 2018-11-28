@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="https://blog.pinboard.in/2013/06/persuading_david_simon/" class="linkpost">Persuading David Simon</a>
+    </h2>
+    <time datetime="2013-06-20" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/06">06</a>/20 19:54:07
+</time>
+
+    
+    <p>While I don&#8217;t agree with many of the author&#8217;s points, nor do I agree with her overarching theme, she did, however, say a number of interesting things throughout the piece. I tried, for the most part, to stay away from articles written on this topic, but this one is well worth the read.</p>
+    
+    <blockquote>
+<p>&#8220;The security state operates as a ratchet. Once you click in a new level of surveillance or intrusiveness, it becomes the new baseline. What was unthinkable yesterday becomes permissible in exceptional cases today, and routine tomorrow."</p>
+</div>
+</article>
+{% endblock %}

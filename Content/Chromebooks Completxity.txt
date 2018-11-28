@@ -1,0 +1,9 @@
+Type: linkpost
+Title: Chromebooks and the Cost of Complexity
+Link: http://stratechery.com/2014/chromebooks-cost-complexity/
+Pubdate: 2014/01/08 20:11:56
+Author: Zac Szewczyk
+
+Had I picked one paragraph or sentence as a pull quote from Ben Thompson's *Chromebooks and the Cost of Complexity*, I would have done the rest of his article a great disservice by holding one fascinating line above another equally excellent passage. Having read Stratēchery for a few months now, I can honestly say that out of all his articles, I consider this one by far and away his best.  
+
+Also of interest, Ben posted a followup piece earlier today titled [*The Best Analogy for Chromebooks are iPads*](http://stratechery.com/2014/the-best-analogy-for-chromebooks-are-ipads/), where he explained the use case of a Chromebook and its similarity to that of an iPad. When I can justify another large technology expenditure, I will have to do some serious work to talk myself out of a Chromebook after these two articles.

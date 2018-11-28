@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://wholelarderlove.com/an-idealistic-notion/" class="linkpost">An idealistic notion</a>
+    </h2>
+    <time datetime="2014-09-05" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/09">09</a>/05 10:46:59
+</time>
+
+    
+    <p>I <a href="/blog/walk-it-off-brother">first</a> came across Rohan Anderson and his writing through a video titled &#8220;<a href="http://vimeo.com/48864768">The Smokehouse</a>&#8221;, where he talked about and demonstrated his efforts to construct a smokehouse completely by hand. Since that cool winter night almost a year ago now, I have continued following Rohan&#8217;s activities through his excellent blog, <a href="http://wholelarderlove.com/">Whole Larder Love</a>, and have linked to a number of his articles in the weeks and months since then. If my implicit endorsement of everything he says and stands for has not been enough to warrant your attention, though, let me come out and say it once more, this time explicitly: if you have any interest whatsoever in the outdoors, farming, sustainability, independence, health, cooking, photography, or alternative lifestyles, I implore you to spend some time learning about Rohan&#8217;s lifestyle choices and the reasons he made those decisions. And this post, <a href="http://wholelarderlove.com/an-idealistic-notion/">An idealistic notion</a>, is a great place to start.</p>
+</div>
+</article>
+{% endblock %}

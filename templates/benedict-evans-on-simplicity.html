@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://ben-evans.com/benedictevans/2013/10/27/simplicity" class="linkpost">Benedict Evans on Simplicity</a>
+    </h2>
+    <time datetime="2013-11-10" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/11">11</a>/10 14:00:04
+</time>
+
+    
+    <p>From last month but no less applicable now, Benedict Evans takes a few moments to break down the core businesses of Apple, Amazon, and Google. And that&#8217;s all it took: a few moments. If only more &#8220;tech journalists&#8221; would read this before writing&#160;&#8212;&#160;or performing some semblance of the act&#160;&#8212;&#160;their next article.</p>
+</div>
+</article>
+{% endblock %}

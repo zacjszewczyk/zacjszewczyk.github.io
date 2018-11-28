@@ -1,0 +1,7 @@
+Type: linkpost
+Title: The Daily Show on Glassholes
+Link: http://daringfireball.net/linked/2014/06/18/daily-show-glass
+Pubdate: 2014/07/21 07:14:29
+Author: Zac Szewczyk
+
+Absolutely hilarious video, courtesy of John Gruber--with the choice line taken as an excerpt: "Magellan Was an Explorer. Chuck Yeager Was an Explorer. You Guys Have a Fucking Camera on Your Face." I was rather bullish on the widespread reaction to Google Glass the other day when I wrote [Thoughts on Glass](Thoughts on Glass.txt), but I can still appreciate some great humor when I see it. Very well done.

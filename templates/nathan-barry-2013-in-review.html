@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://nathanbarry.com/2013-review/" class="linkpost">Two Years After Quitting My Job: 2013 in Review</a>
+    </h2>
+    <time datetime="2014-01-02" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/01">01</a>/02 15:12:24
+</time>
+
+    
+    <p>Sitting here trying to decide the best way to fulfill <a href="/blog/i-dont-write-for-pageviews">my goals for this website</a>, I found Nathan Barry&#8217;s post&#160;&#8212;&#160;and, subsequently, his past &#8220;year in review&#8221; updates&#160;&#8212;&#160;simultaneously inspiring and disheartening all at once. On the one hand, we have an amazing success story: after quitting his job Nathan has nearly doubled his salary every year, to say nothing for his readership and all his other impressive accomplishments; on the other hand, though, more than a year has passed since I started this website and I cannot consistently attract twenty pageviews a day. Needless to say, I make nothing for the countless hours I devote to this profession. No matter how much I want to take this from a nights and weekend hobby to a full-time venture, I have no choice but to keep waking up each morning and driving off to work.</p>
+</div>
+</article>
+{% endblock %}

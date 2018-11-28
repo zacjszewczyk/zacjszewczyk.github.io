@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://stratechery.com/2014/chromebooks-cost-complexity/" class="linkpost">Chromebooks and the Cost of Complexity</a>
+    </h2>
+    <time datetime="2014-01-08" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/01">01</a>/08 20:11:56
+</time>
+
+    
+    <p>Had I picked one paragraph or sentence as a pull quote from Ben Thompson&#8217;s <em>Chromebooks and the Cost of Complexity</em>, I would have done the rest of his article a great disservice by holding one fascinating line above another equally excellent passage. Having read Stratēchery for a few months now, I can honestly say that out of all his articles, I consider this one by far and away his best.</p>
+    
+    <p>Also of interest, Ben posted a followup piece earlier today titled <a href="http://stratechery.com/2014/the-best-analogy-for-chromebooks-are-ipads/"><em>The Best Analogy for Chromebooks are iPads</em></a>, where he explained the use case of a Chromebook and its similarity to that of an iPad. When I can justify another large technology expenditure, I will have to do some serious work to talk myself out of a Chromebook after these two articles.</p>
+</div>
+</article>
+{% endblock %}

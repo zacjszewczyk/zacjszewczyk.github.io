@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="https://www.youtube.com/watch?v=Yo5cKRmJaf0" class="linkpost">"We Need to Talk About TED"</a>
+    </h2>
+    <time datetime="2013-12-31" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/12">12</a>/31 19:30:11
+</time>
+
+    
+    <p>For everyone waiting on TEDx to release Ben Bratton&#8217;s &#8220;<a href="http://www.bratton.info/projects/talks/we-need-to-talk-about-ted/">We need to talk about TED</a>&#8221; video, here you go. <a href="/blog/we-need-to-talk-about-ted">Since reading his transcript</a> I have kept the page open in anticipation of TEDx releasing this, and I still managed to miss it by a day. If you enjoyed the transcript, you&#8217;ll love the talk.</p>
+</div>
+</article>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://morganelye.com/articles/10-typeface-pairs-for-cash-poor-designers" class="linkpost">10 Typeface Pairs for Cash-Poor Designers</a>
+    </h2>
+    <time datetime="2014-10-02" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/10">10</a>/02 11:36:25
+</time>
+
+    
+    <p>As I continue work on an as of yet unnamed and unreleased project, I came across this great article by Morgan Gilpatrick from a number of years ago that still maintains its relevance today. Here he puts forth nine different font combinations paired according to a matrix of criteria, and to great results. I plan on returning here and to other resources like it when it comes time to redesign this site once again; great advice, especially helpful to those of us on the fringe of design.</p>
+</div>
+</article>
+{% endblock %}

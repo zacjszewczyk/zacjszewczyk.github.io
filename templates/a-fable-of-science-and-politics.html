@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://lesswrong.com/lw/gt/a_fable_of_science_and_politics/" class="linkpost">A Fable of Science and Politics</a>
+    </h2>
+    <time datetime="2013-04-08" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/04">04</a>/08 14:54:41
+</time>
+
+    
+    <p>"Imagine a future society that flees into a vast underground network of caverns and seals the entrances.  We shall not specify whether they flee disease, war, or radiation; we shall suppose the first Undergrounders manage to grow food, find water, recycle air, make light, and survive, and that their descendants thrive and eventually form cities.  Of the world above, there are only legends written on scraps of paper; and one of these scraps of paper describes the sky, a vast open space of air above a great unbounded floor.  The sky is cerulean in color, and contains strange floating objects like enormous tufts of white cotton.  But the meaning of the word &#8220;cerulean&#8221; is controversial; some say that it refers to the color known as &#8216;blue', and others that it refers to the color known as &#8216;green'.&#8221;</p>
+    
+    <p>A fantastic narrative from Eliezer Yudkowsky writing over at Less Wrong. Not merely about science and politics though, as the title suggests, but about human nature, hatred, and progress as well.</p>
+</div>
+</article>
+{% endblock %}

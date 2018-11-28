@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="getting-out-of-the-office" class="original">Getting Out of the Office</a>
+    </h2>
+    <time datetime="2013-05-31" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/05">05</a>/31 17:58:38
+</time>
+
+    </blockquote>
+
+    <p>For the past three days, I&#8217;ve gotten out of &#8220;the office&#8221; to write, meaning instead of in my room where I usually write, I went outside and sat in the backyard. And it&#8217;s done wonders for my work.</p>
+    
+    <p>I&#8217;ve read articles suggesting such an exodus from the traditional place of work in the past, but never placed very much stock in them. I could write anywhere I wanted, I reasoned, I didn&#8217;t need some trick to make writing easier. And while that was and still is true, that doesn&#8217;t mean tricks like leaving the office or <a href="/blog/the-terrible-first-draft">writing a bad first draft</a> aren&#8217;t worth something.</p>
+</div>
+</article>
+{% endblock %}

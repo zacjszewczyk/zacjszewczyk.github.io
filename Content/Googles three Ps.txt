@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Google's three Ps
+Link: http://www.asymco.com/2014/01/17/googles-three-ps/
+Pubdate: 2014/01/20 08:20:43
+Author: Zac Szewczyk
+
+Last week Ben Thompson posted two fantastic articles describing [the inevitable shift in business models 2014 will likely bring about](http://stratechery.com/2014/business-models-2014/) and [the actual implications of Nest's acquisition by Google](http://stratechery.com/2014/googles-new-business-model/), respectively. Then, Friday afternoon, Horace Dediu chimed in with his own fascinating two cents when he published [*Google's three Ps*](http://www.asymco.com/2014/01/17/googles-three-ps/). As interesting as I find their examinations of Apple, I enjoyed these in-depth looks at Google immensely.

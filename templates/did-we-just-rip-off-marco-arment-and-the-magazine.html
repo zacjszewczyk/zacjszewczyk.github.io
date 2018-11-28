@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.marco.org/2013/03/02/type-engine" class="linkpost">"Did we just rip off Marco Arment and The Magazine?"</a>
+    </h2>
+    <time datetime="2013-03-02" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/02 11:14:43
+</time>
+
+    </blockquote>
+
+    <p>"The Magazine isn&#8217;t successful because I have red links, centered sans-serif headlines, footnote popovers, link previews, and a white table-of-contents sidebar that slides over the article from the left with a big shadow even on iPhone. It isn&#8217;t successful because authors write in Markdown, the CMS gracefully supports multi-user editing, we preview issues right on our devices as we assemble them, and any edits we make after publication are quickly and quietly patched into the issue right as people are reading it. Very little of this matters.&#8221;</p>
+    
+    <p>It&#8217;s an all-too-common belief these days, the idea that creating a website mimicking both the design and posting strategy of those bloggers we hold in high regard can somehow catapult us to a similar level of success. But as Marco goes on to say in the aforementioned blog post, design and presentation exist on the outside of a system in which content is the key that unlocks both loyal readership and phenomenal success.</p>
+</div>
+</article>
+{% endblock %}

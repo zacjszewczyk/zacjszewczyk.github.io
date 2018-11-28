@@ -1,0 +1,9 @@
+Type: linkpost
+Title: Civilized Discourse Construction Kit
+Link: http://www.codinghorror.com/blog/2013/02/civilized-discourse-construction-kit.html
+Pubdate: 2013/02/06 10:24:25
+Author: Zac Szewczyk
+
+"I greatly admire what WordPress did for the web; to say that we want to be the WordPress of forums is not a stretch at all. We’re also serious about this eventually being a viable open-source business, in the mold of WordPress. And we’re not the only people who believe in the mission: I’m proud to announce that we have initial venture capital funding from First Round, Greylock, and SV Angel. We’re embarking on a five year mission to improve the fabric of the Internet, and we’re just getting started. Let a million discussions bloom!"  
+
+Jeff Atwood of Coding Horror announcing the release of a next-generation open source forum software toolkit designed to promote constructive and productive discussions across the modern web. Although in recent years I have made it a point to avoid forums at all costs, [Discourse](http://www.discourse.org/) just might bring me and many others back.

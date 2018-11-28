@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="the-abandonment-of-my-morals" class="original">The Abandonment of My Morals</a>
+    </h2>
+    <time datetime="2013-01-28" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/01">01</a>/28 08:40:20
+</time>
+
+    
+    <p>I can&#8217;t quite say for sure why I decided to go with this title, or, rather, what made it come to mind as the clock neared midnight last night. I had just finished <a href="/blog/the-art-of-not-saying-anything"><em>The Art of Not Saying Anything</em></a> a few minutes ago, and some part of my mind was bemoaning the abandonment of a great majority of the lessons my English teacher instilled within me not long ago. Namely, to avoid be verbs and contractions; to write grammatically correct sentences; never to start a sentence with a conjunction; and never to address the reader directly. Over the past few months I have slowly abandoned many of these beliefs&#160;&#8212;&#160;these morals, if you will&#160;&#8212;&#160;one by one as I continue to evolve as a writer.</p>
+</div>
+</article>
+{% endblock %}

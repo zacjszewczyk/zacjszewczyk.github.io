@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://stratechery.com/2014/microsofts-mobile-muddle/" class="linkpost">Microsoft's Mobile Muddle</a>
+    </h2>
+    <time datetime="2014-02-14" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/02">02</a>/14 12:52:13
+</time>
+
+    
+    <p>I cited this quote <a href="https://twitter.com/zacjszewczyk/status/434380340157616128">on Twitter</a> and I&#8217;ll do so again here: &#8220;Saying &#8216;Microsoft missed mobile&#8217; is a bit unfair ... Not that that should make Satya Nadella sleep any better at night.&#8221; I love this, and I found the rest of Ben&#8217;s article on Microsoft&#8217;s mobility saga very interesting as well. This is Strat&#38;#275;chery at its best, folks; great work by Ben Thompson, as usual.</p>
+</div>
+</article>
+{% endblock %}

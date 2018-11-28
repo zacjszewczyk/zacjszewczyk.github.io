@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Critiquing Disruption Theory
+Link: http://stratechery.com/2014/critiquing-disruption-theory/
+Pubdate: 2014/07/14 07:28:36
+Author: Zac Szewczyk
+
+I linked to this piece by Ben Thompson in the title only because it is his most recent on the topic of disruption theory; I strongly encourage you to start with his earlier piece from last year titled "[What Clayton Christenson Got Wrong](http://stratechery.com/2013/clayton-christensen-got-wrong/)", where he more fully explains the theory and further expands upon some of its flaws. Especially if you--like me until now--only know of Disruption Theory in the abstract as explained in passing here and there, these two articles from Ben are a fantastic place to start.

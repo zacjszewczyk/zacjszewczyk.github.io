@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="hacker-news-blacklisted" class="original">My Router Blacklisted Hacker News</a>
+    </h2>
+    <time datetime="2013-01-05" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/01">01</a>/05 17:59:31
+</time>
+
+    
+    <p>Over the course of the last few days I have begun developing a new app to replace <a href="http://hnpickup.appspot.com/">Hacker News Story Pickup Rate</a>, a site that aims to take the guesswork out of submitting stories to Hacker News by using various heuristics to determine the best time to submit a story in order to gain the most attention. Partway through last week Hacker News Story Pickup Rate went down, and as of January 1st it had not gone back online.</p>
+    
+    <p>This afternoon, as I began testing a few new metrics by which to judge site activity, I started refreshing the &#8220;New&#8221; page on Hacker News to judge the progression of timestamps on each of the articles. My goal was to catch a just-submitted article by another user in order to determine whether new articles appear to the public dated &#8220;0 Minutes ago&#8221; or automatically marked as having been submitted &#8220;1 Minutes ago&#8221;. Naturally, then, in order to catch an article within such a small window, I refreshed the page very often&#160;&#8212;&#160;roughly twice every three seconds or so. I did this for around thirty seconds, then I received a 324 error stating that the server had severed the connection without serving any content. Curious, I took all the usual steps one might go through to resolve a strange occurrence such as this one: I tried refreshing the page again, clearing my cache, and restarting Chrome. All of those failing, I checked <a href="http://www.isup.me">Down For Everyone or Just Me?</a>, a service that, as the name suggests, will query a given website to determine whether it has gone offline or if it is only unavailable to you; it was just me.</p>
+    
+    <p>At this point I really started getting curious, so I dug Internet Explorer out of its grave, resuscitated the long-since dead browser, and managed to get it running long enough to find that it too would not open Hacker News. I also tried opening Hacker News first on my iPad, then on my iPhone, and then on another computer in my house, but received the same result from all instances: a 324 error. As a last resort I then started Tor and opened Hacker News; it opened just fine. Tor is essentially a very sophisticated proxy that routs internet traffic through a bundled version of Firefox Portable in order to preserve the anonymity of its users. Pursuant of that goal, Tor masks the user&#8217;s IP address, location, and other aspects that can be used to positively identify a computer. by first encrypting any web traffic directed through Firefox Portable and then passing that traffic to relay points around the world where it is decrypted and parsed to return the desired webpage. The fact that Hacker News loaded in Tor led me to a theory I corroborated a few minutes later by disabling WiFi on my iPhone and successfully loading Hacker News through my cellular data connection: for some reason, my router blacklisted Hacker News. And just Hacker News too, not the top-level domain ycombinator.org or any of its other subdomains; just news.ycombinator.org.</p>
+    
+    <p>Although I spent the rest of the evening trying everything from resetting my modem to updating my router&#8217;s firmware, Hacker News remains blacklisted on my network. It&#8217;s a simple enough workaround using a proxy such as <a href="http://www.uswebproxy.com/">US Web Proxy</a>, but it is nevertheless a great inconvenience both in that I cannot as easily obsessively check Hacker News throughout the day, and that it had put a stop to the development of a new app I&#8217;m creating to replace <a href="http://hnpickup.appspot.com/">Hacker News Story Pickup Rate</a>.</p>
+</div>
+</article>
+{% endblock %}

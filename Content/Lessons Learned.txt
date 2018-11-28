@@ -1,0 +1,59 @@
+Type: original
+Title: Lessons Learned
+Link: Lessons Learned.htm
+Pubdate: 2014/01/30 09:19:18
+Author: Zac Szewczyk
+
+In 2012, Shawn Blanc marked the fifth anniversary of starting his site by publishing an article titled [*50 Things I've Learned About Publishing a Weblog*](http://shawnblanc.net/2012/07/50-things/). Filled with some of the best advice I have ever read on the subject, I return to this article every few months, gleaning just a little bit more each time. When I look back on the years since I started following Shawn, this piece stands out in my mind as his best work. And so, given how much I enjoyed his advice, I thought I would create my own list of lessons learned over the last few years of writing on the web.  
+
+Taking a cue from Shawn, I will do my best to keep most of these brief; however, a few warrant some explanation, and so when necessary I will break uniformity for the sake of clarity.  
+
+* The incumbents became huge and successful for a reason, and have remained huge and successful for a reason. The former and latter are not always the same.  
+
+* Failing to fully understand something is often the reason so many discount and disparage it.  
+
+* Spend more time complimenting others' work than criticizing it.  
+
+* "You radically overestimate the average skill of the competition because of the crowd you hang around with." [Credit Patrick McKenzie](http://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/) for this gem I couldn't resist adding in here.  
+
+* Never say "I could have done that." Maybe you could have, but you didn't, so you have lost the privilege to claim that idea as your own.  
+
+* Take incredible pride in your own work.  
+
+* Show up every day prepared to work harder than yesterday.  
+
+* Never waste your time.  
+
+* Never waste another's time.  
+
+* Realize that everyone values their own time more than everyone else's; in other words, as much as you value your own.  
+
+* You will never regret reading more than you write.  
+
+* Always have a good reason for everything you do.  
+
+* Never lose sight of an ultimate end-goal informing your every decision, lest you stray from your intended path and fall to ruin.  
+
+* You probably aren't as smart as you think you are.  
+
+* Everyone else is definitely not as dumb as you think.  
+
+* You may very well be wrong.  
+
+* You will always be wrong to someone.  
+
+* For some, you will always be wrong.  
+
+* Some people will never agree with you, no matter what you say or do or how much evidence you may present in support of your case.  
+
+* Very few things are categorically anything.  
+
+* Very few people consciously commit acts of wrongdoing or knowingly state inaccurate facts.  
+
+* Everyone has their reasons, all of which are perfectly valid and justifiable in their mind.  
+
+* Simple stupidity rarely motivates anyone.  
+
+* Confrontation only solves problems when one party can force another to change the way they act and think. You can do neither over the internet.  
+
+* Pay attention to the people who like you, and those who do not. Both their opinions have merit, both only to an extent. Take everything, both good and bad, with a grain of salt.

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.motherjones.com/environment/2013/04/heritage-apples-john-bunker-maine" class="linkpost">Our Lost Heritage</a>
+    </h2>
+    <time datetime="2013-04-30" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/04">04</a>/30 11:59:20
+</time>
+
+    
+    <p>"In the mid-1800s, there were thousands of unique varieties of apples in the United States, some of the most astounding diversity ever developed in a food crop. Then industrial agriculture crushed that world. The apple industry settled on a handful of varieties to promote worldwide, and the rest were forgotten. They became commercially extinct—but not quite biologically extinct.&#8221;</p>
+    
+    <p>A nice change of pace from the usual; a delightful article well worth the read.</p>
+</div>
+</article>
+{% endblock %}

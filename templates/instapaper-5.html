@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="instapaper-5" class="original">Instapaper 5</a>
+    </h2>
+    <time datetime="2013-09-09" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/09">09</a>/09 12:38:26
+</time>
+
+    
+    <p>I could write an entire article proposing improvements to the new website alone, let alone the aging app. But this article isn&#8217;t <em>just</em> about Instapaper&#8217;s website, nor is it <em>just</em> about the app; this article is about Instapaper the read it later service and what Betaworks can do to revolutionize this beloved platform upon its next milestone release.</p>
+    
+    <p>Betaworks acquired Instapaper with its base components&#160;&#8212;&#160;the text parser, server-side processor, and cross-platform syncing engine&#160;&#8212;&#160;intact. Instapaper gained incredible popularity in the first place because of excellence in these three areas. Save for some minor tweaks and optimizations to those existing components then, the significant value Betaworks can add to this platform falls in to two categories: I/O&#160;&#8212;&#160;processes by which users can add and manipulate articles in the service&#160;&#8212;&#160;and presentation of that dateaon Instapaper&#8217;s various supported platforms.</p>
+    
+    <p>I/O, as per its name, contains within it two subsections: input and output. Instapaper came with a number of suitable input methods including a bookmarklet, the ability to add articles by sending them to a certain email address, and an API for app and web developers to integrate the service into their app, but very few options for outputting content to other services. Especially in recent months with the growing popularity of URL schemes, this shortcoming has been a source of unending frustration on my part.</p>
+    
+    <p>Beginning with my adoption of Drafts, furthered when I discovered Pythonista, and highlighted by the release of Ole Zorn&#8217;s Editorial, I have drastically changed my workflow over the last month to rely heavily on URL schemes. Meanwhile, Instapaper has remain unchanged and unwavering in its refusal to fit in to my workflow. I would absolutely love to see an Instapaper URL scheme, perhaps closely modeled on Drafts&#8217; own. Instapaper&#8217;s existing support of Drafts, Tweetbot, Simplenote, and Chrome reveal URL scheme integration at a low level for exporting content; I merely ask that Betaworks expose the ability to create custom actions to Instapaper&#8217;s users, and provide for the app to accept input through that avenue as well.</p>
+    
+    <p>Sticking with improvements to the app itself, I don&#8217;t think anyone would argue against Betaworks refreshing Instapaper&#8217;s design. While not strictly necessary given its coincidental adherence to the new standards put forth in iOS 7, Instapaper would inarguably benefit from some design work.</p>
+    
+    <p>In the same vein, although certainly more controversial than the last suggestion, I also feel a new&#160;&#8212;&#160;or refreshed, at the very least&#160;&#8212;&#160;icon would greatly benefit the app and the perception of Betaworks as its new owner as well. The current icon is a hallmark of the brand Marco strived so hard to craft with each and every carefully-considered design decision. And while that sentiment of simplicity and ease of use should live on in Betaworks&#8217;s future versions, I would like to see the company take the difficult, inarguably more treacherous road and strike out to destinations previously unconsidered. Changing something so base in the app as its icon would not only signal great changes to come, but also show that&#160;&#8212;&#160;for better or for worse&#160;&#8212;&#160;Instapaper is no longer Marco&#8217;s baby, but the property of Betaworks. Changing the icon would also be a great way for Betaworks to show off its design prowess and quell any lingering uncertainties regarding Instapaper&#8217;s acquisition by not only showing a new icon, but showing off a <em>great</em> new icon.</p>
+    
+    <p>On the web side of things, I feel Instapaper still needs a lot of work. Even after the recent redesign the new website, while a great improvement over the previous version, still needs a great deal of work. The Instapaper icon, for example, in the top left-hand corner of the screen, currently a whopping 260x140 image, should be much smaller. If Betaworks commissioned a new app icon as I suggested earlier, an element of that size would fit much better in this space.</p>
+    
+    <p>Further, the interface contains too many scrollbars. As I sit here looking at the webpage, I have a scrollbar in my navigation menu and in the main article list, when in reality I do not need either: if the user navigation section had just fifty pixels left of unused and unnecessary whitespace, that whole section of my screen would appear much more aesthetically pleasing. As for the article list, I only have a single article in my queue at this time; nevertheless, for no apparent reason, it has its own scrollbar.</p>
+    
+    <p>On the topic of scrollbars, I would also like to suggest some styling: custom scrollbars take a few lines of CSS, work in most major browsers, and would greatly improve the overall look of the interface. As Shawn Blanc famously said, it&#8217;s the little things that count&#160;&#8212;&#160;take delight in the details.</p>
+    
+    <p>Curiously, instead of living in the sidebar as one might reasonably expect, accessing folders requires the addition of yet another sidebar. Upon clicking the unlabeled button in the top bar, a second sidebar slides in to existence, doubling the space occupied by interface elements of dubious value and significantly decreasing the space left for navigating and interacting with articles. Had this decision been left up to me, I would have moved the folders interface to the original sidebar; at least then it would have merited the scrollbar.</p>
+    
+    <p>Strangely, with all the time spent creating the main Instapaper website, opening an article replaces every interface element with a much cleaner, much more aesthetically-pleasing design. As an aside, there is curiously no apparent way to return to the main article list from this view save archiving or deleting the article. With the exception of that small oversight though, I couldn&#8217;t help but look around the interface and think, &#8220;This is what the Instapaper website should look like": a no-frills, clean reading interface. Instapaper is all about the content, after al, allowing users to bypass the design pitfalls of their favorite websites and just get to the meat of the article. If only Instapaper&#8217;s own website adhered to a similar philosophy.</p>
+    
+    <p>I titled this article <em>Instapaper 5</em> for a reason: the key to this whole strategy is to reveal all of these changes to the app&#8217;s design, its icon, and the website, along with the significant server-side improvements, all at once in a single grandiose gesture in which Betaworks could make a very impactful statement: this is who Betaworks is, this is the direction we will take Instapaper, and if you had any lingering doubts about our competency, look at this host of massive improvements we have brought you in this short time period. There&#8217;s a reason Apple does not hold an event each time they make a minor improvement to one of their many platforms, but instead bundles all those advances in to one event and says, &#8220;Look at how awesome we are, and look at how great these products are.&#8221; Betaworks has the opportunity to do the same thing with Instapaper 5: improve the app, improve the website, and improve the servers; after that, come out and say, &#8220;Look at how awesome we are, and look at how great this product is."</p>
+</div>
+</article>
+{% endblock %}

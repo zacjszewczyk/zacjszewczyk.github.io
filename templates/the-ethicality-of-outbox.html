@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="the-ethicality-of-outbox" class="original">The Ethicality of Outbox</a>
+    </h2>
+    <time datetime="2013-03-01" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/01 13:58:36
+</time>
+
+    </blockquote>
+
+    <p>In my last post simply titled <a href="/blog/outbox"><em>Outbox</em></a> I linked to an article by Laura June of The Verge in which she raised a number of doubts as to the practicality of Outbox, including the potential legal troubles the startup could run into given that opening its users&#8217;s mail is an integral part of the startup&#8217;s business model. I glossed over those concerns in my last post; however, I feel they do merit some discussion.</p>
+    
+    <p>The thesis I kept returning to over lunch was grounded in free-market economics and flavored with a hint of <a href="http://www.verifiedfacts.org/">conspiracy</a>: of any organization dealing with sensitive information, Outbox, as a public company, would have a particular interest in preserving its users&#8217;s privacy or risk numerous costly and eventually crippling lawsuits. Even setting that very likely possibility aside though, what guarantee do we have now that the Post Office clerk or the mail room worker is not carefully slicing open our letters, reading the contents, and them resealing it? In truth, absolutely none; and for that reason I found it particularly asinine for someone to discount this startup by proposing a potential problem plausible in today&#8217;s postal service.</p>
+</div>
+</article>
+{% endblock %}

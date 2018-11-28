@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://huckberry.com/blog/posts/nothing-short-of-incredible" class="linkpost">Nothing Short Of Incredible</a>
+    </h2>
+    <time datetime="2014-03-20" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/03">03</a>/20 09:08:46
+</time>
+
+    
+    <p>Not to be redundant, but Jonny and Michelle dropped everything to spend six months traveling the world, and that really is incredible. I have already done a great deal of traveling in my life&#160;&#8212;&#160;I have lived in five states and visited more than I can remember, and spent a great deal of time abroad in seven countries spread across two continents&#160;&#8212;&#160;and I wholeheartedly agree with their comment that traveling does indeed beget more traveling: given the chance, I would love to go back and visit any of the places I have been to in the past, and that&#8217;s to say nothing for all the places I want to go in the future. I don&#8217;t understand the people who have never left their hometown, let alone the state they were born in. The world is a vast and incredibly diverse place; go out and see some of it.</p>
+</div>
+</article>
+{% endblock %}

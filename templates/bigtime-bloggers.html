@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://crateofpenguins.com/blog/hey-look-at-me-bigtime-bloggers" class="linkpost">Hey, Look At Me, Bigtime Bloggers</a>
+    </h2>
+    <time datetime="2014-01-26" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/01">01</a>/26 06:40:54
+</time>
+
+    
+    <blockquote>
+<p>> &#8220;You can&#8217;t just do good work, you have to cultivate relationships and promote what you&#8217;ve done. That is, if your goal is for more people to read and enjoy your stuff.&#8221;</p>
+    </blockquote>
+
+    <p><a href="/blog/community">Exactly</a>. The Typist made a good point <a href="http://thetypist.com/361/hey-look-bigtime-bloggers/">when responding to Sid&#8217;s article</a>, saying, &#8220;People who have made it rarely admit the role randomness played in their journeys.&#8221; It&#8217;s a racket, this whole blogging thing, but we still wake up and do it every day instead of getting that extra hour of sleep, or going out with friends, or sitting down to watch that movie with the family. I got lucky when Jim Dalrymple <a href="http://www.loopinsight.com/2014/01/07/rethinking-web-site-monetization/">linked</a> to one of my articles earlier this month, and I have done my best to take advantage of that influx in attention ever since. I know good content played a part in that fortunate happenstance, but I also realize luck did as well, and that without the friends I have made as a result of them finding and enjoying my site, Jim&#8217;s link would have made for nothing more than a single spike and then nothing.</p>
+</div>
+</article>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="apples-wildcard" class="original">Apple's Wildcard</a>
+    </h2>
+    <time datetime="2013-07-06" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/07">07</a>/06 14:08:34
+</time>
+
+    
+    <p>For the most part I try to stay away from Apple speculation: quite simply, I neither know enough about the company&#8217;s past and present situation nor do I pay close enough attention to pick up on the subtleties of this practice. Then I read an interesting article speculating about Apple&#8217;s Fall hardware announcements, and I decided to give it a try.</p>
+    
+    <p>From Aaron Souppouris&#8217;s article on The Verge, <a href="http://www.theverge.com/2013/6/21/4451240/iphone-5s-rumors-dual-led-flash-fingerprint-scanner"><em>Rumored iPhone &#8216;5S&#8217; takes shape in leaked images of assembled components</em></a>:</p>
+    
+    <blockquote>
+<p>&#8220;According to numerous sources, the iPhone 5S will be released this fall alongside a cheaper plastic iPhone.&#8221;</p>
+    </blockquote>
+
+    <p>There are two rumors here: that Apple will release the iPhone 5S in the Fall, and that a budget iPhone will come out alongside it. The first is, I think, a no-brainer: since the iPhone 3G and 3GS, Apple has been on a tick-tock cycle in the mobile phone space. After the 3G and the 3GS came the 4 and then the 4S, followed by the 5 just a few short months ago. It seems to follow that the 5S comes next as the logical progression of this process.</p>
+    
+    <p>Or so it would seem. The wildcard here is Tim Cook&#8217;s statement after introducing the Mac Pro: &#8220;Can&#8217;t innovate, my ass.&#8221; All logic seems to point to the 5S as Apple&#8217;s next phone; however, what if Tim Cook just really, <em>really</em> wanted to give all the people who wrote stories about innovation being dead at Apple, all the pundits and Apple haters, and maybe Samsung in particular, a big FU and release another major update to their flagship product just six months after its debut? It&#8217;s a long shot, I know, but Apple under Tim Cook is a very different Apple than Under Steve Jobs, and Tim Cook&#8217;s Apple might just do it.</p>
+    
+    <p>And then we have the long-rumored &#8220;budget iPhone&#8221;. First of all, the name itself is a bit of a misnomer: it implies a <a href="http://www.idownloadblog.com/2013/06/20/pegatron-ceo-cheap-iphone/">cheap product</a>, something that Apple just won&#8217;t do. For those looking to have an iPhone-like experience without the contract, Apple keeps the iPod Touch alive; for everyone else not keen on purchasing the latest and greatest phone, the iPhone 4 now comes free with a contract. There&#8217;s no market for a cheap iPhone: Apple already addresses all those potential use cases with existing products.</p>
+    
+    <p>However, I have to once again disregard the obviating factors pointing in every direction away from a &#8220;budget iPhone&#8221; and introduce the wildcard, Tim Cook. As I already said, Apple under Tim Cook is a very different place than when Steve Jobs manned the helm. After all, we have iOS 7 now, a product that we almost assuredly would not have seen for quite some time&#160;&#8212;&#160;if ever&#160;&#8212;&#160;had the decision been left to Steve Jobs and his buddy Scott Forestall. I&#8217;m sure between the two of them they could have found some more green felt.</p>
+    
+    <p>All indications point to an iPhone 5S coming this fall, and that those looking for a &#8220;budget iPhone&#8221; will once again see disappointment when Tim Cooks walks off the stage without introducing one. But maybe&#160;&#8212;&#160;just maybe&#160;&#8212;&#160;we will get to hear Tim Cook&#8217;s &#8220;Can&#8217;t innovate, my ass&#8221; comment again preceding the iPhone 6 announcement and a new, cheaper iPhone. Maybe that will be his &#8220;One more thing&#8221;.</p>
+</div>
+</article>
+{% endblock %}

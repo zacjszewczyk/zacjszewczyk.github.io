@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://david-smith.org/blog/2012/12/21/the-hypercritical-way/" class="linkpost">The Hypercritical Way</a>
+    </h2>
+    <time datetime="2013-02-04" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/02">02</a>/04 12:02:03
+</time>
+
+    
+    <p>"One of the most refreshing parts of the show is how humbly John approaches his opinions. It isn&#8217;t about him getting it correct, it is about arriving at the best result possible through collective effort. Nearly half of the show is John discussing follow-up comments he has received about past topics. Sharing his platform with the opinions and comments of others always felt incredibly intellectually honest.&#8221;</p>
+    
+    <p>I finally got around to David Smith&#8217;s article The Hypercritical Way after hearing about it during Hypercritical&#8217;s final episode, <a href="http://5by5.tv/hypercritical/100">Metacritical</a>. While the passage quoted above is a good attempt at quantifying one of the many reasons so many people loved Hypercritical so much, you will never find the actual reason written in a paragraph regardless of how many pages that paragraph spans. The compilation of selected excerpts at the end of the article gets closer to defining that feeling, but nevertheless falls short in an act only listening to every single episode will ever accomplish.</p>
+</div>
+</article>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://vimeo.com/m/26858445" class="linkpost">The Best 404 Error Page Ever</a>
+    </h2>
+    <time datetime="2014-05-21" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/05">05</a>/21 19:49:11
+</time>
+
+    
+    <p>More than two years ago, a company called Nosh got quite a bit of attention for their inventive approach to the generally unremarkable 404 error page: rather than the usual, bland description or even a poor attempt at humor, the folks over at Nosh made a video, and a fantastic one at that. I won&#8217;t spoil it for you here, but I will say this: this video stands the test of time in a way that few other things from even two years ago do; it&#8217;s just as cool now as it was then.</p>
+</div>
+</article>
+{% endblock %}

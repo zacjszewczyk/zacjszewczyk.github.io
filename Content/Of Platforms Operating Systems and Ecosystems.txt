@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Of Platforms, Operating Systems and Ecosystems
+Link: http://www.asymco.com/2011/01/31/of-platforms-operating-systems-and-ecosystems/
+Pubdate: 2014/02/27 11:33:53
+Author: Zac Szewczyk
+
+Worthwhile distinction to be aware of not only for those targeted by tech company announcements, but those writing about them as well. All too often tech writers use these and countless other terms interchangeably when in reality, they are nowhere near synonymous.

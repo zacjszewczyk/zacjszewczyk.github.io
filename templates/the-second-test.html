@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.randsinrepose.com/archives/2012/09/18/the_second_test.html" class="linkpost">The Second Test</a>
+    </h2>
+    <time datetime="2013-05-30" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/05">05</a>/30 14:53:16
+</time>
+
+    
+    <p>Michael Lopp explaining why engineers, in his experience, appear to hate you:</p>
+    
+    <blockquote>
+<p>&#8220;In your company, there are three kinds of people. There are those you are aware of, but who don&#8217;t immediately affect your world. There are those who mildly affect  your world and upon whom you have a lightweight dependency. And there are those who are an active part of your world. You depend on them.</p>
+    </blockquote>
+
+    <p>&#8220;I don&#8217;t want to depend on you. It&#8217;s nothing personal, it&#8217;s just that as an engineer I irrationally believe that anything I don&#8217;t build with my own hands is going to get fucked up by someone else. I believe this because I&#8217;ve spent a good portion of my life watching other well-meaning people sit down at a computer and simply... make things harder for themselves.&#8221;</p>
+    </blockquote>
+
+    <p>Replace &#8220;company&#8221; with &#8220;life&#8221; in the first paragraph and he just explained me. The entire article, in fact, and his characterization of the engineer describes my personality to a T. Well said, Mr. Lopp, well said.</p>
+</div>
+</article>
+{% endblock %}

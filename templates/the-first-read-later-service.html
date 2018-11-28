@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.marco.org/2013/02/21/the-first-read-later-service" class="linkpost">The first "Read Later" service</a>
+    </h2>
+    <time datetime="2013-02-22" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/02">02</a>/22 12:10:09
+</time>
+
+    
+    <p><a href="/blog/how-to-start-a-magazine">Speaking of Marco Arment</a>, yesterday he posted an article called <a href="http://www.marco.org/2013/02/21/the-first-read-later-service"><em>The first &#8220;Read Later&#8221; service</em></a> in which he discussed the origins of Instapaper and the service that was eventually rebranded as Pocket:</p>
+    
+    <blockquote>
+<p>&#8220;Months after Instapaper launched all of these features and was being very well-received in the tech press, in October 2008, Read It Later added a web service for sync, other-browser bookmarklets, and offline saving. Then an iPhone app in 2009. And while Read It Later has introduced some original features, Weiner systematically copied almost every major Instapaper feature over the first few years of Instapaper&#8217;s existence.&#8221;</p>
+    </blockquote>
+
+    <p>Marco also linked to a few other pieces in his aforementioned article: <a href="http://www.marco.org/2011/11/16/readability"><em>The Relationship between Readability and Instapaper</em></a> and <a href="http://www.marco.org/2011/09/16/some-other-tablets-you-may-have-seen"><em>Some other tablets you may have seen</em></a>. The following excerpt is from the latter of the two, explaining a part of his reasoning behind writing <em>The first &#8220;Read Later&#8221; service</em>:</p>
+    
+    <blockquote>
+<p>&#8220;This awkward avoidance betrays a lack of confidence in their innovation and an internal culture of severe denial — two deep-rooted traits that Microsoft is famous for. So when the Microsoft people speak like this, it&#8217;s not serving them well: to everyone outside of Microsoft, it&#8217;s painfully obvious that they&#8217;re either delusional or trying very poorly to bullshit us.&#8221;</p>
+    </blockquote>
+
+    <p>I agree wholeheartedly with Marco: the story behind Instapaper and its competitors needs to be told; and for those spreading lies, saying that Readability was the first app of its type on the market, this is unacceptable. Did I say Readability? I meant Clearly&#160;&#8212;&#160;wait, no, Pocket; excuse my confusion.</p>
+</div>
+</article>
+{% endblock %}

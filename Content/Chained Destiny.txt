@@ -1,0 +1,9 @@
+Type: original
+Title: Chained Destiny
+Link: Chained Destiny.htm
+Pubdate: 2013/09/08 14:05:47
+Author: Zac Szewczyk
+
+Wednesday evening, news broke that Apple had removed The Omni Group's iOS app *OmniKeyMaster* for facilitating upgrade pricing, a feature Apple has refused to build in to the App Store since its launch. Amidst the [vocal](http://512pixels.net/2013/09/omni-app-store/) [calls](http://www.macstories.net/stories/on-omnikeymasters-shutdown/) for change in Apple's long-standing policies, I remembered something Marco Arment said on an episode of *Build & Analyze*.  
+
+During their discussion of apps rejected from the Mac App Store for duplicating existing functionality in the operating system, Marco explained that instead of acting out in justified anger, he accepted the volatility of Apple's decisions in the app space as the price of doing business. If Instapaper ever encountered such problems, or a patent troll decided to sue him, Marco's solution was to move on and build another app instead of spending valuable time and resources fighting an uphill battle, and especially one in which he had little chance of winning.

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="the-battle-against-linkbait" class="original">The Battle Against Linkbait</a>
+    </h2>
+    <time datetime="2013-04-19" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/04">04</a>/19 18:57:57
+</time>
+
+    
+    <p>Every time I post an article, I shamelessly submit it to Hacker News in the hopes that it will get picked up and generate a significant amount of attention and traffic to my site. Somewhere in the back of my mind, every time I submit something I wrote to Hacker News I think, &#8220;Maybe this is the one, the article that will go viral, and tomorrow I&#8217;ll see John Gruber post about it and hear Dan and Haddie talk about it on The Frequency. Maybe...&#8221; But that never happens.</p>
+    
+    <p>Pursuant of this goal and in the face of my past &#8220;failures&#8221;, to use a bit of a strong word, I have to decide, each time I write a piece, whether to use a somewhat witty title or an overly-explanatory &#8220;linkbait&#8221; title. Each time I am faced with this decision though, the same arguments pop up in my mind: linkbait titles don&#8217;t drive the kind of traffic I want to attract. More importantly though, there&#8217;s a line that I don&#8217;t want to cross. I don&#8217;t want to be another blog clamoring for attention with a sensationalistic title on a tired topic with my nuanced opinion attached at the bottom. I want to be the blog people are excited to see new content coming from. And those kinds of blogs don&#8217;t post those kinds of titles; those bloggers battle against linkbait each and every day with each and every article, and they win.</p>
+</div>
+</article>
+{% endblock %}

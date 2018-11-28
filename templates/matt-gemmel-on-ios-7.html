@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://mattgemmell.com/2013/06/12/ios-7/" class="linkpost">Matt Gemmel on iOS 7</a>
+    </h2>
+    <time datetime="2013-06-12" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/06">06</a>/12 17:56:19
+</time>
+
+    
+    <p>Wonderfully worded and impressively well thought-out, Matt Gemmel&#8217;s article <em>iOS 7</em> is easily the best piece on the topic I have read since the WWDC keynote address. In explaining the motivation behind Apple&#8217;s complete UI overhaul in iOS7, he began his one-two punch with this paragraph:</p>
+    
+    <blockquote>
+<p>&#8220;The thing is, we&#8217;ve grown up. We don&#8217;t require hand-holding to tell us what to click or tap. Interactivity is a matter of invitation, and physical cues are only one specific type. iOS 7 is an iOS for a more mature consumer, who understands that digital surfaces are interactive, and who doesn&#8217;t want anything getting in the way of their content.&#8221;</p>
+    </blockquote>
+
+    <p>Then, following up, he said something <a href="/blog/anti-ios-7-anger">curiously familiar</a> before moving on with the article:</p>
+    
+    <blockquote>
+<p>&#8220;The basic functionality hasn&#8217;t changed. You still use iOS in the same way, and almost everything is where you expect it to be. The same gestures work. There are a few differences here and there – it&#8217;s a major new version of the OS, after all – but the changes are mostly aesthetic. You won&#8217;t be confused by iOS 7 if you&#8217;re accustomed to a previous version."</p>
+</div>
+</article>
+{% endblock %}

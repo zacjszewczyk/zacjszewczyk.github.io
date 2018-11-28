@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.theatlantic.com/technology/archive/2013/01/what-twitter-really-looks-like/272583/" class="linkpost">What Twitter Really Looks Like</a>
+    </h2>
+    <time datetime="2013-02-04" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/02">02</a>/04 08:58:50
+</time>
+
+    
+    <p>"What&#8217;s maybe most striking about Tweetping is its presentation of data in pulses and punctuations: boomboomboomboom-PAUSE. That&#8217;s largely an accident of interface, but it also suggests something profound about Twitter and the social web: This stuff has a beat. It has rhythms and rushes and respites. It&#8217;s its own kind of organism, with its own kind of pulses — its own kind of heartbeat.&#8221;</p>
+    
+    <p>At first, the <a href="http://tweetping.net/">Tweetping</a> world map is nearly empty. A combination of javascript libraries begin parsing a real time stream of data from the Twitter API though, and the map quickly begins to populate. Within a few minutes, the map becomes a somewhat accurate representation of the world&#8217;s Twitter activity. Although Tweetping has been the recipient of <a href="http://www.wired.com/design/2013/02/tweetping/">some criticism</a> since coming to widespread attention this past weekend, it is nevertheless one of the best Twitter activity visualizations on the internet. This morning, over breakfast, I used it to watch the West Coast wake up.</p>
+</div>
+</article>
+{% endblock %}

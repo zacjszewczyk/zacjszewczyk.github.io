@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="cabin-porn-roundup-214" class="original">Cabin Porn Roundup</a>
+    </h2>
+    <time datetime="2014-03-01" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/03">03</a>/01 07:29:34
+</time>
+
+    
+    <p>I have a very light issue for you this month, unfortunately: precious little caught my eye over the past few weeks. In fact, just two articles did, and only one came from Cabin Porn: a <a href="http://cabinporn.com/post/77427808607/3rd-generation-hand-made-family-cabin-on-the-upper">third-generation hand-made cabin from Michigan</a>. This structure, to me, defines the genre: built of wood and stone and out in the middle of the woods, not some modern architecture retrofitted into a rustic getaway a few hundred feet from the nearest road, this cabin has <em>character</em>. And I love that about it.</p>
+    
+    <p>The second and final link comes from Vimeo, by way of Twitter: <a href="http://vimeo.com/87155994">Zen and the Art of Powder Boarding</a>. Although I&#8217;m not convinced the video&#8217;s creators did not just prepend the title with &#8220;zen&#8221; in an attempt at making it somehow more attractive to potential viewers, I did find myself enjoying this short view into the world of powder boarding. I&#8217;m no snowboarder&#160;&#8212;&#160;barely a skier&#160;&#8212;&#160;but even if just to visit all the neat places filmed here, I would love to become one.</p>
+</div>
+</article>
+{% endblock %}

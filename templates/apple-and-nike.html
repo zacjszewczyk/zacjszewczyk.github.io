@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://stratechery.com/2014/apple-nike/" class="linkpost">Apple and Nike</a>
+    </h2>
+    <time datetime="2014-04-24" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/04">04</a>/24 08:17:27
+</time>
+
+    
+    <p>Ben Thompson has been killing it over at Stratechery lately, especially with this piece comparing Apple and Nike through the apt characterization of experience companies. As a recent convert from the Windows world, I can speak to the reality of Apple&#8217;s unique (within the technology industry, at least) position as such a corporation from first-hand experience: from the outside looking in, I couldn&#8217;t help but want to join this community and become a part of the Apple world. There are undoubtedly those who will discount even the accuracy of Apple&#8217;s designation as an experience company rather than a behemoth fostering a cult of fanatic worshipers willing to pay any sum for their latest POS&#160;&#8212;&#160;and that&#8217;s not &#8220;point of service"&#160;&#8212;&#160;offering, much less the ability for that to compel anyone to Apple&#8217;s platforms over Windows and Android. However, it is very real. And most importantly, it&#8217;s working.</p>
+</div>
+</article>
+{% endblock %}

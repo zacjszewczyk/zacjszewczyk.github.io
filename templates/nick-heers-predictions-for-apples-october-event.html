@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://shawnblanc.net/2013/10/heer-october-spitballs/" class="linkpost">Nick Heer's Predictions for Apples October Event</a>
+    </h2>
+    <time datetime="2013-10-17" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/10">10</a>/17 14:05:10
+</time>
+
+    
+    <p>Shawn Blanc on Nick Heer&#8217;s predictions for Apple&#8217;s event next week: &#8220;From my armchair, I say Nick is probably pretty close to the money here.&#8221; I really hope so: I have been holding out for a new MacBook Pro since before Apple unveiled the new Airs; it would be a huge disappointment if I had to continue waiting until January.</p>
+    
+    <p>On the tablet front, I may also consider purchasing a new iPad along with a MacBook Pro and a new iPhone. Widely rumored to ship with Apple&#8217;s new Touch ID functionality, this upgrade in conjunction with the A7X processor Nick expects the iPad 5 to ship with might just be enough to entice me to buy a new one Especially coming from an iPad 3 with the A6X, the speed boost would be a welcome one.</p>
+</div>
+</article>
+{% endblock %}

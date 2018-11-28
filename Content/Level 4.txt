@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Sneak Peek Into The Future: Selectors, Level 4
+Link: http://coding.smashingmagazine.com/2013/01/21/sneak-peek-future-selectors-level-4/
+Pubdate: 2013/01/22 11:45:06
+Author: Zac Szewczyk
+
+Lots of interesting things going in in this space right now.

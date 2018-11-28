@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://my.workflow.is" class="linkpost">Workflow</a>
+    </h2>
+    <time datetime="2014-01-20" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/01">01</a>/20 21:49:54
+</time>
+
+    
+    <p>Sans the rather generic name, I really like Workflow. As an unnamed individual demos the app, he shows off impressive system integration by dragging Editorial-like pre-defined actions taking advantage of the camera, music, and AirDrop APIs into a queue and running it. Alternately, Workflow can also transform these processes into their own standalone apps. Wow. Impressive, to say the least. Even with such a basic feature set as the one on exhibit in its demo video, an app like Workflow has the potential to completely change the current state of inter-app communication, taking it from a tedious task necessitating difficult URL creation and fairly extensive knowledge of Python to a relatively easy process with a much lower barrier to entry. Unfortunately, I feel some of these abilities may fall outside the boundaries of the App Store&#8217;s rules, and thus Workflow may never graduate to a full-fledged app; however, I would love to be proven wrong.</p>
+</div>
+</article>
+{% endblock %}

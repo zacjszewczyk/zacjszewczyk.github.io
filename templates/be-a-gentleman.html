@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="be-a-gentleman" class="original">Be a Gentleman</a>
+    </h2>
+    <time datetime="2013-03-21" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/21 17:46:01
+</time>
+
+    
+    <p>I was talking to my girlfriend a few days ago when, in passing, she mentioned a conversation between her and one of her friends earlier that day. Her friend, she said, didn&#8217;t expect much of her boyfriend: she didn&#8217;t expect him to give her presents or bring her flowers; they weren&#8217;t needed&#160;&#8212;&#160;her words, not mine. I didn&#8217;t think too much of it at the time, but it stuck with me throughout the day until I sat down and wrote about it here.</p>
+    
+    <p>It struck me, all of the sudden, just how sad that was: here this girl was giving this boy her time and attention and&#160;&#8212;&#160;maybe&#160;&#8212;&#160;love, and she expected so little in return. That&#8217;s so sad. So very, very sad. Mixed with the sadness I felt was the inability to understand this mentality on both parts: the girl&#8217;s that she would expect so little, and the boy&#8217;s that he would do so little. I&#8217;m not saying he should buy her expensive gifts all the time and bring her flowers on their first date, but he should hold the door open, pay for dinner, surprise her with flowers when she least expects it, and brighten a bad day with a thoughtful gift. He doesn&#8217;t have to be perfect, but he can at least care&#160;&#8212;&#160;he can at least be a gentleman about it.</p>
+</div>
+</article>
+{% endblock %}

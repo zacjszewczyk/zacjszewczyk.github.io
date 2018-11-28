@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.pcworld.com/article/2032207/tablets-may-eclipse-laptops-in-2014-but-theres-no-post-pc-future-on-the-horizon.html" class="linkpost">Tablets may eclipse laptops, but there's no post-PC future</a>
+    </h2>
+    <time datetime="2013-04-08" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/04">04</a>/08 14:55:48
+</time>
+
+    
+    <p>"But percentages can be deceiving and they tell only half the tale of IDC’s predictions. Peering ahead to the future, IDC’s numbers suggest that while the overall market share for PCs will decline, shipments will still increase, if only by a hair. In other words, the demand for PCs isn&#8217;t dying down—it&#8217;s just that the thirst for mobile devices is exploding."</p>
+</div>
+</article>
+{% endblock %}

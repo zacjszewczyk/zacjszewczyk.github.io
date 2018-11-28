@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="chained-destiny" class="original">Chained Destiny</a>
+    </h2>
+    <time datetime="2013-09-08" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/09">09</a>/08 14:05:47
+</time>
+
+    
+    <p>Wednesday evening, news broke that Apple had removed The Omni Group&#8217;s iOS app <em>OmniKeyMaster</em> for facilitating upgrade pricing, a feature Apple has refused to build in to the App Store since its launch. Amidst the <a href="http://512pixels.net/2013/09/omni-app-store/">vocal</a> <a href="http://www.macstories.net/stories/on-omnikeymasters-shutdown/">calls</a> for change in Apple&#8217;s long-standing policies, I remembered something Marco Arment said on an episode of <em>Build &#38; Analyze</em>.</p>
+    
+    <p>During their discussion of apps rejected from the Mac App Store for duplicating existing functionality in the operating system, Marco explained that instead of acting out in justified anger, he accepted the volatility of Apple&#8217;s decisions in the app space as the price of doing business. If Instapaper ever encountered such problems, or a patent troll decided to sue him, Marco&#8217;s solution was to move on and build another app instead of spending valuable time and resources fighting an uphill battle, and especially one in which he had little chance of winning.</p>
+</div>
+</article>
+{% endblock %}

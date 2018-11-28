@@ -1,0 +1,17 @@
+Type: original
+Title: iPhone Pricing
+Link: iPhone Pricing.htm
+Pubdate: 2013/09/10 06:29:14
+Author: Zac Szewczyk
+
+With just hours left until the iPhone event today it's a little late to speculate on pricing, but I just couldn't resist.  
+
+Called it. I never believed Apple would create a significantly inexpensive phone, as doing so [would segment the market](Relegated to a Lookalike.txt) and introduce [hallmarks of the Android and Windows worlds](The Halfway Phone.txt). Ben Thompson, speculating on pricing for the iPhone 5S and 5C in his article [*Thinking about iPhone Pricing*](http://stratechery.com/2013/thinking-about-iphone-pricing/), backs up my theory:  
+
+    "Given the high bar Apple has set (iPhone 5 technology), I (now) expect the iPhone 5C’s price to be on the high end of estimates, and possibly higher."  
+
+And [John Gruber, responding to Ben's article](http://daringfireball.net/linked/2013/09/09/thompson) in agreement, backs up my original idea as well:  
+
+    "Smart take. The key takeaway: do not expect the iPhone 5C to be cheap or low-cost. It’s going to be at least $500 unsubsidized, I think. Lower cost, not low cost."  
+
+Ben made a number of great points in his article, accompanied by not quite Asymco-caliber, but nevertheless charming, charts illustrating and further explaining those key concepts. If you read only one more article before the press event, this should be it.

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="leave-of-absence" class="original">Leave of Absence</a>
+    </h2>
+    <time datetime="2014-07-31" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/07">07</a>/31 16:51:30
+</time>
+
+    
+    <p>The best way to attain success is to show up every single day and work hard, or so the saying goes; in terms of this site and my goal of growing and fostering a strong readership, this meant putting some nontrivial amount of time into reading and writing every single day in the hopes that I could one day make this more than a hobby. For quite some time now, I have done well to follow this advice, and doing so has led to rather spectacular results: although this is not the time nor place to delve into specifics, suffice it to say that this has been a fantastic year so far. Yet, despite this track record, I am about to break this cardinal rule because for the next two weeks starting Saturday, April 2nd, I will neither read nor write a single thing.</p>
+    
+    <p>Come Saturday morning, the sun will rise to see me on the road to Algonquin Provincial Park in Ontario, Canada, for a canoe trip consisting of two parts: for the first week, my group of twelve will paddle throughout the park going from campsite to campsite, exploring the Canadian wilderness until our return to base camp the following Saturday. Upon our arrival though, the trip is only half finished: we will then spend the next week with thirty-eight additional members of my Boy Scouts troop doing activities in and around a base camp. As I have never gone on this trip before, I cannot say for sure what, specifically, our activities will consist of; however, regardless of whether I spend my days hiking through the woods or laying in a hammock, I will have no internet access throughout the duration of my trip. And so, obviously, I will neither have the ability&#160;&#8212;&#160;nor desire, quite frankly&#160;&#8212;&#160;to read and write much of anything but the occasional journal entry, perhaps; and so, this is one of the last articles I will publish for the next two weeks.</p>
+    
+    <p>Until I return, find another writer to follow for a time; I hope that once I do, though, you will come back here. Until then, goodbye; until then, good luck as well.</p>
+</div>
+</article>
+{% endblock %}

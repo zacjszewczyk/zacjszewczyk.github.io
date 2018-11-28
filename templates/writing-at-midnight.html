@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://t.co/7uemxSNk" class="linkpost">A Day in the Life of Hunter S. Thompson</a>
+    </h2>
+    <time datetime="2013-01-21" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/01">01</a>/21 00:28:48
+</time>
+
+    
+    <p>When I first saw this tweet roll by in my feeds either earlier this week I didn&#8217;t pay much attention to it. As I sit here and it&#8217;s nearly midnight, however, John Gruber&#8217;s excerpt came to mind: &#8220;Midnight: Hunter ready to write.&#8221; These days I have very small windows in which to write in: between homework and class during the day, and after I return home from FRC practice at 9:30 (at the earliest) each night. Outside of those small windows, which are all to frequently filled by one thing or another, I have the weekends. The weekends and midnight.</p>
+</div>
+</article>
+{% endblock %}

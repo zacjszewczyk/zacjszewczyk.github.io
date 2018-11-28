@@ -1,0 +1,9 @@
+Type: linkpost
+Title: Reeder for iPhone now supports standalone RSS
+Link: http://www.theverge.com/2013/4/27/4275458/reeder-for-iphone-no-longer-requires-google-reader-account
+Pubdate: 2013/05/11 11:25:51
+Author: Zac Szewczyk
+
+"Perhaps more noteworthy is Reeder's new, standalone RSS feature — you don't even need a Feedbin or Google Reader account anymore. Instead, you can start curating RSS feeds right on your iPhone; if you had a Google Reader account you can also simply import your feeds straight from there."  
+
+Great news. Reeder is easily my favorite iOS RSS reader, and definitely one of the best on the market. This new feature makes it all the more appealing not just to me as an existing customer, but hopefully to potential future users as well. I just imported all my Google Reader feeds in to the app, and it works like a charm.

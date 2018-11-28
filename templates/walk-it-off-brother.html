@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://wholelarderlove.com/walk-it-off-brother/" class="linkpost">walk it off brother</a>
+    </h2>
+    <time datetime="2013-02-03" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/02">02</a>/03 20:07:28
+</time>
+
+    
+    <p>Rohan Anderson of <a href="http://wholelarderlove.com/">Whole Larder Love</a>, also featured in <a href="http://vimeo.com/48864768">The Smokehouse</a>, a video I discovered last week chronicling the construction of his personal smokehouse:</p>
+    
+    <blockquote>
+<p>&#8220;Sometimes when the pressure of city living would build to boiling point, I’d pack up my car and head bush. At times there would be a sense of insecurity, even fear, of the bush. Even though I grew up there, I would still be intimated. Why? Because I’d become a synthetic human. I’d spent far too much time at a desk under dull lights staring at a computer. I’d eat in the tea room, or the cafeteria with the other robots, and I’d spend hours between 8am – 5pm working on databases and spreadsheets and numerous other useless tasks. So when it came to the breaking point, I’d pack the camping gear in the car and head bush, I ended up both intimidated and impressed by the bush, as it had become foreign to a certain extent."</p>
+</div>
+</article>
+{% endblock %}

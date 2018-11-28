@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://crateofpenguins.com/blog/seemed-so-sensible" class="linkpost">Seemed So Sensible</a>
+    </h2>
+    <time datetime="2014-07-22" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/07">07</a>/22 07:00:44
+</time>
+
+    
+    <p>Regardless of your own personal opinions regarding Christianity and religion in general, I think we can all get behind Sid&#8217;s overarching sentiment: it is important to remain true to yourself even when doing so means standing alone alongside an unpopular opinion. For in the end, with what will we find ourselves left? It is to these convictions we hold and must hold strongly that we will return; without them, we have nothing.</p>
+    
+    <p>Stick to your guns. Be yourself. At the end of the day, I promise: you will be glad that you did.</p>
+</div>
+</article>
+{% endblock %}

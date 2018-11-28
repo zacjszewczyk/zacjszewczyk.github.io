@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.visualnews.com/2013/08/22/take-death-defying-walks-in-chinas-yellow-mountains/" class="linkpost">China's Yellow Mountains</a>
+    </h2>
+    <time datetime="2013-08-24" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/08">08</a>/24 13:24:47
+</time>
+
+    
+    <p>"Considering Huangshan&#8217;s extreme beauty, it&#8217;s not surprising that the area derives much of its significance from Chinese art and literature. It has inspired poets such as Li Bai, many Chinese ink paintings, and more recently, photography. According to Wikipedia, over 20,000 poems were written about the mountains between the Tang Dynasty (618-906) and the end of the Qing Dynasty (1614 to 1911). They&#8217;ve also inspired modern works, lending to the fictional world designed for James Cameron&#8217;s 2009 film Avatar.&#8221;</p>
+    
+    <p>Seeing such majestic scenery as this mountain range is so common in many of today&#8217;s movies and TV shows, yet it takes an article like this to realize that such places do actually exist in the real world.</p>
+</div>
+</article>
+{% endblock %}

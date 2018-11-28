@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.gq.com/entertainment/celebrities/201406/50-cent" class="linkpost">50 Cent Is My Life Coach</a>
+    </h2>
+    <time datetime="2014-07-30" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/07">07</a>/30 06:46:23
+</time>
+
+    
+    <p>When Adam and Nathan talked about this article during episode seventeen of their podcast <a href="http://fivemorethings.com/">Five More Things</a>, <a href="http://fivemorethings.com/17">50 Cent is Actually Brilliant</a>, I recognized its potential value but dismissed it as largely uninteresting, and sent it away to Instapaper. Now, however, a few weeks later, I wish I had sat down and read it as soon as it came to my attention. My only complaint is that I wish it were longer: 50 Cent had some fantastic advice and shared a number of very interesting insights that I wish GQ had given Zach more time to expand upon, and perhaps even search for more of; fascinating and highly-recommended.</p>
+</div>
+</article>
+{% endblock %}

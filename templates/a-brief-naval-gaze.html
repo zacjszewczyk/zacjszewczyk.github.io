@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="a-brief-naval-gaze" class="original">A Brief Naval-Gaze</a>
+    </h2>
+    <time datetime="2014-04-10" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/04">04</a>/10 22:32:14
+</time>
+
+    
+    <p>Turns out, vanity searches pay off: earlier this evening, my girlfriend pointed an article out to me of particular interest. Writing for Fast Company Labs, Jenna Kagel published <a href="http://www.fastcolabs.com/3024517/inside-one-bloggers-plan-to-make-money-without-hideous-ads">Inside One Blogger&#8217;s Plan To Make Money Without Hideous Ads</a> on January seventh of this year, where she recounted my plans to take this site from a cost center to a profitable enterprise detailed in <a href="/blog/doing-monetization-well">Doing Monetization Well</a>. To me, to have a site so popular and widely-respected as Fast Company post an article about something <em>I</em> wrote and posted to <em>my</em> site, that&#8217;s just awesome; so very cool.</p>
+</div>
+</article>
+{% endblock %}

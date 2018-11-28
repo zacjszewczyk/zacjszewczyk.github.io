@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="https://itunes.apple.com/us/app/vlcnr/id789486884?mt=8" class="linkpost">Vlcnr 1.0 Released</a>
+    </h2>
+    <time datetime="2014-01-07" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/01">01</a>/07 09:10:20
+</time>
+
+    
+    <p>Taking a quick break from my next article I will hopefully publish late tonight, <a href="http://twitter.com/johnvoorhees">John Voorhees</a> worked with Myke Hurley and Matt Alexander of <a href="http://5by5.tv/bionic">Bionic</a> to create Vlcnr 1.0. Featuring the show&#8217;s hallmark suspense accents one through eight and an easter egg that plays random clips from the show, I downloaded the app sight on seen. Not to steal <a href="https://twitter.com/mattalexand/status/420365381698461696">Matt&#8217;s idea</a>, but I have to say: I have been testing this app for quite some time now, it&#8217;s really great. Those of you unfamiliar with Bionic will likely think it ridiculous; for everyone else, might as well pack up and leave: 2014 has peaked.</p>
+</div>
+</article>
+{% endblock %}

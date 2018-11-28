@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.theverge.com/2013/3/26/4147038/offline-boiling-it-down-to-the-essentials" class="linkpost">Offline: boiling it down to the essentials</a>
+    </h2>
+    <time datetime="2013-03-27" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/27 12:12:45
+</time>
+
+    </blockquote>
+
+    <p>Paul Miller occasionally sends out dispatches, as The Verge calls them, articles about one thing or another penned by a writer who has forsaken the internet for an entire year. His last piece I read, <a href="http://www.theverge.com/2013/2/6/3955678/offline-love-loss-dating-without-facebook"><em>Offline: Love, Loss, and Dating Without Facebook</em></a>, was interesting only insofar as a story about an anticlimactic love endeavor can be; his latest article, linked at the top of this post, is much, much better. As Paul chronicled his difficulties finding the motivation to make good use of his newfound time, <a href="/blog/increasingly-prevalent-realistic-and-irrelevant">I couldn&#8217;t help but relate</a>.</p>
+    
+    <blockquote>
+<p>&#8220;These don&#8217;t make for catchy book titles:</p>
+    </blockquote>
+
+    <p>* No Internet, No Life: The Paul Miller Story</p>
+    <p>* How To Disconnect From Reality In 365 Days</p>
+    <p>* At First I Liked Not Using The Internet But Then It Got Kind Of Sucky&#8221;</p>
+    </blockquote>
+
+    <p>Paul&#8217;s piece made me laugh and it prompted introspection. If nothing else, if not for the great story, read the piece as a shining example of excellent prose.</p>
+</div>
+</article>
+{% endblock %}

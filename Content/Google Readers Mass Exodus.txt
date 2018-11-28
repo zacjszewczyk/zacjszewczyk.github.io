@@ -1,0 +1,7 @@
+Type: original
+Title: Google Reader's Mass Exodus
+Link: Google Readers Mass Exodus.htm
+Pubdate: 2013/03/18 17:41:44
+Author: Zac Szewczyk
+
+The past few days have been crazy. First Google announced that Reader would shut down almost as an afterthought in the middle of their annual spring cleaning post, and chaos ensued. Everyone wrote something about it, [including](Drafts and Reeder.txt) [me](Reader's Waves.txt); opinions were in no short supply. Writers were not the only ones working furiously though: within six hours of the announcement, [Zite removed their dependency on Google Reader](http://blog.zite.com/2013/03/14/google-reader-is-dead-so-we-rebuilt-it-for-you-in-zite-in-six-hours/). Far ahead of everyone else, Zite's announcement preluded a veritable explosion that rocked the internet in the ensuing days: [500,000 users moved to Feedly](http://www.theverge.com/2013/3/16/4113138/google-reader-users-flock-to-feedly) [over two days](http://feederteam.org/post/in-the-wake-of-googe-reader-feedly), and [60,000 to NewsBlur](http://shawnblanc.net/2013/03/newsblurs-scaling-challenges/) over a similarly small amount of time. And those are just the services for which we have stats for.

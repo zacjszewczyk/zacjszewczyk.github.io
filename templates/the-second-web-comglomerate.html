@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="the-second-web-comglomerate" class="original">The Second Web Conglomerate</a>
+    </h2>
+    <time datetime="2014-01-26" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/01">01</a>/26 12:03:30
+</time>
+
+    
+    <p>Rather than asking &#8220;<a href="http://harshilshah1910.wordpress.com/2014/01/25/yahoo-marissa-mayer-techpinions/">Is Yahoo Even Worth Trying To Save?</a>&#8221;, a more apropos question would ask not if Yahoo! was worth rescuing, but instead if Marissa Mayer&#160;&#8212;&#160;or anyone, for that matter&#160;&#8212;&#160;<em>could</em> actually keep the company afloat, for to operate under the assumptions imposed by the latter would be to approach this issue from the wrong direction entirely. As Harshil Shah points out in his aforecited article, Steve Jobs managed a drastic course correction of the caliber needed at Yahoo! when he made his triumphant return after the floundering Apple purchased NeXT. With that notable exception, no one else in recent history has successfully conducted such a significant change. To use that anomalous revival in support of the argument that Marissa Mayer could, if her company warranted salvation, save Yahoo!, however, does not take into account the very distinct differences between Apple of the late 1990s and the Yahoo! of today.</p>
+    
+    <p>When Steve Jobs assumed control of Apple, he (famously) cut unprofitable projects and ventures with ruthless efficiency. Although some may criticize his methods, this no-compromise approach finally allowing Apple to turn a profit, and saved the company from falling at the brink of disaster. Since that turnaround, Apple has become the most valuable technology company in existence, and only rivaled in profitability by the world&#8217;s largest publicly-traded oil and gas company, Exxon Mobil.</p>
+    
+    <p>Yahoo!, on the other hand, operates under an antithetical philosophy to that of Steve Jobs when he revived Apple in the 90s. Rather than slash unprofitable ventures, Yahoo! prefers to use other companies and acquisitions as a means to bolster the company&#8217;s overall profitability. See their purchase of Tumblr. for proof, or the recently-launched Yahoo! Tech. Marissa Mayer does not want to cut, but to instead add in the hopes that one of these additions will save the company.</p>
+    
+    <p>After AOL, Yahoo! was the first web conglomerate&#160;&#8212;&#160;the General Electric of the internet, as Horace called it, providing everything in one spot: email, sports, games, news, search&#160;&#8212;&#160;Yahoo! sought to be <em>the</em> portal to the internet. Its time has passed, and now Google seeks to take up the reigns in an even more vertically-integrated manner by offering not only all the requisite online services, but the means to use them as well: between Google Fiber, Chromebooks, and Android, Google provides every necessary service to get online and use the internet. We can&#8217;t count Yahoo! out quite yet, but at this point I wouldn&#8217;t place any more bets on it.</p>
+</div>
+</article>
+{% endblock %}

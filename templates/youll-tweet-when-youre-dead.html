@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.theverge.com/2013/2/21/4010016/liveson-uses-artificial-intelligence-to-tweet-for-you-after-death" class="linkpost">You'll tweet when you're dead</a>
+    </h2>
+    <time datetime="2013-02-22" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/02">02</a>/22 12:05:12
+</time>
+
+    </blockquote>
+
+    <p>"'We are at the very beginning of the build process,' Dave Bedwood, creative partner at Lean Mean Fighting Machine, said in an email. &#8216;This site is very much for people to sign up now, get a second twitter account, private to them, and just watch it learn and grow. As A.I advances, then maybe we will then get into it being able to copy syntax. When you die, if you&#8217;ve had this account for a long time, it may be able to keep tweeting as you.'"</p>
+    
+    <p>Although skeptical at first, the more I thought about it&#160;&#8212;&#160;especially in light of the impressive learning capabilities of the <a href="/blog/quadracopters">quadracopters previously linked to</a>&#160;&#8212;&#160;the more I became convinced that this step in artificial intelligence was not only possible, but something we will likely see in the coming years. And while I fail to see a need for such a service, it is very interesting challenge I would nevertheless love to see successful.</p>
+</div>
+</article>
+{% endblock %}

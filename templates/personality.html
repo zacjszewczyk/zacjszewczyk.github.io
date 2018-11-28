@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="personality" class="original">Personality: Just another Excuse for Poor Writing</a>
+    </h2>
+    <time datetime="2013-02-05" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/02">02</a>/05 12:52:11
+</time>
+
+    
+    <p>Last weekend I found myself at a place I rarely make it to these days: it was early evening, I had cleared my Instapaper queue of articles newer than the last week, and my feed reader&#8217;s article count read, for the moment, zero. I had no articles to read, no back-burner topics clamoring for my attention, and I felt unmotivated to wade through my extensive Instapaper backlog in search of a suitable topic to write about. The situation felt strangely unfamiliar and weird. Shifting back into gear though I alt-tabbed over to my Simplenote client and began scrolling through an amalgam of nearly one hundred and fifty half-baked articles, prompts, and ideas. Before long I stopped on a note titled &#8220;Citational Fallacy&#8221; and began reading.</p>
+    
+    <p>Written months ago, I expected to rewrite the greater majority of Citational Fallacy, merely preserving the title, general topic, and possibly the gist of the argument contained within. To my surprise, however, I discovered four exceptionally well written paragraphs. Paragraphs so good, in fact, that even today, a week after I first opened Citational Fallacy, I have yet to make a meaningful contribution to the piece. Not for lack of trying, but simply because regardless of how many times I sit down and pound out a paragraph, none of my attempts compare to the original. Rather than beating my head against a wall though, I spent some quality time thinking about this and eventually came upon a realization I find quite intriguing: over the past few months I have become all too accustomed to &#8220;writing with personality&#8221;, and in doing so have let my standards slide. Whereas a few months ago, back when I wrote Citational Fallacy, the thought of using a single be verb or employing even one contraction would not only have been unthinkable but also a mark of shame, today I sit here writing poorly formed articles rife with grievous grammatical and stylistic errors, all in the name of making my writing more engaging by employing &#8220;personality&#8221;. This realization led me to an interesting conclusion and lent me the conviction with which I sat down to write this piece late last night:</p>
+    
+    <p>The act of &#8220;writing with personality&#8221; merely serves to facilitate subpar work in a vain attempt at excusing the abandonment of all the traits that make for exceptional writing. Primary among these quickly abandoned traits resides the editorial process, cast to the wayside in order to safeguard the whimsical flair masquerading as personality behind which poor writing lies, hidden in the shadows cast by poorly formatted paragraphs, weak sentences, repetitious wording, appalling disregard for even the most basic rules of grammar and style, inconsistency, boring word choices, passive sentence constructions, and abhorrent be verbs.</p>
+    
+    <p>The line between correctly implementing personality and throwing the rules out the door is a fine one, and one very few writers walk upon. To the one side those who stick to the rules forced upon them over years spent under the tutelage of the education system reside with their dry, five-paragraph essays and MLA works cited pages; on the other exist those incapable of comprehending even the most basic of rules, instead choosing to write by swiping their hands across a keyboard, applying a rudimentary spell checker, and posting the article&#160;&#8212;&#160;if it even deserves the designation&#160;&#8212;&#160;in the preposterous hope of somehow attracting a significant level of attention. Between those two factions, however, a select few sit perched atop the mountain, perpetually teetering at the edge of the abyss, constantly fighting the winds that rock them to and fro towards one form of destruction or another.</p>
+</div>
+</article>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://stratechery.com/2013/site-announcement-im-leaving-cubed-podcast/" class="linkpost">Ben Thompson Leaves The Cubed Podcast</a>
+    </h2>
+    <time datetime="2013-10-14" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/10">10</a>/14 16:00:31
+</time>
+
+    
+    <p>This is how one should leave a podcast, respectful of both his listeners and co-hosts alike. <a href="/blog/regarding-the-talk-show">Not that I&#8217;m pointing any fingers</a>.</p>
+    
+    <blockquote>
+<p>&#8220;This isn&#8217;t the end of the road for me on the podcasting front; I&#8217;ll still appear as a guest on various shows, and have ideas on what might make sense for stratechery in both the near and short term. In the meantime, though, I&#8217;ll simply be a listener and a learner of Cubed, not a host.</p>
+    </blockquote>
+
+    <p>&#8220;My thanks to both Ben Bajarin and Benedict Evans for the opportunity."</p>
+</div>
+</article>
+{% endblock %}

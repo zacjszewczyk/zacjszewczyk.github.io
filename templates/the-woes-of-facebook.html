@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.theculinarylife.com/2013/woes-facebook-where-else-follow-me/" class="linkpost">The Woes of Facebook</a>
+    </h2>
+    <time datetime="2014-01-02" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/01">01</a>/02 12:01:52
+</time>
+
+    
+    <p>I predicted this a while ago in an IRC conversation during a 5by5 broadcast, and many jumped at me for criticizing the practice of promoting one&#8217;s business on Facebook. To be fair, I made this statement prematurely: it took Facebook another year or two to actually begin diminishing their position as a viable source of attention. Now, though, I cannot say that this development surprises me in the least.</p>
+</div>
+</article>
+{% endblock %}

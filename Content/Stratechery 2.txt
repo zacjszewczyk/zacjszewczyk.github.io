@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Stratechery 2.0
+Link: http://stratechery.com/2014/welcome-stratechery-20/
+Pubdate: 2014/04/17 15:42:55
+Author: Zac Szewczyk
+
+As of yesterday, Ben Thompson has gone indie: after [a three-part series](Ben Thompson on the Future of News and Newspapers.txt) examining the decline of newspapers and the role of individual writers in this new world order, he took his own words to heart in crafting an impressive business model consisting of three membership tiers, each chock-full of some very compelling offerings. Along with an excellent new weekly podcast called [Stratechery.fm](http://stratechery.fm)--whose first episode, [Welcome to Stratechery.fm](http://stratechery.fm/episode-001-welcome-to-stratechery-fm/), I plan to cover at length in this week's installment of This Week in Podcasts--he intends to publish much more often and in this way make writing for Stratechery his full-time job. I [became a member](https://stratechery.com/membership/), and I hope you will too; we could use more intelligent analysis in the tech industry these days, and Ben Thompson is just the man for the job.

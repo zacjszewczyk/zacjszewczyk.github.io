@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://daringfireball.net/2010/07/improved_regex_for_matching_urls" class="linkpost">An Improved Liberal, Accurate Regex Pattern for Matching URLs</a>
+    </h2>
+    <time datetime="2014-02-09" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/02">02</a>/09 10:29:05
+</time>
+
+    
+    <p>Last week John Gruber updated his regular expression for matching URLs from a relatively modest 205 characters to just shy of two thousand. Given that I wrote my own Markdown parser for this site and thus spent quite a bit of time crafting regular expressions myself, his article immediately piqued my interest. Unlike John though, who wrote his to actually match URLs, mine assumes that everything formatted as a Markdown link is, in fact, a link of some fashion and deals with it accordingly. Thus, we approached the problem from two very different directions, and solved it in very different ways as a result. Perhaps in the future, if I ever take First Crack public, the ability to detect valid URLS could prove useful; however, until then, my solution works just fine, and I see absolutely no reason to change it.</p>
+</div>
+</article>
+{% endblock %}

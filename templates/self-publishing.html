@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://brooksreview.net/2012/11/self-publishing/" class="linkpost">Self-Publishing</a>
+    </h2>
+    <time datetime="2013-01-16" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/01">01</a>/16 09:06:15
+</time>
+
+    
+    <p>An article from Ben Brooks posted in November of last year I had near the middle of my Simplenote list, burried beneath a slew of notes, ideas, and half-baked articles.</p>
+    
+    <blockquote>
+<p>> I&#8217;m not interested in writing when it&#8217;s not about the writing. iBooks Author is neat, but I don&#8217;t want to learn it - instead I&#8217;ll just &#8220;publish&#8221; the book here as a series of posts, where I know what I am doing (somewhat) and where writing is about writing and not layout, marketing, legal issues, notices, copyrights, glossaries, etc.</p>
+    </blockquote>
+
+    <p>I completely agree with his conclusion, as I&#8217;m sure many writers do. That&#8217;s why, in part, I built First Crack: so that once it was working, I didn&#8217;t need to worry about the logistics and nitpicky details of publication. Instead, I could write in an environment in which &#8220;writing is about writing."</p>
+</div>
+</article>
+{% endblock %}

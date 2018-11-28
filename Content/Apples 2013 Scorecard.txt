@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Apple's 2013 Scorecard
+Link: http://hypercritical.co/2014/01/02/apples-2013-scorecard
+Pubdate: 2014/01/04 07:36:53
+Author: Zac Szewczyk
+
+In direct opposition to [Christopher Mims' belief](http://qz.com/161443/2013-was-a-lost-year-for-tech/) that the technology industry as a whole collectively failed to accomplish virtually anything significant--see [John Gruber](http://daringfireball.net/2013/12/the_year_in_apple_and_technology) and [Marco Arment's](http://www.marco.org/2013/12/29/gruber-mims) refutations--in 2013, John Siracusa outlines eight areas [of ten](http://hypercritical.co/2013/02/02/apples-2013-to-do-list) that Apple met his expectations well enough to merit a respectable grade. Personally, I would place much more stock in this list.

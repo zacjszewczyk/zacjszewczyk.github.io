@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.vice.com/read/i-ghostwrote-hundreds-of-chinese-students-ivy-league-admissions-essays-897" class="linkpost">I Ghostwrite Chinese Students' Ivy League Admissions Essays</a>
+    </h2>
+    <time datetime="2014-09-06" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/09">09</a>/06 12:15:13
+</time>
+
+    
+    <p>The idea that one could survive and prosper based on their merits alone is a comforting idea. If this story teaches us anything though, it teaches us that increasingly, it is nothing more than that&#160;&#8212;&#160;little more than a comforting notion in a world where mom and dad can open their wallets to make any door spring open before their baby. I signed eight years of my life away in exchange for a four-year education, and while <a href="/blog/looking-to-the-future">I don&#8217;t regret that decision in the least</a>, it&#8217;s remarkably disheartening to see others reap similar rewards in exchange for their father&#8217;s signature and a brief &#8220;Thanks."</p>
+</div>
+</article>
+{% endblock %}

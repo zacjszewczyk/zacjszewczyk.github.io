@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://shawnblanc.net/2013/02/the-membership-giveaway/" class="linkpost">Shawn Blanc's Membership Giveaway</a>
+    </h2>
+    <time datetime="2013-02-24" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/02">02</a>/24 18:54:44
+</time>
+
+    
+    <p>"Members contribute nearly half of this site&#8217;s income. Which means there is no way I could be writing here as my full-time gig without the generous support of the members.&#8221;</p>
+    
+    <p>With a month left in Shawn Blanc&#8217;s membership drive he announced an additional incentive to the existing membership perks: prizes. Worth an aggregate of more than $3,000, these prizes are a great way to encourage readers on the fence about whether to become a member or not and an interesting take on the increasingly popular practice of individual bloggers cultivating a strong readership through member programs. Here&#8217;s to hoping Shawn not only reaches his goal, but exceeds it as well.</p>
+</div>
+</article>
+{% endblock %}

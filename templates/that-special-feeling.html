@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://tabdump.com/blog/2014/3/25/that-special-feeling" class="linkpost">That Special Feeling</a>
+    </h2>
+    <time datetime="2014-04-03" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/04">04</a>/03 10:52:58
+</time>
+
+    
+    <p>In a brief departure from his daily Tab Dump series, Stefan Constantinescu wrote about the LG G Flex. He did not write a review though, but instead a rather introspective essay about how the single advantage to this device and what that signaled for the future of the mobile phone industry. Quite a while has passed since the 5S came out, and even longer since Apple did anything new with their flagship phone&#8217;s form factor. We have already seen releases from the other major smartphone players, and it&#8217;s about time Apple added to the cacophony. I can&#8217;t wait to see what they come out with.</p>
+</div>
+</article>
+{% endblock %}

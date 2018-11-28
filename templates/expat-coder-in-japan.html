@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.bemmu.com/two-years-of-candy" class="linkpost">Two years of life as an expat coder in middle-of-no-where Japan</a>
+    </h2>
+    <time datetime="2013-05-01" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/05">05</a>/01 16:37:47
+</time>
+
+    
+    <p>After reading this article, I went back and forth trying to decide whether or not I should link to it. The piece was not particularly remarkable in any way, after all. Regardless of how I justified not writing about it though, I kept coming back to this story until I eventually gave in. It&#8217;s a touching story tinged with the melancholy undertone of existential ennui. Having spent months away from home multiple times in the past, I can empathize with the the author&#8217;s sentiment.</p>
+</div>
+</article>
+{% endblock %}

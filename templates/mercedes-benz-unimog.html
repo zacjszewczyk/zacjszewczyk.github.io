@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.blessthisstuff.com/stuff/vehicles/misc/mercedes-benz-unimog-doppelkabine/" class="linkpost">Mercedes-Benz Unimog Doppelkabine</a>
+    </h2>
+    <time datetime="2014-08-18" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/08">08</a>/18 08:09:48
+</time>
+
+    
+    <p>No really, that&#8217;s what it&#8217;s called: shortly after World War II, Erhard and Sons began manufacturing Albert Friedrich&#8217;s vehicle for primarily agricultural use in post-war Germany until Mercedes-Benz took over the production process in the early 1950s. Since then, the Unimog has fostered quite the fanatical fan base, not unlike that of its <a href="http://silodrome.com/unimog-mercedes-benz/">counterparts</a> across the world, the American Jeep, British Land Rover, or Japanese Land Cruiser. And looking at it, and <a href="http://youtu.be/INxkz6UcNoE">seeing just what this family can really do</a>, it&#8217;s no surprise: this is one remarkably capable vehicle any outdoor enthusiast would be truly fortunate to have in their arsenal.</p>
+</div>
+</article>
+{% endblock %}

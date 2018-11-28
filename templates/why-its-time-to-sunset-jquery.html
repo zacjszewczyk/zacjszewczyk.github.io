@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://professionalaspnet.com/archive/2013/04/14/Why-Its-Time-to-Sunset-jQuery.aspx" class="linkpost">Why It's Time to Sunset jQuery</a>
+    </h2>
+    <time datetime="2013-04-29" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/04">04</a>/29 21:25:19
+</time>
+
+    
+    <p>When jQuery first came out it was a godsend. For most developers, it remains the same indispensable tool without which anything more than mundane cookie management, if even that, would prove an insurmountable obstacle. In the afore linked article along with <a href="http://professionalaspnet.com/archive/2012/11/01/Web-Performance-Optimization_3A00_-When-Possible-Use-Native-Selectors-Instead-of-jQuery.aspx">his companion piece encourage developers to rely more heavily on Javascript&#8217;s native functions</a>, Chris Love makes the compelling case against what has become the de-facto Javascript framework. A stickler for optimization myself, I plan to keep these articles close at hand for the next site I build, as I suggest any developer concerned with optimization&#160;&#8212;&#160;regardless of skill level&#160;&#8212;&#160;do as well.</p>
+</div>
+</article>
+{% endblock %}

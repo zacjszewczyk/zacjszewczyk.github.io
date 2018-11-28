@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.theverge.com/2013/4/27/4275458/reeder-for-iphone-no-longer-requires-google-reader-account" class="linkpost">Reeder for iPhone now supports standalone RSS</a>
+    </h2>
+    <time datetime="2013-05-11" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/05">05</a>/11 11:25:51
+</time>
+
+    
+    <p>"Perhaps more noteworthy is Reeder&#8217;s new, standalone RSS feature — you don&#8217;t even need a Feedbin or Google Reader account anymore. Instead, you can start curating RSS feeds right on your iPhone; if you had a Google Reader account you can also simply import your feeds straight from there.&#8221;</p>
+    
+    <p>Great news. Reeder is easily my favorite iOS RSS reader, and definitely one of the best on the market. This new feature makes it all the more appealing not just to me as an existing customer, but hopefully to potential future users as well. I just imported all my Google Reader feeds in to the app, and it works like a charm.</p>
+</div>
+</article>
+{% endblock %}

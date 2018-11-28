@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://blenderhead.me/podcast-participation-trophies/" class="linkpost">Podcasters Need A Dose Of Reality</a>
+    </h2>
+    <time datetime="2014-03-03" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/03">03</a>/03 08:27:43
+</time>
+
+    
+    <p>Fantastic take ostensibly on the problems facing podcasters with regards to discoverability, but in reality a thinly-veiled critique of all those who complain about having the greatest undiscovered app, show, or website rather than focusing their efforts on bringing that undoubtedly exquisite labor of love to a broader audience. I have fallen into this trap in the past, so having a slap-in-the-face reality check like this one to keep me focused on what really matters, and what will actually make a difference in my own work, is especially helpful, and something I will definitely return to multiple times in the coming months and years.</p>
+</div>
+</article>
+{% endblock %}

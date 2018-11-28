@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://stratechery.com/2013/clayton-christensen-got-wrong/" class="linkpost">What Clayton Christensen Got Wrong in his Theory of Low-End Disruption</a>
+    </h2>
+    <time datetime="2013-09-25" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/09">09</a>/25 17:30:11
+</time>
+
+    
+    <p>Another great article by Ben Thompson, this time on Clay Christensen&#8217;s interesting disruption theories and Apple&#8217;s approach in making products that both defy them and motivate people to purchase en masse. Come for the insights into Apple, and stay for his dissection of Christensen&#8217;s widely-regarded theory; this article is well worth the read.</p>
+</div>
+</article>
+{% endblock %}

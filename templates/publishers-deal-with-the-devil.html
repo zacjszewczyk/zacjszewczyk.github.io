@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://stratechery.com/2014/publishers-deal-devil/" class="linkpost">Publishers' Deal with the Devil</a>
+    </h2>
+    <time datetime="2014-06-14" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/06">06</a>/14 08:33:40
+</time>
+
+    
+    <p>By far and away the best article from Ben Thompson in quite some time, reminiscent of his past <a href="/blog/ben-thompson-on-the-future-of-news-and-newspapers">three-part series on the future of news and newspapers</a>. I have paid too little attention to this issue to have formed any sort of opinion on it, but based on this piece I would agree with Ben: it seems like book publishers made a ill-fated deal, Amazon has come to collect, and it&#8217;s far too late to go back on it now.</p>
+</div>
+</article>
+{% endblock %}

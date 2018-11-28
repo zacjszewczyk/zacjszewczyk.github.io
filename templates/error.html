@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="error" class="original">Error</a>
+    </h2>
+    <time datetime="2013-12-30" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/12">12</a>/30 08:38:42
+</time>
+
+    
+    <p>Unfortunately I&#8217;ve encountered an error while trying to locate the resource you requested. If you know the title of the post you are looking for, check out the &#8220;Post Archives&#8221; page where you can do a simple in-page search for the article&#8217;s title. Alternately, if you have a general idea as to when I published it, I have delineated my articles into collections based on the month and year posted, which you can access from the aforementioned Archives page. If all else fails, head over the the home page; I&#8217;m sure you&#8217;ll find something worthwhile there.</p>
+</div>
+</article>
+{% endblock %}

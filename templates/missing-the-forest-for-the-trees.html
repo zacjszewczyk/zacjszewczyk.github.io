@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="missing-the-forest-for-the-trees" class="original">Missing the Forest for the Trees</a>
+    </h2>
+    <time datetime="2013-12-08" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/12">12</a>/08 21:47:37
+</time>
+
+    
+    <p>With the release of Tweetbot 3 Tapbots brought a complete user interface overhaul to the beloved Twitter app alongside a whole slew of other improvements and changes. One such change saw the removal of both Tweetbot&#8217;s double- and triple-tap functionality. Citing increased responsiveness as the app would no longer have to wait for iOS to discern whether the user intended multiple taps, Tapbots replaced this feature with a curious swipe gesture. Believing it would work similarly to Mailbox&#8217;s finicky yet workable gestures where swiping different distances invoked different actions, I looked forward to this improvement; however, in this regard Tweetbot 3 fell far short of excellence.</p>
+    
+    <p>Currently swiping roughly 1/3 of the way from left to right pulls a retweet icon in from the side, indicating that if I lifted my finger Tweetbot would prompt me to either quote the selected tweet or retweet it to my followers. Swiping much further, at around halfway across the screen, a reply icon slides into view. Given that Tweetbot does not provide for its users to change the action associated with a long swipe, it obviously considers this the most important function one would wish to expedite. I could live with this if approximate distances I could eventually relegate to muscle memory were the only complications over simply tapping the screen multiple times, but unfortunately Tapbots decided to add a second criteria for determining the intent of my gestures. Ironically, they chose time. In fact, the time trigger&#160;&#8212;&#160;counterintuitively especially given its designation as a &#8220;Short Right Swipe"&#160;&#8212;&#160;actually supersedes gesture length: if I swipe from left to right without coming anywhere near the screen&#8217;s halfway point but do so quickly, Tweetbot interprets that as a long swipe and fires the reply action. I find this annoying at times, and on occasion infuriating.</p>
+    
+    <p>Unlike the vast, vast majority of Twitter users, I predominantly use the service as a consumption platform rather than a creation one. If you likened Twitter to Tumblr, I only created an account to follow other blogs rather than create my own. Granted I do tweet on occasion, but most of the time I sit back and let others do the talking. As a result, I retweet <em>a lot</em> and favorite as a means to save particular tweets or conversation threads should I ever wish to go back and reference a particular exchange. The likelihood of this aside, my primary use for Twitter lies in its ability to facilitate succinct conversations of which I can participate in a tertiary role with the option of greater involvement should the situation call for it. Given this use case Tapbots modifying the feature I used more often than any other impacted my daily workflow greatly, and in a negative way.</p>
+    
+    <p>Previously, I could scroll through my timeline, absently triple-tap a tweet, and retweet it all without any conscious effort: consistent spacing allowed muscle memory to take over as soon as I found a noteworthy tweet; habit took care of the rest. In Tweetbot 3, however, I not only have to be sure not to exceed the requisite distance, I must also make a conscious effort to keep that gesture within the appropriate amount of time for a retweet instead of a reply. As I said earlier I find this incredibly frustrating especially when I fail in one regard or another, but particularly annoying because it now takes considerably longer to fulfill the one job I ask Tweetbot to do. Perhaps this change led to a net increase in Tweetbot&#8217;s speed, but at least for me I not only have to spend much more time executing basic commands, but I must also spend much more effort ensuring I get the result I intend. In my mind, this is no improvement&#160;&#8212;&#160;speed bump or not.</p>
+</div>
+</article>
+{% endblock %}

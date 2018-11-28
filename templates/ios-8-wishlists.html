@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://harshilshah1910.wordpress.com/2014/06/01/ios-8-wishlist/" class="linkpost">iOS 8 Wishlists</a>
+    </h2>
+    <time datetime="2014-06-02" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/06">06</a>/02 06:28:58
+</time>
+
+    
+    <p>In preparation for Apple&#8217;s WWDC keynote today, be sure to give Harshil Shah&#8217;s article wherein he lays out his wishes for iOS 8 a try: although I&#8217;m only about halfway through, in the interest of time I have decided to post it here anyway. He makes a lot of great points, and has some very interesting ideas for the future of Apple&#8217;s mobile operating system. It just might take you until the beginning of the keynote to finish, but I highly recommend you check this piece out. And if you want to read even more about some iOS 8 expectations, I posted my own list a few weeks ago: <a class="local" href="Looking-to-iOS-8">Looking to iOS 8</a>.</p>
+</div>
+</article>
+{% endblock %}

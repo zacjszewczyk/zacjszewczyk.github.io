@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Thinking About An iPad Pro
+Link: http://www.macstories.net/stories/thinking-about-an-ipad-pro/
+Pubdate: 2014/01/16 15:37:36
+Author: Zac Szewczyk
+
+I have written [a](The iPad Pro.txt) [number](Clocking Down the Mini.txt) of [articles](More on the iPad Pro.txt) in the past speculating as to what an iPad Pro could do to differentiate itself from Apple's two existing models and thus merit its addition to the lineup. In all those posts, my proposed device most closely tracked with Federico's "Option B: A 'Pro' iPad With Substantial Software & Hardware Changes". Like Federico, I find the case for the alternatives--his "Option A" and "Option C"--difficult to make, to say the least. I won't rehash each of my articles or Federico's points here, but suffice it to say that I think it very likely that we will see an iPad Pro very soon from Apple. With the 2013 Mac Pro ironically shipping in 2014, perhaps 2014 will be the year of the Pro.

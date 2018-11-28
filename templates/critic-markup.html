@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="critic-markup" class="original">Critic Markup</a>
+    </h2>
+    <time datetime="2013-03-13" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/13 16:04:24
+</time>
+
+    
+    <p>Last month, when Ben Brooks <a href="http://brooksreview.net/2013/02/tired-ben/">decided to take</a> a short <a href="http://brooksreview.net/2013/02/mine/">sabbatical</a>, he enlisted the help of <a href="http://patdryburgh.com/">Pat Dryburgh</a> who graciously agreed to <a href="http://brooksreview.net/2013/02/empty/">step in and keep the site going</a> during Ben&#8217;s absence. When Ben came back, he posted <a href="http://criticmarkup.com/"><em>While I Was Out</em></a>, a short piece covering a few interesting things that had happened during his break.</p>
+    
+    <p>Ben spent some time discussing the advent of <a href="http://criticmarkup.com/">Critic Markup</a>. Positioned as a complement to Markdown, Critic Markup fills gap in my Markdown use case: commenting. I prefer to write everything, from emails to entire school papers, in Markdown; however, lacking the ability to comment effectively has left me high and dry more than a few times since I adopted Markdown as my go-to syntax for everything under the sun. Critic Markup solves this problem for me; however, Ben nevertheless had some doubts as to the practicality of this product:</p>
+    
+    <blockquote>
+<p>&#8220;Unlike Markdown, though, I fear you really need to use the integrated toolkits (TextExpander, Keyboard Maestro) to get the most of the language as you are having to add more syntax than you do with Markdown. I&#8217;ll report on this more as I dive into it, but I am a bit skeptical about ease of adoption here.&#8221;</p>
+    </blockquote>
+
+    <p>Critic Markup is a novel idea from which many parallels can be drawn to Markdown. At first, Markdown existed solely as an easy to write, easy to use markup language for plain text. Created to streamline the process of writing on the internet, Markdown accomplished that job to sensational results. It did not <a href="http://dillinger.io/">transform text</a> as <a href="http://markable.in/">you type</a>, it was not integrated in every text editor ever made, and it overcame those and other &#8220;shortcomings&#8221;. Like Markdown, Critic Markup was created to cleanly and efficiently solve a single problem: the inability to easily create and manage editorial comments in a Markdown document. Like Markdown in its early days, it will be quite some time before we see widespread platform adoption of the Critic Markup spec, but that does not mean its well thought-out implementation will be any less useful without those neat management features demonstrated on the Critic Markup homepage or at least until those additional features become widely implemented. It&#8217;s not the bells and whistles that make Markdown useful, nor will it be the extra bells and whistles that make Critic Markup useful; Markdown is useful as a finely-crafted syntax, just as Critic Markup will be in the coming weeks and months.</p>
+</div>
+</article>
+{% endblock %}

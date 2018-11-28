@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="i-dont-actually-read-your-blog" class="original">I Don't Actually Read your Blog</a>
+    </h2>
+    <time datetime="2013-02-26" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/02">02</a>/26 14:38:20
+</time>
+
+    
+    <p>Ah the linkblog. Although <a href="https://twitter.com/hypercritical/status/294115979150098432">not the genesis of the format</a>, John Gruber is often credited with the advent of this extremely pervasive practice and its widespread adoption over the years, a propagation that has continued despite the resurgence of its detractors every few months. Nevertheless, in spite of those dissidents, many writers have built a business around this model. Today, I would like to focus on one in particular: Shawn Blanc.</p>
+    
+    <p>Every time I see an article from Shawn Blanc scroll into view in my feed reader, I stop and open it because, more often than not, it is an actual article as opposed to a linked list post discussing whatever tired topic has already been dragged across every other blog I read. Contrast that with The Loop and Daring Fireball where I merely read the article headline, seldom even opening the full text in my RSS reader much less actually navigating to either site. I find it unlikely that this habit is unique to me, and thus is something new bloggers attempting to determine their posting strategy should keep in mind, as should veteran writers as well.</p>
+</div>
+</article>
+{% endblock %}

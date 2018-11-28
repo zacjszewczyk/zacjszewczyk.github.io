@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://vintagezen.com/zen/2014/2/7/im-bored" class="linkpost">Linus Edwards on Boredom</a>
+    </h2>
+    <time datetime="2014-02-09" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/02">02</a>/09 09:59:19
+</time>
+
+    
+    <p>"Don&#8217;t just complain that tech podcasts are boring, create your own tech podcast that you don&#8217;t find boring. Don&#8217;t just complain that most blogs are posting such boring echo chamber posts, post more interesting posts that explore new topics. That is what the great visionaries in history have done, fought the boredom and let it push them into areas that they didn&#8217;t find boring. That&#8217;s creativity, pushing the boundaries of what came before and creating new and interesting things.&#8221;</p>
+    
+    <p>Over the last few months it seems everyone decided to take a break from making great things and instead spend their time complaining. First it was link blogs, at whose feet we could lay the blame for some perceived decline in intelligent discourse on the internet. After that, tech podcasts were too long, unfocused, and lacked polish. And then just recently the topic of discussion revolved around iOS games and in-app purchases, with the most recent example in Flappy Bird. There is room for this critique, to be sure: in most cases it is not only completely justifiable, but necessary in order to move forward as an industry and a community. However, complaining to the exclusion of innovating, when the former completely takes the place of the latter, certainly warrants some serious reconsideration of your priorities. It&#8217;s fine to say that you are dissatisfied with something, but don&#8217;t let that proclamation get in the way of creating something better.</p>
+</div>
+</article>
+{% endblock %}

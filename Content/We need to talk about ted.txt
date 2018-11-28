@@ -1,0 +1,7 @@
+Type: linkpost
+Title: "We Need to Talk About TED"
+Link: http://www.bratton.info/projects/talks/we-need-to-talk-about-ted/
+Pubdate: 2013/12/17 15:40:26
+Author: Zac Szewczyk
+
+I rarely find anything worthwhile on Hacker News--primarily interesting coding projects and the latest NSA story to catch the masses' attention, rarely anything substantive--but when I do come across something interesting it really is truly exceptional. This article from Benjamin Bratton is one of those excellent pieces, one for the record books. I can't wait to watch his talk.

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://stratechery.com/2014/social-conglomerate/" class="linkpost">The Social Conglomerate</a>
+    </h2>
+    <time datetime="2014-02-24" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/02">02</a>/24 07:57:02
+</time>
+
+    
+    <p>For the most part I stayed away from articles attempting to explain Facebook&#8217;s reasoning in acquiring WhatsApp. That is, until Ben Thompson posted his take, where he continued the &#8220;company-as-conglomerate&#8221; <a href="http://ben-evans.com/benedictevans/2014/2/19/ways-of-thinking-about-google">trend</a> in dubbing Facebook the Social Conglomerate. Although I found myself nodding in agreement to the majority of his post, I did take issue with one bit: towards the end, Ben called Apple a personal computing conglomerate; however, I believe a more apt designation would call Apple the quality conglomerate, pursuing excellence in not only hardware, but every aspect of the computing experience. One could certainly argue their effectiveness across the board&#160;&#8212;&#160;iCloud probably being the poster child against using &#8220;quality&#8221; as the operative word in that sentence&#160;&#8212;&#160;but you get points for trying in this game, not only for succeeding; case and point Facebook and WhatsApp.</p>
+</div>
+</article>
+{% endblock %}

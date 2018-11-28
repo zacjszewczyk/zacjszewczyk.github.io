@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://furbo.org/2014/09/03/the-terminal/" class="linkpost">The Real Comprehensive Terminal Guide</a>
+    </h2>
+    <time datetime="2014-09-18" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/09">09</a>/18 11:02:21
+</time>
+
+    
+    <p>Quite some time ago, in a life before this one, I wrote an article that gained quite a bit of attention titled, &#8220;The Comprehensive Terminal Guide&#8221;. Someday, I hope to update and re-release that piece here. Meanwhile, Craig Hockenberry wrote and published an even longer, even more in-depth, and undoubtedly much better article than mine simply titled, &#8220;<a href="http://furbo.org/2014/09/03/the-terminal/">The Terminal</a>&#8221;. Although he geared his more towards power users, users of all skill levels will find value in this monster of a piece. I consider myself fairly competent when it comes to the UNIX terminal, but Craig had already taught me a thing or two within the first few sections. If you have ever wanted to take better control of your computer, this is a great jumping-off point.</p>
+</div>
+</article>
+{% endblock %}

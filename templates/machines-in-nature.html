@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.visualnews.com/2013/08/20/simon-stlenhag-paints-a-fantastic-yet-familiar-future-of-machines-in-nature/" class="linkpost">A Fantastic Yet Familiar Future of Machines in Nature</a>
+    </h2>
+    <time datetime="2013-08-24" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/08">08</a>/24 13:23:18
+</time>
+
+    
+    <p>"His paintings show a universe much like our own, but beside the everyday humans carrying out everyday activities are massive buildings and machines running on technologies currently unknown.&#8221;</p>
+    
+    <p>This is exactly the sort of article I subscribed to Visual News for. Very impressive.</p>
+</div>
+</article>
+{% endblock %}

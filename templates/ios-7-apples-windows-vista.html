@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="ios-7-apples-windows-vista" class="original">iOS 7: Apple's Windows Vista</a>
+    </h2>
+    <time datetime="2013-09-06" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/09">09</a>/06 15:58:51
+</time>
+
+    
+    <p>After nearly six years of Windows XP, the tenth major version of Microsoft&#8217;s computer operating system released to much hype and high expectations. With an overhauled visual aesthetic and a host of other headlining features, the Windows world heralded this release as the platform atop which the next generation of computers would build itself. An ambitious claim for sure, Microsoft&#8217;s promise to not only overhaul the user interface but its very underpinnings as well seemed almost too good to be true. After XP&#8217;s phenomenal success though, the claim seemed a believable one. Like a joke straight out of Family Guy, Vista exited the gate and promptly fell flat on its face.</p>
+    
+    <p>Plagued with security issues, interface flaws, and general instability, Windows Vista became the industry&#8217;s cautionary tale, the butt of all too many jokes for quite some time. Microsoft had promised a revolutionary new aesthetic and a complete overhaul of the operating system down to its core, and then released what many considered a half-baked product. On the whole visually attractive, I must admit, but significantly flawed nonetheless.</p>
+    
+    <p>In less than a week Apple will hold a press event at which the company will, presumably, announce two new versions of their flagship product, the iPhone 5S and 5C, along with a host of updates to its existing offerings. Additionally, many believe Apple will also show off the final version of iOS 7 to hit the market in conjunction with the aforementioned iPhone models. With a completely revamped user interface and rebuilt core, iOS 7 has generated an enormous amount of excitement since Tim Cook demoed the update at WWDC three months ago; it will undoubtedly launch to a great deal of hype and high expectations.</p>
+    
+    <p>Sound at all familiar?</p>
+    
+    <p>Microsoft began developing the operating system that eventually evolved in to Windows Vista three months prior to XP&#8217;s release. Talk about on the ball. However, after many delays and concerned with the omnipresent issue of feature creep, the Windows team scrapped the codebase and started anew in the second half of 2004. Over the next three years, Microsoft went on to create what was intended as a paradigm-shifting platform.</p>
+    
+    <p>Fast-forward nine years and Apple just finished previewing the next major release of their mobile operating system, iOS 7. Like Microsoft, Apple promised a beautiful new interface and revamped underpinnings; unlike Microsoft, Apple has three months to deliver on that promise. Granted, work on iOS 7 likely began soon after iOS 6 hit the market, but the iOS 7 previewed at WWDC 2013 and the version in development before Scott Forstall was ousted in October of 2012 were likely radically different offerings. Some of that work undoubtedly carried over, but certainly not all of it. In essence, Apple had just over ten months to revolutionize their mobile operating system.</p>
+    
+    <p>I have great faith in Apple&#8217;s engineering team; the &#8220;It just works&#8221; slogan didn&#8217;t stick for nothing, after all, it came as a result of incredibly hard work and dedication. But while I do believe Apple is capable of pulling this off, the chance of a Windows Vista-like release is at least an interesting possibility to consider.</p>
+</div>
+</article>
+{% endblock %}

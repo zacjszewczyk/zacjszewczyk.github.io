@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://kotaku.com/custom-difficulty-gives-an-honest-challenge-and-leaves-781367643" class="linkpost">Custom Difficulty Gives an Honest Challenge</a>
+    </h2>
+    <time datetime="2013-07-20" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/07">07</a>/20 15:09:50
+</time>
+
+    
+    <p>"Instead of hurling myself at an insurmountable goal simply because it was named respectably, I came in with a personal best by asking more from my strengths and forgiving my weaknesses.&#8221;</p>
+    
+    <p>It&#8217;s an article ostensibly about video games, though it may have just as well been about overcoming barriers by setting aside the often malformed and unrealistic expectations we often place upon both ourselves and our work.</p>
+</div>
+</article>
+{% endblock %}

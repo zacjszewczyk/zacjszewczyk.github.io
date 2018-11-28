@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://huckberry.com/blog/posts/popular-luxurious-populuxe" class="linkpost">Popular + Luxurious = Populuxe</a>
+    </h2>
+    <time datetime="2014-04-16" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/04">04</a>/16 15:47:54
+</time>
+
+    
+    <p>Huckberry takes us on a nostalgic trip to a bygone era I fear we will never experience again. Aspiration, decency, and pride are all vanishing from America at much too rapid a pace these days, and that rate has only continue to increase in recent years; Nicholas Pell is right to be saddened by their untimely and unfortunate passing, for once our society loses these values I doubt we will ever see them come back.</p>
+</div>
+</article>
+{% endblock %}

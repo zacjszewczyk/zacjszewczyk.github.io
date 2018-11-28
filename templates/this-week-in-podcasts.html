@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="this-week-in-podcasts" class="original">This Week in Podcasts</a>
+    </h2>
+    <time datetime="2014-09-28" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/09">09</a>/28 19:05:49
+</time>
+
+    
+    <p>At first I attributed my absence of enthusiasm in a medium that I previously enjoyed so immensely a by-product of the increased demands on my time as of late. However, upon further consideration, and after yet another week of but one entry here in a list that previously contained double-digit items, I realized the true reason behind this unfortunate change: my interests had shifted. Just as I no longer derive the same pleasure in reading about technology and writing in speculation of Apple&#8217;s next announcement, I no longer take the same pleasure in the podcasts of the same genre. Do not look at the decline of this series as a step towards its demise, then, but rather the prelude to a massive shift that&#160;&#8212;&#160;at its end&#160;&#8212;&#160;will see both this series and this website stronger than it ever was before. And so, enjoy.</p>
+    
+    <p><a href="http://www.merlinmann.com/roderick/ep-125-all-the-great-shows.html">Roderick on the Line Episode 125: All the Great Shows!</a>. This week John and Merlin talk about presenting&#160;&#8212;&#160;both yourself and the actual act of conducting a presentation before large groups of people. The key takeaway, in my opinion: you can only hope to please so many people before the pursuit of that goal begins necessitating a betrayal of yourself. And at that point, what&#8217;s the point in continuing? How can you not feel satisfied with bringing joy to a small group of dedicated fans?</p>
+    
+    <p>Until next week, then.</p>
+</div>
+</article>
+{% endblock %}

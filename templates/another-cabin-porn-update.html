@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="another-cabin-porn-update" class="original">Another Cabin Porn Update</a>
+    </h2>
+    <time datetime="2013-01-28" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/01">01</a>/28 23:13:19
+</time>
+
+    
+    <p>Rather than posting separate articles for each cool cabin I came across or interesting story I found on <a href="http://freecabinporn.com">Cabin Porn</a> throughout this past day, I decided to condense the day&#8217;s updates into a single post. There are a few cabins, however, whose stories merited more than a simple line item on an imposingly long list, and for those I did make an exception.</p>
+    
+    <ulstart='1'>
+<li><a href="http://freecabinporn.com/post/25183549412/from-peter-anderson-so-i-bought-a-140-acre-gold">140 Acre Gold Mining Claim</a>. Certainly not the nicest of cabins, and I don&#8217;t know much about real estate, but I&#8217;d say Peter Anderson made off with a steal at just $3,000 for this massive plot and the accompanying cabins. What a catch.</li>
+    <li><a href="http://freecabinporn.com/post/24130198168/cabin-between-austria-and-slovenia-submitted-and">Cabin between Austria and Slovenia</a>. This view reminded me of a hike I took with a Boy Scout troop during my trip to South Africa in the hills surrounding Barberton. We hiked up the mountain one day, camped in a small building similar to this cabin, and rode bikes down the mountain the next day. Another very fond memory of my trip there.</li>
+    <li><a href="http://freecabinporn.com/post/22253288058/adirondack-shelter-in-oil-creek-state-park">Adirondack</a>. I slept in this very adirondack one cold and rainy weekend a few years ago, and have spent many a night in an adirondack since then. Wonderful little buildings and a great way to spend the night.</li>
+    <li><a href="http://freecabinporn.com/post/21784037353/hackney-shed-by-office-sian-in-london-england">Hackey Shed</a>. I absolutely love the idea of an open workspace such as this one and one that can easily be closed if the weather takes a turn for the worse while still allowing for a spectacular view.</li>
+    <li><a href="http://freecabinporn.com/post/16440397386/hut-in-niigata-prefecture-japan-submitted-by">Hut</a>. I took a particular liking to this &#8220;cabin&#8221;, if it could even be called that, not because the structure was anything special, but because of the spectacular mountain range it sits atop. Absolutely beautiful.</li>
+    <li><a href="http://freecabinporn.com/post/14362535618/allandale-house-by-william-obrien">Allandale House</a>. One of the more picturesque A-frames I was able to find on Cabin Porn.</li>
+    <li><a href="http://freecabinporn.com/post/9077333990/andrew-ranvilles-puumaja-project-meaning">Puumaja project</a>. The first actual tree house I found on Cabin Porn: all the others were suspended mere feet from the ground. Very impressive&#160;&#8212;&#160;not only for designing a well thought-out tree house, but also in designing an attractive one.</li>
+</div>
+</article>
+{% endblock %}

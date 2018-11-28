@@ -1,0 +1,7 @@
+Type: linkpost
+Title: How Hacker News ranking really works
+Link: http://www.righto.com/2013/11/how-hacker-news-ranking-really-works.html
+Pubdate: 2014/02/27 07:16:35
+Author: Zac Szewczyk
+
+Interesting examination the of story ranking system Hacker News employs, and much more scientific than [my previous attempt](Algorithmic Ineptitude.txt). Ken Shirriff's earlier article on the topic, [*Inside the news.yc ranking formula*](http://www.righto.com/2009/06/how-does-newsyc-ranking-work.html)--in case you miss the link in his latest post--, also warrants some attention as both try to explain the fickle and near-inscrutable internet fire hose that is Hacker News. I found these two articles especially interesting given a recent project I have begun work on, but I won't spoil that here.

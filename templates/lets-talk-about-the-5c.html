@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="lets-talk-about-the-5c" class="original">Let's Talk About the 5C</a>
+    </h2>
+    <time datetime="2014-04-11" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/04">04</a>/11 21:09:50
+</time>
+
+    
+    <p>Continuing to riff on Brian Hall&#8217;s recent piece for Tech.pinions, <a href="http://techpinions.com/you-blow-my-mind-o-satya-o-satya/29137">Panic Inside Apple and Cheers for Satya</a>, that I linked to in <a href="/blog/nowatch">my last post</a>, I want to spend some time talking about another topic of his article: the iPhone 5C. Lately there seems to have been a great deal of talk about the 5C as a failed product that missed the target Apple set out for it by a gross and (apparently) indicative-of-impending-doom margin. I could not disagree more, though; and in fact, I would go so far as to say that every piece painting such a bleak picture belies the author&#8217;s fundamental misunderstanding of exactly what the 5C was and was <em>not</em> created for.</p>
+    
+    <p>Just as the iPhone 5 was not a cheap phone&#160;&#8212;&#160;in fact, it was (and remains) one of the best devices in the mobile phone industry&#160;&#8212;&#160;neither was the iPhone 5C cheap; the iPhone 5C <em>is</em> the iPhone 5: it has the same internals as last year&#8217;s flagship device, at the same price the 5 would have decreased to had Apple elected not to modify their mid-tier model. It is <em>not</em> Apple&#8217;s attempt at a budget device. Trust me, when we see a truly budget offering from Apple, it will differ in more ways than a simple plastic shell. Rather, the 5C <em>was</em> a play to make last year&#8217;s tech more interesting, especially to historically low-end buyers. Famously, the smartphone industry features very little differentiation amongst platforms, and even less between models from the same manufacturer. The 5C attempted to change that, and among a certain demographic, <em>it worked</em>.</p>
+    
+    <p>Most importantly, it was all these things&#160;&#8212;&#160;last year&#8217;s internals, a less expensive casing, and an attractive outer shell&#160;&#8212;&#160;all in service of a play for higher margins on a device that Apple would have sold anyway. The 5C was not remarkably successful, in no small part because it was not <em>supposed</em> to be remarkably successful. Apple creates a new flagship device every year for a reason, after all. The 5C was geared towards the low end, but it was not aimed there, and that is an incredibly important distinction to make when considering any aspect of this device. For everything it was supposed to do, it succeeded. We must be careful not so superimpose our own aspirations and goals over top the real aspirations and goals at hand.</p>
+</div>
+</article>
+{% endblock %}

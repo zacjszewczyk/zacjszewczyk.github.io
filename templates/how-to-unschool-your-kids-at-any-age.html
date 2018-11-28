@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.outsideonline.com/outdoor-adventure/nature/Rewild-Your-Child.html" class="linkpost">How to Unschool Your Kids at Any Age</a>
+    </h2>
+    <time datetime="2014-09-03" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/09">09</a>/03 08:02:19
+</time>
+
+    
+    <p><a href="/blog/we-dont-need-no-education">After Ben Hewitt&#8217;s recent essay</a> on his approach to and the benefits of unschooling, Outside Online has another great article on the subject, this time offering some helpful suggestions to those looking to differ from the norm. Again, not the time to share my thoughts on this subject quite yet, but keep this one, too, in the back of your mind when I do.</p>
+</div>
+</article>
+{% endblock %}

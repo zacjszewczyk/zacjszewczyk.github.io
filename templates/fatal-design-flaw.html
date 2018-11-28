@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://brooksreview.net/2013/01/design-workspace/" class="linkpost">Fatal Design Flaw of the Workspaces</a>
+    </h2>
+    <time datetime="2013-01-27" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/01">01</a>/27 12:36:24
+</time>
+
+    
+    <p>In pursuit of more perfect compromise between functionality and minimalism, Ben Brooks closed his article on minimalist spaces with an observation I found very vindicating, having made the switch almost wholly myself.</p>
+    
+    <blockquote>
+<p>&#8220;I wonder if my perfect office really involves a laptop, or if it would be perfect with only an iPad and keyboard."</p>
+</div>
+</article>
+{% endblock %}

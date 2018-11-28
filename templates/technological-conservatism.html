@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://hypercritical.co/2013/04/07/technological-conservatism" class="linkpost">Hypercritical: Technological Conservatism</a>
+    </h2>
+    <time datetime="2013-04-14" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/04">04</a>/14 16:20:09
+</time>
+
+    
+    <p>"No one wants to think of themselves as a Luddite, which is part of what makes technological conservatism so insidious. It can color the thinking of the nerdiest among us, even as we use the latest hardware and software and keep up with all the important tech news. The certainty of our own tech savvy can blind us to future possibilities and lead us to reject anything that deviates from the status quo. We are not immune.&#8221;</p>
+    
+    <p>Perhaps not necessarily a representative sample of this great article by John Siracusa, I nevertheless chose this quotation from the piece reminiscent of the Hypercritical episodes of days since passed because, like John&#8217;s epic rants of old, it was just too good to let pass without note or comment.</p>
+</div>
+</article>
+{% endblock %}

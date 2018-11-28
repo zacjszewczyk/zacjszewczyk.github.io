@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="useless-correlations" class="original">Useless Correlations</a>
+    </h2>
+    <time datetime="2013-03-20" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/20 09:57:02
+</time>
+
+    
+    <p>Every time I hear someone predicting the future of a company&#160;&#8212;&#160;more often than not Apple&#160;&#8212;&#160;I can&#8217;t help but think of a passage I came across a while back, probably in <a href="http://www.amazon.com/Basic-Economics-Common-Sense-Economy/dp/B0058M6SAG/ref=sr_1_2">Basic Economics by Thomas Sowell</a>. The passage read something like this:</p>
+    
+    <blockquote>
+<p>&#8220;In looking for a correlation between a child&#8217;s ability to read and physical attributes, one could conjecture that as a child&#8217;s shoe size grows, so does that child&#8217;s ability to read. By all measurements, this would be an accurate hypothesis, supported by easily-gathered date available in any middle school around the country. This is indeed a valid trend. But it would not, however, be a valid correlation, as any amount of common sense would reveal: a child&#8217;s ability to read is not, in any way, dependent on their shoe size, even if such a correlation might exist. We must be careful, then, not to draw the wrong conclusions based upon useless correlations.&#8221;</p>
+    <p></p>
+    <p>Although paraphrased, that passage has stuck in my mind over the years, as many other lessons from that excellent volume have as well. The point, then, is to keep this in mind when writings posts predicting the inevitable demise of Apple or the impending rise of Android based on the price of tea in China or some other useless correlation. In other words, use some common sense; think for yourself for once.</p>
+</div>
+</article>
+{% endblock %}

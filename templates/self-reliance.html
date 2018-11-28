@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://hypercritical.co/2013/03/19/self-reliance" class="linkpost">Self-Reliance</a>
+    </h2>
+    <time datetime="2013-03-22" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/22 09:28:44
+</time>
+
+    
+    <p>John Siracusa explaining Apple&#8217;s aversion to outsourcing:</p>
+    
+    <blockquote>
+<p>&#8220;Like a lover who&#8217;s been betrayed one too many times, Apple has hardened its corporate heart against any form of true partnership. If it&#8217;s important, Apple wants to own and control it. When Apple does work with others, it insists on having the upper hand. iOS developers serve at the pleasure of Apple. Manufacturing partners must fight for the privilege of building Apple&#8217;s products, often using equipment Apple purchases for them. And, of course, Apple has its own mobile OS that runs exclusively on its own hardware.&#8221;</p>
+    </blockquote>
+
+    <p>Apple is often criticized by its detractors for its refusal to rely&#160;&#8212;&#160;"work with&#8221;, as it is often so mildly put&#160;&#8212;&#160;other companies. Given its past experiences though, how could we possibly blame them?</p>
+</div>
+</article>
+{% endblock %}

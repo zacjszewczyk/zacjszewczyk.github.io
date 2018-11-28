@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="an-untenable-goal" class="original">An Untenable Goal</a>
+    </h2>
+    <time datetime="2013-08-19" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/08">08</a>/19 16:00:06
+</time>
+
+    
+    <p>Although the first movie adaptation of Christopher Paolini&#8217;s <em>Eragon</em> could have passed as a mildly successful yet unremarkable summer movie, it falls far short when compared to the original series from which it borrowed little besides character names and basic plotlines, only to discard the latter whenever the &#8220;director&#8221; deemed it convenient. Anyone who has ever seen a book-turned-movie undoubtedly read that without any surprise; the book invariable proves better than the movie, or so that adage goes, and there are countless examples supporting the phrase in just the last year alone.</p>
+    
+    <p>I read <em>The Hunger Games</em> at sixteen driving through Mozambique. For better or worse I spent more time staring at those pages than looking at the country passing by the windows. Yet when <em>The Hunger Games</em> came out on DVD, I pushed turned off the credits with considerable less satisfaction than I had upon closing the last page of Suzanne Collins&#8217;s novel.</p>
+    
+    <p>When Cassandra Clare announced an upcoming movie based on her <em>Mortal Instruments</em> books, I looked forward to finally seeing Clary and Jace team up against a world of demons and monsters hidden from my point of view. And then the trailers came out, and my excitement evaporated in less time than it took to buffer those gaudy videos: Jace looks more like the lead of a boyband on its downward spiral than a force to be reckoned with, and Lily Collins just isn&#8217;t Clary. I hope <em>The Mortal Instruments: City of Bones</em> proves me wrong, but I don&#8217;t consider it particularly likely.</p>
+    
+    <p>And the list goes on and on. And on.</p>
+    
+    <p>In each case, I walked in to the theater or sat down on my couch with a vision&#160;&#8212;&#160;whether I recognized it as such or not&#160;&#8212;&#160;of what the characters should look like and how the movie ought to progress. Sometimes, those were not unrealistic expectations: I expected Capricorn to radiate evil rather than make jokes about duct tape in <em>Inkheart</em>, and I could not have been faulted for that; in others, however, I had less likely expectations: perhaps I was wrong to count on Gary Ross to place more focus on Katniss Everdeen the awe-inspiring figure of rebellion instead of the arguably more impactful portrayal of a scared teenager staring almost certain death in the face. Irregardless of how likely or not my expectations were though, I nevertheless formed them, and in each case the movie failed to meet them.</p>
+    
+    <p>Unfortunately, as demonstrated by Walter Isaacson&#8217;s biography of Steve Jobs, the film industry is not the only one in which reality flies in the face of reasonable expectations. We as a community possess a glorious picture of what a Steve Jobs biography and a Steve Jobs movie should look like. And unfortunately, whatever we see&#160;&#8212;&#160;regardless of how good&#160;&#8212;&#160;will invariable fall short of those expectations and thus fail in our minds. That&#8217;s not to say that a perfect biography would sanctify Apple&#8217;s former CEO, that a more technically-minded writer should have written the Steve Jobs biography, or a less-foolish actor should have starred in <em>Jobs</em>, but take a step back and ask yourself this: would it have changed anything?</p>
+</div>
+</article>
+{% endblock %}

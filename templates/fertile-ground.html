@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.marco.org/2013/06/11/fertile-ground" class="linkpost">Fertile Ground</a>
+    </h2>
+    <time datetime="2013-06-12" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/06">06</a>/12 21:24:24
+</time>
+
+    
+    <p>"Apple has set fire to iOS. Everything’s in flux. Those with the least to lose have the most to gain, because this fall, hundreds of millions of people will start demanding apps for a platform with thousands of old, stale players and not many new, nimble alternatives. If you want to enter a category that’s crowded on iOS 6, and you’re one of the few that exclusively targets iOS 7, your app can look better, work better, and be faster and cheaper to develop than most competing apps.&#8221;</p>
+    
+    <p>Now I see why this article was at the top of the Hacker News front page. Marco is very hopeful for this fall, and rightly so: iOS 7 does indeed present a rare opportunity for existing markets to be disrupted by brand new entrants. I&#8217;m extremely excited to see what comes next, especially from Marco. We are moving towards a very interesting time; buckle up and hold on.</p>
+</div>
+</article>
+{% endblock %}

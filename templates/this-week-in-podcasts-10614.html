@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="this-week-in-podcasts-10614" class="original">This Week in Podcasts</a>
+    </h2>
+    <time datetime="2014-10-12" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/10">10</a>/12 10:58:07
+</time>
+
+    
+    <p>Another week has gone by, made all the better with a few great podcasts. This time around, Roderick on the Line makes another appearance, and is accompanied by a great episode of Systematic and a fantastic episode of Zac &#38; Co. Enjoy.</p>
+    
+    <p><a href="http://www.merlinmann.com/roderick/ep-127-fermi-in-a-van.html">Roderick on the Line Episode 127: Fermi in a Van</a>. It&#8217;s no wonder that the only way kids learn these days&#160;&#8212;&#160;or at least, the best way kids learn these days&#160;&#8212;&#160;involves increasing levels of technological involvement. From computers to infinitely personal iPads, we have taken these tools from a way to learn better and made it the only way our kids know how. But maybe they don&#8217;t need laptops, tablets, and smartphones in middle school; maybe, the solution is to give everyone a clarinet.</p>
+    
+    <p><a href="http://5by5.tv/systematic/117">Systematic Episode 117: Reluctant Selfies with Virginia Roberts</a>. I didn&#8217;t know what to expect going in to this episode, but Brett and Virginia had some very interesting thoughts to share on dating, parenting, and discipline in particular.</p>
+    
+    <p><a href="http://constellation.fm/shows/zac/002">Zac &#38; Co Episode 2: The Moment He Makes The Choice</a>. To even list the topics Ben Alexander and Zac Cichy talked about here would be to do this episode a huge disservice, so I won&#8217;t. Instead, I&#8217;ll say this: two incredibly smart people got together to talk about some really interesting things in a conversation that I found riveting.</p>
+</div>
+</article>
+{% endblock %}

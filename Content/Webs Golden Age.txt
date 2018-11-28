@@ -1,0 +1,15 @@
+Type: linkpost
+Title: The Splinternet
+Link: http://forrester.typepad.com/groundswell/2010/01/the-splinternet-means-the-end-of-the-webs-golden-age.html
+Pubdate: 2013/02/04 14:08:11
+Author: Zac Szewczyk
+
+I somehow managed to forget to post this article after I wrote it, so here it finally is:  
+
+---
+
+A blast from the past in an article written three years ago today, on January 26, 2010, by Josh Bernoff:  
+
+    "We call this new world the Splinternet (with a nod to Doc Searls and Rich Tehrani, who used the term before us with a somewhat different meaning). It will splinter the Web as a unified system. The golden age has lasted 15 years. Like all golden ages, it lasted so long we thought it would last forever. But the end is in sight."  
+    
+It's interesting to see how the increasingly diverse computing market was viewed even just a few years ago, in a time when accidentally finding this article on my computer and piecing together this post between my phone and iPad would have been impossible.

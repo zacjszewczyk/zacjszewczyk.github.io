@@ -1,0 +1,7 @@
+Type: linkpost
+Title: The Neat and Out of Scope Newsletter
+Link: http://eepurl.com/MdDeX
+Pubdate: 2014/01/11 18:56:44
+Author: Zac Szewczyk
+
+Although still waiting for the dust to settle after Jim Dalrymple linked to my article [*Doing Monetization Well*](Doing Monetization Well.txt), I believe I will cross the twenty readers per day line once my traffic returns to normal. As promised, I started a newsletter tentatively titled [*The Neat and Out of Scope Newsletter*](http://eepurl.com/MdDeX). Unfortunately, more than the title needs work; however, I have done the vast majority of the heavy lifting today, so from here on out I can focus on small design tweaks and pour most of my efforts into collecting cool code projects and interesting articles I deign not to craft extensive articles for, but still wish to write about in some capacity for future issues. The first installment will go out tomorrow evening at 6:00; I hope your name will be on the list.

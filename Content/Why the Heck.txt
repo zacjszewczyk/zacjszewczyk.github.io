@@ -1,0 +1,7 @@
+Type: original
+Title: Why the Heck?
+Link: Why the Heck.htm
+Pubdate: 2013/01/20 20:32:32
+Author: Zac Szewczyk
+
+The title reworked for this article, Reginald Braithwaite's article [*Why the Fuck?*](http://raganwald.posterous.com/why-the-fuck) posted earlier today not only made it to the Hacker News front page, but to the top spot. He makes an interesting point to begin with, and then anticlimactically ended the piece with a call to arms in the fight against diabetes and obesity. But that's his point: today the glamorous projects aren't the ones helping people. The greatest technical minds of the previous generation spend their time at the Googles and Apples, at the Facebooks and Microsofts of today. Will we follow in their footsteps, or strike out on our own? And for those that do choose to walk a different path, where will that path lead?

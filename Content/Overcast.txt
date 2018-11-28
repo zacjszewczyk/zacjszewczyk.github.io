@@ -1,0 +1,13 @@
+Type: linkpost
+Title: Overcast
+Link: https://overcast.fm/
+Pubdate: 2013/09/25 18:22:43
+Author: Zac Szewczyk
+
+I absolutely love podcasts. Much to my girlfriend's confusion, I might add. After Marco Arment sold Instapaper in April, after Yahoo! bought Tumblr.[^1] in May, and after he sold The Magazine shortly thereafter, only in my wildest dreams did I hope his elusive next venture would lead Marco to create a podcast client. Then, last Sunday at XOXO, my dream came true.  
+
+Perhaps that's putting it slightly melodramatically, but to say that I--and the collective internet as well--am extremely excited for Overcast would be an understatement of gargantuan proportions. I can't wait for Overcast to come out; I plan on purchasing it on day one, as I'm sure many others will as well. Despite Marco's modest expectations for Overcast, I would be surprised if it *didn't* take the podcast client market by storm: the same design sensibilities that made Instapaper and The Magazine so popular--one need only look to [the announcement Marco posted](http://www.marco.org/2013/09/23/overcast-coming-soon) for an idea as to those proven ideals--will almost undoubtedly make Overcast similarly popular and, hopefully, a smashing success.  
+
+Good luck to you, Marco; we await Overcast's release in eager anticipation.  
+
+[>1] I can't help but think of Ben Brooks' article [*Yahoo! + Tumblr. = !!*](http://brooksreview.net/2013/05/tumblr-yahoo/) on the topic every time I think about this acquisition.

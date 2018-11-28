@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048" class="linkpost">The 30 CSS Selectors You Must Memorize</a>
+    </h2>
+    <time datetime="2014-07-23" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/07">07</a>/23 17:18:06
+</time>
+
+    </blockquote>
+
+    <p>I don&#8217;t do this often, but for all the help Tuts+ gave me as I worked to <a href="/blog/first-crack-10">expand the functionality</a> of this design over the past few weeks, I can&#8217;t let it slip by without note. When I build a site, I prefer to do everything humanely possible with CSS rather than outsourcing it to JavaScript. Due to this perhaps irrational desire, everything&#160;&#8212;&#160;including device detection&#160;&#8212;&#160;but the ability to enter dark mode and save that preference across multiple sessions is managed strictly using CSS. As I&#8217;m sure you web developers out there can understand, this led to some sticky situations in which I almost resorted to a quick and dirty script. Thanks to resources like this one though, I managed to keep my use of JavaScript down to a minimum, and continue to ship a speedy site for you all to read. Next time you import jQuery out of habit, think back to this and ask yourself, &#8220;Can I do this with CSS?" Because after seeing tutorials like this, I bet you can.</p>
+</div>
+</article>
+{% endblock %}

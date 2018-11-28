@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.mcsweeneys.net/articles/dear-aunt-rose-comma-thank-you-for-the-speech-recognition-software-exclamation-point" class="linkpost">Dear Aunt Rose Comma Thank You for the Speech Recognition Software Exclamation Point.</a>
+    </h2>
+    <time datetime="2013-12-10" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/12">12</a>/10 18:58:15
+</time>
+
+    
+    <p>Linked to <a href="https://twitter.com/shawnblanc/status/410457204450263040">by Shawn Blanc</a>, this is absolutely hilarious. Coincidentally Marco just posted an article titled <a href="http://www.marco.org/2013/12/10/siri-accuracy-improving"><em>Siri Accuracy Continues to Improve</em></a>, where he complained about Siri&#8217;s frequent inability to process his requests. Since I finally upgraded to a 4S last month I have been using Siri daily, and with the exception of a few incorrect words it has worked both flawlessly and exceptionally quickly regardless of my cellular connection strength. I have yet to see see the, &#8220;Sorry, I can&#8217;t take requests right now&#8221; error message.</p>
+</div>
+</article>
+{% endblock %}

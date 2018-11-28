@@ -1,0 +1,9 @@
+Type: original
+Title: I Don't Actually Read your Blog
+Link: I Dont Actually Read your Blog.htm
+Pubdate: 2013/02/26 14:38:20
+Author: Zac Szewczyk
+
+Ah the linkblog. Although [not the genesis of the format](https://twitter.com/hypercritical/status/294115979150098432), John Gruber is often credited with the advent of this extremely pervasive practice and its widespread adoption over the years, a propagation that has continued despite the resurgence of its detractors every few months. Nevertheless, in spite of those dissidents, many writers have built a business around this model. Today, I would like to focus on one in particular: Shawn Blanc.  
+
+Every time I see an article from Shawn Blanc scroll into view in my feed reader, I stop and open it because, more often than not, it is an actual article as opposed to a linked list post discussing whatever tired topic has already been dragged across every other blog I read. Contrast that with The Loop and Daring Fireball where I merely read the article headline, seldom even opening the full text in my RSS reader much less actually navigating to either site. I find it unlikely that this habit is unique to me, and thus is something new bloggers attempting to determine their posting strategy should keep in mind, as should veteran writers as well.

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://tracks.ranea.org/post/66694717184/privacy-happens-at-the-endpoints" class="linkpost">Privacy Happens at the Endpoints</a>
+    </h2>
+    <time datetime="2013-11-13" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/11">11</a>/13 22:29:37
+</time>
+
+    
+    <p>Ben Brooks put it quite well when <a href="http://brooksreview.net/2013/11/privacy-happens-at-the-endpoints/">he linked to this article</a>, characterizing it as a &#8220;fantastic post from Watts Martin"; I wholeheartedly agree. More often than not I consider Ben to have gone off the deep end some time ago, the result of which we see today in his near-constant advocation for privacy <a href="/blog/goodbye-dropbox">often taken to the extreme</a>. However, Mr. Martin&#160;&#8212;&#160;and, by extension, Ben in his explicit endorsement of this piece&#160;&#8212;&#160;hit the nail on the head with this one.</p>
+</div>
+</article>
+{% endblock %}

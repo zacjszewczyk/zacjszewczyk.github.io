@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://vintagezen.com/zen/2014/4/5/earspeakers" class="linkpost">Earspeakers</a>
+    </h2>
+    <time datetime="2014-04-16" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/04">04</a>/16 15:11:31
+</time>
+
+    
+    <p>After Marco Arment posted his great article on <a href="http://www.marco.org/2014/02/03/headphones-and-coffee">fancy headphones and fussy coffee</a> back in February, I strongly considered dropping $180 that I&#160;&#8212;&#160;to be brutally honest&#160;&#8212;&#160;didn&#8217;t have on a pair of <a href="http://amzn.com/B008POFOHM">Beyerdynamic DT-770-PRO 32ohm closed dynamic headphones</a>. Whether fortunately or unfortunately, I still cannot say, sanity won out though, and I abstained from blowing a week&#8217;s salary on what I have no doubt would have been a fantastic listening experience. As both Linus and Marco explained though, you don&#8217;t have to spend a ton of money on great headphones just to have a good time listening to your music: take the advice of a few trustworthy people, spend within your means, sit back, and enjoy.</p>
+</div>
+</article>
+{% endblock %}

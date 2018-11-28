@@ -1,0 +1,17 @@
+Type: original
+Title: The Strangest of Places
+Link: The Strangest of Places.htm
+Pubdate: 2013/04/02 20:18:31
+Author: Zac Szewczyk
+
+As I was reading [*No to NoUI*](http://www.elasticspace.com/2013/03/no-to-no-ui) earlier, an article ostensibly regarding the state of user interfaces today, Timo Arnall's description of "the cloud" stuck with me more than anything else from the article. That's why, even though I should have picked a more representative sample, I ended up using that as my excerpt when I linked to the piece. Foolhardy or not, I chose this paragraph above all the others:  
+
+    "We already have plenty of thinking that celebrates the invisibility and seamlessness of technology. We are overloaded with childish mythologies like 'the cloud'; a soft, fuzzy metaphor for enormous infrastructural projects of undersea cables and power-hungry data farms. This mythology can be harmful and is often just plain wrong. Networks go down, hard disks fail, sensors fail to sense, processors overheat and batteries die."  
+
+Then, between checking the smoker, I read Ben Popper's piece on The Verge titled [*'BioShock Infinite' makes great art from America's racist past and political present*](http://www.theverge.com/2013/4/2/4170256/bioshock-infinite-making-great-art-from-americas-racist-past-and).  
+
+    "In BioShock Infinite, the creators again present a funhouse mirror of American ideological history. Comstock the Prophet and the citizens of the floating city of Columbia meld strains of religious fervor, anti-government rhetoric, jingoistic nationalism, and a twisted worship of the founding fathers, all carefully lifted from historical events at the turn of the 20th century, but simultaneously satirizing the Tea Party movement that has roiled our politics for the last six years."  
+
+Rather than the discussion debating whether video games are, in fact, art or the interesting fact that rather than pretending brutal racism never existed as we are wont to do these days the creators of Bioshock Infinite embraced this nation's complicated history, I put my phone down after reading the article extremely impressed with the quality of the piece. Ben did something very difficult for many writers: he put these intensely personal thoughts and feelings in to writing, and he did so extremely well.  
+
+After reading Ben's piece, as I thought about the wonderful article I had just read, I realized I was finding these gems in the strangest of places: in an article about interface design, I came across a great characterization of "the cloud"; and in an article about gaming, I found a fantastic work of prose.

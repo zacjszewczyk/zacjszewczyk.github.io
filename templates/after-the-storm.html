@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://sansink.org/after-the-storm/" class="linkpost">After the Storm</a>
+    </h2>
+    <time datetime="2014-06-11" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/06">06</a>/11 06:54:29
+</time>
+
+    
+    <p>A few days ago <a href="/blog/the-magic-of-wwdc">I asked</a> if those who speak out critically of the attention WWDC garners changed their opinions with last week&#8217;s impressive roster of announcements; looks like it changed at least one person&#8217;s mind, and rightfully so. Adam&#8217;s more favorable opinion of WWDC is not the only noteworthy aspect of this piece, however: I believe he hit the nail squarely on the head when describing Apple&#8217;s current and future relationship with Google by way of these innovations as well. In short, it will be an amicable partnership no more. Apple has yet to fully realize Steve Jobs&#8217; promise of going thermonuclear on Android, but they have been hard at work building the warheads behind closed doors up until now, of which we only got occasional glimpses here and there in the form of iOS 6 and then iOS 7. Now, though, the missiles have been wheeled out into full view, and I might even go so far as to argue primed and ready for launch. They say the only way to win is not to play, but in this case, I&#8217;m not so sure; personally, I&#8217;d put money on Apple.</p>
+</div>
+</article>
+{% endblock %}

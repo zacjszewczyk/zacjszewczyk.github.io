@@ -1,0 +1,9 @@
+Type: linkpost
+Title: Lean into the Pain
+Link: http://www.aaronsw.com/weblog/dalio
+Pubdate: 2013/01/31 10:58:50
+Author: Zac Szewczyk
+
+"The problem is that the topics that are most painful also tend to be the topics that are most important for us: they’re the projects we most want to do, the relationships we care most about, the decisions that have the biggest consequences for our future, the most dangerous risks that we run. We’re scared of them because we know the stakes are so high. But if we never think about them, then we can never do anything about them."  
+
+Another insightful article by Aaron Swartz. I'm sure it won't be the last.

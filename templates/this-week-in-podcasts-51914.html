@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="this-week-in-podcasts-51914" class="original">This Week in Podcasts</a>
+    </h2>
+    <time datetime="2014-05-25" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/05">05</a>/25 14:14:31
+</time>
+
+    
+    <p>Another short week, unfortunately. Short, but no less excellent&#160;&#8212;&#160;of that, I can assure you. So sit back, relax on your day off tomorrow, and enjoy last week&#8217;s best podcasts:</p>
+    
+    <p><a href="https://soundcloud.com/a16z/the-two-big-problems-with-thomas-pikettys-capital-in-the-twenty-first-century">The a16z Podcast: The Two Big Problems With Thomas Piketty&#8217;s &#8220;Capital in the Twenty-First Century&#8221;</a>. Very interesting discussion on wealth inequality through the lens of Thomas Piketty&#8217;s hit new book. I ended up listening to this twice, but by the end, when I could finally follow Larry Summers and Balaji Srinivasan, I was very glad that I did.</p>
+    
+    <p><a href="http://weeklybriefly.net/fear-of-the-blank-page/">The Weekly Briefly: Fear of the Blank Page</a>. In this week&#8217;s Friday episode of Shawn Blanc&#8217;s daily members-only podcast Shawn Today, released publicly as part of The Weekly Briefly, he talked about the ever-present fear of failure particularly amongst creative individuals and offered some suggestions for overcoming it. I tend to shy away from this type of touchy-feely self-help, but&#160;&#8212;&#160;as usual&#160;&#8212;&#160;Shawn had don&#8217;t great insights and equally helpful advice. Yet another great example illustrating why everyone ought to support Shawn in subscribing to this show.</p>
+    
+    <p><a href="http://atp.fm/episodes/65">ATP Episode 65 The Year of Casey</a>: I turned this this episode on as I left my girlfriend&#8217;s dance recital last weekend, only to find myself laughing aloud as walked through the parking lot at one of the show&#8217;s best openings in a while. After that, Marco, John, and Casey talked about the Overcast beta finally shipping, Casey&#8217;s huge news, the perpetually confirmed-unconfirmed rumor of Apple&#8217;s Beats acquisition, and the perils of JavaScript and relying on third-party code. Come for the opening, but stay for the main topic: as someone who, like Marco, prefers to write everything myself, this was a good look at both the upsides and the downsides to this approach.</p>
+    
+    <p><a href="http://technicaldifficulties.us/episodes/034-developing-workflow-software-with-greg-pierce">Technical Difficulties Episode 34: Developing Workflow Software with Greg Pierce</a>. Gabe Weatherhead and Erik Hess recorded a nice interview with the creator of my favorite note-taking app, Drafts, and go-to iOS dictionary, Terminology, where they talked about Greg Pierce&#8217;s career as an Apple developer and the life thus far of the apps that have, along with his significant work to further the x-callback-url scheme, made him famous. And if you want even more of Greg, <a href="http://5by5.tv/systematic/81">Brett Terpstra had him on Systematic</a> earlier this year as well.</p>
+    
+    <p><a href="http://technicaldifficulties.us/episodes/035-information-capture-and-recall-with-bradley-chambers">Technical Difficulties Episode 35: Information Capture and Recall with Bradley Chambers</a>. I used to use Evernote daily, but gradually lost interest as I moved towards plain text and Markdown. After this episode with Bradley Chambers though, I&#8217;m going to put a concerted effort into giving it another try.</p>
+    
+    <p><a href="http://technicaldifficulties.us/episodes/036-advocating-for-science-and-exploration-with-emily-lakdawalla">Technical Difficulties Episode 36: Advocating for Science and Exploration with Emily Lakdawalla</a>. Interesting discussion on space exploration and its importance not only to children, but the United States as well; however, this topic belied some fascinating thoughts on the current state of education in this country, for which I believe this episode ought to be lauded for even more so than the former.</p>
+    
+    <p><a href="http://constellation.fm/shows/crush/1">Crush on Radio: The Wrens are the Ultimate Bar Joke</a>. Terrific episode with Merlin Mann and Richard Anderson not necessarily because I have any interest in or appreciation of The Wrens, but rather because this episode was so well done: not only did it feature a great guest and a superb host, but also impressive production values across the board from audio quality to integrating music clips. Anyone looking to record a multi-media podcast ought to start here to first see it done extremely well.</p>
+    
+    <p>Until next week, friends. I wish you, and especially any of you who served in the military, a very happy Memorial Day.</p>
+</div>
+</article>
+{% endblock %}

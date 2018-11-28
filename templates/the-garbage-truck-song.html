@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://exponent.fm/episode-001-the-garbage-truck-song-2/" class="linkpost">Exponent: The Garbage Truck Song</a>
+    </h2>
+    <time datetime="2014-02-22" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/02">02</a>/22 17:20:00
+</time>
+
+    
+    <p>Speaking of great podcasts, Ben Thompson and James Allworth just started a new show called <a href="http://exponent.fm"><em>Exponent</em></a>. In their first episode, released just a few days ago on Thursday, the pair took an interesting look at disruption theory, the innovator&#8217;s dilemma, and culture as those aspects pertain to Microsoft and Apple&#8217;s past and present situation as well influence their future directions. Rather than spending the majority of their time discussing Apple though, as many of today&#8217;s tech podcast hosts are want to do, Ben and James had one of the most level-headed, intelligent, and engaging discussions on Microsoft I have heard since the company became a headline-worthy topic once again with the elevation of Satya Nadella to CEO. Any show with this impressive roster would be worth taking note of, but these two outdid themselves here: if their future episodes are anywhere near as good as this one, Exponent is going to grow into quite the remarkable show.</p>
+</div>
+</article>
+{% endblock %}

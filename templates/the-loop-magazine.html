@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.macstories.net/news/jim-dalrymple-launches-the-loop-magazine/" class="linkpost">Jim Dalrymple Launches The Loop Magazine</a>
+    </h2>
+    <time datetime="2013-05-15" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/05">05</a>/15 14:27:55
+</time>
+
+    
+    <p>"'A tremendous amount of work has gone into every aspect of The Loop magazine from the fonts and design, to the writers I chose to be part of it. I want readers to enjoy every single article in a clean, ad-free environment. They should look forward to every issue because the experience was so good.'"</p>
+    
+    <p>Prior to last Thursday, The Magazine was the only item on my Newsstand bookshelf. Marco Arment finally has some company.</p>
+</div>
+</article>
+{% endblock %}

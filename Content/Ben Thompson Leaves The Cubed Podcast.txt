@@ -1,0 +1,11 @@
+Type: linkpost
+Title: Ben Thompson Leaves The Cubed Podcast
+Link: http://stratechery.com/2013/site-announcement-im-leaving-cubed-podcast/
+Pubdate: 2013/10/14 16:00:31
+Author: Zac Szewczyk
+
+This is how one should leave a podcast, respectful of both his listeners and co-hosts alike. [Not that I'm pointing any fingers](Regarding The Talk Show.txt).  
+
+    "This isn't the end of the road for me on the podcasting front; I'll still appear as a guest on various shows, and have ideas on what might make sense for stratechery in both the near and short term. In the meantime, though, I'll simply be a listener and a learner of Cubed, not a host.  
+
+    "My thanks to both Ben Bajarin and Benedict Evans for the opportunity."

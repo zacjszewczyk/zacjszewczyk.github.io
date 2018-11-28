@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://ben-evans.com/benedictevans/2014/4/19/unfairness-or-getting-something-for-nothing" class="linkpost">In praise of unfairness</a>
+    </h2>
+    <time datetime="2014-04-29" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/04">04</a>/29 14:34:03
+</time>
+
+    
+    <p>In the twenty-first episode of his podcast Technical Difficulties, <a href="http://technicaldifficulties.us/episodes/021-raising-a-human">Raising a Human</a>, Gabe Weatherhead had a great talk with Merlin Mann about, among other things, fatherhood; during that discussion he also mentioned&#160;&#8212;&#160;in passing&#160;&#8212;&#160;how important fairness is to his daughter, even at the age of four. Alongside entitlement, I believe the notion of fairness is one of the single greatest problems facing the American people today: these two touch every aspect of American society, from social interactions to public discourse, to such a degree so as to all but inhibit any meaningful progress in any area. Turns out, as Benedict Evans points out in this piece, unfairness affects the various technological industries as well, and&#160;&#8212;&#160;get this&#160;&#8212;&#160;it isn&#8217;t actually all that terrible there. Shocker, I know, but maybe&#160;&#8212;&#160;just maybe&#160;&#8212;&#160;we could do with some unfairness elsewhere. But, I digress.</p>
+</div>
+</article>
+{% endblock %}

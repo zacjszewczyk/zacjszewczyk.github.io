@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.theverge.com/2013/6/12/4422020/why-nintendo-wont-make-smartphone-games" class="linkpost">Why Nintendo Won't Make Games for Smartphones</a>
+    </h2>
+    <time datetime="2013-06-12" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/06">06</a>/12 21:09:36
+</time>
+
+    
+    <p>The temptation certainly exists to criticize Satoru Iwata and his decision not to bring the company&#8217;s most popular titles to mobile gaming platforms like iOS; however, looking beyond our disappointment at being unable to play Pokemon and Mario Kart on the iPhone, we can look at the situation dispassionately and draw a number of parallels between Nintendo and Apple, Satoru Iwata and Steve Jobs: both men led (and lead) their respective corporations with a complicated, long-term vision for success. As the sole possessor of this grand master plan, Iwata&#8217;s decisions, like Jobs&#8217;s, sometimes seem nonsensical and even cryptic, in a way. Nonsensical or not though, no one in their right mind would argue that Steve Jobs was anything less than a genius; perhaps, in time, the same will prove true of Satoru Iwata.</p>
+</div>
+</article>
+{% endblock %}

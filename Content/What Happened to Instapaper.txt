@@ -1,0 +1,11 @@
+Type: original
+Title: What Happened to Instapaper?
+Link: What Happened to Instapaper.htm
+Pubdate: 2013/07/04 15:45:51
+Author: Zac Szewczyk
+
+I ask this question every time I open the app: *What happened to Instapaper?* After its sale both [Marco](www.marco.org/2013/04/25/instapaper-next-generation) and Betaworks seemed so enthusiastic about the popular read later service's future. Since then two months have gone by without a peep from anyone--not even a point release.  
+
+But that's not a bad thing. It's no secret that after Google's decision to shutter Google Reader, [Digg's entire staff put every effort in to creating a replacement from scratch](http://blog.digg.com/post/53203926175/digg-reader-update), effectively putting a stop to work on every other project, including Instapaper. Now that Digg Reader is out though, work on those other projects will undoubtedly resume, and we will soon see a major new version of Instapaper--of this I am sure: especially after such a prolonged period of inactivity leading up to Marco's sale of the service, Betaworks will want to come out swinging with Instapaper 5. Not another point release, but a full-on major update to the internet's favorite read-later service.  
+
+It's an exciting time for this product that such a large majority of the internet's most influential personalities use. I can't wait to see what Betaworks makes of this opportunity.

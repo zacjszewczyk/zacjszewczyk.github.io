@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://bloglivingthedream.wordpress.com/2013/01/24/refresh/" class="linkpost">refresh</a>
+    </h2>
+    <time datetime="2013-02-07" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/02">02</a>/07 09:57:57
+</time>
+
+    
+    <p>From the author of <a href="http://bloglivingthedream.wordpress.com/2013/02/06/so-simple/">so simple</a>, the article I referenced in <a href="/blog/so-simple">my last post</a>, speaking to her attempt at achieving a &#8220;simpler, greener, cleaner, freer life":</p>
+    
+    <blockquote>
+<p>&#8220;I still feel very guilty about small habits which I can’t shake, one of which is my Nespresso coffee machine with its dependency on capsules bought in a store which makes my skin crawl with its ostentatiousness, a cathedral to consumerism.  But today while stocking up my habit, I found out that I can recycle the capsules at the store and the aluminium will be melted down.&#8221;</p>
+    </blockquote>
+
+    <p>As I looked back on this short post consisting merely of the two paragraphs above, prepared to save it for publication tomorrow morning, I couldn&#8217;t shake the feeling that it lacked something. There was, ironically, definitely something missing from this post about simplifying one&#8217;s life. And then it came to me: a few weeks ago during my cabin porn binge I posted an article called <a href="/blog/something-to-it"><em>Something to it</em></a>. After spending two days consuming every available resource so much as mentioning cabins or simplified living, I made an observation that maybe there was something to this simple lifestyle after all, something more than a cabin deep within the woods and a less demanding lifestyle&#160;&#8212;&#160;something more than meets the eye. This article from the anonymous writer at Living the Dream rekindled that spark, igniting the curiosity that prompted me to ask the question, &#8220;is there something more to this simplicity?"</p>
+</div>
+</article>
+{% endblock %}

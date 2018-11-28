@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://daringfireball.net/linked/2013/08/05/ruin-movies" class="linkpost">Worst Idea So Far This Week, But the Week Is Young</a>
+    </h2>
+    <time datetime="2013-08-06" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/08">08</a>/06 20:00:31
+</time>
+
+    
+    <p><a href="/blog/where-is-the-android-john-gruber">Speaking of why I read John Gruber&#8217;s work</a>, this kind of post, with this type of headline, is exactly why I read Daring Fireball: it made me laugh out loud, and showed me something I otherwise would not have come across. Good stuff.</p>
+</div>
+</article>
+{% endblock %}

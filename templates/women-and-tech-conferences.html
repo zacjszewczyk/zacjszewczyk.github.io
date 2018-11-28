@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.sugarrae.com/rants-in-bitchland/women-tech-conferences-and-bs/" class="linkpost">Women, Tech Conferences, and the Bullshit Surrounding Them</a>
+    </h2>
+    <time datetime="2013-05-01" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/05">05</a>/01 10:40:56
+</time>
+
+    
+    <p>In the past I have written one article about women and equality, <a href="/blog/a-crying-shame"><em>A Crying Shame</em></a>. I am quite proud of that article. So much so, in fact, that unlike many of the other topics I rehash here, I have felt no need to write anything more on the subject. I did feel pushed to at least mention the article linked at the head of this post, however, especially after listening to what I seem to recall was episode #114 of Back to Work a few weeks ago. In <a href="http://5by5.tv/b2w/114">I&#8217;m Moving to FudgePacker</a>, Merlin Mann talked about misconstrued statistics and how improper representations of inaccurate statistics can lead to incorrect conclusions on important issues when in actuality, maybe&#160;&#8212;&#160;just maybe&#160;&#8212;&#160;it isn&#8217;t quite as bad as everyone likes to stand up and claim it to be.</p>
+    
+    <p>Merlin&#8217;s example chronicled a previous discussion with a woman advocating equality in the tech sector. She argued citing a statistic claiming that women receive, on average, a significantly smaller salary than their male counterparts. In response, Merlin asked whether she or any of her female co-workers experienced this disproportionality; she responded that none had. He also pointed out that in citing an average, by definition an equal number of people receiving a salary greater than the average must also receive a salary smaller than the average, and that the difference in those amounts must be the same. In other words, if on average women are paid 75% of the wages given to their male co-workers, for example, and within this sample group of women they are all paid 100% of the wages given to their male counterparts, it follows that in order for the statistic to be accurate, some women, somewhere, must be receiving 25% less than the average, or 50% of the wages allocated to their male counterparts. And really&#160;&#8212;&#160;and this was his ultimate point&#160;&#8212;&#160;is this actually happening anywhere?</p>
+    
+    <p>But back to Rae Hoffman&#8217;s article, the piece that got me started down this rabbit trail:</p>
+    
+    <blockquote>
+<p>&#8220;Of course, some people look at the lineup and immediately assume highly talented women are being &#8216;excluded'. Of course, they don&#8217;t know that for a fact. For all they know, 95% of speaker pitches came from men and thus why they ended up with a 95% male speaker line up once they whittled down the list to the best pitches."</p>
+</div>
+</article>
+{% endblock %}

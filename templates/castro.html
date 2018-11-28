@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="castro" class="original">Castro</a>
+    </h2>
+    <time datetime="2013-12-11" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/12">12</a>/11 19:30:21
+</time>
+
+    
+    <p>After all the talk of <a href="http://castro.fm">Castro</a> in the last twenty-four hours since its release, and as an <a href="/blog/podcasting-state-of-the-union">avid podcast listener myself</a>, I couldn&#8217;t help but feel obligated to weigh in. With articles from <a href="http://verynicewebsite.net/2013/12/castro/">John Moltz</a>, <a href="http://www.macstories.net/reviews/castro-a-new-podcast-player-for-ios-does-two-things-well/">Cody Fink</a>, and <a href="http://thesweetsetup.com/whats-new-noteworthy-world-apps-week/">Shawn Blanc</a> waiting unread in my Instapaper queue, I downloaded Castro earlier this evening expecting to burn the midnight oil to get this article out. It came as a great surprise, then, when I tried every one of Castro&#8217;s features and saw every screen within about fifteen minutes.</p>
+    
+    <p>Obviously designed with iOS 7 in mind, Castro came to market without any carryovers from past versions unlike the industry&#8217;s current darlings Instacast and Pocketcasts, and it shows in an aesthetically pleasing user interface. In addition to an attractive departure from the norm with respect to its design though, Castro&#8217;s youth also appears to have manifested itself in the app&#8217;s unfortunately small feature set. However, whether this limited functionality came as a result of time constraints or an overbearing philosophy dictating extreme simplicity, I cannot say for sure. Outside the <a href="http://verynicewebsite.net/2013/12/castro/">apparently remarkable ability to download episodes in the background</a>, the much more venerable ability to <a href="http://www.macstories.net/reviews/castro-a-new-podcast-player-for-ios-does-two-things-well/">quickly search for and find podcasts</a>, and the obviously praiseworthy design though, few have anything else to say about Castro because really, there isn&#8217;t all that much to this app.</p>
+</div>
+</article>
+{% endblock %}

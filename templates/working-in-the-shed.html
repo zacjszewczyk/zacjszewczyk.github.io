@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://mattgemmell.com/2013/07/31/working-in-the-shed" class="linkpost">Working in the Shed</a>
+    </h2>
+    <time datetime="2013-08-14" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/08">08</a>/14 18:19:41
+</time>
+
+    
+    <p>When this article originally made <a href="http://www.marco.org/2013/08/03/working-in-the-shed">its</a> <a href="http://shawnblanc.net/2013/08/working-in-the-shed/">rounds</a>, I saved it to Instapaper but put off reading the piece. With a title like &#8220;Working in the Shed&#8221;, I assumed Matt Gemmell had gone off the deep end and actually taken his Macbook out into a backyard shed in an extreme attempt at curbing his Twitter addiction. Having finally gotten around to reading his excellent article though, I&#8217;m here to say that <em>Working in the Shed</em> is much, much more than an anecdote about avoiding distraction. I won&#8217;t go any further though: go read the article yourself.</p>
+</div>
+</article>
+{% endblock %}

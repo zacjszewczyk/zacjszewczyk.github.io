@@ -1,0 +1,7 @@
+Type: linkpost
+Title: This URL shortener situation is officially out of control
+Link: http://www.hanselman.com/blog/ThisURLShortenerSituationIsOfficiallyOutOfControl.aspx
+Pubdate: 2014/07/07 06:52:06
+Author: Zac Szewczyk
+
+This situation really is crazy. Part of the problem, though, at least where Twitter is concerned, is that Twitter does not use the t.co shortener until *after* a tweet is posted, which means after it imposes the 140 character limit. Especially for me where every link to one of my own articles that I post starts with "zacjszewczyk.com/Structure", this makes not using my own shortener--in this case, Bitly--completely impractical. Even then though, there is no real justification for even this many redirects, and especially not as many as Scott found here. Insane.

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://robertheaton.com/2013/03/27/take-pride-or-f----it/" class="linkpost">Take pride or fuck it</a>
+    </h2>
+    <time datetime="2013-03-27" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/27 17:45:16
+</time>
+
+    
+    <p>"As soon as I lose pride in something, I stop caring about it being good. Its only value to me is as something that I one day won&#8217;t have to do anymore. It always starts with the cutting of one small corner, but that&#8217;s all it takes. Pandora&#8217;s Box is open and the feature is infected. I cut the next corner with only a faint pang of remorse, and after that I don&#8217;t even notice the corners anymore.&#8221;</p>
+    
+    <p>A great article and an astute observation not only applicable in the professional world, but throughout our lives as well.</p>
+</div>
+</article>
+{% endblock %}

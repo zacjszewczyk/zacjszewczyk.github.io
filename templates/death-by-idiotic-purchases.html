@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://expeditionportal.com/death-by-idiotic-purchases-why-you-should-never-buy-a-fixie/" class="linkpost">Death by Idiotic Purchases</a>
+    </h2>
+    <time datetime="2014-09-24" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/09">09</a>/24 09:23:13
+</time>
+
+    
+    <p>I happened across <a href="http://expeditionportal.com/">Expedition Portal</a> the other day after the same tangent led me to <a href="https://tripleaughtdesign.com">Triple Aught Design</a>. Already more than an hour down this rabbit hole of outdoor expeditions and the gear enthusiasts use on such trips, I started clicking&#160;&#8212;&#160;and clicking, and then I clicked some more until I had filled my entire Safari tab bar. And then, I began reading this humorous article by Mathew Scott from March of last year: <a href="http://expeditionportal.com/death-by-idiotic-purchases-why-you-should-never-buy-a-fixie/">Death by Idiotic Purchases</a>. If the only thing you, like me, love more than actually spending time outdoors is buying the gear to make that experience more enjoyable, and you&#8217;re looking for a laugh, this is a great place to start.</p>
+</div>
+</article>
+{% endblock %}

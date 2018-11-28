@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.theverge.com/2013/8/2/4581972/xkcd-creator-randall-munroe-shares-the-secrets-of-time" class="linkpost">XKCD 'Time'</a>
+    </h2>
+    <time datetime="2013-08-04" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/08">08</a>/04 21:35:18
+</time>
+
+    
+    <p>"Randall Munroe&#8217;s web comic XKCD has long been known for pushing boundaries in strange ways, but his latest experiment topped them all. Over the course of four months, “Time” grew as a frame was added every 30 minutes or so, ending up with over 3,000 individual frames by the time it wrapped up earlier this week.&#8221;</p>
+    
+    <p>I absolutely love XKCD. I have read every one of Randall Munroe&#8217;s 1246 comics, and <em>Time</em>&#160;&#8212;&#160;which you can watch in its entirety over at <a href="http://xkcd.aubronwood.com/">Aubron Wood</a>&#160;&#8212;&#160;is one of my favorites. I plan to read the next 1246 strips as well; I suggest you do the same.</p>
+</div>
+</article>
+{% endblock %}

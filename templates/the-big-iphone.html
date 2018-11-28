@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://tabdump.com/blog/2014/2/5/the-big-iphone" class="linkpost">The Big iPhone</a>
+    </h2>
+    <time datetime="2014-02-07" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/02">02</a>/07 15:17:27
+</time>
+
+    
+    <p>Stefan Constantinescu has some very interesting ideas regarding Apple&#8217;s future plans for its mobile phone line with the launch of the iPhone 6 this fall. I wrote about <a href="/blog/its-a-crapshoot">my thoughts on the topic</a> a couple weeks ago, but the possibility of an iPhone 6C built according to the new form factor of the 6 with 5S internals did not occur to me. Very interesting, both this idea and his reasoning behind the imminence of a larger iPhone, and his justification for the form factor he ultimately puts forth as most likely in the coming year. Well worth the read.</p>
+</div>
+</article>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://daringfireball.net/2013/03/open_and_shut" class="linkpost">Open and Shut</a>
+    </h2>
+    <time datetime="2013-03-02" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/02 11:14:45
+</time>
+
+    
+    <p>John Gruber in an exceptional article posted to Daring Fireball a few days ago. Not only a phenomenal piece on the history of the computing industry and the &#8220;open versus closed&#8221; argument but also an extraordinarily well-written piece&#160;&#8212;&#160;a reminder that I still have far to go.</p>
+    
+    <blockquote>
+<p>&#8220;The Mac&#8217;s resurgence had nothing to do with being more open, and everything to do with improved quality: a modern operating system, well-designed software, and hardware designs that the entire rest of the industry now copies slavishly and shamelessly."</p>
+</div>
+</article>
+{% endblock %}

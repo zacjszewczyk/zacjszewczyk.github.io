@@ -1,0 +1,9 @@
+Type: linkpost
+Title: Making rain
+Link: http://www.asymco.com/2013/04/10/making-rain/
+Pubdate: 2013/04/18 11:33:33
+Author: Zac Szewczyk
+
+"Android and the Fiber business and even Facebook fit into this analogy rather well. In this context more rainfall means more people using the Internet. If you have more people you'll have more rivers and you'll have more water and hopefully more fish. Fiber means the water will flow more rapidly: you're essentially dredging the riverbed."  
+
+Some wonder why Google still pushes Android despite failing to make a significant profit from it, especially when compared to Samsung; some wonder why Google chose to begin providing Fiber to select American cities; some wonder, and Horace Dediu, on episode #79 of Critical Path, very eloquently explained the reasoning behind these and many other decisions. A characteristically excellent episode I suggest everyone listen to at least once, and then again to absorb any glossed over brilliance you may have missed the first time around.

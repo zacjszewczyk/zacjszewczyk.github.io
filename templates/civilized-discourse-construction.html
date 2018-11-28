@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.codinghorror.com/blog/2013/02/civilized-discourse-construction-kit.html" class="linkpost">Civilized Discourse Construction Kit</a>
+    </h2>
+    <time datetime="2013-02-06" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/02">02</a>/06 10:24:25
+</time>
+
+    
+    <p>"I greatly admire what WordPress did for the web; to say that we want to be the WordPress of forums is not a stretch at all. We’re also serious about this eventually being a viable open-source business, in the mold of WordPress. And we’re not the only people who believe in the mission: I’m proud to announce that we have initial venture capital funding from First Round, Greylock, and SV Angel. We’re embarking on a five year mission to improve the fabric of the Internet, and we’re just getting started. Let a million discussions bloom!"</p>
+    
+    <p>Jeff Atwood of Coding Horror announcing the release of a next-generation open source forum software toolkit designed to promote constructive and productive discussions across the modern web. Although in recent years I have made it a point to avoid forums at all costs, <a href="http://www.discourse.org/">Discourse</a> just might bring me and many others back.</p>
+</div>
+</article>
+{% endblock %}

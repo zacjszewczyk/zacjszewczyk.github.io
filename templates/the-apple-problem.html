@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://techpinions.com/the-apple-problem/26903" class="linkpost">The Apple Problem</a>
+    </h2>
+    <time datetime="2014-01-29" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/01">01</a>/29 16:37:30
+</time>
+
+    
+    <blockquote>
+<p>> &#8220;Of course, most of these challenges are going to also impact Apple&#8217;s competitors in the higher-end device space&#160;&#8212;&#160;they aren&#8217;t unique to Apple. Plus, Apple has proven over and over again that they&#8217;re able to innovate in way that its competitors can only dream about. So, don&#8217;t get me wrong, I&#8217;m not worried about Apple&#8217;s long-term fate in the least. However, that doesn&#8217;t mean we won&#8217;t see a bumpy road over the next few quarters and that&#8217;s an Apple problem that has to be given serious thought.&#8221;</p>
+    </blockquote>
+
+    <p>Bob O&#8217;Donnell writing for Tech.pinions with an excellent article published in the wake of Apple&#8217;s recent quarterly earnings call. Unlike most of the commentary I have done my best to avoid thus far, Bob takes a refreshingly even-handed approach to the topic. The coming year will indeed be an interesting one for Apple and the entire mobile computing industry alike.</p>
+</div>
+</article>
+{% endblock %}

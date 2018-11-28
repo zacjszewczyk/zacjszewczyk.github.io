@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://ben-evans.com/benedictevans/2014/1/23/the-limits-of-knowledge" class="linkpost">Ignorance</a>
+    </h2>
+    <time datetime="2014-01-25" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/01">01</a>/25 19:40:18
+</time>
+
+    
+    <p>Interesting article from Benedict Evans talking about the difficulty of fully understanding even one aspect of the internet or the mobile device industry. Unfortunately, all too many not only fail to accept this, but operate under the assumption that they do, in fact, have a comprehensive grasp of multiple topics on a wide range of subjects. This erroneous thinking has a significant impact on the formation of many tech writers&#8217; opinions and thus their work as well, and not for the better. Ironically, as Benedict pointed out, it also leads to some of the greatest innovations when creating actual products. Without the restrictions imposed by preconceived notions regarding what will and will not work, it&#8217;s no wonder it takes a certain degree of cluelessness to attain greatness.</p>
+</div>
+</article>
+{% endblock %}

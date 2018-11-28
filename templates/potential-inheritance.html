@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://jacobbacharach.wordpress.com/2013/01/23/the-potential-inheritance-of-the-earth-by-the-honey-badger/" class="linkpost">The Potential Inheritance of the Earth</a>
+    </h2>
+    <time datetime="2013-01-23" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/01">01</a>/23 14:21:29
+</time>
+
+    
+    <p>"But when we&#8217;re gone, its hydrogen will still continue fusing, irrespective of the politics of our successor race, whatever species next decides to fill its nearest star with qualities like love, intentionality, goodwill, and grace.&#8221;</p>
+    
+    <p>I take some issue with this fatalistic point of view. The hydrogen will indeed continue fusing regardless of the majority of the decisions we make today, but that fact should not be used to discount the change we can implement today to in some way effect future change.</p>
+</div>
+</article>
+{% endblock %}

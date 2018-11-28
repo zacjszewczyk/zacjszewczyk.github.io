@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.financialsamurai.com/earnings-beyond-the-wallet-how-do-you-measure-success-in-life/" class="linkpost">Measuring Success In Life</a>
+    </h2>
+    <time datetime="2014-04-16" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/04">04</a>/16 15:47:36
+</time>
+
+    
+    <p>Colleen Kong wrote a guest post on one of the few websites I follow unrelated to technology, Financial Samurai, detailing how she measures success in her life outside of her wallet&#8217;s size, with some great advice for everyone regardless of their lot in life. I wish her the best of luck.</p>
+</div>
+</article>
+{% endblock %}

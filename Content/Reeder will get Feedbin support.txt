@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Reeder will get Feedbin support
+Link: http://www.loopinsight.com/2013/03/27/reeder-will-get-feedbin-support/
+Pubdate: 2013/04/08 14:55:50
+Author: Zac Szewczyk
+
+When I wrote my first article about Reeder, [*Changing my Workflow with Drafts and Reeder*](Drafts and Reeder.txt), I highlighted its lack of reliance on Google Reader as one of the main reasons I chose to go with the RSS app. That was a factually incorrect statement; however, with [this announcement](https://twitter.com/reederapp/status/317001614873489408), Reeder's creator Silvio Rizzi announced that the popular iOS RSS reader would add Feedbin support in the very near future, thus ending its reliance on Google Reader. I realize Reeder supports Fever and Readability as well, but this is nevertheless great news.

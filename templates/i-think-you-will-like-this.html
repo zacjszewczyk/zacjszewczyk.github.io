@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="i-think-you-will-like-this" class="original">I Think You Will Like This, But You Won't</a>
+    </h2>
+    <time datetime="2013-04-29" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/04">04</a>/29 17:01:53
+</time>
+
+    
+    <p>As a comparatively new blogger I have done my fair share of self-promotion amongst the established writers I respect and strive to emulate, more than once recommending something I wrote by excusing my blatant plea for attention with the words, &#8220;I think you will like this&#8221; or some other permutation of the phrase. And each time I do I genuinely believe that John Siracusa might have found some interest in my argument for greater gesture support in iOS, even though I can almost guarantee, if I take a step back, that he would not, did not, and probably never will.</p>
+</div>
+</article>
+{% endblock %}

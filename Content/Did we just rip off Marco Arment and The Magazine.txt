@@ -1,0 +1,9 @@
+Type: linkpost
+Title: "Did we just rip off Marco Arment and The Magazine?"
+Link: http://www.marco.org/2013/03/02/type-engine
+Pubdate: 2013/03/02 11:14:43
+Author: Zac Szewczyk
+
+"The Magazine isn't successful because I have red links, centered sans-serif headlines, footnote popovers, link previews, and a white table-of-contents sidebar that slides over the article from the left with a big shadow even on iPhone. It isn't successful because authors write in Markdown, the CMS gracefully supports multi-user editing, we preview issues right on our devices as we assemble them, and any edits we make after publication are quickly and quietly patched into the issue right as people are reading it. Very little of this matters."
+
+It's an all-too-common belief these days, the idea that creating a website mimicking both the design and posting strategy of those bloggers we hold in high regard can somehow catapult us to a similar level of success. But as Marco goes on to say in the aforementioned blog post, design and presentation exist on the outside of a system in which content is the key that unlocks both loyal readership and phenomenal success.

@@ -1,0 +1,9 @@
+Type: linkpost
+Title: iOS 7 and Apps With Personality
+Link: http://shawnblanc.net/2013/06/ios-7-and-apps-with-personality/
+Pubdate: 2013/06/19 22:06:04
+Author: Zac Szewczyk
+
+"What makes an app great is the little things — the small details that take something normal and turn it into something extraordinary. I see iOS 7 as a blank canvas — an 'un-design' if you will. The goal of a 3rd-party isn’t to copy the stock apps pixel for pixel (that wasn’t the goal for iOS 1-6, and it’s not the goal now). Rather this is Apple saying it’s time to re-imagine what mobile software should look and act like. Five-hundred million people are using iOS devices, and it’s time for the training wheels to come off."  
+
+Marco Arment made a similar point in is article [*Fertile Ground*](http://www.marco.org/2013/06/11/fertile-ground). As I said in [my link to the piece](Fertile Ground.txt), I'm very excited for this Fall.

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://ben-evans.com/benedictevans/2013/8/8/amazons-profits" class="linkpost">Benedict Evans on Amazon's Profits</a>
+    </h2>
+    <time datetime="2013-11-10" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/11">11</a>/10 14:32:16
+</time>
+
+    
+    <p><a href="/blog/benedict-evans-on-simplicity">Speaking of Ben Evans and Amazon</a> back in August<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>, when Amazon was the hot topic of discussion amongst the small circles we tend to frequent, he neatly and concisely explained many of the mysteries surrounding the company. For instance, why does Amazon turn nearly zero profit? And why, for crying out loud, do so many have such considerable faith in this curious company?</p>
+    
+    <div id="fn1" class="footnote">
+<p>This should give you a general idea as to how good I am at keeping up with my Instapaper queue.</p><a class="fn" title="return to article" href="#fnref1">&#x21a9;</a>
+</div>
+</article>
+{% endblock %}

@@ -1,0 +1,13 @@
+Type: original
+Title: Critic Markup
+Link: Critic Markup.htm
+Pubdate: 2013/03/13 16:04:24
+Author: Zac Szewczyk
+
+Last month, when Ben Brooks [decided to take](http://brooksreview.net/2013/02/tired-ben/) a short [sabbatical](http://brooksreview.net/2013/02/mine/), he enlisted the help of [Pat Dryburgh](http://patdryburgh.com/) who graciously agreed to [step in and keep the site going](http://brooksreview.net/2013/02/empty/) during Ben's absence. When Ben came back, he posted [*While I Was Out*](http://criticmarkup.com/), a short piece covering a few interesting things that had happened during his break.  
+
+Ben spent some time discussing the advent of [Critic Markup](http://criticmarkup.com/). Positioned as a complement to Markdown, Critic Markup fills gap in my Markdown use case: commenting. I prefer to write everything, from emails to entire school papers, in Markdown; however, lacking the ability to comment effectively has left me high and dry more than a few times since I adopted Markdown as my go-to syntax for everything under the sun. Critic Markup solves this problem for me; however, Ben nevertheless had some doubts as to the practicality of this product:  
+
+    "Unlike Markdown, though, I fear you really need to use the integrated toolkits (TextExpander, Keyboard Maestro) to get the most of the language as you are having to add more syntax than you do with Markdown. I'll report on this more as I dive into it, but I am a bit skeptical about ease of adoption here."  
+
+Critic Markup is a novel idea from which many parallels can be drawn to Markdown. At first, Markdown existed solely as an easy to write, easy to use markup language for plain text. Created to streamline the process of writing on the internet, Markdown accomplished that job to sensational results. It did not [transform text](http://dillinger.io/) as [you type](http://markable.in/), it was not integrated in every text editor ever made, and it overcame those and other "shortcomings". Like Markdown, Critic Markup was created to cleanly and efficiently solve a single problem: the inability to easily create and manage editorial comments in a Markdown document. Like Markdown in its early days, it will be quite some time before we see widespread platform adoption of the Critic Markup spec, but that does not mean its well thought-out implementation will be any less useful without those neat management features demonstrated on the Critic Markup homepage or at least until those additional features become widely implemented. It's not the bells and whistles that make Markdown useful, nor will it be the extra bells and whistles that make Critic Markup useful; Markdown is useful as a finely-crafted syntax, just as Critic Markup will be in the coming weeks and months.

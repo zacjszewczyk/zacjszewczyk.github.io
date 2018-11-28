@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://crateofpenguins.com/blog/ads-sponsors-and-legitimacy" class="linkpost">Ads, Sponsors and Legitimacy</a>
+    </h2>
+    <time datetime="2014-03-25" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/03">03</a>/25 08:30:16
+</time>
+
+    
+    <p>I absolutely agree with Sid here: basically, he wrote the article I did in <a class="local" href="A-Few-Thoughts-on-Sponsorships"><em>A Few Thoughts on Sponsorships</em></a> the day before I published mine. You know what they say: great minds think alike.</p>
+</div>
+</article>
+{% endblock %}

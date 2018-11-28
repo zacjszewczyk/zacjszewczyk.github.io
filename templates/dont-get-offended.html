@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://lesswrong.com/lw/gux/dont_get_offended/" class="linkpost">Don't Get Offended</a>
+    </h2>
+    <time datetime="2013-03-27" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/27 17:11:07
+</time>
+
+    
+    <p>"There is nothing inherent in a set of words that makes them offensive or inoffensive&#160;&#8212;&#160; your reaction is an internal, personal process. ... What type of reaction you have is largely up to you, and if you don&#8217;t like your current reactions you can train better ones&#160;&#8212;&#160; this is a core principle of the extremely useful philosophy known as Stoicism.&#8221;</p>
+    
+    <p>An interesting article posted to the community blog Less Wrong. Perhaps even more interesting are the comments though.</p>
+</div>
+</article>
+{% endblock %}

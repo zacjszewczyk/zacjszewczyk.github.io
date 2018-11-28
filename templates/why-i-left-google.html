@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://blogs.msdn.com/b/jw_on_tech/archive/2012/03/13/why-i-left-google.aspx" class="linkpost">Why I left Google</a>
+    </h2>
+    <time datetime="2013-03-22" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/22 11:30:16
+</time>
+
+    </blockquote>
+
+    <p>James Whittaker on Google&#8217;s metamorphosis from a tech company to the machine that churned out Google+:</p>
+    
+    <blockquote>
+<p>&#8220;The Google I was passionate about was a technology company that empowered its employees to innovate. The Google I left was an advertising company with a single corporate-mandated focus.&#8221;</p>
+    </blockquote>
+
+    <p>It&#8217;s too bad, too: Google has given us some of the best web services since the dawn of the internet. For the past decade or so, Google has remained the unquestioned king of the web&#160;&#8212;&#160;of that fact there is no doubt. Doubt enters in, however, when we start to ask the simple question, &#8220;for how much longer?"</p>
+</div>
+</article>
+{% endblock %}

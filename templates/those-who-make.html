@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://vimeo.com/channels/thosewhomake/" class="linkpost">Those Who Make</a>
+    </h2>
+    <time datetime="2013-01-26" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/01">01</a>/26 18:29:48
+</time>
+
+    
+    <p>I have a particular fondness for hand-crafted things, and a special spot in my heart for crafting those things myself. <a href="http://vimeo.com/channels/thosewhomake/">Those Who Make</a> features masters of their respective crafts doing what they do best: making things. Since coming across the Vimeo channel in <a href="http://shawnblanc.net/2013/01/those-who-make/">an article over on Shawn Blanc&#8217;s blog</a> last night, I only just managed to pull myself away for long enough to write this short post. As Shawn Blanc said, &#8220;Click through with caution — you may never come back."</p>
+</div>
+</article>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://jacobbacharach.wordpress.com/2013/02/18/quest-into-the-unknown/" class="linkpost">Quest Into the Unknown</a>
+    </h2>
+    <time datetime="2013-03-19" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/19 17:23:14
+</time>
+
+    
+    <p>"It&#8217;s not, in other words, a matter of faith or belief, but a matter of interest. You train, you run the marathon, and then you take a week off and eat ice cream. Recovered, you start running again. There&#8217;s no mystical hocus-pocus, no &#8216;icy waters of skepticism.' Our hearts do not &#8216;fail&#8217; when we gaze at our cycling shoes or the box of contractor bags or the stack of over-wintered tomato cages in the unplanted spring garden. We might sigh to ourselves, and we might procrastinate, but we don&#8217;t go in for the Deus Deus Meus shit. At least, I don&#8217;t.&#8221;</p>
+    
+    <p>An interesting opinion on procrastination. It might not be something outside of our control after all. Imagine that.</p>
+</div>
+</article>
+{% endblock %}

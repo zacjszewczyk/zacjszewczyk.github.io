@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="balking" class="original">Balking</a>
+    </h2>
+    <time datetime="2012-12-25" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2012">2012</a>/<a href="/blog/2012/12">12</a>/25 22:56:36
+</time>
+
+    
+    <p>The tendency to choose the path of least resistance has always been one of the most annoying personality traits I possess. Often manifested as a calm, easygoing attitude it has, however, served me quite well over the years. A double-edged sword if ever there was a more appropriate time to use the phrase, on the one hand the ability to discern and choose the course of action most agreeable to the largest number of dissidents has proven extremely useful; in combination with the easygoing attitude this approach prompts, I have been able to avoid unnecessary stress more times than I can remember, and for that I am thankful. On the other hand though, I often find myself backing down from an argument in favor of a different solution to the disagreement where in all actuality, a fight would have been the most appropriate response. That&#8217;s when the likeable, everyman attitude becomes problematic: when it becomes the driving force behind the tendency to not fight for the things you believe in, whether those &#8220;things&#8221; are something so simple as the place for dinner or something possibly infinitely more complex such as an opinion. As writers on the internet who are exposed to criticism of the latter much more often than the former of the two, it&#8217;s important to stick to your guns, to not balk in the face of adversity; for on the internet ambivalence is perceived as weakness, and just as in nature, weakness will be brutally stamped out.</p>
+</div>
+</article>
+{% endblock %}

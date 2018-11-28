@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Could Soylent Replace Food?
+Link: http://www.newyorker.com/reporting/2014/05/12/140512fa_fact_widdicombe
+Pubdate: 2014/05/09 16:12:00
+Author: Zac Szewczyk
+
+Great to see Soylent popping back up in the news again, this time courtesy of [Dave Pell's The Next Draft](http://nextdraft.com/archives/n20140505/will-it-blend/) and The New Yorker's Lizzie Widdicombe. In the past, I have [written](Soylent.txt) [about](A Few More Thoughts on Soylent.txt) and linked to [articles](Two Months of Soylent.txt) [discussing](Soylent on The Verge.txt) [this](How I Survived a Week Without Food.txt) a number of times, but never took my enthusiasm for Rob Rhinehart's creation any further. Now, however, that Soylent has moved past the beta stages and [anyone can get their hands on it](http://diy.soylent.me), I can't wait to give it a try.

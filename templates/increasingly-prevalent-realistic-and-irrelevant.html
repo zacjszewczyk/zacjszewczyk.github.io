@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="increasingly-prevalent-realistic-and-irrelevant" class="original">Increasingly Prevalent, Realistic, and Irrelevant</a>
+    </h2>
+    <time datetime="2013-03-26" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/26 23:16:02
+</time>
+
+    
+    <p>Sometimes distractions are good. At the end of a long day spent working on homework, for example, being productive is the last thing I want to do: I would much rather relax and watch a movie than write. Other days, though, during the summer or over break, those are the days I should spend in Instapaper, reading, and in Drafts, writing. But more often than not, those two different types of days that for all intents and purposes should remain separate blend together, and I end up taking the easier path, at the end of which I find myself after two hours having accomplished quite literally nothing as my character in whatever game most recently struck my fancy is once again shot and killed.</p>
+    
+    <p>A few weeks ago I overhead a conversation in which one individual asked another if he played games on his sleek new ultrabook, to which the former replied that he did not: he preferred to spend his time on things with concrete, worthwhile outcomes. A badge or level in a game meant nothing to him. The conversation floundered at that point and eventually died. After all, what could have been said in response to something like that?</p>
+    
+    <p>It&#8217;s asinine, this fatal attraction to the literally mindless forms of entertainment. Sure, I suppose one could make the case for increased reaction time, pattern recognition, and super-human powers&#160;&#8212;&#160;well, maybe not the last one&#160;&#8212;&#160;resulting from continued preoccupation with the increasingly prevalent, realistic, and irrelevant digital worlds, but at the end of the day, when I close the lid of my laptop and wrench my body from near-complete stasis, I have to face the cold reality of having wasted an entire day with absolutely nothing to show for it.</p>
+</div>
+</article>
+{% endblock %}

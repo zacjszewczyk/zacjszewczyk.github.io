@@ -1,0 +1,21 @@
+Type: original
+Title: Amateur Hour is Over
+Link: Amateur Hour is Over.htm
+Pubdate: 2013/11/27 09:25:16
+Author: Zac Szewczyk
+
+I love The Verge--I really do. Not long after posting [*Credibility and Bullies with Blogs*](Bullies.txt), where I took Josh Topolsky to task for his wholly inappropriate reaction to many justifiable criticisms regarding his publication's device reviews, I subscribed to The Verge. Today it not only serves as my primary news source, but I also follow The Vergecast and tune in for their live coverage of Apple's events. Lately, however, I have been increasingly disappointed with their work.  
+
+The Verge started out as a publication geared towards geeks, covering tech topics and providing device reviews; at its launch, the site marketed itself as--or at least appeared to--the news source for those who had no interest in traditional channels. As such, it quickly gained great popularity amongst the tech elite and common folk alike. Recently though, I have watched The Verge slowly diverge[^1] from its original path and branch out in an effort to become the very news outlet it sought to obviate at its inception.  
+
+Ernest Hemingway once said, "You go bankrupt in two ways: gradually, then suddenly." The Verge's journalism has declined in a similar way: earlier this month they posted their first ridiculously titled article, which I just [couldn't resist chiming in on](https://twitter.com/zacjszewczyk/status/397344923705671680): "Helium-filled hard drives balloon storage space".  
+
+*Ugh*.  
+
+In my mind, this marked the beginning of that sudden phase Ernest Hemingway spoke of. From yesterday: [*The CIA reportedly turned some Guantanamo Bay detainees into double agents to fight al-Qaeda*](https://twitter.com/verge/status/405430356037218305). *How* is this news? If Homeland[^2] has taught us anything, *that's the game*: you capture someone and turn them, simple as that. Absolutely no one should be surprised by this. And then from earlier today, [*NSA spied on porn habits of Muslim "radicalizers" in efforts to discredit them*](https://twitter.com/verge/status/405642475043168257). If I had to list ten reasons the NSA could use to explain spying on a foreign national, discrediting a radical leader in the eyes of his followers would have been in the top five. These are *not* news stories; these are pleas for pageviews.  
+
+They say a country is not a democracy until the group in power peacefully hands the reigns over to the next as dictated by the populace's wishes. This event occurred in American history with the rise of the Jeffersonians usurping Washington's government in a landslide victory. I don't think it would be altogether inappropriate to place a similar qualification on a website becoming something more than a glorified blog: you are not a true news outlet in the traditional sense of the word until you run a sensationally-titled article with no bearing on your original direction for no other reason than attracting pageviews; the corollary being that in order to stay the devolution into mass-market media outlet one must say no to publishing an article not in line with the publication's original direction based on principle. Failing that, just as the peaceful transition of power in a government solidifies it as a functioning democracy, with a single piece you will have signaled the transition to a mainstream news outlet. In the last month in particular, The Verge has finally managed to cross that Rubicon. Unfortunately, they never intended to. They marketed themselves as something more--something different that the status quo. In the end, though, nothing really changed.  
+
+[>1] I'm so, so sorry.  
+
+[>2] Please, I say that in obvious jest; to compare a television drama to real world espionage is a farcical comparison.

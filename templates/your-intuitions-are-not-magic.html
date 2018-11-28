@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://lesswrong.com/lw/2bu/your_intuitions_are_not_magic/" class="linkpost">Your intuitions are not magic</a>
+    </h2>
+    <time datetime="2013-03-31" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/31 22:02:19
+</time>
+
+    
+    <p>"People who know a little bit of statistics - enough to use statistical techniques, not enough to understand why or how they work - often end up horribly misusing them. Statistical tests are complicated mathematical techniques, and to work, they tend to make numerous assumptions. The problem is that if those assumptions are not valid, most statistical tests do not cleanly fail and produce obviously false results.&#8221;</p>
+    
+    <p>The first of what I believe will be a long series of fascinating articles from Less Wrong. A great piece on <a href="/blog/useless-correlations">statistical correlations</a>.</p>
+</div>
+</article>
+{% endblock %}

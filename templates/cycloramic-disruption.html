@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="cycloramic-disruption" class="original">Cycloramic and Disruption</a>
+    </h2>
+    <time datetime="2013-01-02" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/01">01</a>/02 12:12:08
+</time>
+
+    
+    <p>It happened when Steve Jobs introduced the iPhone, and it happened again when he introduced the iPad: a new player entered a market stagnated by incumbents and surprised everyone by tossing the norm out the window and ushering in a new era through the door. On a much smaller scale this happened earlier last week when I stumbled across <a href="http://cycloramic.com/">Cyloramic</a>, a neat little iOS app for the iPhone 5 that uses vibration patterns to spin the phone in a full circle and take a panoramic shot of its surroundings.</p>
+    
+    <p>Just a few weeks ago I was thinking about ways to solve this very problem. Many have tried in the past with various mounts and stands, and those were the kinds of solutions I was considering: something based off of existing technologies. Then, just as Apple did with the mobile computing market twice already, Egos Ventures entered the fray and said, &#8220;Hold up, this is how it&#8217;s done."</p>
+</div>
+</article>
+{% endblock %}

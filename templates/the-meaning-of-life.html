@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.brainpickings.org/index.php/2012/09/17/the-meaning-of-life/" class="linkpost">The Meaning of Life</a>
+    </h2>
+    <time datetime="2013-01-12" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/01">01</a>/12 23:06:41
+</time>
+
+    
+    <p>An interesting collection of thoughts and observations regarding the meaning of life. These are my two favorites, the first from Frank Donofrio:</p>
+    
+    <blockquote>
+<p>I have been asking myself why I’m here most of my life. If there’s a purpose I don’t care anymore. I’m seventy-four. I’m on my way out. Let the young people learn the hard way, like I did. No one ever told me anything.</p>
+    </blockquote>
+
+    <p>And from Charles Bukowski:</p>
+    
+    <blockquote>
+<p>For those who believe in God, most of the big questions are answered. But for those of us who can’t readily accept the God formula, the big answers don’t remain stone-written. We adjust to new conditions and discoveries. We are pliable. Love need not be a command or faith a dictum. I am my own God.</p>
+    <p>We are here to unlearn the teachings of the church, state and our educational system.</p>
+    <p>We are here to drink beer.</p>
+    <p>We are here to kill war.</p>
+    <p>We are here to laugh at the odds and live our lives so well that Death will tremble to take us.</p>
+    <p>We are here to read these words from all these wise men and women who will tell us that we are here for different reasons and the same reason.</p>
+</div>
+</article>
+{% endblock %}

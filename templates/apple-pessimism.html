@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.marco.org/2013/04/09/iphone-6" class="linkpost">Apple Pessimism</a>
+    </h2>
+    <time datetime="2013-04-15" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/04">04</a>/15 14:50:29
+</time>
+
+    
+    <p>"Now, Apple pessimism is even stronger. No matter what they release and no matter how well it sells, they won&#8217;t win over the press, the pundits, the stock market, or the rhetoric. Not this year. They could release a revolutionary 60-inch 4K TV for $99 with built-in nanobots to assemble and dispense free smartwatches, and people would complain that it should cost $49 and the nanobots aren&#8217;t open enough."</p>
+</div>
+</article>
+{% endblock %}

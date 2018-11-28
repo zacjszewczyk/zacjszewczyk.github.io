@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="ipad-creation" class="original">iPad Creation</a>
+    </h2>
+    <time datetime="2012-12-08" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2012">2012</a>/<a href="/blog/2012/12">12</a>/08 20:41:27
+</time>
+
+    <br />
+    <p>Over the past two weeks my usage of the iPad as a device for both content consumption and creation has exploded: whereas before I had used the iPad primarily to read textbooks with the occasional deviation into other forms of reading, I now use the iPad as my primary computing device. Despite the occasional inconvenience this approach presents, forcing me to return to my computer for one thing or another from time to time, I have done so less often than I thought I would, and it happens increasingly infrequently as I spend more time perfecting a new workflow. And that&#8217;s strange for me, as an avid programmer, writer, and occasional gamer, to discover.</p>
+    
+    <p>I have always thought of the iPad as a content consumption device rather than a device that could be used for content creation. In light of that opinion, I used my iPad to read textbooks, as I mentioned earlier, but even more so to time-shift my reading with Instapaper. Even though I used Instapaper frequently in the past, over the last two weeks I have employed the service increasingly often as the conduit through which I send nearly every article I wish to read, as well as the service I use to permanently archive all the articles I find exceptional in one way or another. Combined with Simplenote, these two apps gave me the the ability to both consume and produce content whether I&#8217;m using my iPad, iPhone, or any other device equipped with an Internet connection and a capable browser. Sorry Internet Explorer. And I can&#8217;t stress how weird this&#160;&#8212;&#160;forsaking a computer that is in almost every aspect superior, at least technically, for the iPad&#160;&#8212;&#160;is for me.</p>
+    
+    <p>My point in this article is not to poke fun at Internet Explorer though, or to talk about my feelings as if this were a self-help gathering, but instead to say this: amidst <a href="http://technologizer.com/2011/12/05/how-the-ipad-2-became-my-favorite-computer/">the</a> <a href="http://www.wired.com/gadgetlab/2011/03/ipad-creation/">great</a> <a href="http://geeqer.com/2012/06/ipad-creation/">debate</a> a few months ago where <a href="http://www.loopinsight.com/2012/06/25/peter-ha-came-so-close/">the Internet</a> <a href="http://daringfireball.net/linked/2012/07/11/ipad-content-creation">buzzed</a> with the discussion&#160;&#8212;&#160;or argument, as the case more often was&#160;&#8212;&#160;of whether the iPad was a correctly positioned as a device for creating content, or if it would forever be relegated to the simple task of consuming content made in more powerful computers, I came down on the latter side of the argument; but recently, I&#8217;ve become a convert. Today I&#8217;m more likely to wake up, roll out of my bed, and grab my iPad instead of turning my computer on; I don&#8217;t sit in front of my computer browsing news feeds, clearing my Instapaper queue, checking twitter, and disdaining Facebook as I eat breakfast, I do all that from my iPad; and when it comes time to write, I don&#8217;t open my laptop&#8217;s lid anymore, I flip the Smart Cover open.</p>
+</div>
+</article>
+{% endblock %}

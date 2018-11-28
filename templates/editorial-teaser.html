@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://omz-forums.appspot.com/editorial/post/5900430768865280" class="linkpost">First Look at Editorial 1.1</a>
+    </h2>
+    <time datetime="2014-04-29" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/04">04</a>/29 10:56:47
+</time>
+
+    
+    <p>Although at this point slightly outdated given Ole posted the original announcement more than two weeks ago, these screenshots of the upcoming ui module as well as an iOS 7 and iPhone version of his acclaimed text editor Editorial are no less impressive. In fact, I would go so far as to call them incredible, and I bet Federico Viticci <a href="http://www.macstories.net/linked/editorial-1-1-teaser/">would agree</a> with me. So far, I have resisted purchasing a Dropbox-capable text editor on my iPhone out of hope that Ole Zorn would create an iPhone version of my favorite iPad text editor, and now, I&#8217;m glad I did. I can hardly wait for this to come out.</p>
+</div>
+</article>
+{% endblock %}

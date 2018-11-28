@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="the-terrible-first-draft" class="original">The Terrible First Draft</a>
+    </h2>
+    <time datetime="2013-05-30" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/05">05</a>/30 17:09:04
+</time>
+
+    
+    <p>Writing about writing has always held great interest for me. That&#8217;s why, when I saw Shawn Blanc&#8217;s article <a href="http://shawnblanc.net/2013/05/the-root-of-non-writing/"><em>The Root of Non-Writing</em></a> pop up in Reeder earlier this afternoon, I read it, saved it to Instapaper, and then read it again. I love metawriting.</p>
+    
+    <p>The idea of setting out to write with the explicit intention of creating a terrible first draft has always interested me as a concept more than something I would actually implement in my own writing. After all, what&#8217;s the point in writing something if it&#8217;s 1) going to be terrible and 2) need rewritten almost entirely? Or so my reasoning went, and then I read Shawn&#8217;s article.</p>
+    
+    <p>Turns out&#160;&#8212;&#160;<em>turns out</em>&#160;&#8212;&#160;Shawn, unsurprisingly, made an excellent argument: allowing yourself a bad first draft at least gets you writing; from there, making incremental improvements or completely overhauling the piece is just a quick, spur of the moment decision away; the decision is completely up to you. But you started writing, that&#8217;s the important thing. Once you&#8217;ve started, the rest is easy&#160;&#8212;&#160;or at least, much easier than gathering the courage to fill a blank page with words while simultaneously facing an inordinate amount of misplaced fear of creating something not even bad, but just not good enough in your own eyes. Getting started is the hard part; after that, in the brilliant words of Jacques Clouseau, everything else flows like liquid mercury flowing down a sloping...thing.</p>
+</div>
+</article>
+{% endblock %}

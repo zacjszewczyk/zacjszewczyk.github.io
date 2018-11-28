@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.npr.org/blogs/money/2013/02/21/172588471/how-to-start-a-magazine-and-make-a-profit" class="linkpost">How To Start A Magazine</a>
+    </h2>
+    <time datetime="2013-02-22" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/02">02</a>/22 12:08:01
+</time>
+
+    
+    <p>Marco Arment gave Jacob Goldstein of NPR some concrete numbers for the Magazine, showing just how great an idea launching this publication was, the importance of a consistent publication schedule, and the rewards of such an excellent implementation.</p>
+    
+    <blockquote>
+<p>&#8220;Last fall, Marco Arment launched a general interest magazine. It&#8217;s called, aptly enough, The Magazine. Writers are paid $800 per article. There are no ads. Until recently, it was available only via iPhones and iPads. Astonishingly, it&#8217;s already turning a profit."</p>
+</div>
+</article>
+{% endblock %}

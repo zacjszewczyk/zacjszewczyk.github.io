@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://developeronline.blogspot.com/2009/04/if-philosophers-were-programmers.html" class="linkpost">If Philosophers Were Programmers</a>
+    </h2>
+    <time datetime="2013-02-22" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/02">02</a>/22 12:08:00
+</time>
+
+    </blockquote>
+
+    <p>With years of programming under my belt and currently taking a philosophy course, I found the parallels a blogger writing under the moniker &#8220;panefsky&#8221; drew between programming, philosophy, and specific philosophers interesting.</p>
+    
+    <blockquote>
+<p>&#8220;It is perfectly reasonable to consider the programming languages as the different philosophies of a virtual world, in which entities do exist and interact with each other. To this respect, even the fundamental philosophical questions receive an interesting transformation: For example &#8216;What is self-conscience?' can be rephrased as &#8216;What is reflection?'."</p>
+</div>
+</article>
+{% endblock %}

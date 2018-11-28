@@ -1,0 +1,7 @@
+Type: linkpost
+Title: The Big iPhone
+Link: http://tabdump.com/blog/2014/2/5/the-big-iphone
+Pubdate: 2014/02/07 15:17:27
+Author: Zac Szewczyk
+
+Stefan Constantinescu has some very interesting ideas regarding Apple's future plans for its mobile phone line with the launch of the iPhone 6 this fall. I wrote about [my thoughts on the topic](Its a Crapshoot.txt) a couple weeks ago, but the possibility of an iPhone 6C built according to the new form factor of the 6 with 5S internals did not occur to me. Very interesting, both this idea and his reasoning behind the imminence of a larger iPhone, and his justification for the form factor he ultimately puts forth as most likely in the coming year. Well worth the read.

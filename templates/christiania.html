@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://tinyhouseblog.com/tiny-house-concept/christiania-tiny-houses/" class="linkpost">Christiania</a>
+    </h2>
+    <time datetime="2013-01-28" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/01">01</a>/28 13:48:03
+</time>
+
+    
+    <p>"A town within a city, a rebel neighborhood within a well-ordered society. This is Christiania (Freetown), Denmark, a small community smack dab in the middle of Copenhagen, Denmark. Within this community are tiny houses, built by hand and with whatever materials are within reach.&#8221;</p>
+    
+    <p>I found this article through a link on the Cabin Porn tumblr page. Christiania is not only home to a number of impressive cabins though, but also to a curious way of life made all the more interesting by the rules the residents abide by:</p>
+    
+    <blockquote>
+<p>&#8220;The 900 or so freethinking individuals who inhabit the area are a self governing community who refuse to pay taxes to the Danish government, run their own businesses and schools, live without cars on unpaved roads, build their own houses, restaurants and civil buildings and even have their own currency."</p>
+</div>
+</article>
+{% endblock %}

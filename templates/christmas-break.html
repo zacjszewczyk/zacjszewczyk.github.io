@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="christmas-break" class="original">Christmas Break</a>
+    </h2>
+    <time datetime="2012-12-24" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2012">2012</a>/<a href="/blog/2012/12">12</a>/24 12:50:28
+</time>
+
+    
+    <p>Since starting Christmas Break a few days ago I&#8217;ve had a lot of time on my hands. I intended to spend a lot of this time catching up on some reading, writing, coding, and working on a new project, but unfortunately as of yet that hasn&#8217;t happened. During what relatively little reading I did do over the three days since Christmas Break started though, I&#8217;ve noticed that I&#8217;m not the only one to step back, take a bit of a break from working, and relax. And you know what? That&#8217;s just fine: you don&#8217;t have to spend every day working, nor are you required to make up for lost time over holidays. You will still be successful if you take a bit of a break. It&#8217;s Christmas; go relax on the couch, eat some cookies, and gain a few pounds.</p>
+</div>
+</article>
+{% endblock %}

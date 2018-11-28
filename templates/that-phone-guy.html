@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="that-phone-guy" class="original">That Phone Guy</a>
+    </h2>
+    <time datetime="2013-01-29" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/01">01</a>/29 10:22:04
+</time>
+
+    
+    <p>Two of my favorites. My only complaint is that he didn&#8217;t make more.</p>
+    
+    <ulstart='1'>
+<li><a href="http://youtu.be/lc1ivSdsw1k">Mind Waffle</a></li>
+    <li><a href="http://youtu.be/n4qzkL7Fk0c">A Real Hard-On</a></li>
+    </ul>
+
+    <p>For the uninitiated, That Phone Guy is an act of sorts Merlin grew semi-famous for a few years ago, in which he would mimick &#8220;that phone guy&#8221; by talking loudly and obnoxiously into his wallet, often either next to or in the very near vicinity of the one he was mocking. Absolutely hilarious.</p>
+</div>
+</article>
+{% endblock %}

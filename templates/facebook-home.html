@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="facebook-home" class="original">Facebook Home? Who Cares?</a>
+    </h2>
+    <time datetime="2013-04-16" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/04">04</a>/16 12:00:48
+</time>
+
+    
+    <p>Not me. Not. One. Bit.</p>
+    
+    <p>Facebook has moved so far out of my life lately that so long as I can log in once or twice a week to see what my friends are talking about, I could not care <em>less</em> about anything else Facebook does. And even then, I still don&#8217;t care. Not. One. Bit.</p>
+</div>
+</article>
+{% endblock %}

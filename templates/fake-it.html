@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://42floors.com/blog/fake-it-trash-it-build-it/" class="linkpost">Fake It. Trash It. Build It.</a>
+    </h2>
+    <time datetime="2013-03-05" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/05 13:26:24
+</time>
+
+    
+    <p>"We didn&#8217;t start with any wireframes. We didn’t spend anytime in brainstorming meetings. I gathered an understanding of the general goals, and went to work throwing my initial thoughts into a fake product. The end result was a prototype that, in a lot of ways, was functional.&#8221;</p>
+    
+    <p>Just as writers do, designers often get caught up in minor details and the implementation of processes rather than creating a final product. Whether that sticking point is a brand new text editor or a distraction-free writing environment, a wireframe or finding the perfect hue to contrast just so with another color, it is important to put these potential time sinks in perspective: while they certainly are important, we &#8220;need to concentrate on the things that the reader will notice&#8221;, to <a href="http://brooksreview.net/2013/02/cms-war/">quote Ben Brooks</a>, rather than the details we get caught up in all too often, the details that prevent makers from making things.</p>
+</div>
+</article>
+{% endblock %}

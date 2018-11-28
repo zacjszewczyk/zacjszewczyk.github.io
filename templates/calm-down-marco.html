@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://pandodaily.com/2013/03/02/calm-down-marco-micropublishing-is-about-more-than-just-the-magazine/" class="linkpost">"Calm down, Marco: micropublishing is about more than just The Magazine"</a>
+    </h2>
+    <time datetime="2013-03-12" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/12 14:28:20
+</time>
+
+    
+    <p>"Sure the advent of Blogger, WordPress, and the likes also ushered in an era in which we have been bombarded with substandard writers filling up the Internet with pages of crap. But such software also allowed some great writers to emerge, and some of them have launched careers and created decent businesses because of it. People and publications like John Gruber&#8217;s Daring Fireball, Jason Calacanis&#8217; Weblogs, TechCrunch, Daily Kos, and Glenn Greenwald all fall into this camp, and that&#8217;s just to name a tiny few. All of them invested immense time, money, and energy into editorial – and they also happen to be compelling writers – but they couldn&#8217;t have done it without the blogging software.&#8221;</p>
+    
+    <p>I have to side with Marco on this issue: no one reads Daring Fireball because the site sports an off-blue background color and small white text, people read Daring Fireball because John Gruber writes there. That&#8217;s not to discount the importance of good design, but rather that it is not of paramount importance: millions would still read Daring Fireball every month had John colored the background orange, The Magazine would still be a success if the menus were green, and just because your background is off-blue and your text is white certainly does not mean your site will be successful.</p>
+</div>
+</article>
+{% endblock %}

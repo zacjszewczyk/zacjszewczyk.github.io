@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://brettterpstra.com//2014/07/18/web-excursions-for-july-18-2014/" class="linkpost">Brett Terpstra Features First Crack</a>
+    </h2>
+    <time datetime="2014-07-19" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/07">07</a>/19 10:56:18
+</time>
+
+    
+    <p>Roughly once a week, give or take a few days, Brett Terpstra publishes a new installment in his &#8220;<a href="http://brettterpstra.com/topic/bookmarks/">Web Excursions</a>&#8221; series, where he talks about interesting bookmarks from around the internet. In yesterday&#8217;s issue, <a href="http://brettterpstra.com//2014/07/18/web-excursions-for-july-18-2014/">Web Excursions for July 18, 2014</a>, he featured <a href="/blog/first-crack-10">First Crack 1.0</a> front and center. That&#8217;s pretty cool.</p>
+</div>
+</article>
+{% endblock %}

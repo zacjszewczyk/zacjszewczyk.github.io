@@ -1,0 +1,11 @@
+Type: linkpost
+Title: Apple Acquires TestFlight Owner Burstly
+Link: http://www.macstories.net/news/apple-acquires-testflight-owner-burstly/
+Pubdate: 2014/02/25 09:12:19
+Author: Zac Szewczyk
+
+Apple acquired another company--great, wonderful; the most interesting news I saw after this announcement, however, came from Federico Viticci when he highlighted a recent idea MG Siegler put forth before Christmas in suggesting a Beta App Store. From Federico's article:  
+
+> "On a related rumor note, the Burstly acquisition may also indicate Apple's intention to launch a 'beta App Store' service for developers to test apps publicly with subsets of users in specific regions or demographics. The idea was [first suggested by MG Siegler](http://techcrunch.com/2013/12/16/beta-app-store/) in December 2013 and [brought up](https://twitter.com/parislemon/status/436934869818425344) again [today](https://twitter.com/markgurman/status/436942086932140032) following the acquisition news."  
+
+Very interesting. If you, like me before coming across it by way of Federico's article, have not read MG's piece, I encourage you to do so: he makes a strong case for this idea. It still needs some work and presents a number of potential issues--allowing anyone access to this testing ground seems problematic, to say the least; there's a very good reason betas of Apple's operating systems and apps are restricted to those with a developer account--but these challenges are by no means insurmountable. And MG is right: it's high-time Apple gave its developers these capabilities.

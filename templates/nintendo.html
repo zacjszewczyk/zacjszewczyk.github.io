@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://arthousecowboy.com/journal/2013/5/3/nintendo-spin-attack-or-how-they-win.html" class="linkpost">Nintendo: Spin Attack or How They Win?</a>
+    </h2>
+    <time datetime="2013-05-16" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/05">05</a>/16 11:50:18
+</time>
+
+    
+    <p>Moisés writing about the three lingering problems plaguing Nintendo these days, and what he believes are the best solutions to those issues. In the last point under problem #2, &#8220;Nintendo isn&#8217;t simple anymore&#8221;, Moisés introduces a concept he discussed with Horace on the eighty-third episode of The Critical Path, <a href="http://5by5.tv/criticalpath/83"><em>The Analyst Taxonomy</em></a>: the idea of a <a href="/blog/the-8-bit-nintendo-phone">Nintendo phone</a>.</p>
+    
+    <blockquote>
+<p>&#8220;If Nintendo is actually serious about staying in hardware, they should be developing a phone. That the most profitable gaming platform (mobile phones) completely lacks Nintendo software is bizarre.</p>
+    </blockquote>
+
+    <p>&#8220;Their tablet platform already exists, and is attached to their set-top box. The same VirtualConsole-scale games could run on a phone with physical gameplay buttons, just as they do on the Wii U GamePad and the 3DS. They already make a mobile-scale OS, and have been doing so for years. Their classic games just don’t work on phones that have no physical controls. If anyone can truly break through with a smart gamerphone, it would be Nintendo, but they show no interest whatsoever in this space.&#8221;</p>
+    </blockquote>
+
+    <p>Throughout the article Moisés drew a number of parallels between Nintendo and Apple, culminating with the suggestion that Nintendo come out and an offering not unlike the Apple TV to close the piece. As I said in <a href="/blog/the-8-bit-nintendo-phone"><em>The 8-Bit Nintendo Phone</em></a>, such a comparison is not only apt but also very appropriate given the similarities between the two. I can only hope that those similarities extend beyond Nintendo&#8217;s aptitude for hardware and software creation to the ability to disrupt existing markets with revolutionary new products.</p>
+</div>
+</article>
+{% endblock %}

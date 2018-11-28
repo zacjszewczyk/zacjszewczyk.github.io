@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://neutral.fm/episodes/12-vomit-ruins-everything" class="linkpost">Neutral &#35;12: Vomit Ruins Everything</a>
+    </h2>
+    <time datetime="2013-04-12" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/04">04</a>/12 09:35:17
+</time>
+
+    
+    <p>Yesterday afternoon Marco Arment, Casey Liss, and John Siracusa recorded the final episode of their casual car podcast, Neutral. Episode twelve, <a href="http://neutral.fm/episodes/12-vomit-ruins-everything"><em>Vomit Ruins Everything</em></a>, runs for just under two hours and chronicles Marco and Tiff&#8217;s joint vacation with Casey and his wife Erin to pick up Marco&#8217;s brand new BMW M5 in Germany. I lamented the end of Hypercritical and Build &#38; Analyze, and felt equally as sad&#160;&#8212;&#160;if not even more so&#160;&#8212;&#160;to hear the car door shut for the last time after a run of just twelve episodes.</p>
+</div>
+</article>
+{% endblock %}

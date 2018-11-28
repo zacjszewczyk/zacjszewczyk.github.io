@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="doing-monetization-well" class="original">Doing Monetization Well</a>
+    </h2>
+    <time datetime="2014-01-06" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/01">01</a>/06 22:49:55
+</time>
+
+    
+    <p>Recently, I have started thinking seriously about monetizing this site. Although I could not command the same rate <a href="http://daringfireball.net/feeds/sponsors/">John Gruber</a>, <a href="http://www.marco.org/sponsorship">Marco Arment</a>, or even <a href="http://www.macstories.net/sponsorships">Federico Viticci</a> does, <a href="/blog/who-to-follow-in-2014">nearly 3,500</a> unique visitors in 2013 has to count for something. Moreover, I plan to grow that number significantly throughout the coming year. The question remains, however, how I ought to go about doing that or, perhaps more saliently, how I should <em>not</em>.</p>
+    
+    <p>With terrible ads so prevalent on the vast majority of sites and services today, I want to either do this well and in a respectful and attractive way or not at all. Some may criticize my &#8220;lack of foresight&#8221; in closing so many potential avenues with this mantra, but given that I run my site at a net loss every month, bringing my finances out of the red&#160;&#8212;&#160;no matter how minutely&#160;&#8212;&#160;would be a huge step forward. This rules out banner ads and sidebars; videos, GIFs, and any other media capable of automatically playing. I will not have these on my website. I would rather write hosting costs off as part of an ongoing hobby and continue losing money than pollute my carefully-crafted design with these abominations. Even though I cannot count myself amongst the ranks of designers, I did take pains to make this website look visually pleasing. I refuse to willfully destroy that experience.</p>
+    
+    <p>Resultant of this goal I may even hesitate to host advertisements from <a href="http://decknetwork.net">The Deck</a> or <a href="http://fusionads.net">Fusion Ads</a>: I have never found the 120x90 or 130x100 pixel image ad bucking a site&#8217;s crafted aesthetic in any way attractive, or anything less than jarring. That said though, both networks were created by geeks for geeks and only promote quality products on premiere websites. Given the chance, I would have to seriously consider the opportunity to become a part of such a respected agency.</p>
+    
+    <p>Ultimately though, I want the majority of my revenue to come from a combination of sponsored blog posts, an email newsletter or two, memberships, and two daily podcasts: one strictly for members resembling <a href="http://shawnblanc.net/members/">Shawn Today</a>, and another version of the show open to the public but with ad spots throughout. When writing about sponsors, I would likely do little to differentiate myself from others posting similar short articles. However, changing the status quo with regards to this form of advertising is an attractive prospect, so I will keep thinking about it.</p>
+    
+    <p>As for email newsletters, I had two types in mind when I began thinking about starting my own. Ideally, mine would resemble the best aspects of Scott Hanselman&#8217;s <a href="http://www.hanselman.com/newsletter/">Newsletter of Wonderful Things</a> and Brett Terpstra&#8217;s <a href="http://brettterpstra.com/topic/bookmarks/">Web Excursions</a>, where the latter occasionally sends out a list of cool projects he has come across, interesting articles, and neat websites, while the former does so with a similar focus much more regularly. After stumbling across Soctt&#8217;s Newsletter of Wonderful Things a year or two ago, it quickly became my most anticipated to email. Similarly, I accidentally found Brett&#8217;s Web Excursions after quite a few episodes of his podcast <a href="http://5by5.tv/systematic">Systematic</a>, and have read every one since then. I would populate my version of these two newsletters with similar items culled from the expansive list of sites and articles I do not post to my blog either out of a reluctance to publish something silly, or because I cannot find a way to tie it in with the overarching narrative I strive to constantly write in service of furthering.</p>
+    
+    <p>Antithetical to the first, I would model my second after Benedict Evans&#8217;s weekly <a href="http://ben-evans.com/newsletter/">Mobile Newsletter</a>. Every Sunday, Benedict sends out a short email where he lists his latest articles and goes over interesting news in mobile and tech from the past week. He then goes on to highlight a number of worthwhile articles, followed by new industry data points. Since starting this site I have wanted to publish a weekly retrospective, and this format would finally allow me to do so. After my own blog posts, an industry news segment could contain my take on topics I find interesting yet not compelling enough to publish as a standalone piece. Anything of which I have too little to say and thus deign not to post to my website that also does not fit into my version of Scott&#8217;s Newsletter of Wonderful Things would find a home in the &#8220;Worthwhile Blog Posts&#8221; section, where a simple link alongside a short description would suffice. Given my disinclination towards large data, I would likely skip the &#8220;Data Points&#8221; portion in all but the rarest of cases. I will gladly leave that sort of work to the likes of Horace Dediu and Benedict Evans.</p>
+    
+    <p>Drawing inspiration for a membership strategy from <a href="http://shawnblanc.net/members/">Shawn Blanc</a> and <a href="http://www.loopinsight.com/membership/">Jim Dalrymple</a>, readers could subscribe and receive a number of perks such as an ad-free podcast where I talk about recent news, topics floating around in my head, articles in various stages of completion, and any current projects I may have endeavored to begin. Members would also receive beta access to any of those unfinished projects, allowing them to follow along with my progress and struggles detailed on the podcast and experienced firsthand through early access. I would also offer a truncated RSS feed for anyone opposed to the full-text default feed. Some may prefer it, generating it takes but a few extra lines of code, so I might as well.</p>
+    
+    <p>I may also decide to restrict one of the previously described newsletters to members only. As for which one, I cannot say for sure yet; however, I like the idea of offering one great resource to everyone and using another, comparable one to give those on the fence one more reason to subscribe. Most importantly though, as Jim Dalrymple explains on his membership page, "...by becoming a member, you will be supporting our efforts to bring unique, well-written content to the site. Writing for The Loop is a labor of love for us, but it&#8217;s also our business and how we feed our families.&#8221; I could not have said it better. This is an extremely important reality that I would hammer home relentlessly because at the end of the day, I wager the vast majority of people subscribe for that reason alone.</p>
+    
+    <p>Finally, I may also choose to explore other monetization strategies. For example, an RSS-only sponsorship completely separate from the main site&#8217;s. While a divorced promotion such as this could prove unsuccessful for too little tangible interest or too much additional work on my side, or both, I believe websites have two distinct readerships&#160;&#8212;&#160;those who actually visit the site and those who subscribe in RSS&#160;&#8212;&#160;and thus ought to target those channels separately. Tertiary strategies aside, though, and with a good set of plans in place, I must no longer answer the question of how or how not to start making money from this website, but <em>when</em> I will begin doing so. With <a href="http://www.kickstarter.com/projects/393053146/powerup-30-smartphone-controlled-paper-airplane?ref=popular">Kickstarter on my mind</a>, I decided to implement a similar rollout plan:</p>
+    
+    <h2>20 Visitors a Day</h2>
+    
+    <p>I currently see, on average, ten unique pageviews every day. When that number doubles, I will begin publishing a Newsletter of Wonderful Things- and Web Excursions-inspired newsletter, as described above, once a month.</p>
+    
+    <h3>Bonus goal: 30 Visitors a Day</h3>
+    
+    <p>At thirty unique views each day, I will increase the frequency at which I publish my newsletter to once every other week.</p>
+    
+    <h2>1000 Visitors a Month</h2>
+    
+    <p>Those of you adept at math will recognize the jump from &#8220;30 Visitors a Day&#8221; to &#8220;1000 Visitors a Month&#8221; as the relatively minor increase of approximately 100 pageviews that it is. However, I needed a crossover point, and after 1000 representing audience goals on a per-day basis became infeasible. At one thousand visitors per month, I will start publishing the second, more data-driven newsletter, available to all.</p>
+    
+    <h2>2000 Visitors a Month</h2>
+    
+    <p>I will seek out sponsorships.</p>
+    
+    <h3>Bonus Goal: 2100 Visitors a Month</h3>
+    
+    <p>At just over 2080 unique monthly pageviews I will cross over the 25,000 per year mark. When this happens, I will start accepting memberships.</p>
+    
+    <h2>2500 Visitors a Month</h2>
+    
+    <p>Upon reaching this point, I will make all of my code projects available for members to access. Although I will continue improving each project, members will be free to do with each as they see fit.</p>
+    
+    <h2>3000 Visitors a Month</h2>
+    
+    <p>At three thousand visitors a month, I will start a members-only podcast, and begin releasing an ad-supported version for everyone else to listen to.</p>
+    
+    <p>After reaching a monthly audience of 3000 people, I plan to come back and evaluate my progress and set future goals. At this point, that number seems like a pipe dream; how could I possibly plan any further?</p>
+    
+    <p>I intentionally spread these goals out over a wide range in order to gradually increase my workload over the course of several months. However, I would <em>love</em> to find myself scrambling after blowing past one, two, maybe even three goals in a relatively short period of time. Please, surprise me: as much as I want to expand my audience and begin making some money here, I really want the challenge of meeting my readers&#8217; expectations and sticking to the hard and fast timeline I set out for myself. To me, this is not just about making a few dollars: this is about growing a sustainable business I can reap a respectable livelihood from, something that I can only accomplish by doing monetization well. I think I have a rock-solid plan in that regard; now I just need the visitors.</p>
+</div>
+</article>
+{% endblock %}

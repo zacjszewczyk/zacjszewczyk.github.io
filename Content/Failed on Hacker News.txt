@@ -1,0 +1,7 @@
+Type: linkpost
+Title: How We Failed Our Way to a Day on the Front Page of Hacker News
+Link: http://groovehq.com/blog/hacker-news
+Pubdate: 2014/02/07 13:37:40
+Author: Zac Szewczyk
+
+A few days ago I wrote [*Algorithmic Ineptitude*](), where I took Hacker News, Digg, and Reddit to task for recommending articles based on flawed algorithms rather than employing humans to perform the same task in a much better way. That same day I found a post by Alex Turnbull of Groove talking about his team's efforts to game Hacker News. Although his well-researched, reasonable methodology ultimately failed, its existence highlights a huge shortcoming in this service to actually bring good content to the attention of its users, and I highly doubt Hacker News is the only site creators have gamed in exchange for pageviews and thus increased revenue.

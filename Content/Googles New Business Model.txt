@@ -1,0 +1,9 @@
+Type: linkpost
+Title: Google's New Business Model
+Link: http://stratechery.com/2014/googles-new-business-model/
+Pubdate: 2014/01/15 16:22:35
+Author: Zac Szewczyk
+
+> "In my estimation, [the Nest] deal is not about getting more data to support Google's advertising model; rather, this is Google's first true attempt to diversify its business."  
+
+Ben Thompson once again, continuing his streak of great articles with this gem. I found his "Some additional notes" section particularly interesting, where he explained the implications of this move to the other major tech companies of today.

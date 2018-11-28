@@ -1,0 +1,9 @@
+Type: original
+Title: You Have Five Seconds. Go.
+Link: You Have Five Seconds.htm
+Pubdate: 2013/05/28 16:53:33
+Author: Zac Szewczyk
+
+Nearly every day I see a new CSS module, jQuery boilerplate, or HTML5 template posted to Hacker News, or an article announcing the release of the latest version of Ember.js, whatever that is. Every so often, I follow the link out of curiosity; and every time, I close the page, disappointed.  
+
+Earlier this afternoon, I came across [Topcoat](http://topcoat.io/) and [Pure](http://purecss.io/), both CSS libraries, on the front page of Hacker News. They were no exception to the rule detailed above: I followed the link out of curiosity, then closed the page in disappointment. I could not, in the roughly five seconds I spent browsing each page, discern either's purpose. In my book, that's a failure: when I visit your website, you have upwards of five second to convince me to stay; after that, I'm gone.

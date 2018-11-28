@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="incredibly-high-level-discourse" class="original">Incredibly High-Level Discourse</a>
+    </h2>
+    <time datetime="2013-12-10" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/12">12</a>/10 14:30:43
+</time>
+
+    
+    <p>Sunday evening shortly after I wrote <a href="/blog/disavow-gaming"><em>The One Where I Disavow Gaming</em></a>, as I scrolled through Zite looking for something to read, I happened across a headline that immediately caught my attention: <a href="http://www.valuewalk.com/2013/12/iphone-6-release-date-apple/"><em>iPhone 6 Release Date And Recent Rumors</em></a>. Given that the article came from a site I had never heard of before and because the Apple sphere has remained relatively quiet with regards to iPhone 6 rumors as of late, I opened the article with low expectations. What could Value Walk know that John Gruber didn&#8217;t? Turns out, absolutely nothing. In fact, the extraordinary simplicity of these rumors and the fact that one would devote an entire section to speculating as to the iPhone 6&#8217;s release date were so absurd that it made me realize something rather profound.</p>
+    
+    <p>As the old adage goes, it takes losing something to realize its true value. We&#160;&#8212;&#160;and I hesitantly include myself in this group&#160;&#8212;&#160;who write and talk about Apple and the broader topic of technology often criticize &#8220;the Apple rumor mill&#8221; for its willingness to jump on even the most absurd gossip in the hopes of further substantiation as time goes on. However, outside our small, well-read bubble an entire world exists full of people who have no idea Apple will make an iPhone 6, let alone whether it will come out in Fall or Spring, and that&#8217;s to say nothing of the latest hot topic speculating as to the plausibility of Apple&#8217;s next iPhone featuring sapphire glass; the vast majority smartphone users don&#8217;t even know what that is. Yet we are so quick to critique a writer who goes out on a limb to say, &#8220;Look, this could possibly happen and here&#8217;s why.&#8221; I do not mean to say that we are not justified in our criticisms, for some of the work these sites push out truly is utterly ridiculous, but just that we ought to keep in mind the incredibly high level of discourse we who frequent and work in the Apple-centric tech press enjoy.</p>
+</div>
+</article>
+{% endblock %}

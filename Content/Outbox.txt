@@ -1,0 +1,9 @@
+Type: linkpost
+Title: Outbox
+Link: http://www.theverge.com/2013/2/28/4039990/the-postal-service-is-bad-but-outbox-is-worse
+Pubdate: 2013/03/01 13:56:53
+Author: Zac Szewczyk
+
+"For $4.99 a month, you sign up online for an Outbox account (they also have apps), and then an Outbox employee comes to your house, picks up your mail, takes it back to Outbox HQ, opens it, scans it, and gives you access to it via your account. From there, you can "unsubscribe" from junk mail, and request to have your mail "delivered" to your house (even though it was definitely already delivered once, the other day)."  
+
+After reading Laura June's article on the new startup Outbox posted to The Verge earlier this week, I feel that she missed the point: Outbox is not supposed to catalyze the process of bringing mail to your home, but instead offer real-life spam filtering and digitization in exchange for the addition of a day or two between sender and recipient. And that's a tradeoff I'm sure many people, myself included, would be comfortable making.

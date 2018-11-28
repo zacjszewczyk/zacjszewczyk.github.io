@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.cultofmac.com/238967/8-changes-apple-made-in-ios-7-beta-5/" class="linkpost">8 Changes Apple Made In iOS 7 Beta 5</a>
+    </h2>
+    <time datetime="2013-08-07" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/08">08</a>/07 19:46:45
+</time>
+
+    
+    <p>"Ability to disable Control Center while using apps. The feature previously worked no matter where you were in iOS 7. Now you can select to have it turned off whenever an app is open. It can also be disabled on the lock screen.&#8221;</p>
+    
+    <p>Immediately upon reading this it struck me how very strange it is for Apple, notorious for choosing the one experience it considers best and enforcing it with a hard and unyielding hand, to give its users control over such a major feature in iOS 7. I wouldn&#8217;t be surprised to see the setting gone by the next beta release.</p>
+</div>
+</article>
+{% endblock %}

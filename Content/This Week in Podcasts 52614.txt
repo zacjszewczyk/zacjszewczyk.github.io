@@ -1,0 +1,23 @@
+Type: original
+Title: This Week in Podcasts
+Link: This Week in Podcasts 52614.htm
+Pubdate: 2014/06/01 20:16:54
+Author: Zac Szewczyk
+
+Almost exclusively old shows this week with but two outstanding exceptions. Turns out listening to back catalogs pays off; who would've guessed?  
+
+[Technical Difficulties Episode 39: Writing Technical eBooks with Brett Kelly](http://technicaldifficulties.us/episodes/039-writing-technical-ebooks-with-brett-kelly). Gabe Weatherhead and Erik Hess recorded a very enjoyable interview with the writer of the popular Evernote Essentials, where they talked about--among other things--Brett's approach to the writer's craft. Such a nice, refreshing chat.   
+
+[Cultivate: Introducing Cultivate with Jamie Ryan](http://www.fiatlux.fm/cultivate/pilot). Fantastic first episode where Ben Alexander and Jamie Ryan explained what we could expect from their podcast going forward, after which the two delved into a spectacular discussion about the tech news racket from the perspective of those writing within it, the companies involved, and the reader as well. By far and away the best insights into this subject I have ever had the privilege of hearing. This will be one episode that I will undoubtedly return to many times over, and I highly recommend you do as well: I have no doubt in my mind that this episode will stand the test of time much, much longer than the articles and think pieces of which it offers such salient critiques. An excellent start to what I have no doubt will prove an excellent show. 
+
+[Cultivate: The British Invasion](http://www.fiatlux.fm/cultivate/2013/11/19/the-british-invasion). Interesting chat with Engadget's Associate European Editor Matt Brian about U.S.-centric tech journalism through the lens of the site's then-recent redesign, cable and cellular networks, and Android devices. A great follow-up to their introductory episode that definitely fulfilled its promises.  
+
+[Cultivate: Attack of the Drones](http://www.fiatlux.fm/cultivate/2013/12/6/attack-of-the-drones). Sometimes it can be tough listening to a podcast's back catalog, with all the news and talking points so outdated and all, but that was in no way the case here where Ben and Jamie used Amazon's then-recent announcement of delivery by drone as a way in to the topic of this move's potential privacy implications.  
+
+[Pulling the String Episode 31: This Can Live Forever](http://constellation.fm/shows/pulling-the-string/31). Very interesting discussion between Ben Alexander of Fiat Lux and Constellation, and Jeff Ruberg of Podigious on the current and future state of podcasts, and what that term means and could grow to mean in the not to distant future. I can't say I'm a fan of Podigious, unfortunately, although I have given it quite a few tries, but Jeff seems like a great guy with a lot of neat ideas. He and Ben make a great pair.  
+
+[The Critical Path Episode 117: Why Did Apple Buy Beats?](http://5by5.tv/criticalpath/117). Prior to the official announcement of Apple's acquisition of Beats, Horace Dediu and Mois&#233;s Chiullan shared some prescient insights into the reasoning behind this move. I still have a hard time caring, at least at this point, but even I could realize the value in this discussion.  
+
+[The Prompt Episode 50: All the Little Ridges](http://5by5.tv/prompt/50). Recorded just after Apple's official announcement, Myke, Federico, and Stephen spent a great deal of time discussion this acquisition. Come for the topic at hand, but stay for the slightly less serious--when compared to the tone of The Critical Path, at least--yet equally insightful analysis.  
+
+[The Secret Chromebook Plumber](http://www.fiatlux.fm/cultivate/4). Jamie explains the anatomy of a Scottish brawl, then the two talk about Chromebooks and the increasing relevance of low end devices. Also, why you can't believe everything you read on the internet, whether it's an outrageous event or an Apple rumor. It's after episodes like these in particular that I feel especially sad that this show ended after so few episodes.

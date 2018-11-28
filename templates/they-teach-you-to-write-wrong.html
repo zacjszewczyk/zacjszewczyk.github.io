@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="they-teach-you-to-write-wrong" class="original">They Teach You to Write Wrong</a>
+    </h2>
+    <time datetime="2013-05-03" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/05">05</a>/03 07:59:44
+</time>
+
+    
+    <p>This was a difficult piece for me to write because my feelings regarding academic writing are so conflicting. On the one hand, I view academic writing&#160;&#8212;&#160;by which I mean the type of writing taught in American schools&#160;&#8212;&#160;as a certain boon: it introduces kids to the writer&#8217;s craft, teaches young writers how to write, and provides an introduction to organizing and conveying thoughts and ideas in a coherent and orderly fashion. On the other hand though, I also feel it is very restrictive: beholden to the five-paragraph format, I feel much more better writing would come of less severe restrictions. And this is totally ignoring the morass that is citations in academic writing, a topic I discussed at length in <a href="/blog/citational-fallacy"><em>Citational Fallacy</em></a>.</p>
+    
+    <p>Despite my conflicting thoughts on the topic, at the end of the day I had to pick a side, and the side I chose was against rather than for; anti- instead of pro-. For most, academic writing will server as their one and only experience with the writer&#8217;s craft, and for most, that experience will be poor. If the only topics I wrote about in school were essays on To Kill a Mockingbird, 1984, and what I did the previous summer, and the only feedback I ever got on those papers told me that I needed to place two spaces after each paragraph, I can guarantee the longest piece of prose I would ever write for the rest of my life would be a to-do list. Unfortunately, this is the case for a dispiriting number of people.</p>
+    
+    <p>A great writer can tell a great story in five paragraphs, but it will be dry and predictable&#160;&#8212;&#160;not to mention short. Taken outside of the academic setting, who would want to read such a manuscript? The best written works of our time are the sprawling manuscripts made popular by the bloggers who abandoned the format they were taught in school; the superlative writings of our day come from those who struck out on their own. In the previous generation, a select few tossed the rules to the side and created the web as we know it today, full to metaphorically bursting with wonderful works of prose. How many more would have chosen a similar path had they not been forced to endure the five paragraph essay?</p>
+    
+    <p>After all, the well only need be poisoned once; after that, no one will ever drink from it again.</p>
+</div>
+</article>
+{% endblock %}

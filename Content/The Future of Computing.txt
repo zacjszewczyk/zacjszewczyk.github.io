@@ -1,0 +1,13 @@
+Type: original
+Title: The Future of Computing
+Link: The Future of Computing.htm
+Pubdate: 2014/07/17 07:13:08
+Author: Zac Szewczyk
+
+In a style made popular by Benedict Evans in his hallmark Twitter postulations, posit: computers were created for writers. As such, the next iteration of computing devices will cater to the needs of others: creators and designers will have Jarvis-like artificial intelligence systems to converse with and holographic interfaces to involve their entire bodies in the creation process. The current model involves the two tools of the writer's trade: their hands and their minds. Future implementations will go beyond those unnecessary restrictions that don't apply in other fields in order to provide a richer, more productive computing experience.  
+
+Already, we have begun to see this happening in the mobile industry: we have collectively eschewed the traditional mechanical keyboard for one implemented in software that only appears when necessary, signaling our decreasing reliance on the once-dominant input method in favor of other visual metaphors and, recently, voice as well. Where once computers required keyboard input to perform even the most basic of tasks, the vast majority of those actions are now prompted on-screen; soon, it is not ridiculous to assume that we will see this input method fade away in favor of voice; and later, another will once again take its place.  
+
+So goes the cyclical nature of computing, where one inferior experience is inevitably succeeded by a superior one. It is easy, then, to predict future change; the difficulty, however, comes in when determining form that change will take.  
+
+I have made my guess, and my guess is more immerse input methods geared towards a generation who will not use their computing devices primarily to write; what's yours?

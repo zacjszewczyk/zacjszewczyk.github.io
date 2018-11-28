@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="heat-of-the-moment-insurance-policy" class="original">Heat of the Moment Insurance Policy</a>
+    </h2>
+    <time datetime="2013-12-10" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/12">12</a>/10 17:00:34
+</time>
+
+    
+    <p>I have spent the last two or three months occasionally hearing Aaron Mahnke and Dave Caolo talk about an app capable of completely cutting a computer off from a certain set of domains as a means to increase productivity. By making it impossible for one to get distracted, the creators of the aptly-named SelfControl reason, productivity must increase accordingly. I downloaded SelfControl Sunday night, and even in my brief experience with it so far I can attest to its effectiveness.</p>
+    
+    <p>After my <a href="/blog/disavow-gaming">disavowal of gaming</a> I wanted an insurance policy, something I could fall back on if boredom struck and my resolve faded. Thanks to Dave and Aaron on <a href="http://5by5.tv/homework">Homework</a> it only took me a few minutes to find, download, and open SelfControl. An open-source app aiming to remove the greatest obstacle to productive work&#160;&#8212;&#160;namely, your own resolve&#160;&#8212;&#160;SelfControl works by allowing users to define a list of sites to block and then irrevocably preventing their computers from accessing those domains for a set period of time. No amount of <a href="https://github.com/slambert/selfcontrol/wiki/FAQ#q-i-did-some-stuff-with-the-terminal-that-i-read-on-a-cool-tech-site-but-it-didnt-work-what-do-i-do-now">terminal work</a> can reverse this action, nor can <a href="https://github.com/slambert/selfcontrol/wiki/FAQ#q-i-deleted-the-application-will-that-do-anything">deleting the app</a> or even restarting your computer; once SelfControl&#8217;s timer has begun its countdown, the specified domains might as well not exist.</p>
+    
+    <p>Personally, this is exactly what I needed. Now I not only have my own resolve to lean on, but should all else fail I have no way of falling back on my unproductive ways; now I really have absolutely no excuse.</p>
+</div>
+</article>
+{% endblock %}

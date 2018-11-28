@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.nahir.org/posts/2013/2/11/that-line-between-being-cocky-and-humble.html" class="linkpost">That line between being cocky and humble</a>
+    </h2>
+    <time datetime="2013-09-18" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/09">09</a>/18 13:16:49
+</time>
+
+    
+    <p>My introduction to this article, and the piece I personally found more interesting, was <a href="http://tumblr.caseyliss.com/post/61297839809">the response Casey Liss wrote</a>. As I read both articles, I thought of something Patrick McKenzie said quite some time ago in <a href="http://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/"><em>Don&#8217;t Call Yourself a Programmer, and Other Career Advice</em></a>: &#8220;You radically overestimate the average skill of the competition because of the crowd you hang around with.&#8221; While Patrick said that in reference to the perception of one&#8217;s own skill set, it is just as applicable here.</p>
+</div>
+</article>
+{% endblock %}

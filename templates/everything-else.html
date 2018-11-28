@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://daringfireball.net/2013/03/everything_else" class="linkpost">Everything Else</a>
+    </h2>
+    <time datetime="2013-03-20" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/20 09:55:37
+</time>
+
+    
+    <p>In a footnote to his interesting piece posted yesterday titled <em>Everything Else</em>, John Gruber made an astute observation regarding loyalty and Apple:</p>
+    
+    <blockquote>
+<p>&#8220;Later in his piece, Gassée recommends that Apple engage a &#8216;powerhouse&#8217; PR firm to help sway opinion in its favor. I&#8217;d argue that Apple already has a powerhouse PR firm, and it very successfully engages in most of the tactics Gassée speaks of. But rather than a separate company, it&#8217;s completely internal to — and thus dedicated to — Apple.&#8221;</p>
+    </blockquote>
+
+    <p>For some reason the importance of loyalty is lost on many today, but not Apple: Apple knows the value of loyalty, and that knowledge has certainly served them well over the years.</p>
+</div>
+</article>
+{% endblock %}

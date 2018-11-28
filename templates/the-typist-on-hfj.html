@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://thetypist.com/381/hfj-typography-review/" class="linkpost">The Typist on H&FJ</a>
+    </h2>
+    <time datetime="2014-02-10" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/02">02</a>/10 08:32:41
+</time>
+
+    
+    <p>Great look at the industry&#8217;s leading font providers, Hoefler &#38; Frere-Jones, Typekit, and Google Fonts, made all the more valuable because now I won&#8217;t have to shell out $150 to ultimately go back to Google Fonts in the end. In a sense, as light bulbs are to Marco Arment, so too are fonts to The Typist in this article. Also worth noting with regards to Google&#8217;s offering is that in addition to making an ever-expanding library of fonts available for the attractive price of free, the ubiquity of these fonts over the more expensive options from H&#38;FJ and Typekit makes caching and, thus, decreased load times something to consider as well.</p>
+</div>
+</article>
+{% endblock %}

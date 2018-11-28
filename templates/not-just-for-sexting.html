@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="not-just-for-sexting" class="original">Snapchat: Not Just for Sexting</a>
+    </h2>
+    <time datetime="2013-07-04" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/07">07</a>/04 09:43:35
+</time>
+
+    
+    <p>I hate the word &#8220;sexting"&#160;&#8212;&#160;I really do. It sounds as if a sixth-grader invented it in jest and whose parents, upon overhearing it, decided to apply it as the label for the act of sending lewd pictures on a mobile device. Or maybe the fated decision was left to a lonely man in the poorly-lit corner cubicle, laboring under a flickering fluorescent light: &#8220;Texting and sex... &#8216;Tex'? No, that&#8217;s not it. &#8216;Sex texting'? Too long. Ha, that&#8217;s what she said... &#8216;Stex'? Still no; drat.&#8221; Regardless of whoever picked the term though, it stuck, and it stuck to Snapchat.</p>
+    
+    <p>I&#8217;m not here to say that Snapchat does not deserve the title; to anyone arguing otherwise, come on over, I have a mountain to sell you. Prime real estate, I tell ya. Snapchat&#8217;s creators may not have set out to create the go-to application for sending naked and otherwise inappropriate images, but it did make the process extremely easy. And as the creators of Bittorrent will tell you, making something capable of facilitating illicit actions and relying on the conscious and morals of your audience isn&#8217;t exactly a rock-solid business model.</p>
+    
+    <p>Snapchat does deserve the title; it does not, however, deserve the stigma that such a title brings to the app. I have friends who keep Snapchat buried within a folder on their phone&#8217;s last screen just to prevent its accidental discovery by the curious parent. Security through obscurity at its best. Others completely dismiss the app, citing the lack of a need to sext&#160;&#8212;&#160;<em>ugh</em>&#160;&#8212;&#160;as a validating reason behind their refusal to take part in this morally bankrupting pastime. But what if naked pictures were not the only images wafting through Snapchat&#8217;s servers? What if parents realized that the mere presence of the app did not indicate inappropriate behavior, just as the presence of a web browser does not conclusively lead to the rabid consumption of pornography? I&#8217;m not trying to say that Snapchat is not used for all those things and more, just that like anything there are good and bad sides to it.</p>
+    
+    <p>I use Snapchat almost every day. On my lunch break I often send a smiling picture to my girlfriend just to say hi. Nothing inappropriate there. Sometimes I use it to say hi to my friends&#160;&#8212;&#160;my male friends&#160;&#8212;&#160;back in Minnesota. Nothing like leaving pictures of warm sunny days for them to find after shoveling a driveway. I even use it to say hi to my best friend&#8217;s sister on occasion. In each case I neither have the time nor patience to snap a picture, attach it to an iMessage, and spend five minutes waiting for it to send. And God forbid I have to re-send it as a text message. With Snapchat all I have to do is snap the picture, choose as many recipients as I wish, and hit send; within a few seconds the picture is not only send, but delivered as well.</p>
+    
+    <p>There are so many great ways to use this app with a shirt on, and so many ways it outclasses Messages&#160;&#8212;&#160;at least for sharing pictures&#160;&#8212;&#160;that it makes me sad to see such negativity and even hatred stemming from the manner in which this subset of users makes use of Snapchat&#8217;s core functionality. Not everyone uses it to propagate naked pictures of themselves; some just want a quick and easy way to say hi to their girlfriend.</p>
+</div>
+</article>
+{% endblock %}

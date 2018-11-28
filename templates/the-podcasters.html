@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://vintagezen.com/archive/podcasters/" class="linkpost">The Podcasters</a>
+    </h2>
+    <time datetime="2014-02-04" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/02">02</a>/04 11:04:17
+</time>
+
+    
+    <p>Back in January Linus Edwards started &#8220;The Podcasters&#8221;, a series of articles in which he interviews podcast producers from all walks of life around the world. Beginning with Ben Alexander of <a href="http://www.fiatlux.fm">Fiat Lux</a>, continuing with <a href="http://themenubar.net">The Menu Bar</a> and&#160;&#8212;&#160;more recently&#160;&#8212;&#160;<a href="http://www.lifeandcodeandstuff.com">Life and Code and Stuff&#8217;s</a> Andrew Clark, Linus just posted the third installment wherein he spoke with Slovenian podcaster Anže Tomić about the shows he does on <a href="http://apparatus.si">Apparatus</a>. If you glossed over these interviews when Linus started posting them, I encourage you to given them a chance: <a href="http://vintagezen.com/2014/1/19/the-podcasters-1">Ben</a> and <a href="http://vintagezen.com/2014/1/27/the-podcasters-2">Andrew</a> both had very interesting and tenuously-related answers to Linus&#8217;s last question, &#8220;Would you like to change anything about your current podcasting setup?", and <a href="http://vintagezen.com/zen/2014/2/3/the-podcasters-3">An&#38;#382;e&#8217;s</a> setup and his thoughts on equipment alone make the short interview worth reading.</p>
+</div>
+</article>
+{% endblock %}

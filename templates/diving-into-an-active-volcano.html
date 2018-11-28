@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.outsideonline.com/featured-videos/adventure-videos/nature/Diving-into-an-Active-Volcano.html" class="linkpost">Diving into an Active Volcano</a>
+    </h2>
+    <time datetime="2014-09-17" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2014">2014</a>/<a href="/blog/2014/09">09</a>/17 08:35:58
+</time>
+
+    
+    <p>This is just incredible.</p>
+    
+    <p>We as a species have a tendency to hold ourselves above all things both animate and inanimate in this world. Humans place themselves above nature, animals, and even one another. The trope of an invincible teenager is not exclusive to that age group, for at some level we all consider ourselves untouchable. And then, in the midst of this mis-placed mixture of entitlement and pride, videos like this appear to put us in our place&#160;&#8212;&#160;to exhibit our insignificance and utter frailty in the face of the majesty belonging to that which we so often disregard.</p>
+</div>
+</article>
+{% endblock %}

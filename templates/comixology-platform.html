@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block scripts %}
+            <script type="text/javascript">
+                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
+                //https://www.dirtymarkup.com/, http://jscompress.com/
+                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
+            </script>
+{% endblock %}
+{% block body %}
+<article>
+    <h2 class="article_title">
+        <a href="http://www.theverge.com/2013/3/6/4072136/comixology-launches-online-self-publishing-platform-for-comic-books" class="linkpost">Comixology launches online self-publishing platform</a>
+    </h2>
+    <time datetime="2013-03-12" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013">2013</a>/<a href="/blog/2013/03">03</a>/12 18:33:27
+</time>
+
+    
+    <p><a href="/blog/calm-down-marco">Speaking of</a> <a href="/blog/did-we-just-rip-off-marco-arment-and-the-magazine">self publishing</a>,</p>
+    
+    <blockquote>
+<p>&#8220;Opened in private beta last year, Submit lets creators upload comics for approval. From there, Comixology reviews work to make sure it &#8220;maintains a level of professional content,"" then adds it to the catalog. Besides getting a storefront, authors will have their work formatted for Comixology&#8217;s mobile apps, with a panel-by-panel view that&#8217;s proved useful on small screens. In return, they&#8217;ll give up a hefty chunk of revenue: there&#8217;s no up-front fee, but Comixology keeps half the money from each sale after other processing fees, and like other in-app purchases, sales through the iOS app will see Apple take its own cut.&#8221;</p>
+    </blockquote>
+
+    <p>It will be interesting to see how the advent of this and other similar systems facilitating an even more streamlined publication process changes the content creation scene in the next few years. An exciting time, to be sure.</p>
+</div>
+</article>
+{% endblock %}
