@@ -195,6 +195,7 @@ def Migrate(target, mod_time):
 # - Line: Line to be parsed. (String)
 def Markdown(line):
     # Make global variables accessible in the method, and initialize method variables.
+    # Must be global to persist between method calls.
     global types, active
     start = 1
 
@@ -202,22 +203,27 @@ def Markdown(line):
     # opens, reads, and inserts into the actual article.
     # If line starts with {}, open target file, and return the contents with a return statement. Skip the rest w/ a return statement.
 
+    # Header elements, <h1>-<h6>
     if (line.startswith("#")):
         line = ("<h%d>"+line.replace("#", "").strip()+"</h%d>") % (line.split(" ")[0].count("#"), line.split(" ")[0].count("#"))+"\n"
         types.append("<h>,,</h>")
+    # Footnote
     elif (re.match("(\[>[0-9]+\])", line) != None):
         types.append("<div class=\"footnote\">,,</div>")
+    # Blockquotes
     elif (re.match(">|\s{4}", line) != None):
         if ((types[-1] == "<blockquote>,,</blockquote>") or (types[-2] == "<blockquote>,,</blockquote>") or (types[-3] == "<blockquote>,,</blockquote>") or (types[-1] == "<bqt>,,</bqt>") or (types[-2] == "<bqt>,,</bqt>") or (types[-3] == "<bqt>,,</bqt>")):
             types.append("<bqt>,,</bqt>")
         else:
             types.append("<blockquote>,,</blockquote>")
+    # Unordered lists
     elif (re.match("\*\s", line) != None):
         line = line.replace("* ", "")
         if ((types[-1] == "<ul>,,</ul>") or (types[-2] == "<ul>,,</ul>") or (types[-3] == "<ul>,,</ul>") or (types[-1] == "<li>,,</li>") or (types[-2] == "<li>,,</li>") or (types[-3] == "<li>,,</li>")):
             types.append("<li>,,</li>")
         else:
             types.append("<ul>,,</ul>")
+    # Ordered lists
     elif (re.match("[0-9]+", line) != None):
         start = line.split(".")[0]
         line = re.sub("[0-9]+\.\s", "", line)
@@ -225,65 +231,72 @@ def Markdown(line):
             types.append("<li>,,</li>")
         else:
             types.append("<ol>,,</ol>")
+    # Paragraphs
     elif (re.match("[a-zA-Z_\[\*\"]", line) != None):
         types.append("<p>,,</p>")
+    # Raw HTML code.
     elif (re.match("<", line) != None or re.match("#", line) != None):
         types.append("RAW HTML")
+    # A blank line. Two blank lines in a row is a linebreak.
     else:
         if (line.strip() == "" and types[-1] == "<blank>,,</blank>"):
             types.append("<br />")
         else:
             types.append("<blank>,,</blank>")
 
+    # Managerial code to keep the 'types' tuple to 3 elements.
     if (len(types) == 4):
         types.pop(0)
 
+    # Admin variables, for clarity's sake.
     current = types[-1]
     second = types[-2]
     third = types[-3]
 
+
     if (current != "RAW HTML"):
-        # line = line.replace("&", "&#38;")
+        # If I've already escaped a ascii code, pass; otherwise escape it.
         if (re.search("&[a-z]{4}\;", line) != None):
             pass
         elif (re.search("(\&)", line) != None):
             line = line.replace("&", "&#38;")
 
-        if (re.match("---", line) != None): # Parse <hr /> elements
+        # Horizontal rules
+        if (re.match("---", line) != None):
             line = line.replace("---", "<hr />")
-
-        if (re.search("(--)", line)): # Parse emdashes
+        # Emdashes
+        if (re.search("(--)", line)):
             line = line.replace("--", "&#160;&#8212;&#160;")
-
-        for each in re.findall("([\s\<\>\\\*\/\[\-\(]+\"[\[\w\%\#\\*<\>]+)", line): # Parse double-quote quotations
+        # Parse double-quote quotations
+        for each in re.findall("([\s\<\>\\\*\/\[\-\(]+\"[\[\w\%\#\\*<\>]+)", line):
             ftxt = each.replace("\"", "&#8220;", 1)
             line = line.replace(each, ftxt)
         for each in re.findall("([\)\w+\.]+\"[\s\)\]\<\>\.\*\-\,])", line):
             ftxt = each.replace("\"", "&#8221;", 1)
             line = line.replace(each, ftxt)
-
-        for each in re.findall("(\w+'[\w+|\s+])", line): # Parse single-quote quotations
+        # Parse single-quote quotations
+        for each in re.findall("(\w+'[\w+|\s+])", line):
             ftxt = each.replace("\'", "&#8217;")
             line = line.replace(each, ftxt)
         for each in re.findall("([\s\(]'\w+)", line):
             ftxt = each.replace("\'", "&#8216;", 1)
             line = line.replace(each, ftxt)
-
+        # Interpret <strong> tags
         for each in re.findall("\*\*{1}[\w:\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]]+\*\*{1}", line):
             ftxt = each
             line = line.replace(each, "&&TK&&")
             ftxt = each.replace("**", "<strong>", 1)
             ftxt = ftxt.replace("**", "</strong> ", 1).strip()
             line = line.replace("&&TK&&", ftxt)            
-
+        # Interpret <em> tags
         for each in re.findall("\*{1}[\w:\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]]+\*{1}", line):
             ftxt = each
             line = line.replace(each, "&&TK&&")
             ftxt = each.replace("*", "<em>", 1)
             ftxt = ftxt.replace("*", "</em> ", 1).strip()
             line = line.replace("&&TK&&", ftxt)
-
-        for each in re.findall("(\!\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]+\]\(['\(\)\#\;?\@\%\w\&:\,\./\~\s\"\!\#\=\+-]+\))", line): # Parse images
+        # Parse images, both local and remote
+        for each in re.findall("(\!\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]+\]\(['\(\)\#\;?\@\%\w\&:\,\./\~\s\"\!\#\=\+-]+\))", line):
             desc = each.split("]")[0].lstrip("![")
             url = each.split("]")[1].split(" ")[0].lstrip("(")
             if (url.startswith("http://zacjszewczyk.com/")):
@@ -291,9 +304,9 @@ def Markdown(line):
                 url = """/Static/Images/%s""" % (url.split("/")[-1])
             alt = each.split("]")[1].split(" &#8220;")[1].rstrip("&#8221;)")
             line = line.replace(each, "<div class=\"image\"><img src=\""+url+"\" alt=\""+alt+"\" title=\""+desc+"\"></div>")
-
         # This needs some attention to work with the new URL scheme
-        for each in re.findall("""(\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]*\])(\(\s*(<.*?>|((?:(?:\(.*?\))|[^\(\)]))*?)\s*((['"])(.*?)\12\s*)?\))""", line): # Parse links
+        # Parse links, both local and remote
+        for each in re.findall("""(\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]*\])(\(\s*(<.*?>|((?:(?:\(.*?\))|[^\(\)]))*?)\s*((['"])(.*?)\12\s*)?\))""", line):
             desc = each[0].lstrip("[").rstrip("]")
             url = each[1].lstrip("(").rstrip(")").replace("&", "&amp;").strip()
 
@@ -317,53 +330,64 @@ def Markdown(line):
                 line = line.replace(each[0]+each[1], "<a class=\"local\" href=\""+desc.replace("<em>", "").replace("</em>", "").replace(" ", "-")+"\">"+desc+"</a>")
             else:
                 line = line.replace(each[0]+each[1], "<a href=\""+url+"\">"+desc+"</a>")
-
         # Parse footnotes
         for each in re.findall("(\[\^[0-9]+\])", line):
             mark = each.lstrip("[^").rstrip("]")
             url = """<sup id="fnref"""+mark+""""><a href="#fn"""+mark+"""" rel="footnote">"""+mark+"""</a></sup>"""
             line = line.replace(each, url)
-
         # Parse single-line comments
         if (re.match("[/]{2}", line) != None):
             line = line.replace("//","<!--")+" -->"
     else:
+        # Account for iframes
         if (line.startswith("<iframe")):
             line = "<div class=\"iframe\">"+line+"</div>"
+        # Anything else should be a blockquote
         else:
             line = "<blockquote>"+line+"</blockquote>"
-
-    if (current == "<p>,,</p>"): # If a paragraph
+    # If a paragraph
+    if (current == "<p>,,</p>"):
         line = current.replace(",,", line.strip())
-    elif (current == "<ul>,,</ul>"): # If an unordered list
+    # If an unordered list
+    elif (current == "<ul>,,</ul>"):
         active = "</ul>"
         line = current.split(",,")[0].replace(">", "start='"+str(start)+"'>")+"\n<li>"+line.strip()+"</li>"
-    elif (current == "<ol>,,</ol>"): # If an ordered list
+    # If an ordered list
+    elif (current == "<ol>,,</ol>"):
         active = "</ol>"
         line = current.split(",,")[0]+"\n<li>"+line.strip()+"</li>"
-    elif (current == "<li>,,</li>"): # If a list item
+    # If a list item
+    elif (current == "<li>,,</li>"):
         line = current.replace(",,", line.strip())
-    elif ((current != "<li>,,</li>") and ((second == "<li>,,</li>") or (second == "<ul>,,</ul>") or (second == "<ol>,,</ol>"))): # If an element following a list item
+    # If an element following a list item
+    elif ((current != "<li>,,</li>") and ((second == "<li>,,</li>") or (second == "<ul>,,</ul>") or (second == "<ol>,,</ol>"))):
         line = line.strip()+active+"\n"
         active = ""
-    elif (current == "<blockquote>,,</blockquote>"): # If a blockquote
+    # If a blockquote
+    elif (current == "<blockquote>,,</blockquote>"):
         active = "</blockquote>"
         line = current.split(",,")[0]+"\n<p>"+line.strip()+"</p>"
-    elif (current == "<bqt>,,</bqt>"): # If the continuation of a blockquote
+    # If the continuation of a blockquote
+    elif (current == "<bqt>,,</bqt>"):
         line = "<p>"+line.strip().replace("> ", "")+"</p>"
-    elif ((current != "<bqt>,,</bqt>") and ((second == "<bqt>,,</bqt>") or (second == "<blockquote>,,</blockquote>"))): # If an element following a blockquote
+    # If an element following a blockquote
+    elif ((current != "<bqt>,,</bqt>") and ((second == "<bqt>,,</bqt>") or (second == "<blockquote>,,</blockquote>"))):
         line = line.strip().replace("> ", "")+"</blockquote>\n"
         active = ""
-    elif ((current == "<div class=\"footnote\">,,</div>")): # If a footnote
+    # If a footnote
+    elif ((current == "<div class=\"footnote\">,,</div>")):
         active = "</div>"
         mark = int(line.split("]")[0].lstrip("[>"))
         line = line.split("]")[1]
-        if (mark == 1): # If the first footnote
+        # If the first footnote
+        if (mark == 1): 
             line = current.split(",,")[0].replace("div ", "div id=\"fn"+str(mark)+"\" ")+"\n<p>"+line.strip()+"""</p><a class="fn" title="return to article" href="#fnref"""+str(mark)+"""">&#x21a9;</a>"""
-        else: # If a later footnote
+        # If a later footnote
+        else: 
             line = "</div>"+current.split(",,")[0]+"<p>"+line.strip()+"</p>"
             line = line.replace("div ", "div id=\"fn"+str(mark)+"\" ")+"""<a class="fn" title="return to article" href="#fnref"""+str(mark)+"""\">&#x21a9;</a>"""
-    else: # Blank line
+    # Blank line
+    else: 
         if (current == "<br />"):
             line = "<br />"
         else:
