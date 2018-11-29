@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta property="og:image" content="favicon.ico">
+        <meta property="og:title" content="Projects - ">
+        <meta property="og:site_name" content="Zac J. Szewczyk">
+        <meta property="og:article:author" content="Zac J. Szewczyk">
+        <meta property="og:see_also" content="http://zacjszewczyk.com/">
+        <title>
+            Projects - Zac J. Szewczyk
+        </title>
+        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
+        <link rel="shortcut icon" href="/Static/favicon.ico">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/Static/main.css" type="text/css" />
+        <!-- SHEETS -->
+    </head>
+    <body id="projects">
+        <header><!--BLOCK HEADER--></header>
+        <nav>
+            <a id="home_link" href="/">Home</a>
+            <a id="blog_link" href="/blog">Blog</a>
+            <a id="rss_link" href="/rss">RSS</a>
+            <a id="archives_link" href="/archives">Post Archives</a>
+            <a id="projects_link" href="/projects">Projects</a>
+            <!-- <a id="logout_link" href="/logout">Logout</a> -->
+            <div class="flash">{{ message }}</div>
+        </nav>
+        <main>
+            <section id="content_section">
+                
+<p>
+    I split the time I spend programming between coding projects and web development. The first means content management systems for the most part. Although at times I have focused on other things, like a news scraper that predicted the best time to submit a link to Y Combinator's popular social news site, <a href="https://news.ycombinator.com">Hacker News</a>, I had little incentive to develop those applications past the preliminary stages.
+</p>
+<p>
+    My second main focus, web design, came about as a complement to my work on content management systems. I have yet to come across a single client wanting a back-end without the front-end, user-facing website to go along with it, so I often roll the two into one package. Below I talk about two of my personal projects, with links to code repositories where possible.  
+
+<h1>Coding Projects</h1>
+
+<h2><a href="https://github.com/zacjszewczyk/FirstCrack">First Crack</a></h2>
+<p>
+    Having tried several of 2012's most popular content management systems, I arrived at the realization that nothing could meet my needs as well as something I built myself. After a few months of work, I began running my website on something I called First Crack. Inspired by Marco Arment's Second Crack as described on <a href="http://5by5.tv/buildanalyze/18">episode eighteen of Build & Analyze</a>, my system grew over the years but has remained true to its core throughout its development. Given a directory of articles formatted in Markdown and saved as plain text files, First Crack will generate a static website of over a thousand pages in less than two seconds. I have written about this application <a href="/blog/First-Crack-10">in the past</a>, so I will leave those articles and <a href="https://github.com/zacjszewczyk/FirstCrack">the project's GitHub page</a> to do the rest of my explaining. This project is, as of now, inactive.  
+</p>
+<hr />
+<h2>HN Scraper</h2>
+<p>
+    My obsession with Hacker News began when I woke up to see that one of my articles had attracted over fourteen thousand pageviews in twenty-four hours. After some digging, I discovered that--unbeknown to me--one of my readers had submitted the post to Y Combinator's social news aggregator and it had made its way to the front page. After failing to replicate that success, I started looking for ways to optimize the process by which I sought to bring my writings to the site's visitors' attention. If I could find a way to measure the site's activity without having access to its analytics, and if I could find a way to gauge the rate at which new submissions were gaining traction in particular, I figured I could predict the best times to make my submissions with the goal of attracting the most visitors possible. Other websites, like the now-defunct <a href="http://hnpickup.appspot.com">HN Pickup</a> and the more recent <a href="http://hnnotify.leknarf.net">HN Notify</a> had already proved the concept, I just needed to replicate the results.    
+</p>
+<p>
+    Gathering the raw data proved much easier than I had anticipated, but I hit a stumbling block when it came to making sense of all that information. I took a few runs at it, but to no avail. Soon after that, I shifted my attention elsewhere. I have not put enough work into the code to warrant its own GitHub repository, so I have nothing to show for my work yet, but I decided to write about this project here in spite of that, hoping that doing so would spark enough interest to get development back on track. Although I have had some success with this project, it, too, is inactive.
+</p>
+<!-- <hr />
+<h1>Web Development</h1>
+<h2><a href="http://pingdynastytour.com/">Ping Dynasty Tours</a></h2>
+<p>
+    This project came about after a professor got in touch with me about building a website for his colleague's travel agency. A few weeks later, I turned the keys for Ping Dynasty Tours over to the owner. As is the case with many of the websites I build, I serve the user static HTML files to increase browsing speed time and decrease server load, and use a small content management system on the back-end to generate those files. This also streamlines the maintenance process, meaning I can spend less time fiddling with the semantics and more making meaningful progress on improving my customer's internet presence. Beyond that smooth interplay, the most notable feature of this site is the interactive map on each tour page, and the touch-compatible gallery on the Photo Gallery page. I used the Google Maps API to create the first, and a small jQuery plugin for the second. Every aspect of every site I create works just as well on mobile devices as full-sized desktop computers, and Ping Dynasty Tours is no exception to that rule. 
+</p>
+<div class="wrap">
+    <iframe class="frame"></iframe>
+    <p>
+        <a>See more.</a>
+    </p>
+</div>
+<hr />
+<h2><a href="http://china.ysu.edu/index.html">china.ysu.edu</a></h2>
+<p>
+    A follow-on project with the same professor, although this time he wanted his website brought out of the dark days of Flash and into world of modern web development. This entailed a ground-up rewrite of the site, which lead to an average of twenty-five percent decrease in page load times. The main feature of this website, too, is the interactive map on the home page. A similar back-end to the one driving Ping Dynasty Tours generates this site as well.  
+</p>
+<div class="wrap">
+    <iframe class="frame"></iframe>
+    <p>
+        <a>See more.</a>
+    </p>
+</div>
+<hr />
+<h2><a href="http://www.bahamasgeology.com">Youngstown State University Field Investigations in Geology Course</a></h2>
+<p>
+    This website provides information for students considering enrolling in the Field Investigations in Geology course at Youngstown State University. Although also equipped with an interactive Google maps implementation, the headlining feature of this site is its many rotating photo galleries used to show students doing field work out in San Salvador, in the Bahamas. A small content management system generates everything here, from the galleries to the map and the pages each of those locations link to after a brief description of the point.  
+</p>
+<div class="wrap">
+    <iframe class="frame"></iframe>
+    <p>
+        <a>See more.</a>
+    </p>
+</div>
+<hr />
+<h2><a href="http://www.smithmineralmuseum.com">Smith Mineral Museum</a></h2>
+<p>
+    The first website I created for the Department of Geological and Environmental Sciences, I made this one for the University's mineral museum. The museum's curator needed to have the ability to make changes once my college career came to an end, so I opted to use <a href="http://www.squarespace.com">Squarespace</a> instead of my usual approach of building a custom back-end and then using it to generate static structure files. With a simple, easy-to-use interface, whoever manages this site after me will not need a great deal of expertise to do so&#160;&#8212;&#160;mission accomplished. Squarespace does a great job of streamlining the web development process, but due to the inherent limitations of building off of someone else's work, I prefer to tailor each project to my customer's needs with the made-to-order setup I used to build every other website on this page. 
+</p>
+<div class="wrap">
+    <iframe class="frame"></iframe>
+    <p>
+        <a>See more.</a>
+    </p>
+</div> -->
+            </section>
+        </main>
+        <span id="ipad_device"></span>
+    </body>
+    <!-- SCRIPTS BLOCK -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36771281-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</html>

@@ -17,24 +17,24 @@ def GetFiles():
     return files
 
 def BuildFromTemplate(target, title, bodyid):
-    fd = open("templates/system/template.htm", "r")
+    fd = open("Structure/system/template.htm", "r")
     # Create first half of structure file, up to the point where content is required.
     content = fd.read()
     content = content.split("<!--Divider-->")
     content.append(content[0])
     fd.close()
 
-    fd = open("templates/"+target, "w")
+    fd = open("Structure/"+target, "w")
     fd.write(content[0].replace("{{ title }}", title).replace("{{ BODYID }}", bodyid))
     fd.close()
 
 def CloseTemplateBuild(target):
-    fd = open("templates/system/template.htm", "r")
+    fd = open("Structure/system/template.htm", "r")
     content = fd.read()
     content = content.split("<!--Divider-->")
     fd.close()
 
-    fd = open("templates/"+target, "a")
+    fd = open("Structure/"+target, "a")
     fd.write(content[1])
     fd.close()
 
@@ -45,7 +45,7 @@ def Init():
     file_idx = 0
     files = {}
     
-    fd = open("templates/system/template.htm", "r")
+    fd = open("Structure/system/template.htm", "r")
     # Create first half of structure file, up to the point where content is required.
     content = fd.read()
     content = content.split("<!--Divider-->")
@@ -55,7 +55,7 @@ def Init():
     BuildFromTemplate("archives.html", "Post Archives - ", "postarchives")
     BuildFromTemplate("blog.html", "Blog - ", "blog")
     
-    fd = open("static/Main_feed.xml", "w")
+    fd = open("Static/Main_feed.xml", "w")
     fd.write("""\
 <?xml version='1.0' encoding='ISO-8859-1' ?>
 <rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -86,7 +86,7 @@ def Init():
 # Terminate method responsible for writing the closing tags to the blog and archives
 # template files. 
 def Terminate():
-    fd = open("templates/system/template.htm", "r")
+    fd = open("Structure/system/template.htm", "r")
     content = fd.read()
     content = content.split("<!--Divider-->")
     fd.close()
@@ -94,35 +94,35 @@ def Terminate():
     CloseTemplateBuild("archives.html")
     CloseTemplateBuild("blog.html")
 
-    fd = open("static/Main_feed.xml", "a")
+    fd = open("Static/Main_feed.xml", "a")
     fd.write("""\n</channel>\n</rss>""")
     fd.close()
 
 def GenStatic():
-    fd = open("templates/system/template.htm", "r")
+    fd = open("Structure/system/template.htm", "r")
     content = fd.read();
     content = content.split("<!--Divider-->")
 
-    fd = open("templates/home.html", "w").close()
-    fd = open("templates/home.html", "a")
-    home_fd = open("templates/system/home.html", "r")
+    fd = open("Structure/home.html", "w").close()
+    fd = open("Structure/home.html", "a")
+    home_fd = open("Structure/system/home.html", "r")
     home = home_fd.read().split("<!-- DIVIDER -->")
     fd.write(content[0].replace("{{ title }}", "").replace("{{ BODYID }}", "home").replace("<!-- SHEETS -->", home[0]))
     fd.write(home[1])
     fd.write(content[1])
     fd.close()
 
-    fd = open("templates/projects.html", "w").close()
-    fd = open("templates/projects.html", "a")
-    projects_fd = open("templates/system/projects.html", "r")
+    fd = open("Structure/projects.html", "w").close()
+    fd = open("Structure/projects.html", "a")
+    projects_fd = open("Structure/system/projects.html", "r")
     projects = projects_fd.read().split("<!-- DIVIDER -->")
     fd.write(content[0].replace("{{ title }}", "Projects - ").replace("{{ BODYID }}", "projects").replace("<!-- SCRIPTS -->", projects[0]))
     fd.write(projects[1])
     fd.write(content[1])
     fd.close()
 
-    fd = open("templates/system/error.html", "w").close()
-    fd = open("templates/system/error.html", "a")
+    fd = open("Structure/system/error.html", "w").close()
+    fd = open("Structure/system/error.html", "a")
     fd.write(content[0].replace("{{ title }}", "Error - ").replace("{{ BODYID }}", "error"))
     fd.write("<!-- DIVIDER -->")
     fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 class=\\"article_title\\">Error: 404 Not Found</h2><p>The requested resource at <u>"+window.location.href+"</u> could not be found.</p></article>"</script>"""))
@@ -250,7 +250,7 @@ def Markdown(line):
             url = each.split("]")[1].split(" ")[0].lstrip("(")
             if (url.startswith("http://zacjszewczyk.com/")):
                 # print url.split("/")[-1]
-                url = """/static/Images/%s""" % (url.split("/")[-1])
+                url = """/Static/Images/%s""" % (url.split("/")[-1])
             alt = each.split("]")[1].split(" &#8220;")[1].rstrip("&#8221;)")
             line = line.replace(each, "<div class=\"image\"><img src=\""+url+"\" alt=\""+alt+"\" title=\""+desc+"\"></div>")
 
@@ -342,10 +342,10 @@ def GenPage(source, timestamp):
     source_fd.close()
     source_fd = open("Content/"+source, "r")
 
-    target_fd = open("templates/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "w").close()
-    target_fd = open("templates/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "a")
+    target_fd = open("Structure/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "w").close()
+    target_fd = open("Structure/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "a")
 
-    fd = open("templates/system/template.htm", "r")
+    fd = open("Structure/system/template.htm", "r")
     content = fd.read();
     content = content.split("<!--Divider-->")
     fd.close()
@@ -392,7 +392,7 @@ def GenPage(source, timestamp):
 
 def AppendContentOfXToY(target, source):
     source_fd = open("Content/"+source, "r")
-    target_fd = open("templates/"+target+".html", "a")
+    target_fd = open("Structure/"+target+".html", "a")
 
     ptype = "linkpost"
     idx = 0
@@ -431,7 +431,7 @@ def AppendContentOfXToY(target, source):
 
 def AppendToFeed(source):
     source_fd = open("Content/"+source, "r")
-    feed_fd = open("static/Main_feed.xml", "a")
+    feed_fd = open("Static/Main_feed.xml", "a")
 
     ptype = "linkpost"
     idx = 0
@@ -482,21 +482,21 @@ def RegenBlog():
     global file_idx
     Init()
 
-    fd = open("templates/system/template.htm", "r")
+    fd = open("Structure/system/template.htm", "r")
     content = fd.read();
     content = content.split("<!--Divider-->")
     fd.close()
 
     for year in sorted(files, reverse=True):
-        year_fd = open("templates/"+year+".html", "w").close()
-        year_fd = open("templates/"+year+".html", "a")
+        year_fd = open("Structure/"+year+".html", "w").close()
+        year_fd = open("Structure/"+year+".html", "a")
         year_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives"))
         year_fd.write("""<table id="big_table">""")
         year_fd.write("    <tr>\n        <td>%s</td>\n    </tr>\n" % (year))
         for month in sorted(files[year], reverse=True):
             year_fd.write("    <tr>\n        <td><a href=\"%s\">%s</a></td>\n    </tr>\n" % ("/blog/"+year+"/"+month, months[month]))
-            month_fd = open("templates/"+year+"-"+month+".html", "w").close()
-            month_fd = open("templates/"+year+"-"+month+".html", "a")
+            month_fd = open("Structure/"+year+"-"+month+".html", "w").close()
+            month_fd = open("Structure/"+year+"-"+month+".html", "a")
             month_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives").replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\"/blog/"+year+"\">"+year+"</a>\n</p>\n</article>"))
             for day in sorted(files[year][month], reverse=True):
                 for timestamp in sorted(files[year][month][day], reverse=True):
@@ -512,7 +512,7 @@ def RegenBlog():
                         for each in sorted(files, reverse=True)[3:]:
                             buff += """\n        <td>\n            <a href=\"/blog/%s\">%s</a>\n        </td>""" % (each.lower(), each)
                         buff += """\n    </tr>\n</table>\n</article>\n"""
-                        archives_fd = open("templates/archives.html", "a")
+                        archives_fd = open("Structure/archives.html", "a")
                         archives_fd.write(buff)
                         archives_fd.close()
                         AppendContentOfXToY("archives", files[year][month][day][timestamp])
