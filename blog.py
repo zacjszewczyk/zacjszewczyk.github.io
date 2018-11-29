@@ -6,17 +6,37 @@ import datetime
 import re
 
 # Global variables
+# - types: Keep track of current and two previous line types. (Tuple)
+# - active: Keep track of active block-level HTML element. (String)
+# - file_idx: Current file number. (Int)
+# - files: Dictionary with years as the keys, and sub-dictinaries as the 
+#          elements. These elements have months as the keys, and a list
+#          of the posts made in that month as the elements. (Dictionary)
+# - months: A dictionary for converting decimal (string) representations
+#           of months to their names. (Dictionary)
 types = ["", "", ""]
 active = ""
 file_idx = 0
 files = {}
 months = {"01" : "January", "02" : "February", "03" : "March", "04" : "April", "05" : "May", "06" : "June", "07" : "July", "08" : "August", "09" : "September", "10" : "October", "11" : "November", "12" : "December"}
 
+# Method: GetFiles
+# Purpose: Return the global variable files, to make it accessible within a method
+# Parameters: none
 def GetFiles():
     global files
     return files
 
-def BuildFromTemplate(target, title, bodyid):
+# Method: BuildFromTemplate
+# Purpose: Build a target file, with a specified title and body id, and
+# optional fields for inserted stylesheets and content
+# Parameters:
+# - target: Target file name, including extension. (String)
+# - title: Value used in meta title field, and <title> element. (String)
+# - bodyid: ID for body element. (String)
+# - sheets: Any stylesheets to be inserted into the <head> element. (String)
+# - passed_content: Body content to insert into the <body> element. (String)
+def BuildFromTemplate(target, title, bodyid, sheets="", passed_content=""):
     fd = open("Structure/system/template.htm", "r")
     # Create first half of structure file, up to the point where content is required.
     content = fd.read()
@@ -24,8 +44,10 @@ def BuildFromTemplate(target, title, bodyid):
     content.append(content[0])
     fd.close()
 
-    fd = open("Structure/"+target, "w")
-    fd.write(content[0].replace("{{ title }}", title).replace("{{ BODYID }}", bodyid))
+    fd = open("Structure/"+target, "w").close()
+    fd = open("Structure/"+target, "a")
+    fd.write(content[0].replace("{{ title }}", title).replace("{{ BODYID }}", bodyid).replace("<!-- SHEETS -->", sheets))
+    fd.write(passed_content)
     fd.close()
 
 def CloseTemplateBuild(target):
@@ -70,6 +92,7 @@ def Init():
     <generator>First Crack</generator>\n""" % (datetime.datetime.now().strftime("%a, %d %b %Y %I:%M:%S")))
     fd.close()
 
+    # Do this for the Structure directory, minus some key system files, to determine what--if anything--needs updated, rather than rebuilding the entire site every time.
     for each in os.listdir("Content"):
         if (each.endswith(".txt") == True):
             mtime = time.strftime("%Y/%m/%d/%H:%M:%S", time.localtime(os.stat("Content/"+each).st_mtime)).split("/")
@@ -103,23 +126,13 @@ def GenStatic():
     content = fd.read();
     content = content.split("<!--Divider-->")
 
-    fd = open("Structure/home.html", "w").close()
-    fd = open("Structure/home.html", "a")
     home_fd = open("Structure/system/home.html", "r")
     home = home_fd.read().split("<!-- DIVIDER -->")
-    fd.write(content[0].replace("{{ title }}", "").replace("{{ BODYID }}", "home").replace("<!-- SHEETS -->", home[0]))
-    fd.write(home[1])
-    fd.write(content[1])
-    fd.close()
+    BuildFromTemplate("home.html", "", "home", sheets=home[0], passed_content=home[1])
 
-    fd = open("Structure/projects.html", "w").close()
-    fd = open("Structure/projects.html", "a")
     projects_fd = open("Structure/system/projects.html", "r")
     projects = projects_fd.read().split("<!-- DIVIDER -->")
-    fd.write(content[0].replace("{{ title }}", "Projects - ").replace("{{ BODYID }}", "projects").replace("<!-- SCRIPTS -->", projects[0]))
-    fd.write(projects[1])
-    fd.write(content[1])
-    fd.close()
+    BuildFromTemplate("projects.html", "Projects - ", "projects", "", passed_content=projects[1])
 
     fd = open("Structure/system/error.html", "w").close()
     fd = open("Structure/system/error.html", "a")
