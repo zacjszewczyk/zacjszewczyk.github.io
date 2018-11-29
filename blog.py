@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
-import os
-import time
-import datetime
-import re
+# Imports
+import os # File operations
+import time # Recording runtime
+import datetime # Managing file modification time
+import re # Regex
 
 # Global variables
 # - types: Keep track of current and two previous line types. (Tuple)
