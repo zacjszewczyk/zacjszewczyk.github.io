@@ -21,7 +21,7 @@ files = {}
 months = {"01" : "January", "02" : "February", "03" : "March", "04" : "April", "05" : "May", "06" : "June", "07" : "July", "08" : "August", "09" : "September", "10" : "October", "11" : "November", "12" : "December"}
 
 # Method: GetFiles
-# Purpose: Return the global variable files, to make it accessible within a method
+# Purpose: Return the global variable files, to make it accessible in a method
 # Parameters: none
 def GetFiles():
     global files
@@ -50,6 +50,10 @@ def BuildFromTemplate(target, title, bodyid, sheets="", passed_content=""):
     fd.write(passed_content)
     fd.close()
 
+# Method: CloseTemplateBuild
+# Purpose: Open the target file and write the closing HTML to it.
+# Parameters:
+# - target: Target file name, including extension. (String)
 def CloseTemplateBuild(target):
     fd = open("Structure/system/template.htm", "r")
     content = fd.read()
@@ -60,8 +64,10 @@ def CloseTemplateBuild(target):
     fd.write(content[1])
     fd.close()
 
-# Init method responsible for clearing the blog template file, writing
-# the necessary opening tags, and creating the file dictionary.
+# Method: Init
+# Purpose: Clear the blog and archive structure files, and the RSS feed,
+#          and write the opening tags. Generate file dictionary.
+# Parameters: none
 def Init():
     global file_idx, files
     file_idx = 0
@@ -106,8 +112,9 @@ def Init():
                 files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = {}
             files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = each
 
-# Terminate method responsible for writing the closing tags to the blog and archives
-# template files. 
+# Method: Terminate
+# Purpose: Write closing tags to blog and archives structure files.
+# Parameters: none
 def Terminate():
     fd = open("Structure/system/template.htm", "r")
     content = fd.read()
@@ -121,6 +128,9 @@ def Terminate():
     fd.write("""\n</channel>\n</rss>""")
     fd.close()
 
+# Method: GenStatic
+# Purpose: Create home, projects, and error static structure files.
+# Parameters: none
 def GenStatic():
     fd = open("Structure/system/template.htm", "r")
     content = fd.read();
@@ -141,8 +151,14 @@ def GenStatic():
     fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 class=\\"article_title\\">Error: 404 Not Found</h2><p>The requested resource at <u>"+window.location.href+"</u> could not be found.</p></article>"</script>"""))
     fd.close()    
 
-def Migrate(file_name, mod_time):
-    file_descriptor = open("Content/"+file_name, "r")
+# Method: Migrate
+# Purpose: For files without the header information in their first five lines, generate
+#          that information, insert it into the file, and revert the update time.
+# Parameters
+# - target: Target file name, including extension. (String)
+# - mod_time: Timestamp for reverting update time, format %Y/%m/%d %H:%M:%S. (String)
+def Migrate(target, mod_time):
+    file_descriptor = open("Content/"+target, "r")
     article_content = file_descriptor.readline()
 
     if (article_content.startswith("# [") == True):
@@ -154,20 +170,24 @@ def Migrate(file_name, mod_time):
     else:
         article_type = "original"
         article_title = article_content.replace("# ", "").replace(" #", "")
-        article_url = file_name.replace(".txt", "").replace(" ", "-").lower()
+        article_url = target.replace(".txt", "").replace(" ", "-").lower()
         article_content = file_descriptor.readline()
 
     article_content = file_descriptor.read()
 
     file_descriptor.close()
-    file_descriptor = open("Content/"+file_name, "w")
+    file_descriptor = open("Content/"+target, "w")
     file_descriptor.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, "Zac Szewczyk", article_content.strip()))
 
     file_descriptor.close()
-    os.utime("Content/"+file_name, ((time.mktime(time.strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (time.mktime(time.strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
+    os.utime("Content/"+target, ((time.mktime(time.strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (time.mktime(time.strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
 
     return article_type
 
+# Method: Markdown
+# Purpose: Take a raw string from a file, formatted in Markdown, and parse it into HTML.
+# Parameters:
+# - Line: Line to be parsed. (String)
 def Markdown(line):
     global types, active
 
@@ -346,6 +366,11 @@ def Markdown(line):
 
     return line
 
+# Method: GenPage
+# Purpose: Given a source content file, generate a corresponding HTML structure file.
+# Parameters:
+# - source: Filename of the source content file. (String)
+# - timestamp: Timestamp for reverting update time, format %Y/%m/%d %H:%M:%S. (String)
 def GenPage(source, timestamp):
     source_fd = open("Content/"+source, "r")
 
@@ -403,6 +428,11 @@ def GenPage(source, timestamp):
     target_fd.close()
     source_fd.close()
 
+# Method: AppendContentOfXToY
+# Purpose: Append the content of a source file to a target file
+# Parameters:
+# - target: Target file name, including extension. (String)
+# - source: Source file name, including extension. (String)
 def AppendContentOfXToY(target, source):
     source_fd = open("Content/"+source, "r")
     target_fd = open("Structure/"+target+".html", "a")
@@ -442,6 +472,10 @@ def AppendContentOfXToY(target, source):
     target_fd.close()
     source_fd.close()
 
+# Method: AppendToFeed
+# Purpose: Append the content of a source file to the RSS feed.
+# Parameters:
+# - source: Source file name, including extension. (String)
 def AppendToFeed(source):
     source_fd = open("Content/"+source, "r")
     feed_fd = open("Static/Main_feed.xml", "a")
@@ -483,6 +517,10 @@ def AppendToFeed(source):
     feed_fd.close()
     source_fd.close()
 
+# Method: GetTitle
+# Purpose: Return the article title of a source file.
+# Parameters:
+# - source: Source file name, including extension. (String)
 def GetTitle(source):
     fd = open("Content/"+source, "r")
     fd.readline()
@@ -490,7 +528,10 @@ def GetTitle(source):
     fd.close()
     return title
 
-def RegenBlog():
+# Method: GenBlog
+# Purpose: Generate the blog.
+# Parameters: none
+def GenBlog():
     global files
     global file_idx
     Init()
@@ -540,10 +581,12 @@ def RegenBlog():
 
     Terminate()
 
+# If run as an individual file, generate the site and report runtime.
+# If imported, only make methods available to imported program.
 if __name__ == '__main__':
     t1 = datetime.datetime.now()
     GenStatic()
-    RegenBlog()
+    GenBlog()
     t2 = datetime.datetime.now()
 
     print ("Execution time: %s" % (t2-t1))
