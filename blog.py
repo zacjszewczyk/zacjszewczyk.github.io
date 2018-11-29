@@ -12,13 +12,35 @@ file_idx = 0
 files = {}
 months = {"01" : "January", "02" : "February", "03" : "March", "04" : "April", "05" : "May", "06" : "June", "07" : "July", "08" : "August", "09" : "September", "10" : "October", "11" : "November", "12" : "December"}
 
-def getFiles():
+def GetFiles():
     global files
     return files
 
+def BuildFromTemplate(target, title, bodyid):
+    fd = open("templates/system/template.htm", "r")
+    # Create first half of structure file, up to the point where content is required.
+    content = fd.read()
+    content = content.split("<!--Divider-->")
+    content.append(content[0])
+    fd.close()
+
+    fd = open("templates/"+target, "w")
+    fd.write(content[0].replace("{{ title }}", title).replace("{{ BODYID }}", bodyid))
+    fd.close()
+
+def CloseTemplateBuild(target):
+    fd = open("templates/system/template.htm", "r")
+    content = fd.read()
+    content = content.split("<!--Divider-->")
+    fd.close()
+
+    fd = open("templates/"+target, "a")
+    fd.write(content[1])
+    fd.close()
+
 # Init method responsible for clearing the blog template file, writing
 # the necessary opening tags, and creating the file dictionary.
-def init():
+def Init():
     global file_idx, files
     file_idx = 0
     files = {}
@@ -30,15 +52,10 @@ def init():
     content.append(content[0])
     fd.close()
 
-    fd = open("templates/archives.html", "w")
-    fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "postarchives"))
-    fd.close()
-
-    fd = open("templates/blog.html", "w")
-    fd.write(content[0].replace("{{ title }}", "Blog - ").replace("{{ BODYID }}", "blog"))
-    fd.close()
-
-    fd = open("Main_feed.xml", "w")
+    BuildFromTemplate("archives.html", "Post Archives - ", "postarchives")
+    BuildFromTemplate("blog.html", "Blog - ", "blog")
+    
+    fd = open("static/Main_feed.xml", "w")
     fd.write("""\
 <?xml version='1.0' encoding='ISO-8859-1' ?>
 <rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -68,30 +85,20 @@ def init():
 
 # Terminate method responsible for writing the closing tags to the blog and archives
 # template files. 
-def terminate():
+def Terminate():
     fd = open("templates/system/template.htm", "r")
     content = fd.read()
     content = content.split("<!--Divider-->")
     fd.close()
 
-    fd = open("templates/archives.html", "a")
-    fd.write(content[1])
-    fd.close()
+    CloseTemplateBuild("archives.html")
+    CloseTemplateBuild("blog.html")
 
-    fd = open("templates/blog.html", "a")
-    fd.write(content[1])
-    fd.close()
-
-    fd = open("templates/archives.html", "a")
-    fd.write(content[1])
-    fd.close()
-
-    fd = open("Main_feed.xml", "a")
+    fd = open("static/Main_feed.xml", "a")
     fd.write("""\n</channel>\n</rss>""")
     fd.close()
 
 def GenStatic():
-    # home.html, projects.html, login.html, ncustomers.html, admin.html
     fd = open("templates/system/template.htm", "r")
     content = fd.read();
     content = content.split("<!--Divider-->")
@@ -105,13 +112,6 @@ def GenStatic():
     fd.write(content[1])
     fd.close()
 
-    fd = open("templates/admin.html", "w").close()
-    fd = open("templates/admin.html", "a")
-    fd.write(content[0])
-    fd.write("admin")
-    fd.write(content[1])
-    fd.close()
-
     fd = open("templates/projects.html", "w").close()
     fd = open("templates/projects.html", "a")
     projects_fd = open("templates/system/projects.html", "r")
@@ -121,21 +121,12 @@ def GenStatic():
     fd.write(content[1])
     fd.close()
 
-    fd = open("templates/login.html", "w").close()
-    fd = open("templates/login.html", "a")
-    fd.write(content[0])
-    fd.write("login")
-    fd.write(content[1])
-    fd.close()
-
-    fd = open("templates/ncustomers.html", "w").close()
-    fd = open("templates/ncustomers.html", "a")
-    fd.write(content[0])
-    fd.write("ncustomers")
-    fd.write(content[1])
-    fd.close()
-
-    fd.close()
+    fd = open("templates/system/error.html", "w").close()
+    fd = open("templates/system/error.html", "a")
+    fd.write(content[0].replace("{{ title }}", "Error - ").replace("{{ BODYID }}", "error"))
+    fd.write("<!-- DIVIDER -->")
+    fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 class=\\"article_title\\">Error: 404 Not Found</h2><p>The requested resource at <u>"+window.location.href+"</u> could not be found.</p></article>"</script>"""))
+    fd.close()    
 
 def Migrate(file_name, mod_time):
     file_descriptor = open("Content/"+file_name, "r")
@@ -258,7 +249,8 @@ def Markdown(line):
             desc = each.split("]")[0].lstrip("![")
             url = each.split("]")[1].split(" ")[0].lstrip("(")
             if (url.startswith("http://zacjszewczyk.com/")):
-                url = """/'Images/%s') }}""" % (url.split("/")[-1])
+                # print url.split("/")[-1]
+                url = """/static/Images/%s""" % (url.split("/")[-1])
             alt = each.split("]")[1].split(" &#8220;")[1].rstrip("&#8221;)")
             line = line.replace(each, "<div class=\"image\"><img src=\""+url+"\" alt=\""+alt+"\" title=\""+desc+"\"></div>")
 
@@ -352,15 +344,18 @@ def GenPage(source, timestamp):
 
     target_fd = open("templates/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "w").close()
     target_fd = open("templates/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "a")
-    target_fd.write("""{% extends "layout.html" %}
-{% block scripts %}
+
+    fd = open("templates/system/template.htm", "r")
+    content = fd.read();
+    content = content.split("<!--Divider-->")
+    fd.close()
+
+    content[0] = content[0].replace("<!-- SCRIPTS -->", """\
             <script type="text/javascript">
                 function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
                 //https://www.dirtymarkup.com/, http://jscompress.com/
                 if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
-            </script>
-{% endblock %}
-{% block body %}\n""")
+            </script>""").replace("{{ BODYID }}", "post")
     
     idx = 0
     title = ""
@@ -370,6 +365,7 @@ def GenPage(source, timestamp):
             title += "<article>\n    <h2 class=\"article_title\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line.replace("Type: ", "").strip())
         elif (idx == 1):
             title = title.replace("{{URL_TITLE}}", line.replace("Title: ", "").strip())
+            content[0] = content[0].replace("{{ title }}", line.replace("Title: ", "").strip()+" - ")
         elif (idx == 2):
             line = line.replace("Link: ", "").strip()
             if (not line.startswith("http") and line.endswith(".htm")):
@@ -380,6 +376,7 @@ def GenPage(source, timestamp):
             line = line.replace("Pubdate: ", "").replace(" ", "/").split("/")
             title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s</time>""" % (line[0], line[1], line[2], "/blog/"+line[0], line[0], "/blog/"+line[0]+"/"+line[1], line[1], line[2], line[3])
         elif (idx == 4):
+            target_fd.write(content[0])
             target_fd.write(title.strip()+"\n")
         elif (idx > 4):
             target_fd.write("\n    "+Markdown(line))
@@ -387,8 +384,9 @@ def GenPage(source, timestamp):
         idx += 1
     else:
         target_fd.write("\n</div>\n</article>")
-        target_fd.write("\n{% endblock %}")
-    
+        # target_fd.write("\n{% endblock %}")
+        target_fd.write(content[1])
+        
     target_fd.close()
     source_fd.close()
 
@@ -433,7 +431,7 @@ def AppendContentOfXToY(target, source):
 
 def AppendToFeed(source):
     source_fd = open("Content/"+source, "r")
-    feed_fd = open("Main_feed.xml", "a")
+    feed_fd = open("static/Main_feed.xml", "a")
 
     ptype = "linkpost"
     idx = 0
@@ -472,30 +470,37 @@ def AppendToFeed(source):
     feed_fd.close()
     source_fd.close()
 
-def getTitle(source):
+def GetTitle(source):
     fd = open("Content/"+source, "r")
     fd.readline()
     title = fd.readline().replace("Title: ", "")
     fd.close()
     return title
 
-def regenBlog():
+def RegenBlog():
     global files
     global file_idx
-    init()
+    Init()
+
+    fd = open("templates/system/template.htm", "r")
+    content = fd.read();
+    content = content.split("<!--Divider-->")
+    fd.close()
 
     for year in sorted(files, reverse=True):
         year_fd = open("templates/"+year+".html", "w").close()
         year_fd = open("templates/"+year+".html", "a")
-        year_fd.write("""{% extends "layout.html" %}\n{% block body %}\n<table id="big_table">\n""")
+        year_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives"))
+        year_fd.write("""<table id="big_table">""")
+        year_fd.write("    <tr>\n        <td>%s</td>\n    </tr>\n" % (year))
         for month in sorted(files[year], reverse=True):
-            year_fd.write("    <tr>\n        <td><a href=\"%s\">%s</a></td>\n    </tr>\n" % ("/blog/"+year+"-"+month, months[month]))
+            year_fd.write("    <tr>\n        <td><a href=\"%s\">%s</a></td>\n    </tr>\n" % ("/blog/"+year+"/"+month, months[month]))
             month_fd = open("templates/"+year+"-"+month+".html", "w").close()
             month_fd = open("templates/"+year+"-"+month+".html", "a")
-            month_fd.write("""{% extends "layout.html" %}\n{% block body %}\n""")
+            month_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives").replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\"/blog/"+year+"\">"+year+"</a>\n</p>\n</article>"))
             for day in sorted(files[year][month], reverse=True):
                 for timestamp in sorted(files[year][month][day], reverse=True):
-                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", "/blog/"+files[year][month][day][timestamp].lower().replace(" ", "-").replace(".txt", ""), getTitle(files[year][month][day][timestamp])))
+                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", "/blog/"+files[year][month][day][timestamp].lower().replace(" ", "-").replace(".txt", ""), GetTitle(files[year][month][day][timestamp])))
                     GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     if (file_idx < 25):
                         AppendContentOfXToY("blog", files[year][month][day][timestamp])
@@ -507,30 +512,25 @@ def regenBlog():
                         for each in sorted(files, reverse=True)[3:]:
                             buff += """\n        <td>\n            <a href=\"/blog/%s\">%s</a>\n        </td>""" % (each.lower(), each)
                         buff += """\n    </tr>\n</table>\n</article>\n"""
-                        # archives_fd = open("templates/archives.html", "w").close()
                         archives_fd = open("templates/archives.html", "a")
-                        # archives_fd.write("{% extends \"layout.html\" %}")
-                        # archives_fd.write("{% block header %}")
                         archives_fd.write(buff)
-                        # archives_fd.write("{% endblock %}")
-                        # archives_fd.write("{% block body %}")
                         archives_fd.close()
                         AppendContentOfXToY("archives", files[year][month][day][timestamp])
                     else:
                         AppendContentOfXToY("archives", files[year][month][day][timestamp])
                     AppendToFeed(files[year][month][day][timestamp])
                     file_idx += 1
-            month_fd.write("{% endblock %}")
+            month_fd.write(content[1])
             month_fd.close()
-        year_fd.write("</table>\n{% endblock %}")
+        year_fd.write("</table>\n"+content[1])
         year_fd.close()
 
-    terminate()
+    Terminate()
 
 if __name__ == '__main__':
     t1 = datetime.datetime.now()
     GenStatic()
-    regenBlog()
+    RegenBlog()
     t2 = datetime.datetime.now()
 
     print ("Execution time: %s" % (t2-t1))

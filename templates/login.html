@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" manifest="cache.appcache">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <!--BETA-->
-        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
         <meta property="og:image" content="favicon.ico">
         <meta property="og:title" content="{{ title }}">
         <meta property="og:site_name" content="Zac J. Szewczyk">
@@ -13,11 +10,12 @@
         <title>
             {{ title }}Zac J. Szewczyk
         </title>
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
+        <link rel="shortcut icon" href="/static/favicon.ico">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="main.css" type="text/css" />
+        <link rel="stylesheet" href="/static/main.css" type="text/css" />
         <!-- SHEETS -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     </head>
     <body id="{{ BODYID }}">
         <header><!--BLOCK HEADER--></header>
@@ -31,7 +29,7 @@
             <div class="flash">{{ message }}</div>
         </nav>
         <main>
-            <section>
+            <section id="content_section">
                 login
             </section>
         </main>

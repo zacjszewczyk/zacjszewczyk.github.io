@@ -7,8 +7,6 @@ article>p {
     margin:             25px 0; }
 .article_title {
     text-align:         center; }
-#blog main article, #postarchives main article, header article {
-    margin:             100px 0px; }
 #big_table {
     width:              100%;
     padding:            20pt 0px; }
@@ -16,6 +14,11 @@ article>p {
     text-align:         center;
     padding:            20pt;
     font-size:          200%; }
+#blog main article, #postarchives main article, header article {
+    margin:             100px 0px; }
+#archives main article {
+    margin: 10px 0;
+}
 body {
     background-color:   #F6F6F6;
     font-family:        "Roboto";
@@ -71,22 +74,25 @@ h5 {
 h6 {
     font-size: 12pt; }
 header {
-    min-height:         100px; }
+    text-align: center;
+    min-height: 100px;
+    font-size: 150%; }
 #home #home_link, 
 #blog #blog_link, 
 #projects #projects_link,
 #newcustomers #new_customers_link,
 #login #customers_link,
 #loggedin #customers_link,
-#postarchives #archives_link {
+#postarchives #archives_link,
+#archives #archives_link {
     text-decoration:    underline; }
-#home #rss_link, #home #archives_link, #home #logout_link,
-#blog #logout_link,
-#projects #rss_link, #projects #archives_link, #projects #logout_link,
-#newcustomers #rss_link, #newcustomers #archives_link, #archives #logout_link,
-#existingcustomers #rss_link, #existingcustomers #archives_link, #existingcustomers #logout_link,
+#home #rss_link, #home #archives_link,
+#projects #rss_link, #projects #archives_link,
+#newcustomers #rss_link, #newcustomers #archives_link,
+#existingcustomers #rss_link, #existingcustomers #archives_link,
 #loggedin #rss_link, #loggedin #archives_link,
-#logout #rss_link, #logout #archives_link {
+#logout #rss_link, #logout #archives_link,
+#home #logout_link, #blog #logout_link, #projects #logout_link, #archives #logout_link, #existingcustomers #logout_link, #postarchives #logout_link, #post #logout_link, #error #logout_link {
     display:            none; }
 hr {
     margin:             50px auto;
@@ -112,7 +118,7 @@ html, body {
 main, header {
     max-width:              75em;
     /*min-width:          500px;*/
-    padding:            0px 10px;
+    /*padding:            0px 25px;*/
     margin:             0 auto;
     margin-bottom:      100px; }
 main article>time {
@@ -133,6 +139,8 @@ nav a, #rotate_nav a {
 .original:hover {
     color:              #934953;
     cursor:             pointer; }
+u {
+    text-decoration: underline; }
 .wrap {
     /*min-width: 500px;*/
     /*width: 960px;*/
@@ -142,7 +150,7 @@ nav a, #rotate_nav a {
     padding: 0; }
 p
 {
-    min-width: 20em;
+    /*min-width: 20em;*/
 }
 
 /* Portrait and Landscape */
@@ -164,7 +172,24 @@ p
   and (orientation: portrait) { 
     body, nav
     {
+        font-size: 200%;
+    }
+    article h2
+    {
+        font-size: 200%;
+    }
+    article
+    {
+        padding: 10px;
+    }
+    article p
+    {
+        line-height: 215%;
         font-size: 150%;
+        /*padding: 10px;*/
+    }
+    main article>time {
+        font-size: 100%;
     }
 }
 
@@ -181,6 +206,7 @@ p
 }
 section
 {
-    margin-left:    50px;
-    margin-right:   50px;
+    /*margin-left:    50px;
+    margin-right:   50px;*/
+    padding: 0 50px;
 }

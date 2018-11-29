@@ -1,13 +1,36 @@
-{% extends "layout.html" %}
-{% block scripts %}
-            <script type="text/javascript">
-                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
-                //https://www.dirtymarkup.com/, http://jscompress.com/
-                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
-            </script>
-{% endblock %}
-{% block body %}
-<article>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta property="og:image" content="favicon.ico">
+        <meta property="og:title" content="Youth Sports are Hijacking Your Life - ">
+        <meta property="og:site_name" content="Zac J. Szewczyk">
+        <meta property="og:article:author" content="Zac J. Szewczyk">
+        <meta property="og:see_also" content="http://zacjszewczyk.com/">
+        <title>
+            Youth Sports are Hijacking Your Life - Zac J. Szewczyk
+        </title>
+        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
+        <link rel="shortcut icon" href="/static/favicon.ico">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/static/main.css" type="text/css" />
+        <!-- SHEETS -->
+    </head>
+    <body id="post">
+        <header><!--BLOCK HEADER--></header>
+        <nav>
+            <a id="home_link" href="/">Home</a>
+            <a id="blog_link" href="/blog">Blog</a>
+            <a id="rss_link" href="/rss">RSS</a>
+            <a id="archives_link" href="/archives">Post Archives</a>
+            <a id="projects_link" href="/projects">Projects</a>
+            <!-- <a id="logout_link" href="/logout">Logout</a> -->
+            <div class="flash">{{ message }}</div>
+        </nav>
+        <main>
+            <section id="content_section">
+                <article>
     <h2 class="article_title">
         <a href="http://www.outsideonline.com/outdoor-adventure/the-current/raising-rippers/Dont-Let-Youth-Sports-Hijack-Your-Life.html" class="linkpost">Youth Sports are Hijacking Your Life</a>
     </h2>
@@ -18,4 +41,19 @@
     <p>Reading this article from Outside Online, it reminded me of a story a family friend once told me. She explained that her son and daughter-in-law, both schoolteachers in Alaska, had decided to raise their young son without the traditional lessons society dictates a small boy learn during his formative years. As far as his dad was concerned, if he never learned to play baseball, that was just fine: instead he would learn about the outdoors, and gain skills that will benefit him for the rest of his life. Baseball simply didn&#8217;t fit the bill. That philosophy struck me as abnormal at the time, yes, but also wonderfully so: while this little boy&#8217;s peers learned to yearn for recess while a teacher droned on in the background, he would spend his time on things that actually mattered. Just because something is the status quo does not mean that it is right.</p>
 </div>
 </article>
-{% endblock %}
+            </section>
+        </main>
+        <span id="ipad_device"></span>
+    </body>
+    <!-- SCRIPTS BLOCK -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36771281-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</html>

@@ -1,13 +1,36 @@
-{% extends "layout.html" %}
-{% block scripts %}
-            <script type="text/javascript">
-                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
-                //https://www.dirtymarkup.com/, http://jscompress.com/
-                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
-            </script>
-{% endblock %}
-{% block body %}
-<article>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta property="og:image" content="favicon.ico">
+        <meta property="og:title" content="Cabin Porn Roundup - ">
+        <meta property="og:site_name" content="Zac J. Szewczyk">
+        <meta property="og:article:author" content="Zac J. Szewczyk">
+        <meta property="og:see_also" content="http://zacjszewczyk.com/">
+        <title>
+            Cabin Porn Roundup - Zac J. Szewczyk
+        </title>
+        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
+        <link rel="shortcut icon" href="/static/favicon.ico">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/static/main.css" type="text/css" />
+        <!-- SHEETS -->
+    </head>
+    <body id="post">
+        <header><!--BLOCK HEADER--></header>
+        <nav>
+            <a id="home_link" href="/">Home</a>
+            <a id="blog_link" href="/blog">Blog</a>
+            <a id="rss_link" href="/rss">RSS</a>
+            <a id="archives_link" href="/archives">Post Archives</a>
+            <a id="projects_link" href="/projects">Projects</a>
+            <!-- <a id="logout_link" href="/logout">Logout</a> -->
+            <div class="flash">{{ message }}</div>
+        </nav>
+        <main>
+            <section id="content_section">
+                <article>
     <h2 class="article_title">
         <a href="cabin-porn-roundup-1014" class="original">Cabin Porn Roundup</a>
     </h2>
@@ -17,49 +40,64 @@
     
     <p>This Week in Podcasts <a href="/blog/the-end-of-this-week-in-podcasts">may have ended</a>, but I have no intention of ending my monthly Cabin Porn Roundups. For October, then, check out these neat little structures from across the world.</p>
     
-    <div class="image"><img src="/'Images/Pescadero-CA.jpg') }}" alt="Tent Bungalow" title="Tent Bungalow"></div>
+    <div class="image"><img src="/static/Images/Pescadero-CA.jpg" alt="Tent Bungalow" title="Tent Bungalow"></div>
     <br />
     <p>Against a backdrop of beautiful stars and underneath a few old Pine trees, <a href="http://cabinporn.com/post/98306965525/tent-bungalow-in-pescadero-ca-photograph-by-tim">this tent bungalow</a> in Pescadero, California, lights the approaching darkness as if with an otherworldly light.</p>
     
-    <div class="image"><img src="/'Images/Canyonville-Oregon.jpg') }}" alt="Fire lookout near Canyonville, Oregon" title="Fire lookout near Canyonville, Oregon"></div>
+    <div class="image"><img src="/static/Images/Canyonville-Oregon.jpg" alt="Fire lookout near Canyonville, Oregon" title="Fire lookout near Canyonville, Oregon"></div>
     <br />
     <p>Somewhere nestled in the mountains near Canyonville, Oregon, someone built <a href="http://cabinporn.com/post/98310048605/cabin-built-to-resemble-a-fire-lookout">a cabin resembling an old fire lookout</a>. I have only ever had the privilege of climbing to the top of one fire tower before, but to this day it remains one of the coolest hiking destinations of my life. I can only imagine what it would be like to live up there.</p>
     
-    <div class="image"><img src="/'Images/Candlewood-Cabins-Wisconsin.jpg') }}" alt="The Glass House" title="The Glass House"></div>
+    <div class="image"><img src="/static/Images/Candlewood-Cabins-Wisconsin.jpg" alt="The Glass House" title="The Glass House"></div>
     <br />
     <p>Whereas the last cabin sought to free itself of its earthly bonds and thus took to the skies, <a href="http://cabinporn.com/post/98316034470/stay-here-the-glass-house-at-candlewood-cabins">The Glass House</a> seems to not only accept the reality of its situation, but embrace it as well.</p>
     
-    <div class="image"><img src="/'Images/Whitefish-Yurt.jpg') }}" alt="Whitefish Yurt" title="Whitefish Yurt"></div>
+    <div class="image"><img src="/static/Images/Whitefish-Yurt.jpg" alt="Whitefish Yurt" title="Whitefish Yurt"></div>
     <br />
     <p>Sean and Molly Busby&#160;&#8212;&#160;the owners of <a href="https://huckberry.com/journal/posts/shelter-whitefish-yurt">this neat Yurt</a> atop a mountain near Glacier National Park in Montana&#160;&#8212;&#160;are two very, very lucky people. I would love to have something like this someday.</p>
     
-    <div class="image"><img src="/'Images/Crested-Butte-CO.jpg') }}" alt="Lean-to" title="Lean-to"></div>
+    <div class="image"><img src="/static/Images/Crested-Butte-CO.jpg" alt="Lean-to" title="Lean-to"></div>
     <br />
     <p>It doesn&#8217;t exactly compete on the same fronts as The Glass House or the Busbys&#8217; Yurt, but there&#8217;s a certain undeniable charm to <a href="http://cabinporn.com/post/98748829825/lean-to-in-the-hills-above-crested-butte-co">this little lean-to</a> in the hills of Colorado.</p>
     
-    <div class="image"><img src="/'Images/Big-Sur-California.jpg') }}" alt="Cabin in Big Sur, CA" title="Cabin in Big Sur, CA"></div>
+    <div class="image"><img src="/static/Images/Big-Sur-California.jpg" alt="Cabin in Big Sur, CA" title="Cabin in Big Sur, CA"></div>
     <br />
     <p>Apparently I ought to have renamed this post &#8220;American Cabin Porn Roundup&#8221;, because <a href="http://cabinporn.com/post/98808991966/cabin-in-big-sur-california-contributed-by">this neat little cabin</a>, like all of its predecessors, is from America as well.</p>
     
-    <div class="image"><img src="/'Images/Folkstad-Norway.jpg') }}" alt="Cabin with an earthen roof" title="Cabin with an earthen roof"></div>
+    <div class="image"><img src="/static/Images/Folkstad-Norway.jpg" alt="Cabin with an earthen roof" title="Cabin with an earthen roof"></div>
     <br />
     <p>What a beautiful view. Replace the snow-capped peaks framing <a href="http://cabinporn.com/post/98891448288/cabin-with-an-earthen-roof-near-folkestad">this little cabin</a> in Norway with ones covered in green foliage, and this view almost perfectly matches one I came across on a trail in Ontario&#8217;s Algonquin Provincial Park. It was a bit of a climb, but so worth the effort.</p>
     
-    <div class="image"><img src="/'Images/Pocosin-Cabin.jpg') }}" alt="Pocosin Cabin" title="Pocosin Cabin"></div>
+    <div class="image"><img src="/static/Images/Pocosin-Cabin.jpg" alt="Pocosin Cabin" title="Pocosin Cabin"></div>
     <br />
     <p>Back across the ocean to America, <a href="http://cabinporn.com/post/98974736217/pocosin-cabin-near-the-appalachian-trail">this &#8220;pocosin cabin&#8221;</a> comes to us from the woods of Virginia. Make all the jokes you want about the good people down there, and although many have at least one shred of truth to them, I would still love to spend some time living in this part of the country.</p>
     
-    <div class="image"><img src="/'Images/Clingstone-House.jpg') }}" alt="Clingstone House" title="Clingstone House"></div>
+    <div class="image"><img src="/static/Images/Clingstone-House.jpg" alt="Clingstone House" title="Clingstone House"></div>
     <br />
     <p><a href="https://huckberry.com/journal/posts/shelter-clingstone-house">The Clingstone Hose</a> sits atop an island in Rhode Island&#8217;s Narragansett Bay, and although not a cabin by any stretch of the imagination, it nevertheless evokes a similar sense of rustic awe as the more primitive structures traditionally featured here.</p>
     
-    <div class="image"><img src="/'Images/Wooden-Shelter-Alps.jpg') }}" alt="Wooden Shelter, the Alps" title="Wooden Shelter, the Alps"></div>
+    <div class="image"><img src="/static/Images/Wooden-Shelter-Alps.jpg" alt="Wooden Shelter, the Alps" title="Wooden Shelter, the Alps"></div>
     <br />
     <p>The first picture Cabin Porn featured of this shelter showed several carpenters in the construction process, and caught my eye. Although it did not stand out as particularly noteworthy, the second kept my interest, and I kept scrolling. The third, however, blew me away: perched 2531 meters atop a mountain in the Swiss Alps along the border between Slovenia and Italy, the view afforded from <a href="http://cabinporn.com/post/99294622235/wooden-shelter-perched-on-a-mountain-in-the-alps">this cabin&#8217;s</a> doorstep is remarkable; breathtakingly beautiful.</p>
     
-    <div class="image"><img src="/'Images/DeltaShelter6.jpg') }}" alt="Delta Shelter" title="Delta Shelter"></div>
+    <div class="image"><img src="/static/Images/DeltaShelter6.jpg" alt="Delta Shelter" title="Delta Shelter"></div>
     <br />
     <p><a href="https://huckberry.com/journal/posts/shelter-steel-cabin">Courtesy of Huckberry</a>, the Delta Shelter in upstate New York. Although the author, Liv Combe, might not think it particularly attractive, I like the modern, boxy architecture. Coupled with impressive defensive measures and a beautiful interior, this looks like a place I could see myself spending a great deal of time in.</p>
 </div>
 </article>
-{% endblock %}
+            </section>
+        </main>
+        <span id="ipad_device"></span>
+    </body>
+    <!-- SCRIPTS BLOCK -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36771281-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</html>

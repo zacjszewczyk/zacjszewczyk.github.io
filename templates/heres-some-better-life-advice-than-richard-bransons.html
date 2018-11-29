@@ -1,13 +1,36 @@
-{% extends "layout.html" %}
-{% block scripts %}
-            <script type="text/javascript">
-                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
-                //https://www.dirtymarkup.com/, http://jscompress.com/
-                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
-            </script>
-{% endblock %}
-{% block body %}
-<article>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta property="og:image" content="favicon.ico">
+        <meta property="og:title" content="Here's Some Better Life Advice Than Richard Branson's - ">
+        <meta property="og:site_name" content="Zac J. Szewczyk">
+        <meta property="og:article:author" content="Zac J. Szewczyk">
+        <meta property="og:see_also" content="http://zacjszewczyk.com/">
+        <title>
+            Here's Some Better Life Advice Than Richard Branson's - Zac J. Szewczyk
+        </title>
+        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
+        <link rel="shortcut icon" href="/static/favicon.ico">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/static/main.css" type="text/css" />
+        <!-- SHEETS -->
+    </head>
+    <body id="post">
+        <header><!--BLOCK HEADER--></header>
+        <nav>
+            <a id="home_link" href="/">Home</a>
+            <a id="blog_link" href="/blog">Blog</a>
+            <a id="rss_link" href="/rss">RSS</a>
+            <a id="archives_link" href="/archives">Post Archives</a>
+            <a id="projects_link" href="/projects">Projects</a>
+            <!-- <a id="logout_link" href="/logout">Logout</a> -->
+            <div class="flash">{{ message }}</div>
+        </nav>
+        <main>
+            <section id="content_section">
+                <article>
     <h2 class="article_title">
         <a href="http://www.motherjones.com/kevin-drum/2014/03/heres-some-better-life-advice-richard-bransons" class="linkpost">Here's Some Better Life Advice Than Richard Branson's</a>
     </h2>
@@ -18,4 +41,19 @@
     <p>Earlier, <a href="/blog/the-passion-trap">I linked to</a> an article <a href="http://thetypist.com/425/trap-passion/">from The Typist</a> where he expressed dissatisfaction with the majority of &#8220;follow your passion&#8221; articles, and then went on to recommend some truly great advice with regards to that trite mantra from <a href="http://blog.ketyov.com/2014/03/the-passion-trap.html">Bradley Voytek</a>: &#8220;don&#8217;t follow your passions, follow your competencies, and you might just find you enjoy doing something you&#8217;re good at.&#8221; When linking to The Typist and, by extension, Bradley&#8217;s articles, I conveyed a similar level of disapproval for this genre of writing. Turns out, the three of us are not alone: Kevin Drum, writing for Mother Jones, is just about fed up with wealthy individuals pontificating to those less fortunate than them, advising them to pursue unsustainable lifestyles just to chase a dream at the expense of every other aspect of their lives; I absolutely agree with him: I would much rather spend a summer hiking the Appalachian Trail, but I have to work so that during the school year, I have money for gas and car insurance and food and the iPhone I love so dearly; I would much rather spend a day writing than going to class, but there, too, I have no choice in the matter. It&#8217;s easy to romanticize the past and talk about how you would have done it given the chance to do it all over again, but you you didn&#8217;t do it that way the first time around, and you have no idea how your life would have turned out if you had. Aspirations are fine, but not at the expense of your well-being.</p>
 </div>
 </article>
-{% endblock %}
+            </section>
+        </main>
+        <span id="ipad_device"></span>
+    </body>
+    <!-- SCRIPTS BLOCK -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36771281-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</html>
