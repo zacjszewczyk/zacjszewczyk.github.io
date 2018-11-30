@@ -28,6 +28,10 @@ http.createServer(function (req, res) {
         filename = "Structure"+filename+".html";
         console.log(filename);
     }
+    else if (filename == "/MTV") {
+        filename = "/Static/MTV.html"
+        console.log("MTV: "+filename)
+    }
     else if (year_literal.test(filename)) {
         filename = filename.replace("/blog/", "Structure/")+".html";
         console.log(filename);

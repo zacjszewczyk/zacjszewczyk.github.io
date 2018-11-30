@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>FMTV RV Builder</title>
+        <meta name="description" content="FMTV RV Builder">
+        <meta name="author" content="Zac Szewczyk">
+    </head>
+    <style type="text/css">
+        /* Debug */
+        section, main
+        {
+            border: 1px solid black;
+        }
+        body
+        {
+            margin: 0;
+            padding: 0;
+        }
+        #box
+        {
+            position: absolute;
+            left: 317px;
+            top: 93px;
+            height: 229px;
+            width: 464px;
+            z-index: 1;
+            background-color: #807F17;
+        }
+        #controls div
+        {
+            margin: 1em 0;
+        }
+        #images
+        {
+            position: relative;
+            padding: 10em 0 0 3em;
+            height: 325px;
+        }
+        #images img
+        {
+            opacity: .7;
+            position: absolute;
+            width: 46em;
+        }
+        label
+        {
+            font-size: 150%;
+        }
+        main
+        {
+            width: 60em;
+            margin: 0 auto;
+        }
+        #M1078
+        {
+            width: 42em !important;
+        }
+        #M1083
+        {
+            display: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+        $("#M1083_button").click(function() {
+            $("#M1078").hide();
+            $("#M1083").show();
+        })
+        $("#M1078_button").click(function() {
+            $("#M1083").hide();
+            $("#M1078").show();
+        })
+        $("#14ft_box_button").click(function() {
+            $("#box").show().width(464);
+            $("#16ft_box_button").removeAttr("checked");
+            // $("#topper").css("left", 364);
+        })
+        $("#16ft_box_button").click(function() {
+            $("#box").show().width(536);
+            $("#14ft_box_button").removeAttr("checked");
+            // $("#topper").css("left", 414);
+        })
+        $(".box_length_checkbox").change(function() {
+            $(".box_length_checkbox").prop("checked", false);
+            $(this).prop("checked", true);
+        });
+        $("#box_length").on('input', function() {
+            if (this.value >= 12) {
+                $("input[name='box']").each(function() {
+                    $(this).removeAttr("checked");
+                });
+                $("#box").show().width(this.value*33.5);
+            }
+            else {
+                return;
+            }
+        });
+    });
+    </script>
+    <body>
+        <main>
+            <section id="images">
+                <div id="box">
+                    <div id="topper"></div>
+                    <div id="cutoff"></div>
+                </div>
+                <img id="M1078" src="Static/Images/M1078_new.png" />
+                <img id="M1083" src="Static/Images/M1083_new.png" />
+            </section>
+            <section id="controls">
+                <div>
+                    <input type="radio" id="M1078_button" name="FMTV" checked>
+                    <label for="M1078_button">M1078</label>
+                    <input type="radio" id="M1083_button" name="FMTV">
+                    <label for="M1083_button">M1083</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="box_length_checkbox" id="14ft_box_button" name="box" checked>
+                    <label for="14ft_box_button">14' Box</label>
+                    <input type="checkbox" class="box_length_checkbox" id="16ft_box_button" name="box">
+                    <label for="16ft_box_button">16' Box</label>
+                </div>
+                <div>
+                    <label for="box_length_field">Box length (ft)</label>
+                    <input type="number" name="box_length_field" id="box_length_field" />
+                </div>
+                <div>
+                    <label for="raised_roof_checkbox">Raised roof: </label>
+                    <input type="checkbox" id="raised_roof_checkbox" />
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
