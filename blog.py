@@ -15,11 +15,14 @@ import re # Regex
 #          of the posts made in that month as the elements. (Dictionary)
 # - months: A dictionary for converting decimal (string) representations
 #           of months to their names. (Dictionary)
+# - content: A list with the opening HTML tags as the first element, and
+#            the closing HTML tags as the second element.
 types = ["", "", ""]
 active = ""
 file_idx = 0
 files = {}
 months = {"01" : "January", "02" : "February", "03" : "March", "04" : "April", "05" : "May", "06" : "June", "07" : "July", "08" : "August", "09" : "September", "10" : "October", "11" : "November", "12" : "December"}
+content = ""
 
 # Method: GetFiles
 # Purpose: Return the global variable files, to make it accessible in a method
@@ -38,12 +41,8 @@ def GetFiles():
 # - sheets: Any stylesheets to be inserted into the <head> element. (String)
 # - passed_content: Body content to insert into the <body> element. (String)
 def BuildFromTemplate(target, title, bodyid, sheets="", passed_content=""):
-    # Open the template file, split it, and store each half in a list.
-    fd = open("Structure/system/template.htm", "r")
-    content = fd.read()
-    content = content.split("<!--Divider-->")
-    content.append(content[0])
-    fd.close()
+    # Make global variable accessible within the method
+    global content
 
     # Clear the target file, then write the opening HTML code and any passed content.
     fd = open("Structure/"+target, "w").close()
@@ -59,11 +58,8 @@ def BuildFromTemplate(target, title, bodyid, sheets="", passed_content=""):
 # - target: Target file name, including extension. (String)
 # - scripts: Any Javascript to be inserted below the <body> element. (String)
 def CloseTemplateBuild(target, scripts=""):
-    # Open the template file, split it, and store each half in a list.
-    fd = open("Structure/system/template.htm", "r")
-    content = fd.read()
-    content = content.split("<!--Divider-->")
-    fd.close()
+    # Make global variable accessible within the method
+    global content
 
     # Write the trailing HTML tags from the template to the target file.
     fd = open("Structure/"+target, "a")
@@ -76,9 +72,16 @@ def CloseTemplateBuild(target, scripts=""):
 # Parameters: none
 def Init():
     # Make global variables accessible in the method, and initialize method variables.
-    global file_idx, files
+    global file_idx, files, content
     file_idx = 0
     files = {}
+
+    # Open the template file, split it, and store each half in a list.
+    fd = open("Structure/system/template.htm", "r")
+    content = fd.read()
+    content = content.split("<!--Divider-->")
+    content.append(content[0])
+    fd.close()
 
     # Clear and initialize the archives.html and blog.html files.
     BuildFromTemplate("archives.html", "Post Archives - ", "postarchives")
@@ -404,6 +407,8 @@ def Markdown(line):
 # - source: Filename of the source content file. (String)
 # - timestamp: Timestamp for reverting update time, format %Y/%m/%d %H:%M:%S. (String)
 def GenPage(source, timestamp):
+    global content
+
     # Ensure source file contains header. If not, use the Migrate() method to generate it.
     source_fd = open("Content/"+source, "r")
     line = source_fd.readline()
@@ -418,14 +423,14 @@ def GenPage(source, timestamp):
     target_fd = open("Structure/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "w").close()
     target_fd = open("Structure/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "a")
 
-    # Open the template file, split it, and store each half in a list.
-    fd = open("Structure/system/template.htm", "r")
-    content = fd.read();
-    content = content.split("<!--Divider-->")
-    fd.close()
+    # # Open the template file, split it, and store each half in a list.
+    # fd = open("Structure/system/template.htm", "r")
+    # content = fd.read();
+    # content = content.split("<!--Divider-->")
+    # fd.close()
 
     # Insert Javascript code for device detection.
-    content[0] = content[0].replace("<!-- SCRIPTS -->", """\
+    local_content = content[0].replace("<!-- SCRIPTS -->", """\
             <script type="text/javascript">
                 function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
                 //https://www.dirtymarkup.com/, http://jscompress.com/
@@ -444,7 +449,7 @@ def GenPage(source, timestamp):
         # In the second line of the file, add the article title.
         elif (idx == 1):
             title = title.replace("{{URL_TITLE}}", line.replace("Title: ", "").strip())
-            content[0] = content[0].replace("{{ title }}", line.replace("Title: ", "").strip()+" - ")
+            local_content = local_content.replace("{{ title }}", line.replace("Title: ", "").strip()+" - ")
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
             line = line.replace("Link: ", "").strip()
@@ -459,7 +464,7 @@ def GenPage(source, timestamp):
         # In the fifth line of the file, write the opening tags to the target, then the file's
         # content as generated up to this point.
         elif (idx == 4):
-            target_fd.write(content[0])
+            target_fd.write(local_content)
             target_fd.write(title.strip()+"\n")
         # For successive lines of the file, parse them as Markdown and write them to the file.
         elif (idx > 4):
@@ -470,7 +475,7 @@ def GenPage(source, timestamp):
     else:
         # At the end of the file, write closing HTML tags.
         target_fd.write("\n</div>\n</article>")
-        target_fd.write(content[1])
+        target_fd.write(local_content)
         
     # Close file descriptors.
     target_fd.close()
@@ -618,16 +623,17 @@ def GenBlog():
     # Make global variables accessible in the method, and initialize method variables.
     global files
     global file_idx
+    global content
     
     # Clear the blog and archive structure files, and the RSS feed, write the
     # opening tags. Generate file dictionary.
-    Init()
+    # Init()
 
-    # Open the template file, split it, and store each half in a list.
-    fd = open("Structure/system/template.htm", "r")
-    content = fd.read();
-    content = content.split("<!--Divider-->")
-    fd.close()
+    # # Open the template file, split it, and store each half in a list.
+    # fd = open("Structure/system/template.htm", "r")
+    # content = fd.read();
+    # content = content.split("<!--Divider-->")
+    # fd.close()
 
     # Sort the files dictionary by keys, year, then iterate over it
     for year in sorted(files, reverse=True):
@@ -719,6 +725,7 @@ if __name__ == '__main__':
     # cProfile.run("GenStatic()")
     # cProfile.run("GenBlog()")
     
+    Init()
     GenStatic()
     GenBlog()
     t2 = datetime.datetime.now()
