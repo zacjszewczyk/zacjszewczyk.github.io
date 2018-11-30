@@ -67,8 +67,9 @@ def CloseTemplateBuild(target, scripts=""):
     fd.close()
 
 # Method: Init
-# Purpose: Clear the blog and archive structure files, and the RSS feed,
-#          and write the opening tags. Generate file dictionary.
+# Purpose: Instantiate the global variable 'content', to reduce duplicate I/O
+#          operations. Then clear the blog and archive structure files, and
+#          the RSS feed, and write the opening tags. Generate file dictionary.
 # Parameters: none
 def Init():
     # Make global variables accessible in the method, and initialize method variables.
@@ -624,10 +625,6 @@ def GenBlog():
     global files
     global file_idx
     global content
-    
-    # Clear the blog and archive structure files, and the RSS feed, write the
-    # opening tags. Generate file dictionary.
-    # Init()
 
     # # Open the template file, split it, and store each half in a list.
     # fd = open("Structure/system/template.htm", "r")
