@@ -137,13 +137,15 @@ def Terminate():
 # Parameters: none
 def GenStatic():
     # Reference the home.html source file to generate the front-end structure file.
-    home_fd = open("Structure/system/home.html", "r")
-    home = home_fd.read().split("<!-- DIVIDER -->")
+    fd = open("Structure/system/home.html", "r")
+    home = fd.read().split("<!-- DIVIDER -->")
+    fd.close()
     BuildFromTemplate("home.html", "", "home", sheets=home[0], passed_content=home[1])
 
     # Reference the projects.html source file to generate the front-end structure file.
-    projects_fd = open("Structure/system/projects.html", "r")
-    projects = projects_fd.read().split("<!-- DIVIDER -->")
+    fd = open("Structure/system/projects.html", "r")
+    projects = fd.read().split("<!-- DIVIDER -->")
+    fd.close()
     BuildFromTemplate("projects.html", "Projects - ", "projects", "", passed_content=projects[1])
 
     # Build the error.html file.
@@ -713,6 +715,10 @@ def GenBlog():
 # If imported, only make methods available to imported program.
 if __name__ == '__main__':
     t1 = datetime.datetime.now()
+    # import cProfile
+    # cProfile.run("GenStatic()")
+    # cProfile.run("GenBlog()")
+    
     GenStatic()
     GenBlog()
     t2 = datetime.datetime.now()
