@@ -15,8 +15,7 @@ import re # Regex
 #          of the posts made in that month as the elements. (Dictionary)
 # - months: A dictionary for converting decimal (string) representations
 #           of months to their names. (Dictionary)
-# - content: A list with the opening HTML tags as the first element, and
-#            the closing HTML tags as the second element.
+# - content: A string with the opening and closing HTML tags. (String)
 types = ["", "", ""]
 active = ""
 file_idx = 0
