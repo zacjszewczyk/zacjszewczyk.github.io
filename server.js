@@ -50,6 +50,7 @@ http.createServer(function (req, res) {
             filename = "Structure/"+filename.split("/")[2]+".html";
             console.log(filename);
         }
+        console.log("Finel else: "+filename);
     }
 
     if (filename.endsWith("/main.css")) {

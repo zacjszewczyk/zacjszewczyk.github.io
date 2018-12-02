@@ -7,128 +7,173 @@
         <meta name="author" content="Zac Szewczyk">
     </head>
     <style type="text/css">
-        /* Debug */
-        section, main
-        {
-            border: 1px solid black;
-        }
-        #angled
-        {
-            position: absolute;
-            background-color: transparent;
+    /* Debug */
+    section, main
+    {
+        border: 1px solid black;
+    }
+    #angled
+    {
+        position: absolute;
+        background-color: transparent;
 
-            border-style: solid;
-            border-color: #807F17 transparent transparent transparent;
-        }
-        body
-        {
-            margin: 0;
-            padding: 0;
-        }
-        #box
-        {
-            position: absolute;
-            left: 317px;
-            top: 93px;
-            height: 229px;
-            width: 469px;
-            z-index: 1;
-            background-color: #807F17;
-        }
-        #container
-        {
-            position: absolute;
-            background-color: #807F17;
-        }
-        #controls div
-        {
-            margin: 1em 0;
-        }
-        #images
-        {
-            position: relative;
-            padding: 10em 0 0 3em;
-            height: 325px;
-        }
-        #images img
-        {
-            opacity: .7;
-            position: absolute;
-            width: 46em;
-        }
-        label
-        {
-            font-size: 150%;
-        }
-        main
-        {
-            width: 70em;
-            margin: 0 auto;
-        }
-        #M1078
-        {
-            width: 42em !important;
-        }
-        #M1083
-        {
-            display: none;
-        }
+        border-style: solid;
+        border-color: #807F17 transparent transparent transparent;
+    }
+    body
+    {
+        margin: 0;
+        padding: 0;
+    }
+    #box
+    {
+        position: absolute;
+        left: 317px;
+        top: 93px;
+        height: 229px;
+        width: 469px;
+        z-index: 1;
+        background-color: #807F17;
+    }
+    #container
+    {
+        position: absolute;
+        background-color: #807F17;
+    }
+    #controls div
+    {
+        margin: 1em 0;
+    }
+    #images
+    {
+        position: relative;
+        padding: 10em 0 0 3em;
+        height: 325px;
+    }
+    #images img
+    {
+        opacity: .7;
+        position: absolute;
+        width: 46em;
+    }
+    main
+    {
+        width: 70em;
+        margin: 0 auto;
+    }
+    #M1078
+    {
+        width: 42em !important;
+    }
+    #M1083
+    {
+        display: none;
+    }
+    #topper
+    {
+        position: absolute;
+        top: -50px;
+        left: 200px;
+        display: none;
+
+        border-style: solid;
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #807F17 transparent;
+    }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
-    $( document ).ready(function() {
-        // Variables
-        var position;
-        var dimensions;
+    console.log(document.cookie);
 
-        // Functions
-        function adjustSize() {
-            var field = document.getElementById("box_length_field");
-            if (field.value >= 12 && field.value <= 14) {
-                $("#container").hide();
-                $("#box").show().width(field.value*33.5);
+    // Variables
+    var position;
+    var dimensions;
+
+    // Functions
+    function adjustSize() {
+        var field = document.getElementById("box_length_field");
+
+        if (field.value >= 12 && field.value <= 14) {
+            angledSize();
+            $("#container").hide();
+            $("#box").show().width(field.value*33.5);
+            adjustTopper();
+        }
+        else if (field.value > 14) {
+            if ($("#M1078").css("display") == "block") {
+                $("#box").show().width(14*33.5);
+                angledSize();
             }
-            else if (field.value > 14) {
-                if ($("#M1078").css("display") == "block") {
-                    $("#box").show().width(14*33.5);
+            else {
+                if (field.value <= 16) {
+                    $("#box").show().width(field.value*33.5);
+                    angledSize();
+                    $("#container").hide();
+                }
+                else {                        
+                    $("#box").show().width(16*33.5);
                     angledSize();
                 }
-                else {
-                    if (field.value <= 16) {
-                        $("#box").show().width(field.value*33.5);
-                        $("#container").hide();
-                    }
-                    else {                        
-                        $("#box").show().width(16*33.5);
-                        angledSize();
-                    }
-                }
             }
         }
-        function angledSize() {
-            var offset = 0;
-            offset = getChassis();
+        adjustTopper();
+        updateCookie();
+    }
+    function angledSize() {
+        var offset = 0;
+        offset = getChassis();
 
-            var field = document.getElementById("box_length_field");
+        var field = document.getElementById("box_length_field");
 
-            dimensions = {width : parseInt($("#box").css("width")), height : parseInt($("#box").css("height")) };
-                    
-            $("#container").show();
-            $("#container").css("height", 229-(0.839*(field.value-offset)*35.5));
-            $("#container").css("width", (field.value-offset)*35.5);
-            $("#angled").css("top", dimensions.height-(0.839*(field.value-offset)*35.5));
-            $("#container").css("left", dimensions.width);
-            $("#angled").css("border-width", (0.839*(field.value-offset)*35.5).toString()+"px "+((field.value-offset)*35.5).toString()+"px 0 0");
+        dimensions = {width : parseInt($("#box").css("width")), height : parseInt($("#box").css("height")) };
+                
+        $("#container").show();
+        $("#container").css("height", 229-(0.839*(field.value-offset)*35.5));
+        $("#container").css("width", (field.value-offset)*35.5);
+        $("#angled").css("top", dimensions.height-(0.839*(field.value-offset)*35.5));
+        $("#container").css("left", dimensions.width);
+        $("#angled").css("border-width", (0.839*(field.value-offset)*35.5).toString()+"px "+((field.value-offset)*35.5).toString()+"px 0 0");
+    }
+    function getChassis() {
+        if ($(".chassis")[0].checked == true) {
+            return 14;
+        } else {
+            return 16;
         }
-        function getChassis() {
-            if ($(":radio")[0].checked == true) {
-                return 14;
-            } else {
-                return 16;
-            }
+    }
+    function adjustTopper() {
+        $("#topper").css("width", parseFloat($("#box").css("width").replace("px", ""))-250+parseFloat($("#container").css("width").replace("px", "")));
+    }
+    function flip(element) {
+        if ($(element).css("transform") == "none") {
+            $("#images").css("-moz-transform", "scaleX(-1)");
+            $("#images").css("-o-transform", "scaleX(-1)");
+            $("#images").css("-webkit-transform", "scaleX(-1)");
+            $("#images").css("transform", "scaleX(-1)");
         }
+        else
+        {
+            $("#images").css("-moz-transform", "");
+            $("#images").css("-o-transform", "");
+            $("#images").css("-webkit-transform", "");
+            $("#images").css("transform", "");
+        }
+    }
+    function updateCookie() {
+        var view = $(".view:checked").val();
+        var chassis = $(".chassis:checked").val();
+        var box = $("#box_length_field").val();
+        var topper = $("#raised_roof_checkbox").val();
+        document.cookie = "rv=view="+view+",chassis="+chassis+",box="+box+",topper="+topper+";";
+    }
 
-        // End functions
+    // End functions
+    $( document ).ready(function() {
+        adjustSize();
+        // View selector
+        $(".view").click(function() {
+            flip($("#images"));
+        });
 
         // Chassis selector
         $("#M1083_button").click(function() {
@@ -165,7 +210,9 @@
 
         // Raised roof checkbox
         $("#raised_roof_checkbox").click(function() {
-
+            $("#topper").toggle();
+            this.value = $("#topper").css("display");
+            updateCookie();
         });
     });
     </script>
@@ -184,9 +231,16 @@
             </section>
             <section id="controls">
                 <div>
-                    <input type="radio" id="M1078_button" name="FMTV" value="14" checked>
+                    View:
+                    <input type="radio" id="left_view" name="view" class="view" value="left" checked>
+                    <label for="left_view">Left</label>
+                    <input type="radio" id="right_view" name="view" class="view" value="right">
+                    <label for="right_view">Right</label>
+                </div>
+                <div>
+                    <input class="chassis" type="radio" id="M1078_button" name="FMTV" value="14" checked>
                     <label for="M1078_button">M1078</label>
-                    <input type="radio" id="M1083_button" name="FMTV" value="16">
+                    <input class="chassis" type="radio" id="M1083_button" name="FMTV" value="16">
                     <label for="M1083_button">M1083</label>
                 </div>
                 <div>
@@ -197,11 +251,11 @@
                 </div>
                 <div>
                     <label for="box_length_field">Box length (ft)</label>
-                    <input type="number" name="box_length_field" id="box_length_field" max="21" />
+                    <input type="number" name="box_length_field" id="box_length_field" max="21" value="14" />
                 </div>
                 <div>
                     <label for="raised_roof_checkbox">Raised roof: </label>
-                    <input type="checkbox" id="raised_roof_checkbox" />
+                    <input type="checkbox" id="raised_roof_checkbox" value="none" />
                 </div>
             </section>
         </main>
