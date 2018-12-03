@@ -74,7 +74,7 @@
         position: absolute;
         top: -50px;
         left: 200px;
-        display: none;
+        /*display: none;*/
 
         border-style: solid;
         border-width: 0 0 50px 50px;
@@ -83,8 +83,6 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
-    console.log(document.cookie);
-
     // Variables
     var position;
     var dimensions;
@@ -166,31 +164,68 @@
         var topper = $("#raised_roof_checkbox").val();
         document.cookie = "rv=view="+view+",chassis="+chassis+",box="+box+",topper="+topper+";";
     }
-
-    // End functions
-    $( document ).ready(function() {
-        adjustSize();
-        // View selector
-        $(".view").click(function() {
+    function readCookie() {
+        return document.cookie.split(";")[0].replace("rv=", "").split(",");
+    }
+    function parseCookie() {
+        var cookie = readCookie();
+        if (cookie.length == 1) { $("#topper").hide(); return 0; };
+        if (cookie[0].split("=")[1] == "right_view") {
             flip($("#images"));
-        });
-
-        // Chassis selector
-        $("#M1083_button").click(function() {
-            $("#M1078").hide();
-            $("#M1083").show();
-            $("#box_length_field").attr("max", 23);
-            adjustSize();
-        })
-        $("#M1078_button").click(function() {
-            $("#M1083").hide();
-            $("#M1078").show();
+        }
+        $("#"+cookie[0].split("=")[1]).prop("checked", "checked");
+        //
+        if (cookie[1].split("=")[1] == "16") {
+            $(".chassis").prop("checked", "unchecked");
+            $("#M1083_button").prop("checked", "checked");
+            changeChassis();
+        }
+        //
+        if (cookie[2].split("=")[1] != "14") {
+            $(".box_length_checkbox").prop("checked", false);
+            $("#box_length_field").attr("value", cookie[2].split("=")[1]);
+            if (cookie[2].split("=")[1] == "16") { $("#16ft_box_button").prop("checked", true) }
+        }
+        //
+        if (cookie[3].split("=")[1] == "block") {
+            $("#raised_roof_checkbox").prop("checked", true)
+            $("#raised_roof_checkbox").attr("value", "block")
+            $("#topper").show();
+        }
+        else {
+            $("#topper").hide();
+        }
+    }
+    function changeChassis() {
+        $(".chassis_images").hide();
+        var id = $(".chassis:checked").attr("id").split("_")[0];
+        $("#"+id).show();
+        if (id == "M1078") {
             if (document.getElementById("box_length_field").value > 21) {
                 document.getElementById("box_length_field").value = 21;
             }
             $("#box_length_field").attr("max", 21);
-            adjustSize();
-        })
+        }
+        else {
+            $("#box_length_field").attr("max", 23);
+        }
+        adjustSize();
+    }
+
+    // End functions
+    $( document ).ready(function() {
+        parseCookie();
+        adjustSize();
+        // View selector
+        $(".view").click(function() {
+            flip($("#images"));
+            updateCookie();
+        });
+
+        // Chassis selector
+        $(".chassis").click(function() {
+            changeChassis();
+        });
 
         // Box length checkboxes
         $(".box_length_checkbox").click(function() {
@@ -214,6 +249,12 @@
             this.value = $("#topper").css("display");
             updateCookie();
         });
+
+        // Reset
+        $("#reset").click(function() {
+            document.cookie = "rv=";
+            location.reload();
+        });
     });
     </script>
     <body>
@@ -226,15 +267,15 @@
                         <div id="angled"></div>
                     </div>
                 </div>
-                <img id="M1078" src="Static/Images/M1078_new.png" />
-                <img id="M1083" src="Static/Images/M1083_new.png" />
+                <img id="M1078" class="chassis_images" src="Static/Images/M1078_new.png" />
+                <img id="M1083" class="chassis_images" src="Static/Images/M1083_new.png" />
             </section>
             <section id="controls">
                 <div>
                     View:
-                    <input type="radio" id="left_view" name="view" class="view" value="left" checked>
+                    <input type="radio" id="left_view" name="view" class="view" value="left_view" checked>
                     <label for="left_view">Left</label>
-                    <input type="radio" id="right_view" name="view" class="view" value="right">
+                    <input type="radio" id="right_view" name="view" class="view" value="right_view">
                     <label for="right_view">Right</label>
                 </div>
                 <div>
@@ -256,6 +297,9 @@
                 <div>
                     <label for="raised_roof_checkbox">Raised roof: </label>
                     <input type="checkbox" id="raised_roof_checkbox" value="none" />
+                </div>
+                <div>
+                    <input type="button" value="Reset" id="reset" />
                 </div>
             </section>
         </main>
