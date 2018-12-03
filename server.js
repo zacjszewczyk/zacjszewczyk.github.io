@@ -29,7 +29,7 @@ http.createServer(function (req, res) {
         console.log(filename);
     }
     else if (filename == "/MTV") {
-        filename = "/Static/MTV.html"
+        filename = "Static/MTV.html"
         console.log("MTV: "+filename)
     }
     else if (year_literal.test(filename)) {
@@ -39,23 +39,21 @@ http.createServer(function (req, res) {
     else if (month_literal.test(filename)) {
         filename = filename.split("/");
         filename = "Structure/"+filename[2]+"-"+filename[3]+".html";
-        console.log(filename);
     }
     else if (filename.startsWith("/Static") || filename == "/rss") {
-        console.log("Static: "+filename);
+        // console.log("Static: "+filename);
     }
     else {
         if (!filename.endsWith("/main.css")) {
-            console.log(filename);
             filename = "Structure/"+filename.split("/")[2]+".html";
             console.log(filename);
         }
         console.log("Finel else: "+filename);
     }
-
-    if (filename.endsWith("/main.css")) {
+    if (filename.endsWith(".css")) {
+        console.log("Static/"+filename.split("/")[2]);
         res.writeHead(200, {'Content-type' : 'text/css'});
-        res.write(fs.readFileSync('./Static/main.css', {encoding: 'utf8'}));
+        res.write(fs.readFileSync("Static/"+filename.split("/")[2], {encoding: 'utf8'}));
         res.end();
     }
     else if (filename == "/rss") {
