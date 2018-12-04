@@ -31,10 +31,20 @@ body
     position: absolute;
     background-color: #807F17;
 }
-#controls div
-{
-    margin: 1em 0;
-    text-align: center;
+.divTable{
+    display: table;
+    width: 100%;
+}
+.divTableRow {
+    display: table-row;
+}
+.divTableCell {
+    border: 1px dashed #999999;
+    display: table-cell;
+    padding: 3px 10px;
+}
+.divTableBody {
+    display: table-row-group;
 }
 #images
 {
@@ -52,6 +62,7 @@ main
 {
     width: 70em;
     margin: 0 auto;
+    display: none;
 }
 #M1078
 {
@@ -66,7 +77,6 @@ main
     position: absolute;
     top: -50px;
     left: 200px;
-    /*display: none;*/
 
     border-style: solid;
     border-width: 0 0 50px 50px;

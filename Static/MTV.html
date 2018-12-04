@@ -23,35 +23,67 @@
                 <img id="M1083" class="chassis_images" src="Static/Images/M1083_new.png" />
             </section>
             <section id="controls">
-                <div>
-                    View:
-                    <input type="radio" id="left_view" name="view" class="view" value="left_view" checked>
-                    <label for="left_view">Left</label>
-                    <input type="radio" id="right_view" name="view" class="view" value="right_view">
-                    <label for="right_view">Right</label>
-                </div>
-                <div>
-                    <input class="chassis" type="radio" id="M1078_button" name="FMTV" value="14" checked>
-                    <label for="M1078_button">M1078</label>
-                    <input class="chassis" type="radio" id="M1083_button" name="FMTV" value="16">
-                    <label for="M1083_button">M1083</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="box_length_checkbox" id="14ft_box_button" name="box" value="14" checked>
-                    <label for="14ft_box_button">14' Box</label>
-                    <input type="checkbox" class="box_length_checkbox" id="16ft_box_button" name="box" value="16">
-                    <label for="16ft_box_button">16' Box</label>
-                </div>
-                <div>
-                    <label for="box_length_field">Box length (ft)</label>
-                    <input type="number" name="box_length_field" id="box_length_field" max="21" value="14" />
-                </div>
-                <div>
-                    <label for="raised_roof_checkbox">Raised roof: </label>
-                    <input type="checkbox" id="raised_roof_checkbox" value="none" />
-                </div>
-                <div>
-                    <input type="button" value="Reset" id="reset" />
+                <div class="divTable">
+                    <div class="divTableBody">
+                        <div class="divTableRow">
+                            <div class="divTableCell">Description</div>
+                            <div class="divTableCell">Setting</div>
+                            <div class="divTableCell">Recommendation</div>
+                        </div>
+                        <div class="divTableRow">
+                            <div class="divTableCell">&nbsp;</div>
+                            <div class="divTableCell">View:
+                                <input type="radio" id="left_view" name="view" class="view" value="left_view" checked>
+                                <label for="left_view">Left</label>
+                                <input type="radio" id="right_view" name="view" class="view" value="right_view">
+                                <label for="right_view">Right</label>
+                            </div>
+                            <div class="divTableCell">&nbsp;</div>
+                        </div>
+                        <div class="divTableRow">
+                            <div class="divTableCell">&nbsp;</div>
+                            <div class="divTableCell">
+                                <input class="chassis" type="radio" id="M1078_button" name="FMTV" value="14" checked>
+                                <label for="M1078_button">M1078</label>
+                                <input class="chassis" type="radio" id="M1083_button" name="FMTV" value="16">
+                                <label for="M1083_button">M1083</label>
+                            </div>
+                            <div class="divTableCell">&nbsp;</div>
+                        </div>
+                        <div class="divTableRow">
+                            <div class="divTableCell">&nbsp;</div>
+                            <div class="divTableCell">
+                                <input type="checkbox" class="box_length_checkbox" id="14ft_box_button" name="box" value="14" checked>
+                                <label for="14ft_box_button">14' Box</label>
+                                <input type="checkbox" class="box_length_checkbox" id="16ft_box_button" name="box" value="16">
+                                <label for="16ft_box_button">16' Box</label>
+                            </div>
+                            <div class="divTableCell">&nbsp;</div>
+                        </div>
+                        <div class="divTableRow">
+                            <div class="divTableCell">&nbsp;</div>
+                            <div class="divTableCell">
+                                <label for="box_length_field">Box length (ft)</label>
+                                <input type="number" name="box_length_field" id="box_length_field" max="21" value="14" />
+                            </div>
+                            <div class="divTableCell">&nbsp;</div>
+                        </div>
+                        <div class="divTableRow">
+                            <div class="divTableCell">&nbsp;</div>
+                            <div class="divTableCell">
+                                <label for="raised_roof_checkbox">Raised roof: </label>
+                                <input type="checkbox" id="raised_roof_checkbox" value="none" />
+                            </div>
+                            <div class="divTableCell">&nbsp;</div>
+                        </div>
+                        <div class="divTableRow">
+                            <div class="divTableCell">&nbsp;</div>
+                            <div class="divTableCell">
+                                <input type="button" value="Reset" id="reset" />
+                            </div>
+                            <div class="divTableCell">&nbsp;</div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
