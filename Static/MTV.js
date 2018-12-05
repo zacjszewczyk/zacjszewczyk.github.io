@@ -84,13 +84,23 @@ function flip(element) {
         }
     }
 }
+function gray(element) {
+    $(element).css("filter", "invert(5%) grayscale(100%) brightness(90%) contrast(1)");
+    updateCookie();
+}
+function clearColor(element) {
+    $(element).css("filter", "");
+    updateCookie();
+}
 function updateCookie() {
     var view = $(".view:checked").val();
     var chassis = $(".chassis:checked").val();
     var box = $("#box_length_field").val();
     var topper = $("#raised_roof_checkbox").val();
     var door = $(".door:checked").val();
-    document.cookie = "rv=view="+view+",chassis="+chassis+",box="+box+",topper="+topper+",door="+door+";";
+    var chassis_color = $(".chassis_color:checked").val();
+    var box_color = $(".box_color:checked").val();
+    document.cookie = "rv=view="+view+",chassis="+chassis+",box="+box+",topper="+topper+",door="+door+",chassis_color="+chassis_color+",box_color="+box_color+";";
     // console.log(document.cookie);
 }
 function readCookie() {
@@ -131,6 +141,14 @@ function parseCookie() {
     }
     if (cookie[4].split("=")[1] != cookie[0].split("=")[1].split("_")[0]) {
         $("#door").hide();
+    }
+    if (cookie[5].split("=")[1] == "gray") {
+        $("#chassis_gray").prop("checked", true);
+        gray($(".chassis_images"));
+    }
+    if (cookie[6].split("=")[1] == "gray") {
+        $("#box_gray").prop("checked", true);
+        gray($("#box"));
     }
 }
 function changeChassis() {
@@ -202,10 +220,20 @@ $( document ).ready(function() {
 
     // Color
     $(".chassis_color").click(function () {
-        $(".chassis_images").css("filter", "invert(5%) grayscale(100%) brightness(90%) contrast(1)")
+        if ($(this).val() == "gray") {
+            gray($(".chassis_images"));
+        } else
+        {
+            clearColor($(".chassis_images"));
+        }
     });
     $(".box_color").click(function () {
-        $("#box").css("filter", "invert(5%) grayscale(100%) brightness(90%) contrast(1)")
+        if ($(this).val() == "gray") {
+            gray($("#box"));
+        } else
+        {
+            clearColor($("#box"));
+        }
     });
 
     // Reset
