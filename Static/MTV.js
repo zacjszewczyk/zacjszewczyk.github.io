@@ -63,6 +63,12 @@ function flip(element) {
         $("#images").css("-o-transform", "scaleX(-1)");
         $("#images").css("-webkit-transform", "scaleX(-1)");
         $("#images").css("transform", "scaleX(-1)");
+        if ($(".door:checked").val() == "right") {
+            $("#door").show();
+        }
+        else {
+            $("#door").hide();   
+        }
     }
     else
     {
@@ -70,6 +76,12 @@ function flip(element) {
         $("#images").css("-o-transform", "");
         $("#images").css("-webkit-transform", "");
         $("#images").css("transform", "");
+        if ($(".door:checked").val() == "left") {
+            $("#door").show();
+        }
+        else {
+            $("#door").hide();   
+        }
     }
 }
 function updateCookie() {
@@ -77,13 +89,16 @@ function updateCookie() {
     var chassis = $(".chassis:checked").val();
     var box = $("#box_length_field").val();
     var topper = $("#raised_roof_checkbox").val();
-    document.cookie = "rv=view="+view+",chassis="+chassis+",box="+box+",topper="+topper+";";
+    var door = $(".door:checked").val();
+    document.cookie = "rv=view="+view+",chassis="+chassis+",box="+box+",topper="+topper+",door="+door+";";
+    // console.log(document.cookie);
 }
 function readCookie() {
     return document.cookie.split(";")[0].replace("rv=", "").split(",");
 }
 function parseCookie() {
     var cookie = readCookie();
+    // console.log(cookie[4]);
     if (cookie.length == 1) { $("#topper").hide(); return 0; };
     if (cookie[0].split("=")[1] == "right_view") {
         flip($("#images"));
@@ -109,6 +124,13 @@ function parseCookie() {
     }
     else {
         $("#topper").hide();
+    }
+    //
+    if (cookie[4].split("=")[1] == "right") {
+        $("#door_right").prop("checked", true);
+    }
+    if (cookie[4].split("=")[1] != cookie[0].split("=")[1].split("_")[0]) {
+        $("#door").hide();
     }
 }
 function changeChassis() {
@@ -163,6 +185,14 @@ $( document ).ready(function() {
     $("#raised_roof_checkbox").click(function() {
         $("#topper").toggle();
         this.value = $("#topper").css("display");
+        updateCookie();
+    });
+
+    // Door
+    $(".door").click(function () {
+        if ($(".view:checked").val().split("_")[1] != $(".door:checked").val()) {
+            $("#door").hide();
+        }
         updateCookie();
     });
 
