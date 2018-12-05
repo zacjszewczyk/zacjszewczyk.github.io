@@ -156,6 +156,7 @@ $( document ).ready(function() {
     adjustSize();
     // View selector
     $(".view").click(function() {
+        $("#images").css("transition", "transform 2s");
         flip($("#images"));
         updateCookie();
     });

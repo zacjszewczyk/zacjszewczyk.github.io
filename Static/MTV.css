@@ -1,8 +1,3 @@
-/* Debug */
-section, main
-{
-    border: 1px solid black;
-}
 #angled
 {
     position: absolute;
@@ -31,6 +26,9 @@ body
     position: absolute;
     background-color: #807F17;
 }
+#controls {
+    border: 1px solid #999999;
+}
 #door {
     position: absolute;
     top: 29px;
@@ -51,6 +49,10 @@ body
     position: relative;
     padding: 10em 0 0 3em;
     height: 325px;
+    background-image: url("Images/concrete.png"), url("Images/metal.png");
+    background-position: left bottom, left top;
+    background-repeat: repeat-x, repeat;
+    background-size: 100px, 100px;
 }
 #images img
 {
@@ -88,6 +90,8 @@ p {
 }
 table {
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 tr:first-of-type {
     text-align: center;
