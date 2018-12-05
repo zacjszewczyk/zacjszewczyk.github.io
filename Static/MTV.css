@@ -78,6 +78,18 @@ p {
     margin: 0;
     padding: 0;
 }
+#passthrough
+{
+    height: 229px;
+    width: 75px;
+    background-color: #807F17;
+    display: none;
+    position: relative;
+    left: -75px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-left-radius: 5px;
+}
 #topper
 {
     position: absolute;
@@ -115,4 +127,129 @@ td:nth-of-type(2) {
 }
 td:last-of-type {
     border-right: none;
+}
+/* Ruler CSS */
+#ruler {
+    padding: 20px 3em;
+    background-image: url("Images/concrete.png");
+    background-size: 100px;
+}
+.ruler {
+ position: relative;
+ /*margin: 20px auto;*/
+ height: 14px;
+}
+.ruler .cm,
+.ruler .mm {
+ position: absolute;
+ border-left: 1px solid #555;
+ height: 14px;
+ width: 10%;
+}
+.ruler .cm:after {
+ position: absolute;
+ bottom: -15px;
+ font: 11px/1 sans-serif;
+}
+.ruler .mm {
+ height: 5px;
+}
+.ruler .mm:nth-of-type(5) {
+ height: 10px;
+}
+.ruler .cm:nth-of-type(1) {
+ left: 0%;
+}
+.ruler .cm:nth-of-type(1):after {
+ content: "0";
+}
+.ruler .cm:nth-of-type(2) {
+ left: 10%;
+}
+.ruler .cm:nth-of-type(2):after {
+ content: "3";
+}
+.ruler .cm:nth-of-type(3) {
+ left: 20%;
+}
+.ruler .cm:nth-of-type(3):after {
+ content: "6";
+}
+.ruler .cm:nth-of-type(4) {
+ left: 30%;
+}
+.ruler .cm:nth-of-type(4):after {
+ content: "9";
+}
+.ruler .cm:nth-of-type(5) {
+ left: 40%;
+}
+.ruler .cm:nth-of-type(5):after {
+ content: "12";
+}
+.ruler .cm:nth-of-type(6) {
+ left: 50%;
+}
+.ruler .cm:nth-of-type(6):after {
+ content: "15";
+}
+.ruler .cm:nth-of-type(7) {
+ left: 60%;
+}
+.ruler .cm:nth-of-type(7):after {
+ content: "18";
+}
+.ruler .cm:nth-of-type(8) {
+ left: 70%;
+}
+.ruler .cm:nth-of-type(8):after {
+ content: "21";
+}
+.ruler .cm:nth-of-type(9) {
+ left: 80%;
+}
+.ruler .cm:nth-of-type(9):after {
+ content: "24";
+}
+.ruler .cm:nth-of-type(10) {
+ left: 90%;
+}
+.ruler .cm:nth-of-type(10):after {
+ content: "27";
+}
+.ruler .cm:nth-of-type(11) {
+ left: 100%;
+}
+.ruler .cm:nth-of-type(11):after {
+ content: "30";
+}
+.ruler .mm:nth-of-type(1) {
+ left: 10%;
+}
+.ruler .mm:nth-of-type(2) {
+ left: 20%;
+}
+.ruler .mm:nth-of-type(3) {
+ left: 30%;
+}
+.ruler .mm:nth-of-type(4) {
+ left: 40%;
+}
+.ruler .mm:nth-of-type(5) {
+ left: 50%;
+}
+.ruler .mm:nth-of-type(6) {
+ left: 60%;
+}
+.ruler .mm:nth-of-type(7) {
+ left: 70%;
+}
+.ruler .mm:nth-of-type(8) {
+ left: 80%;
+}
+.ruler .mm:nth-of-type(9) {
+ left: 90%;
+}
+.ruler .mm:nth-of-type(10) {
+ left: 100%;
 }

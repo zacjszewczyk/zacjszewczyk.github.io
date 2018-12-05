@@ -100,7 +100,8 @@ function updateCookie() {
     var door = $(".door:checked").val();
     var chassis_color = $(".chassis_color:checked").val();
     var box_color = $(".box_color:checked").val();
-    document.cookie = "rv=view="+view+",chassis="+chassis+",box="+box+",topper="+topper+",door="+door+",chassis_color="+chassis_color+",box_color="+box_color+";";
+    var passthrough = $(".passthrough:checked").val();
+    document.cookie = "rv=view="+view+",chassis="+chassis+",box="+box+",topper="+topper+",door="+door+",chassis_color="+chassis_color+",box_color="+box_color+",passthrough="+passthrough+";";
     // console.log(document.cookie);
 }
 function readCookie() {
@@ -108,7 +109,7 @@ function readCookie() {
 }
 function parseCookie() {
     var cookie = readCookie();
-    // console.log(cookie[4]);
+    // console.log(cookie);
     if (cookie.length == 1) { $("#topper").hide(); return 0; };
     if (cookie[0].split("=")[1] == "right_view") {
         flip($("#images"));
@@ -153,6 +154,10 @@ function parseCookie() {
         $("#box_gray").prop("checked", true);
         gray($("#box"));
     }
+    if (cookie[7].split("=")[1] == "true") {
+        $("#passthrough").show();
+        $("#passthrough_true").prop("checked", true);
+    }
 }
 function changeChassis() {
     $(".chassis_images").hide();
@@ -185,6 +190,12 @@ $( document ).ready(function() {
     // Chassis selector
     $(".chassis").click(function() {
         changeChassis();
+    });
+
+    // Passthrough
+    $(".passthrough").click(function() {
+        $("#passthrough").toggle();
+        updateCookie();
     });
 
     // Box length checkboxes

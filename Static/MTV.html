@@ -8,132 +8,6 @@
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/Static/MTV.css" type="text/css" />
-    <style type="text/css">
-        #ruler {
-            padding: 20px 3em;
-            background-image: url("Static/Images/concrete.png");
-            background-size: 100px;
-        }
-        .ruler {
-         position: relative;
-         /*margin: 20px auto;*/
-         height: 14px;
-        }
-        .ruler .cm,
-        .ruler .mm {
-         position: absolute;
-         border-left: 1px solid #555;
-         height: 14px;
-         width: 10%;
-        }
-        .ruler .cm:after {
-         position: absolute;
-         bottom: -15px;
-         font: 11px/1 sans-serif;
-        }
-        .ruler .mm {
-         height: 5px;
-        }
-        .ruler .mm:nth-of-type(5) {
-         height: 10px;
-        }
-        .ruler .cm:nth-of-type(1) {
-         left: 0%;
-        }
-        .ruler .cm:nth-of-type(1):after {
-         content: "0";
-        }
-        .ruler .cm:nth-of-type(2) {
-         left: 10%;
-        }
-        .ruler .cm:nth-of-type(2):after {
-         content: "3";
-        }
-        .ruler .cm:nth-of-type(3) {
-         left: 20%;
-        }
-        .ruler .cm:nth-of-type(3):after {
-         content: "6";
-        }
-        .ruler .cm:nth-of-type(4) {
-         left: 30%;
-        }
-        .ruler .cm:nth-of-type(4):after {
-         content: "9";
-        }
-        .ruler .cm:nth-of-type(5) {
-         left: 40%;
-        }
-        .ruler .cm:nth-of-type(5):after {
-         content: "12";
-        }
-        .ruler .cm:nth-of-type(6) {
-         left: 50%;
-        }
-        .ruler .cm:nth-of-type(6):after {
-         content: "15";
-        }
-        .ruler .cm:nth-of-type(7) {
-         left: 60%;
-        }
-        .ruler .cm:nth-of-type(7):after {
-         content: "18";
-        }
-        .ruler .cm:nth-of-type(8) {
-         left: 70%;
-        }
-        .ruler .cm:nth-of-type(8):after {
-         content: "21";
-        }
-        .ruler .cm:nth-of-type(9) {
-         left: 80%;
-        }
-        .ruler .cm:nth-of-type(9):after {
-         content: "24";
-        }
-        .ruler .cm:nth-of-type(10) {
-         left: 90%;
-        }
-        .ruler .cm:nth-of-type(10):after {
-         content: "27";
-        }
-        .ruler .cm:nth-of-type(11) {
-         left: 100%;
-        }
-        .ruler .cm:nth-of-type(11):after {
-         content: "30";
-        }
-        .ruler .mm:nth-of-type(1) {
-         left: 10%;
-        }
-        .ruler .mm:nth-of-type(2) {
-         left: 20%;
-        }
-        .ruler .mm:nth-of-type(3) {
-         left: 30%;
-        }
-        .ruler .mm:nth-of-type(4) {
-         left: 40%;
-        }
-        .ruler .mm:nth-of-type(5) {
-         left: 50%;
-        }
-        .ruler .mm:nth-of-type(6) {
-         left: 60%;
-        }
-        .ruler .mm:nth-of-type(7) {
-         left: 70%;
-        }
-        .ruler .mm:nth-of-type(8) {
-         left: 80%;
-        }
-        .ruler .mm:nth-of-type(9) {
-         left: 90%;
-        }
-        .ruler .mm:nth-of-type(10) {
-         left: 100%;
-        }
-    </style>
     <script type="text/javascript" src="/Static/MTV.js"></script>
     <body>
         <main>
@@ -141,10 +15,10 @@
                 <div id="box">
                     <div id="topper"></div>
                     <div id="container">
-                        <div id="filler"></div>
                         <div id="angled"></div>
                     </div>
                     <div id="door"></div>
+                    <div id="passthrough"></div>
                 </div>
                 <img id="M1078" class="chassis_images" src="Static/Images/M1078_new.png" />
                 <img id="M1083" class="chassis_images" src="Static/Images/M1083_new.png" />
@@ -290,6 +164,16 @@
                             <label for="M1083_button">M1083</label>
                         </td>
                         <td><p>Select the M1078 for smaller RVs, and the M1083 for larger ones.</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>Toggle passthrough</p></td>
+                        <td>
+                            <input class="passthrough" type="radio" id="passthrough_true" name="passthrough" value="true">
+                            <label for="passthrough_true">Passthrough</label>
+                            <input class="passthrough" type="radio" id="passthrough_false" name="passthrough" value="false" checked>
+                            <label for="passthrough_false">No passthrough</label>
+                        </td>
+                        <td><p>Relocate the spare tire and CTIS and add a passthrough door to the cab. Adds approximately two feet of living space.</p></td>
                     </tr>
                     <tr>
                         <td rowspan="2"><p>Choose a box size, measured in feet</p></td>
