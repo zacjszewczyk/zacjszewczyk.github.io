@@ -194,6 +194,9 @@ $( document ).ready(function() {
         if ($(".view:checked").val().split("_")[1] != $(".door:checked").val()) {
             $("#door").hide();
         }
+        else {
+            $("#door").show();
+        }
         updateCookie();
     });
 

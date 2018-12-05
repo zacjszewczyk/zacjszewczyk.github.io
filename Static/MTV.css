@@ -14,8 +14,8 @@ body
 #box
 {
     position: absolute;
-    left: 317px;
-    top: 93px;
+    left: 337px;
+    top: 104px;
     height: 229px;
     width: 469px;
     z-index: 1;
@@ -58,7 +58,7 @@ body
 {
     /*opacity: .7;*/
     position: absolute;
-    width: 46em;
+    width: 49em;
 }
 main
 {
@@ -68,7 +68,7 @@ main
 }
 #M1078
 {
-    width: 42em !important;
+    width: 45em !important;
 }
 #M1083
 {
