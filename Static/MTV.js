@@ -142,6 +142,9 @@ function parseCookie() {
     if (cookie[4].split("=")[1] != cookie[0].split("=")[1].split("_")[0]) {
         $("#door").hide();
     }
+    else {
+        $("#door").show();
+    }
     if (cookie[5].split("=")[1] == "gray") {
         $("#chassis_gray").prop("checked", true);
         gray($(".chassis_images"));
@@ -209,7 +212,7 @@ $( document ).ready(function() {
 
     // Door
     $(".door").click(function () {
-        if ($(".view:checked").val().split("_")[1] != $(".door:checked").val()) {
+        if ($(".view:checked").val().split("_")[0] != $(".door:checked").val()) {
             $("#door").hide();
         }
         else {
