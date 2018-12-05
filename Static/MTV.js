@@ -200,6 +200,14 @@ $( document ).ready(function() {
         updateCookie();
     });
 
+    // Color
+    $(".chassis_color").click(function () {
+        $(".chassis_images").css("filter", "invert(5%) grayscale(100%) brightness(90%) contrast(1)")
+    });
+    $(".box_color").click(function () {
+        $("#box").css("filter", "invert(5%) grayscale(100%) brightness(90%) contrast(1)")
+    });
+
     // Reset
     $("#reset").click(function() {
         document.cookie = "rv=";
