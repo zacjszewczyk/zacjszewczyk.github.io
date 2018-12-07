@@ -11,6 +11,25 @@
     <script type="text/javascript" src="/Static/MTV.js"></script>
     <body>
         <main>
+            <section id="vertical_ruler">
+                <div class="vertical_ruler">
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"><div class="in"></div></div>
+                    <div class="ft"></div>
+                    <div class="ft"><div class="in"></div></div>
+                </div>
+            </section>
             <section id="images">
                 <div id="box">
                     <div id="topper"></div>
@@ -141,101 +160,95 @@
             <section id="controls">
                 <table>
                     <tr>
-                        <td><p>Description</p></td>
                         <td><p>Setting</p></td>
                         <td><p>Recommendation</p></td>
                     </tr>
                     <tr>
-                        <td><p>Change the view</p></td>
-                        <td><p>View:</p>
+                        <td colspan="2" style="text-align: center;"><p>Change view</p>
                             <input type="radio" id="left_view" name="view" class="view" value="left_view" checked>
                             <label for="left_view">Left</label>
                             <input type="radio" id="right_view" name="view" class="view" value="right_view">
                             <label for="right_view">Right</label>
                         </td>
-                        <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td><p>Choose a chassis</p></td>
                         <td>
                             <input class="chassis" type="radio" id="M1078_button" name="FMTV" value="14" checked>
                             <label for="M1078_button">M1078</label>
+                            <br />
                             <input class="chassis" type="radio" id="M1083_button" name="FMTV" value="16">
                             <label for="M1083_button">M1083</label>
                         </td>
                         <td><p>Select the M1078 for smaller RVs, and the M1083 for larger ones.</p></td>
                     </tr>
                     <tr>
-                        <td><p>Toggle passthrough</p></td>
                         <td>
                             <input class="passthrough" type="radio" id="passthrough_true" name="passthrough" value="true">
                             <label for="passthrough_true">Passthrough</label>
+                            <br />
                             <input class="passthrough" type="radio" id="passthrough_false" name="passthrough" value="false" checked>
                             <label for="passthrough_false">No passthrough</label>
                         </td>
                         <td><p>Relocate the spare tire and CTIS and add a passthrough door to the cab. Adds approximately two feet of living space.</p></td>
                     </tr>
                     <tr>
-                        <td rowspan="2"><p>Choose a box size, measured in feet</p></td>
                         <td>
-                            <input type="checkbox" class="box_length_checkbox" id="14ft_box_button" name="box" value="14" checked>
+                            <input type="radio" class="box_length_checkbox" id="14ft_box_button" name="box" value="14" checked>
                             <label for="14ft_box_button">14' Box</label>
-                            <input type="checkbox" class="box_length_checkbox" id="16ft_box_button" name="box" value="16">
+                            <br />
+                            <input type="radio" class="box_length_checkbox" id="16ft_box_button" name="box" value="16">
                             <label for="16ft_box_button">16' Box</label>
                         </td>
                         <td rowspan="2">
-                            <p>M1078 max: 14'. M1083 max: 16'.</p>
+                            <p>M1078 max: 14'.</p>
+                            <p>M1083 max: 16'.</p>
                             <p>Choosing values greater than these will modify the chassis in order to maintain approach and departure angles.</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <label for="box_length_field">Box length (ft)</label>
-                            <input type="number" name="box_length_field" id="box_length_field" max="21" value="14" />
+                            <input type="number" name="box_length_field" id="box_length_field" max="20" value="14" />
                         </td>
                     </tr>
                     <tr>
-                        <td><p>Toggle a raised roof on the rear half of the rig</td>
                         <td>
-                            <label for="raised_roof_checkbox">Raised roof: </label>
                             <input type="checkbox" id="raised_roof_checkbox" value="none" />
+                            <label for="raised_roof_checkbox">Raised roof</label>
                         </td>
                         <td><p>Useful for increasing headroom at the rear of the rig, typically over the bed. Can be used in conjunction with raising the bed for to increase under the bed storage space, up to an entire garage.</p></td>
                     </tr>
                     <tr>
-                        <td>Place access door on the left or right of the rig</td>
                         <td>
                             <input class="door" type="radio" id="door_left" name="door" value="left" checked>
                             <label for="door_left">Door left</label>
+                            <br />
                             <input class="door" type="radio" id="door_right" name="door" value="right">
                             <label for="door_right">Door right</label>
                         </td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td>Chassis color</td>
                         <td>
                             <input class="chassis_color" type="radio" id="chassis_original" name="chassis" value="original" checked>
                             <label for="chassis_original">Original</label>
                             <input class="chassis_color" type="radio" id="chassis_gray" name="chassis" value="gray">
                             <label for="chassis_gray">Gray</label>
                         </td>
-                        <td>&nbsp;</td>
+                        <td><p>Chassis color.</p></td>
                     </tr>
                     <tr>
-                        <td>Box color</td>
                         <td>
                             <input class="box_color" type="radio" id="box_original" name="box" value="original" checked>
                             <label for="box_original">Original</label>
                             <input class="box_color" type="radio" id="box_gray" name="box" value="gray">
                             <label for="box_gray">Gray</label>
                         </td>
-                        <td>&nbsp;</td>
+                        <td><p>Box color.</p></td>
                     </tr>
                     <tr>
-                        <td>Reset this build</td>
                         <td>
-                            <input type="button" value="Reset" id="reset" />
+                            <input type="button" value="Reset build" id="reset" />
                         </td>
                         <td>Build will automatically persist across sessions, unless reset here.</td>
                     </tr>

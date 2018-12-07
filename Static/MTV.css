@@ -10,12 +10,15 @@ body
 {
     margin: 0;
     padding: 0;
+    line-height: 150%;
+    font-size: 120%;
+    margin-bottom: 250px;
 }
 #box
 {
     position: absolute;
-    left: 337px;
-    top: 104px;
+    left: 281px;
+    top: 90px;
     height: 229px;
     width: 469px;
     z-index: 1;
@@ -47,7 +50,7 @@ body
 #images
 {
     position: relative;
-    padding: 10em 0 0 3em;
+    padding: 170px 0 0 32px;
     height: 325px;
     background-image: url("Images/concrete.png"), url("Images/metal.png");
     background-position: left bottom, left top;
@@ -58,17 +61,22 @@ body
 {
     /*opacity: .7;*/
     position: absolute;
-    width: 49em;
+    width: 675px;
+}
+input[type="radio"] {
+    vertical-align: middle;
+    margin-top: -1px;
 }
 main
 {
-    width: 70em;
+    width: 1200px;
     margin: 0 auto;
     display: none;
+    /*overflow: scroll;*/
 }
 #M1078
 {
-    width: 45em !important;
+    width: 619px !important;
 }
 #M1083
 {
@@ -81,11 +89,11 @@ p {
 #passthrough
 {
     height: 229px;
-    width: 75px;
+    width: 67px;
     background-color: #807F17;
     display: none;
     position: relative;
-    left: -75px;
+    left: -65px;
     -webkit-border-bottom-left-radius: 5px;
     -moz-border-radius-bottomleft: 5px;
     border-bottom-left-radius: 5px;
@@ -94,16 +102,20 @@ p {
 {
     position: absolute;
     top: -50px;
-    left: 200px;
+    left: 198px;
 
     border-style: solid;
-    border-width: 0 0 50px 50px;
+    border-width: 0 0 52px 52px;
     border-color: transparent transparent #807F17 transparent;
 }
 table {
     width: 100%;
     margin: 0;
     padding: 0;
+}
+tr {
+    border: 1px dashed #999999;
+    border-top: none;
 }
 tr:first-of-type {
     text-align: center;
@@ -117,26 +129,183 @@ td {
     border-top: none;
     padding: 3px 10px;
     width: 2%;
+    padding: 25px;
+    /*line-height: 110%;*/
 }
 td:first-of-type {
     border-left: none;
-}
-td:nth-of-type(2) {
-    border: none;
-    border-bottom: 1px dashed #999999;
+    border-right: none;
 }
 td:last-of-type {
     border-right: none;
 }
+
+/* iPhone X Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    body {
+        font-size: 350%;
+        line-height: 130%;
+        zoom: 0.7;
+    }
+}
+/* iPhone X Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    body {
+        font-size: 250%;
+        line-height: 150%;
+        zoom: 0.8;
+    }
+}
+
+#vertical_ruler {
+    height: 435px;
+    width: 14px;
+    position: relative;
+    top: 10px;
+    /*top: -160px;*/
+    /*right: 0;*/
+    z-index: 1;
+    float: right;
+}
+.ft { 
+    position: absolute;
+    border-top: 1px solid black;
+    width: 100%;
+}
+.ft:before {
+    position: absolute;
+    left: -15px;
+    top: -5px;
+    font: 55% sans-serif;
+}
+.ft:first-of-type
+{
+    top: 7.14%;
+}
+.ft:first-of-type:before
+{
+    content: "13";
+}
+.ft:nth-of-type(2)
+{
+    top: 14.29%;
+}
+.ft:nth-of-type(2):before {
+    content: "12";
+}
+.ft:nth-of-type(3)
+{
+    top: 21.43%;
+}
+.ft:nth-of-type(3):before {
+    content: "11";
+}
+.ft:nth-of-type(4)
+{
+    top: 28.57%;
+}
+.ft:nth-of-type(4):before {
+    content: "10";
+}
+.ft:nth-of-type(5)
+{
+    top: 35.71%;
+}
+.ft:nth-of-type(5):before {
+    content: "9";
+}
+.ft:nth-of-type(6)
+{
+    top: 42.86%;
+}
+.ft:nth-of-type(6):before {
+    content: "8";
+}
+.ft:nth-of-type(7)
+{
+    top: 50%;
+}
+.ft:nth-of-type(7):before {
+    content: "7";
+}
+.ft:nth-of-type(8)
+{
+    top: 57.14%;
+}
+.ft:nth-of-type(8):before {
+    content: "6";
+}
+.ft:nth-of-type(9)
+{
+    top: 64.29%;
+}
+.ft:nth-of-type(9):before {
+    content: "5";
+}
+.ft:nth-of-type(10)
+{
+    top: 71.43%;
+}
+.ft:nth-of-type(10):before {
+    content: "4";
+}
+.ft:nth-of-type(11)
+{
+    top: 78.57%;
+}
+.ft:nth-of-type(11):before {
+    content: "3";
+}
+.ft:nth-of-type(12)
+{
+    top: 85.71%;
+}
+.ft:nth-of-type(12):before {
+    content: "2";
+}
+.ft:nth-of-type(13)
+{
+    top: 92.86%;
+}
+.ft:nth-of-type(13):before {
+    content: "1";
+}
+.ft:nth-of-type(14)
+{
+    top: 100%;
+}
+.ft:nth-of-type(14):before {
+    content: "0";
+}
+.ft:nth-of-type(15)
+{
+    top: 0%;
+}
+.ft:nth-of-type(15):before {
+    content: "14";
+}
+.in {
+    border-top: 1px solid black;
+    width: 7px;
+    margin-top: 100%;
+}
+
 /* Ruler CSS */
 #ruler {
-    padding: 20px 3em;
+    padding: 20px 40px 20px 32px;
     background-image: url("Images/concrete.png");
     background-size: 100px;
 }
 .ruler {
  position: relative;
- /*margin: 20px auto;*/
  height: 14px;
 }
 .ruler .cm,
@@ -149,7 +318,8 @@ td:last-of-type {
 .ruler .cm:after {
  position: absolute;
  bottom: -15px;
- font: 11px/1 sans-serif;
+ left: -5px;
+ font: 55% sans-serif;
 }
 .ruler .mm {
  height: 5px;
@@ -162,66 +332,69 @@ td:last-of-type {
 }
 .ruler .cm:nth-of-type(1):after {
  content: "0";
+ left: -1;
 }
 .ruler .cm:nth-of-type(2) {
  left: 10%;
 }
 .ruler .cm:nth-of-type(2):after {
- content: "3";
+ content: "4";
+ left: -1;
 }
 .ruler .cm:nth-of-type(3) {
  left: 20%;
 }
 .ruler .cm:nth-of-type(3):after {
- content: "6";
+ content: "8";
+ left: -1;
 }
 .ruler .cm:nth-of-type(4) {
  left: 30%;
 }
 .ruler .cm:nth-of-type(4):after {
- content: "9";
+ content: "12";
 }
 .ruler .cm:nth-of-type(5) {
  left: 40%;
 }
 .ruler .cm:nth-of-type(5):after {
- content: "12";
+ content: "16";
 }
 .ruler .cm:nth-of-type(6) {
  left: 50%;
 }
 .ruler .cm:nth-of-type(6):after {
- content: "15";
+ content: "20";
 }
 .ruler .cm:nth-of-type(7) {
  left: 60%;
 }
 .ruler .cm:nth-of-type(7):after {
- content: "18";
+ content: "24";
 }
 .ruler .cm:nth-of-type(8) {
  left: 70%;
 }
 .ruler .cm:nth-of-type(8):after {
- content: "21";
+ content: "28";
 }
 .ruler .cm:nth-of-type(9) {
  left: 80%;
 }
 .ruler .cm:nth-of-type(9):after {
- content: "24";
+ content: "32";
 }
 .ruler .cm:nth-of-type(10) {
  left: 90%;
 }
 .ruler .cm:nth-of-type(10):after {
- content: "27";
+ content: "36";
 }
 .ruler .cm:nth-of-type(11) {
  left: 100%;
 }
 .ruler .cm:nth-of-type(11):after {
- content: "30";
+ content: "40";
 }
 .ruler .mm:nth-of-type(1) {
  left: 10%;

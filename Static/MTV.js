@@ -2,6 +2,8 @@
 var position;
 var dimensions;
 
+const MAGIC = 31.5;
+
 // Functions
 function adjustSize() {
     var field = document.getElementById("box_length_field");
@@ -9,22 +11,22 @@ function adjustSize() {
     if (field.value >= 12 && field.value <= 14) {
         angledSize();
         $("#container").hide();
-        $("#box").show().width(field.value*33.5);
+        $("#box").show().width(field.value*MAGIC);
         adjustTopper();
     }
     else if (field.value > 14) {
         if ($("#M1078").css("display") == "block") {
-            $("#box").show().width(14*33.5);
+            $("#box").show().width(14*MAGIC);
             angledSize();
         }
         else {
             if (field.value <= 16) {
-                $("#box").show().width(field.value*33.5);
+                $("#box").show().width(field.value*MAGIC);
                 angledSize();
                 $("#container").hide();
             }
             else {                        
-                $("#box").show().width(16*33.5);
+                $("#box").show().width(16*MAGIC);
                 angledSize();
             }
         }
@@ -41,11 +43,11 @@ function angledSize() {
     dimensions = {width : parseInt($("#box").css("width")), height : parseInt($("#box").css("height")) };
             
     $("#container").show();
-    $("#container").css("height", 229-(0.839*(field.value-offset)*35.5));
-    $("#container").css("width", (field.value-offset)*35.5);
-    $("#angled").css("top", dimensions.height-(0.839*(field.value-offset)*35.5));
+    $("#container").css("height", 229-(0.839*(field.value-offset)*MAGIC));
+    $("#container").css("width", (field.value-offset)*MAGIC);
+    $("#angled").css("top", dimensions.height-(0.839*(field.value-offset)*MAGIC));
     $("#container").css("left", dimensions.width);
-    $("#angled").css("border-width", (0.839*(field.value-offset)*35.5).toString()+"px "+((field.value-offset)*35.5).toString()+"px 0 0");
+    $("#angled").css("border-width", (0.839*(field.value-offset)*MAGIC).toString()+"px "+((field.value-offset)*MAGIC).toString()+"px 0 0");
 }
 function getChassis() {
     if ($(".chassis")[0].checked == true) {
@@ -123,9 +125,11 @@ function parseCookie() {
     }
     //
     if (cookie[2].split("=")[1] != "14") {
-        $(".box_length_checkbox").prop("checked", false);
         $("#box_length_field").attr("value", cookie[2].split("=")[1]);
-        if (cookie[2].split("=")[1] == "16") { $("#16ft_box_button").prop("checked", true) }
+        if (cookie[2].split("=")[1] == "16") { 
+            $(".box_length_checkbox").prop("checked", false);
+            $("#16ft_box_button").prop("checked", true);
+        }
     }
     //
     if (cookie[3].split("=")[1] == "block") {
@@ -170,7 +174,7 @@ function changeChassis() {
         $("#box_length_field").attr("max", 21);
     }
     else {
-        $("#box_length_field").attr("max", 23);
+        $("#box_length_field").attr("max", 22);
     }
     adjustSize();
 }
