@@ -17,8 +17,8 @@ body
 #box
 {
     position: absolute;
-    left: 281px;
-    top: 90px;
+    left: 313px;
+    top: 100px;
     height: 229px;
     width: 469px;
     z-index: 1;
@@ -50,7 +50,7 @@ body
 #images
 {
     position: relative;
-    padding: 170px 0 0 32px;
+    padding: 180px 0 0 64px;
     height: 325px;
     background-image: url("Images/concrete.png"), url("Images/metal.png");
     background-position: left bottom, left top;
@@ -170,8 +170,7 @@ td:last-of-type {
     width: 14px;
     position: relative;
     top: 10px;
-    /*top: -160px;*/
-    /*right: 0;*/
+    right: 10px;
     z-index: 1;
     float: right;
 }
@@ -300,7 +299,7 @@ td:last-of-type {
 
 /* Ruler CSS */
 #ruler {
-    padding: 20px 40px 20px 32px;
+    padding: 20px 64px 20px 64px;
     background-image: url("Images/concrete.png");
     background-size: 100px;
 }
