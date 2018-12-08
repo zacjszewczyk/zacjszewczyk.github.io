@@ -37,6 +37,8 @@
                         <div id="angled"></div>
                     </div>
                     <div id="door"></div>
+                    <div id="fore_window"></div>
+                    <div id="aft_window"></div>
                     <div id="passthrough"></div>
                 </div>
                 <img id="M1078" class="chassis_images" src="Static/Images/M1078_new.png" />
@@ -226,7 +228,15 @@
                             <input class="door" type="radio" id="door_right" name="door" value="right">
                             <label for="door_right">Door right</label>
                         </td>
-                        <td>&nbsp;</td>
+                        <td>Place the door on the left or right side of the rig.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><input class="window" type="checkbox" id="fore_window_checkbox" name="fore_window" value="fore_window"> Fore window</label>
+                            <br />
+                            <label><input class="window" type="checkbox" id="aft_window_checkbox" name="window" value="aft_window"> Aft window</label>
+                        </td>
+                        <td>Place windows at the fore and aft of the rig.</td>
                     </tr>
                     <tr>
                         <td>

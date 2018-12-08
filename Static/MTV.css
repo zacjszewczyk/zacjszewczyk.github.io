@@ -36,7 +36,7 @@ body
 #door {
     position: absolute;
     top: 29px;
-    left: 100px;
+    left: 125px;
     height: 200px;
     width: 85px;
     background-color: #222222;
@@ -47,7 +47,24 @@ body
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-
+#fore_window, #aft_window {
+    height: 50px;
+    width: 100px;
+    background-color: #222;
+    display: none;
+}
+#fore_window {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+}
+#aft_window {
+    float: right;
+    width: 150px;
+    position: relative;
+    top: -25px;
+    margin-right: 25px;
+}
 #images
 {
     position: relative;

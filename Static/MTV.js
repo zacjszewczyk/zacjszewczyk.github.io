@@ -12,9 +12,11 @@ function adjustSize() {
         angledSize();
         $("#container").hide();
         $("#box").show().width(field.value*MAGIC);
+        $("#aft_window").width(field.value*8);
         adjustTopper();
     }
     else if (field.value > 14) {
+        $("#aft_window").width(field.value*12);
         if ($("#M1078").css("display") == "block") {
             $("#box").show().width(14*MAGIC);
             angledSize();
@@ -94,6 +96,17 @@ function clearColor(element) {
     $(element).css("filter", "");
     updateCookie();
 }
+function windows() {
+    $.each($(".window:checked"), function (key,value) {
+        // console.log("Checked: "+$(value).val());
+        $("#"+$(value).val()).show();
+    });
+    $.each($(".window:not(:checked)"), function (key,value) {
+        // console.log("Unchedked: "+$(value).val());
+        $("#"+$(value).val()).hide();
+    });
+    updateCookie();
+}
 function updateCookie() {
     var view = $(".view:checked").val();
     var chassis = $(".chassis:checked").val();
@@ -103,7 +116,9 @@ function updateCookie() {
     var chassis_color = $(".chassis_color:checked").val();
     var box_color = $(".box_color:checked").val();
     var passthrough = $(".passthrough:checked").val();
-    document.cookie = "rv=view="+view+",chassis="+chassis+",box="+box+",topper="+topper+",door="+door+",chassis_color="+chassis_color+",box_color="+box_color+",passthrough="+passthrough+";";
+    var fore_window = $("#fore_window_checkbox:checked").val();
+    var aft_window = $("#aft_window_checkbox:checked").val();
+    document.cookie = "rv=view="+view+",chassis="+chassis+",box="+box+",topper="+topper+",door="+door+",chassis_color="+chassis_color+",box_color="+box_color+",passthrough="+passthrough+",fore_window="+fore_window+",aft_window="+aft_window+";";
     // console.log(document.cookie);
 }
 function readCookie() {
@@ -161,6 +176,14 @@ function parseCookie() {
     if (cookie[7].split("=")[1] == "true") {
         $("#passthrough").show();
         $("#passthrough_true").prop("checked", true);
+    }
+    if (cookie[8].split("=")[1] == "fore_window") {
+        $("#fore_window_checkbox").prop("checked", "checked");
+        $("#fore_window").show();
+    }
+    if (cookie[9].split("=")[1] == "aft_window") {
+        $("#aft_window_checkbox").prop("checked", "checked");
+        $("#aft_window").show();
     }
 }
 function changeChassis() {
@@ -252,6 +275,10 @@ $( document ).ready(function() {
         {
             clearColor($("#box"));
         }
+    });
+    // Windows
+    $(".window").click(function () {
+        windows();
     });
 
     // Reset
