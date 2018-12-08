@@ -11,7 +11,8 @@ body
     margin: 0;
     padding: 0;
     line-height: 150%;
-    font-size: 120%;
+    font: 120% sans-serif;
+    line-height: 150%;
     margin-bottom: 250px;
 }
 #box
@@ -135,6 +136,7 @@ td {
 td:first-of-type {
     border-left: none;
     border-right: none;
+    text-align: center;
 }
 td:last-of-type {
     border-right: none;
@@ -169,7 +171,7 @@ td:last-of-type {
     height: 435px;
     width: 14px;
     position: relative;
-    top: 10px;
+    top: 20px;
     right: 10px;
     z-index: 1;
     float: right;
@@ -183,7 +185,7 @@ td:last-of-type {
     position: absolute;
     left: -15px;
     top: -5px;
-    font: 55% sans-serif;
+    font: 11px sans-serif;
 }
 .ft:first-of-type
 {
@@ -295,6 +297,7 @@ td:last-of-type {
     border-top: 1px solid black;
     width: 7px;
     margin-top: 100%;
+    float: right;
 }
 
 /* Ruler CSS */
@@ -318,7 +321,7 @@ td:last-of-type {
  position: absolute;
  bottom: -15px;
  left: -5px;
- font: 55% sans-serif;
+ font: 11px sans-serif;
 }
 .ruler .mm {
  height: 5px;
