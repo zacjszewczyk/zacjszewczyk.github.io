@@ -52,6 +52,7 @@ body
     width: 100px;
     background-color: #222;
     display: none;
+    border-radius: 5px;
 }
 #fore_window {
     position: absolute;
