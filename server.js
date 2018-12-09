@@ -62,7 +62,6 @@ http.createServer(function (req, res) {
         res.end();
     }
     else if (filename.endsWith(".png")) {
-        console.log("Serving: Static/Images/"+filename.split("/")[3])
         res.writeHead(200, {'Content-type' : 'image/png'});
         res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
         res.end();
@@ -80,7 +79,6 @@ http.createServer(function (req, res) {
               res.write(fs.readFileSync('./Structure/system/error.html', {encoding: 'utf8'}));
               return res.end();
             }
-            // console.log("Serving text/html");
             res.writeHead(200, {'Content-Type': 'text/html'});
             res.write(data);
             return res.end();
