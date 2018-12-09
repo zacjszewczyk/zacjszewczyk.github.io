@@ -41,7 +41,7 @@ http.createServer(function (req, res) {
         filename = "Structure/"+filename[2]+"-"+filename[3]+".html";
     }
     else if (filename.startsWith("/Static") || filename == "/rss") {
-        // console.log("Static: "+filename);
+        console.log("Static: "+filename);
     }
     else {
         if (!filename.endsWith("/main.css")) {
@@ -51,9 +51,20 @@ http.createServer(function (req, res) {
         console.log("Finel else: "+filename);
     }
     if (filename.endsWith(".css")) {
-        console.log("Static/"+filename.split("/")[2]);
+        // console.log("Static/"+filename.split("/")[2]);
         res.writeHead(200, {'Content-type' : 'text/css'});
         res.write(fs.readFileSync("Static/"+filename.split("/")[2], {encoding: 'utf8'}));
+        res.end();
+    }
+    else if (filename.endsWith(".js")) {
+        res.writeHead(200, {'Content-type' : 'text/javascript'});
+        res.write(fs.readFileSync("Static/"+filename.split("/")[2], {encoding: 'utf8'}));
+        res.end();
+    }
+    else if (filename.endsWith(".png")) {
+        console.log("Serving: Static/Images/"+filename.split("/")[3])
+        res.writeHead(200, {'Content-type' : 'image/png'});
+        res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
         res.end();
     }
     else if (filename == "/rss") {
@@ -68,7 +79,8 @@ http.createServer(function (req, res) {
               res.writeHead(404, {'Content-Type': 'text/html'});
               res.write(fs.readFileSync('./Structure/system/error.html', {encoding: 'utf8'}));
               return res.end();
-            }  
+            }
+            // console.log("Serving text/html");
             res.writeHead(200, {'Content-Type': 'text/html'});
             res.write(data);
             return res.end();
