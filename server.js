@@ -17,43 +17,52 @@ http.createServer(function (req, res) {
     var year_literal = /blog\/[0-9]{4}$/g;
     var month_literal = /blog\/[0-9]{4}\/[0-9]{2}$/g;
     
+    // Return the favicon
     if (filename == "/favicon.ico") {
         res.writeHead(200, {'Content-type' : 'image/ico'});
         res.write(fs.readFileSync("Static/favicon.ico"));
         return res.end();
     }
+    // Return the home page
     else if (filename == "/") {
-        filename = "home.html";
-        filename = "Structure/"+filename;
+        filename = "Structure/home.html";
         console.log(filename);
     }
+    // Return the blog
     else if (filename == "/blog") {
         filename = "Structure"+filename+".html";
         console.log(filename);
     }
+    // Return the Post Archives page
     else if (filename == "/archives") {
         filename = "Structure"+filename+".html";
         console.log(filename);
     }
+    // Return the Projects page
     else if (filename == "/projects") {
         filename = "Structure"+filename+".html";
         console.log(filename);
     }
+    // Return the MTV demo page
     else if (filename == "/MTV") {
         filename = "Static/MTV.html"
         console.log("MTV: "+filename)
     }
+    // Return a post archives page for a specified year
     else if (year_literal.test(filename)) {
         filename = filename.replace("/blog/", "Structure/")+".html";
         console.log(filename);
     }
+    // Return a post archives page for a specified month
     else if (month_literal.test(filename)) {
         filename = filename.split("/");
         filename = "Structure/"+filename[2]+"-"+filename[3]+".html";
     }
+    // Static resource
     else if (filename.startsWith("/Static") || filename == "/rss") {
         console.log("Static: "+filename);
     }
+    // Return a structure file
     else {
         if (!filename.endsWith("/main.css")) {
             filename = "Structure/"+filename.split("/")[2]+".html";
@@ -61,27 +70,32 @@ http.createServer(function (req, res) {
         }
         console.log("Finel else: "+filename);
     }
+    // Return a CSS document with the appropriate header
     if (filename.endsWith(".css")) {
         // console.log("Static/"+filename.split("/")[2]);
         res.writeHead(200, {'Content-type' : 'text/css'});
         res.write(fs.readFileSync("Static/"+filename.split("/")[2], {encoding: 'utf8'}));
         return res.end();
     }
+    // Return a Javascript document with the appropriate header
     else if (filename.endsWith(".js")) {
         res.writeHead(200, {'Content-type' : 'text/javascript'});
         res.write(fs.readFileSync("Static/"+filename.split("/")[2], {encoding: 'utf8'}));
         return res.end();
     }
+    // Return a PNG image with the appropriate header
     else if (filename.endsWith(".png")) {
         res.writeHead(200, {'Content-type' : 'image/png'});
         res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
         return res.end();
     }
+    // Return an XML document, the RSS feed, with the appropriate header
     else if (filename == "/rss") {
         res.writeHead(200, {'Content-type' : 'text/xml'});
         res.write(fs.readFileSync('./Static/Main_feed.xml', {encoding: 'utf8'}));
         return res.end();
     }
+    // Final else, for structure files and the error page
     else
     {
         fs.readFile("./"+filename, function(err, data) {
