@@ -1,15 +1,26 @@
+// Modules
+//  - http: Handle HTTP requests
+//  - url: Handle URL manipulation
+//  - fd: Filesystem access
 var http = require("http");
 var url = require('url');
 var fs = require('fs');
 
 http.createServer(function (req, res) {
+    // q: URL request
+    // filename: Path to the requested resource
     var q = url.parse(req.url, true);
     var filename = q.pathname;
-    // console.log(typeof(filename));
+
+    // year_literal: Regex for year requests
+    // month_literal: Regex for month requests
     var year_literal = /blog\/[0-9]{4}$/g;
     var month_literal = /blog\/[0-9]{4}\/[0-9]{2}$/g;
+    
     if (filename == "/favicon.ico") {
-        return;
+        res.writeHead(200, {'Content-type' : 'image/ico'});
+        res.write(fs.readFileSync("Static/favicon.ico"));
+        return res.end();
     }
     else if (filename == "/") {
         filename = "home.html";
@@ -54,22 +65,22 @@ http.createServer(function (req, res) {
         // console.log("Static/"+filename.split("/")[2]);
         res.writeHead(200, {'Content-type' : 'text/css'});
         res.write(fs.readFileSync("Static/"+filename.split("/")[2], {encoding: 'utf8'}));
-        res.end();
+        return res.end();
     }
     else if (filename.endsWith(".js")) {
         res.writeHead(200, {'Content-type' : 'text/javascript'});
         res.write(fs.readFileSync("Static/"+filename.split("/")[2], {encoding: 'utf8'}));
-        res.end();
+        return res.end();
     }
     else if (filename.endsWith(".png")) {
         res.writeHead(200, {'Content-type' : 'image/png'});
         res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
-        res.end();
+        return res.end();
     }
     else if (filename == "/rss") {
         res.writeHead(200, {'Content-type' : 'text/xml'});
         res.write(fs.readFileSync('./Static/Main_feed.xml', {encoding: 'utf8'}));
-        res.end();
+        return res.end();
     }
     else
     {
