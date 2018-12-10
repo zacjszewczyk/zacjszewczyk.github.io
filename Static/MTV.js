@@ -11,34 +11,48 @@ const MAGIC = 31.5;
 // the rig, as necessary.
 // Parameters: none
 function adjustSize() {
-    var field = document.getElementById("box_length_field");
+    // Get the value of the box length input field
+    var field = document.getElementById("box_length_field").value;
 
-    if (field.value >= 12 && field.value <= 14) {
-        angledSize();
+    // If the box is between 12 and 14 feet long, inclusive:
+    if (field >= 12 && field <= 14) {
+        // This means we don't need the angled portion on the back, so hide it
         $("#container").hide();
-        $("#box").show().width(field.value*MAGIC);
-        $("#aft_window").width(field.value*8);
-        adjustTopper();
+        // Adjust the box size
+        $("#box").show().width(field*MAGIC);
+        // Adjust the window size, smaller for shorter rigs
+        $("#aft_window").width(field*8);
     }
-    else if (field.value > 14) {
-        $("#aft_window").width(field.value*12);
+    // If the box is over 14 feet long:
+    else if (field > 14) {
+        // If the M1078 chassis is selected, set the box length to 14 feet and leave
+        // the remainder for the angled portion on the back.
         if ($("#M1078").css("display") == "block") {
             $("#box").show().width(14*MAGIC);
-            angledSize();
         }
+        // Otherwise, the M1083 box is selected:
         else {
-            if (field.value <= 16) {
-                $("#box").show().width(field.value*MAGIC);
-                angledSize();
+            // If the M1083 chassis is selected, and the box length is (14,16], set 
+            // the box length to the length specified. Hide the container.
+            if (field <= 16) {
+                $("#box").show().width(field*MAGIC);
                 $("#container").hide();
             }
+            // If the M1083 chassis is selected, and the box length is >16 feet,
+            // set the box length to 16 feet and leave the remainder for the angled
+            // portion on the back.
             else {                        
                 $("#box").show().width(16*MAGIC);
-                angledSize();
             }
         }
+        // Adjust the window size, larger for longer rigs
+        $("#aft_window").width(field*12);
     }
+    // Adjust the angled portion size, as necessary
+    angledSize();
+    // Adjust the topper size, as necessary
     adjustTopper();
+    // Update the cookie
     updateCookie();
 }
 // Method: angledSize()
