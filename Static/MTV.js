@@ -1,10 +1,15 @@
 // Variables
-var position;
+// - dimensions: Dimensions of the #box element, used to position elements relative to it.
+// - MAGIC: Used to convert from feet to pixels. Multiply ft * MAGIC.
 var dimensions;
-
 const MAGIC = 31.5;
 
 // Functions
+
+// Method: adjustSize()
+// Purpose: Adjust the box and window size. Call functions to adjust the rest of 
+// the rig, as necessary.
+// Parameters: none
 function adjustSize() {
     var field = document.getElementById("box_length_field");
 
@@ -36,6 +41,9 @@ function adjustSize() {
     adjustTopper();
     updateCookie();
 }
+// Method: angledSize()
+// Purpose: Adjust the rear cutoff size.
+// Parameters: none
 function angledSize() {
     var offset = 0;
     offset = getChassis();
@@ -51,6 +59,9 @@ function angledSize() {
     $("#container").css("left", dimensions.width);
     $("#angled").css("border-width", (0.839*(field.value-offset)*MAGIC).toString()+"px "+((field.value-offset)*MAGIC).toString()+"px 0 0");
 }
+// Method: getChassis()
+// Purpose: Return 14 if the M1078 chassis is selected, and 16 if the M1083.
+// Parameters: none
 function getChassis() {
     if ($(".chassis")[0].checked == true) {
         return 14;
@@ -58,9 +69,17 @@ function getChassis() {
         return 16;
     }
 }
+// Method: adjustTopper()
+// Purpose: Adjust the topper size, based on the box size and position.
+// Parameters: none
 function adjustTopper() {
     $("#topper").css("width", parseFloat($("#box").css("width").replace("px", ""))-250+parseFloat($("#container").css("width").replace("px", "")));
 }
+// Method: flip()
+// Purpose: Toggle CSS to mirror the rig image horizontally, and toggle display of the
+// door as necessary.
+// Parameters:
+// - element: The element to be flipped. Enables polymorphism.
 function flip(element) {
     if ($(element).css("transform") == "none") {
         $("#images").css("-moz-transform", "scaleX(-1)");
@@ -88,25 +107,37 @@ function flip(element) {
         }
     }
 }
+// Method: gray()
+// Purpose: Add CSS to color a specified image gray.
+// Parameters:
+// - element: The element to be colored. Enables polymorphism.
 function gray(element) {
     $(element).css("filter", "invert(5%) grayscale(100%) brightness(90%) contrast(1)");
     updateCookie();
 }
+// Method: clearColor()
+// Purpose: Remove CSS to color a specified image gray.
+// Parameters:
+// - element: The element to be cleared. Enables polymorphism.
 function clearColor(element) {
     $(element).css("filter", "");
     updateCookie();
 }
+// Method: windows()
+// Purpose: Show and hide windows, based on which window checkboxes are checked.
+// Parameters: none.
 function windows() {
     $.each($(".window:checked"), function (key,value) {
-        // console.log("Checked: "+$(value).val());
         $("#"+$(value).val()).show();
     });
     $.each($(".window:not(:checked)"), function (key,value) {
-        // console.log("Unchedked: "+$(value).val());
         $("#"+$(value).val()).hide();
     });
     updateCookie();
 }
+// Method: updateCookie()
+// Purpose: Create a cookie to preserve rig state across sessions.
+// Parameters: none.
 function updateCookie() {
     var view = $(".view:checked").val();
     var chassis = $(".chassis:checked").val();
@@ -121,9 +152,15 @@ function updateCookie() {
     document.cookie = "rv=view="+view+",chassis="+chassis+",box="+box+",topper="+topper+",door="+door+",chassis_color="+chassis_color+",box_color="+box_color+",passthrough="+passthrough+",fore_window="+fore_window+",aft_window="+aft_window+";";
     // console.log(document.cookie);
 }
+// Method: readCookie()
+// Purpose: Return the RV cookie.
+// Parameters: none.
 function readCookie() {
     return document.cookie.split(";")[0].replace("rv=", "").split(",");
 }
+// Method: parseCookie()
+// Purpose: Read the cookie and build the rig based off of a saved state.
+// Parameters: none.
 function parseCookie() {
     var cookie = readCookie();
     // console.log(cookie);
@@ -186,6 +223,9 @@ function parseCookie() {
         $("#aft_window").show();
     }
 }
+// Method: changeChassis()
+// Purpose: Change chassis, and update max length value for the box length field.
+// Parameters: none.
 function changeChassis() {
     $(".chassis_images").hide();
     var id = $(".chassis:checked").attr("id").split("_")[0];
@@ -207,6 +247,7 @@ $( document ).ready(function() {
     $("main").show();
     parseCookie();
     adjustSize();
+
     // View selector
     $(".view").click(function() {
         $("#images").css("transition", "transform 2s");
