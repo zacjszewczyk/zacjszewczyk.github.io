@@ -146,7 +146,7 @@ function flip(element) {
     }
 }
 // Method: gray()
-// Purpose: Add CSS to color a specified image gray.
+// Purpose: Add CSS to color a specified image gray, and update the cookie.
 // Parameters:
 // - element: The element to be colored. Enables polymorphism.
 function gray(element) {
@@ -154,7 +154,7 @@ function gray(element) {
     updateCookie();
 }
 // Method: clearColor()
-// Purpose: Remove CSS to color a specified image gray.
+// Purpose: Remove CSS to color a specified element gray, and update the cookie.
 // Parameters:
 // - element: The element to be cleared. Enables polymorphism.
 function clearColor(element) {
