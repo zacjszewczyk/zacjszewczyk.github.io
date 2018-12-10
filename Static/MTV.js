@@ -112,11 +112,15 @@ function adjustTopper() {
 // Parameters:
 // - element: The element to be flipped. Enables polymorphism.
 function flip(element) {
+    // If the targeted element does not have a CSS transform applied to it, it is not
+    // flipped; therefore, flip it.
     if ($(element).css("transform") == "none") {
         $("#images").css("-moz-transform", "scaleX(-1)");
         $("#images").css("-o-transform", "scaleX(-1)");
         $("#images").css("-webkit-transform", "scaleX(-1)");
         $("#images").css("transform", "scaleX(-1)");
+        // If the image has been flipped, and the door is on the right side of the rig,
+        // show it; if its on the left side of the rig, hide it.
         if ($(".door:checked").val() == "right") {
             $("#door").show();
         }
@@ -124,12 +128,15 @@ function flip(element) {
             $("#door").hide();   
         }
     }
+    // If the targeted element does have a CSS transform applied to it, clear it.
     else
     {
         $("#images").css("-moz-transform", "");
         $("#images").css("-o-transform", "");
         $("#images").css("-webkit-transform", "");
         $("#images").css("transform", "");
+        // If the image has been returned to its original orientation, and the door is
+        // on the left side of the rig, show it; if its on the right side, hide it.
         if ($(".door:checked").val() == "left") {
             $("#door").show();
         }
