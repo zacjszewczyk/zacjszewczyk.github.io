@@ -59,19 +59,34 @@ function adjustSize() {
 // Purpose: Adjust the rear cutoff size.
 // Parameters: none
 function angledSize() {
-    var offset = 0;
-    offset = getChassis();
+    // Depending on the chassis, we will either ignore the first 14 or 16 feet of
+    // the box. The remaining distance will be made up with this angled portion.
+    var offset = getChassis();
 
-    var field = document.getElementById("box_length_field");
+    // Get the value in the box length input field
+    var field = document.getElementById("box_length_field").value;
 
+    // Create a struct to store the box's dimensions
     dimensions = {width : parseInt($("#box").css("width")), height : parseInt($("#box").css("height")) };
-            
+    
+    // Show the container
     $("#container").show();
-    $("#container").css("height", 229-(0.839*(field.value-offset)*MAGIC));
-    $("#container").css("width", (field.value-offset)*MAGIC);
-    $("#angled").css("top", dimensions.height-(0.839*(field.value-offset)*MAGIC));
+    // Set the container dimensions
+    // (field-offset)             = Length, in feet, of the angled portion.
+    // (field-offset)*MAGIC       = Length, in pixels, of the angled portion
+    // 0.839*(field-offset)*MAGIC = y-dimension of the angled portion, to be
+    //                              subtracted from the box height. 0.839 is
+    //                              slope of a 40 degree line.
+    $("#container").css("height", 229-(0.839*(field-offset)*MAGIC));
+    $("#container").css("width", (field-offset)*MAGIC);
+    // Position the angled portion at the right edge of the box
     $("#container").css("left", dimensions.width);
-    $("#angled").css("border-width", (0.839*(field.value-offset)*MAGIC).toString()+"px "+((field.value-offset)*MAGIC).toString()+"px 0 0");
+    
+    // Use border-width CSS attributes to create a line at a 40 degree angle
+    // at the rear of the rig, to preserve approach/departure angles.
+    $("#angled").css("border-width", (0.839*(field-offset)*MAGIC).toString()+"px "+((field-offset)*MAGIC).toString()+"px 0 0");
+    // Position the angled portion at the bottom of the box
+    $("#angled").css("top", dimensions.height-(0.839*(field-offset)*MAGIC));
 }
 // Method: getChassis()
 // Purpose: Return 14 if the M1078 chassis is selected, and 16 if the M1083.
