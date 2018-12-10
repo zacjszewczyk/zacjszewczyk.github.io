@@ -102,6 +102,8 @@ function getChassis() {
 // Purpose: Adjust the topper size, based on the box size and position.
 // Parameters: none
 function adjustTopper() {
+    // Size the topper to the box's width, minus a 250px offset, plus the width of
+    // the angled portion on the rear of the rig.
     $("#topper").css("width", parseFloat($("#box").css("width").replace("px", ""))-250+parseFloat($("#container").css("width").replace("px", "")));
 }
 // Method: flip()
