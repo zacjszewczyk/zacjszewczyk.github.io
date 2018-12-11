@@ -114,6 +114,7 @@ function adjustTopper() {
 function flip(element) {
     // If the targeted element does not have a CSS transform applied to it, it is not
     // flipped; therefore, flip it.
+    $("#images").css("transition", "transform 2s");
     if ($(element).css("transform") == "none") {
         $("#images").css("-moz-transform", "scaleX(-1)");
         $("#images").css("-o-transform", "scaleX(-1)");
@@ -144,6 +145,7 @@ function flip(element) {
             $("#door").hide();   
         }
     }
+    updateCookie();
 }
 // Method: gray()
 // Purpose: Add CSS to color a specified image gray, and update the cookie.
@@ -287,9 +289,7 @@ $( document ).ready(function() {
 
     // View selector
     $(".view").click(function() {
-        $("#images").css("transition", "transform 2s");
         flip($("#images"));
-        updateCookie();
     });
 
     // Chassis selector
