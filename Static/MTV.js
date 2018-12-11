@@ -306,9 +306,9 @@ $( document ).ready(function() {
     // Box length checkboxes
     $(".box_length_checkbox").click(function() {
         document.getElementById("box_length_field").value = this.value;
-        adjustSize()
         $(".box_length_checkbox").prop("checked", false);
         $(this).prop("checked", true);
+        adjustSize()
     });
 
     // Box length field
