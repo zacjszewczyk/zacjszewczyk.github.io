@@ -282,7 +282,6 @@ function changeChassis() {
 
 // End functions
 $( document ).ready(function() {
-    $("main").show();
     parseCookie();
     adjustSize();
 
