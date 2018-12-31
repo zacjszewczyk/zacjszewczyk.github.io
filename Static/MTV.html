@@ -39,8 +39,8 @@
                     <div id="aft_window"></div>
                     <div id="passthrough"></div>
                 </div>
-                <img id="M1078" class="chassis_images" src="Static/Images/M1078_small.png" />
-                <img id="M1083" class="chassis_images" src="Static/Images/M1083_small.png" />
+                <img alt="M1078 chassis" id="M1078" class="chassis_images" data-src="Static/Images/M1078_small.png" />
+                <img alt="M1083 chassis" id="M1083" class="chassis_images" data-src="Static/Images/M1083_small.png" />
             </section>
             <section id="ruler">
                 <div class='ruler'>
@@ -240,6 +240,14 @@
                     </tr>
                     <tr>
                         <td>
+                            <input type="button" value="Share build" id="share" />
+                        </td>
+                        <td>
+                            <p>Copy a sharable link to send to others.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <input type="button" value="Reset build" id="reset" />
                         </td>
                         <td>Build will automatically persist across sessions, unless reset here.</td>
@@ -248,6 +256,7 @@
             </section>
         </main>
     </body>
+    <script type="text/javascript">var M1078=document.getElementById("M1078"),M1083=document.getElementById("M1083");M1078.setAttribute("src",M1078.getAttribute("data-src")),M1083.setAttribute("src",M1083.getAttribute("data-src"));</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="/Static/MTV.js"></script>
     <link rel="stylesheet" href="/Static/MTV.css" type="text/css" />

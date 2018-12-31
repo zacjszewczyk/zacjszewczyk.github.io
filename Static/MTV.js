@@ -175,6 +175,20 @@ function windows() {
     });
     updateCookie();
 }
+// Method: parseURL()
+// Purpose: Translate passed URL parameters to cookie values.
+// Parameters: none.
+function parseURL() {
+    var url = window.location.href;
+    if (url.split("?").length == 1) {
+        return;
+    } else if (url.split("?")[1].split("=").length == 12) {
+        document.cookie = url.split("?")[1];
+    } else {
+        flash("Malformed cookie.");
+    }
+}
+
 // Method: updateCookie()
 // Purpose: Create a cookie to preserve rig state across sessions.
 // Parameters: none.
@@ -281,9 +295,19 @@ function changeChassis() {
     }
     adjustSize();
 }
+// Method: flash()
+// Purpose: Flash a message to the user.
+// Parameters:
+// - string: The message to flash to the user.
+function flash(string) {
+    $("main").append("<flash><p></p></flash>");
+    $("flash p").text(string);
+    $("flash").fadeOut(10000);
+}
 
 // End functions
 $( document ).ready(function() {
+    parseURL();
     parseCookie();
     adjustSize();
 
@@ -359,9 +383,19 @@ $( document ).ready(function() {
         windows();
     });
 
+    // Share
+    $("#share").click(function () {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val(window.location.href+"?rv="+readCookie().toString()).select();
+        document.execCommand("copy");
+        $temp.remove();
+    });
+
     // Reset
     $("#reset").click(function() {
         document.cookie = "rv=";
-        location.reload();
+        window.location.href = window.location.pathname;
+        // location.reload();
     });
 });
