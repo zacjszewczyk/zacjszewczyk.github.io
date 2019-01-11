@@ -49,7 +49,7 @@ border-top-right-radius:5px
 }
 
 flash {
-    position: absolute;
+    position: fixed;
     margin-left: auto;
     margin-right: auto;
     left: 0;

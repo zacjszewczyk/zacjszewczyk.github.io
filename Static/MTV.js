@@ -390,6 +390,7 @@ $( document ).ready(function() {
         $temp.val(window.location.href+"?rv="+readCookie().toString()).select();
         document.execCommand("copy");
         $temp.remove();
+        flash("Share link copied to clipboard.");
     });
 
     // Reset
