@@ -129,6 +129,7 @@ def Terminate():
     # Write closing tags to archives.html and blog.html.
     CloseTemplateBuild("archives.html")
     CloseTemplateBuild("blog.html")
+    CloseTemplateBuild("projects.html")
     
     # Write closing tags to the RSS feed.
     fd = open("Static/Main_feed.xml", "a")
