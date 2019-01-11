@@ -687,13 +687,20 @@ def GenBlog():
                         buff += """\n    </tr>\n</table>\n</article>\n"""
                         archives_fd = open("Structure/archives.html", "a")
                         archives_fd.write(buff)
+                        archives_fd.write("<article class='year_header'><a href='/blog/%s'>%s</a></article>" % (year, year))
                         archives_fd.close()
+                        temp = year
 
                         # Add the twenty-sixth article to the archives page.
                         AppendContentOfXToY("archives", files[year][month][day][timestamp])
                     
                     # Add all other articles to the archives page.
                     else:
+                        if (temp != year):
+                            archives_fd = open("Structure/archives.html", "a")
+                            archives_fd.write("<article class='year_header'><a href='/blog/%s'>%s</a></article>" % (year, year))
+                            archives_fd.close()
+                            temp = year
                         AppendContentOfXToY("archives", files[year][month][day][timestamp])
                     
                     # Add all articles to the RSS feed.

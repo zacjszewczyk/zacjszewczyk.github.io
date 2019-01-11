@@ -10,7 +10,7 @@ article>p {
 #big_table {
     width:              100%;
     padding:            20pt 0px; }
-#big_table tr td {
+#big_table tr td, .year_header {
     text-align:         center;
     padding:            20pt;
     font-size:          200%; }
