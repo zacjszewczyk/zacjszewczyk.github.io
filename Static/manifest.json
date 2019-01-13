@@ -6,8 +6,16 @@
     "background_color": "#F6F6F6",
     "theme_color": "#518341",
     "icons": [{
-        "src": "/Static/favicon.ico",
+        "src": "favicon.ico",
         "sizes": "64x64",
+        "type": "image/ico"
+    },{
+        "src": "favicon_192.ico",
+        "sizes": "192x192",
+        "type": "image/ico"
+    },{
+        "src": "favicon_512.ico",
+        "sizes": "512x512",
         "type": "image/ico"
     }]
 }

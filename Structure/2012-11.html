@@ -2,20 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta property="og:image" content="favicon.ico">
-        <meta property="og:title" content="Post Archives - ">
-        <meta property="og:site_name" content="Zac J. Szewczyk">
-        <meta property="og:article:author" content="Zac J. Szewczyk">
-        <meta property="og:see_also" content="http://zacjszewczyk.com/">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="manifest" href="Static/manifest.json">
+        <meta property="og:image" content="favicon.ico"/>
+        <meta property="og:title" content="Post Archives - "/>
+        <meta property="og:site_name" content="Zac J. Szewczyk"/>
+        <meta property="og:article:author" content="Zac J. Szewczyk"/>
+        <meta property="og:see_also" content="http://zacjszewczyk.com/"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="theme-color" content="#518341"/>
+        <meta name="description" content="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things."/>
+        <link rel="manifest" href="Static/manifest.json"/>
         <title>
             Post Archives - Zac J. Szewczyk
         </title>
         <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
         <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
         <link rel="shortcut icon" href="/Static/favicon.ico">
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/Static/main.css" type="text/css" />
         <!-- SHEETS -->
     </head>
@@ -74,9 +75,19 @@ November, <a href="/blog/2012">2012</a>
         <span id="ipad_device"></span>
     </body>
     <!-- SCRIPTS BLOCK -->
-    <!-- <script>
-        if('serviceWorker' in navigator) { navigator.serviceWorker.register('/Static/sw.js').then(function() { console.log("Service Worker Registered"); }); }
-    </script> -->
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/m_sw.js').then(function(registration) {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>WebFont.load({ google: { families: ['Roboto'] } });</script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
