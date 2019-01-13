@@ -62,6 +62,10 @@ http.createServer(function (req, res) {
     else if (filename.startsWith("/Static") || filename == "/rss") {
         console.log("Static: "+filename);
     }
+    // Main service worker
+    else if (filename.endsWith("sw.js")) {
+        console.log("Main SW: "+filename)
+    }
     // Return a structure file
     else {
         if (!filename.endsWith("/main.css")) {
@@ -79,6 +83,16 @@ http.createServer(function (req, res) {
             'Cache-control' : 'max-age=2592000'}
             );
         res.write(fs.readFileSync("Static/"+filename.split("/")[2], {encoding: 'utf8'}));
+        return res.end();
+    }
+    // Return the main Service Worker with the appropriate header
+    else if (filename.endsWith("sw.js")) {
+        res.writeHead(200,
+            {'Content-type' : 'text/javascript',
+            'Cache-control' : 'public',
+            'Cache-control' : 'max-age=2592000'}
+            );
+        res.write(fs.readFileSync(filename.split("/")[1], {encoding: 'utf8'}));
         return res.end();
     }
     // Return a Javascript document with the appropriate header
