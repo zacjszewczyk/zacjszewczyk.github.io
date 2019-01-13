@@ -1,0 +1,13 @@
+{
+    "name": "Zachary John Szewczyk",
+    "short_name": "ZJS",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#F6F6F6",
+    "theme_color": "#518341",
+    "icons": [{
+        "src": "/Static/favicon.ico",
+        "sizes": "64x64",
+        "type": "image/ico"
+    }]
+}

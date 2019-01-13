@@ -101,7 +101,7 @@ http.createServer(function (req, res) {
         res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
         return res.end();
     }
-    // Return a PNG image with the appropriate header
+    // Return a WebP image with the appropriate header
     else if (filename.endsWith(".webp")) {
         res.writeHead(200,
             {'Content-type' : 'image/webp',
@@ -115,6 +115,16 @@ http.createServer(function (req, res) {
     else if (filename == "/rss") {
         res.writeHead(200, {'Content-type' : 'text/xml'});
         res.write(fs.readFileSync('./Static/Main_feed.xml', {encoding: 'utf8'}));
+        return res.end();
+    }
+    // Return a JSON file with the appropriate header
+    else if (filename.endsWith(".json")) {
+        res.writeHead(200,
+            {'Content-type' : 'text/json',
+            'Cache-control' : 'public',
+            'Cache-control' : 'max-age=2592000'}
+            );
+        res.write(fs.readFileSync("Static/"+filename.split("/")[2]));
         return res.end();
     }
     // Final else, for structure files and the error page
