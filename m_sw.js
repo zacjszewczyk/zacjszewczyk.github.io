@@ -7,7 +7,12 @@ var config = {
     '/projects',
     '/blog',
     '/archives',
-    '/'
+    '/',
+    '/Static/Images/M1078_small.webp',
+    '/Static/Images/M1083_small.webp',
+    '/Static/Images/metal.png',
+    '/Static/Images/concrete.png',
+    '/Static/MTV.html'
   ],
   cachePathPattern: /^\/(?:(20[0-9]{2}|about|blog|css|images|js)\/(.+)?)?$/,
   offlineImage: '<svg role="img" aria-labelledby="offline-title"'
