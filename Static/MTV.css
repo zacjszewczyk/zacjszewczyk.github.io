@@ -183,24 +183,6 @@ td:last-of-type {
 border-right:none
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: portrait) {
-body {
-font-size:350%;
-line-height:130%;
-zoom:.7
-}
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: landscape) {
-body {
-font-size:250%;
-line-height:150%;
-zoom:.8
-}
-}
-
 #vertical_ruler {
 height:435px;
 width:14px;
@@ -221,7 +203,7 @@ width:100%
 position:absolute;
 left:-15px;
 top:-5px;
-font:11px sans-serif
+font:11pt sans-serif
 }
 
 .ft:first-of-type {
@@ -513,4 +495,31 @@ left:90%
 
 .ruler .mm:nth-of-type(10) {
 left:100%
+}
+
+/* Media Queries */
+
+/* iPhone XS */
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+body {
+font-size:350%;
+line-height:130%;
+zoom:.3;
+}
+#box {
+    top: 113px;
+    left: 335px;
+}
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+body {
+font-size:250%;
+line-height:150%;
+zoom:.8
+}
 }
