@@ -9,7 +9,7 @@
         <link rel="manifest" href="Static/manifest.json">
         <meta name="theme-color" content="#FFFFFF"/>
     </head>
-    <body>
+    <body style="display:none;">
         <main>
             <section id="vertical_ruler">
                 <div class="vertical_ruler">
@@ -41,8 +41,14 @@
                     <div id="aft_window"></div>
                     <div id="passthrough"></div>
                 </div>
-                <img alt="M1078 chassis" id="M1078" class="chassis_images" data-src="Static/Images/M1078_small.webp" fallback-source="Static/Images/M1078_small.png" onerror="this.src=fallback-src" onabort="this.src=fallback-src"/>
-                <img alt="M1083 chassis" id="M1083" class="chassis_images" data-src="Static/Images/M1083_small.webp" fallback-source="Static/Images/M1083_small.png" onerror="this.src=fallback-src" onabort="this.src=fallback-src"/>
+                <picture alt="M1078 chassis" id="M1078" class="chassis_images">
+                    <source type="image/webp" srcset="Static/Images/M1078_small.webp">
+                    <img src="Static/Images/M1078_small.png" />
+                </picture>
+                <picture alt="M1083 chassis" id="M1083" class="chassis_images">
+                    <source type="image/webp" srcset="Static/Images/M1083_small.webp">
+                    <img src="Static/Images/M1083_small.png" />
+                </picture>
             </section>
             <section id="ruler">
                 <div class='ruler'>
@@ -269,8 +275,7 @@
           });
         }
     </script>
-    <script type="text/javascript">var M1078=document.getElementById("M1078"),M1083=document.getElementById("M1083");M1078.setAttribute("src",M1078.getAttribute("data-src")),M1083.setAttribute("src",M1083.getAttribute("data-src"));</script>
+    <link rel="stylesheet" href="/Static/MTV.css" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="/Static/MTV.js"></script>
-    <link rel="stylesheet" href="/Static/MTV.css" type="text/css" />
 </html>

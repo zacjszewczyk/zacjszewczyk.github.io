@@ -307,6 +307,7 @@ function flash(string) {
 
 // End functions
 $( document ).ready(function() {
+    $("body").show();
     parseURL();
     parseCookie();
     adjustSize();
