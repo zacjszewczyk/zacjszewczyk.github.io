@@ -256,7 +256,17 @@
             </section>
         </main>
     </body>
-    <script>if('serviceWorker' in navigator) { navigator.serviceWorker.register('/Static/sw.js').then(function() { console.log("Service Worker Registered"); }); }</script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/Static/sw.js').then(function(registration) {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+    </script>
     <script type="text/javascript">var M1078=document.getElementById("M1078"),M1083=document.getElementById("M1083");M1078.setAttribute("src",M1078.getAttribute("data-src")),M1083.setAttribute("src",M1083.getAttribute("data-src"));</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="/Static/MTV.js"></script>
