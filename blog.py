@@ -680,7 +680,7 @@ def GenBlog():
                         # the row, and then puts three more year entries in the second row.
                         # This code is stored in 'buff', and then added to the archives
                         # page.
-                        buff = """\n<article>\n<table style="width:100%;padding:20pt 0;" id="big_table">\n    <tr>\n"""
+                        buff = """\n<article>\n<table style="width:100%;padding:2% 0;" id="big_table">\n    <tr>\n"""
                         for each in sorted(files, reverse=True)[:3]:
                             buff += """\n        <td>\n            <a href=\"/blog/%s\">%s</a>\n        </td>""" % (each.lower(), each)
                         buff += """\n    </tr>\n    <tr>\n"""

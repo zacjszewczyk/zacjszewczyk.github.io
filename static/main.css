@@ -14,7 +14,7 @@ article>p {
     margin: 25px 0; }
 #big_table tr td {
     text-align: center;
-    padding: 20pt;
+    padding: 2%;
     font-size: 200%; }
 #blog main article, #postarchives main article, header article {
     margin: 100px 0px; }
@@ -53,8 +53,9 @@ h6 {
     font-size: 12pt; }
 header {
     text-align: center;
-    min-height: 100px;
-    font-size: 150%; }
+    font-size: 150%;
+    max-width: 75em;
+    margin: 0 auto; }
 #home #home_link, 
 #blog #blog_link, 
 #projects #projects_link,
@@ -83,8 +84,8 @@ html, body {
 .linkpost:hover {
     color: #C97D88;
     cursor: pointer; }
-main, header {
-    max-width: 75em;
+main {
+    max-width: 65em;
     margin: 0 auto;
     margin-bottom: 100px; }
 main article>time {
@@ -93,7 +94,7 @@ main article>time {
     font-size: 90%;
     display: block; }
 nav a {
-    margin: 0px 30px;
+    margin: 0px 5%;
     white-space: nowrap; }
 p a {
     text-decoration: underline; }
@@ -104,3 +105,28 @@ p a {
     margin-right: 50px;
     height: auto;
     padding: 0; }
+
+/* Media Queries */
+
+/* iPhone XS */
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+        body {
+            margin: 0 2em;
+        }
+        article {
+            font-size: 90%;
+        }
+        #big_table tbody tr {
+            width: 100%;
+            display: inline-block;
+            margin: 1em auto;
+        }
+        #big_table tbody tr td {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+    }
