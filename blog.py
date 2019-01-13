@@ -155,7 +155,7 @@ def GenStatic():
 
     # Build the error.html file.
     BuildFromTemplate("error.html", "Error - ", "error", "", "")
-    CloseTemplateBuild("error.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 class=\\"article_title\\">Error: 404 Not Found</h2><p>The requested resource at <u>"+window.location.href+"</u> could not be found.</p></article>"</script>""")
+    CloseTemplateBuild("error.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style=\"text-align:center;\">Error: 404 Not Found</h2><p>The requested resource at <span style="text-decoration:underline;">"+window.location.href+"</span> could not be found.</p></article>"</script>""")
 
 # Method: Migrate
 # Purpose: For files without the header information in their first five lines, generate
@@ -348,7 +348,7 @@ def Markdown(line):
     else:
         # Account for iframes
         if (line.startswith("<iframe")):
-            line = "<div class=\"iframe\">"+line+"</div>"
+            line = "<div style='text-align:center;'>"+line+"</div>"
         # Anything else should be a blockquote
         else:
             line = "<blockquote>"+line+"</blockquote>"
@@ -447,7 +447,7 @@ def GenPage(source, timestamp):
     for line in iter(source_fd.readline, ""):
         # In the first line, classify the article as a linkpost or an original piece.
         if (idx == 0):
-            title += "<article>\n    <h2 class=\"article_title\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line.replace("Type: ", "").strip())
+            title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line.replace("Type: ", "").strip())
         # In the second line of the file, add the article title.
         elif (idx == 1):
             title = title.replace("{{URL_TITLE}}", line.replace("Title: ", "").strip())
@@ -507,7 +507,7 @@ def AppendContentOfXToY(target, source):
                 ptype = Migrate(source, mod_time).strip()
             else:
                 ptype = line.replace("Type: ", "").strip()
-            title += "<article>\n    <h2 class=\"article_title\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line.replace("Type: ", "").strip())
+            title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line.replace("Type: ", "").strip())
         # In the second line of the file, add the article title.
         elif (idx == 1):
             title = title.replace("{{URL_TITLE}}", line.replace("Title: ", "").strip())
@@ -644,7 +644,7 @@ def GenBlog():
         # Write the opening HTML tags
         year_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives"))
         # Insert a 'big table' into the document, to better display the months listed.
-        year_fd.write("""<table id="big_table">""")
+        year_fd.write("""<table style="width:100%;padding:20pt 0;" id="big_table">""")
         year_fd.write("    <tr>\n        <td>%s</td>\n    </tr>\n" % (year))
         # Sort the sub-dictionaries by keys, months, then iterate over it. For each
         # month in which a post was made, generate a 'month' file that contains all
@@ -680,7 +680,7 @@ def GenBlog():
                         # the row, and then puts three more year entries in the second row.
                         # This code is stored in 'buff', and then added to the archives
                         # page.
-                        buff = """\n<article>\n<table id="big_table">\n    <tr>\n"""
+                        buff = """\n<article>\n<table style="width:100%;padding:20pt 0;" id="big_table">\n    <tr>\n"""
                         for each in sorted(files, reverse=True)[:3]:
                             buff += """\n        <td>\n            <a href=\"/blog/%s\">%s</a>\n        </td>""" % (each.lower(), each)
                         buff += """\n    </tr>\n    <tr>\n"""
@@ -689,7 +689,7 @@ def GenBlog():
                         buff += """\n    </tr>\n</table>\n</article>\n"""
                         archives_fd = open("Structure/archives.html", "a")
                         archives_fd.write(buff)
-                        archives_fd.write("<article class='year_header'><a href='/blog/%s'>%s</a></article>" % (year, year))
+                        archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s'>%s</a></article>" % (year, year))
                         archives_fd.close()
                         temp = year
 
@@ -700,7 +700,7 @@ def GenBlog():
                     else:
                         if (temp != year):
                             archives_fd = open("Structure/archives.html", "a")
-                            archives_fd.write("<article class='year_header'><a href='/blog/%s'>%s</a></article>" % (year, year))
+                            archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s'>%s</a></article>" % (year, year))
                             archives_fd.close()
                             temp = year
                         AppendContentOfXToY("archives", files[year][month][day][timestamp])
