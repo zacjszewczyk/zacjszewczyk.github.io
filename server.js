@@ -73,19 +73,41 @@ http.createServer(function (req, res) {
     // Return a CSS document with the appropriate header
     if (filename.endsWith(".css")) {
         // console.log("Static/"+filename.split("/")[2]);
-        res.writeHead(200, {'Content-type' : 'text/css'});
+        res.writeHead(200,
+            {'Content-type' : 'text/css',
+            'Cache-control' : 'public',
+            'Cache-control' : 'max-age=2592000'}
+            );
         res.write(fs.readFileSync("Static/"+filename.split("/")[2], {encoding: 'utf8'}));
         return res.end();
     }
     // Return a Javascript document with the appropriate header
     else if (filename.endsWith(".js")) {
-        res.writeHead(200, {'Content-type' : 'text/javascript'});
+        res.writeHead(200,
+            {'Content-type' : 'text/javascript',
+            'Cache-control' : 'public',
+            'Cache-control' : 'max-age=2592000'}
+            );
         res.write(fs.readFileSync("Static/"+filename.split("/")[2], {encoding: 'utf8'}));
         return res.end();
     }
     // Return a PNG image with the appropriate header
     else if (filename.endsWith(".png")) {
-        res.writeHead(200, {'Content-type' : 'image/png'});
+        res.writeHead(200,
+            {'Content-type' : 'image/png',
+            'Cache-control' : 'public',
+            'Cache-control' : 'max-age=2592000'}
+            );
+        res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
+        return res.end();
+    }
+    // Return a PNG image with the appropriate header
+    else if (filename.endsWith(".webp")) {
+        res.writeHead(200,
+            {'Content-type' : 'image/webp',
+            'Cache-control' : 'public',
+            'Cache-control' : 'max-age=2592000'}
+            );
         res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
         return res.end();
     }
