@@ -130,6 +130,7 @@ def Terminate():
     CloseTemplateBuild("archives.html")
     CloseTemplateBuild("blog.html")
     CloseTemplateBuild("projects.html")
+    CloseTemplateBuild("home.html")
     
     # Write closing tags to the RSS feed.
     fd = open("Static/Main_feed.xml", "a")
@@ -536,7 +537,7 @@ def AppendContentOfXToY(target, source):
         idx += 1
     else:
         # At the end of the file, append the read more link and the closing HTML tags.
-        target_fd.write("\n    <p class=\"read_more_paragraph\">\n        <a class=\"read_more_link\" href=\"/blog/%s\">&#x24CF;</a>\n    </p>" % (source.lower().replace(" ", "-").replace(".txt", "")))
+        target_fd.write("\n    <p class=\"read_more_paragraph\">\n        <a class=\"read_more_link\" href=\"/blog/%s\">&#x24E9;</a>\n    </p>" % (source.lower().replace(" ", "-").replace(".txt", "")))
         target_fd.write("\n</article>\n")
 
     # Close the file descriptors.
