@@ -45,39 +45,30 @@
     
     <p>The last article I wrote I called &#8220;<a href="/blog/printing-money">Printing Money</a>&#8221;. I started writing that piece on December first of last year, more than five months ago. After a few days I lost interest, and it remained an unfinished blurb until last week when I stumbled across it. Last week, meaning it sat in Drafts for somewhere in the ballpark of three days to just under a week after I rediscovered it and before I put any effort into improving it, before last night when I sat down in Dunkin&#8217; Donuts and put enough work in to the aticle to call it finished enough to publish without feeling too guilty. I did the same thing with <a href="/blog/citational-fallacy"><em>Citational Fallacy</em></a> and <a href="/blog/the-key-to-education-reform"><em>The Key to Education Reform</em></a>, establishing an unfortunate trend. I had such high hopes and grand aspriations for those three articles at the onset, and look at them now: a shadow of what they could have been. Still good by most standards, but far inferior to the articles I could have published had I set them on the back burner and waited a while instead of forging ahead and publishing each article before it was actually ready.</p>
 </div>
-</article><!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta property="og:image" content="favicon.ico"/>
-        <meta property="og:title" content="Pushing it Out - "/>
-        <meta property="og:site_name" content="Zac J. Szewczyk"/>
-        <meta property="og:article:author" content="Zac J. Szewczyk"/>
-        <meta property="og:see_also" content="http://zacjszewczyk.com/"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="theme-color" content="#518341"/>
-        <meta name="description" content="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things."/>
-        <link rel="manifest" href="Static/manifest.json"/>
-        <title>
-            Pushing it Out - Zac J. Szewczyk
-        </title>
-        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
-        <link rel="shortcut icon" href="/Static/favicon.ico">
-        <link rel="stylesheet" href="/Static/main.css" type="text/css" />
-        <!-- SHEETS -->
-    </head>
-    <body id="post">
-        <header><!--BLOCK HEADER--></header>
-        <nav>
-            <a id="home_link" href="/">Home</a>
-            <a id="blog_link" href="/blog">Blog</a>
-            <a id="rss_link" href="/rss">RSS</a>
-            <a id="archives_link" href="/archives">Post Archives</a>
-            <a id="projects_link" href="/projects">Projects</a>
-            <!-- <a id="logout_link" href="/logout">Logout</a> -->
-            <div class="flash">{{ message }}</div>
-        </nav>
-        <main>
-            <section id="content_section">
-                
+</article>
+            </section>
+        </main>
+        <span id="ipad_device"></span>
+    </body>
+    <!-- SCRIPTS BLOCK -->
+    <script>document.getElementsByTagName("body")[0].style.display = "block";</script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/m_sw.js').then(function(registration) {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-36771281-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</html>

@@ -75,39 +75,30 @@
     
     <p>When I started writing this, I opted for the title &#8220;Insanity&#8221; planning to draw a parallel between the tendency of weight lifters to continually return and attempt benching their max, and the writer&#8217;s tendency to willfully subject themselves to the crushing weight of an unfinished article. In each case, both repeatedly approach the same task in a similar way expecting a different result. And as <a href="http://www.news.hypercrit.net/2012/11/13/einstein-on-misattribution-i-probably-didnt-say-that/">a particularly astute individual</a> once said, that is the very definition of insanity. Maybe, then, these two traditionally divergent camps are not as dissimilar as we may have thought. Both come back time and time again expecting something different from the activities that served as such a pain point in the past, after all. Perhaps, but such a comparison belies a misunderstand of both processes: weight lifters grow stronger with each and every lift, just as writers get better with each and every article. And therein lies the secret to achieving excellence in either field.</p>
 </div>
-</article><!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta property="og:image" content="favicon.ico"/>
-        <meta property="og:title" content="Insanity - "/>
-        <meta property="og:site_name" content="Zac J. Szewczyk"/>
-        <meta property="og:article:author" content="Zac J. Szewczyk"/>
-        <meta property="og:see_also" content="http://zacjszewczyk.com/"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="theme-color" content="#518341"/>
-        <meta name="description" content="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things."/>
-        <link rel="manifest" href="Static/manifest.json"/>
-        <title>
-            Insanity - Zac J. Szewczyk
-        </title>
-        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
-        <link rel="shortcut icon" href="/Static/favicon.ico">
-        <link rel="stylesheet" href="/Static/main.css" type="text/css" />
-        <!-- SHEETS -->
-    </head>
-    <body id="post">
-        <header><!--BLOCK HEADER--></header>
-        <nav>
-            <a id="home_link" href="/">Home</a>
-            <a id="blog_link" href="/blog">Blog</a>
-            <a id="rss_link" href="/rss">RSS</a>
-            <a id="archives_link" href="/archives">Post Archives</a>
-            <a id="projects_link" href="/projects">Projects</a>
-            <!-- <a id="logout_link" href="/logout">Logout</a> -->
-            <div class="flash">{{ message }}</div>
-        </nav>
-        <main>
-            <section id="content_section">
-                
+</article>
+            </section>
+        </main>
+        <span id="ipad_device"></span>
+    </body>
+    <!-- SCRIPTS BLOCK -->
+    <script>document.getElementsByTagName("body")[0].style.display = "block";</script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/m_sw.js').then(function(registration) {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-36771281-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</html>

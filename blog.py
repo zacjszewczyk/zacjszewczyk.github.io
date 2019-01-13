@@ -477,7 +477,7 @@ def GenPage(source, timestamp):
     else:
         # At the end of the file, write closing HTML tags.
         target_fd.write("\n</div>\n</article>")
-        target_fd.write(local_content)
+        target_fd.write(content[1])
         
     # Close file descriptors.
     target_fd.close()

@@ -63,39 +63,30 @@
     
     <p>Incredibly&#160;&#8212;&#160;to me, at least&#160;&#8212;&#160;I did all this yesterday in around twelve hours from start to finish, and spent today writing this before and after work. I cannot, nor do I mean to, take all the credit for this great turnaround time though: I could not have done it without the feedback of my Twitter followers giving me direction as to what I needed to work on next. In particular, I would like to say a special &#8220;Thank you!" to <a href="http://twitter.com/typistX">@typistX</a> on Twitter for all his help: when asked he took our conversation out of Twitter and in to email, where we made a great deal of progress. I could not have done this so quickly and to such splendid results without him, nor without the input of my newfound friends on Twitter. To all of you: thank you; to everyone else, I hope you enjoy the new design.</p>
 </div>
-</article><!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta property="og:image" content="favicon.ico"/>
-        <meta property="og:title" content="A Complete Redesign in Twelve Hours - "/>
-        <meta property="og:site_name" content="Zac J. Szewczyk"/>
-        <meta property="og:article:author" content="Zac J. Szewczyk"/>
-        <meta property="og:see_also" content="http://zacjszewczyk.com/"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="theme-color" content="#518341"/>
-        <meta name="description" content="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things."/>
-        <link rel="manifest" href="Static/manifest.json"/>
-        <title>
-            A Complete Redesign in Twelve Hours - Zac J. Szewczyk
-        </title>
-        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
-        <link rel="shortcut icon" href="/Static/favicon.ico">
-        <link rel="stylesheet" href="/Static/main.css" type="text/css" />
-        <!-- SHEETS -->
-    </head>
-    <body id="post">
-        <header><!--BLOCK HEADER--></header>
-        <nav>
-            <a id="home_link" href="/">Home</a>
-            <a id="blog_link" href="/blog">Blog</a>
-            <a id="rss_link" href="/rss">RSS</a>
-            <a id="archives_link" href="/archives">Post Archives</a>
-            <a id="projects_link" href="/projects">Projects</a>
-            <!-- <a id="logout_link" href="/logout">Logout</a> -->
-            <div class="flash">{{ message }}</div>
-        </nav>
-        <main>
-            <section id="content_section">
-                
+</article>
+            </section>
+        </main>
+        <span id="ipad_device"></span>
+    </body>
+    <!-- SCRIPTS BLOCK -->
+    <script>document.getElementsByTagName("body")[0].style.display = "block";</script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/m_sw.js').then(function(registration) {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-36771281-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</html>

@@ -159,39 +159,30 @@
     <div id="fn1" class="footnote">
 <p>The various <em>5by5 Specials</em> episodes recorded after Apple&#8217;s iPhone events are prime examples of the shortcomings this format suffers from. In particular, throughout <a href="http://5by5.tv/specials/22">episode twenty-two</a> I felt none of the show&#8217;s impressive list of hosts&#160;&#8212;&#160;including Horace Dediu, Benedict Evans, and Christina Warren&#160;&#8212;&#160;had ample room to talk around each other and share their intriguing insights. <em>The Changelog</em>, in my brief encounters with the show, suffers from a similar problem of hosts tripping over each other while attempting to speak, compounded with what I can only characterize as a confounding lack of desire to speak. During the few episodes I listened to before abandoning <em>The Changelog</em>, both the guest and co-hosts had to prompt each other to pick up the conversation after an awkward period of silence.</p><a class="fn" title="return to article" href="#fnref1">&#x21a9;</a>
 </div>
-</article><!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta property="og:image" content="favicon.ico"/>
-        <meta property="og:title" content="Podcasting State of the Union - "/>
-        <meta property="og:site_name" content="Zac J. Szewczyk"/>
-        <meta property="og:article:author" content="Zac J. Szewczyk"/>
-        <meta property="og:see_also" content="http://zacjszewczyk.com/"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="theme-color" content="#518341"/>
-        <meta name="description" content="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things."/>
-        <link rel="manifest" href="Static/manifest.json"/>
-        <title>
-            Podcasting State of the Union - Zac J. Szewczyk
-        </title>
-        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
-        <link rel="shortcut icon" href="/Static/favicon.ico">
-        <link rel="stylesheet" href="/Static/main.css" type="text/css" />
-        <!-- SHEETS -->
-    </head>
-    <body id="post">
-        <header><!--BLOCK HEADER--></header>
-        <nav>
-            <a id="home_link" href="/">Home</a>
-            <a id="blog_link" href="/blog">Blog</a>
-            <a id="rss_link" href="/rss">RSS</a>
-            <a id="archives_link" href="/archives">Post Archives</a>
-            <a id="projects_link" href="/projects">Projects</a>
-            <!-- <a id="logout_link" href="/logout">Logout</a> -->
-            <div class="flash">{{ message }}</div>
-        </nav>
-        <main>
-            <section id="content_section">
-                
+</article>
+            </section>
+        </main>
+        <span id="ipad_device"></span>
+    </body>
+    <!-- SCRIPTS BLOCK -->
+    <script>document.getElementsByTagName("body")[0].style.display = "block";</script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/m_sw.js').then(function(registration) {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-36771281-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</html>

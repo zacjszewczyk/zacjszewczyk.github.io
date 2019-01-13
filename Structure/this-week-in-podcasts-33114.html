@@ -69,39 +69,30 @@
     
     <p><a href="http://5by5.tv/prompt/42">The Prompt Episode #42: Beautiful Flower</a>. This week, Myke, Stephen, and Federico gave the Windows BUILD keynote an uncharacteristically (for the average Apple-centric computer user) fair shake, and spoke highly of the services and features announced during it as well. Although I can&#8217;t speak from firsthand experience, and from what little I have heard so far it seems Microsoft exaggerated the capabilities of Cortana and could have done the same in other areas as well, at least the ideas coming out of Redmond are interesting and worthy of attention once more. Especially with regards to Cortana&#8217;s alleged abilities and integration with third-party apps, I hope Apple will take a cue perhaps for iOS 8. And speaking of other companies Apple will hopefully take a hint from in the future, Russell Ivanovic of Shifty Jelly had an interesting correspondent report where he talked about the Play Store and how Google far outclasses Apple when it comes to supporting their platform&#8217;s developers. Take note, Apple.</p>
 </div>
-</article><!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta property="og:image" content="favicon.ico"/>
-        <meta property="og:title" content="This Week in Podcasts - "/>
-        <meta property="og:site_name" content="Zac J. Szewczyk"/>
-        <meta property="og:article:author" content="Zac J. Szewczyk"/>
-        <meta property="og:see_also" content="http://zacjszewczyk.com/"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="theme-color" content="#518341"/>
-        <meta name="description" content="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things."/>
-        <link rel="manifest" href="Static/manifest.json"/>
-        <title>
-            This Week in Podcasts - Zac J. Szewczyk
-        </title>
-        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
-        <link rel="shortcut icon" href="/Static/favicon.ico">
-        <link rel="stylesheet" href="/Static/main.css" type="text/css" />
-        <!-- SHEETS -->
-    </head>
-    <body id="post">
-        <header><!--BLOCK HEADER--></header>
-        <nav>
-            <a id="home_link" href="/">Home</a>
-            <a id="blog_link" href="/blog">Blog</a>
-            <a id="rss_link" href="/rss">RSS</a>
-            <a id="archives_link" href="/archives">Post Archives</a>
-            <a id="projects_link" href="/projects">Projects</a>
-            <!-- <a id="logout_link" href="/logout">Logout</a> -->
-            <div class="flash">{{ message }}</div>
-        </nav>
-        <main>
-            <section id="content_section">
-                
+</article>
+            </section>
+        </main>
+        <span id="ipad_device"></span>
+    </body>
+    <!-- SCRIPTS BLOCK -->
+    <script>document.getElementsByTagName("body")[0].style.display = "block";</script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/m_sw.js').then(function(registration) {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-36771281-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</html>
