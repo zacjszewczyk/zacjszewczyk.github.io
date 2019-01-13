@@ -111,6 +111,16 @@ http.createServer(function (req, res) {
         res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
         return res.end();
     }
+    // Return a JPG image with the appropriate header
+    else if (filename.endsWith(".jpg")) {
+        res.writeHead(200,
+            {'Content-type' : 'image/jpg',
+            'Cache-control' : 'public',
+            'Cache-control' : 'max-age=2592000'}
+            );
+        res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
+        return res.end();
+    }
     // Return an XML document, the RSS feed, with the appropriate header
     else if (filename == "/rss") {
         res.writeHead(200, {'Content-type' : 'text/xml'});
