@@ -95,11 +95,6 @@ main article>time {
 nav a {
     margin: 0px 30px;
     white-space: nowrap; }
-.original {
-    color: #255515; }
-.original:hover {
-    color: #934953;
-    cursor: pointer; }
 p a {
     text-decoration: underline; }
 .read_more_link {
