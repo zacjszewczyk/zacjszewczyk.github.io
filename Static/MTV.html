@@ -8,8 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="manifest" href="Static/manifest.json">
         <meta name="theme-color" content="#FFFFFF"/>
+        <link rel="stylesheet" href="/Static/MTV.css" type="text/css" />
     </head>
-    <body style="display:none;">
+    <body>
         <main>
             <section id="vertical_ruler">
                 <div class="vertical_ruler">
@@ -42,12 +43,12 @@
                     <div id="passthrough"></div>
                 </div>
                 <picture alt="M1078 chassis" id="M1078" class="chassis_images">
-                    <source type="image/webp" srcset="Static/Images/M1078_small.webp">
-                    <img src="Static/Images/M1078_small.png" />
+                    <source type="image/webp" data-srcset="Static/Images/M1078_small.webp">
+                    <img data-src="Static/Images/M1078_small.png" />
                 </picture>
                 <picture alt="M1083 chassis" id="M1083" class="chassis_images">
-                    <source type="image/webp" srcset="Static/Images/M1083_small.webp">
-                    <img src="Static/Images/M1083_small.png" />
+                    <source type="image/webp" data-srcset="Static/Images/M1083_small.webp">
+                    <img data-src="Static/Images/M1083_small.png" />
                 </picture>
             </section>
             <section id="ruler">
@@ -275,7 +276,10 @@
           });
         }
     </script>
-    <link rel="stylesheet" href="/Static/MTV.css" type="text/css" />
+    <script>
+        let s = document.getElementsByTagName("source"); for (i=0; i < s.length; i++) { s[i].setAttribute("srcset", s[i].getAttribute("data-srcset")); }
+        let m = document.getElementsByTagName("img"); for (i=0; i < m.length; i++) { m[i].setAttribute("src", m[i].getAttribute("data-src")); }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="/Static/MTV.js"></script>
 </html>
