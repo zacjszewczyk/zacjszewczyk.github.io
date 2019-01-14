@@ -18,7 +18,7 @@ var fs = require('fs');
 var d = new Date();
 
 http.createServer(function (req, res) {
-    console.log("["+d.getFullYear()+"/"+d.getMonth()+"/"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+":"+d.getMilliseconds()+"] "+req.method+" "+req.url+" REF: "+req.headers.referer);
+    console.log("["+d.getFullYear()+"/"+d.getMonth()+"/"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+":"+d.getMilliseconds()+"] "+req.method+" "+req.url+" REF: "+req.headers.referer+" via ["+req.connection.remoteFamily+" "+req.connection.remoteAddress+" port "+req.connection.remotePort+"]");
     
     // q: URL request
     // filename: Path to the requested resource
