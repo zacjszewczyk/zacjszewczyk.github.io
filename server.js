@@ -1,3 +1,13 @@
+// Functions
+function writeHTTPHeader(path, type) {
+    return {'Date' : d.getUTCFullYear()+"/"+d.getUTCMonth()+"/"+d.getUTCDate()+" "+d.getUTCHours()+":"+d.getUTCMinutes()+":"+d.getUTCSeconds()+":"+d.getUTCMilliseconds(),
+    'Server' : '',
+    'Content-length' : fs.statSync(path).size,
+    'Content-type' : type,
+    'Cache-control' : 'max-age=2592000',
+    'Connection' : 'keep-alive'};
+}
+
 // Modules
 //  - http: Handle HTTP requests
 //  - url: Handle URL manipulation
@@ -22,7 +32,7 @@ http.createServer(function (req, res) {
     
     // Return the favicon
     if (filename == "/favicon.ico") {
-        res.writeHead(200, {'Content-type' : 'image/ico'});
+        res.writeHead(200, writeHTTPHeader("Static/favicon.ico","image/ico"));
         res.write(fs.readFileSync("Static/favicon.ico"));
         return res.end();
     }
@@ -79,78 +89,49 @@ http.createServer(function (req, res) {
     }
     // Return a CSS document with the appropriate header
     if (filename.endsWith(".css")) {
-        // console.log("Static/"+filename.split("/")[2]);
-        res.writeHead(200,
-            {'Content-type' : 'text/css',
-            'Cache-control' : 'public',
-            'Cache-control' : 'max-age=2592000'}
-            );
+        res.writeHead(200, writeHTTPHeader("Static/"+filename.split("/")[2],"text/css"));
         res.write(fs.readFileSync("Static/"+filename.split("/")[2], {encoding: 'utf8'}));
         return res.end();
     }
     // Return the main Service Worker with the appropriate header
     else if (filename.endsWith("sw.js")) {
-        res.writeHead(200,
-            {'Content-type' : 'text/javascript',
-            'Cache-control' : 'public',
-            'Cache-control' : 'max-age=2592000'}
-            );
+        res.writeHead(200, writeHTTPHeader(filename.split("/")[1],"text/javascript"));
         res.write(fs.readFileSync(filename.split("/")[1], {encoding: 'utf8'}));
         return res.end();
     }
     // Return a Javascript document with the appropriate header
     else if (filename.endsWith(".js")) {
-        res.writeHead(200,
-            {'Content-type' : 'text/javascript',
-            'Cache-control' : 'public',
-            'Cache-control' : 'max-age=2592000'}
-            );
+        res.writeHead(200, writeHTTPHeader("Static/"+filename.split("/")[2],"text/javascript"));
         res.write(fs.readFileSync("Static/"+filename.split("/")[2], {encoding: 'utf8'}));
         return res.end();
     }
     // Return a PNG image with the appropriate header
     else if (filename.endsWith(".png")) {
-        res.writeHead(200,
-            {'Content-type' : 'image/png',
-            'Cache-control' : 'public',
-            'Cache-control' : 'max-age=2592000'}
-            );
+        res.writeHead(200, writeHTTPHeader("Static/Images/"+filename.split("/")[3], "image/png"));
         res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
         return res.end();
     }
     // Return a WebP image with the appropriate header
     else if (filename.endsWith(".webp")) {
-        res.writeHead(200,
-            {'Content-type' : 'image/webp',
-            'Cache-control' : 'public',
-            'Cache-control' : 'max-age=2592000'}
-            );
+        res.writeHead(200, writeHTTPHeader("Static/Images/"+filename.split("/")[3], "image/webp"));
         res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
         return res.end();
     }
     // Return a JPG image with the appropriate header
     else if (filename.endsWith(".jpg")) {
-        res.writeHead(200,
-            {'Content-type' : 'image/jpg',
-            'Cache-control' : 'public',
-            'Cache-control' : 'max-age=2592000'}
-            );
+        res.writeHead(200, writeHTTPHeader("Static/Images/"+filename.split("/")[3], "image/jpg"));
         res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
         return res.end();
     }
     // Return an XML document, the RSS feed, with the appropriate header
     else if (filename == "/rss") {
-        res.writeHead(200, {'Content-type' : 'text/xml'});
+        res.writeHead(200, writeHTTPHeader("./Static/Main_feed.xml", "text/xml"))
         res.write(fs.readFileSync('./Static/Main_feed.xml', {encoding: 'utf8'}));
         return res.end();
     }
     // Return a JSON file with the appropriate header
     else if (filename.endsWith(".json")) {
-        res.writeHead(200,
-            {'Content-type' : 'text/json',
-            'Cache-control' : 'public',
-            'Cache-control' : 'max-age=2592000'}
-            );
+        res.writeHead(200, writeHTTPHeader("Static/"+filename.split("/")[2], "text/json"));
         res.write(fs.readFileSync("Static/"+filename.split("/")[2]));
         return res.end();
     }
@@ -159,7 +140,7 @@ http.createServer(function (req, res) {
     {
         fs.readFile("./"+filename, function(err, data) {
             if (err) {
-              res.writeHead(404, {'Content-Type': 'text/html'});
+              res.writeHead(404, writeHTTPHeader('./Structure/system/error.html',"text/html"));
               res.write(fs.readFileSync('./Structure/system/error.html', {encoding: 'utf8'}));
               return res.end();
             }
