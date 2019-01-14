@@ -5,8 +5,11 @@
 var http = require("http");
 var url = require('url');
 var fs = require('fs');
+var d = new Date();
 
 http.createServer(function (req, res) {
+    console.log("["+d.getFullYear()+"/"+d.getMonth()+"/"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+":"+d.getMilliseconds()+"] "+req.method+" "+req.url+" REF: "+req.headers.referer);
+    
     // q: URL request
     // filename: Path to the requested resource
     var q = url.parse(req.url, true);
@@ -26,32 +29,32 @@ http.createServer(function (req, res) {
     // Return the home page
     else if (filename == "/") {
         filename = "Structure/home.html";
-        console.log(filename);
+        // console.log(filename);
     }
     // Return the blog
     else if (filename == "/blog") {
         filename = "Structure"+filename+".html";
-        console.log(filename);
+        // console.log(filename);
     }
     // Return the Post Archives page
     else if (filename == "/archives") {
         filename = "Structure"+filename+".html";
-        console.log(filename);
+        // console.log(filename);
     }
     // Return the Projects page
     else if (filename == "/projects") {
         filename = "Structure"+filename+".html";
-        console.log(filename);
+        // console.log(filename);
     }
     // Return the MTV demo page
     else if (filename == "/MTV") {
         filename = "Static/MTV.html"
-        console.log("MTV: "+filename)
+        // console.log("MTV: "+filename)
     }
     // Return a post archives page for a specified year
     else if (year_literal.test(filename)) {
         filename = filename.replace("/blog/", "Structure/")+".html";
-        console.log(filename);
+        // console.log(filename);
     }
     // Return a post archives page for a specified month
     else if (month_literal.test(filename)) {
@@ -60,17 +63,17 @@ http.createServer(function (req, res) {
     }
     // Static resource
     else if (filename.startsWith("/Static") || filename == "/rss") {
-        console.log("Static: "+filename);
+        // console.log("Static: "+filename);
     }
     // Main service worker
     else if (filename.endsWith("sw.js")) {
-        console.log("Main SW: "+filename)
+        // console.log("Main SW: "+filename)
     }
     // Return a structure file
     else {
         if (!filename.endsWith("/main.css")) {
             filename = "Structure/"+filename.split("/")[2]+".html";
-            console.log(filename);
+            // console.log(filename);
         }
         console.log("Finel else: "+filename);
     }
