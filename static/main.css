@@ -16,16 +16,8 @@ article>p {
     text-align: center;
     padding: 2%;
     font-size: 200%; }
-#blog main article, #postarchives main article, header article {
-    margin: 100px 0px; }
 #archives main article {
     margin: 10px 0; }
-body {
-    background-color: #F6F6F6;
-    font-family: "Roboto",sans-serif;
-    font-size: 13pt;
-    line-height: 200%;
-    display: none;}
 #fn1 {
     border-top: 1px dashed gray;
     margin-top: 50pt;
@@ -51,11 +43,6 @@ h5 {
     font-size: 14pt; }
 h6 {
     font-size: 12pt; }
-header {
-    text-align: center;
-    font-size: 150%;
-    max-width: 75em;
-    margin: 0 auto; }
 #home #home_link, 
 #blog #blog_link, 
 #projects #projects_link,
@@ -65,12 +52,6 @@ header {
 #home #rss_link, #home #archives_link,
 #projects #rss_link, #projects #archives_link {
     display: none; }
-hr {
-    margin: 50px auto;
-    width: 50%;
-    border: 0;
-    border-bottom: 1px dashed #ccc;
-    background: #999; }
 html, body {
     margin: 0;
     padding: 0; }
@@ -84,10 +65,6 @@ html, body {
 .linkpost:hover {
     color: #C97D88;
     cursor: pointer; }
-main {
-    max-width: 65em;
-    margin: 0 auto;
-    margin-bottom: 100px; }
 main article>time {
     margin: -15px 0;
     text-align: center;
@@ -98,35 +75,19 @@ nav a {
     white-space: nowrap; }
 p a {
     text-decoration: underline; }
-.read_more_link {
-    text-decoration: none; }
-.wrap {
-    margin-left: 50px;
-    margin-right: 50px;
-    height: auto;
-    padding: 0; }
 
 /* Media Queries */
-
 /* iPhone XS */
-@media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) 
-    and (-webkit-device-pixel-ratio : 3) {
-        body {
-            margin: 0 2em;
-        }
-        article {
-            font-size: 90%;
-        }
-        #big_table tbody tr {
-            width: 100%;
-            display: inline-block;
-            margin: 1em auto;
-        }
-        #big_table tbody tr td {
-            display: inline-block;
-            width: 100%;
-            text-align: center;
-        }
+@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
+    body {
+        margin: 0 2em;
     }
+    article {
+        font-size: 90%;
+    }
+    #big_table tbody tr td {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+}

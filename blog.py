@@ -77,7 +77,7 @@ def AppendContentOfXToY(target, source):
         idx += 1
     else:
         # At the end of the file, append the read more link and the closing HTML tags.
-        target_fd.write("\n    <p class=\"read_more_paragraph\">\n        <a class=\"read_more_link\" href=\"/blog/%s\">&#x24E9;</a>\n    </p>" % (source.lower().replace(" ", "-").replace(".txt", "")))
+        target_fd.write("\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='/blog/%s'>&#x24E9;</a>\n    </p>" % (source.lower().replace(" ", "-").replace(".txt", "")))
         target_fd.write("\n</article>\n")
 
     # Close the file descriptors.
@@ -518,7 +518,7 @@ def Markdown(line):
 
         # Horizontal rules
         if (re.match("---", line) != None):
-            line = line.replace("---", "<hr />")
+            line = line.replace("---", "<hr style='margin:50px auto;width:50%;border:0;border-bottom:1px dashed #ccc;background:#999;' />")
         # Emdashes
         if (re.search("(--)", line)):
             line = line.replace("--", "&#160;&#8212;&#160;")

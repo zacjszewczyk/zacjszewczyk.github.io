@@ -6,7 +6,7 @@
     <description></description>
     <language>en-us</language>
     <atom:link href="http://zacjszewczyk.com/rss" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 14 Jan 2019 09:10:49 EST</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jan 2019 05:34:47 EST</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -6118,7 +6118,7 @@
             <description>
                 &lt;p&gt;I somehow managed to forget to post this article after I wrote it, so here it finally is:&lt;/p&gt;
                 
-                &lt;hr /&gt;
+                &lt;hr style='margin:50px auto;width:50%;border:0;border-bottom:1px dashed #ccc;background:#999;' /&gt;
                 &lt;br /&gt;
                 &lt;p&gt;A blast from the past in an article written three years ago today, on January 26, 2010, by Josh Bernoff:&lt;/p&gt;
                 
