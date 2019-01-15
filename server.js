@@ -65,11 +65,12 @@ http.createServer(function (req, res) {
         filename = filename.split("/");
         filename = "Structure/"+filename[2]+"-"+filename[3]+".html";
     }
+    // Static resource
+    else if (filename.startsWith("/Static") || filename == "/rss") { }
+    // Main service worker
+    else if (filename.endsWith("sw.js")) { }
     // Return a structure file
     else {
-        if (!filename.endsWith("/main.css")) {
-            filename = "Structure/"+filename.split("/")[2]+".html";
-        }
         console.log("Finel else: "+filename);
     }
     // Return a CSS document with the appropriate header
