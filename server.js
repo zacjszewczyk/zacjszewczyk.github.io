@@ -65,12 +65,6 @@ http.createServer(function (req, res) {
         filename = filename.split("/");
         filename = "Structure/"+filename[2]+"-"+filename[3]+".html";
     }
-    // Static resource
-    else if (filename.startsWith("/Static") || filename == "/rss") {
-    }
-    // Main service worker
-    else if (filename.endsWith("sw.js")) {
-    }
     // Return a structure file
     else {
         if (!filename.endsWith("/main.css")) {
