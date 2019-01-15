@@ -314,12 +314,7 @@ def GenPage(source, timestamp):
     # fd.close()
 
     # Insert Javascript code for device detection.
-    local_content = content[0].replace("<!-- SCRIPTS -->", """\
-            <script type="text/javascript">
-                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}
-                //https://www.dirtymarkup.com/, http://jscompress.com/
-                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}
-            </script>""").replace("{{ BODYID }}", "post")
+    local_content = content[0].replace("<!-- SCRIPTS -->", """\n            <script type="text/javascript">\n                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}\n                //https://www.dirtymarkup.com/, http://jscompress.com/\n                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}\n            </script>""").replace("{{ BODYID }}", "post")
     
     # Initialize idx to track line numbers, and title to hold the title block of each article.
     idx = 0
@@ -574,12 +569,6 @@ def Markdown(line):
                 if (not url.endswith(".txt")):
                     if (url.endswith(".htm")):
                         url = "/blog/"+url.replace(" ", "-").replace(".htm", "").lower()
-                        # print url
-                        # print desc
-                    else:
-                        # print ("http://"+url)
-                        # print desc
-                        pass
                 else:
                     url = "/blog/"+url.replace(" ", "-").replace(".txt", "").lower()
 
