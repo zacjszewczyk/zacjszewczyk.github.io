@@ -50,18 +50,18 @@ border-top-right-radius:5px
 }
 
 flash {
-    position: fixed;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 25px;
-    background-color: #eee;
-    border-radius: 5px;
-    padding: 10px;
-    /*height: 100px;*/
-    width: 25%;
-    z-index: 2;
+position: fixed;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+top: 25px;
+background-color: #eee;
+border-radius: 5px;
+padding: 10px;
+/*height: 100px;*/
+width: 25%;
+z-index: 2;
 }
 
 #fore_window,#aft_window {
@@ -192,65 +192,62 @@ right:10px;
 z-index:1;
 float:right
 }
-.ft {
+#vertical_ruler div {
 position:absolute;
 border-top:1px solid #000;
 width:100%;
 font-size: 65%;
 }
-.ft span {
+#vertical_ruler div p {
 position:absolute;
 left:-1.4em;
 top:-1.15em;
 font-family: sans-serif;
 text-align: right;
 }
-.fd:nth-of-type(1) {
-top: 0;
-}
-.ft:nth-of-type(2) {
+#vertical_ruler div:nth-of-type(2) {
 top:7.14%
 }
-.ft:nth-of-type(3) {
+#vertical_ruler div:nth-of-type(3) {
 top:14.29%
 }
-.ft:nth-of-type(4) {
+#vertical_ruler div:nth-of-type(4) {
 top:21.43%
 }
-.ft:nth-of-type(5) {
+#vertical_ruler div:nth-of-type(5) {
 top:28.57%
 }
-.ft:nth-of-type(6) {
+#vertical_ruler div:nth-of-type(6) {
 top:35.71%
 }
-.ft:nth-of-type(7) {
+#vertical_ruler div:nth-of-type(7) {
 top:42.86%
 }
-.ft:nth-of-type(8) {
+#vertical_ruler div:nth-of-type(8) {
 top:50%
 }
-.ft:nth-of-type(9) {
+#vertical_ruler div:nth-of-type(9) {
 top:57.14%
 }
-.ft:nth-of-type(10) {
+#vertical_ruler div:nth-of-type(10) {
 top:64.29%
 }
-.ft:nth-of-type(11) {
+#vertical_ruler div:nth-of-type(11) {
 top:71.43%
 }
-.ft:nth-of-type(12) {
+#vertical_ruler div:nth-of-type(12) {
 top:78.57%
 }
-.ft:nth-of-type(13) {
+#vertical_ruler div:nth-of-type(13) {
 top:85.71%
 }
-.ft:nth-of-type(14) {
+#vertical_ruler div:nth-of-type(14) {
 top:92.86%
 }
-.ft:nth-of-type(15) {
+#vertical_ruler div:nth-of-type(15) {
 top:100%
 }
-.in {
+#vertical_ruler span {
 border-top:1px solid #000;
 width:7px;
 margin-top:100%;
@@ -360,7 +357,7 @@ font-size:350%;
 line-height:130%;
 zoom:.3;
 }
-.ft span {
+#vertical_ruler div span {
 font-size: 25%;
 }
 .ruler div p {
