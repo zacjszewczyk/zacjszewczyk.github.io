@@ -703,13 +703,14 @@ def Terminate():
 # If imported, only make methods available to imported program.
 if __name__ == '__main__':
     t1 = datetime.datetime.now()
-    # import cProfile
+    import cProfile
+    # cProfile.run("Init()")
     # cProfile.run("GenStatic()")
     # cProfile.run("GenBlog()")
-    
     Init()
     GenStatic()
     GenBlog()
+
     t2 = datetime.datetime.now()
 
     print ("Execution time: %s" % (t2-t1))
