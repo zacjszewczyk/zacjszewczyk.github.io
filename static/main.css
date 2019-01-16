@@ -43,6 +43,13 @@ h5 {
     font-size: 14pt; }
 h6 {
     font-size: 12pt; }
+#home section:first-of-type img {
+    float: left;
+    margin: 0em 1em 0em 0;
+    -webkit-border-top-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-left-radius: 10px;
+    max-width: 40%; }
 #home #home_link, 
 #blog #blog_link, 
 #projects #projects_link,
@@ -79,15 +86,23 @@ p a {
 /* Media Queries */
 /* iPhone XS */
 @media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
-    body {
-        margin: 0 2em;
-    }
     article {
         font-size: 90%;
+    }
+    body {
+        margin: 0 2em;
     }
     #big_table tbody tr td {
         display: inline-block;
         width: 100%;
         text-align: center;
+    }
+    #home section:first-of-type img {
+        float: initial;
+        margin: 0px auto
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        max-width: 90%;
     }
 }
