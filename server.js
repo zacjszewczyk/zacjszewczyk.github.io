@@ -109,6 +109,12 @@ http.createServer(function (req, res) {
         res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
         return res.end();
     }
+    // Return an ICO image with the appropriate header
+    else if (filename.endsWith(".ico")) {
+        res.writeHead(200, writeHTTPHeader("./"+filename, "image/ico"));
+        res.write(fs.readFileSync("./"+filename));
+        return res.end();
+    }
     // Return an XML document, the RSS feed, with the appropriate header
     else if (filename == "/rss") {
         res.writeHead(200, writeHTTPHeader("./Static/Main_feed.xml", "text/xml"));
