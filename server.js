@@ -41,16 +41,16 @@ http.createServer(function (req, res) {
         filename = "home";
     }
     // Return the blog
-    else if (filename == "/blog") {
-        filename = filename.substr(1);
+    else if (filename == "/blog" || filename == "/blog/") {
+        filename = "blog";
     }
     // Return the Post Archives page
-    else if (filename == "/archives") {
-        filename = filename.substr(1);
+    else if (filename == "/archives" || filename == "/archives/") {
+        filename = "archives";
     }
     // Return the Projects page
-    else if (filename == "/projects") {
-        filename = filename.substr(1);
+    else if (filename == "/projects" || filename == "/projects/") {
+        filename = "projects";
     }
     // Return the MTV demo page
     else if (filename == "/MTV") {
@@ -111,7 +111,7 @@ http.createServer(function (req, res) {
     }
     // Return an XML document, the RSS feed, with the appropriate header
     else if (filename == "/rss") {
-        res.writeHead(200, writeHTTPHeader("./Static/Main_feed.xml", "text/xml"))
+        res.writeHead(200, writeHTTPHeader("./Static/Main_feed.xml", "text/xml"));
         res.write(fs.readFileSync('./Static/Main_feed.xml', {encoding: 'utf8'}));
         return res.end();
     }
