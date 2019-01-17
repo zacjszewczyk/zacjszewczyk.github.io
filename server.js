@@ -38,19 +38,19 @@ http.createServer(function (req, res) {
     }
     // Return the home page
     else if (filename == "/") {
-        filename = "Structure/home.html";
+        filename = "home";
     }
     // Return the blog
     else if (filename == "/blog") {
-        filename = "Structure"+filename+".html";
+        filename = filename.substr(1);
     }
     // Return the Post Archives page
     else if (filename == "/archives") {
-        filename = "Structure"+filename+".html";
+        filename = filename.substr(1);
     }
     // Return the Projects page
     else if (filename == "/projects") {
-        filename = "Structure"+filename+".html";
+        filename = filename.substr(1);
     }
     // Return the MTV demo page
     else if (filename == "/MTV") {
@@ -58,12 +58,12 @@ http.createServer(function (req, res) {
     }
     // Return a post archives page for a specified year
     else if (year_literal.test(filename)) {
-        filename = filename.replace("/blog/", "Structure/")+".html";
+        filename = filename.substr(6);
     }
     // Return a post archives page for a specified month
     else if (month_literal.test(filename)) {
         filename = filename.split("/");
-        filename = "Structure/"+filename[2]+"-"+filename[3]+".html";
+        filename = filename[2]+"-"+filename[3];
     }
     // Static resource
     else if (filename.startsWith("/Static") || filename == "/rss") { }
@@ -121,16 +121,25 @@ http.createServer(function (req, res) {
         res.write(fs.readFileSync("Static/"+filename.split("/")[2]));
         return res.end();
     }
+    // Return a static resource
+    else if (filename.startsWith("Static") && filename.endsWith(".html")) {
+        res.writeHead(200, writeHTTPHeader(filename, "text/html"));
+        res.write(fs.readFileSync(filename, {encoding: 'utf8'}));
+        return res.end();
+    }
     // Final else, for structure files and the error page
     else
     {
-        fs.readFile("./"+filename, function(err, data) {
+        console.log("Second final else.");
+        filename = "./Structure/"+filename.replace("/blog/", "")+".html"
+        console.log(filename);
+        fs.readFile(filename, function(err, data) {
             if (err) {
               res.writeHead(404, writeHTTPHeader('./Structure/system/error.html',"text/html"));
               res.write(fs.readFileSync('./Structure/system/error.html', {encoding: 'utf8'}));
               return res.end();
             }
-            res.writeHead(200, {'Content-Type': 'text/html'});
+            res.writeHead(200, writeHTTPHeader(filename, "text/html"));;
             res.write(data);
             return res.end();
         });
