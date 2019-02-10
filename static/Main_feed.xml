@@ -6,9 +6,17 @@
     <description></description>
     <language>en-us</language>
     <atom:link href="http://zacjszewczyk.com/rss" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 17 Jan 2019 04:50:01 EST</lastBuildDate>
+    <lastBuildDate>Sun, 10 Feb 2019 10:33:50 EST</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Choosing an Adventure Rig</title>
+            <link>http://zacjszewczyk.com/blog/choosing-an-adventure-rig</link>
+            <guid>http://zacjszewczyk.com/blog/choosing-an-adventure-rig</guid>
+            <description>
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Institutionalized Unity</title>
             <link>http://zacjszewczyk.com/blog/institutionalized-unity</link>
