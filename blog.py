@@ -600,6 +600,8 @@ def Markdown(line):
         # Account for iframes
         if (line.startswith("<iframe")):
             line = "<div style='text-align:center;'>"+line+"</div>"
+        elif (line.startswith("<ul")):
+            pass
         # Anything else should be a blockquote
         else:
             line = "<blockquote>"+line+"</blockquote>"
