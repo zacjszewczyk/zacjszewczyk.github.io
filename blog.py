@@ -472,6 +472,9 @@ def Markdown(line):
     elif (line.startswith("#")):
         line = ("<h%d>"+line.replace("#", "").strip()+"</h%d>") % (line.split(" ")[0].count("#"), line.split(" ")[0].count("#"))+"\n"
         types.append("<h>,,</h>")
+    # Images
+    elif (line.startswith("![")):
+        types.append("<img>,,</img>")
     # Footnote
     elif (re.match("(\[>[0-9]+\])", line) != None):
         types.append("<div class=\"footnote\">,,</div>")
