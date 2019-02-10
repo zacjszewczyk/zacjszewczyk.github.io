@@ -94,8 +94,14 @@ nav a {
     white-space: nowrap; }
 p a {
     text-decoration: underline; }
+#series_index {
+    margin-top: 100px;
+}
 #series_index:before {
     content: "All articles in this series:";
+}
+#series_index p {
+    margin: 0;
 }
 
 /* Media Queries */
