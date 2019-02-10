@@ -464,7 +464,7 @@ def Markdown(line):
         fd = open("Content/System/"+line.lstrip("{").replace("}", "").strip(), "r")
         line = "<ul style=\"border:1px dashed gray\" id=\"series_index\">\n"
         for each in fd.read().split("\n"):
-            line += "    <li>"+each+"</li>\n"
+            line += "    <li>"+Markdown(each)+"</li>\n"
         line += "</ul>"
         types.append("RAW HTML")
         fd.close()
