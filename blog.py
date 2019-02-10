@@ -459,8 +459,17 @@ def Markdown(line):
     # opens, reads, and inserts into the actual article.
     # If line starts with {}, open target file, and return the contents with a return statement. Skip the rest w/ a return statement.
 
+    # Part of a series
+    if (line.startswith("{")):
+        fd = open("Content/System/"+line.lstrip("{").replace("}", "").strip(), "r")
+        line = "<ul id=\"series_index\">\n"
+        for each in fd.read().split("\n"):
+            line += "    <li>"+each+"</li>\n"
+        line += "</ul>"
+        types.append("RAW HTML")
+        fd.close()
     # Header elements, <h1>-<h6>
-    if (line.startswith("#")):
+    elif (line.startswith("#")):
         line = ("<h%d>"+line.replace("#", "").strip()+"</h%d>") % (line.split(" ")[0].count("#"), line.split(" ")[0].count("#"))+"\n"
         types.append("<h>,,</h>")
     # Footnote
