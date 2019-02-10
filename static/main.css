@@ -94,6 +94,9 @@ nav a {
     white-space: nowrap; }
 p a {
     text-decoration: underline; }
+#series_index:before {
+    content: "All articles in this series:";
+}
 
 /* Media Queries */
 /* iPhone XS */
