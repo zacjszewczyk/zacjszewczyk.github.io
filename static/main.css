@@ -77,7 +77,7 @@ img {
 .image {
     text-align: center; }
 .image img {
-    max-width: 50em; }
+    /*max-width: 50em;*/ }
 .linkpost {
     color: #8AC178;
     text-decoration: underline; }
