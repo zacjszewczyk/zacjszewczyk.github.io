@@ -137,9 +137,9 @@ http.createServer(function (req, res) {
     // Final else, for structure files and the error page
     else
     {
-        console.log("Second final else.");
+        // console.log("Second final else.");
         filename = "./Structure/"+filename.replace("/blog/", "")+".html"
-        console.log(filename);
+        // console.log(filename);
         fs.readFile(filename, function(err, data) {
             if (err) {
               res.writeHead(404, writeHTTPHeader('./Structure/system/error.html',"text/html"));
