@@ -76,8 +76,6 @@ img {
 }
 .image {
     text-align: center; }
-.image img {
-    /*max-width: 50em;*/ }
 .linkpost {
     color: #8AC178;
     text-decoration: underline; }
@@ -96,6 +94,8 @@ p a {
     text-decoration: underline; }
 #series_index {
     margin-top: 100px;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 #series_index:before {
     content: "All articles in this series:";
