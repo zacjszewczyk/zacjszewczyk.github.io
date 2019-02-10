@@ -105,8 +105,9 @@ http.createServer(function (req, res) {
     }
     // Return a JPG image with the appropriate header
     else if (filename.endsWith(".jpg")) {
-        res.writeHead(200, writeHTTPHeader("Static/Images/"+filename.split("/")[3], "image/jpg"));
-        res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
+        console.log(filename)
+        res.writeHead(200, writeHTTPHeader(filename.substring(1), "image/jpg"));
+        res.write(fs.readFileSync(filename.substring(1)));
         return res.end();
     }
     // Return an ICO image with the appropriate header
