@@ -1,5 +1,8 @@
-Building the 4Runner Sleeping Platform
-======================================
+Type: original
+Title: Building the 4Runner Sleeping Platform
+Link: making-the-4runner-sleeping-platform
+Pubdate: 2019/02/15 16:12:41
+Author: Zac Szewczyk
 
 Started cutting on a Sunday, and finished the following Friday. Didn't spend all day everyday on it, but definitely spent more time than I thought I would. If you just worked on it straight, you could probably finish in a weekend, though.  
 
