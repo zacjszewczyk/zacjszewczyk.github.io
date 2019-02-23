@@ -714,15 +714,15 @@
 						"selection":
 						[
 							[
-								3298,
-								3298
+								1718,
+								1718
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 12,
+								"changes": 0,
 								"count": 40,
 								"modified": false,
 								"selection": false,
@@ -734,7 +734,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 764.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
