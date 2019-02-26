@@ -191,12 +191,6 @@ def GenBlog():
     global file_idx
     global content
 
-    # # Open the template file, split it, and store each half in a list.
-    # fd = open("Structure/system/template.htm", "r")
-    # content = fd.read();
-    # content = content.split("<!--Divider-->")
-    # fd.close()
-
     # Sort the files dictionary by keys, year, then iterate over it
     for year in sorted(files, reverse=True):
         # For each year in which a post was made, generate a 'year' file, that
@@ -307,12 +301,6 @@ def GenPage(source, timestamp):
     # Use the source file's name to calculate, clear, and re-open the structure file.
     target_fd = open("Structure/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "w").close()
     target_fd = open("Structure/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "a")
-
-    # # Open the template file, split it, and store each half in a list.
-    # fd = open("Structure/system/template.htm", "r")
-    # content = fd.read();
-    # content = content.split("<!--Divider-->")
-    # fd.close()
 
     # Insert Javascript code for device detection.
     local_content = content[0].replace("<!-- SCRIPTS -->", """\n            <script type="text/javascript">\n                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}\n                //https://www.dirtymarkup.com/, http://jscompress.com/\n                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}\n            </script>""").replace("{{ BODYID }}", "post")
