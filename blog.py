@@ -458,12 +458,15 @@ def Interface(params):
     * To exit this mode and build the site:          exit
     * To exit this mode and quit the program:        !exit
     """
+
+    # Using the "-a" parameter enters Authoring mode, so print the welcome message
     if "-a" in params:
         print ("""\
 Welcome to First Crack's "Authoring" mode.\n
 Entering "-h" into the prompt at any point in time will display the menu below.
 %s""" % (menu))
 
+    # Continue prompting the user for input until they enter a valid argument
     while (True):
         if "-a" in params:
             query = raw_input("#: ")
@@ -471,21 +474,22 @@ Entering "-h" into the prompt at any point in time will display the menu below.
             query = str(params)
         params = ""
 
-        # Rebuild all posts in a similar fashion as rebuilding a single post.
-        if (re.search("-R", query) != None):
-            for files in os.listdir("Structure"):
-                if (files != "system"):
-                    os.remove("Structure/"+files)
-
-            return False
         # Print the menu of valid commands to the terminal.
         if (re.search("-h", query) != None):
             print (menu)
 
+        # Remove all existing structure files
+        if (re.search("-R", query) != None):
+            for files in os.listdir("Structure"):
+                if (files != "system"):
+                    os.remove("Structure/"+files)
+            return False
+
         # Exit the command-line interface and prevent the site from rebuilding.
         if (re.search("!exit", query) != None):
             sys.exit(0)
-        # Exit the command-line interface and proceed with Update.py.
+
+        # Exit the command-line interface and proceed with site build.
         elif (re.search("exit", query) != None) or (re.search("logout", query) != None):
             return False
         
