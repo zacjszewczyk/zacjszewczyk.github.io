@@ -453,7 +453,7 @@ def Init():
 def Interface(params):
     # Store the menu in a variable so as to provide easy access at any point in time.
     menu = """
-    * To force all articles to rebuild:              -R
+    * To clear all structure files:                  -R
     * To display this menu:                          -h
     * To exit this mode and build the site:          exit
     * To exit this mode and quit the program:        !exit
@@ -472,10 +472,13 @@ Entering "-h" into the prompt at any point in time will display the menu below.
             query = raw_input("#: ")
         else:
             query = str(params)
-            
+        params = ""
+
         # Rebuild all posts in a similar fashion as rebuilding a single post.
         if (re.search("-R", query) != None):
-            os.remove("Structure/"+each.lower().replace(" ", "-")+".htm")
+            for files in os.listdir("Structure"):
+                if (files != "system"):
+                    os.remove("Structure/"+files)
 
             return False
         # Print the menu of valid commands to the terminal.
