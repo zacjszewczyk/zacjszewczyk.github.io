@@ -5,6 +5,7 @@ import os # File operations
 import time # Recording runtime
 import datetime # Managing file modification time
 import re # Regex
+import sys # Command line options
 
 # Global variables
 # - types: Keep track of current and two previous line types. (Tuple)
@@ -445,6 +446,49 @@ def Init():
                 files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = {}
             files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = each
 
+# Method: Interface
+# Purpose: Provide a command line interface for the script, for more granular control
+# of its operation.
+# Parameters: params: command line parameters (String)
+def Interface(params):
+    # Store the menu in a variable so as to provide easy access at any point in time.
+    menu = """
+    * To force all articles to rebuild:              -R
+    * To display this menu:                          -h
+    * To exit this mode and build the site:          exit
+    * To exit this mode and quit the program:        !exit
+    """
+
+    print params
+    print len(params)
+
+    print ("""\
+Welcome to First Crack's "Authoring" mode.\n
+Entering "-h" into the prompt at any point in time will display the menu below.
+%s""" % (menu))
+
+    while (True):
+        if "-a" in params:
+            query = raw_input("#: ")
+        else:
+            query = str(params)
+            
+        # Rebuild all posts in a similar fashion as rebuilding a single post.
+        if (re.search("-R", query) != None):
+            os.remove("Structure/"+each.lower().replace(" ", "-")+".htm")
+
+            return False
+        # Print the menu of valid commands to the terminal.
+        if (re.search("-h", query) != None):
+            print (menu)
+
+        # Exit the command-line interface and proceed with Update.py.
+        if (re.search("exit", query) != None) or (re.search("logout", query) != None):
+            return False
+        # Exit the command-line interface and prevent Update.py from proceeding.
+        elif (re.search("!exit", query) != None):
+            sys.exit(0)
+
 # Method: Markdown
 # Purpose: Take a raw string from a file, formatted in Markdown, and parse it into HTML.
 # Parameters:
@@ -716,6 +760,11 @@ def Terminate():
 # If run as an individual file, generate the site and report runtime.
 # If imported, only make methods available to imported program.
 if __name__ == '__main__':
+    argv = sys.argv
+    argc = len(argv)
+    if (argc > 1):
+        Interface(argv[1:])
+
     t1 = datetime.datetime.now()
     import cProfile
     # cProfile.run("Init()")
