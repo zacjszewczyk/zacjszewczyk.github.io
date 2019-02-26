@@ -6,17 +6,9 @@
     <description></description>
     <language>en-us</language>
     <atom:link href="http://zacjszewczyk.com/rss" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 26 Feb 2019 10:50:08 EST</lastBuildDate>
+    <lastBuildDate>Tue, 26 Feb 2019 10:52:41 EST</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
-        <item>
-            <title>Building the 4Runner Sleeping Platform</title>
-            <link>http://zacjszewczyk.com/blog/making-the-4runner-sleeping-platform</link>
-            <guid>http://zacjszewczyk.com/blog/making-the-4runner-sleeping-platform</guid>
-            <description>
-                &lt;p&gt;Started cutting on a Sunday, and finished the following Friday. Didn&#38;#8217;t spend all day everyday on it, but definitely spent more time than I thought I would. If you just worked on it straight, you could probably finish in a weekend, though.&lt;/p&gt;
-            </description>
-        </item>
         <item>
             <title>Institutionalized Unity</title>
             <link>http://zacjszewczyk.com/blog/institutionalized-unity</link>
