@@ -458,11 +458,8 @@ def Interface(params):
     * To exit this mode and build the site:          exit
     * To exit this mode and quit the program:        !exit
     """
-
-    print params
-    print len(params)
-
-    print ("""\
+    if "-a" in params:
+        print ("""\
 Welcome to First Crack's "Authoring" mode.\n
 Entering "-h" into the prompt at any point in time will display the menu below.
 %s""" % (menu))
@@ -485,12 +482,13 @@ Entering "-h" into the prompt at any point in time will display the menu below.
         if (re.search("-h", query) != None):
             print (menu)
 
-        # Exit the command-line interface and proceed with Update.py.
-        if (re.search("exit", query) != None) or (re.search("logout", query) != None):
-            return False
-        # Exit the command-line interface and prevent Update.py from proceeding.
-        elif (re.search("!exit", query) != None):
+        # Exit the command-line interface and prevent the site from rebuilding.
+        if (re.search("!exit", query) != None):
             sys.exit(0)
+        # Exit the command-line interface and proceed with Update.py.
+        elif (re.search("exit", query) != None) or (re.search("logout", query) != None):
+            return False
+        
 
 # Method: Markdown
 # Purpose: Take a raw string from a file, formatted in Markdown, and parse it into HTML.
