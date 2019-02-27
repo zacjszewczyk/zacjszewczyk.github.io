@@ -44,7 +44,7 @@ def AppendContentOfXToY(target, source):
     for line in iter(source_fd.readline, ""):
         # In the first line, classify the article as a linkpost or an original piece.
         if (idx == 0):
-            if (line.startswith("Type:") == False):
+            if (line[0:5] != "Type:"):
                 ptype = Migrate(source, mod_time).strip()
             else:
                 ptype = line.replace("Type: ", "").strip()
@@ -105,7 +105,7 @@ def AppendToFeed(source):
     # for the feed.
     for line in iter(source_fd.readline, ""):
         # Escape ampersands.
-        if (line.find("&")):
+        if ("&" in line):
             line = line.replace("&", "&#38;")
         
         # In the first line, classify the article as a linkpost or an original piece.
@@ -117,7 +117,7 @@ def AppendToFeed(source):
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
             if (ptype == "linkpost"):
-                if (not line.startswith("http://")):
+                if (line[0:7] != "http://"):
                     line = "http://"+line
                 feed_fd.write("            <link>"+line.replace("Link: ", "").strip()+"</link>\n")
                 feed_fd.write("            <guid>"+line.replace("Link: ", "").strip()+"</guid>\n")
@@ -291,7 +291,7 @@ def GenPage(source, timestamp):
     # Ensure source file contains header. If not, use the Migrate() method to generate it.
     source_fd = open("Content/"+source, "r")
     line = source_fd.readline()
-    if (line.startswith("Type:") == False):
+    if (line[0:5] != "Type:"):
         Migrate(source, timestamp)
     source_fd.close()
     
@@ -321,7 +321,7 @@ def GenPage(source, timestamp):
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
             line = line.replace("Link: ", "").strip()
-            if (not line.startswith("http") and line.endswith(".htm")):
+            if (line[0:4] != "http" and ("txt" == line[-3:])):
                 line = line.replace(".htm", "").replace(" ", "-").lower()
             title = title.replace("{{URL}}", line)+"\n    </h2>"
         # In the fourth line of the file, read the pubdate, and add it to the article.
@@ -424,7 +424,6 @@ def Init():
     for each in os.listdir("Content"):
         if (".txt" in each):
             mtime = time.strftime("%Y/%m/%d/%H:%M:%S", time.localtime(os.stat("Content/"+each).st_mtime)).split("/")
-            print mtime
             if (mtime[0] not in files):
                 files[mtime[0]] = {}
             if (mtime[1] not in files[mtime[0]]):
@@ -498,7 +497,7 @@ def Markdown(line):
     # If line starts with {}, open target file, and return the contents with a return statement. Skip the rest w/ a return statement.
 
     # Part of a series
-    if (line.startswith("{")):
+    if (line[0] == "{"):
         fd = open("Content/System/"+line.lstrip("{").replace("}", "").strip(), "r")
         line = "<ul style=\"border:1px dashed gray\" id=\"series_index\">\n"
         for each in fd.read().split("\n"):
@@ -507,11 +506,11 @@ def Markdown(line):
         types.append("RAW HTML")
         fd.close()
     # Header elements, <h1>-<h6>
-    elif (line.startswith("#")):
+    elif (line[0] == "#"):
         line = ("<h%d>"+line.replace("#", "").strip()+"</h%d>") % (line.split(" ")[0].count("#"), line.split(" ")[0].count("#"))+"\n"
         types.append("<h>,,</h>")
     # Images
-    elif (line.startswith("![")):
+    elif (line[0:1] == "!["):
         types.append("<img>,,</img>")
     # Footnote
     elif (re.match("(\[>[0-9]+\])", line) != None):
@@ -615,14 +614,14 @@ def Markdown(line):
             desc = each[0].lstrip("[").rstrip("]")
             url = each[1].lstrip("(").rstrip(")").replace("&", "&amp;").strip()
 
-            if (not url.startswith("http://") and not url.startswith("https://")):
-                if (not url.endswith(".txt")):
-                    if (url.endswith(".htm")):
+            if (not url[0:5] == "http:") and (not url[0:5] == "https"):
+                if (url[-3:] != "txt"):
+                    if ("htm" == url[-3:]):
                         url = "/blog/"+url.replace(" ", "-").replace(".htm", "").lower()
                 else:
                     url = "/blog/"+url.replace(" ", "-").replace(".txt", "").lower()
 
-            if (url.endswith(".txt") == True):
+            if (url[-3:] != "txt"):
                 url = url.replace(".txt", "").replace(" ", "-").replace("&#8220;", "").replace("&#8221;", "").replace("&#8217;", "").replace("&#8216;", "").replace("&#8217;", "")
                 line = line.replace(each[0]+each[1], "<a class=\"local\" href=\""+url.replace(" ", "-")+"\">"+desc+"</a>")
             elif (url == ""):
@@ -639,9 +638,9 @@ def Markdown(line):
             line = line.replace("//","<!--")+" -->"
     else:
         # Account for iframes
-        if (line.startswith("<iframe")):
+        if (line[0:6] == "<iframe"):
             line = "<div style='text-align:center;'>"+line+"</div>"
-        elif (line.startswith("<ul")):
+        elif (line[0:2] == "<ul"):
             pass
         # Anything else should be a blockquote
         else:
@@ -709,7 +708,7 @@ def Migrate(target, mod_time):
     article_content = fd.readline()
 
     # Detect a linkpost or an original article, and parse the information appropriately.
-    if (article_content.startswith("# [") == True):
+    if (article_content[0:2] == "# ["):
         article_type = "linkpost"
         article_content = article_content.lstrip("# ").replace(") #", "")
         article_content = article_content.split("]")
@@ -760,7 +759,7 @@ if __name__ == '__main__':
         Interface(argv[1:])
 
     t1 = datetime.datetime.now()
-    import cProfile
+    # import cProfile
     # cProfile.run("Init()")
     # cProfile.run("GenStatic()")
     # cProfile.run("GenBlog()")
