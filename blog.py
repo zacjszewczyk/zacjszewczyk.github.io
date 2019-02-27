@@ -761,10 +761,10 @@ if __name__ == '__main__':
 
     t1 = datetime.datetime.now()
     import cProfile
-    cProfile.run("Init()")
+    # cProfile.run("Init()")
     # cProfile.run("GenStatic()")
     # cProfile.run("GenBlog()")
-    # Init()
+    Init()
     GenStatic()
     GenBlog()
 
