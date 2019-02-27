@@ -422,8 +422,9 @@ def Init():
     # These elements have months as the keys, and a list of the posts made in that month
     # as the elements.
     for each in os.listdir("Content"):
-        if (each.endswith(".txt") == True):
+        if (".txt" in each):
             mtime = time.strftime("%Y/%m/%d/%H:%M:%S", time.localtime(os.stat("Content/"+each).st_mtime)).split("/")
+            print mtime
             if (mtime[0] not in files):
                 files[mtime[0]] = {}
             if (mtime[1] not in files[mtime[0]]):
@@ -760,10 +761,10 @@ if __name__ == '__main__':
 
     t1 = datetime.datetime.now()
     import cProfile
-    # cProfile.run("Init()")
+    cProfile.run("Init()")
     # cProfile.run("GenStatic()")
     # cProfile.run("GenBlog()")
-    Init()
+    # Init()
     GenStatic()
     GenBlog()
 
