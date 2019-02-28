@@ -1,5 +1,6 @@
 // Functions
 function writeHTTPHeader(path, type) {
+    d = new Date();
     return {'Date' : d.getUTCFullYear()+"/"+d.getUTCMonth()+"/"+d.getUTCDate()+" "+d.getUTCHours()+":"+d.getUTCMinutes()+":"+d.getUTCSeconds()+":"+d.getUTCMilliseconds(),
     'Server' : '',
     'Content-length' : fs.statSync(path).size,
@@ -15,9 +16,9 @@ function writeHTTPHeader(path, type) {
 var http = require("http");
 var url = require('url');
 var fs = require('fs');
-var d = new Date();
 
 http.createServer(function (req, res) {
+    d = new Date();
     console.log("["+d.getFullYear()+"/"+d.getMonth()+"/"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+":"+d.getMilliseconds()+"] "+req.method+" "+req.url+" REF: "+req.headers.referer+" via ["+req.connection.remoteFamily+" "+req.connection.remoteAddress+" port "+req.connection.remotePort+"]");
     
     // q: URL request
@@ -105,7 +106,6 @@ http.createServer(function (req, res) {
     }
     // Return a JPG image with the appropriate header
     else if (filename.endsWith(".jpg")) {
-        console.log(filename)
         res.writeHead(200, writeHTTPHeader(filename.substring(1), "image/jpg"));
         res.write(fs.readFileSync(filename.substring(1)));
         return res.end();
@@ -129,9 +129,10 @@ http.createServer(function (req, res) {
         return res.end();
     }
     // Return a static resource
-    else if (filename.startsWith("Static") && filename.endsWith(".html")) {
-        res.writeHead(200, writeHTTPHeader(filename, "text/html"));
-        res.write(fs.readFileSync(filename, {encoding: 'utf8'}));
+    else if (filename.startsWith("/Static") && filename.endsWith(".html")) {
+        console.log("Returning static HTML file: "+filename.substring(1));
+        res.writeHead(200, writeHTTPHeader(filename.substring(1), "text/html"));
+        res.write(fs.readFileSync(filename.substring(1), {encoding: 'utf8'}));
         return res.end();
     }
     // Final else, for structure files and the error page
@@ -151,4 +152,5 @@ http.createServer(function (req, res) {
             return res.end();
         });
     }
+    delete d;
 }).listen(8080);

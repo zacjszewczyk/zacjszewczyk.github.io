@@ -8,11 +8,14 @@ var config = {
     '/blog',
     '/archives',
     '/',
-    '/Static/Images/M1078_small.webp',
-    '/Static/Images/M1083_small.webp',
+    '/Static/Images/M1078_small.png',
+    '/Static/Images/M1083_small.png',
     '/Static/Images/metal.png',
     '/Static/Images/concrete.png',
-    '/Static/MTV.html'
+    '/Static/MTV.html',
+    '/Static/favicon.ico',
+    '/Static/favicon_192.ico',
+    '/Static/favicon_512.ico'
   ],
   cachePathPattern: /^\/(?:(20[0-9]{2}|about|blog|css|images|js)\/(.+)?)?$/,
   offlineImage: '<svg role="img" aria-labelledby="offline-title"'
