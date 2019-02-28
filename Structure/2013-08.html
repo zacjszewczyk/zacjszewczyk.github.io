@@ -14,7 +14,7 @@
         <meta property="og:article:author" content="Zac J. Szewczyk"/>
         <meta property="og:see_also" content="http://zacjszewczyk.com/"/>
         
-        <link rel="manifest" href="Static/manifest.json"/>
+        <!-- <link rel="manifest" href="Static/manifest.json"/> -->
         <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss" />
         <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
         <link rel="shortcut icon" href="/Static/favicon.ico" size="16x16" type="image/ico" />
@@ -149,7 +149,7 @@ August, <a href="/blog/2013">2013</a>
     </body>
     <!-- SCRIPTS BLOCK -->
     <script>document.getElementsByTagName("body")[0].style.display = "block";</script>
-    <script>
+    <!-- <script>
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', function() {
             navigator.serviceWorker.register('/m_sw.js').then(function(registration) {
@@ -158,6 +158,11 @@ August, <a href="/blog/2013">2013</a>
               console.log('ServiceWorker registration failed: ', err);
             });
           });
+        }
+    </script> -->
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/m_sw.js');
         }
     </script>
     <script>
