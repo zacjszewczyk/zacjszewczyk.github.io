@@ -15,7 +15,9 @@ var config = {
     '/Static/MTV.html',
     '/Static/favicon.ico',
     '/Static/favicon_192.ico',
-    '/Static/favicon_512.ico'
+    '/Static/favicon_512.ico',
+    '/Static/main.css',
+    '/Static/manifest.json'
   ],
   cachePathPattern: /^\/(?:(20[0-9]{2}|about|blog|css|images|js)\/(.+)?)?$/,
   offlineImage: '<svg role="img" aria-labelledby="offline-title"'

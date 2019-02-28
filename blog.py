@@ -638,7 +638,6 @@ def Markdown(line):
             line = line.replace("//","<!--")+" -->"
     else:
         # Account for iframes
-        print line[0:6]
         if (line[0:7] == "<iframe"):
             line = "<div style='text-align:center;'>"+line+"</div>"
         elif (line[0:2] == "<ul"):

@@ -55,7 +55,7 @@ http.createServer(function (req, res) {
     }
     // Return the MTV demo page
     else if (filename == "/MTV") {
-        filename = "Static/MTV.html"
+        filename = "/Static/MTV.html"
     }
     // Return a post archives page for a specified year
     else if (year_literal.test(filename)) {
