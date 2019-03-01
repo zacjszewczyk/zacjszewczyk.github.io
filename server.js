@@ -94,8 +94,8 @@ http.createServer(function (req, res) {
     }
     // Return a PNG image with the appropriate header
     else if (filename.endsWith(".png")) {
-        res.writeHead(200, writeHTTPHeader("Static/Images/"+filename.split("/")[3], "image/png"));
-        res.write(fs.readFileSync("Static/Images/"+filename.split("/")[3]));
+        res.writeHead(200, writeHTTPHeader(filename.substring(1), "image/png"));
+        res.write(fs.readFileSync(filename.substring(1)));
         return res.end();
     }
     // Return a WebP image with the appropriate header

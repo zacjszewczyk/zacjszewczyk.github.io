@@ -31,7 +31,10 @@ const PRECACHE_URLS = [
     '/Static/favicon.ico',
     '/Static/favicon_192.ico',
     '/Static/favicon_512.ico',
-    '/Static/main.css'
+    '/Static/favicon_192.png',
+    '/Static/favicon_512.png',
+    '/Static/main.css',
+    '/Static/manifest.json'
 ];
 
 // The install handler takes care of precaching the resources we always need.
