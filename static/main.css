@@ -92,7 +92,21 @@ nav a {
     white-space: nowrap; }
 p a {
     text-decoration: underline; }
-
+pre {
+    white-space: pre-wrap;
+    background-color: #f0f0f0;
+    padding: 1em;
+    border-radius: 2px; }
+.shell:before {
+    content: "$ "; }
+.cmd:before {
+    content: "> "; }
+.command {
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    padding: 1px;
+    font-family: "Courier New";
+}
 #series_index {
     margin-top: 100px;
     padding-top: 2em;

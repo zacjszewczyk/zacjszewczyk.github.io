@@ -517,7 +517,7 @@ def Markdown(line):
         types.append("<div class=\"footnote\">,,</div>")
     # Blockquotes
     elif (re.match(">|\s{4}", line) != None):
-        if ((types[-1] == "<blockquote>,,</blockquote>") or (types[-2] == "<blockquote>,,</blockquote>") or (types[-3] == "<blockquote>,,</blockquote>") or (types[-1] == "<bqt>,,</bqt>") or (types[-2] == "<bqt>,,</bqt>") or (types[-3] == "<bqt>,,</bqt>")):
+        if ((types[-1] == "<blockquote>,,</blockquote>") or (types[-1] == "<bqt>,,</bqt>")):
             types.append("<bqt>,,</bqt>")
         else:
             types.append("<blockquote>,,</blockquote>")
@@ -585,6 +585,13 @@ def Markdown(line):
         for each in re.findall("([\s\(]'\w+)", line):
             ftxt = each.replace("\'", "&#8216;", 1)
             line = line.replace(each, ftxt)
+        # Interpret inline code
+        for each in re.findall("\%[\w:\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]]+\%", line):
+            ftxt = each
+            line = line.replace(each, "&&TK&&")
+            ftxt = each.replace("%", "<span class='command'>", 1)
+            ftxt = ftxt.replace("%", "</span> ", 1).strip()
+            line = line.replace("&&TK&&", ftxt)            
         # Interpret <strong> tags
         for each in re.findall("\*\*{1}[\w:\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]]+\*\*{1}", line):
             ftxt = each
@@ -613,15 +620,15 @@ def Markdown(line):
         for each in re.findall("""(\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]*\])(\(\s*(<.*?>|((?:(?:\(.*?\))|[^\(\)]))*?)\s*((['"])(.*?)\12\s*)?\))""", line):
             desc = each[0].lstrip("[").rstrip("]")
             url = each[1].lstrip("(").rstrip(")").replace("&", "&amp;").strip()
-
-            if (not url[0:5] == "http:") and (not url[0:5] == "https"):
-                if (url[-3:] != "txt"):
-                    if ("htm" == url[-3:]):
+            
+            if ("http://" != url[0:7] and "https://" != url[0:8]):
+                if (".txt" != url[-4:]):
+                    if (".htm" == url[-4:]):
                         url = "/blog/"+url.replace(" ", "-").replace(".htm", "").lower()
                 else:
                     url = "/blog/"+url.replace(" ", "-").replace(".txt", "").lower()
 
-            if (url[-3:] != "txt"):
+            if (".txt" == url[-4:]):
                 url = url.replace(".txt", "").replace(" ", "-").replace("&#8220;", "").replace("&#8221;", "").replace("&#8217;", "").replace("&#8216;", "").replace("&#8217;", "")
                 line = line.replace(each[0]+each[1], "<a class=\"local\" href=\""+url.replace(" ", "-")+"\">"+desc+"</a>")
             elif (url == ""):
@@ -638,20 +645,23 @@ def Markdown(line):
             line = line.replace("//","<!--")+" -->"
     else:
         # Account for iframes
-        if (line[0:7] == "<iframe"):
+        if ("<iframe" == line[0:7]):
             line = "<div style='text-align:center;'>"+line+"</div>"
-        elif (line[0:2] == "<ul"):
+        elif ("<ul" == line[0:2]):
+            pass
+        elif (line[0:4] == "<pre"):
             pass
         # Anything else should be a blockquote
         else:
             line = "<blockquote>"+line+"</blockquote>"
     # If a paragraph
     if (current == "<p>,,</p>"):
-        line = current.replace(",,", line.strip())
+        line = active+"\n"+current.replace(",,", line.strip())
+        active = ""
     # If an unordered list
     elif (current == "<ul>,,</ul>"):
         active = "</ul>"
-        line = current.split(",,")[0].replace(">", "start='"+str(start)+"'>")+"\n<li>"+line.strip()+"</li>"
+        line = current.split(",,")[0].replace(">", " start='"+str(start)+"'>")+"\n<li>"+line.strip()+"</li>"
     # If an ordered list
     elif (current == "<ol>,,</ol>"):
         active = "</ol>"
@@ -666,10 +676,10 @@ def Markdown(line):
     # If a blockquote
     elif (current == "<blockquote>,,</blockquote>"):
         active = "</blockquote>"
-        line = current.split(",,")[0]+"\n<p>"+line.strip()+"</p>"
+        line = current.split(",,")[0]+"\n<p>"+line[2:].strip()+"</p>"
     # If the continuation of a blockquote
     elif (current == "<bqt>,,</bqt>"):
-        line = "<p>"+line.strip().replace("> ", "")+"</p>"
+        line = "<p>"+line.strip().replace("> ", "", 1)+"</p>"
     # If an element following a blockquote
     elif ((current != "<bqt>,,</bqt>") and ((second == "<bqt>,,</bqt>") or (second == "<blockquote>,,</blockquote>"))):
         line = line.strip().replace("> ", "")+"</blockquote>\n"
