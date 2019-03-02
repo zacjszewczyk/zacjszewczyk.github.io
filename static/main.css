@@ -92,6 +92,8 @@ nav a {
     white-space: nowrap; }
 p a {
     text-decoration: underline; }
+pre {
+    white-space: pre-wrap; }
 #series_index {
     margin-top: 100px;
     padding-top: 2em;
