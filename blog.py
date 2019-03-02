@@ -562,14 +562,14 @@ def Markdown(line):
         # If I've already escaped a ascii code, pass; otherwise escape it.
         if (re.search("&[a-z]{4}\;", line) != None):
             pass
-        elif (re.search("(\&)", line) != None):
+        elif ("&" in line):
             line = line.replace("&", "&#38;")
 
         # Horizontal rules
         if (line[0:3] == "---"):
             line = line.replace("---", "<hr style='margin:50px auto;width:50%;border:0;border-bottom:1px dashed #ccc;background:#999;' />")
         # Emdashes
-        if (re.search("(--)", line)):
+        if ("--" in line):
             line = line.replace("--", "&#160;&#8212;&#160;")
         # Parse double-quote quotations
         for each in re.findall("([\s\<\>\\\*\/\[\-\(]+\"[\[\w\%\#\\*<\>]+)", line):
