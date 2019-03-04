@@ -21,7 +21,6 @@ const RUNTIME = 'runtime';
 const PRECACHE_URLS = [
     '/projects',
     '/blog',
-    '/archives',
     '/',
     '/Static/Images/M1078_small.png',
     '/Static/Images/M1083_small.png',

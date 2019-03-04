@@ -772,10 +772,10 @@ if __name__ == '__main__':
     import cProfile
     Init()
     GenStatic()
-    cProfile.run("GenBlog()")
-    # Init()
-    # GenStatic()
-    # GenBlog()
+    GenBlog()
+    # cProfile.run("Init()")
+    # cProfile.run("GenStatic()")
+    # cProfile.run("GenBlog()")
 
     t2 = datetime.datetime.now()
 
