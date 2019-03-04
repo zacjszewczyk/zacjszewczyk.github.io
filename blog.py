@@ -609,7 +609,7 @@ def Markdown(line):
         # Parse images, both local and remote
         for each in re.findall("(\!\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]+\]\(['\(\)\#\;?\@\%\w\&:\,\./\~\s\"\!\#\=\+-]+\))", line):
             desc = each.split("]")[0][2:]
-            url = each.split("]")[1].split(" ")[0][1:-1]
+            url = each.split("]")[1].split(" ")[0][1:]
             if (url.startswith("http://zacjszewczyk.com/")):
                 # print url.split("/")[-1]
                 url = """/Static/Images/%s""" % (url.split("/")[-1])
