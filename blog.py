@@ -545,10 +545,10 @@ if __name__ == '__main__':
         Interface(argv[1:])
 
     t1 = datetime.datetime.now()
-    import cProfile
     Init()
     GenStatic()
     GenBlog()
+    # import cProfile
     # cProfile.run("Init()")
     # cProfile.run("GenStatic()")
     # cProfile.run("GenBlog()")
