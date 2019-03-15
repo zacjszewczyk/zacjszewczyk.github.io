@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 # Imports
+# Todo: Only import functions from modules that I actually need, not entire module
 import os # File operations
 import time # Recording runtime
 import datetime # Managing file modification time
