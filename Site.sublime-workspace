@@ -146,15 +146,6 @@
 			}
 		},
 		{
-			"file": "/Users/zjszewczyk/Desktop/Pace.py",
-			"settings":
-			{
-				"buffer_size": 1358,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "Structure/system/error.html",
 			"settings":
 			{
@@ -310,6 +301,7 @@
 	},
 	"file_history":
 	[
+		"/Users/zjszewczyk/Desktop/Pace.py",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/blog.py",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/Structure/system/projects.html",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/m_sw.js",
@@ -436,8 +428,7 @@
 		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 3 - Material Preparedness/index.md",
 		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 2 - Mental Preparedness/index.md",
 		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 4 - Physical Preparedness/3 Future Growth.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Book.sublime-project",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 6 - The Real Deal/Outline.txt"
+		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Book.sublime-project"
 	],
 	"find":
 	{
@@ -742,34 +733,6 @@
 				},
 				{
 					"buffer": 4,
-					"file": "/Users/zjszewczyk/Desktop/Pace.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1358,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1291,
-								1310
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "Structure/system/error.html",
 					"semi_transient": false,
 					"settings":
@@ -795,11 +758,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "Static/Main_feed.xml",
 					"semi_transient": false,
 					"settings":
@@ -825,11 +788,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "Structure/system/template.htm",
 					"semi_transient": false,
 					"settings":
@@ -859,7 +822,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "Structure/system/home.html",
 					"semi_transient": false,
 					"settings":
@@ -889,7 +852,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "static/main.css",
 					"semi_transient": false,
 					"settings":
@@ -919,7 +882,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "server.js",
 					"semi_transient": false,
 					"settings":
@@ -950,7 +913,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 10,
 					"file": "Static/manifest.json",
 					"semi_transient": false,
 					"settings":
@@ -980,7 +943,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 11,
 					"file": "Static/MTV.html",
 					"semi_transient": false,
 					"settings":
@@ -1006,11 +969,11 @@
 						"translation.y": 60.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 12,
 					"file": "Static/MTV.css",
 					"semi_transient": false,
 					"settings":
@@ -1036,11 +999,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 13,
 					"file": "Static/MTV.js",
 					"semi_transient": false,
 					"settings":
@@ -1066,7 +1029,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 13,
 					"type": "text"
 				}
 			]
