@@ -112,7 +112,7 @@ def Markdown(line):
             ftxt = each.replace("\'", "&#8216;", 1)
             line = line.replace(each, ftxt)
         # Interpret inline code
-        for each in re.findall("\%[\w:\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]]+\%", line):
+        for each in re.findall("\%[\w:\/\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]]+\%", line):
             ftxt = each
             line = line.replace(each, "&&TK&&")
             ftxt = each.replace("%", "<span class='command'>", 1)
