@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import re
+from re import findall, search, sub, match, search # Import re functions
 
 # Global variables for pasring Markdown
 # - types: Keeps track of current and previous two line types
@@ -39,31 +39,31 @@ def Markdown(line):
     elif (line[0:1] == "!["):
         types.append("<img>,,</img>")
     # Footnote
-    elif (re.match("(\[>[0-9]+\])", line) != None):
+    elif (match("(\[>[0-9]+\])", line) != None):
         types.append("<div class=\"footnote\">,,</div>")
     # Blockquotes
-    elif (re.match(">|\s{4}", line) != None):
+    elif (match(">|\s{4}", line) != None):
         if ((types[-1] == "<blockquote>,,</blockquote>") or (types[-1] == "<bqt>,,</bqt>")):
             types.append("<bqt>,,</bqt>")
         else:
             types.append("<blockquote>,,</blockquote>")
     # Unordered lists
-    elif (re.match("\*\s", line) != None):
+    elif (match("\*\s", line) != None):
         line = line.replace("* ", "")
         if ((types[-1] == "<ul>,,</ul>") or (types[-2] == "<ul>,,</ul>") or (types[-3] == "<ul>,,</ul>") or (types[-1] == "<li>,,</li>") or (types[-2] == "<li>,,</li>") or (types[-3] == "<li>,,</li>")):
             types.append("<li>,,</li>")
         else:
             types.append("<ul>,,</ul>")
     # Ordered lists
-    elif (re.match("[0-9]+", line) != None):
+    elif (match("[0-9]+", line) != None):
         start = line.split(".")[0]
-        line = re.sub("[0-9]+\.\s", "", line)
+        line = sub("[0-9]+\.\s", "", line)
         if ((types[-1] == "<ol>,,</ol>") or (types[-2] == "<ol>,,</ol>") or (types[-3] == "<ol>,,</ol>")):
             types.append("<li>,,</li>")
         else:
             types.append("<ol>,,</ol>")
     # Paragraphs
-    elif (re.match("[a-zA-Z_\[\*\"]", line) != None):
+    elif (match("[a-zA-Z_\[\*\"]", line) != None):
         types.append("<p>,,</p>")
     # Raw HTML code.
     elif (line[0] == "<" or line[0] == "#"):
@@ -86,7 +86,7 @@ def Markdown(line):
 
     if (current != "RAW HTML"):
         # If I've already escaped a ascii code, pass; otherwise escape it.
-        if (re.search("&[a-z]{4}\;", line) != None):
+        if (search("&[a-z]{4}\;", line) != None):
             pass
         elif ("&" in line):
             line = line.replace("&", "&#38;")
@@ -98,42 +98,42 @@ def Markdown(line):
         if ("--" in line):
             line = line.replace("--", "&#160;&#8212;&#160;")
         # Parse double-quote quotations
-        for each in re.findall("([\s\<\>\\\*\/\[\-\(]+\"[\[\w\%\#\\*<\>]+)", line):
+        for each in findall("([\s\<\>\\\*\/\[\-\(]+\"[\[\w\%\#\\*<\>]+)", line):
             ftxt = each.replace("\"", "&#8220;", 1)
             line = line.replace(each, ftxt)
-        for each in re.findall("([\)\w+\.]+\"[\s\)\]\<\>\.\*\-\,])", line):
+        for each in findall("([\)\w+\.]+\"[\s\)\]\<\>\.\*\-\,])", line):
             ftxt = each.replace("\"", "&#8221;", 1)
             line = line.replace(each, ftxt)
         # Parse single-quote quotations
-        for each in re.findall("(\w+'[\w+|\s+])", line):
+        for each in findall("(\w+'[\w+|\s+])", line):
             ftxt = each.replace("\'", "&#8217;")
             line = line.replace(each, ftxt)
-        for each in re.findall("([\s\(]'\w+)", line):
+        for each in findall("([\s\(]'\w+)", line):
             ftxt = each.replace("\'", "&#8216;", 1)
             line = line.replace(each, ftxt)
         # Interpret inline code
-        for each in re.findall("\%[\w:\/\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]\/<>]+\%", line):
+        for each in findall("\%[\w:\/\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]\/<>]+\%", line):
             ftxt = each
             line = line.replace(each, "&&TK&&")
             ftxt = each.replace("%", "<span class='command'>", 1)
             ftxt = ftxt.replace("%", "</span> ", 1).strip()
             line = line.replace("&&TK&&", ftxt)            
         # Interpret <strong> tags
-        for each in re.findall("\*\*{1}[\w:\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]]+\*\*{1}", line):
+        for each in findall("\*\*{1}[\w:\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]]+\*\*{1}", line):
             ftxt = each
             line = line.replace(each, "&&TK&&")
             ftxt = each.replace("**", "<strong>", 1)
             ftxt = ftxt.replace("**", "</strong> ", 1).strip()
             line = line.replace("&&TK&&", ftxt)            
         # Interpret <em> tags
-        for each in re.findall("\*{1}[\w:\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]]+\*{1}", line):
+        for each in findall("\*{1}[\w:\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]]+\*{1}", line):
             ftxt = each
             line = line.replace(each, "&&TK&&")
             ftxt = each.replace("*", "<em>", 1)
             ftxt = ftxt.replace("*", "</em> ", 1).strip()
             line = line.replace("&&TK&&", ftxt)
         # Parse images, both local and remote
-        for each in re.findall("(\!\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]+\]\(['\(\)\#\;?\@\%\w\&:\,\./\~\s\"\!\#\=\+-]+\))", line):
+        for each in findall("(\!\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]+\]\(['\(\)\#\;?\@\%\w\&:\,\./\~\s\"\!\#\=\+-]+\))", line):
             desc = each.split("]")[0][2:]
             url = each.split("]")[1].split(" ")[0][1:]
             if (url.startswith("http://zacjszewczyk.com/")):
@@ -143,7 +143,7 @@ def Markdown(line):
             line = line.replace(each, "<div class=\"image\"><img src=\""+url+"\" alt=\""+alt+"\" title=\""+desc+"\"></div>")
         # This needs some attention to work with the new URL scheme
         # Parse links, both local and remote
-        for each in re.findall("""(\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]*\])(\(\s*(<.*?>|((?:(?:\(.*?\))|[^\(\)]))*?)\s*((['"])(.*?)\12\s*)?\))""", line):
+        for each in findall("""(\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]*\])(\(\s*(<.*?>|((?:(?:\(.*?\))|[^\(\)]))*?)\s*((['"])(.*?)\12\s*)?\))""", line):
             desc = each[0][1:-1]
             url = each[1][1:-1].replace("&", "&amp;").strip()
             
@@ -162,7 +162,7 @@ def Markdown(line):
             else:
                 line = line.replace(each[0]+each[1], "<a href=\""+url+"\">"+desc+"</a>")
         # Parse footnotes
-        for each in re.findall("(\[\^[0-9]+\])", line):
+        for each in findall("(\[\^[0-9]+\])", line):
             mark = each[2:-1]
             url = """<sup id="fnref"""+mark+""""><a href="#fn"""+mark+"""" rel="footnote">"""+mark+"""</a></sup>"""
             line = line.replace(each, url)
