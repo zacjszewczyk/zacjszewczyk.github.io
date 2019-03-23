@@ -2,11 +2,11 @@
 
 # Imports
 # Todo: Only import functions from modules that I actually need, not entire module
-import os # File operations
-import time # Recording runtime
-import datetime # Managing file modification time
-import re # Regex
-import sys # Command line options
+from os import listdir, stat, remove, utime # File operations
+from time import strptime, strftime, mktime, localtime # Managing file modification time
+import datetime # Recording runtime
+from re import search # Regex
+from sys import exit, argv # Command line options
 from Markdown import Markdown
 
 # Global variables
@@ -423,9 +423,9 @@ def Init():
     # Generate a dictionary with years as the keys, and sub-dictinaries as the elements.
     # These elements have months as the keys, and a list of the posts made in that month
     # as the elements.
-    for each in os.listdir("Content"):
+    for each in listdir("Content"):
         if (".txt" in each):
-            mtime = time.strftime("%Y/%m/%d/%H:%M:%S", time.localtime(os.stat("Content/"+each).st_mtime)).split("/")
+            mtime = strftime("%Y/%m/%d/%H:%M:%S", localtime(stat("Content/"+each).st_mtime)).split("/")
             if (mtime[0] not in files):
                 files[mtime[0]] = {}
             if (mtime[1] not in files[mtime[0]]):
@@ -465,22 +465,22 @@ Entering "-h" into the prompt at any point in time will display the menu below.
         params = ""
 
         # Print the menu of valid commands to the terminal.
-        if (re.search("-h", query) != None):
+        if (search("-h", query) != None):
             print (menu)
 
         # Remove all existing structure files
-        if (re.search("-R", query) != None):
-            for files in os.listdir("Structure"):
+        if (search("-R", query) != None):
+            for files in listdir("Structure"):
                 if (files != "system"):
-                    os.remove("Structure/"+files)
+                    remove("Structure/"+files)
             return False
 
         # Exit the command-line interface and prevent the site from rebuilding.
-        if (re.search("!exit", query) != None):
-            sys.exit(0)
+        if (search("!exit", query) != None):
+            exit(0)
 
         # Exit the command-line interface and proceed with site build.
-        elif (re.search("exit", query) != None) or (re.search("logout", query) != None):
+        elif (search("exit", query) != None) or (search("logout", query) != None):
             return False
 
 # Method: Migrate
@@ -517,7 +517,7 @@ def Migrate(target, mod_time):
     fd.close()
 
     # Revert the update time for the target file, to its previous value.
-    os.utime("Content/"+target, ((time.mktime(time.strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (time.mktime(time.strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
+    utime("Content/"+target, ((mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
 
     # Return the read article type, for debugging.
     return article_type
@@ -540,7 +540,7 @@ def Terminate():
 # If run as an individual file, generate the site and report runtime.
 # If imported, only make methods available to imported program.
 if __name__ == '__main__':
-    argv = sys.argv
+    argv = argv
     argc = len(argv)
     if (argc > 1):
         Interface(argv[1:])
