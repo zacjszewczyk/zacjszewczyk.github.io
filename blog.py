@@ -26,6 +26,16 @@ files = {}
 months = {"01":"January","02":"February","03":"March","04":"April","05":"May","06":"June","07":"July","08":"August","09":"September","10":"October","11":"November","12":"December"}
 content = ""
 
+class bcolors():
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
 #          the entirety of a linkpost, to a target file.
@@ -371,6 +381,13 @@ def GenStatic():
     BuildFromTemplate("error.html", "Error - ", "error", "", "")
     CloseTemplateBuild("error.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style=\"text-align:center;\">Error: 404 Not Found</h2><p>The requested resource at <span style="text-decoration:underline;">"+window.location.href+"</span> could not be found.</p></article>"</script>""")
 
+# Method: GetUserInput
+# Purpose: Return the global variable files, to make it accessible in a method
+# Parameters: none
+def GetUserInput(prompt):
+    string = raw_input(prompt)
+    return string
+
 # Method: GetFiles
 # Purpose: Return the global variable files, to make it accessible in a method
 # Parameters: none
@@ -443,6 +460,7 @@ def Init():
 def Interface(params):
     # Store the menu in a variable so as to provide easy access at any point in time.
     menu = """
+    * To search all articles:                        -S
     * To clear all structure files:                  -R
     * To display this menu:                          -h
     * To exit this mode and build the site:          exit
@@ -468,6 +486,24 @@ Entering "-h" into the prompt at any point in time will display the menu below.
         if (search("-h", query) != None):
             print (menu)
 
+        # Search all articles
+        if (search("-S", query) != None):
+            search_string = GetUserInput("Enter string to search for: ")
+
+            c = bcolors()
+            # Iterate over the entire ./Content dirctory
+            for file in listdir("Content"):
+                # Only inspect text files
+                if (not ".txt" in file):
+                    continue
+
+                # Search each line of the file, case insensitively
+                res = SearchFile(file, search_string)
+                if (res):
+                    print "\nFile: "+c.UNDERLINE+file+c.ENDC
+                    for match in res:
+                        print "    %sLine %d:%s %s" % (c.BOLD, match[0], c.ENDC, match[1])
+
         # Remove all existing structure files
         if (search("-R", query) != None):
             for files in listdir("Structure"):
@@ -478,10 +514,13 @@ Entering "-h" into the prompt at any point in time will display the menu below.
         # Exit the command-line interface and prevent the site from rebuilding.
         if (search("!exit", query) != None):
             exit(0)
-
+        
         # Exit the command-line interface and proceed with site build.
-        elif (search("exit", query) != None) or (search("logout", query) != None):
+        if (search("exit", query) != None) or (search("logout", query) != None):
             return False
+        # Accept user input again
+        else:
+            params = "-a"
 
 # Method: Migrate
 # Purpose: For files without the header information in their first five lines, generate
@@ -521,6 +560,23 @@ def Migrate(target, mod_time):
 
     # Return the read article type, for debugging.
     return article_type
+
+# Method: SearchFile
+# Purpose: Search for a string within a file.
+# Parameters: 
+# - tgt: Target file name
+# - q: String to search for
+def SearchFile(tgt, q):
+    ret = []
+    with open("Content/"+tgt) as fd:
+        idx = 0
+        for line in fd:
+            if (q.lower() in line.lower()):
+                ret.append([idx, line.strip()])
+            idx += 1
+    if (len(ret) == 0):
+        return False
+    return ret
 
 # Method: Terminate
 # Purpose: Write closing tags to blog and archives structure files.

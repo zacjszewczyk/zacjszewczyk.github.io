@@ -130,10 +130,18 @@
 			}
 		},
 		{
+			"file": "Structure/blog.html",
+			"settings":
+			{
+				"buffer_size": 29286,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "Markdown.py",
 			"settings":
 			{
-				"buffer_size": 10928,
+				"buffer_size": 11188,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -168,7 +176,7 @@
 			"file": "Static/Main_feed.xml",
 			"settings":
 			{
-				"buffer_size": 885843,
+				"buffer_size": 886922,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -466,6 +474,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"2015",
+			"Markdown(",
 			"re.",
 			"sys.",
 			"re.",
@@ -591,9 +601,7 @@
 			"class='cm'",
 			".mm",
 			".cm",
-			"topper",
-			"field",
-			"position"
+			"topper"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -605,13 +613,13 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": true,
+		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -649,7 +657,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -665,8 +673,8 @@
 						"selection":
 						[
 							[
-								351,
-								351
+								10210,
+								10212
 							]
 						],
 						"settings":
@@ -684,91 +692,66 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4710.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "Markdown.py",
+					"file": "Structure/blog.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10928,
+						"buffer_size": 29286,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1690,
-								1690
-							],
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 2211,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 394.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Markdown.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11188,
+						"regions":
+						{
+						},
+						"selection":
+						[
 							[
-								1814,
-								1814
-							],
-							[
-								2084,
-								2084
-							],
-							[
-								2479,
-								2479
-							],
-							[
-								2561,
-								2561
-							],
-							[
-								2817,
-								2817
-							],
-							[
-								3571,
-								3571
-							],
-							[
-								4068,
-								4068
-							],
-							[
-								4245,
-								4245
-							],
-							[
-								4454,
-								4454
-							],
-							[
-								4601,
-								4601
-							],
-							[
-								4780,
-								4780
-							],
-							[
-								5159,
-								5159
-							],
-							[
-								5528,
-								5528
-							],
-							[
-								5887,
-								5887
-							],
-							[
-								6605,
-								6605
-							],
-							[
-								7886,
-								7886
+								8738,
+								8738
 							]
 						],
 						"settings":
@@ -786,14 +769,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3409.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "m_sw.js",
 					"semi_transient": false,
 					"settings":
@@ -819,11 +802,11 @@
 						"translation.y": 72.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "m_sw.js.bak",
 					"semi_transient": false,
 					"settings":
@@ -849,11 +832,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "Structure/system/error.html",
 					"semi_transient": false,
 					"settings":
@@ -879,16 +862,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "Static/Main_feed.xml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 885843,
+						"buffer_size": 886922,
 						"regions":
 						{
 						},
@@ -917,11 +900,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "Structure/system/template.htm",
 					"semi_transient": false,
 					"settings":
@@ -956,11 +939,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "Structure/system/projects.html",
 					"semi_transient": false,
 					"settings":
@@ -995,11 +978,11 @@
 						"translation.y": 3413.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "Structure/system/home.html",
 					"semi_transient": false,
 					"settings":
@@ -1025,11 +1008,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "static/main.css",
 					"semi_transient": false,
 					"settings":
@@ -1055,11 +1038,11 @@
 						"translation.y": 1624.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "server.js",
 					"semi_transient": false,
 					"settings":
@@ -1086,11 +1069,11 @@
 						"translation.y": 1416.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "Static/manifest.json",
 					"semi_transient": false,
 					"settings":
@@ -1116,11 +1099,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "Static/MTV.html",
 					"semi_transient": false,
 					"settings":
@@ -1146,11 +1129,11 @@
 						"translation.y": 60.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 15,
 					"file": "Static/MTV.css",
 					"semi_transient": false,
 					"settings":
@@ -1176,11 +1159,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 16,
 					"file": "Static/MTV.js",
 					"semi_transient": false,
 					"settings":
@@ -1206,7 +1189,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 16,
 					"type": "text"
 				}
 			]
