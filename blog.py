@@ -29,14 +29,14 @@ content = ""
 # Class: colors
 # Purpose: provide easy access to ASCII escape codes for styling output
 class colors():
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
+    HEADER = '\033[95m' # Pink
+    OKBLUE = '\033[94m' # Purple
+    OKGREEN = '\033[92m' # Green
+    WARNING = '\033[93m' # Yellow
+    FAIL = '\033[91m' # Red
+    ENDC = '\033[0m' # None
+    BOLD = '\033[1m' # Blue
+    UNDERLINE = '\033[4m' # Underline
 
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
@@ -474,14 +474,17 @@ def Init():
 # of its operation.
 # Parameters: params: command line parameters (String)
 def Interface(params):
+    # Instantiate the "colors" class, for output styling
+    c = colors()
+
     # Store the menu in a variable so as to provide easy access at any point in time.
     menu = """
-    * To search all articles:                        -S
-    * To clear all structure files:                  -R
-    * To display this menu:                          -h
-    * To exit this mode and build the site:          exit
-    * To exit this mode and quit the program:        !exit
-    """
+    * To search all articles:                        %s-S%s
+    * To clear all structure files:                  %s-R%s
+    * To display this menu:                          %s-h%s
+    * To exit this mode and build the site:          %sexit%s
+    * To exit this mode and quit the program:        %s!exit%s
+    """ % (c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
 
     # Using the "-a" parameter enters Authoring mode, so print the welcome message
     if "-a" in params:
@@ -507,8 +510,6 @@ Entering "-h" into the prompt at any point in time will display the menu below.
             # Get a string to search all files for
             search_string = GetUserInput("Enter string to search for: ")
 
-            # Instantiate the "colors" class, for output styling
-            c = colors()
             # Iterate over the entire ./Content dirctory
             for file in listdir("Content"):
                 # Only inspect text files
@@ -630,4 +631,15 @@ if __name__ == '__main__':
 
     t2 = datetime.datetime.now()
 
-    print ("Execution time: %s" % (t2-t1))
+    c = colors()
+    # print ("Execution time: %s" % (t2-t1))
+    # print (c.HEADER+"Execution time:"+c.ENDC+" %s" % (t2-t1))
+    # print (c.OKBLUE+"Execution time:"+c.ENDC+" %s" % (t2-t1))
+    # print (c.OKGREEN+"Execution time:"+c.ENDC+" %s" % (t2-t1))
+    # print (c.WARNING+"Execution time:"+c.ENDC+" %s" % (t2-t1))
+    # print (c.FAIL+"Execution time:"+c.ENDC+" %s" % (t2-t1))
+    # print (c.ENDC+"Execution time:"+c.ENDC+" %s" % (t2-t1))
+    # print (c.BOLD+"Execution time:"+c.ENDC+" %s" % (t2-t1))
+    # print (c.UNDERLINE+"Execution time:"+c.ENDC+" %s" % (t2-t1))
+
+    print ("Execution time: "+c.OKGREEN+str(t2-t1)+"s"+c.ENDC)
