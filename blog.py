@@ -499,7 +499,7 @@ Entering "-h" into the prompt at any point in time will display the menu below.
         params = ""
 
         # Print the menu of valid commands to the terminal.
-        if (search("-h", query) != None):
+        if (search("-h", query) or search("help", query)):
             print (menu)
 
         # Search all articles
