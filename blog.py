@@ -388,17 +388,19 @@ def GenStatic():
 # Parameters:
 # - prompt: Text to prompt the user for input (String)
 def GetUserInput(prompt):
+    c = colors()
+
     # Prompt the user for valid input
     while True:
         string = raw_input(prompt)
         
         # Do not allow empty strings
         if (len(string) == 0):
-            print "Input cannot be empty."
+            print c.WARNING+"Input cannot be empty."+c.ENDC
             continue
         # Do not allow more than 32 characters
         elif (len(string) > 32):
-            print "Input bound exceeded."
+            print c.WARNING+"Input bound exceeded."+c.ENDC
             continue
         # If we get here, we have valid input
         break
