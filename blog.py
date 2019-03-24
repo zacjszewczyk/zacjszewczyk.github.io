@@ -632,14 +632,4 @@ if __name__ == '__main__':
     t2 = datetime.datetime.now()
 
     c = colors()
-    # print ("Execution time: %s" % (t2-t1))
-    # print (c.HEADER+"Execution time:"+c.ENDC+" %s" % (t2-t1))
-    # print (c.OKBLUE+"Execution time:"+c.ENDC+" %s" % (t2-t1))
-    # print (c.OKGREEN+"Execution time:"+c.ENDC+" %s" % (t2-t1))
-    # print (c.WARNING+"Execution time:"+c.ENDC+" %s" % (t2-t1))
-    # print (c.FAIL+"Execution time:"+c.ENDC+" %s" % (t2-t1))
-    # print (c.ENDC+"Execution time:"+c.ENDC+" %s" % (t2-t1))
-    # print (c.BOLD+"Execution time:"+c.ENDC+" %s" % (t2-t1))
-    # print (c.UNDERLINE+"Execution time:"+c.ENDC+" %s" % (t2-t1))
-
     print ("Execution time: "+c.OKGREEN+str(t2-t1)+"s"+c.ENDC)
