@@ -1,0 +1,19 @@
+Type: original
+Title: Integrating Sublime Text and Proofer
+Link: integrating-sublime-text-and-proofer
+Pubdate: 2019/03/24 09:13:09
+Author: Zac Szewczyk
+
+Every time I wipe my computer, I go through the same rigmarole. I start writing. After a few sentences, I try to use Sublime Text's build feature to open the file in [Marked](http://marked2app.com/). When that fails, I spend fifteen minutes recreating the workflow: five finding the [relevant](http://support.markedapp.com/discussions/questions/2407-sublime-text-3) [articles](https://doingthatwrong.com/home/2012/5/21/launching-marked-from-sublime-text-2.html), and ten trying to get Dan Sturm's [snippet](https://doingthatwrong.com/home/2012/5/21/launching-marked-from-sublime-text-2.html) to work.  
+
+Dan's snippet launches Marked and supplies it with the name of the current file, but fails when that version of Marked comes from the Mac App Store. Here's the fix: "shell_cmd": "open -a \"/Applications/Marked 2.app\" \"$file\""
+
+<pre>
+{
+    "cmd": ["/Users/zjszewczyk/Dropbox/Code/Proofer/Proofer.py", "$file", "-sublime"],
+    "path": "/Users/zjszewczyk/Dropbox/Code/Proofer",
+    "working_dir": "/Users/zjszewczyk/Dropbox/Code/Proofer"
+}
+</pre>
+
+Click the "Tools" toolbar menu, scroll down to "Build System", and click "New Build System...". Copy and paste the snippet above, then save the file. If you have "Build System" set to "Automatic", Sublime Text will now open any file without a dedicated build system in Marked.

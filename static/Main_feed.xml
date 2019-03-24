@@ -6,9 +6,18 @@
     <description></description>
     <language>en-us</language>
     <atom:link href="http://zacjszewczyk.com/rss" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 24 Mar 2019 07:48:57 EST</lastBuildDate>
+    <lastBuildDate>Sun, 24 Mar 2019 09:30:40 EST</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Integrating Sublime Text and Proofer</title>
+            <link>http://zacjszewczyk.com/blog/integrating-sublime-text-and-proofer</link>
+            <guid>http://zacjszewczyk.com/blog/integrating-sublime-text-and-proofer</guid>
+            <description>
+                
+&lt;p&gt;Every time I wipe my computer, I go through the same rigmarole. I start writing. After a few sentences, I try to use Sublime Text&#38;#8217;s build feature to open the file in &lt;a href="http://marked2app.com/"&gt;Marked&lt;/a&gt;. When that fails, I spend fifteen minutes recreating the workflow: five finding the &lt;a href="http://support.markedapp.com/discussions/questions/2407-sublime-text-3"&gt;relevant&lt;/a&gt; &lt;a href="https://doingthatwrong.com/home/2012/5/21/launching-marked-from-sublime-text-2.html"&gt;articles&lt;/a&gt;, and ten trying to get Dan Sturm&#38;#8217;s &lt;a href="https://doingthatwrong.com/home/2012/5/21/launching-marked-from-sublime-text-2.html"&gt;snippet&lt;/a&gt; to work.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Institutionalized Unity</title>
             <link>http://zacjszewczyk.com/blog/institutionalized-unity</link>

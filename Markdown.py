@@ -7,6 +7,7 @@ from re import findall, search, sub, match, search # Import re functions
 # - active: The corresponding closing tag for the active block-level element
 types = ["", "", ""]
 active = ""
+pre = False
 
 # Method: Markdown
 # Purpose: Take a raw string from a file, formatted in Markdown, and parse it into HTML.
@@ -15,15 +16,17 @@ active = ""
 def Markdown(line):
     # Make global variables accessible in the method, and initialize method variables.
     # Must be global to persist between method calls.
-    global types, active
+    global types, active, pre
     start = 1
 
     # Use {} to enclose an article series reference. Enclosed text identifies the article series, in the form of a file that the parser
     # opens, reads, and inserts into the actual article.
     # If line starts with {}, open target file, and return the contents with a return statement. Skip the rest w/ a return statement.
 
+    if (pre == True):
+        types.append("RAW HTML")
     # Part of a series
-    if (line[0] == "{"):
+    elif (line[0] == "{"):
         fd = open("Content/System/"+line[1:-1].strip(), "r")
         line = "<ul style=\"border:1px dashed gray\" id=\"series_index\">\n"
         for each in fd.read().split("\n"):
@@ -176,7 +179,12 @@ def Markdown(line):
         elif ("<ul" == line[0:2]):
             pass
         elif (line[0:4] == "<pre"):
-            pass
+            if (line.find("</pre>") == -1):
+                pre = True
+        elif (pre == True):
+            if (line.find("</pre>") != -1):
+                pre = False
+            return line.strip()
         # Anything else should be a blockquote
         else:
             line = "<blockquote>"+line+"</blockquote>"
