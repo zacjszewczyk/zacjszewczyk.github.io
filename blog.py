@@ -583,8 +583,8 @@ def Migrate(target, mod_time):
 # Method: SearchFile
 # Purpose: Search for a string within a file.
 # Parameters: 
-# - tgt: Target file name
-# - q: String to search for
+# - tgt: Target file name (String)
+# - q: String to search for (String)
 def SearchFile(tgt, q):
     ret = []
     with open("Content/"+tgt) as fd:
