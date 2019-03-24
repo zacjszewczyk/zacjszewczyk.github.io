@@ -26,7 +26,9 @@ files = {}
 months = {"01":"January","02":"February","03":"March","04":"April","05":"May","06":"June","07":"July","08":"August","09":"September","10":"October","11":"November","12":"December"}
 content = ""
 
-class bcolors():
+# Class: colors
+# Purpose: provide easy access to ASCII escape codes for styling output
+class colors():
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKGREEN = '\033[92m'
@@ -382,10 +384,16 @@ def GenStatic():
     CloseTemplateBuild("error.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style=\"text-align:center;\">Error: 404 Not Found</h2><p>The requested resource at <span style="text-decoration:underline;">"+window.location.href+"</span> could not be found.</p></article>"</script>""")
 
 # Method: GetUserInput
-# Purpose: Return the global variable files, to make it accessible in a method
-# Parameters: none
+# Purpose: Accept user input and perform basic bounds checking
+# Parameters:
+# - prompt: Text to prompt the user for input (String)
 def GetUserInput(prompt):
-    string = raw_input(prompt)
+    while True:
+        string = raw_input(prompt)
+        if (len(string) == 0):
+            print "Input cannot be empty."
+        break
+
     return string
 
 # Method: GetFiles
@@ -488,9 +496,11 @@ Entering "-h" into the prompt at any point in time will display the menu below.
 
         # Search all articles
         if (search("-S", query) != None):
+            # Get a string to search all files for
             search_string = GetUserInput("Enter string to search for: ")
 
-            c = bcolors()
+            # Instantiate the "colors" class, for output styling
+            c = colors()
             # Iterate over the entire ./Content dirctory
             for file in listdir("Content"):
                 # Only inspect text files
