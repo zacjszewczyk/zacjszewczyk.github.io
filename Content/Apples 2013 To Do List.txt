@@ -6,7 +6,7 @@ Author: Zac Szewczyk
 
 John Siricusa on Apple's to-do list for the coming year, posted to his personal blog [Hypercritical](http://hypercritical.co/):  
 
-    "I didn't just lead Apple to a record quarterly profit of $13.1 billion on sales of $54.5 billion, so I don’t expect to be consulted. But were Tim to ask me, here’s what I would tell him Apple should do in 2013—in broad strokes, and in no particular order."  
+    "I didn't just lead Apple to a record quarterly profit of $13.1 billion on sales of $54.5 billion, so I don't expect to be consulted. But were Tim to ask me, here's what I would tell him Apple should do in 2013--in broad strokes, and in no particular order."  
 
 John's third and seventh points, to diversify the iPhone product line and to improve iCloud, respectively, merit some discussion. A few weeks ago I wrote a post called [*The Problems with iCloud*](The Problems with iCloud.txt), in which I talked about Apple's latest foray into cloud services and my problems with the product. It would be a huge step forward for Apple to finally offer a cloud service superior to the competition--superior to Dropbox. Underestimating the significance of those move would be a mistake.  
 

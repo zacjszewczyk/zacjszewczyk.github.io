@@ -4,6 +4,6 @@ Link: http://42floors.com/blog/fake-it-trash-it-build-it/
 Pubdate: 2013/03/05 13:26:24
 Author: Zac Szewczyk
 
-"We didn't start with any wireframes. We didn’t spend anytime in brainstorming meetings. I gathered an understanding of the general goals, and went to work throwing my initial thoughts into a fake product. The end result was a prototype that, in a lot of ways, was functional."  
+"We didn't start with any wireframes. We didn't spend anytime in brainstorming meetings. I gathered an understanding of the general goals, and went to work throwing my initial thoughts into a fake product. The end result was a prototype that, in a lot of ways, was functional."  
 
 Just as writers do, designers often get caught up in minor details and the implementation of processes rather than creating a final product. Whether that sticking point is a brand new text editor or a distraction-free writing environment, a wireframe or finding the perfect hue to contrast just so with another color, it is important to put these potential time sinks in perspective: while they certainly are important, we "need to concentrate on the things that the reader will notice", to [quote Ben Brooks](http://brooksreview.net/2013/02/cms-war/), rather than the details we get caught up in all too often, the details that prevent makers from making things.

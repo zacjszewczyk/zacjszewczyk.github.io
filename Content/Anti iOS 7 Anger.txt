@@ -10,11 +10,11 @@ Last night I came across Josh Topolsky's article [*The Design of iOS 7: Simply C
 
 Starting at the top of the article, Josh began on a sane, level-headed note:  
 
-    "What I saw today at Apple’s annual WWDC event in the new iOS 7 was a radical departure from the previous design of the company’s operating system — what CEO Tim Cook called 'a stunning new user interface.'"  
+    "What I saw today at Apple's annual WWDC event in the new iOS 7 was a radical departure from the previous design of the company's operating system -- what CEO Tim Cook called 'a stunning new user interface.'"  
 
 So far so good. In his first sentence, Josh echoed a very widespread observation. After six years sporting nearly the same design it debuted with, iOS was due for the major face lift it received in iOS 7.  
 
-    "But whether this new design is actually good design, well, that’s a different story entirely."  
+    "But whether this new design is actually good design, well, that's a different story entirely."  
 
 This is the line that got me, the one that made me want to write this. iOS 7 is still iOS no matter how you look at it. Underneath the translucent panes, the control center, and the revamped icon sets, the same iOS underpinnings we have come to know and love still drive the operating system: the core functionality of the platform remained the same; the new user interface did not change that. So arguing "whether this new design is actually good design" becomes an argument based on aesthetics, conjecturing as to whether the look and feel of iOS's latest iteration is, in fact, good design. And while the opinions on this topic vary widely, I can't help but answer with a resounding "YES", as I am sure most will in time.  
 

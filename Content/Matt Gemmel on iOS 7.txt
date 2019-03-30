@@ -10,4 +10,4 @@ Wonderfully worded and impressively well thought-out, Matt Gemmel's article *iOS
 
 Then, following up, he said something [curiously familiar](Anti-iOS 7 Anger.txt) before moving on with the article:  
 
-    "The basic functionality hasn't changed. You still use iOS in the same way, and almost everything is where you expect it to be. The same gestures work. There are a few differences here and there – it's a major new version of the OS, after all – but the changes are mostly aesthetic. You won't be confused by iOS 7 if you're accustomed to a previous version."
+    "The basic functionality hasn't changed. You still use iOS in the same way, and almost everything is where you expect it to be. The same gestures work. There are a few differences here and there - it's a major new version of the OS, after all - but the changes are mostly aesthetic. You won't be confused by iOS 7 if you're accustomed to a previous version."

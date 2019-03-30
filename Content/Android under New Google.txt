@@ -6,4 +6,4 @@ Author: Zac Szewczyk
 
 Speaking of [New Google](Why I Left Google.txt), Marco talks about what it could mean for the future of Android. Particularly interesting to me were his final thoughts at the end of the piece:  
 
-    "Old Google made Android. New Google is much more strategic, cold, and focused. Let’s see what they do to it."
+    "Old Google made Android. New Google is much more strategic, cold, and focused. Let's see what they do to it."

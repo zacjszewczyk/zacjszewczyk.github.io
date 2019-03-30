@@ -4,7 +4,7 @@ Link: The Slow Fade.htm
 Pubdate: 2013/10/20 20:25:51
 Author: Zac Szewczyk
 
-Last week Ben Thompson of Stratēchery wrote [*Open Source Apps*](http://stratechery.com/2013/open-source-apps/), where he explained the "inevitable" shift from paid-up-front to free apps monetized through other means. From his article:  
+Last week Ben Thompson of Stratechery wrote [*Open Source Apps*](http://stratechery.com/2013/open-source-apps/), where he explained the "inevitable" shift from paid-up-front to free apps monetized through other means. From his article:  
 
 > "I'm a bit late to the most recent flareup around app store pricing - it's been a busy week of traveling - but it's worth noting that the trend towards free is basically inevitable and the expected result in a functioning market. To put it another way, apps want to be free just like apples want to fall to the ground - it's natural and takes truly impressive efforts to work against the gravitational pull."  
 

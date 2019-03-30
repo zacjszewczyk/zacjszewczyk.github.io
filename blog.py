@@ -127,17 +127,19 @@ def AppendToFeed(source):
             ptype = line.replace("Type: ", "").strip()
         # In the second line of the file, add the article title.
         elif (idx == 1):
-            feed_fd.write("            <title>"+line.replace("Title: ", "").strip()+"</title>\n")
+            feed_fd.write("            <title>"+line.replace("Title: ", "").strip().replace("&#38", "&amp;")+"</title>\n")
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
             if (ptype == "linkpost"):
                 if (line[0:7] != "http://"):
                     line = "http://"+line
-                feed_fd.write("            <link>"+line.replace("Link: ", "").strip()+"</link>\n")
-                feed_fd.write("            <guid>"+line.replace("Link: ", "").strip()+"</guid>\n")
+                link = line.replace("Link: ", "").strip()
+                guid = link
             else:
-                feed_fd.write("            <link>http://zacs.site/blog/"+source.lower().replace(" ", "-").replace(".txt", ".html").lower()+"</link>\n")
-                feed_fd.write("            <guid>http://zacs.site/blog/"+source.lower().replace(" ", "-").replace(".txt", ".html").lower()+"</guid>\n")
+                link = "http://zacs.site/blog/"+source.lower().replace(" ", "-").replace(".txt", ".html").lower()
+                guid = link
+            feed_fd.write("            <link>"+link+"</link>\n")
+            feed_fd.write("            <guid>"+guid+"</guid>\n")
         # Close the <description> portion of the item.
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
@@ -145,9 +147,11 @@ def AppendToFeed(source):
         # Ignore the rest of the header, until the first line of content.
         # Write the first paragraph to the file.
         elif (idx == 6):
-            feed_fd.write("\n                "+Markdown(line).replace("&", "&#38;").replace("<", "&lt;").replace(">", "&gt;"))
+            feed_fd.write("\n                "+Markdown(line).replace("&", "&#38;").replace("<", "&lt;").replace(">", "&gt;").replace("#fn", link+"#fn"))
         # If a linkpost, write successive lines to the file.
         elif (idx > 6 and ptype == "linkpost"):
+            if ("iframe" in line):
+                continue
             feed_fd.write("\n                "+Markdown(line).replace("&", "&#38;").replace("<", "&lt;").replace(">", "&gt;"))
         
         # Increase the line number

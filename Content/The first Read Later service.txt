@@ -10,6 +10,6 @@ Author: Zac Szewczyk
 
 Marco also linked to a few other pieces in his aforementioned article: [*The Relationship between Readability and Instapaper*](http://www.marco.org/2011/11/16/readability) and [*Some other tablets you may have seen*](http://www.marco.org/2011/09/16/some-other-tablets-you-may-have-seen). The following excerpt is from the latter of the two, explaining a part of his reasoning behind writing *The first "Read Later" service*:  
 
-    "This awkward avoidance betrays a lack of confidence in their innovation and an internal culture of severe denial — two deep-rooted traits that Microsoft is famous for. So when the Microsoft people speak like this, it's not serving them well: to everyone outside of Microsoft, it's painfully obvious that they're either delusional or trying very poorly to bullshit us."  
+    "This awkward avoidance betrays a lack of confidence in their innovation and an internal culture of severe denial -- two deep-rooted traits that Microsoft is famous for. So when the Microsoft people speak like this, it's not serving them well: to everyone outside of Microsoft, it's painfully obvious that they're either delusional or trying very poorly to bullshit us."  
 
 I agree wholeheartedly with Marco: the story behind Instapaper and its competitors needs to be told; and for those spreading lies, saying that Readability was the first app of its type on the market, this is unacceptable. Did I say Readability? I meant Clearly--wait, no, Pocket; excuse my confusion.
