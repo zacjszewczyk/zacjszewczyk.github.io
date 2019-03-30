@@ -60,6 +60,8 @@ def Parse():
             for line in fd:
                 d = AssociateGroups(CaptureGroups(line))
                 # output_log.write(GetCommonLogFormat(d)+'\n')
+                if (d["host_header"] == "s3.us-east-2.amazonaws.com"):
+                    continue
                 output_log.write(GetCombinedLogFormat(d)+'\n')
 
     output_log.close()
@@ -130,7 +132,7 @@ def GetCommonLogFormat(data):
 # Parameters: 
 # - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
 def GetCombinedLogFormat(data):
-    return data["remote_ip"]+" user-identifier - ["+data["timestamp"]+"] \""+data["request_uri"]+"\" "+data["http_status"]+" "+data["object_size"]+" \""+data["referrer"]+"\" "+data["user_agent"]+"\""
+    return data["remote_ip"]+" user-identifier - ["+data["timestamp"]+"] \""+data["request_uri"]+"\" "+data["http_status"]+" "+data["object_size"]+" \""+data["referrer"]+"\" \""+data["user_agent"]+"\""
 
 if (__name__ == "__main__"):
     
