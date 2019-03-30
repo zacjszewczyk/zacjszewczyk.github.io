@@ -145,4 +145,7 @@ pre {
     footer p {
         font-size: 85%;
     }
+    h2 {
+        line-height: 200%;
+    }
 }
