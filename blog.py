@@ -47,7 +47,7 @@ class colors():
 def AppendContentOfXToY(target, source):
     # Initialize file descriptors for the source and target files.
     source_fd = open("Content/"+source, "r")
-    target_fd = open("Structure/"+target+".html", "a")
+    target_fd = open(target+".html", "a")
 
     # Initialize method variables.
     ptype = "linkpost"
@@ -62,18 +62,18 @@ def AppendContentOfXToY(target, source):
                 ptype = Migrate(source, mod_time).strip()
             else:
                 ptype = line.replace("Type: ", "").strip()
-            title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line.replace("Type: ", "").strip())
+            title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"/blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line.replace("Type: ", "").strip())
         # In the second line of the file, add the article title.
         elif (idx == 1):
             title = title.replace("{{URL_TITLE}}", line.replace("Title: ", "").strip())
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
-            title = (title.replace("{{URL}}", "/blog/"+source.lower().replace(" ", "-").replace(".txt", "")), title.replace("{{URL}}", line.replace("Link: ", "").strip()))[ptype == "linkpost"]+"\n    </h2>"
-            url = (("/blog/"+source.lower().replace(" ", "-").replace(".txt", "")), title.replace("{{URL}}", line.replace("Link: ", "").strip()))[ptype == "linkpost"]
+            title = (title.replace("{{URL}}", ""+source.lower().replace(" ", "-").replace(".txt", ".html")), title.replace("{{URL}}", line.replace("Link: ", "").strip()))[ptype == "linkpost"]+"\n    </h2>"
+            url = ((""+source.lower().replace(" ", "-").replace(".txt", ".html")), title.replace("{{URL}}", line.replace("Link: ", "").strip()))[ptype == "linkpost"]
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
             line = line.replace("Pubdate: ", "").replace(" ", "/").split("/")
-            title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s</time>""" % (line[0], line[1], line[2], "/blog/"+line[0], line[0], "/blog/"+line[0]+"/"+line[1], line[1], line[2], line[3])
+            title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/%s">%s</a>/<a href="/blog/%s">%s</a>/%s %s</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
         # In the fifth line of the file, write the opening tags to the target, then the file's
         # content as generated up to this point.
         elif (idx == 4):
@@ -92,7 +92,7 @@ def AppendContentOfXToY(target, source):
         idx += 1
     else:
         # At the end of the file, append the read more link and the closing HTML tags.
-        target_fd.write("\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='/blog/%s'>&#x24E9;</a>\n    </p>" % (source.lower().replace(" ", "-").replace(".txt", "")))
+        target_fd.write("\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='/blog/%s'>&#x24E9;</a>\n    </p>" % (source.lower().replace(" ", "-").replace(".txt", ".html")))
         target_fd.write("\n</article>\n")
 
     # Close the file descriptors.
@@ -106,7 +106,7 @@ def AppendContentOfXToY(target, source):
 def AppendToFeed(source):
     # Initialzie file descriptors for the source content file and the RSS feed
     source_fd = open("Content/"+source, "r")
-    feed_fd = open("Static/Main_feed.xml", "a")
+    feed_fd = open("rss.xml", "a")
 
     # Initialize method variables
     ptype = "linkpost"
@@ -136,8 +136,8 @@ def AppendToFeed(source):
                 feed_fd.write("            <link>"+line.replace("Link: ", "").strip()+"</link>\n")
                 feed_fd.write("            <guid>"+line.replace("Link: ", "").strip()+"</guid>\n")
             else:
-                feed_fd.write("            <link>http://zacjszewczyk.com/blog/"+source.lower().replace(" ", "-").replace(".txt", "").lower()+"</link>\n")
-                feed_fd.write("            <guid>http://zacjszewczyk.com/blog/"+source.lower().replace(" ", "-").replace(".txt", "").lower()+"</guid>\n")
+                feed_fd.write("            <link>http://zacs.site/"+source.lower().replace(" ", "-").replace(".txt", ".html").lower()+"</link>\n")
+                feed_fd.write("            <guid>http://zacs.site/"+source.lower().replace(" ", "-").replace(".txt", ".html").lower()+"</guid>\n")
         # Close the <description> portion of the item.
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
@@ -175,8 +175,8 @@ def BuildFromTemplate(target, title, bodyid, sheets="", passed_content=""):
     global content
 
     # Clear the target file, then write the opening HTML code and any passed content.
-    fd = open("Structure/"+target, "w").close()
-    fd = open("Structure/"+target, "a")
+    fd = open(target, "w").close()
+    fd = open(target, "a")
     fd.write(content[0].replace("{{ title }}", title).replace("{{ BODYID }}", bodyid).replace("<!-- SHEETS -->", sheets))
     fd.write(passed_content)
     fd.close()
@@ -192,7 +192,7 @@ def CloseTemplateBuild(target, scripts=""):
     global content
 
     # Write the trailing HTML tags from the template to the target file.
-    fd = open("Structure/"+target, "a")
+    fd = open(target, "a")
     fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", scripts))
     fd.close()
 
@@ -211,10 +211,10 @@ def GenBlog():
         # contains links to each month in which a post was published.
 
         # Clear the 'year' file
-        year_fd = open("Structure/"+year+".html", "w").close()
-        year_fd = open("Structure/"+year+".html", "a")
+        year_fd = open("blog/"+year+".html", "w").close()
+        year_fd = open("blog/"+year+".html", "a")
         # Write the opening HTML tags
-        year_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives"))
+        year_fd.write(content[0].replace("index.html", "../index.html").replace("blog.html", "../blog.html").replace("archives.html", "../archives.html").replace("projects.html", "../projects.html").replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives"))
         # Insert a 'big table' into the document, to better display the months listed.
         year_fd.write("""<table style="width:100%;padding:20pt 0;" id="big_table">""")
         year_fd.write("    <tr>\n        <td>%s</td>\n    </tr>\n" % (year))
@@ -223,12 +223,12 @@ def GenBlog():
         # posts made during that month.
         for month in sorted(files[year], reverse=True):
             # Add a link to the month, to the year file it belongs to.
-            year_fd.write("    <tr>\n        <td><a href=\"%s\">%s</a></td>\n    </tr>\n" % ("/blog/"+year+"/"+month, months[month]))
+            year_fd.write("    <tr>\n        <td><a href=\"%s\">%s</a></td>\n    </tr>\n" % (year+"-"+month+".html", months[month]))
             # Clear the 'month' file
-            month_fd = open("Structure/"+year+"-"+month+".html", "w").close()
-            month_fd = open("Structure/"+year+"-"+month+".html", "a")
+            month_fd = open("blog/"+year+"-"+month+".html", "w").close()
+            month_fd = open("blog/"+year+"-"+month+".html", "a")
             # Write the opening HTML tags
-            month_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives").replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\"/blog/"+year+"\">"+year+"</a>\n</p>\n</article>"))
+            month_fd.write(content[0].replace("index.html", "../index.html").replace("blog.html", "../blog.html").replace("archives.html", "../archives.html").replace("projects.html", "../projects.html").replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives").replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\""+year+".html\">"+year+"</a>\n</p>\n</article>"))
             
             # Sort the sub-dictionaries by keys, days, then iterate over it.
             for day in sorted(files[year][month], reverse=True):
@@ -236,7 +236,7 @@ def GenBlog():
                 for timestamp in sorted(files[year][month][day], reverse=True):
                     # For each article made in the month, add an entry on the appropriate
                     # 'month' structure file.
-                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", "/blog/"+files[year][month][day][timestamp].lower().replace(" ", "-").replace(".txt", ""), GetTitle(files[year][month][day][timestamp])))
+                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-").replace(".txt", ".html"), GetTitle(files[year][month][day][timestamp])))
                     # Generate each content file. "year", "month", "day", "timestamp"
                     # identify the file in the dictionary, and the passed time values
                     # designate the desired update time to set the content file.
@@ -254,14 +254,14 @@ def GenBlog():
                         # page.
                         buff = """\n<article>\n<table style="width:100%;padding:2% 0;" id="big_table">\n    <tr>\n"""
                         for each in sorted(files, reverse=True)[:3]:
-                            buff += """\n        <td>\n            <a href=\"/blog/%s\">%s</a>\n        </td>""" % (each.lower(), each)
+                            buff += """\n        <td>\n            <a href=\"/blog/%s\">%s</a>\n        </td>""" % (each.lower()+".html", each)
                         buff += """\n    </tr>\n    <tr>\n"""
                         for each in sorted(files, reverse=True)[3:]:
-                            buff += """\n        <td>\n            <a href=\"/blog/%s\">%s</a>\n        </td>""" % (each.lower(), each)
+                            buff += """\n        <td>\n            <a href=\"/blog/%s\">%s</a>\n        </td>""" % (each.lower()+".html", each)
                         buff += """\n    </tr>\n</table>\n</article>\n"""
-                        archives_fd = open("Structure/archives.html", "a")
+                        archives_fd = open("archives.html", "a")
                         archives_fd.write(buff)
-                        archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s'>%s</a></article>" % (year, year))
+                        archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='%s.html'>%s</a></article>" % (year, year))
                         archives_fd.close()
                         temp = year
 
@@ -271,8 +271,8 @@ def GenBlog():
                     # Add all other articles to the archives page.
                     else:
                         if (temp != year):
-                            archives_fd = open("Structure/archives.html", "a")
-                            archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s'>%s</a></article>" % (year, year))
+                            archives_fd = open("archives.html", "a")
+                            archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='%s.html'>%s</a></article>" % (year, year))
                             archives_fd.close()
                             temp = year
                         AppendContentOfXToY("archives", files[year][month][day][timestamp])
@@ -284,11 +284,11 @@ def GenBlog():
                     file_idx += 1
             
             # Write closing HTML tags to the month file.
-            month_fd.write(content[1])
+            month_fd.write(content[1].replace("assets/", "../assets/"))
             month_fd.close()
         
         # Write closing HTML tags to the year file.
-        year_fd.write("</table>\n"+content[1])
+        year_fd.write("</table>\n"+content[1].replace("assets/", "../assets/"))
         year_fd.close()
 
     # Write closing HTML Tags to archives.html and blog.html, using Terminate()
@@ -313,11 +313,11 @@ def GenPage(source, timestamp):
     source_fd = open("Content/"+source, "r")
 
     # Use the source file's name to calculate, clear, and re-open the structure file.
-    target_fd = open("Structure/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "w").close()
-    target_fd = open("Structure/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "a")
+    target_fd = open("blog/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "w").close()
+    target_fd = open("blog/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "a")
 
     # Insert Javascript code for device detection.
-    local_content = content[0].replace("<!-- SCRIPTS -->", """\n            <script type="text/javascript">\n                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}\n                //https://www.dirtymarkup.com/, http://jscompress.com/\n                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}\n            </script>""").replace("{{ BODYID }}", "post")
+    local_content = content[0].replace("index.html", "../index.html").replace("blog.html", "../blog.html").replace("archives.html", "../archives.html").replace("projects.html", "../projects.html").replace("<!-- SCRIPTS -->", """\n            <script type="text/javascript">\n                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}\n                //https://www.dirtymarkup.com/, http://jscompress.com/\n                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}\n            </script>""").replace("{{ BODYID }}", "post")
     
     # Initialize idx to track line numbers, and title to hold the title block of each article.
     idx = 0
@@ -327,7 +327,7 @@ def GenPage(source, timestamp):
     for line in iter(source_fd.readline, ""):
         # In the first line, classify the article as a linkpost or an original piece.
         if (idx == 0):
-            title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line.replace("Type: ", "").strip())
+            title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"/blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line.replace("Type: ", "").strip())
         # In the second line of the file, add the article title.
         elif (idx == 1):
             title = title.replace("{{URL_TITLE}}", line.replace("Title: ", "").strip())
@@ -335,14 +335,14 @@ def GenPage(source, timestamp):
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
             line = line.replace("Link: ", "").strip()
-            if (line[0:4] != "http" and ("txt" == line[-3:])):
+            if (line[0:4] != "http" and ("htm" == line[-3:])):
                 line = line.replace(".htm", "").replace(" ", "-").lower()
             title = title.replace("{{URL}}", line)+"\n    </h2>"
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
             # print line
             line = line.replace("Pubdate: ", "").replace(" ", "/").split("/")
-            title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s</time>""" % (line[0], line[1], line[2], "/blog/"+line[0], line[0], "/blog/"+line[0]+"/"+line[1], line[1], line[2], line[3])
+            title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/%s">%s</a>/<a href="%s">%s</a>/%s %s</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
         # In the fifth line of the file, write the opening tags to the target, then the file's
         # content as generated up to this point.
         elif (idx == 4):
@@ -357,7 +357,7 @@ def GenPage(source, timestamp):
     else:
         # At the end of the file, write closing HTML tags.
         target_fd.write("\n</div>\n</article>")
-        target_fd.write(content[1])
+        target_fd.write(content[1].replace("assets/", "../assets/"))
         
     # Close file descriptors.
     target_fd.close()
@@ -367,14 +367,14 @@ def GenPage(source, timestamp):
 # Purpose: Create home, projects, and error static structure files.
 # Parameters: none
 def GenStatic():
-    # Reference the home.html source file to generate the front-end structure file.
-    fd = open("Structure/system/home.html", "r")
+    # Reference the index.html source file to generate the front-end structure file.
+    fd = open("system/index.html", "r")
     home = fd.read().split("<!-- DIVIDER -->")
     fd.close()
-    BuildFromTemplate("home.html", "", "home", sheets=home[0], passed_content=home[1])
+    BuildFromTemplate("index.html", "", "home", sheets=home[0], passed_content=home[1])
 
     # Reference the projects.html source file to generate the front-end structure file.
-    fd = open("Structure/system/projects.html", "r")
+    fd = open("system/projects.html", "r")
     projects = fd.read().split("<!-- DIVIDER -->")
     fd.close()
     BuildFromTemplate("projects.html", "Projects - ", "projects", "", passed_content=projects[1])
@@ -437,7 +437,7 @@ def Init():
     files = {}
 
     # Open the template file, split it, and store each half in a list.
-    fd = open("Structure/system/template.htm", "r")
+    fd = open("system/template.htm", "r")
     content = fd.read()
     content = content.split("<!--Divider-->")
     content.append(content[0])
@@ -448,8 +448,8 @@ def Init():
     BuildFromTemplate("blog.html", "Blog - ", "blog")
     
     # Clear and initialize the RSS feed
-    fd = open("Static/Main_feed.xml", "w")
-    fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>Zac J. Szewczyk</title>\n    <link>http://zacjszewczyk.com/</link>\n    <description></description>\n    <language>en-us</language>\n    <atom:link href="http://zacjszewczyk.com/rss" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s EST</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (datetime.datetime.now().strftime("%a, %d %b %Y %I:%M:%S")))
+    fd = open("rss.xml", "w")
+    fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>Zac J. Szewczyk</title>\n    <link>http://zacs.site/</link>\n    <description></description>\n    <language>en-us</language>\n    <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s EST</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (datetime.datetime.now().strftime("%a, %d %b %Y %I:%M:%S")))
     fd.close()
 
     # FUTURE: Do this for the Structure directory, minus key system files, to determine
@@ -490,10 +490,7 @@ def Interface(params):
 
     # Using the "-a" parameter enters Authoring mode, so print the welcome message
     if "-a" in params:
-        print ("""\
-Welcome to First Crack's "Authoring" mode.\n
-Entering "-h" into the prompt at any point in time will display the menu below.
-%s""" % (menu))
+        print ("""Welcome to First Crack's "Authoring" mode.\n\nEntering "-h" into the prompt at any point in time will display the menu below.\n%s""" % (menu))
 
     # Continue prompting the user for input until they enter a valid argument
     while (True):
@@ -527,9 +524,9 @@ Entering "-h" into the prompt at any point in time will display the menu below.
 
         # Remove all existing structure files
         if (search("-R", query) != None):
-            for files in listdir("Structure"):
-                if (files != "system"):
-                    remove("Structure/"+files)
+            for files in listdir("blog"):
+                if (files.endswith(".html")):
+                    remove("blog/"+files)
             return False
 
         # Exit the command-line interface and prevent the site from rebuilding.
@@ -564,7 +561,7 @@ def Migrate(target, mod_time):
     else:
         article_type = "original"
         article_title = article_content.replace("# ", "").replace(" #", "")
-        article_url = target.replace(".txt", "").replace(" ", "-").lower()
+        article_url = target.replace(".html", "").replace(" ", "-").lower()
         article_content = fd.readline()
 
     # Read the rest of the article's content from the file.
@@ -607,10 +604,10 @@ def Terminate():
     CloseTemplateBuild("archives.html")
     CloseTemplateBuild("blog.html")
     CloseTemplateBuild("projects.html")
-    CloseTemplateBuild("home.html")
+    CloseTemplateBuild("index.html")
     
     # Write closing tags to the RSS feed.
-    fd = open("Static/Main_feed.xml", "a")
+    fd = open("rss.xml", "a")
     fd.write("""\n</channel>\n</rss>""")
     fd.close()
 

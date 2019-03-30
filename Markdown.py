@@ -141,7 +141,7 @@ def Markdown(line):
             url = each.split("]")[1].split(" ")[0][1:]
             if (url.startswith("http://zacjszewczyk.com/")):
                 # print url.split("/")[-1]
-                url = """/Static/Images/%s""" % (url.split("/")[-1])
+                url = """/assets/Images/%s""" % (url.split("/")[-1])
             alt = each.split("]")[1].split(" &#8220;")[1].rstrip("&#8221;)")
             line = line.replace(each, "<div class=\"image\"><img src=\""+url+"\" alt=\""+alt+"\" title=\""+desc+"\"></div>")
         # This needs some attention to work with the new URL scheme
@@ -153,9 +153,9 @@ def Markdown(line):
             if ("http://" != url[0:7] and "https://" != url[0:8]):
                 if (".txt" != url[-4:]):
                     if (".htm" == url[-4:]):
-                        url = "/blog/"+url.replace(" ", "-").replace(".htm", "").lower()
+                        url = ""+url.replace(" ", "-").lower()
                 else:
-                    url = "/blog/"+url.replace(" ", "-").replace(".txt", "").lower()
+                    url = ""+url.replace(" ", "-").replace(".txt", ".html").lower()
 
             if (".txt" == url[-4:]):
                 url = url.replace(".txt", "").replace(" ", "-").replace("&#8220;", "").replace("&#8221;", "").replace("&#8217;", "").replace("&#8216;", "").replace("&#8217;", "")

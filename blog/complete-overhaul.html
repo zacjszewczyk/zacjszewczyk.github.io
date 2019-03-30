@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#518341"/>
+        
+        <meta property="og:image" content="favicon.ico"/>
+        <meta property="og:title" content="First Crack's Complete Overhaul - "/>
+        <meta property="og:site_name" content="Zac J. Szewczyk"/>
+        <meta property="og:article:author" content="Zac J. Szewczyk"/>
+        <meta property="og:see_also" content="http://zacjszewczyk.com/"/>
+        
+        <link rel="manifest" href="assets/manifest.json"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss.xml" />
+        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
+        <link rel="shortcut icon" href="assets/favicon.ico" size="16x16" type="image/ico" />
+        <link rel="shortcut icon" href="assets/favicon_192.ico" size="192x192" type="image/ico" />
+        <link rel="shortcut icon" href="assets/favicon_512.ico" size="512x512" type="image/ico" />
+        <title>
+            First Crack's Complete Overhaul - Zac J. Szewczyk
+        </title>
+        <!-- SHEETS -->
+    </head>
+    <body style="opacity:.8;background-color:#F6F6F6;font-family:'Roboto',sans-serif;font-size:13pt;line-height:200%;display:none;" id="post">
+        <header style="text-align:center;font-size:150%;max-width:75em;margin:0 auto;"><!--BLOCK HEADER--></header>
+        <nav style="text-align:center;margin:10% 5%;font-size:15pt;line-height:200%;">
+            <a id="home_link" href="../index.html">Home</a>
+            <a id="blog_link" href="../blog.html">Blog</a>
+            <a id="rss_link" href="/rss.xml">RSS</a>
+            <a id="archives_link" href="../archives.html">Post Archives</a>
+            <a id="projects_link" href="../projects.html">Projects</a>
+        </nav>
+        <main style="max-width:65em;margin:0 auto;margin-bottom:100px;">
+            <section id="content_section">
+                <article>
+    <h2 style="text-align:center;">
+        <a href="/blog/complete-overhaul" class="original">First Crack's Complete Overhaul</a>
+    </h2>
+    <time datetime="2013-01-27" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2013.html">2013</a>/<a href="2013-01.html">01</a>/27 16:01:31
+</time>
+
+    
+    
+<p>Early Friday morning I started redesigning this site&#8217;s layout. I wanted to create a better reading experience and place more emphasis on my content, with particular attention paid to the latest articles. Two days later, in the wee hours of Sunday morning, I closed my computer having not only accomplished my initial goals, but also after successfully completing a long-overdue complete overhaul of the content mangement system I drive this site with, First Crack. For those unfamiliar with my work on this Markdown-based content management system, check out <a href="introducing-first-crack.html"><em>Introducing First Crack</em></a> and <a href="first-crack-in-practice.html"><em>First Crack in Practice</em></a>.</p>
+    
+    
+<p>In addition to eliminating nearly 100 lines of code, I have also greatly optimized the latest iteration of First Crack. For example, whereas the previous version opened and parsed each content file multiple times to build the home page, RSS feed, and article page, First Crack now reads and parses each line of each file only once. I did not only make performance improvements server-side in the Python script though, but also client-side with the removal of my dependancy on jQuery and an accompanying Javascript file to correctly display my site, along with a simplification of my site&#8217;s structure as well as CSS. All in all this is a huge step forward not only for First Crack, but for this site as well.</p>
+    
+    
+<p>Along with the aforementioned improvements to First Crack, the CMS now supports a number of new features:</p>
+    <blockquote>
+<p></p>
+    <ul start='1'>
+<li>New command line parameter: The latest version of First Crack brings with it a new option in its &#8220;Authoring&#8221; mode: "-u&#8221; for uploading a single file. Combined with the "-r&#8221; parameter used to rebuild a single structure file, these two options make minor fixes a breeze.</li>
+    <li>A more responsive design: Another goal I had when I set out to redesign my site last week was to build a more responsive design, a design that would not only be readable on a computer, but on a mobile device as well. While I still have some kinks to work out, this design is one step closer to providing the best possible experience regardless of the device my site is viewed through.</li>
+    </ul>
+
+    
+<p>Due to little interest in the GitHub repo, I have ceased updating it; however, although <a href="https://github.com/zacjszewczyk/FirstCrack">First Crack&#8217;s GitHub page</a> has stagnated, I still intend to open source First Crack upon its completion.</p>
+</div>
+</article>
+            </section>
+        </main>
+        <footer style="max-width:65em;margin:0 auto;margin-bottom:100px;">
+            <p>Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.</p>
+            <p>&copy; 2012-2019 Zachary Szewczyk</p>
+        </footer>
+        <span id="ipad_device"></span>
+    </body>
+    <!-- SCRIPTS BLOCK -->
+    <script>document.getElementsByTagName("body")[0].style.display = "block";</script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/m_sw.js');
+          console.log("Successfully registered Service Worker.");
+        }
+    </script>
+    <link rel="stylesheet" href="../assets/main.css" type="text/css" />
+</html>
