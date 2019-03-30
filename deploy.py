@@ -39,13 +39,50 @@ def Fetch():
 # Purpose: Parse logs
 # Parameters: none
 def Parse():
-    print "Parsing."
+    # Import functions for file operations
+    from os import listdir
+
+    # Sort the logs by timestamp, with oldest logs first
+    logs = sorted(listdir("./logs"))
+    
+    # Iterate through the sorted log list
+    for log in logs:
+        print "Entry:",log
+        with open("./logs/"+log, "r") as fd:
+            for line in fd:
+                print ReturnGroups(line)
+        break
 
 # Method: Push
 # Purpose: Update site
 # Parameters: none
 def Push():
     print "Pushing."
+
+# Method: ReturnGroups
+# Purpose: Return groups from Amazon S3 Server Access Log Format
+# Parameters: 
+# - entry: Log in Amazon S3 Server Access Log Format
+def ReturnGroups(entry):
+    delimeters = ['"', '[', ']', ' ']
+    group = ""
+    end = ' '
+    a = []
+    for character in entry:
+        if (group == "" and end == ' ' and character in delimeters):
+            if (character == '['):
+                end = ']'
+            else:
+                end = character
+        elif (character == end):
+            a.append(group)
+            group = ""
+            end = ' '
+        else:
+            group += character
+    else:
+        a.append(group.strip())
+    return a
 
 if (__name__ == "__main__"):
     
