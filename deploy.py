@@ -52,8 +52,9 @@ def Parse():
         with open("./logs/"+log, "r") as fd:
             # Parse each entry
             for line in fd:
-                raw = ReturnGroups(line)
-                PrintLog(raw)
+                d = AssociateGroups(CaptureGroups(line))
+                PrintLog(d)
+
         break
 
 # Method: Push
@@ -62,11 +63,26 @@ def Parse():
 def Push():
     print "Pushing."
 
-# Method: ReturnGroups
-# Purpose: Return groups from Amazon S3 Server Access Log Format
+# Method: AssociateGroups
+# Purpose: Given an array of groups from Amazon S3 Server Access
+# Log Format, return a dictionary with the field names as keys
+# Parameters: 
+# - groups: Groups from Amazon S3 Server Access Log Format
+def AssociateGroups(groups):
+    d__ = {}
+    labels = ["owner","bucket","timestamp","remote_ip","requester","request_id","operation","key","request_uri","http_status","error_code","bytes_sent","object_size","transmission_time","turnaround_time","referrer","user_agent","version_id","host_id","signature_version","cipher_suite","authentication_type","host_header","tls_version"]
+    for i, field in enumerate(groups, start=0):
+        if (i < len(labels)):
+            d__[labels[i]] = field
+        else:
+            d__[i] = field
+    return d__
+
+# Method: CaptureGroups
+# Purpose: Return array of groups from Amazon S3 Server Access Log Format
 # Parameters: 
 # - entry: Log in Amazon S3 Server Access Log Format
-def ReturnGroups(entry):
+def CaptureGroups(entry):
     delimeters = ['"', '[', ']', ' ']
     group = ""
     end = ' '
@@ -88,16 +104,13 @@ def ReturnGroups(entry):
     return a
 
 # Method: PrintLog
-# Purpose: Label fields from Amazon S3 Server Access Log Format
+# Purpose: Pretty print dictionary of Amazon S3 Server Access
+# Log Format fields
 # Parameters: 
-# - data: Array of fields in Amazon S3 Server Access Log Format
+# - data: Dictionary of fields in Amazon S3 Server Access Log Format
 def PrintLog(data):
-    labels = ["owner","bucket","timestamp","remote_ip","requester","request_id","operation","key","request_uri","http_status","error_code","bytes_sent","object_size","transmission_time","turnaround_time","referrer","user_agent","version_id","host_id","signature_version","cipher_suite","authentication_type","host_header","tls_version"]
-    for i, field in enumerate(data, start=0):
-        if (i < len(labels)):
-            print labels[i],":",field
-        else:
-            print i,":",field
+    for key in data.keys():
+        print key,":",data[key]
 
 
 if (__name__ == "__main__"):
