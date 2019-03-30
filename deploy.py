@@ -116,6 +116,17 @@ def Push():
 
     print send
 
+    # Instantiate a new session
+    session = GetSession()
+    s3 = session.resource('s3')
+    b = s3.Bucket('zacs.site')
+
+    for each in send:
+        # print "Command to execute: '%s'" % ("b.upload_file(Filename="+each+", Key="+each+", ExtraArgs={Cache-Control:'max-age=2592000'})")
+        print "Uploading",each,"..."
+        b.upload_file(Filename=each, Key=each, ExtraArgs={'CacheControl':'max-age=2592000'})
+        print "Finished uploading",each
+
 
 # Method: AssociateGroups
 # Purpose: Given an array of groups from Amazon S3 Server Access
