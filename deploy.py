@@ -48,9 +48,12 @@ def Parse():
     # Iterate through the sorted log list
     for log in logs:
         print "Entry:",log
+        # Open each log
         with open("./logs/"+log, "r") as fd:
+            # Parse each entry
             for line in fd:
-                print ReturnGroups(line)
+                raw = ReturnGroups(line)
+                PrintLog(raw)
         break
 
 # Method: Push
@@ -83,6 +86,19 @@ def ReturnGroups(entry):
     else:
         a.append(group.strip())
     return a
+
+# Method: PrintLog
+# Purpose: Label fields from Amazon S3 Server Access Log Format
+# Parameters: 
+# - data: Array of fields in Amazon S3 Server Access Log Format
+def PrintLog(data):
+    labels = ["owner","bucket","timestamp","remote_ip","requester","request_id","operation","key","request_uri","http_status","error_code","bytes_sent","object_size","transmission_time","turnaround_time","referrer","user_agent","version_id","host_id","signature_version","cipher_suite","authentication_type","host_header","tls_version"]
+    for i, field in enumerate(data, start=0):
+        if (i < len(labels)):
+            print labels[i],":",field
+        else:
+            print i,":",field
+
 
 if (__name__ == "__main__"):
     
