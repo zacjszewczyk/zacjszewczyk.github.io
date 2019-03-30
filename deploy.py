@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+# Amazon S3 Server Access Log Format
+# https://docs.aws.amazon.com/AmazonS3/latest/dev/LogFormat.html
+
 # Import functions for CLI
 from sys import argv, exit
 
@@ -42,20 +45,23 @@ def Parse():
     # Import functions for file operations
     from os import listdir
 
+    # Open combined output log file
+    output_log = open("master.log", "w").close()
+    output_log = open("master.log", "a")
+
     # Sort the logs by timestamp, with oldest logs first
     logs = sorted(listdir("./logs"))
     
     # Iterate through the sorted log list
     for log in logs:
-        print "Entry:",log
         # Open each log
         with open("./logs/"+log, "r") as fd:
             # Parse each entry
             for line in fd:
                 d = AssociateGroups(CaptureGroups(line))
-                PrintLog(d)
+                output_log.write(GetCLF(d)+'\n')
 
-        break
+    output_log.close()
 
 # Method: Push
 # Purpose: Update site
@@ -107,11 +113,16 @@ def CaptureGroups(entry):
 # Purpose: Pretty print dictionary of Amazon S3 Server Access
 # Log Format fields
 # Parameters: 
-# - data: Dictionary of fields in Amazon S3 Server Access Log Format
+# - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
 def PrintLog(data):
-    for key in data.keys():
-        print key,":",data[key]
+    print "On",data["timestamp"].replace(":", " ", 1),"the machine",data["remote_ip"],"(referred by",data["referrer"]+")","said",data["request_uri"],"and the server responded with",data["key"],"of size",data["object_size"],"bytes which took",data["turnaround_time"],"milliseconds to send, and resulted in the response code",data["http_status"],"and error code",data["error_code"]
 
+# Method: GetCLF
+# Purpose: Return log in Command Log Format
+# Parameters: 
+# - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
+def GetCLF(data):
+    return data["remote_ip"]+" user-identifier - ["+data["timestamp"]+"] \""+data["request_uri"]+"\" "+data["http_status"]+" "+data["object_size"]
 
 if (__name__ == "__main__"):
     
@@ -130,9 +141,14 @@ if (__name__ == "__main__"):
     ## Parse logs
     elif (argv[1] == "parse"):
         Parse()
+    ## View logs
+    elif (argv[1] == "view"):
+        from os import system
+        system("goaccess master.log -c")
     elif (argv[1] == "push"):
         Push()
     ## Invalid parameter. Notify user and exit.
     else:
         print "Enter a valid parameter."
         exit(1)
+
