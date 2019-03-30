@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 from re import findall, search, sub, match, search # Import re functions
+from os import chdir # Import chdir to locate content files
 
 # Global variables for pasring Markdown
 # - types: Keeps track of current and previous two line types
@@ -8,6 +9,9 @@ from re import findall, search, sub, match, search # Import re functions
 types = ["", "", ""]
 active = ""
 pre = False
+
+# Tell Proofer where it can find the content files
+path_to_content_files = "/Users/zjszewczyk/Dropbox/Code/Standalone/"
 
 # Method: Markdown
 # Purpose: Take a raw string from a file, formatted in Markdown, and parse it into HTML.
@@ -27,7 +31,9 @@ def Markdown(line):
         types.append("RAW HTML")
     # Part of a series
     elif (line[0] == "{"):
-        fd = open("Content/System/"+line[1:-1].strip(), "r")
+        line = line.strip()
+        chdir(path_to_content_files)
+        fd = open("Content/System/"+line[1:-1], "r")
         line = "<ul style=\"border:1px dashed gray\" id=\"series_index\">\n"
         for each in fd.read().split("\n"):
             line += "    <li>"+Markdown(each)+"</li>\n"
