@@ -105,8 +105,14 @@ def GetChangedFiles():
 
     return send
 
+# Method: Stage
+# Purpose: Update site locally
+# Parameters: none
+def Stage():
+    
+
 # Method: Push
-# Purpose: Update site
+# Purpose: Send updated site to server
 # Parameters: none
 def Push():
     send = GetChangedFiles()
@@ -126,7 +132,6 @@ def Push():
         print "Uploading",each,"..."
         b.upload_file(Filename=each, Key=each, ExtraArgs={'CacheControl':'max-age=2592000'})
         print "Finished uploading",each
-
 
 # Method: AssociateGroups
 # Purpose: Given an array of groups from Amazon S3 Server Access
@@ -212,6 +217,10 @@ if (__name__ == "__main__"):
     elif (argv[1] == "view"):
         from os import system
         system("goaccess master.log -c")
+    # Stage the site
+    elif (argv[1] == "stage"):
+        Stage()
+    # Push the site
     elif (argv[1] == "push"):
         Push()
     ## Invalid parameter. Notify user and exit.
