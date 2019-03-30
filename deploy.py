@@ -66,11 +66,50 @@ def Parse():
 
     output_log.close()
 
+# Method: GetChangedFiles
+# Purpose: Return a list of files modified since last push
+# Parameters: none
+def GetChangedFiles():
+    from os import devnull
+    import subprocess
+    FNULL = open(devnull, 'w')
+
+    send = []
+
+    code = subprocess.call("git status", stdout=FNULL, stderr=FNULL, shell=True)
+    if (code != 0):
+        print "Error with source control configuration: no repository found."
+        exit(1)
+
+    output = subprocess.check_output("git status", shell=True)
+    if ("Changes not staged for commit" not in output):
+        print "Nothing to update."
+        exit(1)
+
+    # Isolate the "modified: " section of "git status" output
+    files = output.split("modified:", 1)[1].strip().split('\n')
+    files = files[0:files.index('')]
+
+    # Extract the filenames from the "modified: " section
+    for i,file in enumerate(files, start=0):
+        files[i] = file.replace("modified:", "").strip()
+
+    for file in files:
+        if (file[-4:] == "html"):
+            send.append(file)
+
+    FNULL.close()
+
+    return send
+
 # Method: Push
 # Purpose: Update site
 # Parameters: none
 def Push():
-    print "Pushing."
+    if (GetChangedFiles() == []):
+        print "No files to push."
+        exit(0)
+
 
 # Method: AssociateGroups
 # Purpose: Given an array of groups from Amazon S3 Server Access
