@@ -195,6 +195,7 @@ if (__name__ == "__main__"):
     # Basic input checking
     if (len(argv) <= 1):
         print "Enter parameter."
+        print """fetch - Download new log files\nparse - Parse local log files\nview - Open GoAccess dashboard\npush - Deploy new HTML files to server"""
         exit(1)
     if (len(argv) > 2):
         print "Too many parameters."
