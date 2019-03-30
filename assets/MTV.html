@@ -6,9 +6,9 @@
         <meta name="description" content="FMTV RV Builder">
         <meta name="author" content="Zac Szewczyk">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-        <link rel="manifest" href="Static/manifest.json">
+        <link rel="manifest" href="/assets/manifest.json">
         <meta name="theme-color" content="#FFFFFF"/>
-        <link rel="stylesheet" href="/Static/MTV.css" type="text/css" />
+        <link rel="stylesheet" href="MTV.css" type="text/css" />
     </head>
     <body>
         <main>
@@ -41,12 +41,12 @@
                     <div id="passthrough"></div>
                 </div>
                 <picture alt="M1078 chassis" id="M1078" class="chassis_images">
-                    <source alt="M1078 chassis."  type="image/webp" data-srcset="Static/Images/M1078_small.webp">
-                    <img alt="M1078 chassis." data-src="Static/Images/M1078_small.png" />
+                    <source alt="M1078 chassis."  type="image/webp" data-srcset="Images/M1078_small.webp">
+                    <img alt="M1078 chassis." data-src="Images/M1078_small.png" />
                 </picture>
                 <picture alt="M1083 chassis" id="M1083" class="chassis_images">
-                    <source alt="M1083 chassis." type="image/webp" data-srcset="Static/Images/M1083_small.webp">
-                    <img alt="M1083 chassis." data-src="Static/Images/M1083_small.png" />
+                    <source alt="M1083 chassis." type="image/webp" data-srcset="Images/M1083_small.webp">
+                    <img alt="M1083 chassis." data-src="Images/M1083_small.png" />
                 </picture>
             </section>
             <section id="horizontal_ruler">
@@ -179,5 +179,5 @@
         let m = document.getElementsByTagName("img"); for (i=0; i < m.length; i++) { m[i].setAttribute("src", m[i].getAttribute("data-src")); }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/Static/MTV.js"></script>
+    <script type="text/javascript" src="MTV.js"></script>
 </html>
