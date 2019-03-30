@@ -6,6 +6,17 @@
 # Import functions for CLI
 from sys import argv, exit
 
+def GetSession():
+    # Import functions for S3 session
+    from boto3.session import Session
+    import boto3
+
+    # Private access key information
+    ACCESS_KEY = 'AKIA4K7UTVOAUNQFLO7T'
+    SECRET_KEY = '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'
+
+    return Session(aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
+
 # Method: Fetch
 # Purpose: Download logs
 # Parameters: none
@@ -18,16 +29,8 @@ def Fetch():
     if (not isdir("./logs")):
         mkdir("./logs")
 
-    # Import functions for S3 session
-    from boto3.session import Session
-    import boto3
-
-    # Private access key information
-    ACCESS_KEY = 'AKIA4K7UTVOAUNQFLO7T'
-    SECRET_KEY = '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'
-
     # Instantiate a new session
-    session = Session(aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
+    session = GetSession()
     s3 = session.resource('s3')
     b = s3.Bucket('logs.zacs.site')
 
@@ -95,7 +98,7 @@ def GetChangedFiles():
         files[i] = file.replace("modified:", "").strip()
 
     for file in files:
-        if (file[-4:] == "html"):
+        if (file[-4:] == "html" and "system/" not in file):
             send.append(file)
 
     FNULL.close()
@@ -106,9 +109,12 @@ def GetChangedFiles():
 # Purpose: Update site
 # Parameters: none
 def Push():
-    if (GetChangedFiles() == []):
+    send = GetChangedFiles()
+    if (send == []):
         print "No files to push."
         exit(0)
+
+    print send
 
 
 # Method: AssociateGroups
