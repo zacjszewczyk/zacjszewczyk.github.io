@@ -122,6 +122,8 @@ def Markdown(line):
             line = line.replace(each, ftxt)
         # Interpret inline code
         for each in findall("\%[\w:\/\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]\/<>]+\%", line):
+            if (len(each.split(" ")) > 5):
+                continue
             ftxt = each
             line = line.replace(each, "&&TK&&")
             ftxt = each.replace("%", "<span class='command'>", 1)
