@@ -59,7 +59,8 @@ def Parse():
             # Parse each entry
             for line in fd:
                 d = AssociateGroups(CaptureGroups(line))
-                output_log.write(GetCLF(d)+'\n')
+                # output_log.write(GetCommonLogFormat(d)+'\n')
+                output_log.write(GetCombinedLogFormat(d)+'\n')
 
     output_log.close()
 
@@ -117,12 +118,19 @@ def CaptureGroups(entry):
 def PrintLog(data):
     print "On",data["timestamp"].replace(":", " ", 1),"the machine",data["remote_ip"],"(referred by",data["referrer"]+")","said",data["request_uri"],"and the server responded with",data["key"],"of size",data["object_size"],"bytes which took",data["turnaround_time"],"milliseconds to send, and resulted in the response code",data["http_status"],"and error code",data["error_code"]
 
-# Method: GetCLF
+# Method: GetCommonLogFormat
 # Purpose: Return log in Command Log Format
 # Parameters: 
 # - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
-def GetCLF(data):
+def GetCommonLogFormat(data):
     return data["remote_ip"]+" user-identifier - ["+data["timestamp"]+"] \""+data["request_uri"]+"\" "+data["http_status"]+" "+data["object_size"]
+
+# Method: GetCombinedLogFormat
+# Purpose: Return log in Combined Log Format
+# Parameters: 
+# - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
+def GetCombinedLogFormat(data):
+    return data["remote_ip"]+" user-identifier - ["+data["timestamp"]+"] \""+data["request_uri"]+"\" "+data["http_status"]+" "+data["object_size"]+" \""+data["referrer"]+"\" "+data["user_agent"]+"\""
 
 if (__name__ == "__main__"):
     
