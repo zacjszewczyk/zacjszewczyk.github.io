@@ -136,8 +136,8 @@ def AppendToFeed(source):
                 feed_fd.write("            <link>"+line.replace("Link: ", "").strip()+"</link>\n")
                 feed_fd.write("            <guid>"+line.replace("Link: ", "").strip()+"</guid>\n")
             else:
-                feed_fd.write("            <link>http://zacs.site/"+source.lower().replace(" ", "-").replace(".txt", ".html").lower()+"</link>\n")
-                feed_fd.write("            <guid>http://zacs.site/"+source.lower().replace(" ", "-").replace(".txt", ".html").lower()+"</guid>\n")
+                feed_fd.write("            <link>http://zacs.site/blog/"+source.lower().replace(" ", "-").replace(".txt", ".html").lower()+"</link>\n")
+                feed_fd.write("            <guid>http://zacs.site/blog/"+source.lower().replace(" ", "-").replace(".txt", ".html").lower()+"</guid>\n")
         # Close the <description> portion of the item.
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
@@ -482,11 +482,12 @@ def Interface(params):
     # Store the menu in a variable so as to provide easy access at any point in time.
     menu = """
     * To search all articles:                        %s-S%s
+    * To revert post timestamps:                     %s-r%s
     * To clear all structure files:                  %s-R%s
     * To display this menu:                          %s-h%s
     * To exit this mode and build the site:          %sexit%s
     * To exit this mode and quit the program:        %s!exit%s
-    """ % (c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
+    """ % (c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
 
     # Using the "-a" parameter enters Authoring mode, so print the welcome message
     if "-a" in params:
@@ -521,6 +522,12 @@ def Interface(params):
                     print "\nFile: "+c.UNDERLINE+file+c.ENDC
                     for match in res:
                         print "    %sLine %d:%s %s" % (c.BOLD, match[0], c.ENDC, match[1])
+
+        # Revert post timestamps
+        if (search("-r", query)):
+            for files in listdir("Content"):
+                if (files.endswith(".txt")):
+                    Revert("Content/"+files)
 
         # Remove all existing structure files
         if (search("-R", query) != None):
@@ -578,6 +585,26 @@ def Migrate(target, mod_time):
 
     # Return the read article type, for debugging.
     return article_type
+
+# Method: Revert
+# Purpose: Check file timestamp against article timestamp. Correct if necessary.
+# Parameters: 
+# - tgt: Target file name (String)
+def Revert(tgt):
+    
+    fd = open(tgt, "r")
+    fd.readline()
+    fd.readline()
+    fd.readline()
+    mod_time = fd.readline()[9:].strip()
+    fd.close()
+
+    mtime = strftime("%Y/%m/%d %H:%M:%S", localtime(stat(tgt).st_mtime))
+    
+    if (mod_time != mtime):
+        print "Does not match for",tgt
+        print "Reverting to",mod_time
+        utime(tgt, ((mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
 
 # Method: SearchFile
 # Purpose: Search for a string within a file.

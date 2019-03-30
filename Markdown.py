@@ -163,7 +163,7 @@ def Markdown(line):
                     if (".htm" == url[-4:]):
                         url = ""+url.replace(" ", "-").lower()
                 else:
-                    url = ""+url.replace(" ", "-").replace(".txt", ".html").lower()
+                    url = "http://zacs.site/blog/"+url.replace(" ", "-").replace(".txt", ".html").lower()
 
             if (".txt" == url[-4:]):
                 url = url.replace(".txt", "").replace(" ", "-").replace("&#8220;", "").replace("&#8221;", "").replace("&#8217;", "").replace("&#8216;", "").replace("&#8217;", "")
