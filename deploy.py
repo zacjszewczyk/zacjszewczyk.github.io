@@ -109,7 +109,29 @@ def GetChangedFiles():
 # Purpose: Update site locally
 # Parameters: none
 def Stage():
-    
+    from os.path import isdir
+    from os import mkdir, listdir, remove
+    from gzip import open as gopen
+    from shutil import copyfileobj as copy
+
+    if (not isdir("./stage")):
+        mkdir("./stage")
+
+    if (not isdir("./stage/blog")):
+        mkdir("./stage/blog")
+
+    for file in listdir("./"):
+        if (file[-4:] == "html" or file[-3:] == "xml" or file[-2:] == "js"):
+            with open(file, 'rb') as f_in, gopen('./stage/'+file, 'wb') as f_out:
+                copy(f_in, f_out)
+            remove(file)
+
+    for file in listdir("./blog/"):
+        if (file[-4:] == "html"):
+            with open("./blog/"+file, 'rb') as f_in, gopen('./stage/blog/'+file, 'wb') as f_out:
+                copy(f_in, f_out)
+            remove("./blog/"+file)
+
 
 # Method: Push
 # Purpose: Send updated site to server
@@ -130,7 +152,7 @@ def Push():
     for each in send:
         # print "Command to execute: '%s'" % ("b.upload_file(Filename="+each+", Key="+each+", ExtraArgs={Cache-Control:'max-age=2592000'})")
         print "Uploading",each,"..."
-        b.upload_file(Filename=each, Key=each, ExtraArgs={'CacheControl':'max-age=2592000'})
+        # b.upload_file(Filename=each, Key=each, ExtraArgs={'CacheControl':'max-age=2592000'})
         print "Finished uploading",each
 
 # Method: AssociateGroups
