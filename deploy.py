@@ -262,28 +262,42 @@ def Stage():
     from os import mkdir, listdir
     from gzip import open as gopen
     from shutil import copyfileobj as copy
+    from sys import stdout
 
     # Setup the environment for staging
     ## If the ./stage directory doesn't exist, create it
     if (not isdir("./stage")):
+        print c.OKGREEN+"Creating ./stage"+c.ENDC
         mkdir("./stage")
     ## If the ./stage/blog directory doesn't exist, create it
     if (not isdir("./stage/blog")):
+        print c.OKGREEN+"Creating ./stage/blog"+c.ENDC
         mkdir("./stage/blog")
+
+    # Keep track of number of files staged
+    i = 0
 
     # Take all HTML, XML, and JavaScript files from the directory,
     # compress them, and move the gzipped files to ./stage
     for file in listdir("./"):
         if (file[-4:] == "html" or file[-3:] == "xml" or file[-2:] == "js"):
             with open(file, 'rb') as f_in, gopen('./stage/'+file, 'wb') as f_out:
+                stdout.write(c.OKGREEN+"Staging file at: "+c.ENDC+file+" ...")
                 copy(f_in, f_out)
+                i += 1
+                stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
     # Take all HTML files in ./blog, compress them, and move the
     # gzipped files to ./stage
     for file in listdir("./blog/"):
         if (file[-4:] == "html"):
             with open("./blog/"+file, 'rb') as f_in, gopen('./stage/blog/'+file, 'wb') as f_out:
+                stdout.write(c.OKGREEN+"Staging file at: "+c.ENDC+"./blog/"+file+" ...")
                 copy(f_in, f_out)
+                i += 1
+                stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+
+    print "\n"+c.OKGREEN+str(i)+" files staged."+c.ENDC
 
 if (__name__ == "__main__"):
     # Import functions for CLI
