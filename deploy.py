@@ -122,44 +122,6 @@ def Fetch():
             print "%sDownloading%s %s%s%s to location %s%s%s" % (c.OKGREEN, c.ENDC, c.UNDERLINE, file.key, c.ENDC, c.UNDERLINE, "."+file.key, c.ENDC)
             b.download_file(file.key, "."+file.key)
 
-# Method: GetChangedFiles
-# Purpose: Return a list of files modified since last push
-# Parameters: none
-# Return:
-# - send: File names that have changed since last commit (Array)
-def GetChangedFiles():
-    from os import devnull
-    import subprocess
-    FNULL = open(devnull, 'w')
-
-    send = []
-
-    code = subprocess.call("git status", stdout=FNULL, stderr=FNULL, shell=True)
-    if (code != 0):
-        print c.FAIL+"Error with source control configuration: no repository found."+c.ENDC
-        exit(1)
-
-    output = subprocess.check_output("git status", shell=True)
-    if ("Changes not staged for commit" not in output):
-        print c.WARNING+"Nothing to update."+c.ENDC
-        exit(1)
-
-    # Isolate the "modified: " section of "git status" output
-    files = output.split("modified:", 1)[1].strip().split('\n')
-    files = files[0:files.index('')]
-
-    # Extract the filenames from the "modified: " section
-    for i,file in enumerate(files, start=0):
-        files[i] = file.replace("modified:", "").strip()
-
-    for file in files:
-        if (file[-4:] == "html" and "system/" not in file):
-            send.append(file)
-
-    FNULL.close()
-
-    return send
-
 # Method: GetCommonLogFormat
 # Purpose: Return log in Command Log Format
 # Parameters: 
@@ -230,16 +192,17 @@ def Parse():
 def PrintLog(data):
     print "On",data["timestamp"].replace(":", " ", 1),"the machine",data["remote_ip"],"(referred by",data["referrer"]+")","said",data["request_uri"],"and the server responded with",data["key"],"of size",data["object_size"],"bytes which took",data["turnaround_time"],"milliseconds to send, and resulted in the response code",data["http_status"],"and error code",data["error_code"]
 
-# Method: Push
+# Method: Deploy
 # Purpose: Send updated site to server
 # Parameters: none
 # Return: none
-def Push():
+def Deploy():
     from os.path import isdir, isfile
     from os import mkdir, listdir
     from os import devnull
     import subprocess
     from sys import stdout
+    from Hash import HashFiles
 
     FNULL = open(devnull, 'w')
 
@@ -274,17 +237,17 @@ def Push():
             continue
 
         # Ignore files that have already been deployed
-        if (isfile("./deploy/"+file)):
+        if (isfile("./deploy/"+file) and HashFiles("./stage/"+file, "./deploy/"+file)):
             continue
 
         stdout.write(c.OKGREEN+"Moving file at: "+c.ENDC+"./stage/"+file+" ...")
-        code = subprocess.call("mv ./stage/"+file+" ./deploy/"+file, stdout=FNULL, stderr=FNULL, shell=True)
+        code = subprocess.call("cp ./stage/"+file+" ./deploy/"+file, stdout=FNULL, stderr=FNULL, shell=True)
         if (code != 0):
             print c.FAIL+"Error moving file."+c.ENDC
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/"+file+" ...")
-        b.upload_file(Filename="./deploy/"+file, Key=file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':content_type})
+        # b.upload_file(Filename="./deploy/"+file, Key=file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':content_type})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
@@ -294,7 +257,7 @@ def Push():
             continue
 
         # Ignore files that have already been deployed
-        if (isfile("./deploy/blog/"+file)):
+        if (isfile("./deploy/blog/"+file) and HashFiles("./stage/blog/"+file, "./deploy/blog/"+file)):
             continue
 
         stdout.write(c.OKGREEN+"Copying file at: "+c.ENDC+"./stage/blog/"+file+" ...")
@@ -304,7 +267,7 @@ def Push():
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/blog/"+file+" ...")
-        b.upload_file(Filename="./deploy/blog/"+file, Key="/blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
+        # b.upload_file(Filename="./deploy/blog/"+file, Key="/blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
@@ -318,10 +281,11 @@ def Push():
 # Return: none
 def Stage():
     from os.path import isdir, isfile
-    from os import mkdir, listdir
+    from os import mkdir, listdir, utime, stat
     from gzip import open as gopen
     from shutil import copyfileobj as copy
     from sys import stdout
+    from ModTimes import CompareMtimes
 
     # Setup the environment for staging
     ## If the ./stage directory doesn't exist, create it
@@ -340,25 +304,27 @@ def Stage():
     # compress them, and copy the gzipped files to ./stage
     for file in listdir("./"):
         if (file[-4:] == "html" or file[-3:] == "xml" or file[-2:] == "js"):
-            if (isfile('./stage/'+file)):
+            if (isfile('./stage/'+file) and CompareMtimes(file, "./stage/"+file)):
                 continue
             with open(file, 'rb') as f_in, gopen('./stage/'+file, 'wb') as f_out:
                 stdout.write(c.OKGREEN+"Staging file at: "+c.ENDC+file+" ...")
                 copy(f_in, f_out)
                 i += 1
                 stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+            utime("./stage/"+file, (stat(file).st_mtime, stat(file).st_mtime))
 
     # Take all HTML files in ./blog, compress them, and copy the
     # gzipped files to ./stage
     for file in listdir("./blog/"):
         if (file[-4:] == "html"):
-            if (isfile('./stage/blog/'+file)):
+            if (isfile('./stage/blog/'+file) and CompareMtimes("./blog/"+file, "./stage/blog/"+file)):
                 continue
             with open("./blog/"+file, 'rb') as f_in, gopen('./stage/blog/'+file, 'wb') as f_out:
                 stdout.write(c.OKGREEN+"Staging file at: "+c.ENDC+"./blog/"+file+" ...")
                 copy(f_in, f_out)
                 i += 1
                 stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+            utime("./stage/blog/"+file, (stat("./blog/"+file).st_mtime, stat("./blog/"+file).st_mtime))
 
     print "\n"+c.OKGREEN+str(i)+" files staged."+c.ENDC
 
@@ -406,9 +372,9 @@ if (__name__ == "__main__"):
     elif (argv[1] == "clear"):
         Clear("./stage")
         Clear("./deploy")
-    # Push the site
-    elif (argv[1] == "push"):
-        Push()
+    # Deploy the site
+    elif (argv[1] == "deploy"):
+        Deploy()
     ## Invalid parameter. Notify user and exit.
     else:
         print c.FAIL+"Error: enter a valid command."+c.ENDC
