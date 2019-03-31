@@ -235,23 +235,83 @@ def PrintLog(data):
 # Parameters: none
 # Return: none
 def Push():
-    send = GetChangedFiles()
-    if (send == []):
-        print c.WARNING+"No files to push."+c.ENDC
-        exit(0)
+    from os.path import isdir, isfile
+    from os import mkdir, listdir
+    from os import devnull
+    import subprocess
+    from sys import stdout
 
-    print send
+    FNULL = open(devnull, 'w')
+
+    # Setup the environment for deploying
+    ## If the ./deploy directory doesn't exist, create it
+    if (not isdir("./deploy")):
+        print c.OKGREEN+"Creating ./deploy"+c.ENDC
+        mkdir("./deploy")
+    ## If the ./deploy/blog directory doesn't exist, create it
+    if (not isdir("./deploy/blog")):
+        print c.OKGREEN+"Creating ./deploy/blog"+c.ENDC
+        mkdir("./deploy/blog")
+
+    # Keep track of number of files deployed
+    i = 0
 
     # Instantiate a new session
     session = GetSession()
     s3 = session.resource('s3')
     b = s3.Bucket('zacs.site')
 
-    for each in send:
-        # print "Command to execute: '%s'" % ("b.upload_file(Filename="+each+", Key="+each+", ExtraArgs={Cache-Control:'max-age=2592000'})")
-        print "Uploading",each,"as",each[6:]
-        b.upload_file(Filename=each, Key=each[6:], ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
-        print "Finished uploading",each
+    # Take all HTML, XML, and JavaScript files from the ./stage
+    # directory, and upload them with the appropriate headers
+    for file in listdir("./stage"):
+        if (file[-4:] == "html"):
+            content_type = "text/html"
+        elif (file[-3:] == "xml"):
+            content_type = "text/xml"
+        elif (file[-2:] == "js"):
+            content_type = "text/javascript"
+        else:
+            continue
+
+        # Ignore files that have already been deployed
+        if (isfile("./deploy/"+file)):
+            continue
+
+        stdout.write(c.OKGREEN+"Moving file at: "+c.ENDC+"./stage/"+file+" ...")
+        code = subprocess.call("mv ./stage/"+file+" ./deploy/"+file, stdout=FNULL, stderr=FNULL, shell=True)
+        if (code != 0):
+            print c.FAIL+"Error moving file."+c.ENDC
+            exit(1)
+        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+        stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/"+file+" ...")
+        b.upload_file(Filename="./deploy/"+file, Key=file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':content_type})
+        i += 1
+        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+
+    for file in listdir("./stage/blog/"):
+        # Ignore everything but HTML files
+        if (file[-4:] != "html"):
+            continue
+
+        # Ignore files that have already been deployed
+        if (isfile("./deploy/blog/"+file)):
+            continue
+
+        stdout.write(c.OKGREEN+"Moving file at: "+c.ENDC+"./stage/blog/"+file+" ...")
+        code = subprocess.call("mv ./stage/blog/"+file+" ./deploy/blog/"+file, stdout=FNULL, stderr=FNULL, shell=True)
+        if (code != 0):
+            print c.FAIL+"Error moving file."+c.ENDC
+            exit(1)
+        i += 1
+        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+        stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/blog/"+file+" ...")
+        b.upload_file(Filename="./deploy/blog/"+file, Key="/blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
+        i += 1
+        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+
+    print "\n"+c.OKGREEN+str(i)+" files deployed."+c.ENDC
+    
+    FNULL.close()
 
 # Method: Stage
 # Purpose: Update site locally
@@ -353,4 +413,3 @@ if (__name__ == "__main__"):
     else:
         print c.FAIL+"Error: enter a valid command."+c.ENDC
         exit(1)
-
