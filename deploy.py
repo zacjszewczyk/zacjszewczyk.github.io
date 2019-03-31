@@ -258,7 +258,7 @@ def Push():
 # Parameters: none
 # Return: none
 def Stage():
-    from os.path import isdir
+    from os.path import isdir, isfile
     from os import mkdir, listdir
     from gzip import open as gopen
     from shutil import copyfileobj as copy
@@ -281,6 +281,8 @@ def Stage():
     # compress them, and move the gzipped files to ./stage
     for file in listdir("./"):
         if (file[-4:] == "html" or file[-3:] == "xml" or file[-2:] == "js"):
+            if (isfile('./stage/'+file)):
+                continue
             with open(file, 'rb') as f_in, gopen('./stage/'+file, 'wb') as f_out:
                 stdout.write(c.OKGREEN+"Staging file at: "+c.ENDC+file+" ...")
                 copy(f_in, f_out)
@@ -291,6 +293,8 @@ def Stage():
     # gzipped files to ./stage
     for file in listdir("./blog/"):
         if (file[-4:] == "html"):
+            if (isfile('./stage/blog/'+file)):
+                continue
             with open("./blog/"+file, 'rb') as f_in, gopen('./stage/blog/'+file, 'wb') as f_out:
                 stdout.write(c.OKGREEN+"Staging file at: "+c.ENDC+"./blog/"+file+" ...")
                 copy(f_in, f_out)
