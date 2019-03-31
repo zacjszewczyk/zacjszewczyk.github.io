@@ -61,6 +61,25 @@ def CaptureGroups(entry):
         a.append(group.strip())
     return a
 
+# Method: Clear
+# Purpose: Clear the ./stage directory
+# Parameters: none
+# Return: none
+def Clear():
+    # Import methods for file operations
+    from os import walk, remove
+    from sys import stdout
+
+    # Move through ./stage and all subdirectories
+    for path, subdirs, files in walk("./stage"):
+        for name in files:
+            # Ignore hidden files
+            if (name[0] == '.'):
+                continue
+            stdout.write(c.FAIL+"Removing file at: "+c.ENDC+path+"/"+name+" ...")
+            remove(path+"/"+name)
+            stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+        
 # Method: Fetch
 # Purpose: Download logs
 # Parameters: none
@@ -257,11 +276,13 @@ if (__name__ == "__main__"):
 
     # Store the menu in a variable so as to provide easy access at any point in time.
     menu = """
-    * To view server logs:      %sview%s
-    * To fetch server logs:     %sfetch%s
-    * To parse server logs:     %sparse%s
-    * To deploy site:           %sdeploy%s
-    """ % (c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC)
+    * To view server logs:          %sview%s
+    * To fetch server logs:         %sfetch%s
+    * To parse server logs:         %sparse%s
+    * To stage site locally:        %sstage%s
+    * To clear the staged site:     %sclear%s
+    * To deploy site to server      %sdeploy%s
+    """ % (c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
 
     # Basic input checking
     if (len(argv) <= 1):
@@ -273,27 +294,25 @@ if (__name__ == "__main__"):
         exit(1)
 
     # Handle input
+    ## View logs
+    if (argv[1] == "view"):
+        from os import system
+        system("goaccess master.log -c")
     ## Fetch logs
-    if (argv[1] == "fetch"):
+    elif (argv[1] == "fetch"):
         Fetch()
     ## Parse logs
     elif (argv[1] == "parse"):
         Parse()
-    ## View logs
-    elif (argv[1] == "view"):
-        from os import system
-        system("goaccess master.log -c")
     # Stage the site
     elif (argv[1] == "stage"):
         Stage()
+    # Clear the ./stage directory
+    elif (argv[1] == "clear"):
+        Clear()
     # Push the site
     elif (argv[1] == "push"):
         Push()
-    # Clear the ./stage directory
-    elif (argv[1] == "clear"):
-        from os import listdir, remove
-        for file in listdir("./stage/"):
-            print file
     ## Invalid parameter. Notify user and exit.
     else:
         print c.FAIL+"Error: enter a valid command."+c.ENDC
