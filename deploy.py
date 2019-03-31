@@ -249,13 +249,24 @@ if (__name__ == "__main__"):
     # Import functions for CLI
     from sys import argv, exit
 
+    # Create new instance of colors, for input styling
+    c = colors()
+
+    # Store the menu in a variable so as to provide easy access at any point in time.
+    menu = """
+    * To view server logs:  %sview%s
+    * To fetch server logs: %sfetch%s
+    * To parse server logs: %sparse%s
+    * To deploy site:       %sdeploy%s
+    """ % (c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC)
+
     # Basic input checking
     if (len(argv) <= 1):
-        print "Enter parameter."
-        print """fetch - Download new log files\nparse - Parse local log files\nview - Open GoAccess dashboard\npush - Deploy new HTML files to server"""
+        print c.FAIL+"Error: enter a command:"c.ENDC
+        print menu
         exit(1)
     if (len(argv) > 2):
-        print "Too many parameters."
+        print c.FAIL+"Error: too many parameters."+c.ENDC
         exit(1)
 
     # Handle input
@@ -277,6 +288,6 @@ if (__name__ == "__main__"):
         Push()
     ## Invalid parameter. Notify user and exit.
     else:
-        print "Enter a valid parameter."
+        print c.FAIL+"Error: enter a valid command."+c.ENDC
         exit(1)
 
