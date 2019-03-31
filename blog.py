@@ -653,10 +653,27 @@ def Terminate():
 # If run as an individual file, generate the site and report runtime.
 # If imported, only make methods available to imported program.
 if __name__ == '__main__':
-    argv = argv
-    argc = len(argv)
-    if (argc > 1):
+    c = colors()
+
+    # If the user just runs the file, notify them that they can use "-a"
+    # to enter "Authoring Mode". Then build the site.
+    if (len(argv) == 1):
+        print c.UNDERLINE+"Note"+c.ENDC+": You can use '-a' to enter 'Authoring Mode'"
+    # If they have run the program with a single parameter, bounds check
+    # it, then send them to the interface
+    elif (len(argv) == 2):
+        # Don't allow double or single quatation marks, or input over 2
+        # characters long
+        if ('"' in argv[1] or "'" in argv[1] or len(argv[1]) > 2):
+            print c.FAIL+"Invalid parameters"+c.ENDC
+            exit(0)
+
+        # Send the user to the CLI
         Interface(argv[1:])
+        
+    else:
+        print c.FAIL+"Too many parameters"+c.ENDC
+        exit(0)
 
     t1 = datetime.datetime.now()
     Init()
@@ -670,5 +687,4 @@ if __name__ == '__main__':
 
     t2 = datetime.datetime.now()
 
-    c = colors()
     print ("Execution time: "+c.OKGREEN+str(t2-t1)+"s"+c.ENDC)
