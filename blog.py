@@ -489,7 +489,7 @@ def Init():
 # Purpose: Provide a command line interface for the script, for more granular control
 # of its operation.
 # Parameters: params: command line parameters (String)
-def Interface(params,search_query=""):
+def Interface(params,search_query="",end_action="continue"):
     # 'c' is an instance of the 'colors' class, for output styling
     global c
 
@@ -565,7 +565,10 @@ def Interface(params,search_query=""):
             return False
         # Accept user input again
         else:
-            params = "-a"
+            if (end_action == "continue"):
+                params = "-a"
+            else:
+                exit(0)
 
 # Method: Migrate
 # Purpose: For files without the header information in their first five lines, generate
@@ -679,7 +682,7 @@ if __name__ == '__main__':
     
     # Allow the user to search from the CLI
     elif (len(argv) == 3 and argv[1] == "-S"):
-        Interface(argv[1],argv[2])
+        Interface(argv[1],argv[2],"exit")
 
     else:
         print c.FAIL+"Too many parameters"+c.ENDC
