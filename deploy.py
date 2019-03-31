@@ -70,8 +70,22 @@ def Clear():
     from os import walk, remove
     from sys import stdout
 
+    # Keep track of number of files deleted
+    i = 0
+
     # Move through ./stage and all subdirectories
     for path, subdirs, files in walk("./stage"):
+        # Remove .DS_Store from file list
+        if (".DS_Store" in files):
+            files.remove(".DS_Store")
+
+        # If there are no files to remove in the directory, warn
+        # the user.
+        if (len(files) == 0):
+            print "%sNothing to clear in %s%s" % (c.WARNING, path, c.ENDC)
+            continue
+
+        # Delete all non-hidden files in ./stage/*
         for name in files:
             # Ignore hidden files
             if (name[0] == '.'):
@@ -79,6 +93,9 @@ def Clear():
             stdout.write(c.FAIL+"Removing file at: "+c.ENDC+path+"/"+name+" ...")
             remove(path+"/"+name)
             stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+            i += 1
+    
+    print "\n"+c.WARNING+str(i)+" files deleted."+c.ENDC
         
 # Method: Fetch
 # Purpose: Download logs
