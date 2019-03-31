@@ -182,7 +182,7 @@ def BuildFromTemplate(target, title, bodyid, sheets="", passed_content=""):
     # Clear the target file, then write the opening HTML code and any passed content.
     fd = open(target, "w").close()
     fd = open(target, "a")
-    fd.write(content[0].replace("{{ title }}", title).replace("{{ BODYID }}", bodyid).replace("<!-- SHEETS -->", sheets))
+    fd.write(content[0].replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
     fd.write(passed_content)
     fd.close()
 
@@ -223,7 +223,7 @@ def GenBlog():
         year_fd = open("blog/"+year+".html", "w").close()
         year_fd = open("blog/"+year+".html", "a")
         # Write the opening HTML tags
-        year_fd.write(content[0].replace("index.html", "../index.html").replace("blog.html", "../blog.html").replace("archives.html", "../archives.html").replace("projects.html", "../projects.html").replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives"))
+        year_fd.write(content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1).replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1))
         # Insert a 'big table' into the document, to better display the months listed.
         year_fd.write("""<table style="width:100%;padding:20pt 0;" id="big_table">""")
         year_fd.write("    <tr>\n        <td>%s</td>\n    </tr>\n" % (year))
@@ -237,7 +237,7 @@ def GenBlog():
             month_fd = open("blog/"+year+"-"+month+".html", "w").close()
             month_fd = open("blog/"+year+"-"+month+".html", "a")
             # Write the opening HTML tags
-            month_fd.write(content[0].replace("index.html", "../index.html").replace("blog.html", "../blog.html").replace("archives.html", "../archives.html").replace("projects.html", "../projects.html").replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives").replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\""+year+".html\">"+year+"</a>\n</p>\n</article>"))
+            month_fd.write(content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1).replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1).replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\""+year+".html\">"+year+"</a>\n</p>\n</article>", 1))
             
             # Sort the sub-dictionaries by keys, days, then iterate over it.
             for day in sorted(files[year][month], reverse=True):
@@ -329,7 +329,7 @@ def GenPage(source, timestamp):
     target_fd = open("blog/"+source.lower().replace(" ", "-")[0:-3]+"html", "a")
 
     # Insert Javascript code for device detection.
-    local_content = content[0].replace("index.html", "../index.html").replace("blog.html", "../blog.html").replace("archives.html", "../archives.html").replace("projects.html", "../projects.html").replace("<!-- SCRIPTS -->", """\n            <script type="text/javascript">\n                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}\n                //https://www.dirtymarkup.com/, http://jscompress.com/\n                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}\n            </script>""").replace("{{ BODYID }}", "post")
+    local_content = content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1).replace("<!-- SCRIPTS -->", """\n            <script type="text/javascript">\n,                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling, 1)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}\n                //https://www.dirtymarkup.com/, http://jscompress.com/\n                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}\n            </script>""",1).replace("{{ BODYID }}", "post",1)
     
     # Initialize idx to track line numbers, and title to hold the title block of each article.
     idx = 0
@@ -339,11 +339,11 @@ def GenPage(source, timestamp):
     for line in iter(source_fd.readline, ""):
         # In the first line, classify the article as a linkpost or an original piece.
         if (idx == 0):
-            title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"/blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line.replace("Type: ", "").strip())
+            title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"/blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line[6:].strip())
         # In the second line of the file, add the article title.
         elif (idx == 1):
-            title = title.replace("{{URL_TITLE}}", line.replace("Title: ", "").strip())
-            local_content = local_content.replace("{{ title }}", line.replace("Title: ", "").strip()+" - ")
+            title = title.replace("{{URL_TITLE}}", line[7:].strip())
+            local_content = local_content.replace("{{ title }}", line[7:].strip()+" - ")
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
             line = line[6:].strip()
@@ -662,6 +662,7 @@ if __name__ == '__main__':
     Init()
     GenStatic()
     GenBlog()
+    
     # import cProfile
     # cProfile.run("Init()")
     # cProfile.run("GenStatic()")
