@@ -222,27 +222,31 @@ def Push():
 # Return: none
 def Stage():
     from os.path import isdir
-    from os import mkdir, listdir, remove
+    from os import mkdir, listdir
     from gzip import open as gopen
     from shutil import copyfileobj as copy
 
+    # Setup the environment for staging
+    ## If the ./stage directory doesn't exist, create it
     if (not isdir("./stage")):
         mkdir("./stage")
-
+    ## If the ./stage/blog directory doesn't exist, create it
     if (not isdir("./stage/blog")):
         mkdir("./stage/blog")
 
+    # Take all HTML, XML, and JavaScript files from the directory,
+    # compress them, and move the gzipped files to ./stage
     for file in listdir("./"):
         if (file[-4:] == "html" or file[-3:] == "xml" or file[-2:] == "js"):
             with open(file, 'rb') as f_in, gopen('./stage/'+file, 'wb') as f_out:
                 copy(f_in, f_out)
-            remove(file)
 
+    # Take all HTML files in ./blog, compress them, and move the
+    # gzipped files to ./stage
     for file in listdir("./blog/"):
         if (file[-4:] == "html"):
             with open("./blog/"+file, 'rb') as f_in, gopen('./stage/blog/'+file, 'wb') as f_out:
                 copy(f_in, f_out)
-            remove("./blog/"+file)
 
 if (__name__ == "__main__"):
     # Import functions for CLI
