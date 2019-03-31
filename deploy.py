@@ -17,165 +17,6 @@ class colors():
 # Instantiate the "colors" class, for output styling
 c = colors()
 
-# Method: GetSession
-# Purpose: Establish an S3 session, and return it to the user
-# Parameters: none
-# Return: Established S3 session (Session)
-def GetSession():
-    # Import functions for S3 session
-    from boto3.session import Session
-    import boto3
-
-    # Private access key information
-    ACCESS_KEY = 'AKIA4K7UTVOAUNQFLO7T'
-    SECRET_KEY = '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'
-
-    return Session(aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
-
-# Method: Fetch
-# Purpose: Download logs
-# Parameters: none
-# Return: none
-def Fetch():
-    # Import functions for file operations
-    from os.path import isdir, isfile
-    from os import mkdir
-    
-    # Make sure 'logs' directory exists
-    if (not isdir("./logs")):
-        mkdir("./logs")
-
-    # Instantiate a new session
-    session = GetSession()
-    s3 = session.resource('s3')
-    b = s3.Bucket('logs.zacs.site')
-
-    # Iterate over each object in the bucket
-    for file in b.objects.all():
-        # If the file does not exist on the local machine, downlaod it
-        if (not isfile("."+file.key)):
-            print "Downloading '%s' to location '%s'" % (file.key, "."+file.key)
-            b.download_file(file.key, "."+file.key)
-
-# Method: Parse
-# Purpose: Parse logs
-# Parameters: none
-# Return: none
-def Parse():
-    # Import functions for file operations
-    from os import listdir
-
-    # Open combined output log file
-    output_log = open("master.log", "w").close()
-    output_log = open("master.log", "a")
-
-    # Sort the logs by timestamp, with oldest logs first
-    logs = sorted(listdir("./logs"))
-    
-    # Iterate through the sorted log list
-    for log in logs:
-        # Open each log
-        with open("./logs/"+log, "r") as fd:
-            # Parse each entry
-            for line in fd:
-                d = AssociateGroups(CaptureGroups(line))
-                # output_log.write(GetCommonLogFormat(d)+'\n')
-                if (d["host_header"] == "s3.us-east-2.amazonaws.com"):
-                    continue
-                output_log.write(GetCombinedLogFormat(d)+'\n')
-
-    output_log.close()
-
-# Method: GetChangedFiles
-# Purpose: Return a list of files modified since last push
-# Parameters: none
-# Return:
-# - send: File names that have changed since last commit (Array)
-def GetChangedFiles():
-    from os import devnull
-    import subprocess
-    FNULL = open(devnull, 'w')
-
-    send = []
-
-    code = subprocess.call("git status", stdout=FNULL, stderr=FNULL, shell=True)
-    if (code != 0):
-        print "Error with source control configuration: no repository found."
-        exit(1)
-
-    output = subprocess.check_output("git status", shell=True)
-    if ("Changes not staged for commit" not in output):
-        print "Nothing to update."
-        exit(1)
-
-    # Isolate the "modified: " section of "git status" output
-    files = output.split("modified:", 1)[1].strip().split('\n')
-    files = files[0:files.index('')]
-
-    # Extract the filenames from the "modified: " section
-    for i,file in enumerate(files, start=0):
-        files[i] = file.replace("modified:", "").strip()
-
-    for file in files:
-        if (file[-4:] == "html" and "system/" not in file):
-            send.append(file)
-
-    FNULL.close()
-
-    return send
-
-# Method: Stage
-# Purpose: Update site locally
-# Parameters: none
-# Return: none
-def Stage():
-    from os.path import isdir
-    from os import mkdir, listdir, remove
-    from gzip import open as gopen
-    from shutil import copyfileobj as copy
-
-    if (not isdir("./stage")):
-        mkdir("./stage")
-
-    if (not isdir("./stage/blog")):
-        mkdir("./stage/blog")
-
-    for file in listdir("./"):
-        if (file[-4:] == "html" or file[-3:] == "xml" or file[-2:] == "js"):
-            with open(file, 'rb') as f_in, gopen('./stage/'+file, 'wb') as f_out:
-                copy(f_in, f_out)
-            remove(file)
-
-    for file in listdir("./blog/"):
-        if (file[-4:] == "html"):
-            with open("./blog/"+file, 'rb') as f_in, gopen('./stage/blog/'+file, 'wb') as f_out:
-                copy(f_in, f_out)
-            remove("./blog/"+file)
-
-
-# Method: Push
-# Purpose: Send updated site to server
-# Parameters: none
-# Return: none
-def Push():
-    send = GetChangedFiles()
-    if (send == []):
-        print "No files to push."
-        exit(0)
-
-    print send
-
-    # Instantiate a new session
-    session = GetSession()
-    s3 = session.resource('s3')
-    b = s3.Bucket('zacs.site')
-
-    for each in send:
-        # print "Command to execute: '%s'" % ("b.upload_file(Filename="+each+", Key="+each+", ExtraArgs={Cache-Control:'max-age=2592000'})")
-        print "Uploading",each,"as",each[6:]
-        b.upload_file(Filename=each, Key=each[6:], ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
-        print "Finished uploading",each
-
 # Method: AssociateGroups
 # Purpose: Given an array of groups from Amazon S3 Server Access
 # Log Format, return a dictionary with the field names as keys
@@ -220,14 +61,68 @@ def CaptureGroups(entry):
         a.append(group.strip())
     return a
 
-# Method: PrintLog
-# Purpose: Pretty print dictionary of Amazon S3 Server Access
-# Log Format fields
-# Parameters: 
-# - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
+# Method: Fetch
+# Purpose: Download logs
+# Parameters: none
 # Return: none
-def PrintLog(data):
-    print "On",data["timestamp"].replace(":", " ", 1),"the machine",data["remote_ip"],"(referred by",data["referrer"]+")","said",data["request_uri"],"and the server responded with",data["key"],"of size",data["object_size"],"bytes which took",data["turnaround_time"],"milliseconds to send, and resulted in the response code",data["http_status"],"and error code",data["error_code"]
+def Fetch():
+    # Import functions for file operations
+    from os.path import isdir, isfile
+    from os import mkdir
+    
+    # Make sure 'logs' directory exists
+    if (not isdir("./logs")):
+        mkdir("./logs")
+
+    # Instantiate a new session
+    session = GetSession()
+    s3 = session.resource('s3')
+    b = s3.Bucket('logs.zacs.site')
+
+    # Iterate over each object in the bucket
+    for file in b.objects.all():
+        # If the file does not exist on the local machine, downlaod it
+        if (not isfile("."+file.key)):
+            print "Downloading '%s' to location '%s'" % (file.key, "."+file.key)
+            b.download_file(file.key, "."+file.key)
+
+# Method: GetChangedFiles
+# Purpose: Return a list of files modified since last push
+# Parameters: none
+# Return:
+# - send: File names that have changed since last commit (Array)
+def GetChangedFiles():
+    from os import devnull
+    import subprocess
+    FNULL = open(devnull, 'w')
+
+    send = []
+
+    code = subprocess.call("git status", stdout=FNULL, stderr=FNULL, shell=True)
+    if (code != 0):
+        print "Error with source control configuration: no repository found."
+        exit(1)
+
+    output = subprocess.check_output("git status", shell=True)
+    if ("Changes not staged for commit" not in output):
+        print "Nothing to update."
+        exit(1)
+
+    # Isolate the "modified: " section of "git status" output
+    files = output.split("modified:", 1)[1].strip().split('\n')
+    files = files[0:files.index('')]
+
+    # Extract the filenames from the "modified: " section
+    for i,file in enumerate(files, start=0):
+        files[i] = file.replace("modified:", "").strip()
+
+    for file in files:
+        if (file[-4:] == "html" and "system/" not in file):
+            send.append(file)
+
+    FNULL.close()
+
+    return send
 
 # Method: GetCommonLogFormat
 # Purpose: Return log in Command Log Format
@@ -244,6 +139,110 @@ def GetCommonLogFormat(data):
 # Return: Log in Combined Log Format (String)
 def GetCombinedLogFormat(data):
     return data["remote_ip"]+" user-identifier - ["+data["timestamp"]+"] \""+data["request_uri"]+"\" "+data["http_status"]+" "+data["object_size"]+" \""+data["referrer"]+"\" \""+data["user_agent"]+"\""
+
+# Method: GetSession
+# Purpose: Establish an S3 session, and return it to the user
+# Parameters: none
+# Return: Established S3 session (Session)
+def GetSession():
+    # Import functions for S3 session
+    from boto3.session import Session
+    import boto3
+
+    # Private access key information
+    ACCESS_KEY = 'AKIA4K7UTVOAUNQFLO7T'
+    SECRET_KEY = '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'
+
+    return Session(aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
+
+# Method: Parse
+# Purpose: Parse logs
+# Parameters: none
+# Return: none
+def Parse():
+    # Import functions for file operations
+    from os import listdir
+
+    # Open combined output log file
+    output_log = open("master.log", "w").close()
+    output_log = open("master.log", "a")
+
+    # Sort the logs by timestamp, with oldest logs first
+    logs = sorted(listdir("./logs"))
+    
+    # Iterate through the sorted log list
+    for log in logs:
+        # Open each log
+        with open("./logs/"+log, "r") as fd:
+            # Parse each entry
+            for line in fd:
+                d = AssociateGroups(CaptureGroups(line))
+                # output_log.write(GetCommonLogFormat(d)+'\n')
+                if (d["host_header"] == "s3.us-east-2.amazonaws.com"):
+                    continue
+                output_log.write(GetCombinedLogFormat(d)+'\n')
+
+    output_log.close()
+
+# Method: PrintLog
+# Purpose: Pretty print dictionary of Amazon S3 Server Access
+# Log Format fields
+# Parameters: 
+# - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
+# Return: none
+def PrintLog(data):
+    print "On",data["timestamp"].replace(":", " ", 1),"the machine",data["remote_ip"],"(referred by",data["referrer"]+")","said",data["request_uri"],"and the server responded with",data["key"],"of size",data["object_size"],"bytes which took",data["turnaround_time"],"milliseconds to send, and resulted in the response code",data["http_status"],"and error code",data["error_code"]
+
+# Method: Push
+# Purpose: Send updated site to server
+# Parameters: none
+# Return: none
+def Push():
+    send = GetChangedFiles()
+    if (send == []):
+        print "No files to push."
+        exit(0)
+
+    print send
+
+    # Instantiate a new session
+    session = GetSession()
+    s3 = session.resource('s3')
+    b = s3.Bucket('zacs.site')
+
+    for each in send:
+        # print "Command to execute: '%s'" % ("b.upload_file(Filename="+each+", Key="+each+", ExtraArgs={Cache-Control:'max-age=2592000'})")
+        print "Uploading",each,"as",each[6:]
+        b.upload_file(Filename=each, Key=each[6:], ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
+        print "Finished uploading",each
+
+# Method: Stage
+# Purpose: Update site locally
+# Parameters: none
+# Return: none
+def Stage():
+    from os.path import isdir
+    from os import mkdir, listdir, remove
+    from gzip import open as gopen
+    from shutil import copyfileobj as copy
+
+    if (not isdir("./stage")):
+        mkdir("./stage")
+
+    if (not isdir("./stage/blog")):
+        mkdir("./stage/blog")
+
+    for file in listdir("./"):
+        if (file[-4:] == "html" or file[-3:] == "xml" or file[-2:] == "js"):
+            with open(file, 'rb') as f_in, gopen('./stage/'+file, 'wb') as f_out:
+                copy(f_in, f_out)
+            remove(file)
+
+    for file in listdir("./blog/"):
+        if (file[-4:] == "html"):
+            with open("./blog/"+file, 'rb') as f_in, gopen('./stage/blog/'+file, 'wb') as f_out:
+                copy(f_in, f_out)
+            remove("./blog/"+file)
 
 if (__name__ == "__main__"):
     # Import functions for CLI
