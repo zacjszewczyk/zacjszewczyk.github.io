@@ -254,15 +254,15 @@ if (__name__ == "__main__"):
 
     # Store the menu in a variable so as to provide easy access at any point in time.
     menu = """
-    * To view server logs:  %sview%s
-    * To fetch server logs: %sfetch%s
-    * To parse server logs: %sparse%s
-    * To deploy site:       %sdeploy%s
+    * To view server logs:      %sview%s
+    * To fetch server logs:     %sfetch%s
+    * To parse server logs:     %sparse%s
+    * To deploy site:           %sdeploy%s
     """ % (c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC)
 
     # Basic input checking
     if (len(argv) <= 1):
-        print c.FAIL+"Error: enter a command:"c.ENDC
+        print c.FAIL+"Error: enter a command:"+c.ENDC
         print menu
         exit(1)
     if (len(argv) > 2):
