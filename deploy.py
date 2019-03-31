@@ -151,8 +151,8 @@ def Push():
 
     for each in send:
         # print "Command to execute: '%s'" % ("b.upload_file(Filename="+each+", Key="+each+", ExtraArgs={Cache-Control:'max-age=2592000'})")
-        print "Uploading",each,"..."
-        # b.upload_file(Filename=each, Key=each, ExtraArgs={'CacheControl':'max-age=2592000'})
+        print "Uploading",each,"as",each[6:]
+        b.upload_file(Filename=each, Key=each[6:], ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
         print "Finished uploading",each
 
 # Method: AssociateGroups
