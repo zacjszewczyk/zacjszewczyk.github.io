@@ -289,6 +289,11 @@ if (__name__ == "__main__"):
     # Push the site
     elif (argv[1] == "push"):
         Push()
+    # Clear the ./stage directory
+    elif (argv[1] == "clear"):
+        from os import listdir, remove
+        for file in listdir("./stage/"):
+            print file
     ## Invalid parameter. Notify user and exit.
     else:
         print c.FAIL+"Error: enter a valid command."+c.ENDC
