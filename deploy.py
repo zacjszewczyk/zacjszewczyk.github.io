@@ -65,7 +65,7 @@ def CaptureGroups(entry):
 # Purpose: Clear the ./stage directory
 # Parameters: none
 # Return: none
-def Clear():
+def Clear(tgt):
     # Import methods for file operations
     from os import walk, remove
     from sys import stdout
@@ -74,7 +74,7 @@ def Clear():
     i = 0
 
     # Move through ./stage and all subdirectories
-    for path, subdirs, files in walk("./stage"):
+    for path, subdirs, files in walk(tgt):
         # Remove .DS_Store from file list
         if (".DS_Store" in files):
             files.remove(".DS_Store")
@@ -297,12 +297,11 @@ def Push():
         if (isfile("./deploy/blog/"+file)):
             continue
 
-        stdout.write(c.OKGREEN+"Moving file at: "+c.ENDC+"./stage/blog/"+file+" ...")
-        code = subprocess.call("mv ./stage/blog/"+file+" ./deploy/blog/"+file, stdout=FNULL, stderr=FNULL, shell=True)
+        stdout.write(c.OKGREEN+"Copying file at: "+c.ENDC+"./stage/blog/"+file+" ...")
+        code = subprocess.call("cp ./stage/blog/"+file+" ./deploy/blog/"+file, stdout=FNULL, stderr=FNULL, shell=True)
         if (code != 0):
-            print c.FAIL+"Error moving file."+c.ENDC
+            print c.FAIL+"Error copying file."+c.ENDC
             exit(1)
-        i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/blog/"+file+" ...")
         b.upload_file(Filename="./deploy/blog/"+file, Key="/blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
@@ -338,7 +337,7 @@ def Stage():
     i = 0
 
     # Take all HTML, XML, and JavaScript files from the directory,
-    # compress them, and move the gzipped files to ./stage
+    # compress them, and copy the gzipped files to ./stage
     for file in listdir("./"):
         if (file[-4:] == "html" or file[-3:] == "xml" or file[-2:] == "js"):
             if (isfile('./stage/'+file)):
@@ -349,7 +348,7 @@ def Stage():
                 i += 1
                 stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
-    # Take all HTML files in ./blog, compress them, and move the
+    # Take all HTML files in ./blog, compress them, and copy the
     # gzipped files to ./stage
     for file in listdir("./blog/"):
         if (file[-4:] == "html"):
@@ -405,7 +404,8 @@ if (__name__ == "__main__"):
         Stage()
     # Clear the ./stage directory
     elif (argv[1] == "clear"):
-        Clear()
+        Clear("./stage")
+        Clear("./deploy")
     # Push the site
     elif (argv[1] == "push"):
         Push()
