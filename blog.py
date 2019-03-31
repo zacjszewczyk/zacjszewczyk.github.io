@@ -489,7 +489,8 @@ def Init():
 # Purpose: Provide a command line interface for the script, for more granular control
 # of its operation.
 # Parameters: params: command line parameters (String)
-def Interface(params):
+def Interface(params,search_query=""):
+    # 'c' is an instance of the 'colors' class, for output styling
     global c
 
     # Store the menu in a variable so as to provide easy access at any point in time.
@@ -508,6 +509,8 @@ def Interface(params):
 
     # Continue prompting the user for input until they enter a valid argument
     while (True):
+        # If the user entered this mode with the "-a" parameter, prompt them for
+        # new input. Otherwise, proceed with their request.
         if "-a" in params:
             query = raw_input("#: ")
         else:
@@ -520,8 +523,12 @@ def Interface(params):
 
         # Search all articles
         if (search("-S", query) != None):
-            # Get a string to search all files for
-            search_string = GetUserInput("Enter string to search for: ")
+            
+            # If one has not been provided, get a string to search all files for
+            if (search_query == ""):
+                search_string = GetUserInput("Enter string to search for: ")
+            else:
+                search_string = search_query
 
             # Iterate over the entire ./Content dirctory
             for file in listdir("Content"):
@@ -669,6 +676,10 @@ if __name__ == '__main__':
 
         # Send the user to the CLI
         Interface(argv[1:])
+    
+    # Allow the user to search from the CLI
+    elif (len(argv) == 3 and argv[1] == "-S"):
+        Interface(argv[1],argv[2])
 
     else:
         print c.FAIL+"Too many parameters"+c.ENDC
