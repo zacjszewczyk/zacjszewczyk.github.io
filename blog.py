@@ -2,7 +2,8 @@
 
 # Imports
 # Todo: Only import functions from modules that I actually need, not entire module
-from os import listdir, stat, remove, utime # File operations
+from os import listdir, stat, remove, utime, mkdir # File/folder operations
+from os.path import isdir, isfile # File existence operations
 from time import strptime, strftime, mktime, localtime # Managing file modification time
 import datetime # Recording runtime
 from re import search # Regex
@@ -68,8 +69,8 @@ def AppendContentOfXToY(target, source):
             title = title.replace("{{URL_TITLE}}", line.replace("Title: ", "").strip())
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
-            title = (title.replace("{{URL}}", ""+source.lower().replace(" ", "-").replace(".txt", ".html")), title.replace("{{URL}}", line.replace("Link: ", "").strip()))[ptype == "linkpost"]+"\n    </h2>"
-            url = ((""+source.lower().replace(" ", "-").replace(".txt", ".html")), title.replace("{{URL}}", line.replace("Link: ", "").strip()))[ptype == "linkpost"]
+            title = (title.replace("{{URL}}", ""+source.lower().replace(" ", "-")[0:-3]+"html"), title.replace("{{URL}}", line.replace("Link: ", "").strip()))[ptype == "linkpost"]+"\n    </h2>"
+            url = ((""+source.lower().replace(" ", "-")[0:-3]+"html"), title.replace("{{URL}}", line.replace("Link: ", "").strip()))[ptype == "linkpost"]
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
             line = line.replace("Pubdate: ", "").replace(" ", "/").split("/")
@@ -92,7 +93,7 @@ def AppendContentOfXToY(target, source):
         idx += 1
     else:
         # At the end of the file, append the read more link and the closing HTML tags.
-        target_fd.write("\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='/blog/%s'>&#x24E9;</a>\n    </p>" % (source.lower().replace(" ", "-").replace(".txt", ".html")))
+        target_fd.write("\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='/blog/%s'>&#x24E9;</a>\n    </p>" % (source.lower().replace(" ", "-")[0:-3]+"html"))
         target_fd.write("\n</article>\n")
 
     # Close the file descriptors.
@@ -136,7 +137,7 @@ def AppendToFeed(source):
                 link = line.replace("Link: ", "").strip()
                 guid = link
             else:
-                link = "http://zacs.site/blog/"+source.lower().replace(" ", "-").replace(".txt", ".html").lower()
+                link = "http://zacs.site/blog/"+source.lower().replace(" ", "-")[0:-3]+"html".lower()
                 guid = link
             feed_fd.write("            <link>"+link+"</link>\n")
             feed_fd.write("            <guid>"+guid+"</guid>\n")
@@ -209,6 +210,10 @@ def GenBlog():
     global file_idx
     global content
 
+    # Make sure the "./blog" directory exists
+    if (not isdir("./blog")):
+        mkdir("./blog")
+
     # Sort the files dictionary by keys, year, then iterate over it
     for year in sorted(files, reverse=True):
         # For each year in which a post was made, generate a 'year' file, that
@@ -240,11 +245,14 @@ def GenBlog():
                 for timestamp in sorted(files[year][month][day], reverse=True):
                     # For each article made in the month, add an entry on the appropriate
                     # 'month' structure file.
-                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-").replace(".txt", ".html"), GetTitle(files[year][month][day][timestamp])))
-                    # Generate each content file. "year", "month", "day", "timestamp"
-                    # identify the file in the dictionary, and the passed time values
-                    # designate the desired update time to set the content file.
-                    GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", GetTitle(files[year][month][day][timestamp])))
+                    
+                    # If a structure file already exists, don't rebuild the HTML file for individual articles
+                    if (not isfile("./blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
+                        # Generate each content file. "year", "month", "day", "timestamp"
+                        # identify the file in the dictionary, and the passed time values
+                        # designate the desired update time to set the content file.
+                        GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     
                     # Add the first twenty-five articles to the main blog page.
                     if (file_idx < 25):
@@ -317,8 +325,8 @@ def GenPage(source, timestamp):
     source_fd = open("Content/"+source, "r")
 
     # Use the source file's name to calculate, clear, and re-open the structure file.
-    target_fd = open("blog/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "w").close()
-    target_fd = open("blog/"+source.lower().replace(" ", "-").replace(".txt", ".html"), "a")
+    target_fd = open("blog/"+source.lower().replace(" ", "-")[0:-3]+"html", "w").close()
+    target_fd = open("blog/"+source.lower().replace(" ", "-")[0:-3]+"html", "a")
 
     # Insert Javascript code for device detection.
     local_content = content[0].replace("index.html", "../index.html").replace("blog.html", "../blog.html").replace("archives.html", "../archives.html").replace("projects.html", "../projects.html").replace("<!-- SCRIPTS -->", """\n            <script type="text/javascript">\n                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}\n                //https://www.dirtymarkup.com/, http://jscompress.com/\n                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}\n            </script>""").replace("{{ BODYID }}", "post")

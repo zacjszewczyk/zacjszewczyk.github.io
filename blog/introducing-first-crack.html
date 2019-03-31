@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#518341"/>
+        
+        <meta property="og:image" content="favicon.ico"/>
+        <meta property="og:title" content="Introducing First Crack - "/>
+        <meta property="og:site_name" content="Zac J. Szewczyk"/>
+        <meta property="og:article:author" content="Zac J. Szewczyk"/>
+        <meta property="og:see_also" content="http://zacjszewczyk.com/"/>
+        
+        <link rel="manifest" href="assets/manifest.json"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="/rss.xml" />
+        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
+        <link rel="shortcut icon" href="assets/favicon.ico" size="16x16" type="image/ico" />
+        <link rel="shortcut icon" href="assets/favicon_192.ico" size="192x192" type="image/ico" />
+        <link rel="shortcut icon" href="assets/favicon_512.ico" size="512x512" type="image/ico" />
+        <title>
+            Introducing First Crack - Zac J. Szewczyk
+        </title>
+        <!-- SHEETS -->
+    </head>
+    <body style="opacity:.8;background-color:#F6F6F6;font-family:'Roboto',sans-serif;font-size:13pt;line-height:200%;display:none;" id="post">
+        <header style="text-align:center;font-size:150%;max-width:75em;margin:0 auto;"><!--BLOCK HEADER--></header>
+        <nav style="text-align:center;margin:10% 5%;font-size:15pt;line-height:200%;">
+            <a id="home_link" href="../index.html">Home</a>
+            <a id="blog_link" href="../blog.html">Blog</a>
+            <a id="rss_link" href="/rss.xml">RSS</a>
+            <a id="archives_link" href="../archives.html">Post Archives</a>
+            <a id="projects_link" href="../projects.html">Projects</a>
+        </nav>
+        <main style="max-width:65em;margin:0 auto;margin-bottom:100px;">
+            <section id="content_section">
+                <article>
+    <h2 style="text-align:center;">
+        <a href="/blog/introducing-first-crack" class="original">Introducing First Crack</a>
+    </h2>
+    <time datetime="2012-11-21" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2012.html">2012</a>/<a href="2012-11.html">11</a>/21 21:34:26
+</time>
+
+    
+    
+<p>As I mentioned in <a href="http://zacs.site/blog/we&amp;#8217;re-live.html">We&#8217;re Live</a>, I wrote a slick content management system designed to streamline the publication of my content to the web. Serving as a nod of acknowledgment to Marco Arment&#8217;s efforts in developing his very own CMS dubbed Second Crack, I call my system First Crack. In this post I will talk about why I chose to write my own content management system instead of using an existing engine&#160;&#8212;&#160;a topic that will stretch to encompass a discussion of the advantages such an approach affords&#160;&#8212;&#160;before going through some of the specific aspects of First Crack I find particularly interesting.</p>
+    
+    
+<p>The underlying motivation behind writing my own blogging engine rather than using an online host such as WordPress.com or an existing CMS such as Joomla stemmed from my previous experiences with each different type of service. Over the years I have tried virtually every online hosting solution, from Xanga to WordPress.com to Squarespace and everything in between. In each case I ran into the same problem though: a lack of control. At Xanga, to use an example from my early days writing on the internet, customizing a site entailed choosing between various built-in themes and minor CSS modification. Needless to say, such a &#8220;solution&#8221; did not suffice for long. After some research, I eventually moved to Freewebs.com. Now known simply as &#8220;Webs&#8221;, Freewebs&#8217; controls offered greater granularity than any service I had used in the past, but still did not meet my requirements for control and fell short in other key areas. A few months passed before I discovered WordPress.com, where I hosted several blogs during the next four or five years. With hundreds of themes, a relatively customizable layout, and lots of nifty, configurable widgets, WordPress.com&#160;&#8212;&#160;not to be confused with WordPress.org&#160;&#8212;&#160;satisfied my desire for control for quite some time. However, I eventually grew tired of the service and, as I could find no suitable alternative, took a sabbatical from blogging. This break lasted almost a year, during which I learned of Squarespace. At first, Squarespace seemed the perfect service: matching WordPress.com feature for feature, offering complete site customization, and possessing the intangible that brought me back time after time, I registered a blog and began customizing the site. However, after devoting quite a bit of time to the modification of the layout, I was neither completely satisfied with the result nor confident that even if I poured another large number of hours into customizing the site I could achieve the result I desired. Having come to that conclusion, I dropped Squarespace and returned my focus to strictly writing and working on a little side project named First Crack.</p>
+    
+    
+<p>Jumping back in time, I discovered my first content management system soon after moving to WordPress.com. Unlike WordPress.com&#160;&#8212;&#160;a fully hosted and managed blogging engine requiring no local setup&#160;&#8212;&#160;WordPress.org required a server to run on and a relatively complex setup to get started. Immediately interested in the possibility of a new hosting solution and in particular the control this sort of option offered though, I decided to give it a try. Although today I cannot remember the exact amount of time I spent attempting to configure WordPress.org to work on my machine, thinking back I imagine it was not more than an hour before, frustrated, I deleted the folder and decided never to use the service again. Over the years during which I used WordPress.com as my primary blogging platform I occasionally revisited WordPress.org, but never quite got it to work. In a similar manner, after receiving a comment from another blogger who used Joomla for his site, I decided to give it a try; however, I achieved similar results as I had with WordPress.org and soon returned to my hosted WordPress.com site. I undoubtedly tried other content management systems over the years, but those are the two I remember most prominently. In each case, I ran into the same problem of an overly complex setup. Given that I attempted to implement WordPress.org and Joomla between the ages of thirteen and fifteen my results should be taken with a grain of salt, but the lesson I learned played a big part in the way in which I proceeded with the development of First Crack.</p>
+    
+    
+<p>Between Zoomshare&#160;&#8212;&#160;which preceded Xanga&#160;&#8212;&#160;and my sabbatical from blogging, I also tried coding my own website numerous times. Unfortunately my inexperience barred its teeth in these situations though, and I quickly became discouraged when my designs failed to compete with the layouts and themes I had found on WordPress.com and its predecessors. These sites were short-lived and never amounted to anything other than serving to further my experience in design by providing examples of combinations that did not work. Later I became thankful for the extensive library of failed designs I had accumulated over the years though, as I could now use the experience I had gained as well as those failed designs as references in creating new, more attractive sites.</p>
+    
+    
+<p>These experiences set the stage for the eventual development of First Crack. Dissatisfied with hosted solutions and existing content management systems alike, I began to consider the development of First Crack more seriously. Before I could focus solely on First Crack though, I had to answer one lingering question in my mind: did the ends&#160;&#8212;&#160;in this case the creation of an original content management system&#160;&#8212;&#160;justify the considerable amount of time I would need to devote to the construction of such a program, especially when other systems, regardless of how inadequate I had deemed them, already existed? To answer this question, I thought back to my past experiences with Webs, both WordPress blogging engines, Joomla, and Squarespace: in each case, I spent an inordinate amount of time in the pursuit of control, whether in the site&#8217;s layout as in the case of Squarespace or simply in the functionality of the engine itself as in the case of both WordPress engines. Time that I could have spent writing, I was forced to spend in a vain attempt at understanding a service obfuscated by the need to support hundreds of thousands of use cases. Based on my past experiences, I knew that no matter what service I stumbled upon in the future, this would not change. Having come to this conclusion, I had no difficulty in setting aside the time to develop First Crack.</p>
+    
+    
+<p>Before I start talking about First Crack, I would like to take some time to talk a little about the lessons this journey taught me and how they influenced the guiding principles behind First Crack. First, then, from the online sites WordPress.com, Squarespace, and the like. From these services, I decided that affording the user complete and total control of the site&#8217;s design and layout must be of paramount importance. Every aspect of the site, from the number and IDs on the div elements to the version of jQuery, must be customizable. Based on my experiences with the various content management systems I attempted to use and WordPress.org and Joomla in particular, I determined that ease of installation and ease of use must also be a high priority in the design and implementation of First Crack as well. From some of the other blogging engines I experimented with, which I did not mention earlier, I decided upon smaller, less significant goals. For example, I determined that instant publication would be preferable to navigating to a certain webpage and publishing the post or using a particular terminal command thereby forcing First Crack to accept the new post. Finally, from tales&#160;&#8212;&#160;or horror stories, more accurately&#160;&#8212;&#160;of engines requiring upwards of eight minutes to rebuild a site and ten seconds to load a page, I decided that the speed of First Crack must always be a concern in the back of my mind. Set with these goals, I began to jot a note down here and there describing one feature or another until, my Simplenote screen nearly filled, I began coding.</p>
+    
+    
+<p>In order to provide users of First Crack with the ability to control the look and feel of their sites completely, I based the entire design on a template file. Users of First Crack can build the template file with any HTML, CSS, and JavaScript code, save it as &#8220;Template.htm&#8221; within the appropriate folder, and every subsequent page build will utilize this design. Storing the page layout as a separate file also provided the additional benefit of allowing First Crack&#8217;s users to preview the layout of the site without creating unnecessary extra files to test the design in, thus creating a more streamlined design process. Next came my goal of providing the easiest use case possible. After seeing Marco Arment&#8217;s earliest implementation of Second Crack and the manner in which he required posts to be published, and after using some minor CMSs which required various actions to be taken in order to publish a post, I came to the conclusion that the easiest way to publish a post would be to simply drop the file into a particular directory. Thus, I created a folder named &#8220;Content&#8221; and directed First Crack to scan the contents of this folder. If the Structure folder&#160;&#8212;&#160;which, as you may guess, contains all the HTML files for the site to run on&#160;&#8212;&#160;contained a file with the same name as the content file and the update time of the two files matched, no files need be updated; however, if the update times differ or there is no corresponding structure file for any given content file, a new structure file will need to be built and the front page updated to reflect the latest post. Once the structure file is re-built, the update times of both files are set to match, thereby preventing First Crack from unnecessarily building files which do not need updated. By implementing such a procedure, making a new post to a blog containing a thousand other entries would take no longer than publishing the first article did. In conjunction with First Crack&#8217;s reliance on static files instead of dynamically generating the site, this approach also served to solve my concerns regarding speedy performance, both server-side when displaying the pages and locally when building the site.</p>
+    
+    
+<p>So there you have it: First Crack affords its users complete and total control of the site&#8217;s design, literally drag-and-drop ease of use, and impressive speed as compared to some of the other CMSs on the market. As I continue to improve upon First Crack I strive to remove at least one reason a blogger would choose to use a different service with each release, but even at such a speed, there are certainly some reasons not to go with First Crack; however, I believe the advantages to adopting First Crack outweigh the disadvantages. For example, rather than requiring a web server such as Apache or XAMPP and a database in order to test and modify First Crack as some blog engines do, First Crack only requires that you have Python 3.2.3 or later and a capable browser installed on your machine. Insert Internet Explored joke here. Meeting this one requirement&#160;&#8212;&#160;the installation of Python&#160;&#8212;&#160;ensures that you will be able to modify, debug, and run First Crack with absolutely no additional configuration. Further, I am proud to state that First Crack is one of the few blogging engines that correctly parses Markdown as prescribed by John Gruber&#8217;s definition of the spec.</p>
+    
+    
+<p>Before I finish this post I would like to spend some time discussing a few of the really neat features First Crack has to offer. First and foremost of these features, I believe, is the recently added command-line interface. Entered using the "-a&#8221; parameter, this interface currently supports three different actions: manually modifying a post&#8217;s update time using the "-t&#8221; command, rebuilding a single post from its content file by entering "-r&#8221; at the prompt, and rebuilding the entire site with the "-R&#8221; flag. Manually modifying a post&#8217;s update time has obvious practical uses, but the ability to rebuild a single post or every post on the site might be a bit harder to find useful at first glance. Consider, then, the manner through which changes to the site&#8217;s design are applied: &#8220;Users of First Crack can build the template file with any HTML, CSS, and JavaScript code, save it as &#8216;Template.htm&#8217; within the appropriate folder, and every subsequent page build will utilize this design.&#8221; Such an approach, while perfect for fledgling blogs without any posts, becomes problematic on an exponential scale as the number of posts increases. By rebuilding all articles from their source, however, any changes made to the template file will be reflected in the new structure files, and the posts&#8217; update time will not be modified. The ability to force a single page rebuild, on the other hand, can be useful if something goes wrong during the update process and a structure file is corrupted.</p>
+    
+    
+<p>After all this talk of facilitating complete site customization with First Crack, the last point I would like to make before finishing this article is that you can also simply let the CMS do its job. You do not need to change the CSS selectors for the post elements or include a new jQuery library if that is not what you want to do. If you simply wish to write and have your content published to the web, write your posts, double-click &#8220;Update.py&#8221;, and let First Crack take care of the rest. This experience only needs to be as involved as you want it to be.</p>
+    
+    
+<p>With that I believe I am finished. Hopefully this article has piqued enough interest to bring you over to <a href="https://github.com/zacjszewczyk/FirstCrack">First Crack&#8217;s GitHub page</a> where you can download the source code and give my creation a whirl. I would love to hear your feedback on First Crack in particular, but any sort of comment is welcome, whether related to the site&#8217;s design, my writing style, or the CMS itself.</p>
+</div>
+</article>
+            </section>
+        </main>
+        <footer style="max-width:65em;margin:0 auto;margin-bottom:100px;">
+            <p>Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.</p>
+            <p>&copy; 2012-2019 Zachary Szewczyk</p>
+        </footer>
+        <span id="ipad_device"></span>
+    </body>
+    <!-- SCRIPTS BLOCK -->
+    <script>document.getElementsByTagName("body")[0].style.display = "block";</script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/m_sw.js');
+          console.log("Successfully registered Service Worker.");
+        }
+    </script>
+    <link rel="stylesheet" href="../assets/main.css" type="text/css" />
+</html>
