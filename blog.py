@@ -62,18 +62,18 @@ def AppendContentOfXToY(target, source):
             if (line[0:5] != "Type:"):
                 ptype = Migrate(source, mod_time).strip()
             else:
-                ptype = line.replace("Type: ", "").strip()
-            title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"/blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line.replace("Type: ", "").strip())
+                ptype = line[6:].strip()
+            title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"/blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line[6:].strip())
         # In the second line of the file, add the article title.
         elif (idx == 1):
-            title = title.replace("{{URL_TITLE}}", line.replace("Title: ", "").strip())
+            title = title.replace("{{URL_TITLE}}", line[7:].strip())
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
-            title = (title.replace("{{URL}}", ""+source.lower().replace(" ", "-")[0:-3]+"html"), title.replace("{{URL}}", line.replace("Link: ", "").strip()))[ptype == "linkpost"]+"\n    </h2>"
-            url = ((""+source.lower().replace(" ", "-")[0:-3]+"html"), title.replace("{{URL}}", line.replace("Link: ", "").strip()))[ptype == "linkpost"]
+            title = (title.replace("{{URL}}", ""+source.lower().replace(" ", "-")[0:-3]+"html"), title.replace("{{URL}}", line[6:].strip()))[ptype == "linkpost"]+"\n    </h2>"
+            url = ((""+source.lower().replace(" ", "-")[0:-3]+"html"), title.replace("{{URL}}", line[6:].strip()))[ptype == "linkpost"]
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
-            line = line.replace("Pubdate: ", "").replace(" ", "/").split("/")
+            line = line[9:].replace(" ", "/").split("/")
             title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/%s">%s</a>/<a href="/blog/%s">%s</a>/%s %s</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
         # In the fifth line of the file, write the opening tags to the target, then the file's
         # content as generated up to this point.
@@ -125,16 +125,16 @@ def AppendToFeed(source):
         
         # In the first line, classify the article as a linkpost or an original piece.
         if (idx == 0):
-            ptype = line.replace("Type: ", "").strip()
+            ptype = line[6:].strip()
         # In the second line of the file, add the article title.
         elif (idx == 1):
-            feed_fd.write("            <title>"+line.replace("Title: ", "").strip().replace("&#38", "&amp;")+"</title>\n")
+            feed_fd.write("            <title>"+line[7:].strip().replace("&#38", "&amp;")+"</title>\n")
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
             if (ptype == "linkpost"):
                 if (line[0:7] != "http://"):
                     line = "http://"+line
-                link = line.replace("Link: ", "").strip()
+                link = line[6:].strip()
                 guid = link
             else:
                 link = "http://zacs.site/blog/"+source.lower().replace(" ", "-")[0:-3]+"html".lower()
@@ -346,14 +346,14 @@ def GenPage(source, timestamp):
             local_content = local_content.replace("{{ title }}", line.replace("Title: ", "").strip()+" - ")
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
-            line = line.replace("Link: ", "").strip()
+            line = line[6:].strip()
             if (line[0:4] != "http" and ("htm" == line[-3:])):
                 line = line.replace(".htm", "").replace(" ", "-").lower()
             title = title.replace("{{URL}}", line)+"\n    </h2>"
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
             # print line
-            line = line.replace("Pubdate: ", "").replace(" ", "/").split("/")
+            line = line[9:].replace(" ", "/").split("/")
             title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/%s">%s</a>/<a href="%s">%s</a>/%s %s</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
         # In the fifth line of the file, write the opening tags to the target, then the file's
         # content as generated up to this point.
@@ -433,7 +433,7 @@ def GetTitle(source):
     # Open a source file and return the article's title.
     fd = open("Content/"+source, "r")
     fd.readline()
-    title = fd.readline().replace("Title: ", "")
+    title = fd.readline()[7:]
     fd.close()
     return title
 
@@ -579,7 +579,7 @@ def Migrate(target, mod_time):
         article_url = article_content[1][1:-1]
     else:
         article_type = "original"
-        article_title = article_content.replace("# ", "").replace(" #", "")
+        article_title = article_content[2:-2]
         article_url = target.replace(".html", "").replace(" ", "-").lower()
         article_content = fd.readline()
 
