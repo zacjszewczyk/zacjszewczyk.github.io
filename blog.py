@@ -38,6 +38,8 @@ class colors():
     ENDC = '\033[0m' # None
     BOLD = '\033[1m' # Blue
     UNDERLINE = '\033[4m' # Underline
+# Instantiate the "colors" class, for output styling
+c = colors()
 
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
@@ -400,7 +402,7 @@ def GenStatic():
 # Parameters:
 # - prompt: Text to prompt the user for input (String)
 def GetUserInput(prompt):
-    c = colors()
+    global c
 
     # Prompt the user for valid input
     while True:
@@ -488,8 +490,7 @@ def Init():
 # of its operation.
 # Parameters: params: command line parameters (String)
 def Interface(params):
-    # Instantiate the "colors" class, for output styling
-    c = colors()
+    global c
 
     # Store the menu in a variable so as to provide easy access at any point in time.
     menu = """
@@ -653,8 +654,6 @@ def Terminate():
 # If run as an individual file, generate the site and report runtime.
 # If imported, only make methods available to imported program.
 if __name__ == '__main__':
-    c = colors()
-
     # If the user just runs the file, notify them that they can use "-a"
     # to enter "Authoring Mode". Then build the site.
     if (len(argv) == 1):
@@ -670,7 +669,7 @@ if __name__ == '__main__':
 
         # Send the user to the CLI
         Interface(argv[1:])
-        
+
     else:
         print c.FAIL+"Too many parameters"+c.ENDC
         exit(0)
