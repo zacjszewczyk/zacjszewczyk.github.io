@@ -3,9 +3,24 @@
 # Amazon S3 Server Access Log Format
 # https://docs.aws.amazon.com/AmazonS3/latest/dev/LogFormat.html
 
-# Import functions for CLI
-from sys import argv, exit
+# Class: colors
+# Purpose: provide easy access to ASCII escape codes for styling output
+class colors():
+    HEADER = '\033[95m' # Pink
+    OKBLUE = '\033[94m' # Purple
+    OKGREEN = '\033[92m' # Green
+    WARNING = '\033[93m' # Yellow
+    FAIL = '\033[91m' # Red
+    ENDC = '\033[0m' # None
+    BOLD = '\033[1m' # Blue
+    UNDERLINE = '\033[4m' # Underline
+# Instantiate the "colors" class, for output styling
+c = colors()
 
+# Method: GetSession
+# Purpose: Establish an S3 session, and return it to the user
+# Parameters: none
+# Return: Established S3 session (Session)
 def GetSession():
     # Import functions for S3 session
     from boto3.session import Session
@@ -20,6 +35,7 @@ def GetSession():
 # Method: Fetch
 # Purpose: Download logs
 # Parameters: none
+# Return: none
 def Fetch():
     # Import functions for file operations
     from os.path import isdir, isfile
@@ -44,6 +60,7 @@ def Fetch():
 # Method: Parse
 # Purpose: Parse logs
 # Parameters: none
+# Return: none
 def Parse():
     # Import functions for file operations
     from os import listdir
@@ -72,6 +89,8 @@ def Parse():
 # Method: GetChangedFiles
 # Purpose: Return a list of files modified since last push
 # Parameters: none
+# Return:
+# - send: File names that have changed since last commit (Array)
 def GetChangedFiles():
     from os import devnull
     import subprocess
@@ -108,6 +127,7 @@ def GetChangedFiles():
 # Method: Stage
 # Purpose: Update site locally
 # Parameters: none
+# Return: none
 def Stage():
     from os.path import isdir
     from os import mkdir, listdir, remove
@@ -136,6 +156,7 @@ def Stage():
 # Method: Push
 # Purpose: Send updated site to server
 # Parameters: none
+# Return: none
 def Push():
     send = GetChangedFiles()
     if (send == []):
@@ -160,6 +181,8 @@ def Push():
 # Log Format, return a dictionary with the field names as keys
 # Parameters: 
 # - groups: Groups from Amazon S3 Server Access Log Format
+# Return: 
+# - d__: Dictionary of groups with the right label as their key (Dictionary)
 def AssociateGroups(groups):
     d__ = {}
     labels = ["owner","bucket","timestamp","remote_ip","requester","request_id","operation","key","request_uri","http_status","error_code","bytes_sent","object_size","transmission_time","turnaround_time","referrer","user_agent","version_id","host_id","signature_version","cipher_suite","authentication_type","host_header","tls_version"]
@@ -174,6 +197,8 @@ def AssociateGroups(groups):
 # Purpose: Return array of groups from Amazon S3 Server Access Log Format
 # Parameters: 
 # - entry: Log in Amazon S3 Server Access Log Format
+# Return: 
+# - a: Array of capture groups (Array)
 def CaptureGroups(entry):
     delimeters = ['"', '[', ']', ' ']
     group = ""
@@ -200,6 +225,7 @@ def CaptureGroups(entry):
 # Log Format fields
 # Parameters: 
 # - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
+# Return: none
 def PrintLog(data):
     print "On",data["timestamp"].replace(":", " ", 1),"the machine",data["remote_ip"],"(referred by",data["referrer"]+")","said",data["request_uri"],"and the server responded with",data["key"],"of size",data["object_size"],"bytes which took",data["turnaround_time"],"milliseconds to send, and resulted in the response code",data["http_status"],"and error code",data["error_code"]
 
@@ -207,6 +233,7 @@ def PrintLog(data):
 # Purpose: Return log in Command Log Format
 # Parameters: 
 # - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
+# Return: Log in Common Log Format (String)
 def GetCommonLogFormat(data):
     return data["remote_ip"]+" user-identifier - ["+data["timestamp"]+"] \""+data["request_uri"]+"\" "+data["http_status"]+" "+data["object_size"]
 
@@ -214,11 +241,14 @@ def GetCommonLogFormat(data):
 # Purpose: Return log in Combined Log Format
 # Parameters: 
 # - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
+# Return: Log in Combined Log Format (String)
 def GetCombinedLogFormat(data):
     return data["remote_ip"]+" user-identifier - ["+data["timestamp"]+"] \""+data["request_uri"]+"\" "+data["http_status"]+" "+data["object_size"]+" \""+data["referrer"]+"\" \""+data["user_agent"]+"\""
 
 if (__name__ == "__main__"):
-    
+    # Import functions for CLI
+    from sys import argv, exit
+
     # Basic input checking
     if (len(argv) <= 1):
         print "Enter parameter."
