@@ -102,7 +102,7 @@ def Fetch():
     for file in b.objects.all():
         # If the file does not exist on the local machine, downlaod it
         if (not isfile("."+file.key)):
-            print "Downloading '%s' to location '%s'" % (file.key, "."+file.key)
+            print "%sDownloading%s %s%s%s to location %s%s%s" % (c.OKGREEN, c.ENDC, c.UNDERLINE, file.key, c.ENDC, c.UNDERLINE, "."+file.key, c.ENDC)
             b.download_file(file.key, "."+file.key)
 
 # Method: GetChangedFiles
@@ -119,12 +119,12 @@ def GetChangedFiles():
 
     code = subprocess.call("git status", stdout=FNULL, stderr=FNULL, shell=True)
     if (code != 0):
-        print "Error with source control configuration: no repository found."
+        print c.FAIL+"Error with source control configuration: no repository found."+c.ENDC
         exit(1)
 
     output = subprocess.check_output("git status", shell=True)
     if ("Changes not staged for commit" not in output):
-        print "Nothing to update."
+        print c.WARNING+"Nothing to update."+c.ENDC
         exit(1)
 
     # Isolate the "modified: " section of "git status" output
@@ -192,6 +192,7 @@ def Parse():
     # Iterate through the sorted log list
     for log in logs:
         # Open each log
+        print c.OKGREEN+"Opening"+c.ENDC+" "+c.UNDERLINE+"./logs/"+log+c.ENDC
         with open("./logs/"+log, "r") as fd:
             # Parse each entry
             for line in fd:
@@ -219,7 +220,7 @@ def PrintLog(data):
 def Push():
     send = GetChangedFiles()
     if (send == []):
-        print "No files to push."
+        print c.WARNING+"No files to push."+c.ENDC
         exit(0)
 
     print send
