@@ -342,8 +342,8 @@ if (__name__ == "__main__"):
     * To parse server logs:         %sparse%s
     * To stage site locally:        %sstage%s
     * To clear the staged site:     %sclear%s
-    * To deploy site to server      %sdeploy%s
-    """ % (c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
+    * To deploy site to server:     %sdeploy%s
+    """ % (c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
 
     # Basic input checking
     if (len(argv) <= 1):
@@ -366,13 +366,15 @@ if (__name__ == "__main__"):
     elif (argv[1] == "parse"):
         Parse()
     # Stage the site
+    # Also stage ./assets
     elif (argv[1] == "stage"):
         Stage()
-    # Clear the ./stage directory
+    # Clear the ./stage and ./deploy directories
     elif (argv[1] == "clear"):
         Clear("./stage")
         Clear("./deploy")
     # Deploy the site
+    # Also deploy ./assets
     elif (argv[1] == "deploy"):
         Deploy()
     ## Invalid parameter. Notify user and exit.
