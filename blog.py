@@ -109,7 +109,7 @@ def AppendContentOfXToY(target, source):
 def AppendToFeed(source):
     # Initialzie file descriptors for the source content file and the RSS feed
     source_fd = open("Content/"+source, "r")
-    feed_fd = open("rss.xml", "a")
+    feed_fd = open("./local/rss.xml", "a")
 
     # Initialize method variables
     ptype = "linkpost"
@@ -212,18 +212,14 @@ def GenBlog():
     global file_idx
     global content
 
-    # Make sure the "./blog" directory exists
-    if (not isdir("./blog")):
-        mkdir("./blog")
-
     # Sort the files dictionary by keys, year, then iterate over it
     for year in sorted(files, reverse=True):
         # For each year in which a post was made, generate a 'year' file, that
         # contains links to each month in which a post was published.
 
         # Clear the 'year' file
-        year_fd = open("blog/"+year+".html", "w").close()
-        year_fd = open("blog/"+year+".html", "a")
+        year_fd = open("./local/blog/"+year+".html", "w").close()
+        year_fd = open("./local/blog/"+year+".html", "a")
         # Write the opening HTML tags
         year_fd.write(content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1).replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1))
         # Insert a 'big table' into the document, to better display the months listed.
@@ -236,8 +232,8 @@ def GenBlog():
             # Add a link to the month, to the year file it belongs to.
             year_fd.write("    <tr>\n        <td><a href=\"%s\">%s</a></td>\n    </tr>\n" % (year+"-"+month+".html", months[month]))
             # Clear the 'month' file
-            month_fd = open("blog/"+year+"-"+month+".html", "w").close()
-            month_fd = open("blog/"+year+"-"+month+".html", "a")
+            month_fd = open("./local/blog/"+year+"-"+month+".html", "w").close()
+            month_fd = open("./local/blog/"+year+"-"+month+".html", "a")
             # Write the opening HTML tags
             month_fd.write(content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1).replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1).replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\""+year+".html\">"+year+"</a>\n</p>\n</article>", 1))
             
@@ -250,7 +246,7 @@ def GenBlog():
                     month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", GetTitle(files[year][month][day][timestamp])))
                     
                     # If a structure file already exists, don't rebuild the HTML file for individual articles
-                    if (not isfile("./blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
+                    if (not isfile("./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
                         # Generate each content file. "year", "month", "day", "timestamp"
                         # identify the file in the dictionary, and the passed time values
                         # designate the desired update time to set the content file.
@@ -258,7 +254,7 @@ def GenBlog():
                     
                     # Add the first twenty-five articles to the main blog page.
                     if (file_idx < 25):
-                        AppendContentOfXToY("blog", files[year][month][day][timestamp])
+                        AppendContentOfXToY("./local/blog", files[year][month][day][timestamp])
                     # Write the years in which a post was made to the header element, in a
                     # big table to facilitate easy reading. 
                     elif (file_idx == 25):
@@ -273,23 +269,23 @@ def GenBlog():
                         for each in sorted(files, reverse=True)[3:]:
                             buff += """\n        <td>\n            <a href=\"/blog/%s\">%s</a>\n        </td>""" % (each.lower()+".html", each)
                         buff += """\n    </tr>\n</table>\n</article>\n"""
-                        archives_fd = open("archives.html", "a")
+                        archives_fd = open("./local/archives.html", "a")
                         archives_fd.write(buff)
                         archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='%s.html'>%s</a></article>" % (year, year))
                         archives_fd.close()
                         temp = year
 
                         # Add the twenty-sixth article to the archives page.
-                        AppendContentOfXToY("archives", files[year][month][day][timestamp])
+                        AppendContentOfXToY("./local/archives", files[year][month][day][timestamp])
                     
                     # Add all other articles to the archives page.
                     else:
                         if (temp != year):
-                            archives_fd = open("archives.html", "a")
+                            archives_fd = open("./local/archives.html", "a")
                             archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='%s.html'>%s</a></article>" % (year, year))
                             archives_fd.close()
                             temp = year
-                        AppendContentOfXToY("archives", files[year][month][day][timestamp])
+                        AppendContentOfXToY("./local/archives", files[year][month][day][timestamp])
                     
                     # Add all articles to the RSS feed.
                     AppendToFeed(files[year][month][day][timestamp])
@@ -327,8 +323,8 @@ def GenPage(source, timestamp):
     source_fd = open("Content/"+source, "r")
 
     # Use the source file's name to calculate, clear, and re-open the structure file.
-    target_fd = open("blog/"+source.lower().replace(" ", "-")[0:-3]+"html", "w").close()
-    target_fd = open("blog/"+source.lower().replace(" ", "-")[0:-3]+"html", "a")
+    target_fd = open("./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html", "w").close()
+    target_fd = open("./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html", "a")
 
     # Insert Javascript code for device detection.
     local_content = content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1).replace("<!-- SCRIPTS -->", """\n            <script type="text/javascript">\n,                function insertAfter(e,a){a.parentNode.insertBefore(e,a.nextSibling, 1)}for(var fn=document.getElementsByClassName("footnote"),i=0;i<fn.length;i++){var a=[].slice.call(fn[i].children);if("[object HTMLParagraphElement]"==a[a.length-1]){var temp=a[a.length-2];a[a.length-2]=a[a.length-1],a[a.length-1]=temp;for(var j=0;j<a.length;j++)fn[i].removeChild(a[j]);for(var j=0;j<a.length;j++)fn[i].appendChild(a[j])}}\n                //https://www.dirtymarkup.com/, http://jscompress.com/\n                if (document.title.search("Ipad")) {document.title = document.title.replace("Ipad", "iPad")}\n            </script>""",1).replace("{{ BODYID }}", "post",1)
@@ -385,17 +381,17 @@ def GenStatic():
     fd = open("system/index.html", "r")
     home = fd.read().split("<!-- DIVIDER -->")
     fd.close()
-    BuildFromTemplate("index.html", "", "home", sheets=home[0], passed_content=home[1])
+    BuildFromTemplate("./local/index.html", "", "home", sheets=home[0], passed_content=home[1])
 
     # Reference the projects.html source file to generate the front-end structure file.
     fd = open("system/projects.html", "r")
     projects = fd.read().split("<!-- DIVIDER -->")
     fd.close()
-    BuildFromTemplate("projects.html", "Projects - ", "projects", "", passed_content=projects[1])
+    BuildFromTemplate("./local/projects.html", "Projects - ", "projects", "", passed_content=projects[1])
 
     # Build the error.html file.
-    BuildFromTemplate("error.html", "Error - ", "error", "", "")
-    CloseTemplateBuild("error.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style=\"text-align:center;\">Error: 404 Not Found</h2><p>The requested resource at <span style="text-decoration:underline;">"+window.location.href+"</span> could not be found.</p></article>"</script>""")
+    BuildFromTemplate("./local/error.html", "Error - ", "error", "", "")
+    CloseTemplateBuild("./local/error.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style=\"text-align:center;\">Error: 404 Not Found</h2><p>The requested resource at <span style="text-decoration:underline;">"+window.location.href+"</span> could not be found.</p></article>"</script>""")
 
 # Method: GetUserInput
 # Purpose: Accept user input and perform basic bounds checking
@@ -446,13 +442,19 @@ def GetTitle(source):
 #          Make sure ./local, ./stage, and ./deploy exist.
 # Parameters: none
 def Init():
-    # Make sure ./local, ./stage, and ./deploy exist.
+    # Make sure ./local, ./stage, and ./deploy exist with their subfolders
     if (not isdir("./local")):
-        mkdir("./deploy")
+        mkdir("./local")
+    if (not isdir("./local/blog")):
+        mkdir("./local/blog")
     if (not isdir("./stage")):
         mkdir("./stage")
+    if (not isdir("./stage/blog")):
+        mkdir("./stage/blog")
     if (not isdir("./deploy")):
         mkdir("./deploy")
+    if (not isdir("./deploy/blog")):
+        mkdir("./deploy/blog")
 
     # Make global variables accessible in the method, and initialize method variables.
     global file_idx, files, content
@@ -467,11 +469,11 @@ def Init():
     fd.close()
 
     # Clear and initialize the archives.html and blog.html files.
-    BuildFromTemplate("archives.html", "Post Archives - ", "postarchives")
-    BuildFromTemplate("blog.html", "Blog - ", "blog")
+    BuildFromTemplate("./local/archives.html", "Post Archives - ", "postarchives")
+    BuildFromTemplate("./local/blog.html", "Blog - ", "blog")
     
     # Clear and initialize the RSS feed
-    fd = open("rss.xml", "w")
+    fd = open("./local/rss.xml", "w")
     fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>Zac J. Szewczyk</title>\n    <link>http://zacs.site/</link>\n    <description></description>\n    <language>en-us</language>\n    <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s EST</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (datetime.datetime.now().strftime("%a, %d %b %Y %I:%M:%S")))
     fd.close()
 
@@ -560,9 +562,9 @@ def Interface(params,search_query="",end_action="continue"):
 
         # Remove all existing structure files
         if (search("-R", query) != None):
-            for files in listdir("blog"):
+            for files in listdir("./local/blog"):
                 if (files.endswith(".html")):
-                    remove("blog/"+files)
+                    remove("./local/blog/"+files)
             return False
 
         # Exit the command-line interface and prevent the site from rebuilding.
@@ -660,13 +662,13 @@ def SearchFile(tgt, q):
 # Parameters: none
 def Terminate():
     # Write closing tags to archives.html and blog.html.
-    CloseTemplateBuild("archives.html")
-    CloseTemplateBuild("blog.html")
-    CloseTemplateBuild("projects.html")
-    CloseTemplateBuild("index.html")
+    CloseTemplateBuild("./local/archives.html")
+    CloseTemplateBuild("./local/blog.html")
+    CloseTemplateBuild("./local/projects.html")
+    CloseTemplateBuild("./local/index.html")
     
     # Write closing tags to the RSS feed.
-    fd = open("rss.xml", "a")
+    fd = open("./local/rss.xml", "a")
     fd.write("""\n</channel>\n</rss>""")
     fd.close()
 
