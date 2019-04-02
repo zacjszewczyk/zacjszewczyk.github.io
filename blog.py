@@ -188,6 +188,15 @@ def BuildFromTemplate(target, title, bodyid, sheets="", passed_content=""):
     fd.write(passed_content)
     fd.close()
 
+# Method: CheckDirAndCreate
+# Purpose: Check for the existence of a given directory, and create it if it
+#          doesn't exist.
+# Parameters:
+# - tgt: Directory to test and maybe create
+def CheckDirAndCreate(tgt):
+    if (not isdir(tgt)):
+        mkdir(tgt)
+
 # Method: CloseTemplateBuild
 # Purpose: Open the target file and write the closing HTML to it, with an
 #          optional field for inserted scripts.
@@ -443,18 +452,15 @@ def GetTitle(source):
 # Parameters: none
 def Init():
     # Make sure ./local, ./stage, and ./deploy exist with their subfolders
-    if (not isdir("./local")):
-        mkdir("./local")
-    if (not isdir("./local/blog")):
-        mkdir("./local/blog")
-    if (not isdir("./stage")):
-        mkdir("./stage")
-    if (not isdir("./stage/blog")):
-        mkdir("./stage/blog")
-    if (not isdir("./deploy")):
-        mkdir("./deploy")
-    if (not isdir("./deploy/blog")):
-        mkdir("./deploy/blog")
+    CheckDirAndCreate("./local")
+    CheckDirAndCreate("./local/blog")
+    CheckDirAndCreate("./local/assets")
+    CheckDirAndCreate("./stage")
+    CheckDirAndCreate("./stage/blog")
+    CheckDirAndCreate("./stage/assets")
+    CheckDirAndCreate("./deploy")
+    CheckDirAndCreate("./deploy/blog")
+    CheckDirAndCreate("./deploy/assets")
 
     # Make global variables accessible in the method, and initialize method variables.
     global file_idx, files, content
