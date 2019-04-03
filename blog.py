@@ -25,6 +25,7 @@ active = ""
 file_idx = 0
 files = {}
 months = {"01":"January","02":"February","03":"March","04":"April","05":"May","06":"June","07":"July","08":"August","09":"September","10":"October","11":"November","12":"December"}
+weekDays = ("Mon","Tue","Wed","Thu","Fri","Sat","Sun")
 content = ""
 
 # Class: colors
@@ -143,9 +144,10 @@ def AppendToFeed(source):
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
             if (ptype == "linkpost"):
-                if (line[0:7] != "http://"):
+                line = line[6:].strip()
+                if (line[0:4] != "http"):
                     line = "http://"+line
-                link = line[6:].strip()
+                link = line
                 guid = link
             else:
                 link = "http://zacs.site/blog/"+source.lower().replace(" ", "-")[0:-3]+"html".lower()
@@ -155,6 +157,10 @@ def AppendToFeed(source):
         # Close the <description> portion of the item.
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
+            pubdate = line.split(": ")[1].split(" ")
+            d = map(int, pubdate[0].split("/"))
+            d_o = datetime.date(d[0],d[1],d[2])
+            feed_fd.write("            <pubDate>"+d_o.strftime("%a, %-d %b %Y")+" "+pubdate[1].strip()+" EST</pubDate>\n")
             feed_fd.write("            <description>")
         # Ignore the rest of the header, until the first line of content.
         # Write the first paragraph to the file.
