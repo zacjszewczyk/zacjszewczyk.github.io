@@ -327,11 +327,14 @@ def Deploy():
 # Return: none
 def Stage():
     from os.path import isdir, isfile
-    from os import mkdir, listdir, utime, stat
+    from os import mkdir, listdir, utime, stat, devnull
     from gzip import open as gopen
     from shutil import copyfileobj as copy
     from sys import stdout
     from ModTimes import CompareMtimes
+    import subprocess
+
+    FNULL = open(devnull, 'w')
 
     # Setup the environment for staging
     ## If the ./stage directory doesn't exist, create it
@@ -349,7 +352,7 @@ def Stage():
     # Take all HTML, XML, and JavaScript files from the directory,
     # compress them, and copy the gzipped files to ./stage
     for file in listdir("./local"):
-        if (file[-4:] == "html" or file[-3:] == "xml" or file[-2:] == "js"):
+        if (file[-4:] == "html"):
             if (isfile('./stage/'+file) and CompareMtimes("./local/"+file, "./stage/"+file)):
                 continue
             with open("./local/"+file, 'rb') as f_in, gopen('./stage/'+file, 'wb') as f_out:
@@ -357,6 +360,14 @@ def Stage():
                 copy(f_in, f_out)
                 i += 1
                 stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+            utime("./stage/"+file, (stat("./local/"+file).st_mtime, stat("./local/"+file).st_mtime))
+        elif (file[-3:] == "xml" or file[-2:] == "js"):
+            stdout.write(c.OKGREEN+"Moving file at: "+c.ENDC+"./stage/"+file+" ...")
+            code = subprocess.call("cp ./local/"+file+" ./stage/"+file, stdout=FNULL, stderr=FNULL, shell=True)
+            if (code != 0):
+                print c.FAIL+"Error moving file."+c.ENDC
+                exit(1)
+            stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
             utime("./stage/"+file, (stat("./local/"+file).st_mtime, stat("./local/"+file).st_mtime))
 
     # Take all HTML files in ./blog, compress them, and copy the
@@ -373,6 +384,8 @@ def Stage():
             utime("./stage/blog/"+file, (stat("./local/blog/"+file).st_mtime, stat("./local/blog/"+file).st_mtime))
 
     print "\n"+c.OKGREEN+str(i)+" files staged."+c.ENDC
+
+    FNULL.close()
 
 if (__name__ == "__main__"):
     # Import functions for CLI
