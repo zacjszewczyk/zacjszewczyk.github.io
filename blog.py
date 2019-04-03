@@ -65,7 +65,11 @@ def AppendContentOfXToY(target, source):
                 ptype = Migrate(source, mod_time).strip()
             else:
                 ptype = line[6:].strip()
-            title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line[6:].strip())
+            
+            if (ptype == "original"):
+                title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line[6:].strip())
+            else:
+                title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line[6:].strip())
         # In the second line of the file, add the article title.
         elif (idx == 1):
             title = title.replace("{{URL_TITLE}}", line[7:].strip())
