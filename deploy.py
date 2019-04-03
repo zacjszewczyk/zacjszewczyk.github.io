@@ -215,6 +215,14 @@ def Deploy():
     if (not isdir("./deploy/blog")):
         print c.OKGREEN+"Creating ./deploy/blog"+c.ENDC
         mkdir("./deploy/blog")
+    ## If the ./deploy/assets directory doesn't exist, create it
+    if (not isdir("./deploy/assets")):
+        print c.OKGREEN+"Creating ./deploy/assets"+c.ENDC
+        mkdir("./deploy/assets")
+    ## If the ./deploy/assets/Images directory doesn't exist, create it
+    if (not isdir("./deploy/assets/Images")):
+        print c.OKGREEN+"Creating ./deploy/assets/Images"+c.ENDC
+        mkdir("./deploy/assets/Images")
 
     # Keep track of number of files deployed
     i = 0
@@ -247,7 +255,7 @@ def Deploy():
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/"+file+" ...")
-        b.upload_file(Filename="./deploy/"+file, Key=file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':content_type})
+        #b.upload_file(Filename="./deploy/"+file, Key=file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':content_type})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
@@ -267,7 +275,45 @@ def Deploy():
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/blog/"+file+" ...")
-        b.upload_file(Filename="./deploy/blog/"+file, Key="blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
+        #b.upload_file(Filename="./deploy/blog/"+file, Key="blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
+        i += 1
+        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+
+    for file in listdir("./local/assets/"):
+        # Ignore images
+        if (isdir("./local/assets/"+file)):
+            continue
+        # Ignore files that have already been deployed
+        if (isfile("./deploy/assets/"+file)):
+            continue
+
+        stdout.write(c.OKGREEN+"Copying file at: "+c.ENDC+"./local/assets/"+file+" ...")
+        code = subprocess.call("cp ./local/assets/"+file+" ./deploy/assets/"+file, stdout=FNULL, stderr=FNULL, shell=True)
+        if (code != 0):
+            print c.FAIL+"Error copying file."+c.ENDC
+            exit(1)
+        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+        stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/assets/"+file+" ...")
+        #b.upload_file(Filename="./deploy/blog/"+file, Key="blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
+        i += 1
+        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+
+    for file in listdir("./local/assets/Images/"):
+        # Ignore images
+        if (isdir("./local/assets/Images/"+file)):
+            continue
+        # Ignore files that have already been deployed
+        if (isfile("./deploy/assets/Images/"+file)):
+            continue
+
+        stdout.write(c.OKGREEN+"Copying file at: "+c.ENDC+"./local/assets/"+file+" ...")
+        code = subprocess.call("cp ./local/assets/Images/"+file+" ./deploy/assets/Images/"+file, stdout=FNULL, stderr=FNULL, shell=True)
+        if (code != 0):
+            print c.FAIL+"Error copying file."+c.ENDC
+            exit(1)
+        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+        stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/assets/Images/"+file+" ...")
+        #b.upload_file(Filename="./deploy/blog/"+file, Key="blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
@@ -302,29 +348,29 @@ def Stage():
 
     # Take all HTML, XML, and JavaScript files from the directory,
     # compress them, and copy the gzipped files to ./stage
-    for file in listdir("./"):
+    for file in listdir("./local"):
         if (file[-4:] == "html" or file[-3:] == "xml" or file[-2:] == "js"):
-            if (isfile('./stage/'+file) and CompareMtimes(file, "./stage/"+file)):
+            if (isfile('./stage/'+file) and CompareMtimes("./local/"+file, "./stage/"+file)):
                 continue
-            with open(file, 'rb') as f_in, gopen('./stage/'+file, 'wb') as f_out:
+            with open("./local/"+file, 'rb') as f_in, gopen('./stage/'+file, 'wb') as f_out:
                 stdout.write(c.OKGREEN+"Staging file at: "+c.ENDC+file+" ...")
                 copy(f_in, f_out)
                 i += 1
                 stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-            utime("./stage/"+file, (stat(file).st_mtime, stat(file).st_mtime))
+            utime("./stage/"+file, (stat("./local/"+file).st_mtime, stat("./local/"+file).st_mtime))
 
     # Take all HTML files in ./blog, compress them, and copy the
     # gzipped files to ./stage
-    for file in listdir("./blog/"):
+    for file in listdir("./local/blog/"):
         if (file[-4:] == "html"):
-            if (isfile('./stage/blog/'+file) and CompareMtimes("./blog/"+file, "./stage/blog/"+file)):
+            if (isfile('./stage/blog/'+file) and CompareMtimes("./local/blog/"+file, "./stage/blog/"+file)):
                 continue
-            with open("./blog/"+file, 'rb') as f_in, gopen('./stage/blog/'+file, 'wb') as f_out:
+            with open("./local/blog/"+file, 'rb') as f_in, gopen('./stage/blog/'+file, 'wb') as f_out:
                 stdout.write(c.OKGREEN+"Staging file at: "+c.ENDC+"./blog/"+file+" ...")
                 copy(f_in, f_out)
                 i += 1
                 stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-            utime("./stage/blog/"+file, (stat("./blog/"+file).st_mtime, stat("./blog/"+file).st_mtime))
+            utime("./stage/blog/"+file, (stat("./local/blog/"+file).st_mtime, stat("./local/blog/"+file).st_mtime))
 
     print "\n"+c.OKGREEN+str(i)+" files staged."+c.ENDC
 
@@ -343,7 +389,7 @@ if (__name__ == "__main__"):
     * To stage site locally:        %sstage%s
     * To clear the staged site:     %sclear%s
     * To deploy site to server:     %sdeploy%s
-    """ % (c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
+    """ % (c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
 
     # Basic input checking
     if (len(argv) <= 1):
