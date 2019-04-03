@@ -50,28 +50,33 @@ c = colors()
 def AppendContentOfXToY(target, source):
     # Initialize file descriptors for the source and target files.
     source_fd = open("Content/"+source, "r")
+
+    ptype = source_fd.readline()
+
+    if (ptype[0:5] != "Type:"):
+        source_fd.close()
+        mod_time = strftime("%Y/%m/%d %H:%M:%S", localtime(stat(target).st_mtime))
+        ptype = Migrate(source, mod_time).strip()
+        source_fd = open("Content/"+source, "r")
+    else:
+        ptype = ptype[6:].strip()
+
+    # In the first line, classify the article as a linkpost or an original piece.
+    if (ptype == "original"):
+        title = "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+    else:
+        title = "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+
     target_fd = open(target+".html", "a")
 
     # Initialize method variables.
-    ptype = "linkpost"
-    idx = 0
-    title = ""
+    idx = 1
 
     # Iterate over each line in the source content file.
     for line in iter(source_fd.readline, ""):
-        # In the first line, classify the article as a linkpost or an original piece.
-        if (idx == 0):
-            if (line[0:5] != "Type:"):
-                ptype = Migrate(source, mod_time).strip()
-            else:
-                ptype = line[6:].strip()
-            
-            if (ptype == "original"):
-                title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line[6:].strip())
-            else:
-                title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line[6:].strip())
+        # print idx,":",line
         # In the second line of the file, add the article title.
-        elif (idx == 1):
+        if (idx == 1):
             title = title.replace("{{URL_TITLE}}", line[7:].strip())
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
@@ -611,7 +616,7 @@ def Migrate(target, mod_time):
         article_url = article_content[1][1:-1]
     else:
         article_type = "original"
-        article_title = article_content[2:-2]
+        article_title = article_content
         article_url = target.replace(".html", "").replace(" ", "-").lower()
         article_content = fd.readline()
 

@@ -6,9 +6,18 @@
     <description></description>
     <language>en-us</language>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 03 Apr 2019 04:18:39 EST</lastBuildDate>
+    <lastBuildDate>Wed, 03 Apr 2019 04:53:27 EST</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Simple, not Easy</title>
+            <link>http://zacs.site/blog/simple-not-easy.html</link>
+            <guid>http://zacs.site/blog/simple-not-easy.html</guid>
+            <description>
+                
+&lt;p&gt;It&#38;#8217;s been awhile.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Cabin Porn Roundup</title>
             <link>http://zacs.site/blog/cabin-porn-roundup-1014.html</link>
