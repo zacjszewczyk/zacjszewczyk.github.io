@@ -78,23 +78,6 @@ def CheckDirAndCreate(tgt, verbose=False):
         mkdir(tgt)
         if (verbose == True): stdout.write(c.OKGREEN+"Done.\n"+c.ENDC)
 
-# Method: CreateTree
-# Purpose: Check for the existence of a given directory tree, and create it
-#          if it doesn't exist.
-# Parameters:
-# - tree: Directory tree to test and maybe create
-def CreateTree(tree, verbose=False):
-    from sys import stdout
-    tree = tree.split("/")
-    for folder in tree:
-        if (folder == "."):
-            continue
-        d = "/".join(tree[:tree.index(folder)])+"/"+folder
-        if (not isdir(d)):
-            if (verbose == True): stdout.write(c.OKGREEN+"Creating "+d+" ..."+c.ENDC)
-            mkdir(d)
-            if (verbose == True): stdout.write(c.OKGREEN+"Done.\n"+c.ENDC)
-
 # Method: Clear
 # Purpose: Clear the target directory
 # Parameters: 
@@ -131,95 +114,71 @@ def Clear(tgt):
             i += 1
     
     print c.WARNING+str(i)+" files deleted."+c.ENDC+"\n"
+
+# Method: CompressFile
+# Purpose: Create a compressed version of an input file.
+# Parameters:
+# - tgt: Target file, uncompressed (String)
+# - dst: Destination file, to be compressed (String)
+# Return: none
+def CompressFile(_tgt, _dst, verbose=False, mtime=False):
+    from gzip import open as gopen
+    from sys import stdout
+    from shutil import copyfileobj as copy
+    from os import utime, stat
+
+    with open(_tgt, 'rb') as f_in, gopen(_dst, 'wb') as f_out:
+        if (verbose):
+            stdout.write(c.OKGREEN+"Compressing "+c.ENDC+_tgt+" -> "+_dst+" ...")
+        copy(f_in, f_out)
+        if (verbose):
+            stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+    if (mtime):
+        utime(_dst, (stat(_tgt).st_mtime, stat(_tgt).st_mtime))
+
+# Method: CopyFile
+# Purpose: Copy a file
+# Parameters:
+# - tgt: Target file (String)
+# - dst: Destination file (String)
+# Return: none
+def CopyFile(_tgt, _dst, verbose=False, mtime=False):
+    from os import utime, stat, devnull
+    from sys import stdout
+    import subprocess
+
+    FNULL = open(devnull, 'w')
+
+    if (verbose):
+        stdout.write(c.OKGREEN+"Copying "+c.ENDC+_tgt+" -> "+_dst+" ...")
+    code = subprocess.call("cp "+_tgt+" "+_dst, stdout=FNULL, stderr=FNULL, shell=True)
+    if (verbose and code != 0):
+        print c.FAIL+"Error copying file."+c.ENDC
+        exit(1)
+    if (verbose):
+        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+    if (mtime):
+        utime(_dst, (stat(_tgt).st_mtime, stat(_tgt).st_mtime))
+
+    FNULL.close()
+
+# Method: CreateTree
+# Purpose: Check for the existence of a given directory tree, and create it
+#          if it doesn't exist.
+# Parameters:
+# - tree: Directory tree to test and maybe create
+def CreateTree(tree, verbose=False):
+    from sys import stdout
+    tree = tree.split("/")
+    for folder in tree:
+        if (folder == "."):
+            continue
+        d = "/".join(tree[:tree.index(folder)])+"/"+folder
+        if (not isdir(d)):
+            if (verbose == True): stdout.write(c.OKGREEN+"Creating "+d+" ..."+c.ENDC)
+            mkdir(d)
+            if (verbose == True): stdout.write(c.OKGREEN+"Done.\n"+c.ENDC)
         
-# Method: Fetch
-# Purpose: Download logs
-# Parameters: none
-# Return: none
-def Fetch():
-    # Make sure 'logs' directory exists
-    if (not isdir("./logs")):
-        mkdir("./logs")
-
-    # Instantiate a new session
-    session = GetSession()
-    s3 = session.resource('s3')
-    b = s3.Bucket('logs.zacs.site')
-
-    # Iterate over each object in the bucket
-    for file in b.objects.all():
-        # If the file does not exist on the local machine, downlaod it
-        if (not isfile("."+file.key)):
-            print "%sDownloading%s %s%s%s to location %s%s%s" % (c.OKGREEN, c.ENDC, c.UNDERLINE, file.key, c.ENDC, c.UNDERLINE, "."+file.key, c.ENDC)
-            b.download_file(file.key, "."+file.key)
-
-# Method: GetCommonLogFormat
-# Purpose: Return log in Command Log Format
-# Parameters: 
-# - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
-# Return: Log in Common Log Format (String)
-def GetCommonLogFormat(data):
-    return data["remote_ip"]+" user-identifier - ["+data["timestamp"]+"] \""+data["request_uri"]+"\" "+data["http_status"]+" "+data["object_size"]
-
-# Method: GetCombinedLogFormat
-# Purpose: Return log in Combined Log Format
-# Parameters: 
-# - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
-# Return: Log in Combined Log Format (String)
-def GetCombinedLogFormat(data):
-    return data["remote_ip"]+" user-identifier - ["+data["timestamp"]+"] \""+data["request_uri"]+"\" "+data["http_status"]+" "+data["object_size"]+" \""+data["referrer"]+"\" \""+data["user_agent"]+"\""
-
-# Method: GetSession
-# Purpose: Establish an S3 session, and return it to the user
-# Parameters: none
-# Return: Established S3 session (Session)
-def GetSession():
-    # Import functions for S3 session
-    from boto3.session import Session
-    import boto3
-
-    # Private access key information
-    ACCESS_KEY = 'AKIA4K7UTVOAUNQFLO7T'
-    SECRET_KEY = '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'
-
-    return Session(aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
-
-# Method: Parse
-# Purpose: Parse logs
-# Parameters: none
-# Return: none
-def Parse():
-    # Open combined output log file
-    output_log = open("master.log", "w").close()
-    output_log = open("master.log", "a")
-
-    # Sort the logs by timestamp, with oldest logs first
-    logs = sorted(listdir("./logs"))
-    
-    # Iterate through the sorted log list
-    for log in logs:
-        # Open each log
-        print c.OKGREEN+"Opening"+c.ENDC+" "+c.UNDERLINE+"./logs/"+log+c.ENDC
-        with open("./logs/"+log, "r") as fd:
-            # Parse each entry
-            for line in fd:
-                d = AssociateGroups(CaptureGroups(line))
-                # output_log.write(GetCommonLogFormat(d)+'\n')
-                if (d["host_header"] == "s3.us-east-2.amazonaws.com"):
-                    continue
-                output_log.write(GetCombinedLogFormat(d)+'\n')
-
-    output_log.close()
-
-# Method: PrintLog
-# Purpose: Pretty print dictionary of Amazon S3 Server Access
-# Log Format fields
-# Parameters: 
-# - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
-# Return: none
-def PrintLog(data):
-    print "On",data["timestamp"].replace(":", " ", 1),"the machine",data["remote_ip"],"(referred by",data["referrer"]+")","said",data["request_uri"],"and the server responded with",data["key"],"of size",data["object_size"],"bytes which took",data["turnaround_time"],"milliseconds to send, and resulted in the response code",data["http_status"],"and error code",data["error_code"]
-
 # Method: Deploy
 # Purpose: Send updated site to server
 # Parameters: none
@@ -335,52 +294,93 @@ def Deploy():
             i += 1
     print "\n"+c.OKGREEN+str(i)+" files deployed from ./local/"+c.ENDC
 
-# Method: CompressFile
-# Purpose: Create a compressed version of an input file.
-# Parameters:
-# - tgt: Target file, uncompressed (String)
-# - dst: Destination file, to be compressed (String)
+# Method: Fetch
+# Purpose: Download logs
+# Parameters: none
 # Return: none
-def CompressFile(_tgt, _dst, verbose=False, mtime=False):
-    from gzip import open as gopen
-    from sys import stdout
-    from shutil import copyfileobj as copy
-    from os import utime, stat
+def Fetch():
+    # Make sure 'logs' directory exists
+    if (not isdir("./logs")):
+        mkdir("./logs")
 
-    with open(_tgt, 'rb') as f_in, gopen(_dst, 'wb') as f_out:
-        if (verbose):
-            stdout.write(c.OKGREEN+"Compressing "+c.ENDC+_tgt+" -> "+_dst+" ...")
-        copy(f_in, f_out)
-        if (verbose):
-            stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-    if (mtime):
-        utime(_dst, (stat(_tgt).st_mtime, stat(_tgt).st_mtime))
+    # Instantiate a new session
+    session = GetSession()
+    s3 = session.resource('s3')
+    b = s3.Bucket('logs.zacs.site')
 
-# Method: CopyFile
-# Purpose: Copy a file
-# Parameters:
-# - tgt: Target file (String)
-# - dst: Destination file (String)
+    # Iterate over each object in the bucket
+    for file in b.objects.all():
+        # If the file does not exist on the local machine, downlaod it
+        if (not isfile("."+file.key)):
+            print "%sDownloading%s %s%s%s to location %s%s%s" % (c.OKGREEN, c.ENDC, c.UNDERLINE, file.key, c.ENDC, c.UNDERLINE, "."+file.key, c.ENDC)
+            b.download_file(file.key, "."+file.key)
+
+# Method: GetCombinedLogFormat
+# Purpose: Return log in Combined Log Format
+# Parameters: 
+# - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
+# Return: Log in Combined Log Format (String)
+def GetCombinedLogFormat(data):
+    return data["remote_ip"]+" user-identifier - ["+data["timestamp"]+"] \""+data["request_uri"]+"\" "+data["http_status"]+" "+data["object_size"]+" \""+data["referrer"]+"\" \""+data["user_agent"]+"\""
+
+# Method: GetCommonLogFormat
+# Purpose: Return log in Command Log Format
+# Parameters: 
+# - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
+# Return: Log in Common Log Format (String)
+def GetCommonLogFormat(data):
+    return data["remote_ip"]+" user-identifier - ["+data["timestamp"]+"] \""+data["request_uri"]+"\" "+data["http_status"]+" "+data["object_size"]
+
+# Method: GetSession
+# Purpose: Establish an S3 session, and return it to the user
+# Parameters: none
+# Return: Established S3 session (Session)
+def GetSession():
+    # Import functions for S3 session
+    from boto3.session import Session
+    import boto3
+
+    # Private access key information
+    ACCESS_KEY = 'AKIA4K7UTVOAUNQFLO7T'
+    SECRET_KEY = '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'
+
+    return Session(aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
+
+# Method: Parse
+# Purpose: Parse logs
+# Parameters: none
 # Return: none
-def CopyFile(_tgt, _dst, verbose=False, mtime=False):
-    from os import utime, stat, devnull
-    from sys import stdout
-    import subprocess
+def Parse():
+    # Open combined output log file
+    output_log = open("master.log", "w").close()
+    output_log = open("master.log", "a")
 
-    FNULL = open(devnull, 'w')
+    # Sort the logs by timestamp, with oldest logs first
+    logs = sorted(listdir("./logs"))
+    
+    # Iterate through the sorted log list
+    for log in logs:
+        # Open each log
+        print c.OKGREEN+"Opening"+c.ENDC+" "+c.UNDERLINE+"./logs/"+log+c.ENDC
+        with open("./logs/"+log, "r") as fd:
+            # Parse each entry
+            for line in fd:
+                d = AssociateGroups(CaptureGroups(line))
+                # output_log.write(GetCommonLogFormat(d)+'\n')
+                if (d["host_header"] == "s3.us-east-2.amazonaws.com"):
+                    continue
+                output_log.write(GetCombinedLogFormat(d)+'\n')
 
-    if (verbose):
-        stdout.write(c.OKGREEN+"Copying "+c.ENDC+_tgt+" -> "+_dst+" ...")
-    code = subprocess.call("cp "+_tgt+" "+_dst, stdout=FNULL, stderr=FNULL, shell=True)
-    if (verbose and code != 0):
-        print c.FAIL+"Error copying file."+c.ENDC
-        exit(1)
-    if (verbose):
-        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-    if (mtime):
-        utime(_dst, (stat(_tgt).st_mtime, stat(_tgt).st_mtime))
+    output_log.close()
 
-    FNULL.close()
+# Method: PrintLog
+# Purpose: Pretty print dictionary of Amazon S3 Server Access
+# Log Format fields
+# Parameters: 
+# - data: Dictionary of fields in Amazon S3 Server Access Log Format (String)
+# Return: none
+def PrintLog(data):
+    print "On",data["timestamp"].replace(":", " ", 1),"the machine",data["remote_ip"],"(referred by",data["referrer"]+")","said",data["request_uri"],"and the server responded with",data["key"],"of size",data["object_size"],"bytes which took",data["turnaround_time"],"milliseconds to send, and resulted in the response code",data["http_status"],"and error code",data["error_code"]
 
 # Method: Stage
 # Purpose: Update site locally
