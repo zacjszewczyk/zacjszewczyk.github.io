@@ -325,7 +325,7 @@ def Deploy():
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/assets/Images/"+file+" ...")
-        b.upload_file(Filename="./deploy/assets/Images/"+file, Key="assets/Images"+file, ExtraArgs={'CacheControl':'max-age=2592000'})
+        b.upload_file(Filename="./deploy/assets/Images/"+file, Key="assets/Images/"+file, ExtraArgs={'CacheControl':'max-age=2592000'})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
