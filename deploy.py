@@ -72,9 +72,9 @@ def CaptureGroups(entry):
 #          doesn't exist.
 # Parameters:
 # - tgt: Directory to test and maybe create
+# Return: none
 def CheckDirAndCreate(tgt, verbose=False):
     if (not isdir(tgt)):
-
         if (verbose == True): stdout.write(c.OKGREEN+"Creating "+tgt+" ..."+c.ENDC)
         mkdir(tgt)
         if (verbose == True): stdout.write(c.OKGREEN+"Done.\n"+c.ENDC)
@@ -127,13 +127,10 @@ def CompressFile(tgt, dst, verbose=False, set_utime=False):
     from os import utime, stat
 
     with open(tgt, 'rb') as _f_in, gopen(dst, 'wb') as _f_out:
-        if (verbose):
-            stdout.write(c.OKGREEN+"Compressing "+c.ENDC+tgt+" -> "+dst+" ...")
+        if (verbose): stdout.write(c.OKGREEN+"Compressing "+c.ENDC+tgt+" -> "+dst+" ...")
         copy(_f_in, _f_out)
-        if (verbose):
-            stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-    if (set_utime):
-        utime(dst, (stat(tgt).st_mtime, stat(tgt).st_mtime))
+        if (verbose): stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+    if (set_utime): utime(dst, (stat(tgt).st_mtime, stat(tgt).st_mtime))
 
 # Method: CopyFile
 # Purpose: Copy a file
@@ -153,10 +150,8 @@ def CopyFile(tgt, dst, verbose=False, set_utime=False):
     if (verbose and code != 0):
         print c.FAIL+"Error copying file."+c.ENDC
         exit(1)
-    if (verbose):
-        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-    if (set_utime):
-        utime(dst, (stat(tgt).st_mtime, stat(tgt).st_mtime))
+    if (verbose): stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+    if (set_utime): utime(dst, (stat(tgt).st_mtime, stat(tgt).st_mtime))
 
     _FNULL.close()
 
