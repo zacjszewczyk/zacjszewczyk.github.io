@@ -1,5 +1,10 @@
 #!/usr/bin/python
 
+# Global imports
+## Import functions for file operations
+from os.path import isdir, isfile
+from os import mkdir, listdir
+
 # Amazon S3 Server Access Log Format
 # https://docs.aws.amazon.com/AmazonS3/latest/dev/LogFormat.html
 
@@ -61,9 +66,39 @@ def CaptureGroups(entry):
         a.append(group.strip())
     return a
 
+# Method: CheckDirAndCreate
+# Purpose: Check for the existence of a given directory, and create it if it
+#          doesn't exist.
+# Parameters:
+# - tgt: Directory to test and maybe create
+def CheckDirAndCreate(tgt, verbose=False):
+    if (not isdir(tgt)):
+        from sys import stdout
+        if (verbose == True): stdout.write(c.OKGREEN+"Creating "+tgt+" ..."+c.ENDC)
+        mkdir(tgt)
+        if (verbose == True): stdout.write(c.OKGREEN+"Done.\n"+c.ENDC)
+
+# Method: CreateTree
+# Purpose: Check for the existence of a given directory tree, and create it
+#          if it doesn't exist.
+# Parameters:
+# - tree: Directory tree to test and maybe create
+def CreateTree(tree, verbose=False):
+    from sys import stdout
+    tree = tree.split("/")
+    for folder in tree:
+        if (folder == "."):
+            continue
+        d = "/".join(tree[:tree.index(folder)])+"/"+folder
+        if (not isdir(d)):
+            if (verbose == True): stdout.write(c.OKGREEN+"Creating "+d+" ..."+c.ENDC)
+            mkdir(d)
+            if (verbose == True): stdout.write(c.OKGREEN+"Done.\n"+c.ENDC)
+
 # Method: Clear
-# Purpose: Clear the ./stage directory
-# Parameters: none
+# Purpose: Clear the target directory
+# Parameters: 
+# - tgt: Target directory to be cleared
 # Return: none
 def Clear(tgt):
     # Import methods for file operations
@@ -85,7 +120,7 @@ def Clear(tgt):
             print "%sNothing to clear in %s%s" % (c.WARNING, path, c.ENDC)
             continue
 
-        # Delete all non-hidden files in ./stage/*
+        # Delete all non-hidden files in tgt/*
         for name in files:
             # Ignore hidden files
             if (name[0] == '.'):
@@ -95,17 +130,13 @@ def Clear(tgt):
             stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
             i += 1
     
-    print "\n"+c.WARNING+str(i)+" files deleted."+c.ENDC
+    print c.WARNING+str(i)+" files deleted."+c.ENDC+"\n"
         
 # Method: Fetch
 # Purpose: Download logs
 # Parameters: none
 # Return: none
 def Fetch():
-    # Import functions for file operations
-    from os.path import isdir, isfile
-    from os import mkdir
-    
     # Make sure 'logs' directory exists
     if (not isdir("./logs")):
         mkdir("./logs")
@@ -158,9 +189,6 @@ def GetSession():
 # Parameters: none
 # Return: none
 def Parse():
-    # Import functions for file operations
-    from os import listdir
-
     # Open combined output log file
     output_log = open("master.log", "w").close()
     output_log = open("master.log", "a")
@@ -197,37 +225,22 @@ def PrintLog(data):
 # Parameters: none
 # Return: none
 def Deploy():
-    from os.path import isdir, isfile
-    from os import mkdir, listdir
-    from os import devnull
+    from os import walk, devnull
     import subprocess
-    from sys import stdout
+    from sys import stdout, exit
     from Hash import HashFiles
 
     FNULL = open(devnull, 'w')
 
-    # Setup the environment for deploying
-    ## If the ./deploy directory doesn't exist, create it
-    if (not isdir("./deploy")):
-        print c.OKGREEN+"Creating ./deploy"+c.ENDC
-        mkdir("./deploy")
-    ## If the ./deploy/blog directory doesn't exist, create it
-    if (not isdir("./deploy/blog")):
-        print c.OKGREEN+"Creating ./deploy/blog"+c.ENDC
-        mkdir("./deploy/blog")
-    ## If the ./deploy/assets directory doesn't exist, create it
-    if (not isdir("./deploy/assets")):
-        print c.OKGREEN+"Creating ./deploy/assets"+c.ENDC
-        mkdir("./deploy/assets")
-    ## If the ./deploy/assets/Images directory doesn't exist, create it
-    if (not isdir("./deploy/assets/Images")):
-        print c.OKGREEN+"Creating ./deploy/assets/Images"+c.ENDC
-        mkdir("./deploy/assets/Images")
+    # Mirror the ./local directory structure
+    for path, subdirs, files in walk("./local"):
+        if (len(subdirs) == 0):
+            CreateTree(path.replace("./local", "./deploy"))
 
     # Keep track of number of files deployed
     i = 0
 
-    # Instantiate a new session
+    # Instantiate a new S3 session
     session = GetSession()
     s3 = session.resource('s3')
     b = s3.Bucket('zacs.site')
@@ -258,7 +271,7 @@ def Deploy():
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/"+file+" ...")
-        b.upload_file(Filename="./deploy/"+file, Key=file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':content_encoding,'ContentType':content_type})
+        # b.upload_file(Filename="./deploy/"+file, Key=file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':content_encoding,'ContentType':content_type})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
@@ -278,7 +291,7 @@ def Deploy():
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/blog/"+file+" ...")
-        b.upload_file(Filename="./deploy/blog/"+file, Key="blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
+        # b.upload_file(Filename="./deploy/blog/"+file, Key="blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
@@ -306,7 +319,7 @@ def Deploy():
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/assets/"+file+" ...")
-        b.upload_file(Filename="./deploy/assets/"+file, Key="assets/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentType':content_type})
+        # b.upload_file(Filename="./deploy/assets/"+file, Key="assets/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentType':content_type})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
@@ -325,7 +338,7 @@ def Deploy():
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/assets/Images/"+file+" ...")
-        b.upload_file(Filename="./deploy/assets/Images/"+file, Key="assets/Images/"+file, ExtraArgs={'CacheControl':'max-age=2592000'})
+        # b.upload_file(Filename="./deploy/assets/Images/"+file, Key="assets/Images/"+file, ExtraArgs={'CacheControl':'max-age=2592000'})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
@@ -344,14 +357,15 @@ def CompressFile(_tgt, _dst, verbose=False, mtime=False):
     from sys import stdout
     from shutil import copyfileobj as copy
     from os import utime, stat
+
     with open(_tgt, 'rb') as f_in, gopen(_dst, 'wb') as f_out:
         if (verbose):
-            stdout.write(c.OKGREEN+"Processing file at: "+c.ENDC+_tgt+" ...")
+            stdout.write(c.OKGREEN+"Compressing "+c.ENDC+_tgt+" -> "+_dst+" ...")
         copy(f_in, f_out)
         if (verbose):
             stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-        if (mtime):
-            utime(_dst, (stat(_tgt).st_mtime, stat(_tgt).st_mtime))
+    if (mtime):
+        utime(_dst, (stat(_tgt).st_mtime, stat(_tgt).st_mtime))
 
 # Method: CopyFile
 # Purpose: Copy a file
@@ -363,13 +377,14 @@ def CopyFile(_tgt, _dst, verbose=False, mtime=False):
     from os import utime, stat, devnull
     from sys import stdout
     import subprocess
+
     FNULL = open(devnull, 'w')
 
     if (verbose):
-        stdout.write(c.OKGREEN+"Copy file at: "+c.ENDC+_tgt+" ...")
+        stdout.write(c.OKGREEN+"Copying "+c.ENDC+_tgt+" -> "+_dst+" ...")
     code = subprocess.call("cp "+_tgt+" "+_dst, stdout=FNULL, stderr=FNULL, shell=True)
     if (verbose and code != 0):
-        print c.FAIL+"Error moving file."+c.ENDC
+        print c.FAIL+"Error copying file."+c.ENDC
         exit(1)
     if (verbose):
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
@@ -383,25 +398,12 @@ def CopyFile(_tgt, _dst, verbose=False, mtime=False):
 # Parameters: none
 # Return: none
 def Stage():
-    from os.path import isdir, isfile
-    from os import mkdir, listdir, utime, stat, devnull
-    from gzip import open as gopen
-    from shutil import copyfileobj as copy
-    from sys import stdout
+    from os import utime, stat, devnull
     from ModTimes import CompareMtimes
-    import subprocess
-
-    FNULL = open(devnull, 'w')
 
     # Setup the environment for staging
-    ## If the ./stage directory doesn't exist, create it
-    if (not isdir("./stage")):
-        print c.OKGREEN+"Creating ./stage"+c.ENDC
-        mkdir("./stage")
-    ## If the ./stage/blog directory doesn't exist, create it
-    if (not isdir("./stage/blog")):
-        print c.OKGREEN+"Creating ./stage/blog"+c.ENDC
-        mkdir("./stage/blog")
+    ## ./stage and ./stage/blog
+    CreateTree("./stage/blog", True)
 
     # Keep track of number of files staged
     i = 0
@@ -411,10 +413,11 @@ def Stage():
     for file in listdir("./local"):
         src = "./local/"+file
         dst = "./stage/"+file
+        if (isfile(dst) and CompareMtimes(src, dst)):
+            continue
+
         if (file[-4:] == "html"):
-            if (isfile(dst) and CompareMtimes(src, dst)):
-                continue
-            CompressFile(src, dst, verbose=True, mtime=True)
+            CompressFile(src, dst, True, True)
             i += 1
         elif (file[-3:] == "xml" or file[-2:] == "js"):
             CopyFile(src, dst, True, True)
@@ -428,12 +431,10 @@ def Stage():
         if (file[-4:] == "html"):
             if (isfile(dst) and CompareMtimes(src, dst)):
                 continue
-            CompressFile(src, dst, True, False)
+            CompressFile(src, dst, True, True)
             i += 1
 
     print "\n"+c.OKGREEN+str(i)+" files staged."+c.ENDC
-
-    FNULL.close()
 
 if (__name__ == "__main__"):
     # Import functions for CLI
