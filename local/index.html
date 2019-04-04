@@ -70,9 +70,7 @@
     
     <script>document.getElementsByTagName("body")[0].style.display = "block";</script>
     <script>
-        console.log("Running script...");
         if ('serviceWorker' in navigator) {
-          console.log("Registering...");
           navigator.serviceWorker.register('/m_sw.js');
           console.log("Successfully registered Service Worker.");
         }

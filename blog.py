@@ -86,7 +86,7 @@ def AppendContentOfXToY(target, source):
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
             line = line[9:].replace(" ", "/").split("/")
-            title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="blog/%s">%s</a>/<a href="blog/%s">%s</a>/%s %s</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
+            title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="blog/%s">%s</a>/<a href="blog/%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
         # In the fifth line of the file, write the opening tags to the target, then the file's
         # content as generated up to this point.
         elif (idx == 4):
@@ -117,6 +117,7 @@ def AppendContentOfXToY(target, source):
 # Parameters:
 # - source: Source file name, including extension. (String)
 def AppendToFeed(source):
+    from time import gmtime
     # Initialzie file descriptors for the source content file and the RSS feed
     source_fd = open("Content/"+source, "r")
     feed_fd = open("./local/rss.xml", "a")
@@ -153,14 +154,17 @@ def AppendToFeed(source):
                 link = "http://zacs.site/blog/"+source.lower().replace(" ", "-")[0:-3]+"html".lower()
                 guid = link
             feed_fd.write("            <link>"+link+"</link>\n")
-            feed_fd.write("            <guid>"+guid+"</guid>\n")
+            feed_fd.write("            <guid isPermaLink=\"true\">"+guid+"</guid>\n")
         # Close the <description> portion of the item.
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
-            pubdate = line.split(": ")[1].split(" ")
-            d = map(int, pubdate[0].split("/"))
-            d_o = datetime.date(d[0],d[1],d[2])
-            feed_fd.write("            <pubDate>"+d_o.strftime("%a, %-d %b %Y")+" "+pubdate[1].strip()+" EST</pubDate>\n")
+            # pubdate = strptime(line.split(": ")[1].strip(), "%Y/%m/%d %H:%M:%S")
+            # print "EST:",strftime("%a, %-d %b %Y %H:%M:%S", pubdate)+" EST"
+            pubdate = gmtime(mktime(strptime(line.split(": ")[1].strip(), "%Y/%m/%d %H:%M:%S")))
+            # print "GMT:",strftime("%a, %-d %b %Y %H:%M:%S", pubdate)+" GMT"
+            # print
+
+            feed_fd.write("            <pubDate>"+strftime("%a, %d %b %Y %H:%M:%S", pubdate)+" GMT</pubDate>\n")
             feed_fd.write("            <description>")
         # Ignore the rest of the header, until the first line of content.
         # Write the first paragraph to the file.
@@ -376,7 +380,7 @@ def GenPage(source, timestamp):
         elif (idx == 3):
             # print line
             line = line[9:].replace(" ", "/").split("/")
-            title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
+            title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
         # In the fifth line of the file, write the opening tags to the target, then the file's
         # content as generated up to this point.
         elif (idx == 4):
@@ -495,7 +499,7 @@ def Init():
     
     # Clear and initialize the RSS feed
     fd = open("./local/rss.xml", "w")
-    fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>Zac J. Szewczyk</title>\n    <link>http://zacs.site/</link>\n    <description></description>\n    <language>en-us</language>\n    <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s EST</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (datetime.datetime.now().strftime("%a, %d %b %Y %I:%M:%S")))
+    fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>Zac J. Szewczyk</title>\n    <link>http://zacs.site/</link>\n    <description>RSS feed for Zac J. Szewczyk's website, found at http://zacs.site/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>\n    <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (datetime.datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
     fd.close()
 
     # FUTURE: Do this for the Structure directory, minus key system files, to determine

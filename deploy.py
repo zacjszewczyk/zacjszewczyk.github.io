@@ -237,10 +237,13 @@ def Deploy():
     for file in listdir("./stage"):
         if (file[-4:] == "html"):
             content_type = "text/html"
+            content_encoding = "gzip"
         elif (file[-3:] == "xml"):
             content_type = "text/xml"
+            content_encoding = ""
         elif (file[-2:] == "js"):
             content_type = "text/javascript"
+            content_encoding = ""
         else:
             continue
 
@@ -255,7 +258,7 @@ def Deploy():
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/"+file+" ...")
-        #b.upload_file(Filename="./deploy/"+file, Key=file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':content_type})
+        b.upload_file(Filename="./deploy/"+file, Key=file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':content_encoding,'ContentType':content_type})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
@@ -275,7 +278,7 @@ def Deploy():
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/blog/"+file+" ...")
-        #b.upload_file(Filename="./deploy/blog/"+file, Key="blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
+        b.upload_file(Filename="./deploy/blog/"+file, Key="blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
@@ -287,6 +290,15 @@ def Deploy():
         if (isfile("./deploy/assets/"+file)):
             continue
 
+        if (file[-4:] == "html"):
+            content_type = "text/html"
+        elif (file[-3:] == "xml"):
+            content_type = "text/xml"
+        elif (file[-2:] == "js"):
+            content_type = "text/javascript"
+        else:
+            content_type = ""
+
         stdout.write(c.OKGREEN+"Copying file at: "+c.ENDC+"./local/assets/"+file+" ...")
         code = subprocess.call("cp ./local/assets/"+file+" ./deploy/assets/"+file, stdout=FNULL, stderr=FNULL, shell=True)
         if (code != 0):
@@ -294,7 +306,7 @@ def Deploy():
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/assets/"+file+" ...")
-        #b.upload_file(Filename="./deploy/blog/"+file, Key="blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
+        b.upload_file(Filename="./deploy/assets/"+file, Key="assets/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentType':content_type})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
@@ -313,7 +325,7 @@ def Deploy():
             exit(1)
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
         stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/assets/Images/"+file+" ...")
-        #b.upload_file(Filename="./deploy/blog/"+file, Key="blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
+        b.upload_file(Filename="./deploy/assets/Images/"+file, Key="assets/Images"+file, ExtraArgs={'CacheControl':'max-age=2592000'})
         i += 1
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
