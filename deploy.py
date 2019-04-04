@@ -4,6 +4,7 @@
 ## Import functions for file operations
 from os.path import isdir, isfile
 from os import mkdir, listdir
+from sys import stdout
 
 # Amazon S3 Server Access Log Format
 # https://docs.aws.amazon.com/AmazonS3/latest/dev/LogFormat.html
@@ -73,7 +74,7 @@ def CaptureGroups(entry):
 # - tgt: Directory to test and maybe create
 def CheckDirAndCreate(tgt, verbose=False):
     if (not isdir(tgt)):
-        from sys import stdout
+
         if (verbose == True): stdout.write(c.OKGREEN+"Creating "+tgt+" ..."+c.ENDC)
         mkdir(tgt)
         if (verbose == True): stdout.write(c.OKGREEN+"Done.\n"+c.ENDC)
@@ -86,7 +87,6 @@ def CheckDirAndCreate(tgt, verbose=False):
 def Clear(tgt):
     # Import methods for file operations
     from os import walk, remove
-    from sys import stdout
 
     # Keep track of number of files deleted
     _f_count = 0
@@ -123,7 +123,6 @@ def Clear(tgt):
 # Return: none
 def CompressFile(tgt, dst, verbose=False, set_utime=False):
     from gzip import open as gopen
-    from sys import stdout
     from shutil import copyfileobj as copy
     from os import utime, stat
 
@@ -144,7 +143,6 @@ def CompressFile(tgt, dst, verbose=False, set_utime=False):
 # Return: none
 def CopyFile(tgt, dst, verbose=False, set_utime=False):
     from os import utime, stat, devnull
-    from sys import stdout
     import subprocess
 
     _FNULL = open(devnull, 'w')
@@ -168,7 +166,6 @@ def CopyFile(tgt, dst, verbose=False, set_utime=False):
 # Parameters:
 # - _tree: Directory tree to test and maybe create
 def CreateTree(_tree, verbose=False):
-    from sys import stdout
     _tree = _tree.split("/")
     for _folder in _tree:
         if (_folder == "."):
@@ -186,7 +183,7 @@ def CreateTree(_tree, verbose=False):
 def Deploy():
     from os import walk
     import subprocess
-    from sys import stdout, exit
+    from sys import exit
     from Hash import HashFiles
 
     # Mirror the ./local directory structure
@@ -385,7 +382,6 @@ def PrintLog(data):
 # Parameters: none
 # Return: none
 def Stage():
-    from os import utime, stat
     from ModTimes import CompareMtimes
 
     # Setup the environment for staging
