@@ -333,6 +333,51 @@ def Deploy():
     
     FNULL.close()
 
+# Method: CompressFile
+# Purpose: Create a compressed version of an input file.
+# Parameters:
+# - tgt: Target file, uncompressed (String)
+# - dst: Destination file, to be compressed (String)
+# Return: none
+def CompressFile(_tgt, _dst, verbose=False, mtime=False):
+    from gzip import open as gopen
+    from sys import stdout
+    from shutil import copyfileobj as copy
+    from os import utime, stat
+    with open(_tgt, 'rb') as f_in, gopen(_dst, 'wb') as f_out:
+        if (verbose):
+            stdout.write(c.OKGREEN+"Processing file at: "+c.ENDC+_tgt+" ...")
+        copy(f_in, f_out)
+        if (verbose):
+            stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+        if (mtime):
+            utime(_dst, (stat(_tgt).st_mtime, stat(_tgt).st_mtime))
+
+# Method: CopyFile
+# Purpose: Copy a file
+# Parameters:
+# - tgt: Target file (String)
+# - dst: Destination file (String)
+# Return: none
+def CopyFile(_tgt, _dst, verbose=False, mtime=False):
+    from os import utime, stat, devnull
+    from sys import stdout
+    import subprocess
+    FNULL = open(devnull, 'w')
+
+    if (verbose):
+        stdout.write(c.OKGREEN+"Copy file at: "+c.ENDC+_tgt+" ...")
+    code = subprocess.call("cp "+_tgt+" "+_dst, stdout=FNULL, stderr=FNULL, shell=True)
+    if (verbose and code != 0):
+        print c.FAIL+"Error moving file."+c.ENDC
+        exit(1)
+    if (verbose):
+        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+    if (mtime):
+        utime(_dst, (stat(_tgt).st_mtime, stat(_tgt).st_mtime))
+
+    FNULL.close()
+
 # Method: Stage
 # Purpose: Update site locally
 # Parameters: none
@@ -364,36 +409,27 @@ def Stage():
     # Take all HTML, XML, and JavaScript files from the directory,
     # compress them, and copy the gzipped files to ./stage
     for file in listdir("./local"):
+        src = "./local/"+file
+        dst = "./stage/"+file
         if (file[-4:] == "html"):
-            if (isfile('./stage/'+file) and CompareMtimes("./local/"+file, "./stage/"+file)):
+            if (isfile(dst) and CompareMtimes(src, dst)):
                 continue
-            with open("./local/"+file, 'rb') as f_in, gopen('./stage/'+file, 'wb') as f_out:
-                stdout.write(c.OKGREEN+"Staging file at: "+c.ENDC+file+" ...")
-                copy(f_in, f_out)
-                i += 1
-                stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-            utime("./stage/"+file, (stat("./local/"+file).st_mtime, stat("./local/"+file).st_mtime))
+            CompressFile(src, dst, verbose=True, mtime=True)
+            i += 1
         elif (file[-3:] == "xml" or file[-2:] == "js"):
-            stdout.write(c.OKGREEN+"Moving file at: "+c.ENDC+"./stage/"+file+" ...")
-            code = subprocess.call("cp ./local/"+file+" ./stage/"+file, stdout=FNULL, stderr=FNULL, shell=True)
-            if (code != 0):
-                print c.FAIL+"Error moving file."+c.ENDC
-                exit(1)
-            stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-            utime("./stage/"+file, (stat("./local/"+file).st_mtime, stat("./local/"+file).st_mtime))
+            CopyFile(src, dst, True, True)
+            i += 1
 
     # Take all HTML files in ./blog, compress them, and copy the
     # gzipped files to ./stage
     for file in listdir("./local/blog/"):
+        src = "./local/blog/"+file
+        dst = "./stage/blog/"+file
         if (file[-4:] == "html"):
-            if (isfile('./stage/blog/'+file) and CompareMtimes("./local/blog/"+file, "./stage/blog/"+file)):
+            if (isfile(dst) and CompareMtimes(src, dst)):
                 continue
-            with open("./local/blog/"+file, 'rb') as f_in, gopen('./stage/blog/'+file, 'wb') as f_out:
-                stdout.write(c.OKGREEN+"Staging file at: "+c.ENDC+"./blog/"+file+" ...")
-                copy(f_in, f_out)
-                i += 1
-                stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-            utime("./stage/blog/"+file, (stat("./local/blog/"+file).st_mtime, stat("./local/blog/"+file).st_mtime))
+            CompressFile(src, dst, True, False)
+            i += 1
 
     print "\n"+c.OKGREEN+str(i)+" files staged."+c.ENDC
 
