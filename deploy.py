@@ -146,8 +146,8 @@ def CopyFile(tgt, dst, verbose=False, set_utime=False):
 
     if (verbose):
         stdout.write(c.OKGREEN+"Copying "+c.ENDC+tgt+" -> "+dst+" ...")
-    code = subprocess.call("cp "+tgt+" "+dst, stdout=_FNULL, stderr=_FNULL, shell=True)
-    if (verbose and code != 0):
+    _code = subprocess.call("cp "+tgt+" "+dst, stdout=_FNULL, stderr=_FNULL, shell=True)
+    if (verbose and _code != 0):
         print c.FAIL+"Error copying file."+c.ENDC
         exit(1)
     if (verbose): stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
@@ -160,12 +160,13 @@ def CopyFile(tgt, dst, verbose=False, set_utime=False):
 #          if it doesn't exist.
 # Parameters:
 # - _tree: Directory tree to test and maybe create
-def CreateTree(_tree, verbose=False):
-    _tree = _tree.split("/")
-    for _folder in _tree:
+# Return: none
+def CreateTree(tree, verbose=False):
+    tree = tree.split("/")
+    for _folder in tree:
         if (_folder == "."):
             continue
-        _d = "/".join(_tree[:_tree.index(_folder)])+"/"+_folder
+        _d = "/".join(tree[:tree.index(_folder)])+"/"+_folder
         if (not isdir(_d)):
             if (verbose == True): stdout.write(c.OKGREEN+"Creating "+_d+" ..."+c.ENDC)
             mkdir(_d)
@@ -282,7 +283,7 @@ def Deploy():
             stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
             
             _i += 1
-    print "\n"+c.OKGREEN+str(_i)+" _files deployed from ./local/"+c.ENDC
+    print "\n"+c.OKGREEN+str(_i)+" files deployed from ./local/"+c.ENDC
 
 # Method: Fetch
 # Purpose: Download logs
