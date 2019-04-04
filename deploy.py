@@ -28,43 +28,43 @@ c = colors()
 # Parameters: 
 # - groups: Groups from Amazon S3 Server Access Log Format
 # Return: 
-# - d__: Dictionary of groups with the right label as their key (Dictionary)
+# - _dict: Dictionary of groups with the right label as their key (Dictionary)
 def AssociateGroups(groups):
-    d__ = {}
-    labels = ["owner","bucket","timestamp","remote_ip","requester","request_id","operation","key","request_uri","http_status","error_code","bytes_sent","object_size","transmission_time","turnaround_time","referrer","user_agent","version_id","host_id","signature_version","cipher_suite","authentication_type","host_header","tls_version"]
-    for i, field in enumerate(groups, start=0):
-        if (i < len(labels)):
-            d__[labels[i]] = field
+    _dict = {}
+    _dict_labels = ["owner","bucket","timestamp","remote_ip","requester","request_id","operation","key","request_uri","http_status","error_code","bytes_sent","object_size","transmission_time","turnaround_time","referrer","user_agent","version_id","host_id","signature_version","cipher_suite","authentication_type","host_header","tls_version"]
+    for _i, _field in enumerate(groups, start=0):
+        if (_i < len(_dict_labels)):
+            _dict[_dict_labels[_i]] = _field
         else:
-            d__[i] = field
-    return d__
+            _dict[_i] = _field
+    return _dict
 
 # Method: CaptureGroups
 # Purpose: Return array of groups from Amazon S3 Server Access Log Format
 # Parameters: 
 # - entry: Log in Amazon S3 Server Access Log Format
 # Return: 
-# - a: Array of capture groups (Array)
+# - _capture_groups: Array of capture groups (Array)
 def CaptureGroups(entry):
-    delimeters = ['"', '[', ']', ' ']
-    group = ""
-    end = ' '
-    a = []
+    _delimeters = ['"', '[', ']', ' ']
+    _group = ""
+    _closing_char = ' '
+    _capture_groups = []
     for character in entry:
-        if (group == "" and end == ' ' and character in delimeters):
+        if (_group == "" and _closing_char == ' ' and character in _delimeters):
             if (character == '['):
-                end = ']'
+                _closing_char = ']'
             else:
-                end = character
-        elif (character == end):
-            a.append(group)
-            group = ""
-            end = ' '
+                _closing_char = character
+        elif (character == _closing_char):
+            _capture_groups.append(_group)
+            _group = ""
+            _closing_char = ' '
         else:
-            group += character
+            _group += character
     else:
-        a.append(group.strip())
-    return a
+        _capture_groups.append(_group.strip())
+    return _capture_groups
 
 # Method: CheckDirAndCreate
 # Purpose: Check for the existence of a given directory, and create it if it
