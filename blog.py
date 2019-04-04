@@ -476,7 +476,6 @@ def Init():
     CheckDirAndCreate("./local/assets")
     CheckDirAndCreate("./stage")
     CheckDirAndCreate("./stage/blog")
-    CheckDirAndCreate("./stage/assets")
     CheckDirAndCreate("./deploy")
     CheckDirAndCreate("./deploy/blog")
     CheckDirAndCreate("./deploy/assets")

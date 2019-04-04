@@ -247,104 +247,93 @@ def Deploy():
 
     # Take all HTML, XML, and JavaScript files from the ./stage
     # directory, and upload them with the appropriate headers
-    for file in listdir("./stage"):
-        if (file[-4:] == "html"):
-            content_type = "text/html"
-            content_encoding = "gzip"
-        elif (file[-3:] == "xml"):
-            content_type = "text/xml"
+    for path, subdirs, files in walk("./stage"):
+        if (len(files) == 0):
+            print c.FAIL+"No files staged in "+path+c.ENDC
+            exit(0)
+
+        for file in files:
+            # Ignore directories and hidden files
+            if (file in subdirs or file[0] == "."):
+                continue
+            
+            # Store filenames as variables
+            src = "/".join([path, file])
+            dst = src.replace("./stage", "./deploy")
+            
+            # Set content type and encoding for html, xml, and
+            # js files. Ignore all others.
             content_encoding = ""
-        elif (file[-2:] == "js"):
-            content_type = "text/javascript"
-            content_encoding = ""
-        else:
-            continue
+            if (file[-4:] == "html"):
+                content_type = "text/html"
+                content_encoding = "gzip"
+            elif (file[-3:] == "xml"):
+                content_type = "application/xml"
+            elif (file[-2:] == "js"):
+                content_type = "application/javascript"
+            else:
+                continue
 
-        # Ignore files that have already been deployed
-        if (isfile("./deploy/"+file) and HashFiles("./stage/"+file, "./deploy/"+file)):
-            continue
+            # Ignore files that have already been deployed
+            if (isfile(dst) and HashFiles(src, dst)):
+                continue
 
-        stdout.write(c.OKGREEN+"Coping file at: "+c.ENDC+"./stage/"+file+" ...")
-        code = subprocess.call("cp ./stage/"+file+" ./deploy/"+file, stdout=FNULL, stderr=FNULL, shell=True)
-        if (code != 0):
-            print c.FAIL+"Error moving file."+c.ENDC
-            exit(1)
-        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-        stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/"+file+" ...")
-        # b.upload_file(Filename="./deploy/"+file, Key=file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':content_encoding,'ContentType':content_type})
-        i += 1
-        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+            CopyFile(src, dst, False, False)
 
-    for file in listdir("./stage/blog/"):
-        # Ignore everything but HTML files
-        if (file[-4:] != "html"):
-            continue
+            stdout.write(c.OKGREEN+"Deploying "+c.ENDC+dst+" ...")
+            b.upload_file(Filename=src, Key=dst.replace("./deploy/", ""), ExtraArgs={'CacheControl':'max-age=2592000','ContentType':content_type, 'ContentEncoding':content_encoding})
+            stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+            i += 1
 
-        # Ignore files that have already been deployed
-        if (isfile("./deploy/blog/"+file) and HashFiles("./stage/blog/"+file, "./deploy/blog/"+file)):
-            continue
+    print "\n"+c.OKGREEN+str(i)+" files deployed from ./stage/"+c.ENDC
 
-        stdout.write(c.OKGREEN+"Copying file at: "+c.ENDC+"./stage/blog/"+file+" ...")
-        code = subprocess.call("cp ./stage/blog/"+file+" ./deploy/blog/"+file, stdout=FNULL, stderr=FNULL, shell=True)
-        if (code != 0):
-            print c.FAIL+"Error copying file."+c.ENDC
-            exit(1)
-        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-        stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/blog/"+file+" ...")
-        # b.upload_file(Filename="./deploy/blog/"+file, Key="blog/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentEncoding':'gzip','ContentType':'text/html'})
-        i += 1
-        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+    i = 0
 
-    for file in listdir("./local/assets/"):
-        # Ignore directories
-        if (isdir("./deploy/assets/"+file)):
-            continue
-        # Ignore files that have already been deployed
-        if (isfile("./deploy/assets/"+file)):
-            continue
+    for path, subdirs, files in walk("./local/assets"):
+        
+        for file in files:
+            # Ignore directories and hidden files
+            if (file in subdirs or file[0] == "."):
+                continue
 
-        if (file[-4:] == "html"):
-            content_type = "text/html"
-        elif (file[-3:] == "xml"):
-            content_type = "text/xml"
-        elif (file[-2:] == "js"):
-            content_type = "text/javascript"
-        else:
+            # Store filenames as variables
+            src = "/".join([path, file])
+            dst = src.replace("./local", "./deploy")
+
+            # Ignore files that have already been deployed
+            if (isfile(dst) and HashFiles(src, dst)):
+                continue
+
+            # Set content type and encoding for html, xml, js,
+            # jpg, png files. Ignore all others.
             content_type = ""
+            content_encoding = ""
+            if (file[-4:] == "html"):
+                content_type = "text/html"
+                content_encoding = "gzip"
+            elif (file[-3:] == "xml"):
+                content_type = "text/xml"
+            elif (file[-3:] == "css"):
+                content_type = "text/css"
+            elif (file[-2:] == "js"):
+                content_type = "application/javascript"
+            elif (file[-3:] == "jpg"):
+                content_type = "image/jpg"
+            elif (file[-3:] == "png"):
+                content_type = "image/png"
+            
+            # Ignore files that have already been deployed
+            if (isfile(dst) and HashFiles(src, dst)):
+                continue
 
-        stdout.write(c.OKGREEN+"Copying file at: "+c.ENDC+"./local/assets/"+file+" ...")
-        code = subprocess.call("cp ./local/assets/"+file+" ./deploy/assets/"+file, stdout=FNULL, stderr=FNULL, shell=True)
-        if (code != 0):
-            print c.FAIL+"Error copying file."+c.ENDC
-            exit(1)
-        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-        stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/assets/"+file+" ...")
-        # b.upload_file(Filename="./deploy/assets/"+file, Key="assets/"+file, ExtraArgs={'CacheControl':'max-age=2592000','ContentType':content_type})
-        i += 1
-        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+            CopyFile(src, dst, False, False)
 
-    for file in listdir("./local/assets/Images/"):
-        # Ignore images sub-directories
-        if (isdir("./local/assets/Images/"+file)):
-            continue
-        # Ignore files that have already been deployed
-        if (isfile("./deploy/assets/Images/"+file)):
-            continue
-
-        stdout.write(c.OKGREEN+"Copying file at: "+c.ENDC+"./local/assets/"+file+" ...")
-        code = subprocess.call("cp ./local/assets/Images/"+file+" ./deploy/assets/Images/"+file, stdout=FNULL, stderr=FNULL, shell=True)
-        if (code != 0):
-            print c.FAIL+"Error copying file."+c.ENDC
-            exit(1)
-        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-        stdout.write(c.OKGREEN+"Uploading file at: "+c.ENDC+"./deploy/assets/Images/"+file+" ...")
-        # b.upload_file(Filename="./deploy/assets/Images/"+file, Key="assets/Images/"+file, ExtraArgs={'CacheControl':'max-age=2592000'})
-        i += 1
-        stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-
-    print "\n"+c.OKGREEN+str(i)+" files deployed."+c.ENDC
-    
-    FNULL.close()
+            stdout.write(c.OKGREEN+"Deploying "+c.ENDC+dst+" ...")
+            b.upload_file(Filename=src, Key=dst.replace("./deploy/", ""), ExtraArgs={'CacheControl':'max-age=2592000','ContentType':content_type, 'ContentEncoding':content_encoding})
+            stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
+            
+            i += 1
+    print "\n"+c.OKGREEN+str(i)+" files deployed from ./local/"+c.ENDC
 
 # Method: CompressFile
 # Purpose: Create a compressed version of an input file.
