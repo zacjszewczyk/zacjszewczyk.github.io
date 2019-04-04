@@ -89,31 +89,31 @@ def Clear(tgt):
     from sys import stdout
 
     # Keep track of number of files deleted
-    i = 0
+    _f_count = 0
 
     # Move through ./stage and all subdirectories
-    for path, subdirs, files in walk(tgt):
+    for _path, _subdirs, _files in walk(tgt):
         # Remove .DS_Store from file list
-        if (".DS_Store" in files):
-            files.remove(".DS_Store")
+        if (".DS_Store" in _files):
+            _files.remove(".DS_Store")
 
-        # If there are no files to remove in the directory, warn
+        # If there are no _files to remove in the directory, warn
         # the user.
-        if (len(files) == 0):
-            print "%sNothing to clear in %s%s" % (c.WARNING, path, c.ENDC)
+        if (len(_files) == 0):
+            print "%sNothing to clear in %s%s" % (c.WARNING, _path, c.ENDC)
             continue
 
-        # Delete all non-hidden files in tgt/*
-        for name in files:
-            # Ignore hidden files
-            if (name[0] == '.'):
+        # Delete all non-hidden _files in tgt/*
+        for _name in _files:
+            # Ignore hidden _files
+            if (_name[0] == '.'):
                 continue
-            stdout.write(c.FAIL+"Removing file at: "+c.ENDC+path+"/"+name+" ...")
-            remove(path+"/"+name)
+            stdout.write(c.FAIL+"Removing file at: "+c.ENDC+_path+"/"+_name+" ...")
+            remove(_path+"/"+_name)
             stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-            i += 1
+            _f_count += 1
     
-    print c.WARNING+str(i)+" files deleted."+c.ENDC+"\n"
+    print c.WARNING+str(_f_count)+" files deleted."+c.ENDC+"\n"
 
 # Method: CompressFile
 # Purpose: Create a compressed version of an input file.
@@ -121,20 +121,20 @@ def Clear(tgt):
 # - tgt: Target file, uncompressed (String)
 # - dst: Destination file, to be compressed (String)
 # Return: none
-def CompressFile(_tgt, _dst, verbose=False, mtime=False):
+def CompressFile(tgt, dst, verbose=False, set_utime=False):
     from gzip import open as gopen
     from sys import stdout
     from shutil import copyfileobj as copy
     from os import utime, stat
 
-    with open(_tgt, 'rb') as f_in, gopen(_dst, 'wb') as f_out:
+    with open(tgt, 'rb') as _f_in, gopen(dst, 'wb') as _f_out:
         if (verbose):
-            stdout.write(c.OKGREEN+"Compressing "+c.ENDC+_tgt+" -> "+_dst+" ...")
-        copy(f_in, f_out)
+            stdout.write(c.OKGREEN+"Compressing "+c.ENDC+tgt+" -> "+dst+" ...")
+        copy(_f_in, _f_out)
         if (verbose):
             stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-    if (mtime):
-        utime(_dst, (stat(_tgt).st_mtime, stat(_tgt).st_mtime))
+    if (set_utime):
+        utime(dst, (stat(tgt).st_mtime, stat(tgt).st_mtime))
 
 # Method: CopyFile
 # Purpose: Copy a file
@@ -142,41 +142,41 @@ def CompressFile(_tgt, _dst, verbose=False, mtime=False):
 # - tgt: Target file (String)
 # - dst: Destination file (String)
 # Return: none
-def CopyFile(_tgt, _dst, verbose=False, mtime=False):
+def CopyFile(tgt, dst, verbose=False, set_utime=False):
     from os import utime, stat, devnull
     from sys import stdout
     import subprocess
 
-    FNULL = open(devnull, 'w')
+    _FNULL = open(devnull, 'w')
 
     if (verbose):
-        stdout.write(c.OKGREEN+"Copying "+c.ENDC+_tgt+" -> "+_dst+" ...")
-    code = subprocess.call("cp "+_tgt+" "+_dst, stdout=FNULL, stderr=FNULL, shell=True)
+        stdout.write(c.OKGREEN+"Copying "+c.ENDC+tgt+" -> "+dst+" ...")
+    code = subprocess.call("cp "+tgt+" "+dst, stdout=_FNULL, stderr=_FNULL, shell=True)
     if (verbose and code != 0):
         print c.FAIL+"Error copying file."+c.ENDC
         exit(1)
     if (verbose):
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-    if (mtime):
-        utime(_dst, (stat(_tgt).st_mtime, stat(_tgt).st_mtime))
+    if (set_utime):
+        utime(dst, (stat(tgt).st_mtime, stat(tgt).st_mtime))
 
-    FNULL.close()
+    _FNULL.close()
 
 # Method: CreateTree
 # Purpose: Check for the existence of a given directory tree, and create it
 #          if it doesn't exist.
 # Parameters:
-# - tree: Directory tree to test and maybe create
-def CreateTree(tree, verbose=False):
+# - _tree: Directory tree to test and maybe create
+def CreateTree(_tree, verbose=False):
     from sys import stdout
-    tree = tree.split("/")
-    for folder in tree:
-        if (folder == "."):
+    _tree = _tree.split("/")
+    for _folder in _tree:
+        if (_folder == "."):
             continue
-        d = "/".join(tree[:tree.index(folder)])+"/"+folder
-        if (not isdir(d)):
-            if (verbose == True): stdout.write(c.OKGREEN+"Creating "+d+" ..."+c.ENDC)
-            mkdir(d)
+        _d = "/".join(_tree[:_tree.index(_folder)])+"/"+_folder
+        if (not isdir(_d)):
+            if (verbose == True): stdout.write(c.OKGREEN+"Creating "+_d+" ..."+c.ENDC)
+            mkdir(_d)
             if (verbose == True): stdout.write(c.OKGREEN+"Done.\n"+c.ENDC)
         
 # Method: Deploy
@@ -184,115 +184,113 @@ def CreateTree(tree, verbose=False):
 # Parameters: none
 # Return: none
 def Deploy():
-    from os import walk, devnull
+    from os import walk
     import subprocess
     from sys import stdout, exit
     from Hash import HashFiles
 
-    FNULL = open(devnull, 'w')
-
     # Mirror the ./local directory structure
-    for path, subdirs, files in walk("./local"):
-        if (len(subdirs) == 0):
-            CreateTree(path.replace("./local", "./deploy"))
+    for _path, _subdirs, _files in walk("./local"):
+        if (len(_subdirs) == 0):
+            CreateTree(_path.replace("./local", "./deploy"))
 
     # Keep track of number of files deployed
-    i = 0
+    _i = 0
 
     # Instantiate a new S3 session
-    session = GetSession()
-    s3 = session.resource('s3')
-    b = s3.Bucket('zacs.site')
+    _session = GetSession()
+    _s3 = _session.resource('s3')
+    _b = _s3.Bucket('zacs.site')
 
     # Take all HTML, XML, and JavaScript files from the ./stage
     # directory, and upload them with the appropriate headers
-    for path, subdirs, files in walk("./stage"):
-        if (len(files) == 0):
-            print c.FAIL+"No files staged in "+path+c.ENDC
+    for _path, _subdirs, _files in walk("./stage"):
+        if (len(_files) == 0):
+            print c.FAIL+"No files staged in "+_path+c.ENDC
             exit(0)
 
-        for file in files:
+        for _file in _files:
             # Ignore directories and hidden files
-            if (file in subdirs or file[0] == "."):
+            if (_file in _subdirs or _file[0] == "."):
                 continue
             
             # Store filenames as variables
-            src = "/".join([path, file])
-            dst = src.replace("./stage", "./deploy")
+            _src = "/".join([_path, _file])
+            _dst = _src.replace("./stage", "./deploy")
             
             # Set content type and encoding for html, xml, and
             # js files. Ignore all others.
-            content_encoding = ""
-            if (file[-4:] == "html"):
-                content_type = "text/html"
-                content_encoding = "gzip"
-            elif (file[-3:] == "xml"):
-                content_type = "application/xml"
-            elif (file[-2:] == "js"):
-                content_type = "application/javascript"
+            _content_encoding = ""
+            if (_file[-4:] == "html"):
+                _content_type = "text/html"
+                _content_encoding = "gzip"
+            elif (_file[-3:] == "xml"):
+                _content_type = "application/xml"
+            elif (_file[-2:] == "js"):
+                _content_type = "application/javascript"
             else:
                 continue
 
             # Ignore files that have already been deployed
-            if (isfile(dst) and HashFiles(src, dst)):
+            if (isfile(_dst) and HashFiles(_src, _dst)):
                 continue
 
-            CopyFile(src, dst, False, False)
+            CopyFile(_src, _dst, False, False)
 
-            stdout.write(c.OKGREEN+"Deploying "+c.ENDC+dst+" ...")
-            b.upload_file(Filename=src, Key=dst.replace("./deploy/", ""), ExtraArgs={'CacheControl':'max-age=2592000','ContentType':content_type, 'ContentEncoding':content_encoding})
+            stdout.write(c.OKGREEN+"Deploying "+c.ENDC+_dst+" ...")
+            _b.upload_file(Filename=_src, Key=_dst.replace("./deploy/", ""), ExtraArgs={'CacheControl':'max-age=2592000','ContentType':_content_type, 'ContentEncoding':_content_encoding})
             stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
-            i += 1
+            _i += 1
 
-    print "\n"+c.OKGREEN+str(i)+" files deployed from ./stage/"+c.ENDC
+    print "\n"+c.OKGREEN+str(_i)+" files deployed from ./stage/"+c.ENDC
 
-    i = 0
+    _i = 0
 
-    for path, subdirs, files in walk("./local/assets"):
+    for _path, _subdirs, _files in walk("./local/assets"):
         
-        for file in files:
+        for _file in _files:
             # Ignore directories and hidden files
-            if (file in subdirs or file[0] == "."):
+            if (_file in _subdirs or _file[0] == "."):
                 continue
 
             # Store filenames as variables
-            src = "/".join([path, file])
-            dst = src.replace("./local", "./deploy")
+            _src = "/".join([_path, _file])
+            _dst = _src.replace("./local", "./deploy")
 
             # Ignore files that have already been deployed
-            if (isfile(dst) and HashFiles(src, dst)):
+            if (isfile(_dst) and HashFiles(_src, _dst)):
                 continue
 
             # Set content type and encoding for html, xml, js,
             # jpg, png files. Ignore all others.
-            content_type = ""
-            content_encoding = ""
-            if (file[-4:] == "html"):
-                content_type = "text/html"
-                content_encoding = "gzip"
-            elif (file[-3:] == "xml"):
-                content_type = "text/xml"
-            elif (file[-3:] == "css"):
-                content_type = "text/css"
-            elif (file[-2:] == "js"):
-                content_type = "application/javascript"
-            elif (file[-3:] == "jpg"):
-                content_type = "image/jpg"
-            elif (file[-3:] == "png"):
-                content_type = "image/png"
+            _content_type = ""
+            _content_encoding = ""
+            if (_file[-4:] == "html"):
+                _content_type = "text/html"
+                _content_encoding = "gzip"
+            elif (_file[-3:] == "xml"):
+                _content_type = "text/xml"
+            elif (_file[-3:] == "css"):
+                _content_type = "text/css"
+            elif (_file[-2:] == "js"):
+                _content_type = "application/javascript"
+            elif (_file[-3:] == "jpg"):
+                _content_type = "image/jpg"
+            elif (_file[-3:] == "png"):
+                _content_type = "image/png"
             
             # Ignore files that have already been deployed
-            if (isfile(dst) and HashFiles(src, dst)):
+            if (isfile(_dst) and HashFiles(_src, _dst)):
                 continue
 
-            CopyFile(src, dst, False, False)
+            CopyFile(_src, _dst, False, False)
 
-            stdout.write(c.OKGREEN+"Deploying "+c.ENDC+dst+" ...")
-            b.upload_file(Filename=src, Key=dst.replace("./deploy/", ""), ExtraArgs={'CacheControl':'max-age=2592000','ContentType':content_type, 'ContentEncoding':content_encoding})
+            stdout.write(c.OKGREEN+"Deploying "+c.ENDC+_dst+" ...")
+            _b.upload_file(Filename=_src, Key=_dst.replace("./deploy/", ""), ExtraArgs={'CacheControl':'max-age=2592000','ContentType':_content_type, 'ContentEncoding':_content_encoding})
             stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
             
-            i += 1
-    print "\n"+c.OKGREEN+str(i)+" files deployed from ./local/"+c.ENDC
+            _i += 1
+    print "\n"+c.OKGREEN+str(_i)+" _files deployed from ./local/"+c.ENDC
 
 # Method: Fetch
 # Purpose: Download logs
@@ -304,16 +302,16 @@ def Fetch():
         mkdir("./logs")
 
     # Instantiate a new session
-    session = GetSession()
-    s3 = session.resource('s3')
-    b = s3.Bucket('logs.zacs.site')
+    _session = GetSession()
+    _s3 = _session.resource('s3')
+    _b = _s3.Bucket('logs.zacs.site')
 
     # Iterate over each object in the bucket
-    for file in b.objects.all():
+    for _file in _b.objects.all():
         # If the file does not exist on the local machine, downlaod it
-        if (not isfile("."+file.key)):
-            print "%sDownloading%s %s%s%s to location %s%s%s" % (c.OKGREEN, c.ENDC, c.UNDERLINE, file.key, c.ENDC, c.UNDERLINE, "."+file.key, c.ENDC)
-            b.download_file(file.key, "."+file.key)
+        if (not isfile("."+_file.key)):
+            print "%sDownloading%s %s%s%s to location %s%s%s" % (c.OKGREEN, c.ENDC, c.UNDERLINE, _file.key, c.ENDC, c.UNDERLINE, "."+_file.key, c.ENDC)
+            _b.download_file(_file.key, "."+_file.key)
 
 # Method: GetCombinedLogFormat
 # Purpose: Return log in Combined Log Format
@@ -341,37 +339,37 @@ def GetSession():
     import boto3
 
     # Private access key information
-    ACCESS_KEY = 'AKIA4K7UTVOAUNQFLO7T'
-    SECRET_KEY = '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'
+    __ACCESS_KEY = 'AKIA4K7UTVOAUNQFLO7T'
+    __SECRET_KEY = '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'
 
-    return Session(aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
+    return Session(aws_access_key_id=__ACCESS_KEY, aws_secret_access_key=__SECRET_KEY)
 
 # Method: Parse
 # Purpose: Parse logs
 # Parameters: none
 # Return: none
 def Parse():
-    # Open combined output log file
-    output_log = open("master.log", "w").close()
-    output_log = open("master.log", "a")
+    # Open combined output _log file
+    _output_log = open("master._log", "w").close()
+    _output_log = open("master._log", "a")
 
     # Sort the logs by timestamp, with oldest logs first
-    logs = sorted(listdir("./logs"))
+    _logs = sorted(listdir("./logs"))
     
-    # Iterate through the sorted log list
-    for log in logs:
+    # Iterate through the sorted _log list
+    for _log in _logs:
         # Open each log
-        print c.OKGREEN+"Opening"+c.ENDC+" "+c.UNDERLINE+"./logs/"+log+c.ENDC
-        with open("./logs/"+log, "r") as fd:
+        print c.OKGREEN+"Opening"+c.ENDC+" "+c.UNDERLINE+"./logs/"+_log+c.ENDC
+        with open("./logs/"+_log, "r") as _fd:
             # Parse each entry
-            for line in fd:
-                d = AssociateGroups(CaptureGroups(line))
-                # output_log.write(GetCommonLogFormat(d)+'\n')
-                if (d["host_header"] == "s3.us-east-2.amazonaws.com"):
+            for _line in _fd:
+                _d = AssociateGroups(CaptureGroups(_line))
+                # _output_log.write(GetCommonLogFormat(_d)+'\n')
+                if (_d["host_header"] == "s3.us-east-2.amazonaws.com"):
                     continue
-                output_log.write(GetCombinedLogFormat(d)+'\n')
+                _output_log.write(GetCombinedLogFormat(_d)+'\n')
 
-    output_log.close()
+    _output_log.close()
 
 # Method: PrintLog
 # Purpose: Pretty print dictionary of Amazon S3 Server Access
@@ -387,7 +385,7 @@ def PrintLog(data):
 # Parameters: none
 # Return: none
 def Stage():
-    from os import utime, stat, devnull
+    from os import utime, stat
     from ModTimes import CompareMtimes
 
     # Setup the environment for staging
@@ -395,35 +393,35 @@ def Stage():
     CreateTree("./stage/blog", True)
 
     # Keep track of number of files staged
-    i = 0
+    _f_count = 0
 
     # Take all HTML, XML, and JavaScript files from the directory,
     # compress them, and copy the gzipped files to ./stage
-    for file in listdir("./local"):
-        src = "./local/"+file
-        dst = "./stage/"+file
-        if (isfile(dst) and CompareMtimes(src, dst)):
+    for _file in listdir("./local"):
+        _src = "./local/"+_file
+        _dst = "./stage/"+_file
+        if (isfile(_dst) and CompareMtimes(_src, _dst)):
             continue
 
-        if (file[-4:] == "html"):
-            CompressFile(src, dst, True, True)
-            i += 1
-        elif (file[-3:] == "xml" or file[-2:] == "js"):
-            CopyFile(src, dst, True, True)
-            i += 1
+        if (_file[-4:] == "html"):
+            CompressFile(_src, _dst, True, True)
+            _f_count += 1
+        elif (_file[-3:] == "xml" or _file[-2:] == "js"):
+            CopyFile(_src, _dst, True, True)
+            _f_count += 1
 
     # Take all HTML files in ./blog, compress them, and copy the
     # gzipped files to ./stage
-    for file in listdir("./local/blog/"):
-        src = "./local/blog/"+file
-        dst = "./stage/blog/"+file
-        if (file[-4:] == "html"):
-            if (isfile(dst) and CompareMtimes(src, dst)):
+    for _file in listdir("./local/blog/"):
+        _src = "./local/blog/"+_file
+        _dst = "./stage/blog/"+_file
+        if (_file[-4:] == "html"):
+            if (isfile(_dst) and CompareMtimes(_src, _dst)):
                 continue
-            CompressFile(src, dst, True, True)
-            i += 1
+            CompressFile(_src, _dst, True, True)
+            _f_count += 1
 
-    print "\n"+c.OKGREEN+str(i)+" files staged."+c.ENDC
+    print "\n"+c.OKGREEN+str(_f_count)+" files staged."+c.ENDC
 
 if (__name__ == "__main__"):
     # Import functions for CLI
