@@ -251,7 +251,7 @@ def Deploy():
         if (isfile("./deploy/"+file) and HashFiles("./stage/"+file, "./deploy/"+file)):
             continue
 
-        stdout.write(c.OKGREEN+"Moving file at: "+c.ENDC+"./stage/"+file+" ...")
+        stdout.write(c.OKGREEN+"Coping file at: "+c.ENDC+"./stage/"+file+" ...")
         code = subprocess.call("cp ./stage/"+file+" ./deploy/"+file, stdout=FNULL, stderr=FNULL, shell=True)
         if (code != 0):
             print c.FAIL+"Error moving file."+c.ENDC
@@ -283,8 +283,8 @@ def Deploy():
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
     for file in listdir("./local/assets/"):
-        # Ignore images
-        if (isdir("./local/assets/"+file)):
+        # Ignore directories
+        if (isdir("./deploy/assets/"+file)):
             continue
         # Ignore files that have already been deployed
         if (isfile("./deploy/assets/"+file)):
@@ -311,7 +311,7 @@ def Deploy():
         stdout.write(" "+c.OKGREEN+"done."+c.ENDC+"\n")
 
     for file in listdir("./local/assets/Images/"):
-        # Ignore images
+        # Ignore images sub-directories
         if (isdir("./local/assets/Images/"+file)):
             continue
         # Ignore files that have already been deployed
