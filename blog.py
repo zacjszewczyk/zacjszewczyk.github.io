@@ -365,7 +365,11 @@ def GenPage(source, timestamp):
     for line in iter(source_fd.readline, ""):
         # In the first line, classify the article as a linkpost or an original piece.
         if (idx == 0):
-            title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (line[6:].strip())
+            ptype = line[6:].strip()
+            if (ptype == "original"):
+                title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+            else:
+                title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
         # In the second line of the file, add the article title.
         elif (idx == 1):
             title = title.replace("{{URL_TITLE}}", line[7:].strip())
@@ -374,7 +378,7 @@ def GenPage(source, timestamp):
         elif (idx == 2):
             line = line[6:].strip()
             if (line[0:4] != "http" and ("htm" == line[-3:])):
-                line = line.replace(".htm", "").replace(" ", "-").lower()
+                line = line.replace(".htm", ".html").replace(" ", "-").lower()
             title = title.replace("{{URL}}", line)+"\n    </h2>"
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
