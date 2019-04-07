@@ -302,9 +302,9 @@ def Fetch():
     # Iterate over each object in the bucket
     for _file in _b.objects.all():
         # If the file does not exist on the local machine, downlaod it
-        if (not isfile("."+_file.key)):
+        if (not isfile("."+_file.key.strip())):
             print "%sDownloading%s %s%s%s to location %s%s%s" % (c.OKGREEN, c.ENDC, c.UNDERLINE, _file.key, c.ENDC, c.UNDERLINE, "."+_file.key, c.ENDC)
-            _b.download_file(_file.key, "."+_file.key)
+            _b.download_file(_file.key.strip(), "./"+_file.key.strip())
 
 # Method: GetCombinedLogFormat
 # Purpose: Return log in Combined Log Format
@@ -343,8 +343,8 @@ def GetSession():
 # Return: none
 def Parse():
     # Open combined output _log file
-    _output_log = open("master._log", "w").close()
-    _output_log = open("master._log", "a")
+    _output_log = open("master.log", "w").close()
+    _output_log = open("master.log", "a")
 
     # Sort the logs by timestamp, with oldest logs first
     _logs = sorted(listdir("./logs"))
