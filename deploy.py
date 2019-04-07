@@ -299,12 +299,21 @@ def Fetch():
     _s3 = _session.resource('s3')
     _b = _s3.Bucket('logs.zacs.site')
 
+    # Keep track of number of logs downloaded
+    _i = 0
+
     # Iterate over each object in the bucket
     for _file in _b.objects.all():
         # If the file does not exist on the local machine, downlaod it
-        if (not isfile("."+_file.key.strip())):
-            print "%sDownloading%s %s%s%s to location %s%s%s" % (c.OKGREEN, c.ENDC, c.UNDERLINE, _file.key, c.ENDC, c.UNDERLINE, "."+_file.key, c.ENDC)
+        if (not isfile("./"+_file.key.strip())):
+            print "%sDownloading%s %s%s%s to location %s%s%s" % (c.OKGREEN, c.ENDC, c.UNDERLINE, _file.key, c.ENDC, c.UNDERLINE, "./"+_file.key, c.ENDC)
             _b.download_file(_file.key.strip(), "./"+_file.key.strip())
+
+            # Increment number of logs downloaded
+            _i += 1
+
+    # Print number of logs downloaded
+    print "\n"+c.OKGREEN+str(_i)+" logs downloaded."+c.ENDC
 
 # Method: GetCombinedLogFormat
 # Purpose: Return log in Combined Log Format
