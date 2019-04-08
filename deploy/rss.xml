@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 06 Apr 2019 03:14:45 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 08 Apr 2019 04:06:12 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>The Last Four Years</title>
+            <link>http://zacs.site/blog/the-last-four-years.html</link>
+            <guid isPermaLink="true">http://zacs.site/blog/the-last-four-years.html</guid>
+            <pubDate>Mon, 08 Apr 2019 15:59:27 GMT</pubDate>
+            <description>
+                
+&lt;p&gt;So, &lt;a href="http://zacs.site/blog/simple-not-easy.html"&gt;I&#38;#8217;m back&lt;/a&gt;. I stopped writing almost four years ago, and a lot has happened since then. Although in the past I did not share many personal details, I want that to change, and I want that to start now. While I used to loosely limit myself to two topics, technology and writing, I plan to broaden my focus considerably in the future. I will save my vision for this site for a later post, but today I will start down this new path with a brief rundown of the last forty-eight months.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Simple, not Easy</title>
             <link>http://zacs.site/blog/simple-not-easy.html</link>
