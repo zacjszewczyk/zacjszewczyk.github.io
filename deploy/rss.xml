@@ -7,9 +7,29 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 08 Apr 2019 04:06:12 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Apr 2019 06:27:49 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Secure, Private File Sharing</title>
+            <link>http://zacs.site/blog/secure-private-file-sharing.html</link>
+            <guid isPermaLink="true">http://zacs.site/blog/secure-private-file-sharing.html</guid>
+            <pubDate>Tue, 09 Apr 2019 18:26:08 GMT</pubDate>
+            <description>
+                
+&lt;p&gt;It&#38;#8217;s old, but&#38;#160;&#38;#8212;&#38;#160;&lt;a href="https://twitter.com/hotdogsladies/status/760585088035803136?lang=en"&gt;as the saying goes&lt;/a&gt;, every day someone is born who has never seen the Flintstones. I wanted to take a second to drop a link to Mozilla&#38;#8217;s new project, &lt;a href="http://send.firefox.com"&gt;Firefox Send&lt;/a&gt;. This service promises free, private, end-to-end encrypted, and temporary file transfers from a respected company with a stated desire to preserve its users privacy. Check out the release notes &lt;a href="https://blog.mozilla.org/blog/2019/03/12/introducing-firefox-send-providing-free-file-transfers-while-keeping-your-personal-information-private/"&gt;here&lt;/a&gt;. Also of interest, &lt;a href="https://transfer.pcloud.com/"&gt;pCloud Transfer&lt;/a&gt; allows anonymous users to send encrypted, password-protected files, too; pCould Transfer doubles the max file size of Firefox Send, though, but that comes at the price of some neat features that keep Mozilla&#38;#8217;s new project in the running for me.&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Before, Now, and in the Future</title>
+            <link>http://zacs.site/blog/before-now-and-future.html</link>
+            <guid isPermaLink="true">http://zacs.site/blog/before-now-and-future.html</guid>
+            <pubDate>Tue, 09 Apr 2019 18:13:33 GMT</pubDate>
+            <description>
+                
+&lt;p&gt;I want to take a moment to speak to my old readers. Maybe you forgot to remove my feed, never got around to unfollowing me on Twitter, or just stayed close and hoped that I would one day write again; regardless, I&#38;#8217;m glad you did. What this site once was, however, somewhere for me to talk about the writer&#38;#8217;s craft, Apple, and technology, it is no longer.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>The Last Four Years</title>
             <link>http://zacs.site/blog/the-last-four-years.html</link>
