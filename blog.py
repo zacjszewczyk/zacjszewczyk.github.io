@@ -621,7 +621,7 @@ def Migrate(target, mod_time):
     article_content = fd.readline()
 
     # Detect a linkpost or an original article, and parse the information appropriately.
-    if (article_content[0:2] == "# ["):
+    if (article_content[0:3] == "# ["):
         article_type = "linkpost"
         article_content = article_content[2:].replace(") #", "")
         article_content = article_content.split("]")
