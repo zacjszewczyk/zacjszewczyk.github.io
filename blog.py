@@ -9,6 +9,7 @@ import datetime # Recording runtime
 from re import search # Regex
 from sys import exit, argv # Command line options
 from Markdown import Markdown
+from ModTimes import CompareMtimes
 
 # Global variables
 # - types: Keep track of current and two previous line types. (Tuple)
@@ -274,11 +275,15 @@ def GenBlog():
                     month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", GetTitle(files[year][month][day][timestamp])))
                     
                     # If a structure file already exists, don't rebuild the HTML file for individual articles
-                    if (not isfile("./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
-                        # Generate each content file. "year", "month", "day", "timestamp"
-                        # identify the file in the dictionary, and the passed time values
-                        # designate the desired update time to set the content file.
-                        GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                    if (not isfile("./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):                        
+                        pass
+                    else:
+                        if (CompareMtimes("./Content/"+files[year][month][day][timestamp], "./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
+                        else:
+                            # Generate each content file. "year", "month", "day", "timestamp"
+                            # identify the file in the dictionary, and the passed time values
+                            # designate the desired update time to set the content file.
+                            GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     
                     # Add the first twenty-five articles to the main blog page.
                     if (file_idx < 25):
@@ -340,19 +345,22 @@ def GenBlog():
 def GenPage(source, timestamp):
     global content
 
+    src = "Content/"+source
+    dst = "./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html"
+
     # Ensure source file contains header. If not, use the Migrate() method to generate it.
-    source_fd = open("Content/"+source, "r")
+    source_fd = open(src, "r")
     line = source_fd.readline()
     if (line[0:5] != "Type:"):
         Migrate(source, timestamp)
     source_fd.close()
     
     # Open the source file in read mode.
-    source_fd = open("Content/"+source, "r")
+    source_fd = open(src, "r")
 
     # Use the source file's name to calculate, clear, and re-open the structure file.
-    target_fd = open("./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html", "w").close()
-    target_fd = open("./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html", "a")
+    target_fd = open(dst, "w").close()
+    target_fd = open(dst, "a")
 
     # Insert Javascript code for device detection.
     local_content = content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1).replace("{{ BODYID }}", "post",1)
@@ -404,6 +412,9 @@ def GenPage(source, timestamp):
     # Close file descriptors.
     target_fd.close()
     source_fd.close()
+
+    mtime = strftime("%Y/%m/%d %H:%M:%S", localtime(stat("./Content/"+source).st_mtime))
+    utime(dst, ((mktime(strptime(mtime, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mtime, "%Y/%m/%d %H:%M:%S")))))
 
 # Method: GenStatic
 # Purpose: Create home, projects, and error static structure files.
