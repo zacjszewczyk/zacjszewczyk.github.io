@@ -1,7 +1,7 @@
 Type: original
 Title: The Last Four Years
-Link: the-last-four-years.txt
-Pubdate: 2019/04/08 11:59:27
+Link: the-last-four-years.html
+Pubdate: 2019/04/08 12:05:49
 Author: Zac Szewczyk
 
 So, [I'm back](Simple not Easy.txt). I stopped writing almost four years ago, and a lot has happened since then. Although in the past I did not share many personal details, I want that to change, and I want that to start now. While I used to loosely limit myself to two topics, technology and writing, I plan to broaden my focus considerably in the future. I will save my vision for this site for a later post, but today I will start down this new path with a brief rundown of the last forty-eight months.  

@@ -1,6 +1,6 @@
 Type: original
 Title: Secure, Private File Sharing
-Link: secure-private-file-sharing.txt
+Link: secure-private-file-sharing.html
 Pubdate: 2019/04/09 14:26:08
 Author: Zac Szewczyk
 

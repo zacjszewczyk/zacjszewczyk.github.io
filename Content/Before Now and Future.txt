@@ -1,6 +1,6 @@
 Type: original
 Title: Before, Now, and in the Future
-Link: before-now-and-future.txt
+Link: before-now-and-future.html
 Pubdate: 2019/04/09 14:13:33
 Author: Zac Szewczyk
 

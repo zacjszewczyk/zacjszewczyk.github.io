@@ -1,6 +1,6 @@
 Type: original
 Title: Simple, not Easy
-Link: simple-not-easy.txt
+Link: simple-not-easy.html
 Pubdate: 2019/04/06 11:12:52
 Author: Zac Szewczyk
 

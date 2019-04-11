@@ -1,6 +1,6 @@
 Type: original
 Title: A Note on AT&T's 5G Network
-Link: a-note-on-att-5g.txt
+Link: a-note-on-att-5g.html
 Pubdate: 2019/04/11 11:38:51
 Author: Zac Szewczyk
 

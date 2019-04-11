@@ -119,6 +119,7 @@ def AppendContentOfXToY(target, source):
 # - source: Source file name, including extension. (String)
 def AppendToFeed(source):
     from time import gmtime
+    from re import findall
     # Initialzie file descriptors for the source content file and the RSS feed
     source_fd = open("Content/"+source, "r")
     feed_fd = open("./local/rss.xml", "a")
@@ -142,7 +143,7 @@ def AppendToFeed(source):
             ptype = line[6:].strip()
         # In the second line of the file, add the article title.
         elif (idx == 1):
-            feed_fd.write("            <title>"+line[7:].strip().replace("&#38", "&amp;")+"</title>\n")
+            feed_fd.write("            <title>"+line[7:].strip()+"</title>\n")
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
             if (ptype == "linkpost"):
@@ -170,12 +171,12 @@ def AppendToFeed(source):
         # Ignore the rest of the header, until the first line of content.
         # Write the first paragraph to the file.
         elif (idx == 6):
-            feed_fd.write("\n                "+Markdown(line).replace("&", "&#38;").replace("<", "&lt;").replace(">", "&gt;").replace("#fn", link+"#fn"))
+            feed_fd.write("\n                "+Markdown(line).replace("<", "&lt;").replace(">", "&gt;").replace("#fn", link+"#fn"))
         # If a linkpost, write successive lines to the file.
         elif (idx > 6 and ptype == "linkpost"):
             if ("iframe" in line):
                 continue
-            feed_fd.write("\n                "+Markdown(line).replace("&", "&#38;").replace("<", "&lt;").replace(">", "&gt;"))
+            feed_fd.write("\n                "+Markdown(line).replace("<", "&lt;").replace(">", "&gt;"))
         
         # Increase the line number
         idx += 1
@@ -276,9 +277,10 @@ def GenBlog():
                     
                     # If a structure file already exists, don't rebuild the HTML file for individual articles
                     if (not isfile("./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):                        
-                        pass
+                        GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     else:
                         if (CompareMtimes("./Content/"+files[year][month][day][timestamp], "./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
+                            pass
                         else:
                             # Generate each content file. "year", "month", "day", "timestamp"
                             # identify the file in the dictionary, and the passed time values
@@ -641,7 +643,7 @@ def Migrate(target, mod_time):
     else:
         article_type = "original"
         article_title = article_content
-        article_url = target.replace(".html", "").replace(" ", "-").lower()
+        article_url = target.replace(".txt", ".html").replace(" ", "-").lower()
         article_content = fd.readline()
 
     # Read the rest of the article's content from the file.
