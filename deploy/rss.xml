@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 11 Apr 2019 09:42:21 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Apr 2019 03:43:01 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>My Road to Weightlifting</title>
+            <link>http://zacs.site/blog/my-road-to-weightlifting.html</link>
+            <guid isPermaLink="true">http://zacs.site/blog/my-road-to-weightlifting.html</guid>
+            <pubDate>Sat, 13 Apr 2019 15:41:57 GMT</pubDate>
+            <description>
+                
+&lt;p&gt;I &lt;a href="http://zacs.site/blog/before-now-and-future.html"&gt;promised&lt;/a&gt; some posts on this topic, and today I will begin to deliver. Today I want to talk about my journey to weightlifting. It took me a while, but I look forward to sharing the lessons I learned along this long and winding road.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>A Note on AT&#38;T's 5G Network</title>
             <link>http://zacs.site/blog/a-note-on-att-5g.html</link>

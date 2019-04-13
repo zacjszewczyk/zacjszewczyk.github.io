@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"Cop",
+				"CopyFile"
+			],
+			[
+				"Comp",
+				"CompressFile"
+			],
+			[
+				"week",
+				"weekDays"
+			],
+			[
+				"Check",
+				"CheckDirAndCreate"
+			],
+			[
+				"f2",
+				"f2_mtime"
+			],
+			[
+				"dep",
+				"deploy_md5"
+			],
+			[
+				"deplo",
+				"deploy_md5"
+			],
+			[
+				"stage",
+				"stage_md5"
+			],
+			[
+				"depl",
+				"deploy_data"
+			],
+			[
+				"end",
+				"ENDC"
+			],
+			[
+				"article",
+				"article_title"
+			],
+			[
 				"file",
 				"filenames"
 			],
@@ -121,134 +165,10 @@
 			}
 		},
 		{
-			"file": "Structure/blog.html",
-			"settings":
-			{
-				"buffer_size": 29286,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "Markdown.py",
 			"settings":
 			{
-				"buffer_size": 11188,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "m_sw.js",
-			"settings":
-			{
-				"buffer_size": 2961,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "m_sw.js.bak",
-			"settings":
-			{
-				"buffer_size": 3597,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Structure/system/error.html",
-			"settings":
-			{
-				"buffer_size": 4101,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Static/Main_feed.xml",
-			"settings":
-			{
-				"buffer_size": 886922,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Structure/system/template.htm",
-			"settings":
-			{
-				"buffer_size": 3122,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Structure/system/projects.html",
-			"settings":
-			{
-				"buffer_size": 15662,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Structure/system/home.html",
-			"settings":
-			{
-				"buffer_size": 1696,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/main.css",
-			"settings":
-			{
-				"buffer_size": 3301,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server.js",
-			"settings":
-			{
-				"buffer_size": 6472,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Static/manifest.json",
-			"settings":
-			{
-				"buffer_size": 680,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Static/MTV.html",
-			"settings":
-			{
-				"buffer_size": 10966,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Static/MTV.css",
-			"settings":
-			{
-				"buffer_size": 5144,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Static/MTV.js",
-			"settings":
-			{
-				"buffer_size": 14080,
+				"buffer_size": 11489,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -257,9 +177,96 @@
 			"file": "blog.py",
 			"settings":
 			{
-				"buffer_size": 31125,
+				"buffer_size": 35810,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "local/rss.xml",
+			"settings":
+			{
+				"buffer_size": 946904,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "master.log",
+			"settings":
+			{
+				"buffer_size": 712657,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "deploy.py",
+			"settings":
+			{
+				"buffer_size": 17064,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "local/assets/m_sw.js",
+			"settings":
+			{
+				"buffer_size": 2632,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ModTimes.py",
+			"settings":
+			{
+				"buffer_size": 217,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Hash.py",
+			"settings":
+			{
+				"buffer_size": 538,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "system/index.html",
+			"settings":
+			{
+				"buffer_size": 2319,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "system/projects.html",
+			"settings":
+			{
+				"buffer_size": 18679,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "system/error.html",
+			"settings":
+			{
+				"buffer_size": 4101,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "system/template.htm",
+			"settings":
+			{
+				"buffer_size": 3189,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -328,17 +335,50 @@
 	},
 	"file_history":
 	[
-		"/Users/zjszewczyk/Dropbox/Code/Standalone/search.py",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/amazons-whale-strategy.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Amazons Whale Strategy.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Simple not Easy.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/m_sw.js.bak",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/index.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Cascade Mountains Excursion.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/assets/MTV.css",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/assets/MTV.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/assets/MTV.js",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/assets/main.css",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/assets/main.css.bak",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/poc.py",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/hashCompare.py",
+		"/Users/zjszewczyk/Desktop/POC/poc.py",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Publishers Deal with the Devil.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/repl.py",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/rss.xml",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/m_sw.js",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/server.js",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/index.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/blog/introducing-first-crack.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Cabin Porn Roundup 1014.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/blog/cabin-porn-roundup-1014.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/static/main.css",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Static/manifest.json",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Structure/cabin-porn-roundup-1014.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Static/MTV.js",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Static/MTV.css",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Static/MTV.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Structure/system/index.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Structure/blog.html",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/Structure/system/projects.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Structure/system/error.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Static/Main_feed.xml",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Structure/system/template.htm",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Structure/system/home.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/search.py",
 		"/Users/zjszewczyk/Desktop/Pace.py",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/blog.py",
-		"/Users/zjszewczyk/Dropbox/Code/Standalone/m_sw.js",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/service-worker.js",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Smart and Funny.txt",
 		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Stable/CLI.py",
 		"/Users/zjszewczyk/Desktop/States.csv",
 		"/Users/zjszewczyk/Desktop/about.txt",
-		"/Users/zjszewczyk/Dropbox/Code/Standalone/Structure/system/error.html",
 		"/Users/zjszewczyk/Dropbox/BOLC/CCTC/Windows/System2.txt",
 		"/Users/zjszewczyk/Dropbox/BOLC/CCTC/Windows/System5.txt",
 		"/Users/zjszewczyk/Dropbox/BOLC/CCTC/Windows/System3.txt",
@@ -422,40 +462,7 @@
 		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 2 - Mental Preparedness/2 The Master Plan.txt",
 		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 2 - Mental Preparedness/4 The Trigger Event.txt",
 		"/Users/zjszewczyk/Dropbox/Apps/Drafts/2015-07-28-18-35-17.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 8 - Going Forward/Outline.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 1 - An Introduction to Survivalism/2 Choosing Your Pet Catastrophe.txt",
-		"/Users/zjszewczyk/Desktop/LibertySteel/JimWellerJr.txt",
-		"/Users/zjszewczyk/Desktop/LibertySteel/PattyErhart.txt",
-		"/Users/zjszewczyk/Desktop/LibertySteel/JimSr.txt",
-		"/Users/zjszewczyk/Desktop/LibertySteel/parse.py",
-		"/Users/zjszewczyk/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/8D610B7F-CCB7-4C16-A4A2-084CA03137D9/DebbieGrimm.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 4 - Physical Preparedness/3 Training and Tactics.txt",
-		"/Users/zjszewczyk/Dropbox/Apps/Drafts/2015-07-18-09-08-47.txt",
-		"/Users/zjszewczyk/Downloads/subscription_manager.xml",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 4 - Physical Preparedness/2 The Workout Regimen.txt",
-		"/Users/zjszewczyk/Dropbox/Apps/Drafts/2015-07-12-04-27-54.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 5 - Familial Preparedness/1 The Lone Wolf Fallacy.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 5 - Familial Preparedness/2 Building a Community.txt",
-		"/Users/zjszewczyk/Dropbox/Prep/Copy of Directory 4-9-15.csv.bak",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 1 - An Introduction to Survivalism/index.md",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 1 - An Introduction to Survivalism/1 An Introduction to Survivalism.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Forward.txt",
-		"/Users/zjszewczyk/Dropbox/Apps/Drafts/2015-06-08-10-58-16.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 5 - Familial Preparedness/Outline.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 5 - Familial Preparedness/index.md",
-		"/Users/zjszewczyk/Dropbox/Apps/Drafts/2015-05-11-16-59-38.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 5 - Familial Preparedness/0 Familial Preparedness.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 1 - An Introduction to Prepping/index.md",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 1 - An Introduction to Prepping/1 An Introduction to Survivalism.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 1 - An Introduction to Prepping/2 Choosing Your Pet Catastrophe.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 1 - An Introduction to Prepping/3 Preparing for Doomsday.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 1 - An Introduction to Prepping/1 An Introduction to Prepping.txt",
-		"/Users/zjszewczyk/Downloads/Hirens/HBCD.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 3 - Material Preparedness/3 Choosing a Bag.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Index.py",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 3 - Material Preparedness/index.md",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 2 - Mental Preparedness/index.md",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 4 - Physical Preparedness/3 Future Growth.txt"
+		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 8 - Going Forward/Outline.txt"
 	],
 	"find":
 	{
@@ -474,134 +481,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"exe",
-			"=",
-			"class",
-			"search",
-			"2015",
-			"Markdown(",
-			"re.",
-			"sys.",
-			"re.",
-			"time.",
-			"os.",
-			"\\n",
-			"types",
-			"search",
-			"match",
-			"rstrip",
-			"lstrip",
-			".find",
-			".find(",
-			".find",
-			"genstatic",
-			"startswith",
-			"endswith",
-			"pre",
-			"code",
-			"\\<pre",
-			"manifest",
-			"m_sw.js",
-			"find\\(",
-			"find",
-			"startswith",
-			"Markdown",
+			".replace(\"&",
+			"XML",
+			"escape",
+			"appendToFeed",
+			"\"./local/blog/\"+source.lower().replace(\" \", \"-\")[0:-3]+\"html\"",
+			"\"Content/\"+source",
+			"GenPage",
+			";#38;#38;",
+			"master",
+			"logs",
+			"blog/",
+			"devnull",
+			"copyfile",
+			"from sys import stdout",
+			"dst",
+			"src",
+			"file",
+			"i",
+			"d",
+			"line",
+			"fd",
+			"log",
+			"logs",
+			"output_log",
+			"file",
+			"b",
+			"session",
+			"b",
+			"s3",
+			"session",
+			"i",
+			"deploy",
+			"devnull",
+			"fnull",
+			"FNULL",
+			"_FNULL",
+			"content_type",
+			"content_encoding",
+			"dst",
+			"src",
+			"file",
+			"files",
+			"subdirs",
+			"path",
+			"d",
+			"folder",
+			"tree",
+			"mtime",
+			"FNULL",
+			"mtime",
+			"_dst",
+			"_tgt",
+			"f_out",
+			"f_in",
+			"_dst",
+			"_tgt",
+			"name",
+			"files",
+			"subdirs",
+			"path",
+			"i",
+			"target",
+			"end",
+			"group",
+			"delimeters",
+			"groups",
+			"field",
+			"labels",
+			"d__",
+			"assets",
+			"./stage/as",
+			"xml",
+			"b.upload",
+			"\"./",
 			"print",
-			"endswith",
-			"GenPage",
-			"Migrate",
-			"GenPage",
-			"img",
-			"<br />",
-			"img",
-			"\\n",
-			"ico",
-			"Markdown(",
-			"Markdown",
-			"writi",
-			"projects",
-			"image",
-			"hr",
-			"design",
-			"markdown",
-			"\\.ft",
-			"span",
-			"div class=\"in\"",
-			"class=\"ft",
-			"read_more_link",
-			" ",
-			"    ",
-			" ",
-			"    ",
-			" ",
-			"    ",
-			" ",
-			"    ",
-			" ",
-			"// console.log",
-			"filename",
-			"console.log",
-			"date",
-			"getFullYear",
-			"content",
-			"<SPAN></SPAN>[0-9]",
-			"<SPAN></SPAN>",
-			"class='cm'",
-			".cm",
-			".mm",
-			"<div></div>",
-			"class='mm'",
-			"<div class='mm'",
-			"\\.ruler",
-			"class=\"ft\"",
-			"class=\"in\"",
-			"px",
-			"width",
-			"max-width",
-			"header",
-			"img",
-			"^}",
-			"\\: +",
-			"iframe",
-			"frame",
-			"header",
-			"big_table",
-			"nav",
-			" +",
-			";",
-			"class='year_header'",
-			" +",
-			";",
-			"class=",
-			"original",
-			"h2",
-			"article_title",
-			".e ",
-			".exe ",
-			" ",
-			"^[0-9]+ ",
-			" [0-9]+ ",
-			"^[0-9]+ ",
-			" [0-9]+ ",
-			"^[0-9]+",
-			"color:",
-			"color",
-			"source",
-			"script",
-			"addtocache",
-			"caches.open",
+			"from os import",
+			"from os.path",
+			"dst",
+			"tgt",
+			"b.upload",
+			"description",
+			"pubdate",
+			")\n",
+			"strftime",
+			"mod_time",
+			"stage",
+			"migrate",
+			"mod_time",
+			"stage",
+			"/blog/",
+			"genpage",
+			".replace(\"index.html\", \"../index.html\", 1).replace(\"blog.html\", \"../blog.html\", 1).replace(\"archives.html\", \"../archives.html\", 1).replace(\"projects.html\", \"../projects.html\", 1)",
+			".replace(\"index.html\", \"../index.html\", 1)",
+			"href=\\\"/blog",
+			"href=\"/",
+			"/blog/",
+			"archives.html",
+			"rss.xml",
+			"mkdir",
 			"closetemplatebuild",
-			"js",
-			"&#x",
-			"use",
-			"img",
-			"flip",
-			"display:none",
-			".png",
-			"\\{[\\.\\n\\s\\w\\:\\-\\#\\;\\%\\(\\/\\)\\,\\!]+",
-			"\\{(?s).+\\}",
-			"{",
-			"class='mm"
+			"buildfromtemplate",
+			"index.html",
+			"blog/",
+			"init",
+			"appendcontentofx",
+			"utime",
+			"Push",
+			"push",
+			"gzip",
+			"clear",
+			"getChangedFiles",
+			"stage",
+			"copy",
+			"stage",
+			"clear",
+			"getChangedFiles",
+			"print",
+			"Fetch",
+			"remove",
+			"getChangedFiles",
+			"Method",
+			"c = colors",
+			"Interface",
+			"{{ title }}",
+			".replace",
+			".replace(\"index.html\", \"../index.html\"",
+			".replace",
+			".replace(\".txt\", \".html\")"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -619,7 +626,7 @@
 	"groups":
 	[
 		{
-			"selected": 16,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -641,6 +648,36 @@
 						],
 						"settings":
 						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Markdown.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11489,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3891,
+								3892
+							]
+						],
+						"settings":
+						{
 							"WordCount":
 							{
 								"changes": -1,
@@ -654,6 +691,83 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 1575.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "blog.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 35810,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32164,
+								32164
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "python"
+							},
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 13769.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "local/rss.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 946904,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								662,
+								662
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 103,
+								"count": 0,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -661,12 +775,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "Structure/blog.html",
+					"buffer": 4,
+					"file": "master.log",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 29286,
+						"buffer_size": 712657,
 						"regions":
 						{
 						},
@@ -681,39 +795,36 @@
 						{
 							"WordCount":
 							{
-								"changes": 0,
-								"count": 2211,
+								"changes": -1,
 								"modified": true,
 								"selection": true,
 								"status": -1,
 								"syntax": "plain text"
 							},
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 394.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "Markdown.py",
+					"buffer": 5,
+					"file": "deploy.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11188,
+						"buffer_size": 17064,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8738,
-								8738
+								14251,
+								14217
 							]
 						],
 						"settings":
@@ -731,57 +842,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3409.0,
+						"translation.y": 8021.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "m_sw.js",
+					"buffer": 6,
+					"file": "local/assets/m_sw.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2961,
+						"buffer_size": 2632,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								950,
-								950
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 72.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "m_sw.js.bak",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3597,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								472,
-								480
+								996,
+								996
 							]
 						],
 						"settings":
@@ -794,12 +875,146 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Structure/system/error.html",
+					"buffer": 7,
+					"file": "ModTimes.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								51,
+								64
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "python"
+							},
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Hash.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 538,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								35,
+								35
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "system/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1702,
+								1702
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 236,
+								"count": 292,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "system/projects.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16420,
+								16420
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "system/error.html",
 					"semi_transient": false,
 					"settings":
 					{
@@ -810,8 +1025,8 @@
 						"selection":
 						[
 							[
-								327,
-								327
+								0,
+								0
 							]
 						],
 						"settings":
@@ -828,58 +1043,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "Static/Main_feed.xml",
+					"buffer": 12,
+					"file": "system/template.htm",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 886922,
+						"buffer_size": 3189,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": -1,
-								"modified": true,
-								"selection": true,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Structure/system/template.htm",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3122,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2582,
-								2582
+								1001,
+								1001
 							]
 						],
 						"settings":
@@ -887,81 +1064,12 @@
 							"WordCount":
 							{
 								"changes": 0,
-								"count": 31,
+								"count": 34,
 								"modified": false,
 								"selection": false,
 								"status": -1,
 								"syntax": "plain text"
 							},
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "Structure/system/projects.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15662,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								15622,
-								15622
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 194,
-								"count": 2108,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3413.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "Structure/system/home.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1696,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								845,
-								845
-							]
-						],
-						"settings":
-						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -971,225 +1079,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "static/main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3301,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2495,
-								2495
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1624.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "server.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6472,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3920,
-								3920
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1416.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "Static/manifest.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 680,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								670,
-								670
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "Static/MTV.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10966,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								532,
-								532
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 60.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "Static/MTV.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5144,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								954,
-								767
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "Static/MTV.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14080,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10920,
-								10920
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "blog.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 31125,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								21446,
-								21446
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": -1,
-								"modified": true,
-								"selection": true,
-								"status": -1,
-								"syntax": "python"
-							},
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]
