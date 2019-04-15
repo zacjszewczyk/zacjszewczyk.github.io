@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 13 Apr 2019 03:43:01 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2019 10:39:45 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>An Update on Soylent</title>
+            <link>http://zacs.site/blog/an-update-on-soylent.html</link>
+            <guid isPermaLink="true">http://zacs.site/blog/an-update-on-soylent.html</guid>
+            <pubDate>Mon, 15 Apr 2019 10:39:34 GMT</pubDate>
+            <description>
+                
+&lt;p&gt;Back in 2013, I &lt;a href="http://zacs.site/blog/soylent.html"&gt;posted&lt;/a&gt; &lt;a href="http://zacs.site/blog/a-few-more-thoughts-on-soylent.html"&gt;a&lt;/a&gt; &lt;a href="http://zacs.site/blog/two-months-of-soylent.html"&gt;bunch&lt;/a&gt; &lt;a href="http://zacs.site/blog/how-i-survived-a-week-without-food.html"&gt;of&lt;/a&gt; &lt;a href="http://zacs.site/blog/how-i-stopped-eating-for-30-days.html"&gt;articles&lt;/a&gt; &lt;a href="http://zacs.site/blog/could-soylent-replace-food.html"&gt;about&lt;/a&gt; Soylent. I liked the idea then, and I like it now, and so I wanted to take a minute to give you an update after I gave it a try.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>My Road to Weightlifting</title>
             <link>http://zacs.site/blog/my-road-to-weightlifting.html</link>
