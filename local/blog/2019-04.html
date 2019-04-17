@@ -41,7 +41,8 @@ April, <a href="2019.html">2019</a>
         <main style="max-width:65em;margin:0 auto;margin-bottom:100px;">
             <section id="content_section">
                 <article>
-    2019/04/17 17:16:04: <a href="a-risk-analysis-of-huawei.html"></a>
+    2019/04/17 17:16:04: <a href="a-risk-analysis-of-huawei.html">A Risk Analysis of Huawei
+</a>
 </article>
 <article>
     2019/04/17 13:34:49: <a href="yes-you-should-blog.html">Yes, you should blog
@@ -105,12 +106,20 @@ April, <a href="2019.html">2019</a>
         <span id="ipad_device"></span>
     </body>
     <!-- SCRIPTS BLOCK -->
-    <script>document.getElementsByTagName("body")[0].style.display = "block";</script>
-    <script>
+    <script async>document.getElementsByTagName("body")[0].style.display = "block";</script>
+    <script async>
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('/m_sw.js');
           console.log("Successfully registered Service Worker.");
         }
     </script>
     <link rel="stylesheet" href="../assets/main.css" type="text/css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138585845-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138585845-1');
+    </script>
 </html>

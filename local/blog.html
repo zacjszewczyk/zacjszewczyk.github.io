@@ -102,7 +102,7 @@
     <time datetime="2019-04-13" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="blog/2019.html">2019</a>/<a href="blog/2019-04.html">04</a>/13 11:41:57
  EST</time>
 
-    
+    </div>
 <p>I <a href="http://zacs.site/blog/before-now-and-future.html">promised</a> some posts on this topic, and today I will begin to deliver. Today I want to talk about my journey to weightlifting. It took me a while, but I look forward to sharing the lessons I learned along this long and winding road.</p>
     <p class='read_more_paragraph'>
         <a style='text-decoration:none;' href='blog/my-road-to-weightlifting.html'>&#x24E9;</a>
@@ -393,12 +393,20 @@
         <span id="ipad_device"></span>
     </body>
     
-    <script>document.getElementsByTagName("body")[0].style.display = "block";</script>
-    <script>
+    <script async>document.getElementsByTagName("body")[0].style.display = "block";</script>
+    <script async>
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('/m_sw.js');
           console.log("Successfully registered Service Worker.");
         }
     </script>
     <link rel="stylesheet" href="assets/main.css" type="text/css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138585845-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138585845-1');
+    </script>
 </html>
