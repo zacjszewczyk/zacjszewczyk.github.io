@@ -130,7 +130,7 @@ def Markdown(line):
             ftxt = ftxt.replace("%", "</span> ", 1).strip()
             line = line.replace("&&TK&&", ftxt)            
         # Interpret <strong> tags
-        for each in findall("\*\*{1}[\w:\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]]+\*\*{1}", line):
+        for each in findall("\*\*{1}[\w:\"\.\+'\s\.|#/\\\>\<&=,\$\!\?\;\-\[\]]+\*\*{1}", line):
             ftxt = each
             line = line.replace(each, "&&TK&&")
             ftxt = each.replace("**", "<strong>", 1)
