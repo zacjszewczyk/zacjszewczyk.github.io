@@ -19,16 +19,10 @@ const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
+    '/index.html',
     '/projects.html',
     '/blog.html',
-    '/',
-    '/Static/favicon.ico',
-    '/Static/favicon_192.ico',
-    '/Static/favicon_512.ico',
-    '/Static/favicon_192.png',
-    '/Static/favicon_512.png',
-    '/Static/main.css',
-    '/Static/manifest.json'
+    '/archives.html'
 ];
 
 // The install handler takes care of precaching the resources we always need.

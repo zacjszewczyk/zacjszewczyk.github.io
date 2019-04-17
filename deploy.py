@@ -271,12 +271,12 @@ def Deploy():
                 _content_type = "image/jpg"
             elif (_file[-3:] == "png"):
                 _content_type = "image/png"
-            
-            # Ignore files that have already been deployed
-            if (isfile(_dst) and HashFiles(_src, _dst)):
-                continue
 
-            CopyFile(_src, _dst, False, False)
+            if (_file[-4:] == "html"):
+                CompressFile(_src, _dst, True, True)
+                _src = _dst
+            else: 
+                CopyFile(_src, _dst, False, False)
 
             stdout.write(c.OKGREEN+"Deploying "+c.ENDC+_dst+" ...")
             _b.upload_file(Filename=_src, Key=_dst.replace("./deploy/", ""), ExtraArgs={'CacheControl':'max-age=2592000','ContentType':_content_type, 'ContentEncoding':_content_encoding})
