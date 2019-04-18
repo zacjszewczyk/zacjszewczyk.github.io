@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 17 Apr 2019 10:53:59 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 18 Apr 2019 07:31:22 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>A JavaScript-Free Frontend</title>
+            <link>https://dev.to/winduptoy/a-javascript-free-frontend-2d3e</link>
+            <guid isPermaLink="true">https://dev.to/winduptoy/a-javascript-free-frontend-2d3e</guid>
+            <pubDate>Thu, 18 Apr 2019 19:15:26 GMT</pubDate>
+            <description>
+                
+&lt;p&gt;Matt Reyer talks about turning his web front-end into a much lighter client. I have done this for years with my own projects, cutting out external libraries and even non-essential Javascript and CSS until I had as minimal an application as possible. &lt;a href="https://alistapart.com/article/responsible-javascript-part-1/"&gt;This is a growing trend&lt;/a&gt;. My desire to avoid unnecessary complexity and code dependence drove the development of &lt;a href="/projects.html#firstCrack"&gt;First Crack&lt;/a&gt;, the blogging engine behind this site. In the same vein, check out Addy Osmani&#8217;s great article &lt;a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4"&gt;&lt;em&gt;The Cost Of JavaScript In 2018&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>A Risk Analysis of Huawei</title>
             <link>https://www.lawfareblog.com/risk-analysis-huawei-5g</link>
