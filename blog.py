@@ -51,7 +51,11 @@ c = colors()
 # - source: Source file name, including extension. (String)
 def AppendContentOfXToY(target, source):
     # Initialize file descriptors for the source and target files.
+    if (isfile("./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html")):
+        print "We're doing to handle this ourselves."
+        
     source_fd = open("Content/"+source, "r")
+    target_fd = open(target+".html", "a")
 
     ptype = source_fd.readline()
 
@@ -68,8 +72,6 @@ def AppendContentOfXToY(target, source):
         title = "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
     else:
         title = "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
-
-    target_fd = open(target+".html", "a")
 
     # Initialize method variables.
     idx = 1
@@ -399,11 +401,11 @@ def GenPage(source, timestamp):
         # In the fifth line of the file, write the opening tags to the target, then the file's
         # content as generated up to this point.
         elif (idx == 4):
-            target_fd.write(local_content)
-            target_fd.write(title.strip()+"\n")
+            target_fd.write(local_content.strip())
+            target_fd.write(title.strip())
         # For successive lines of the file, parse them as Markdown and write them to the file.
         elif (idx > 4):
-            target_fd.write("\n    "+Markdown(line))
+            target_fd.write("\n    "+Markdown(line).strip())
 
         # Increase the line number
         idx += 1

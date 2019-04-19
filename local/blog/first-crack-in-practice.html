@@ -35,44 +35,34 @@
             <a id="projects_link" href="../projects.html">Projects</a>
         </nav>
         <main style="max-width:65em;margin:0 auto;margin-bottom:100px;">
-            <section id="content_section">
-                <article>
+            <section id="content_section"><article>
     <h2 style="text-align:center;">
         <a href="first-crack-in-practice.html" class="original">First Crack in Practice</a>
     </h2>
     <time datetime="2013-01-11" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="2013.html">2013</a>/<a href="2013-01.html">01</a>/11 14:46:12
  EST</time>
-
     
-    
-<p>Last month I published <a href="http://zacs.site/blog/introducing-first-crack.html"><em>Introducing First Crack</em></a> shortly after this site went life. In that post I outlined a number of goals I set for First Crack during its development, as well as a few of the advantages I believed my new CMS would have over the incumbents. Since making that post nearly two months have gone by. During those two months I have used First Crack exclusively, and I have not looked back.</p>
+    <p>Last month I published <a href="http://zacs.site/blog/introducing-first-crack.html"><em>Introducing First Crack</em></a> shortly after this site went life. In that post I outlined a number of goals I set for First Crack during its development, as well as a few of the advantages I believed my new CMS would have over the incumbents. Since making that post nearly two months have gone by. During those two months I have used First Crack exclusively, and I have not looked back.</p>
     
     <h3>Customization</h3>
     
+    <p>One of the main motivations behind the advent of First Crack as well as one of my main goals in designing it was to facilitate a great degree of customization. Not only in the site&#8217;s look and feel, but also in the way the CMS works. Just a few weeks ago I did a total redesign of the site. I started with blank HTML, CSS, and Javascript documents, designed the new site, and fed it into First Crack; the build went off without a hitch.</p>
     
-<p>One of the main motivations behind the advent of First Crack as well as one of my main goals in designing it was to facilitate a great degree of customization. Not only in the site&#8217;s look and feel, but also in the way the CMS works. Just a few weeks ago I did a total redesign of the site. I started with blank HTML, CSS, and Javascript documents, designed the new site, and fed it into First Crack; the build went off without a hitch.</p>
-    
-    
-<p>In addition to redesigning this site, I have also added a number of features to First Crack over the past few months, some of which I will touch on later in this article. Thanks to First Crack&#8217;s modular design and well-documented code it was very easy for me to make these changes. All in all I am very satisfied with First Crack&#8217;s customizability.</p>
+    <p>In addition to redesigning this site, I have also added a number of features to First Crack over the past few months, some of which I will touch on later in this article. Thanks to First Crack&#8217;s modular design and well-documented code it was very easy for me to make these changes. All in all I am very satisfied with First Crack&#8217;s customizability.</p>
     
     <h3>Simplicity</h3>
     
-    
-<p>As with my goal of complete customization, I feel my intent to make the installation and use of First Crack as easy as possible has been achieved. This process was extremely simple to begin with, and little has changed since then.</p>
+    <p>As with my goal of complete customization, I feel my intent to make the installation and use of First Crack as easy as possible has been achieved. This process was extremely simple to begin with, and little has changed since then.</p>
     
     <h3>Speed</h3>
     
+    <p>I designed First Crack to be as quick as possible with the relatively limited programming knowledge I have as compared to the developers of other content management systems. Pursuant of that goal, roughly a third of the way in to the development of First Crack, I shifted from dynamically generating pages to using static files. This made my site much less complicated to debug and also caused it to preform much faster. These were both great boons to my system over some of the others I had tried and heard about in the past.</p>
     
-<p>I designed First Crack to be as quick as possible with the relatively limited programming knowledge I have as compared to the developers of other content management systems. Pursuant of that goal, roughly a third of the way in to the development of First Crack, I shifted from dynamically generating pages to using static files. This made my site much less complicated to debug and also caused it to preform much faster. These were both great boons to my system over some of the others I had tried and heard about in the past.</p>
+    <p>My decision to employ static pages rather than generating them on the fly proved to be a good choice: without any prior caching, my website loads in just under a second on relatively low-end servers; with caching, that time is cut in half. Generating the site is also very quick, even when I force First Crack to rebuild every article from source: updating a single article, along with parsing the first paragraph of every post for the front page and generating the RSS feed, takes less than three seconds with thirty-one articles; rebuilding all the articles on the site, including the homepage and RSS feed, takes around five seconds. First Crack is very fast.</p>
     
+    <p>Over Christmas Break a few weeks ago I began adding a few new features to First Crack. In addition to simple regular expression improvements and greater versatility, I added the ability to automatically update the site over FTP as well. Now, entering the &#8220;authoring mode&#8221; with the -a parameter has another option in the list of acceptable commands: -U. Entering -U at the prompt instructs First Crack to upload the entire site&#160;&#8212;&#160;HTML, CSS, and Javascript&#160;&#8212;&#160;to a server specified within the CMS, thereby eliminating the need for me to manually update the site. I have also increased the granularity with which a post&#8217;s publish date can be manually modified. Whereas previously First Crack only allowed for the date to be set with granularity down to the day, entering -t at the prompt now asks for an update time down to the second.</p>
     
-<p>My decision to employ static pages rather than generating them on the fly proved to be a good choice: without any prior caching, my website loads in just under a second on relatively low-end servers; with caching, that time is cut in half. Generating the site is also very quick, even when I force First Crack to rebuild every article from source: updating a single article, along with parsing the first paragraph of every post for the front page and generating the RSS feed, takes less than three seconds with thirty-one articles; rebuilding all the articles on the site, including the homepage and RSS feed, takes around five seconds. First Crack is very fast.</p>
-    
-    
-<p>Over Christmas Break a few weeks ago I began adding a few new features to First Crack. In addition to simple regular expression improvements and greater versatility, I added the ability to automatically update the site over FTP as well. Now, entering the &#8220;authoring mode&#8221; with the -a parameter has another option in the list of acceptable commands: -U. Entering -U at the prompt instructs First Crack to upload the entire site&#160;&#8212;&#160;HTML, CSS, and Javascript&#160;&#8212;&#160;to a server specified within the CMS, thereby eliminating the need for me to manually update the site. I have also increased the granularity with which a post&#8217;s publish date can be manually modified. Whereas previously First Crack only allowed for the date to be set with granularity down to the day, entering -t at the prompt now asks for an update time down to the second.</p>
-    
-    
-<p>As I said earlier, I have been using First Crack for nearly two months, and I haven&#8217;t looked back once. First Crack is everything i need in a CMS, and should I happen to come across something I need but do not have, I have the ability to build it. The previous version of First Crack is available <a href="https://github.com/zacjszewczyk/FirstCrack">on GitHub</a>. If I get around to updating it soon, the new version will be there as well; however, the previous version will work just fine for whatever you need it to do. So go and try it out and tell me what you think. I welcome any sort of feedback.</p>
+    <p>As I said earlier, I have been using First Crack for nearly two months, and I haven&#8217;t looked back once. First Crack is everything i need in a CMS, and should I happen to come across something I need but do not have, I have the ability to build it. The previous version of First Crack is available <a href="https://github.com/zacjszewczyk/FirstCrack">on GitHub</a>. If I get around to updating it soon, the new version will be there as well; however, the previous version will work just fine for whatever you need it to do. So go and try it out and tell me what you think. I welcome any sort of feedback.</p>
 </div>
 </article>
             </section>
