@@ -87,6 +87,8 @@ def AppendContentOfXToY(target, source, timestamp):
             if (i <= 1):
                 if ("class=\"original\"" in line):
                     flag = False
+            elif (i == 3):
+                line = line.replace("href=\"", "href=\"blog/")
             # Write subsequent lines to the file. If we are truncating
             # the file and we encouter the first paragraph, write it to
             # the output file and then quit.
