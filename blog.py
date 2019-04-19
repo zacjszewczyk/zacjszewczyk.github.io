@@ -183,6 +183,7 @@ def AppendToFeed(source):
 
     # At the end of the file, write closing XML tags.
     else:
+        feed_fd.write("\n&lt;p&gt;&lt;a href='%s'&gt;Read more...&lt;a&gt;" % ("http://zacs.site/blog/"+source.lower().replace(" ", "-")[0:-3]+"html".lower()))
         feed_fd.write("\n            </description>\n        </item>\n")
 
     # Close the file descriptors.
