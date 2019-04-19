@@ -49,71 +49,65 @@ c = colors()
 # Parameters:
 # - target: Target file name, including extension. (String)
 # - source: Source file name, including extension. (String)
-def AppendContentOfXToY(target, source):
-    # Initialize file descriptors for the source and target files.
-    if (isfile("./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html")):
-        print "We're doing to handle this ourselves."
-        
-    source_fd = open("Content/"+source, "r")
+def AppendContentOfXToY(target, source, timestamp):
+    # Store the name of the corresponding HTML file in a variable
+    html_filename = source.lower().replace(" ", "-")[0:-3]+"html"
+    
+    # Check to see if a structure file has already been built. If not,
+    # build it.
+    if (not isfile("./local/blog/"+html_filename)):
+        GenPage(source, timestamp)
+
+    # Instantiate a boolean flag variable, "flag". This indicates
+    # whether to include the entire article (True) or truncate it
+    # at the first paragraph (False)
+    flag = True
+
+    # Now that we know there is a structure file built, pull the data
+    # from there.
+    
+    ## Open the source and the target files
     target_fd = open(target+".html", "a")
+    with open("./local/blog/"+html_filename, "r") as source_fd:
+        
+        # Skip to the <article tag, then write the opening <article>
+        # tag to the output file.
+        for line in source_fd:
+            if ("<article" in line): target_fd.write("<article>"); break
 
-    ptype = source_fd.readline()
+        # Iterate over each line of the source structure file.
+        for i, line in enumerate(source_fd):
+            # Strip whitespace
+            line = line.strip()
 
-    if (ptype[0:5] != "Type:"):
-        source_fd.close()
-        mod_time = strftime("%Y/%m/%d %H:%M:%S", localtime(stat(target).st_mtime))
-        ptype = Migrate(source, mod_time).strip()
-        source_fd = open("Content/"+source, "r")
-    else:
-        ptype = ptype[6:].strip()
+            # Check the first two lines of the structure file for a
+            # class tag denoting the type of article. If viewing an
+            # original article, truncate it at the first paragraph by
+            # setting the flag, "flag", to False
+            if (i <= 1):
+                if ("class=\"original\"" in line):
+                    flag = False
+            # Write subsequent lines to the file. If we are truncating
+            # the file and we encouter the first paragraph, write it to
+            # the output file and then quit.
+            elif (flag == False and line[0:2] == "<p"):
+                target_fd.write(line)
+                break
 
-    # In the first line, classify the article as a linkpost or an original piece.
-    if (ptype == "original"):
-        title = "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"blog/{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
-    else:
-        title = "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+            # Stop copying content at the end of the article.
+            if ("</article>" in line):
+                break
+    
+            # Write all lines from the structure file to the output file
+            # by default.
+            target_fd.write(line)
 
-    # Initialize method variables.
-    idx = 1
-
-    # Iterate over each line in the source content file.
-    for line in iter(source_fd.readline, ""):
-        # print idx,":",line
-        # In the second line of the file, add the article title.
-        if (idx == 1):
-            title = title.replace("{{URL_TITLE}}", line[7:].strip())
-        # In the third line of the file, add the article URL to the title/link.
-        elif (idx == 2):
-            title = (title.replace("{{URL}}", ""+source.lower().replace(" ", "-")[0:-3]+"html"), title.replace("{{URL}}", line[6:].strip()))[ptype == "linkpost"]+"\n    </h2>"
-            url = ((""+source.lower().replace(" ", "-")[0:-3]+"html"), title.replace("{{URL}}", line[6:].strip()))[ptype == "linkpost"]
-        # In the fourth line of the file, read the pubdate, and add it to the article.
-        elif (idx == 3):
-            line = line[9:].replace(" ", "/").split("/")
-            title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="blog/%s">%s</a>/<a href="blog/%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
-        # In the fifth line of the file, write the opening tags to the target, then the file's
-        # content as generated up to this point.
-        elif (idx == 4):
-            target_fd.write(title.strip()+"\n")
-        # Skip the fifth line of the file. It's blank.
-        # Parse the sixth line of the file, the first paragraph, as Markdown. Write
-        # it to the target file.
-        elif (idx == 6):
-            target_fd.write("\n    "+Markdown(line).replace("#fn", url+"#fn"))
-        # For successive lines of the file, if the article is a linkpost, parse
-        # them as Markdown and write them to the file.
-        elif (idx > 6 and ptype == "linkpost"):
-            target_fd.write("\n    "+Markdown(line).replace("#fn", url+"#fn"))
-
-        # Increase the file index
-        idx += 1
-    else:
-        # At the end of the file, append the read more link and the closing HTML tags.
-        target_fd.write("\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='blog/%s'>&#x24E9;</a>\n    </p>" % (source.lower().replace(" ", "-")[0:-3]+"html"))
-        target_fd.write("\n</article>\n")
-
-    # Close the file descriptors.
+    # Once we have reached the end of the content in the case of a linkpost,
+    # or read the first paragraph in the case of an original article, add a 
+    # "read more" link and close the article.
+    target_fd.write("\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='blog/%s'>&#x24E9;</a>\n    </p>" % (html_filename))
+    target_fd.write("</article>")
     target_fd.close()
-    source_fd.close()
 
 # Method: AppendToFeed
 # Purpose: Append the content of a source file to the RSS feed.
@@ -292,7 +286,7 @@ def GenBlog():
                     
                     # Add the first twenty-five articles to the main blog page.
                     if (file_idx < 25):
-                        AppendContentOfXToY("./local/blog", files[year][month][day][timestamp])
+                        AppendContentOfXToY("./local/blog", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     # Write the years in which a post was made to the header element, in a
                     # big table to facilitate easy reading. 
                     elif (file_idx == 25):
@@ -314,7 +308,7 @@ def GenBlog():
                         temp = year
 
                         # Add the twenty-sixth article to the archives page.
-                        AppendContentOfXToY("./local/archives", files[year][month][day][timestamp])
+                        AppendContentOfXToY("./local/archives", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     
                     # Add all other articles to the archives page.
                     else:
@@ -323,7 +317,7 @@ def GenBlog():
                             archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='%s.html'>%s</a></article>" % (year, year))
                             archives_fd.close()
                             temp = year
-                        AppendContentOfXToY("./local/archives", files[year][month][day][timestamp])
+                        AppendContentOfXToY("./local/archives", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     
                     # Add all articles to the RSS feed.
                     AppendToFeed(files[year][month][day][timestamp])
@@ -396,7 +390,7 @@ def GenPage(source, timestamp):
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
             # print line
-            line = line[9:].replace(" ", "/").split("/")
+            line = line[9:].strip().replace(" ", "/").split("/")
             title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
         # In the fifth line of the file, write the opening tags to the target, then the file's
         # content as generated up to this point.
