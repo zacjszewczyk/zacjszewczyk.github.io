@@ -483,18 +483,13 @@ def GetTitle(source):
 # Purpose: Instantiate the global variable 'content', to reduce duplicate I/O
 #          operations. Then clear the blog and archive structure files, and
 #          the RSS feed, and write the opening tags. Generate file dictionary.
-#          Make sure ./local, ./stage, and ./deploy exist.
+#          Make sure ./local exists.
 # Parameters: none
 def Init():
-    # Make sure ./local, ./stage, and ./deploy exist with their subfolders
+    # Make sure ./local exists with its subfolders
     CheckDirAndCreate("./local")
     CheckDirAndCreate("./local/blog")
     CheckDirAndCreate("./local/assets")
-    CheckDirAndCreate("./stage")
-    CheckDirAndCreate("./stage/blog")
-    CheckDirAndCreate("./deploy")
-    CheckDirAndCreate("./deploy/blog")
-    CheckDirAndCreate("./deploy/assets")
 
     # Make global variables accessible in the method, and initialize method variables.
     global file_idx, files, content
