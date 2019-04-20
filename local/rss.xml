@@ -7,9 +7,20 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 19 Apr 2019 06:15:33 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Apr 2019 04:24:00 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>How a Bitcoin Evangelist Made Himself Vanish</title>
+            <link>https://www.nytimes.com/2019/03/12/technology/how-to-disappear-surveillance-state.html</link>
+            <guid isPermaLink="true">https://www.nytimes.com/2019/03/12/technology/how-to-disappear-surveillance-state.html</guid>
+            <pubDate>Sat, 20 Apr 2019 16:23:46 GMT</pubDate>
+            <description>
+                
+&lt;p&gt;Nathaniel Popper, writing for the New York Times, explains the extreme steps Jameson Lopp took to hide his personal information. An interesting piece, it reminded me of a great article Evan Ratlif wrote for Wired in 2009 titled &lt;a href="https://www.wired.com/2009/08/gone-forever-what-does-it-take-to-really-disappear/"&gt;&lt;em&gt;Gone Forever: What Does It Take to Really Disappear?&lt;/em&gt;&lt;/a&gt;. I also rediscovered &lt;a href="https://www.wired.com/2009/08/evans-interview-with-matthew-sheppard-about-disappearing-its-like-dying/"&gt;the interview with Matt Sheppard&lt;/a&gt; that Evan mentioned at the end of his article, as well as his follow-up piece where &lt;a href="https://www.wired.com/2009/08/author-evan-ratliff-is-on-the-lam-locate-him-and-win-5000/"&gt;he attempted to disappear and offered a $5,000 bounty for his sighting&lt;/a&gt;. These articles sent me down a fascinating rabbit hole, into the world of faked deaths and mysterious disappearances. Some of the best pieces I found: &lt;a href="https://www.vice.com/en_us/article/gyj8a4/heres-the-best-way-to-fake-your-death"&gt;&lt;em&gt;Here&#8217;s the Best Way to Fake Your Death&lt;/em&gt;&lt;/a&gt;, by Mack Lamoureux on Vice; &lt;a href="https://nypost.com/2016/08/07/how-i-faked-my-own-death/"&gt;&lt;em&gt;How I faked my own death&lt;/em&gt;&lt;/a&gt;, by Dean Balsimini on the New York Post; and &lt;a href="https://www.timeslive.co.za/sunday-times/lifestyle/2017-12-16-the-hardest-part-about-faking-your-own-death-is-staying-dead/"&gt;&lt;em&gt;The hardest part about faking your own death is staying dead&lt;/em&gt;&lt;/a&gt; by Paige Nick on The New York Times Live. With Gerald Cotten&#8217;s sudden disappearance, we may have a recent example of this happening again. Trista Kelley has a good writeup over &lt;a href="https://www.businessinsider.com/quadriga-ceo-gerald-cotten-death-with-no-access-to-crypto-gets-weirder-2019-2"&gt;at Business Insider&lt;/a&gt;. I find all of this fascinating.&lt;/p&gt;
+&lt;p&gt;&lt;a href='http://zacs.site/blog/how-a-bitcoin-evangelist-made-himself-vanish.html'&gt;Read more...&lt;a&gt;
+            </description>
+        </item>
         <item>
             <title>Choosing a VPN service is a serious decision</title>
             <link>https://drewdevault.com/2019/04/19/Your-VPN-is-a-serious-choice.html</link>
@@ -107,7 +118,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/my-road-to-weightlifting.html</guid>
             <pubDate>Sat, 13 Apr 2019 15:41:57 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;I &lt;a href="http://zacs.site/blog/before-now-and-future.html"&gt;promised&lt;/a&gt; some posts on this topic, and today I will begin to deliver. Today I want to talk about my journey to weightlifting. It took me a while, but I look forward to sharing the lessons I learned along this long and winding road.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/my-road-to-weightlifting.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -955,7 +966,7 @@
             <guid isPermaLink="true">http://nextdraft.com/archives/n20140721/one-way-ticket-to-ride/</guid>
             <pubDate>Thu, 24 Jul 2014 23:49:34 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Worth linking to again, courtesy of Dave Pell&#8217;s The Next Draft this time around on the forty-fifth anniversary of Apollo 11&#8217;s historic mission: the speech President Nixon plan to give in the event of a moon disaster. Incredible, and remarkable chilling:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -969,7 +980,7 @@
             <guid isPermaLink="true">http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048</guid>
             <pubDate>Wed, 23 Jul 2014 21:18:06 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;I don&#8217;t do this often, but for all the help Tuts+ gave me as I worked to &lt;a href="http://zacs.site/blog/first-crack-10.html"&gt;expand the functionality&lt;/a&gt; of this design over the past few weeks, I can&#8217;t let it slip by without note. When I build a site, I prefer to do everything humanely possible with CSS rather than outsourcing it to JavaScript. Due to this perhaps irrational desire, everything&#160;&#8212;&#160;including device detection&#160;&#8212;&#160;but the ability to enter dark mode and save that preference across multiple sessions is managed strictly using CSS. As I&#8217;m sure you web developers out there can understand, this led to some sticky situations in which I almost resorted to a quick and dirty script. Thanks to resources like this one though, I managed to keep my use of JavaScript down to a minimum, and continue to ship a speedy site for you all to read. Next time you import jQuery out of habit, think back to this and ask yourself, &#8220;Can I do this with CSS?" Because after seeing tutorials like this, I bet you can.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/the-30-css-selectors-you-must-memorize.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -1335,7 +1346,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/the-creativity-racket.html</guid>
             <pubDate>Sun, 15 Jun 2014 23:36:23 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;I coded all morning in a determined effort to finish a long-standing project I intend to write about soon. Although I planned to spend only a short while on this before moving to other things, I ended up using the majority of my afternoon to finally, after months of work, just about make this script feature-complete. It was not something I had planned to do, nor was it particularly enjoyable&#160;&#8212;&#160;in fact, at times I grew quite frustrated with my lack of progress, and often thought of quitting. But I plugged away at it, and now I am one step closer to finishing this project as well.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/the-creativity-racket.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -1929,7 +1940,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/constellation.html</guid>
             <pubDate>Tue, 22 Apr 2014 18:53:08 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;On April 21st, 2014, a tremor shook the podcasting world. Not a large one, but like an avalanche feeding on itself and growing ever-larger, this quake&#8217;s onset marked the beginning of a significant change. Or at least, that&#8217;s how I think we will look back on the otherwise unremarkable Monday afternoon Ben Alexander, Jamie Ryan, Lorenzo Guddemi, and Sid O&#8217;Neill launched &lt;a href="http://constellation.fm"&gt;Constellation&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/constellation.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -2358,7 +2369,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/owning-their-words.html</guid>
             <pubDate>Wed, 02 Apr 2014 12:09:02 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;When I started this website, I did so with the same intentions many decide to set up a blog these days: post often and about topics that interest me, and link to the work of others in between. In short, I set out to model my website after the likes of John Gruber, Shawn Blanc, and Marco Arment, back when the latter two published with much more regularity. By any measure, I succeeded: I wrote regularly, posted often, and occasionally made something interesting enough to spawn some intelligent discussions. I succeeded by adopting a proven format, even though I did little to improve upon it. Towards the end of last year, I began the difficult process of rectifying that.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/owning-their-words.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -2435,7 +2446,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/the-trouble-with-online-education.html</guid>
             <pubDate>Fri, 28 Mar 2014 21:47:44 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;Whereas Clay Shirky spoke to the benefits of online education, Mark Edmundson is a bit more skeptical in his 2012 (yet still just as relevant)&lt;sup id="fnref1"&gt;&lt;a href="http://zacs.site/blog/the-trouble-with-online-education.html#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; article for The New York Times, &lt;a href="http://www.nytimes.com/2012/07/20/opinion/the-trouble-with-online-education.html"&gt;&lt;em&gt;The Trouble With Online Education&lt;/em&gt;&lt;/a&gt;. I agree with most of the criticisms Clay made in his two articles &lt;a href="http://zacs.site/blog/your-massively-open-offline-college-is-broken.html"&gt;I linked to yesterday&lt;/a&gt;, particularly with regards to the unsustainability of the current model upon which higher education runs. However, having spent three of my high school years taking online courses from various remote schools, and now that&#160;&#8212;&#160;for the first time in my life&#160;&#8212;&#160;I actually go to a classroom on a regular basis, I feel confident in saying that there exists no absolute solution to this problem.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/the-trouble-with-online-education.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -3380,7 +3391,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/algorithmic-ineptitude.html</guid>
             <pubDate>Wed, 05 Feb 2014 15:06:05 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;When I sat down to write this yesterday afternoon, two of the top five articles on Hacker News were not actually articles at all: the first pointed to a Microsoft page extolling the virtues of their new CEO Satya Nadella, below which the fifth &#8220;story&#8221; linked to Firefox 27&#8217;s release notes. In no universe would any person categorize either of these pages as something that &#8220;gratifies one&#8217;s intellectual curiosity.&#8221; In fact, I would say we can look forward to watching the former appear &#8220;on TV news&#8221; ad nauseam in the coming days and, perhaps, weeks as well. Nevertheless, both climbed out of obscurity and to the front page of this popular site despite violating the &lt;a href="http://ycombinator.com/newsguidelines.html"&gt;Hacker News submission guidelines&lt;/a&gt; not because someone decided Satya needed more publicity, or that Mozilla releasing the twenty-seventh iteration of the new Internet Explorer was in any way noteworthy, but because an algorithm put them there.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/algorithmic-ineptitude.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -3446,7 +3457,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/retroactively-planning.html</guid>
             <pubDate>Mon, 03 Feb 2014 15:20:53 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;Upon reaching a goal you cannot look back on the journey in search of the process that led you to success; you will invariably romanticize the past, shedding mediocre choices in a complimentary light, discounting difficult challenges, and misremembering strokes of genius in situations where there was none. In short, this exercise will ultimately only ensure that you never replicate any form of that success again. Rather than flying by the seat of your pants and relying on a postmortem to delineate good steps from bad, a much better approach would advocate starting with a solid and detailed plan, a well thought-out course of action, for you cannot go from the other way around and reasonably hope to make even mediocre achievements.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/retroactively-planning.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -3468,7 +3479,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/death-by-papercut.html</guid>
             <pubDate>Fri, 31 Jan 2014 14:40:20 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;After buying my first Mac a &lt;a href="http://zacs.site/blog/diary-of-a-convert.html"&gt;few&lt;/a&gt; months &lt;a href="http://zacs.site/blog/testing-the-apple-tax.html"&gt;ago&lt;/a&gt;, I soon grew quite fond of it as the most powerful computer I have owned to date. It zips through every task I can think to throw at it, and I can spend an entire day working without needing an outlet. Even better, it takes up so little space and ads such insignificant weight to my backpack that I regularly reach behind me just to make sure I didn&#8217;t forget it somewhere. My 15&#8221; Retina MacBook Pro not only outclasses every one of my previous computers in raw processing power, I can confidently say that this device is the best I have ever owned. And then to sweeten the deal, Mavericks puts my past operating systems to shame. Especially coming from the current Windows world undergoing a forced devolution to Windows 8, I did not realize how relieved I would feel back in the traditional desktop computing paradigm ironically only present in OS X these days.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/death-by-papercut.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -3527,7 +3538,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/in-defense-of-muting.html</guid>
             <pubDate>Thu, 30 Jan 2014 02:50:45 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;Inspired by an exchange Zac Cichy and I had on Twitter &lt;a href="https://twitter.com/zcichy/status/428447221361565697"&gt;earlier today&lt;/a&gt;, and further prompted when Zac made &lt;a href="https://twitter.com/zcichy/status/428672547035435008"&gt;another series&lt;/a&gt; of &lt;a href="https://twitter.com/zcichy/status/428673122879815680"&gt;very pointed&lt;/a&gt; remarks earlier this evening, I decided now was as good a time as any to step away from the Apple sphere and talk about Twitter for a little bit.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/in-defense-of-muting.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -3678,7 +3689,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/my-road-to-gaming.html</guid>
             <pubDate>Fri, 24 Jan 2014 12:32:39 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;A few years ago when I decided to start exploring the world of PC gaming, I set out with three criteria: it could not, like major titles such as Call of Duty or Ghost Recon, require a significant amount of capital just for the the privilege of participating in this hobby. Whatever I ended up choosing had to have a low price tag or, preferably, cost nothing at all. Further, my distraction of choice had to run well on a mediocre machine: I refused to suffer through jittery gameplay on an overclocked processor. Finally, it must not require a great deal of time and effort just to attain a reasonable level of proficiency. I had precious little of either to spend gaming, and none if my unwillingness to eschew everything pursuing a skill of arguably practical application meant a thirteen year old who did nothing but tap himself closer to RSI every day would beat me repeatedly. These stringent criteria left me few candidates, primarily small Flash applets like &lt;a href="http://www.miniclip.com/games/heli-attack-3/en/"&gt;Helli Attack 3&lt;/a&gt;&lt;sup id="fnref1"&gt;&lt;a href="http://zacs.site/blog/my-road-to-gaming.html#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; and &lt;a href="http://www.xgenstudios.com/play/motherload"&gt;Motherload&lt;/a&gt;. As you might imagine, each of these gave back in accordance with the amount of effort I put in; in other words, very little. So I set off in search of something more fulfilling.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/my-road-to-gaming.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -3905,7 +3916,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/my-inspiration.html</guid>
             <pubDate>Mon, 13 Jan 2014 21:52:42 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;I will not pretend to have some groundbreaking insight born of years watching Apple and scrutinizing its marketing tactics, but perhaps this inability to immediately evaluate, classify, and dismiss &lt;a href="http://youtu.be/jiyIcz7wUH0"&gt;Your Verse&lt;/a&gt; works to my advantage in this case. In &lt;a href="http://512pixels.net/2014/01/apples-verse/"&gt;his article&lt;/a&gt; written shortly after the ad went live, Stephen Hackett conveyed his general disappointment in Apple at employing a tactic of engendering a powerful emotional response from its viewers once again, as it did &lt;a href="http://zacs.site/blog/misunderstood.html"&gt;last month&lt;/a&gt; with &lt;a href="http://youtu.be/nhwhnEe7CjE"&gt;Misunderstood&lt;/a&gt;. Others have made similar criticisms, some even going on to chastise Apple for making their latest ad &lt;a href="http://www.macstories.net/news/apple-airs-new-your-verse-ipad-air-commercial/"&gt;unrelatable&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/my-inspiration.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -3986,7 +3997,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/bespoke-morning-reads.html</guid>
             <pubDate>Sat, 11 Jan 2014 15:56:01 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;After catching up on the latest episode of White Collar&lt;sup id="fnref1"&gt;&lt;a href="http://zacs.site/blog/bespoke-morning-reads.html#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; and clearing my Instapaper queue, I spent the rest of my morning going through a few gear websites. While not all carry wares with the vintage feel that almost every item on &lt;a href="https://secure.huckberry.com/store"&gt;Huckberry&#8217;s&lt;/a&gt; store has, each site picks out the best product for its respective category, whether styled to match this century or not. Personally, I prefer the former: I love gear and apparel that could have come out of a 1900s-era general store. It looks cool, works great, and I know it will last so long as I take care of it.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/bespoke-morning-reads.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4008,7 +4019,7 @@
             <guid isPermaLink="true">http://www.marco.org/2014/01/08/retina-imac-mac-pro-prediction</guid>
             <pubDate>Fri, 10 Jan 2014 02:57:05 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Like Casey Liss I did not particularly care for John Siracusa and Marco Arment&#8217;s incessant Mac Pro banter, but kept listening because I enjoy their thoughts and opinions so much. I found Marco&#8217;s latest post, however, where he explained why he believes we will not see a true Retina iMac-caliber display for quite some time, very interesting.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -4022,7 +4033,7 @@
             <guid isPermaLink="true">http://vintagezen.com/zen/2014/1/8/the-hard-way</guid>
             <pubDate>Thu, 09 Jan 2014 20:42:45 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;Leading up to &lt;a href="https://twitter.com/linusedwards"&gt;Linus Edwards&#8217;s&lt;/a&gt; &lt;a href="http://vintagezen.com/zen/2014/1/8/the-hard-way"&gt;promise&lt;/a&gt; of an article after he, I, and a number of others had an incredibly long conversation about growing one&#8217;s readership and attracting attention on Twitter yesterday, I had been toying with the idea of writing one myself. However, when he decided to put his own post together, I chose to forgo mine until he published his. As it turns out, I did the right thing: reading &lt;em&gt;The Hard Way&lt;/em&gt; earlier this afternoon, it was as if I had written it myself. Linus covered all the points I would have and even told a story that could have just as easily fit my experience working to drive traffic towards my work. All in all, an excellent retrospective and a great starting point for anyone thinking of launching their own website.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/the-hard-way.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4347,7 +4358,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/the-case-for-3x.html</guid>
             <pubDate>Tue, 31 Dec 2013 22:58:31 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;The only thing I love more than listening to podcasts is writing about them. During &lt;a href="http://curiousrat.com/the-state-of-podcasting-2013"&gt;the last curfuffle&lt;/a&gt; I wrote &lt;a href="http://zacs.site/blog/podcasting-state-of-the-union.html"&gt;&lt;em&gt;Podcasting State of the Union&lt;/em&gt;&lt;/a&gt; where I did my best to provide counterpoints for the flaws Harry Marks pointed out in the podcasting industry. To my delight, &lt;a href="https://twitter.com/imyke/status/387840995465105408"&gt;many&lt;/a&gt; &lt;a href="https://twitter.com/caseyliss/status/387879318774620160"&gt;agreed&lt;/a&gt; &lt;a href="https://twitter.com/mattalexand/status/387917466325622784"&gt;with&lt;/a&gt; me. After a few days the heat died down though, and I did not expect to have another opportunity to discuss this topic for a while. Then Ben Brooks decided to stir the pot once more with &lt;a href="http://brooksreview.net/2013/12/podcasts-worries/"&gt;&lt;em&gt;Why Tech Podcasts Bother Me&lt;/em&gt;&lt;/a&gt;, and &lt;a href="http://buildingtwenty.net/posts/podcasts"&gt;many&lt;/a&gt; &lt;a href="http://crateofpenguins.com/blog/2013-12-that-podcast-bombshell"&gt;responded&lt;/a&gt; with wildly different opinions. Perhaps most notably, Andrew Clark and Zac Cichy of &lt;a href="http://themenubar.net"&gt;The Menu Bar&lt;/a&gt; surprised me in &lt;a href="http://themenubar.net/podcastfeed/tmb-ep034"&gt;episode thirty-four&lt;/a&gt; by agreeing with the majority of Ben&#8217;s points.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/the-case-for-3x.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4358,7 +4369,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/nerd-decentralize-thyself.html</guid>
             <pubDate>Tue, 31 Dec 2013 15:13:05 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;Back in April &lt;a href="http://zacs.site/blog/email-list-and-rss.html"&gt;I linked to&lt;/a&gt; Rich Stevens&#8217; &lt;a href="http://www.dieselsweeties.com/blog/?p=928"&gt;announcement&lt;/a&gt; of a new newsletter he planned to begin publishing once or twice a week focusing on &#8220;A little business, a little gadgetry, a little art and writing, and a few dick jokes.&#8221; Since then I have enjoyed his seventeen posts immensely, and the latest was no exception: in &lt;em&gt;Nerd, Decentralize Thyself&lt;/em&gt;&lt;sup id="fnref1"&gt;&lt;a href="http://zacs.site/blog/nerd-decentralize-thyself.html#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; Rich Stevens spoke to the recent trend towards relying on platforms such as Tumblr and Twitter, and how despite liking both he would never forfeit ownership of his website. He went on to call for more people devoted to pointing out great work in order to solve the discoverability problem those aforementioned services aim to obviate as a way of decreasing our reliance on third parties to do great work and, hopefully, make building a website back into something cool again. If you find this description at all interesting, subscribe to the newsletter; you will not be disappointed.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/nerd-decentralize-thyself.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4369,7 +4380,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/testing-the-apple-tax.html</guid>
             <pubDate>Tue, 31 Dec 2013 03:08:32 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;Prompted by an article Zach Epstein posted to BGR last Thursday titled &lt;a href="http://bgr.com/2013/12/26/mac-pro-windows-diy-cost/"&gt;&lt;em&gt;Testing the &#8216;Apple tax': What would it cost to build a Windows version of the new Mac Pro?&lt;/em&gt;&lt;/a&gt; I planned to link his piece as a smug counterpoint to all the people I know who like saying that they can build a more powerful machine for &#8220;1/3 the cost"&lt;sup id="fnref1"&gt;&lt;a href="http://zacs.site/blog/testing-the-apple-tax.html#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; of my overpriced Apple computer. As I thought more about the notion of an Apple tax though, I realized I had more to say on this topic than a juvenile &#8220;ha ha&#8221;.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/testing-the-apple-tax.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4495,7 +4506,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/ben-thompson-on-misunderstood.html</guid>
             <pubDate>Tue, 17 Dec 2013 19:32:31 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;Having updated &lt;a href="http://stratechery.com/2013/misunderstood/"&gt;his article on Apple&#8217;s latest ad&lt;/a&gt;, Ben Thompson finally delved in to the reason so many fell in love with this commercial in the first place, and &lt;a href="https://twitter.com/drewcosten/status/412928515395158017"&gt;the reason&lt;/a&gt; so many have talked about it. As I said &lt;a href="http://zacs.site/blog/misunderstood.html"&gt;earlier&lt;/a&gt; this video hits so close to home because it does not focus on feature comparisons or implausible situations necessitating eighteen processors, but instead on the experiences Apple&#8217;s devices enable:&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/ben-thompson-on-misunderstood.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4517,7 +4528,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/changes-to-first-crack.html</guid>
             <pubDate>Tue, 17 Dec 2013 02:11:02 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;In &lt;a href="http://zacs.site/blog/disavow-gaming.html"&gt;&lt;em&gt;The One Where I Disavow Gaming&lt;/em&gt;&lt;/a&gt; I outlined two goals I wished to work towards using this newfound time of mine previously wasted &#8220;mindlessly tapping the W, A, S, and D keys for hours on end": to write more regularly and code more frequently. A week later the former remains a work in progress, while I can happily report that the latter has gone so well I not only successfully fixed a number of outstanding bugs and implemented quite a few new features in the process, but went on to add some impressive functionality I hadn&#8217;t even considered before then as well. Although this focus only allowed for a single post most days last week, I couldn&#8217;t be happier with the results.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/changes-to-first-crack.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4528,7 +4539,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/master-and-commander.html</guid>
             <pubDate>Fri, 13 Dec 2013 12:04:41 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;Last night I &lt;a href="http://zacs.site/blog/more-coin.html"&gt;took Coin to task&lt;/a&gt; for extending their pre-order sale, again, in to the new year rather than allowing it to expire as should have happened sometime today. I briefly explained how this move has further devalued their product by virtually solidifying it at the $50 price point, and then talked about how Coin&#8217;s latest escapade showed a startling lack of respect for the individuals who put their hard-earned cash on the line so that this company could fulfill its one job in life by making a great device. Unlike the causes behind the former though, which I could explain with relatively simple examples, the latter&#160;&#8212;&#160;distilling the relationship between maker and consumer&#160;&#8212;&#160;proved much more difficult. I touched on this topic in &lt;a href="http://zacs.site/blog/thoughts-regarding-coin.html"&gt;my past&lt;/a&gt; articles &lt;a href="http://zacs.site/blog/bad-coin.html"&gt;on Coin&lt;/a&gt;, but have not actively sought to fully flesh out my thoughts on this topic until now.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/master-and-commander.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4594,7 +4605,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/disavow-gaming.html</guid>
             <pubDate>Mon, 09 Dec 2013 02:47:40 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;As I write this I have wasted almost an entire weekend. I got home Friday afternoon and spent the evening collecting gift ideas for my family and playing a video game; Saturday I wrote the first draft of an essay and reviewed three months&#8217; worth of notes for an upcoming exam all before lunchtime, then proceeded to waste five hours playing that same game before cramming &lt;a href="http://zacs.site/blog/missing-the-forest-for-the-trees.html"&gt;an article&lt;/a&gt; in with one foot out the door as I prepared for my girlfriend&#8217;s choir concert that evening. After the concert we went to a party. Sunday morning I dragged myself out of bed for church, and then proceeded to spend the rest of my day playing video games once again. I have probably spent just as much time gaming this weekend as I have sleeping, and I really despise this about myself.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/disavow-gaming.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4663,7 +4674,7 @@
             <guid isPermaLink="true">http://huckberry.com/blog/posts/filson-4x4</guid>
             <pubDate>Fri, 06 Dec 2013 13:12:47 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;I love overachievers in the world of cars much more than in person, hence my unbridled enthusiasm when &lt;a href="http://zacs.site/blog/superhero-vehicles.html"&gt;I happened across&lt;/a&gt; Mercedes&#8217; six-wheeled monster the G63 AMG and Ghe-O&#8217;s indomitable Rescue. Something about these &lt;em&gt;trucks&lt;/em&gt;, for their rugged ability to tackle literally any terrain imaginable truly epitomizes the colloquial definition of the term&lt;sup id="fnref1"&gt;&lt;a href="http://huckberry.com/blog/posts/filson-4x4#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;, awakens a visceral desire to pack my backpack and spend a long weekend trekking through uninhabited back country with nothing but my thoughts to keep my company; they ignite within me a base midwestern American desire to go outside and spend time in nature. Unsurprisingly, then, Filson&#8217;s Jeep 4x4 was no exception. My only hesitation in pushing its limits on a narrow mountain trail would be that I tarnish its carefully crafted exterior and spoil the bespoke interior; once I got past that though, I have no doubt it could handle anything I decided to throw at it.&lt;/p&gt;
                 
                 
@@ -4680,7 +4691,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/bezos-and-his-drones.html</guid>
             <pubDate>Fri, 06 Dec 2013 00:13:00 GMT</pubDate>
             <description>
-                
+                &lt;/div&gt;
 &lt;p&gt;Towards the end of &lt;a href="http://stratechery.com/2013/amazon-benefits-vision/"&gt;&lt;em&gt;Amazon and the Benefits of Vision&lt;/em&gt;&lt;/a&gt; Ben Thompson explained the importance of vision&#160;&#8212;&#160;and the consequences of a deficiency in this department&#160;&#8212;&#160;using many of today&#8217;s top tech companies as examples. At that point not particularly interested in Amazon&#8217;s alleged plans slated for years down the road,, I found this all too brief examination much more fascinating than his actual topic. And then I read &lt;a href="http://nymag.com/daily/intelligencer/2013/12/amazon-drones-and-pre-lobbying.html"&gt;an article by Kevin Roose of the New York Magazine&lt;/a&gt;, which John Gruber linked to &lt;a href="http://daringfireball.net/linked/2013/12/03/amazon-drones-lobbying"&gt;on Tuesday&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/bezos-and-his-drones.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4713,7 +4724,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/amateur-hour-is-over.html</guid>
             <pubDate>Wed, 27 Nov 2013 14:25:16 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;I love The Verge&#160;&#8212;&#160;I really do. Not long after posting &lt;a href="http://zacs.site/blog/bullies.html"&gt;&lt;em&gt;Credibility and Bullies with Blogs&lt;/em&gt;&lt;/a&gt;, where I took Josh Topolsky to task for his wholly inappropriate reaction to many justifiable criticisms regarding his publication&#8217;s device reviews, I subscribed to The Verge. Today it not only serves as my primary news source, but I also follow The Vergecast and tune in for their live coverage of Apple&#8217;s events. Lately, however, I have been increasingly disappointed with their work.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/amateur-hour-is-over.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4724,7 +4735,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/book-two-spirits.html</guid>
             <pubDate>Wed, 27 Nov 2013 00:51:48 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;Back in May I wrote &lt;a href="http://zacs.site/blog/nickelodeons-experiment.html"&gt;&lt;em&gt;Nickelodeon&#8217;s Experiment&lt;/em&gt;&lt;/a&gt; where I talked about the network&#8217;s hit animated series &lt;em&gt;Avatar: The Last Airbender&lt;/em&gt; and its sequel, &lt;em&gt;Avatar: The Legend of Korra&lt;/em&gt;. Last week the latter&#8217;s show finished its second season with the final episode of &#8220;Book Two: Spirits&#8221;. In preparation for the third, I thought I would post a mid-series update. As with my last article on this topic, spoiler alert, I will give away big parts of the story in this piece; if you haven&#8217;t seen the excellence that is Nickelodeon&#8217;s Avatar franchise, read the next two paragraphs and then go watch it before continuing on.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/book-two-spirits.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4757,7 +4768,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/a-year-of-firsts.html</guid>
             <pubDate>Thu, 21 Nov 2013 18:28:11 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;This year marked the first time I have taken any interest in reading long-form hardware and software reviews of any kind. Previously, as I described in &lt;a href="http://zacs.site/blog/diary-of-a-convert.html"&gt;&lt;em&gt;Diary of a Convert&lt;/em&gt;&lt;/a&gt;, I rarely made it past the first few pages; this time around, however, I not only plowed through John Siracusa&#8217;s twenty-four page epic, but many others&#8217; as well. I learned a great deal about Apple&#8217;s latest hardware and software offerings through this process, something I look to repeat from here on out. In preparation for next year, then, I paid great attention to reviewers and their work so that rather than shopping around for yet another iOS 8 review next fall, I can instead read the thoughts of a select few writers and in doing so enable myself to devote much more time and energy to my own work, which trends would indicate will increase once more after Tim Cook closes his keynote address.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/a-year-of-firsts.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4768,7 +4779,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/retrospectively-thankful.html</guid>
             <pubDate>Wed, 20 Nov 2013 00:44:56 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;I think about my English classes almost every day when I sit down to write, and even some days when I don&#8217;t. I think about how much I hated them, how I dreaded each pointless class and similarly meaningless assignment, and then I think about the eternal debt of gratitude I owe those three teachers for seeing me through.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/retrospectively-thankful.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4779,7 +4790,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/more-on-the-ipad-pro.html</guid>
             <pubDate>Mon, 18 Nov 2013 13:11:33 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;I feel like Gene Munster, where just as he perpetually beats upon his iTV drum so, too, do I &lt;a href="http://zacs.site/blog/the-ipad-pro.html"&gt;all&lt;/a&gt; too &lt;a href="http://zacs.site/blog/clocking-down-the-mini.html"&gt;frequently&lt;/a&gt; return to the iPad Pro. Since Apple&#8217;s iPad event, after receiving my MacBook Pro, and all throughout the ensuing period during which I began to define the different roles this new device and my trusty iPad would fill, this topic and Tim Cook&#8217;s comment to that effect have occupied a great deal of my consciousness. Unfortunately, I could find no written record of Tim Cook referring to such a device despite numerous verbal accounts; however, when questioned before October&#8217;s iPad event as to whether Apple would release an iPad Pro, he responded (with a smile) in saying, &#8220;We already make one: the 11&#38;#38;#8243; MacBook Air.&#8221; I find this statement interesting for a number of reasons.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/more-on-the-ipad-pro.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4812,7 +4823,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/thoughts-regarding-coin.html</guid>
             <pubDate>Fri, 15 Nov 2013 15:37:34 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;Yesterday afternoon Benedict Evans &lt;a href="https://twitter.com/BenedictEvans/status/401038000353992704"&gt;had something interesting to say&lt;/a&gt; regarding a new product-service pairing called Coin, questioning why anyone considered it anything more than a toy. Having never heard of the site, I continued scrolling until coming across &lt;a href="https://twitter.com/codyfink/status/401039468821745664"&gt;Cody Fink&#8217;s referral link&lt;/a&gt;, at which point my &#8220;when in doubt wait until more than one person talks about it before taking the bait&#8221; rule kicked in and I opened Coin&#8217;s website. Over the next 1:45 Adam Lisagor serenaded me in a promo video nothing short of beautiful&lt;sup id="fnref1"&gt;&lt;a href="http://zacs.site/blog/thoughts-regarding-coin.html#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; that brought me&#160;&#8212;&#160;generally very averse to spending any significant amount of money&#160;&#8212;&#160;the closest I have ever come to impulse-buying anything, and especially something in the neighborhood of $50.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/thoughts-regarding-coin.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4900,7 +4911,7 @@
             <guid isPermaLink="true">http://ben-evans.com/benedictevans/2013/8/8/amazons-profits</guid>
             <pubDate>Sun, 10 Nov 2013 19:32:16 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;&lt;a href="http://zacs.site/blog/benedict-evans-on-simplicity.html"&gt;Speaking of Ben Evans and Amazon&lt;/a&gt; back in August&lt;sup id="fnref1"&gt;&lt;a href="http://ben-evans.com/benedictevans/2013/8/8/amazons-profits#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;, when Amazon was the hot topic of discussion amongst the small circles we tend to frequent, he neatly and concisely explained many of the mysteries surrounding the company. For instance, why does Amazon turn nearly zero profit? And why, for crying out loud, do so many have such considerable faith in this curious company?&lt;/p&gt;
                 
                 &lt;div id="fn1" class="footnote"&gt;
@@ -4914,7 +4925,7 @@
             <guid isPermaLink="true">http://ben-evans.com/benedictevans/2013/10/27/simplicity</guid>
             <pubDate>Sun, 10 Nov 2013 19:00:04 GMT</pubDate>
             <description>
-                
+                &lt;/div&gt;
 &lt;p&gt;From last month but no less applicable now, Benedict Evans takes a few moments to break down the core businesses of Apple, Amazon, and Google. And that&#8217;s all it took: a few moments. If only more &#8220;tech journalists&#8221; would read this before writing&#160;&#8212;&#160;or performing some semblance of the act&#160;&#8212;&#160;their next article.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/benedict-evans-on-simplicity.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4972,7 +4983,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/harry-marks-interviews-matt-alexander-on-need.html</guid>
             <pubDate>Wed, 06 Nov 2013 23:56:23 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;In the works for &lt;a href="http://mykehurley.net/blog/need"&gt;nearly a year&lt;/a&gt;, Matt Alexander&#8217;s new startup Need addresses a fascinating deficiency of not just fashion, but any degree of concern with respect to one&#8217;s physical appearance all too prevalent in today&#8217;s society, especially amongst young people. At nineteen a young person myself, I speak from first-hand experience: you would not believe the things I see my peers wearing, especially on a college campus. I am not wholly exempt in this respect&#160;&#8212;&#160;I have worn my fair share of tattered jeans and undershirts in public&#160;&#8212;&#160;but I also have enough sense to realize my shortcomings in this area. And acceptance is the first step towards recovery, right?&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/harry-marks-interviews-matt-alexander-on-need.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -4983,7 +4994,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/diary-of-a-convert.html</guid>
             <pubDate>Wed, 06 Nov 2013 00:07:26 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;Following Apple&#8217;s event last week and after I ordered a top of the line 15&#8221; Retina MacBook Pro, I sat down to read John Siracusa&#8217;s &lt;a href="http://arstechnica.com/apple/2013/10/os-x-10-9/"&gt;famous Mavericks review&lt;/a&gt;. I started last year&#8217;s &lt;a href="http://arstechnica.com/apple/2011/07/mac-os-x-10-7/"&gt;Lion review&lt;/a&gt; with good intentions, but without any incentive to finish I only read a few pages. This year though, with a shiny new Mac already on its way from China, I finally had more of a reason to persevere than simply to say that I had. Surprisingly, that gray &#8220;24&#8221; page marker&#160;&#8212;&#160;for I read it on Ars just as &lt;a href="http://hypercritical.co/2013/10/22/mavericks"&gt;John suggested&lt;/a&gt;&#160;&#8212;&#160;turned up much faster than I expected it to after more than 24,000 words; unsurprisingly, &lt;a href="http://www.marco.org/2013/10/30/siracusa-mavericks"&gt;I enjoyed every minute of John&#8217;s epic&lt;/a&gt;. Less than a week later, I received a FedEx email whose subject line told me everything I needed to know: &#8220;FedEx shipment delivered&#8221;.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/diary-of-a-convert.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -5053,7 +5064,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/the-ipad-pro.html</guid>
             <pubDate>Sat, 26 Oct 2013 13:47:08 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;Shortly after Apple&#8217;s keynote earlier this week, &lt;a href="https://twitter.com/apollozac/status/392726531560443904"&gt;Zac Hall made an interesting and thought-provoking quip&lt;/a&gt; on Twitter:&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/the-ipad-pro.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -5064,7 +5075,8 @@
             <guid isPermaLink="true">http://shawnblanc.net/2013/10/core-values/</guid>
             <pubDate>Sat, 26 Oct 2013 02:40:22 GMT</pubDate>
             <description>
-                &lt;p&gt;&#8220;My grandfather lived to be 100 years old. If the Blanc blood running through my veins holds up like my grandfather&#8217;s did, then I&#8217;ve still got 68 years to go. Do I really want to spend one ounce of energy trying to make random people on the internet like me? Will that matter at all in six decades from now? I&#8217;d rather spend that energy strengthening my own core values, dating my wife, building life-long relationships with my sons, serving my friends, and doing the best creative work I can possibly do."&lt;/p&gt;
+                &lt;blockquote&gt;
+&lt;p&gt;&#8220;My grandfather lived to be 100 years old. If the Blanc blood running through my veins holds up like my grandfather&#8217;s did, then I&#8217;ve still got 68 years to go. Do I really want to spend one ounce of energy trying to make random people on the internet like me? Will that matter at all in six decades from now? I&#8217;d rather spend that energy strengthening my own core values, dating my wife, building life-long relationships with my sons, serving my friends, and doing the best creative work I can possibly do."&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/core-values.html'&gt;Read more...&lt;a&gt;
             </description>
         </item>
@@ -5074,7 +5086,7 @@
             <guid isPermaLink="true">http://www.marco.org/2013/10/18/podcast-app-playback-speeds</guid>
             <pubDate>Sat, 26 Oct 2013 02:39:58 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;"Overcast will use speed-accurate labels. I&#8217;ll take the heat in reviews.&#8221;&lt;/p&gt;
                 
                 
@@ -5146,7 +5158,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/fsr-reviews-homeland.html</guid>
             <pubDate>Tue, 15 Oct 2013 17:32:33 GMT</pubDate>
             <description>
-                &lt;/ol&gt;
+                
 &lt;p&gt;Film School Rejects&#8217; Inkoo Kang has been posting fantastic reviews of each new Homeland episode shortly after their premiere. Now at three articles, one whole review for each of the three episodes out to date, I have been thoroughly enjoying her examination of the plot lines, undertones, direction, and parallels present in this show almost as much as I enjoy watching each episode.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/fsr-reviews-homeland.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -5185,7 +5197,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/sherlocking-everyone-else.html</guid>
             <pubDate>Mon, 14 Oct 2013 20:43:16 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;The last few years have seen a great proliferation of linkblogs, by far and away the most popular topic of which is technology and, specifically, Apple. Nevertheless the likes of John Gruber&#160;&#8212;&#160;who did not, despite many erroneous beliefs, invent either the format or topic&#160;&#8212;&#160;and Shawn Blanc have made their mark as entrants to a space established long before their arrival. This not only happens in the blogging space, but the podcasting industry as well where interview shows like Daniel Jalkut&#8217;s &lt;em&gt;Bitsplitting&lt;/em&gt; came in and &lt;em&gt;sherlocked&lt;/em&gt;&#160;&#8212;&#160;ugh&#160;&#8212;&#160;the existing space, which already had &lt;em&gt;plenty&lt;/em&gt; of interview programs, with a really great show.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/sherlocking-everyone-else.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -5196,7 +5208,7 @@
             <guid isPermaLink="true">http://stratechery.com/2013/site-announcement-im-leaving-cubed-podcast/</guid>
             <pubDate>Mon, 14 Oct 2013 20:00:31 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;This is how one should leave a podcast, respectful of both his listeners and co-hosts alike. &lt;a href="http://zacs.site/blog/regarding-the-talk-show.html"&gt;Not that I&#8217;m pointing any fingers&lt;/a&gt;.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -5214,7 +5226,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/the-ultimate-plot-intensifier.html</guid>
             <pubDate>Sun, 13 Oct 2013 22:21:57 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                &lt;/blockquote&gt;
 &lt;p&gt;The question of whether Clark Kent as Superman should or should not kill is an extremely interesting one, and one I have spent quite a bit of time thinking about since seeing &lt;em&gt;Man of Steel&lt;/em&gt; a few weeks ago. For the uninitiated, the controversy sprang up when Superman killed General Zod to save a family after destroying the whole of Metropolis throughout the course of their battle.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/the-ultimate-plot-intensifier.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -5247,7 +5259,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/podcasting-state-of-the-union.html</guid>
             <pubDate>Tue, 08 Oct 2013 23:26:10 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;As a huge fan of the medium myself, over the last two weeks I have followed a burgeoning discussion on the podcasting industry with great interest. Across the board, the discourse has remained almost universally positive: &lt;a href="http://512pixels.net/2013/09/because-podcasts-awesome/"&gt;Stephen Hacket&lt;/a&gt;, &lt;a href="http://unretrofied.com/blog/2013/9/26/ios-7-and-the-state-of-podcast-apps"&gt;Chris Gonzales&lt;/a&gt;, &lt;a href="http://www.macstories.net/linked/ios-7-and-podcast-apps/"&gt;Federico Viticci&lt;/a&gt;, and &lt;a href="http://512pixels.net/2013/10/hurley-podcasting/"&gt;Myke Hurley&lt;/a&gt; have all expressed considerable enthusiasm for the changes iOS 7 in particular signals for this space, and great hope for its future. Unsurprisingly, not all share these positive sentiments.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/podcasting-state-of-the-union.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -5331,7 +5343,7 @@
             <guid isPermaLink="true">https://overcast.fm/</guid>
             <pubDate>Wed, 25 Sep 2013 22:22:43 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;I absolutely love podcasts. Much to my girlfriend&#8217;s confusion, I might add. After Marco Arment sold Instapaper in April, after Yahoo! bought Tumblr.&lt;sup id="fnref1"&gt;&lt;a href="https://overcast.fm/#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; in May, and after he sold The Magazine shortly thereafter, only in my wildest dreams did I hope his elusive next venture would lead Marco to create a podcast client. Then, last Sunday at XOXO, my dream came true.&lt;/p&gt;
                 
                 
@@ -5351,7 +5363,7 @@
             <guid isPermaLink="true">http://stratechery.com/2013/clayton-christensen-got-wrong/</guid>
             <pubDate>Wed, 25 Sep 2013 21:30:11 GMT</pubDate>
             <description>
-                
+                &lt;/div&gt;
 &lt;p&gt;Another great article by Ben Thompson, this time on Clay Christensen&#8217;s interesting disruption theories and Apple&#8217;s approach in making products that both defy them and motivate people to purchase en masse. Come for the insights into Apple, and stay for his dissection of Christensen&#8217;s widely-regarded theory; this article is well worth the read.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/what-clayton-christensen-got-wrong-in-his-theory-of-lowend-disruption.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -5434,7 +5446,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/i-finally-understand-bias.html</guid>
             <pubDate>Thu, 19 Sep 2013 10:02:39 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;Last week, amidst the frenzy preluding Apple&#8217;s impending iPhone event, I posted an article titled &lt;a href="http://zacs.site/blog/intapaper-5.html"&gt;&lt;em&gt;Instapaper 5&lt;/em&gt;&lt;/a&gt;. I did not have early access to a beta or any insight as to the direction Betaworks planned on taking the service; instead, I merely wished to put forth a possible launch strategy for the upcoming update and outline a number of improvements I had been considering. I posted the article with minor expectations, thinking it would attract the usual eight to twelve pageviews; what came next took me completely by surprise.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/i-finally-understand-bias.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -5528,7 +5540,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/horace-dedieu-on-the-alphabet.html</guid>
             <pubDate>Sun, 15 Sep 2013 16:56:44 GMT</pubDate>
             <description>
-                &lt;/div&gt;
+                
 &lt;p&gt;In the first in a wonderful series of articles, &lt;a href="http://www.asymco.com/2013/09/11/c-is-for-cognitive-illusion/"&gt;&lt;em&gt;C is for Cognitive Illusion&lt;/em&gt;&lt;/a&gt;, Horace discussed the positioning of the iPhone 5C, how it differed from past years&#8217; portrayal of the &#8220;n-1&#8221; product, and what this means for the iPhone line:&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/horace-dedieu-on-the-alphabet.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -6249,7 +6261,7 @@
             <guid isPermaLink="true">https://blog.pinboard.in/2013/06/persuading_david_simon/</guid>
             <pubDate>Thu, 20 Jun 2013 23:54:07 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;While I don&#8217;t agree with many of the author&#8217;s points, nor do I agree with her overarching theme, she did, however, say a number of interesting things throughout the piece. I tried, for the most part, to stay away from articles written on this topic, but this one is well worth the read.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -6263,7 +6275,7 @@
             <guid isPermaLink="true">http://shawnblanc.net/2013/06/ios-7-and-apps-with-personality/</guid>
             <pubDate>Thu, 20 Jun 2013 02:06:04 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;"What makes an app great is the little things &#160;&#8212;&#160; the small details that take something normal and turn it into something extraordinary. I see iOS 7 as a blank canvas &#160;&#8212;&#160; an &#8216;un-design&#8217; if you will. The goal of a 3rd-party isn&#8217;t to copy the stock apps pixel for pixel (that wasn&#8217;t the goal for iOS 1-6, and it&#8217;s not the goal now). Rather this is Apple saying it&#8217;s time to re-imagine what mobile software should look and act like. Five-hundred million people are using iOS devices, and it&#8217;s time for the training wheels to come off.&#8221;&lt;/p&gt;
                 
                 
@@ -6385,7 +6397,7 @@
             <guid isPermaLink="true">http://mattgemmell.com/2013/06/12/ios-7/</guid>
             <pubDate>Wed, 12 Jun 2013 21:56:19 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Wonderfully worded and impressively well thought-out, Matt Gemmel&#8217;s article &lt;em&gt;iOS 7&lt;/em&gt; is easily the best piece on the topic I have read since the WWDC keynote address. In explaining the motivation behind Apple&#8217;s complete UI overhaul in iOS7, he began his one-two punch with this paragraph:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -6406,7 +6418,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/anti-ios-7-anger.html</guid>
             <pubDate>Wed, 12 Jun 2013 21:12:56 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;I try to, for the most part, stay positive when I write on here. Instead of taking a page out of Jim Dalrymple&#8217;s play book, not that there is anything wrong with his approach, and calling shenanigans and bullshit when I see shenanigans and bullshit, I try to &#8220;take the high road&#8221; and either ignore bad writing and poorly-formed opinions altogether, or criticize them generously. In the wake of the iOS 7 announcement though, many people have said things that I consider&#160;&#8212;&#160;quite frankly&#160;&#8212;&#160;stupid, especially concerning iOS 7&#8217;s overhauled interface.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/anti-ios-7-anger.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -6453,7 +6465,7 @@
             <guid isPermaLink="true">http://shawnblanc.net/2011/02/writing-vs-writing/</guid>
             <pubDate>Mon, 03 Jun 2013 21:00:24 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Shawn Blanc in an article published over two years ago, which he linked to earlier this afternoon in &lt;a href="http://shawnblanc.net/2013/06/maierson-editing/"&gt;a linked-list post&lt;/a&gt;:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -6467,7 +6479,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/getting-out-of-the-office.html</guid>
             <pubDate>Fri, 31 May 2013 21:58:38 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;For the past three days, I&#8217;ve gotten out of &#8220;the office&#8221; to write, meaning instead of in my room where I usually write, I went outside and sat in the backyard. And it&#8217;s done wonders for my work.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/getting-out-of-the-office.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -7009,7 +7021,7 @@
             <guid isPermaLink="true">https://medium.com/editors-picks/9ae1727d2479</guid>
             <pubDate>Thu, 02 May 2013 15:40:53 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Two interesting anecdotes showing a different, less praiseworthy side of Steve Jobs. The man was not perfect, as many purported him to be in the sad hours following his death, but a mere mortal not just like the rest of us, but human nonetheless.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -7023,7 +7035,7 @@
             <guid isPermaLink="true">http://www.rumproarious.com/2013/04/18/how-large-will-the-payed-feed-reader-market-be/</guid>
             <pubDate>Thu, 02 May 2013 01:01:26 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;"This isn&#8217;t going to be a huge world changing ecosystem, but there is room for one little monster to take it all.&#8221;&lt;/p&gt;
                 
                 
@@ -7048,7 +7060,7 @@
             <guid isPermaLink="true">http://www.sugarrae.com/rants-in-bitchland/women-tech-conferences-and-bs/</guid>
             <pubDate>Wed, 01 May 2013 14:40:56 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;In the past I have written one article about women and equality, &lt;a href="http://zacs.site/blog/a-crying-shame.html"&gt;&lt;em&gt;A Crying Shame&lt;/em&gt;&lt;/a&gt;. I am quite proud of that article. So much so, in fact, that unlike many of the other topics I rehash here, I have felt no need to write anything more on the subject. I did feel pushed to at least mention the article linked at the head of this post, however, especially after listening to what I seem to recall was episode #114 of Back to Work a few weeks ago. In &lt;a href="http://5by5.tv/b2w/114"&gt;I&#8217;m Moving to FudgePacker&lt;/a&gt;, Merlin Mann talked about misconstrued statistics and how improper representations of inaccurate statistics can lead to incorrect conclusions on important issues when in actuality, maybe&#160;&#8212;&#160;just maybe&#160;&#8212;&#160;it isn&#8217;t quite as bad as everyone likes to stand up and claim it to be.&lt;/p&gt;
                 
                 
@@ -7068,7 +7080,7 @@
             <guid isPermaLink="true">http://yudkowsky.net/rational/the-simple-truth</guid>
             <pubDate>Tue, 30 Apr 2013 19:17:29 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;When I first came across this article a few weeks ago while browsing Less Wrong, Eliezer Yudkowsky&#8217;s chronicle struck me as the perfect example illustrating the importance of a number of different things, primary of which was the significance of asking the right question. Alongside this topic the author also touched on the value of keeping an open mind, possessing a willingness to abandon pre-conceived notions when presented with new evidence, and arguing in univocal terms. It&#8217;s long, but a very well-written and thought-provoking piece.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/the-simple-truth.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -7372,7 +7384,7 @@
             <guid isPermaLink="true">http://www.dieselsweeties.com/blog/?p=928</guid>
             <pubDate>Fri, 05 Apr 2013 14:25:15 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;For anyone that hasn&#8217;t already read Rich Stevens&#8217; post announcing his new email list and RSS feed, what better way could one possibly introduce something? So exceptionally well done; I look forward to more great work in this new medium.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -7386,7 +7398,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/the-tsa-agents-were-delightful.html</guid>
             <pubDate>Fri, 05 Apr 2013 14:24:12 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;I just flew home after three months in Minnesota. The TSA agents at the Minneapolis-Saint Paul airport in Minnesota were &lt;em&gt;delightful&lt;/em&gt;: the man at the end of the security line checking my ID and boarding pass joked with me as I went through; the agent on the other side of the body scanner couldn&#8217;t have been nicer. Then, as I was trying to find my gate on my boarding pass and undoubtedly looking quite confused, a TSA agent that happened to be walking by stopped and asked if I needed any help. She didn&#8217;t have to stop; she could have kept on walking, but she didn&#8217;t, and for that I was very grateful despite not needing her assistance.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/the-tsa-agents-were-delightful.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -7553,7 +7565,7 @@
             <guid isPermaLink="true">http://brooksreview.net/2013/03/ipad-mini-3/</guid>
             <pubDate>Wed, 27 Mar 2013 16:50:49 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;The iPad Mini, like the original iPad, launched to the tune of naysayers questioning the usefulness of a tablet in general, and especially one in such a form factor. After all, who could use the iPad for actual work? It was obviously a content-consumption device rather than a device capable of creating new and interesting things. Obviously. But now we have the iPad 4, and now we have the iPad Mini. And now we have two new ways to create whenever and wherever is convenient.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -7567,7 +7579,7 @@
             <guid isPermaLink="true">http://www.theverge.com/2013/3/26/4147038/offline-boiling-it-down-to-the-essentials</guid>
             <pubDate>Wed, 27 Mar 2013 16:12:45 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;Paul Miller occasionally sends out dispatches, as The Verge calls them, articles about one thing or another penned by a writer who has forsaken the internet for an entire year. His last piece I read, &lt;a href="http://www.theverge.com/2013/2/6/3955678/offline-love-loss-dating-without-facebook"&gt;&lt;em&gt;Offline: Love, Loss, and Dating Without Facebook&lt;/em&gt;&lt;/a&gt;, was interesting only insofar as a story about an anticlimactic love endeavor can be; his latest article, linked at the top of this post, is much, much better. As Paul chronicled his difficulties finding the motivation to make good use of his newfound time, &lt;a href="http://zacs.site/blog/increasingly-prevalent-realistic-and-irrelevant.html"&gt;I couldn&#8217;t help but relate&lt;/a&gt;.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -7602,7 +7614,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/settling.html</guid>
             <pubDate>Wed, 27 Mar 2013 03:27:22 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Something I found in a note almost lost in the sea that is the host of half-baked ideas begging to be honed to a comprehensible piece:&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/settling.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -7635,7 +7647,7 @@
             <guid isPermaLink="true">http://www.marco.org/2013/03/26/google-reader-readers</guid>
             <pubDate>Tue, 26 Mar 2013 20:45:58 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Marco Arment and MG Siegler on potential reader loss due to Google Reader&#8217;s impending demise:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -7649,7 +7661,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/citational-fallacy.html</guid>
             <pubDate>Mon, 25 Mar 2013 16:34:51 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;In the past few months I have written many essays necessitating the use of citations as a manner through which to lend credence to some datum or another. As you may have surmised from this article&#8217;s title though, I believe the current model for determining credible citations to be broken. Take, for example, XKCD comic #976, &lt;a href="http://xkcd.com/978/"&gt;Citogenesis&lt;/a&gt;. In this comic, Randal Munroe once again displays brilliance by showing &lt;a href="http://www.forbes.com/sites/alexknapp/2011/11/16/xkcd-explains-where-internet-citations-come-from/"&gt;where citations come from&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/citational-fallacy.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -7660,7 +7672,7 @@
             <guid isPermaLink="true">http://www.marco.org/2013/03/20/android-under-new-google</guid>
             <pubDate>Fri, 22 Mar 2013 15:49:33 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Speaking of &lt;a href="http://zacs.site/blog/why-i-left-google.html"&gt;New Google&lt;/a&gt;, Marco talks about what it could mean for the future of Android. Particularly interesting to me were his final thoughts at the end of the piece:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -7674,7 +7686,7 @@
             <guid isPermaLink="true">http://blogs.msdn.com/b/jw_on_tech/archive/2012/03/13/why-i-left-google.aspx</guid>
             <pubDate>Fri, 22 Mar 2013 15:30:16 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;James Whittaker on Google&#8217;s metamorphosis from a tech company to the machine that churned out Google+:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -7841,7 +7853,7 @@
             <guid isPermaLink="true">http://www.marco.org/#fn:1</guid>
             <pubDate>Tue, 19 Mar 2013 20:15:03 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;An interesting article by Marco Arment on the causes and effects of free apps and services.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -7855,7 +7867,7 @@
             <guid isPermaLink="true">http://hackingdistributed.com/2013/03/17/google-reader/</guid>
             <pubDate>Tue, 19 Mar 2013 20:15:00 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;Emin Gun writing on Hacking Distributed about the impending demise of Google Reader and the farcical backlash that ensued following the announcement:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8120,7 +8132,7 @@
             <guid isPermaLink="true">http://hypercritical.co/2013/03/04/fear-of-a-webkit-planet</guid>
             <pubDate>Mon, 04 Mar 2013 23:06:21 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;John Siracusa in the opening paragraphs of his article &lt;em&gt;Fear of a WebKit Planet&lt;/em&gt; with a few atypical sentences characterizing the traits so many came to love of the former Hypercritical co-host:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8134,7 +8146,7 @@
             <guid isPermaLink="true">http://brooksreview.net/2013/02/cms-war/</guid>
             <pubDate>Mon, 04 Mar 2013 22:10:00 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;"I&#8217;ve looked deeply into SquareSpace. I know a lot about Shopify. I had this site running on MovableType, and tons of other CMSs &#160;&#8212;&#160; but at the end of the day I realized that WordPress works fine and I need to concentrate on the things readers will actually notice."&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/the-cms-war.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -8159,7 +8171,7 @@
             <guid isPermaLink="true">http://daringfireball.net/2013/03/open_and_shut</guid>
             <pubDate>Sat, 02 Mar 2013 16:14:45 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;John Gruber in an exceptional article posted to Daring Fireball a few days ago. Not only a phenomenal piece on the history of the computing industry and the &#8220;open versus closed&#8221; argument but also an extraordinarily well-written piece&#160;&#8212;&#160;a reminder that I still have far to go.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8173,7 +8185,7 @@
             <guid isPermaLink="true">http://www.marco.org/2013/03/02/type-engine</guid>
             <pubDate>Sat, 02 Mar 2013 16:14:43 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;"The Magazine isn&#8217;t successful because I have red links, centered sans-serif headlines, footnote popovers, link previews, and a white table-of-contents sidebar that slides over the article from the left with a big shadow even on iPhone. It isn&#8217;t successful because authors write in Markdown, the CMS gracefully supports multi-user editing, we preview issues right on our devices as we assemble them, and any edits we make after publication are quickly and quietly patched into the issue right as people are reading it. Very little of this matters.&#8221;&lt;/p&gt;
                 
                 
@@ -8187,7 +8199,7 @@
             <guid isPermaLink="true">https://twitter.com/shawnblanc/status/307518894090907649</guid>
             <pubDate>Sat, 02 Mar 2013 16:14:33 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;To adopt Ben Brooks&#8217; practice of posting interesting tidbits as he comes across them as a &#8220;Quote of the Day&#8221;, I found this gem while scrolling through my twitter stream yesterday:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8201,7 +8213,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/the-ethicality-of-outbox.html</guid>
             <pubDate>Fri, 01 Mar 2013 18:58:36 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;In my last post simply titled &lt;a href="http://zacs.site/blog/outbox.html"&gt;&lt;em&gt;Outbox&lt;/em&gt;&lt;/a&gt; I linked to an article by Laura June of The Verge in which she raised a number of doubts as to the practicality of Outbox, including the potential legal troubles the startup could run into given that opening its users&#8217;s mail is an integral part of the startup&#8217;s business model. I glossed over those concerns in my last post; however, I feel they do merit some discussion.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/the-ethicality-of-outbox.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -8301,7 +8313,7 @@
             <guid isPermaLink="true">http://www.npr.org/blogs/money/2013/02/21/172588471/how-to-start-a-magazine-and-make-a-profit</guid>
             <pubDate>Fri, 22 Feb 2013 17:08:01 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Marco Arment gave Jacob Goldstein of NPR some concrete numbers for the Magazine, showing just how great an idea launching this publication was, the importance of a consistent publication schedule, and the rewards of such an excellent implementation.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8329,7 +8341,7 @@
             <guid isPermaLink="true">http://www.theverge.com/2013/2/21/4010016/liveson-uses-artificial-intelligence-to-tweet-for-you-after-death</guid>
             <pubDate>Fri, 22 Feb 2013 17:05:12 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;"'We are at the very beginning of the build process,' Dave Bedwood, creative partner at Lean Mean Fighting Machine, said in an email. &#8216;This site is very much for people to sign up now, get a second twitter account, private to them, and just watch it learn and grow. As A.I advances, then maybe we will then get into it being able to copy syntax. When you die, if you&#8217;ve had this account for a long time, it may be able to keep tweeting as you.'"&lt;/p&gt;
                 
                 
@@ -8354,7 +8366,7 @@
             <guid isPermaLink="true">http://fighttheurgetofade.com/</guid>
             <pubDate>Fri, 22 Feb 2013 05:21:52 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Kenneth Erikson tells his amazing life story in an article titled &lt;em&gt;I&#8217;m a shut-in. This is my story&lt;/em&gt;. No matter what I try I can&#8217;t quite capture the essence of this intensely personal piece, so I will leave you with this excerpt and the strongest urging possible to set aside a good hour to read K-2052&#8217;s amazing story from beginning to end.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8368,7 +8380,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/writers-need-their-freedom.html</guid>
             <pubDate>Thu, 21 Feb 2013 23:10:49 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;Quite some time ago I came across Jeffrey Way&#8217;s article &lt;a href="http://net.tutsplus.com/articles/editorials/publishers-dont-restrict-writers/"&gt;&lt;em&gt;Publishers: Don&#8217;t Restrict Writers&lt;/em&gt;&lt;/a&gt; and added it to my Instapaper queue more out of curiosity at an article posted on Nettuts+ not about programming than anything else. Nearly a month prior, I had read an article on Ben Brooks&#8217; website called &lt;a href="http://brooksreview.net/2012/11/self-publishing/"&gt;&lt;em&gt;Self-Publishing&lt;/em&gt;&lt;/a&gt; in which he said something I found very interesting:&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/writers-need-their-freedom.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -8461,7 +8473,7 @@
             <guid isPermaLink="true">http://bloglivingthedream.wordpress.com/2013/02/06/so-simple/</guid>
             <pubDate>Thu, 07 Feb 2013 14:56:54 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Another blogger writing a response to Rohan Anderson&#8217;s post &lt;a href="http://wholelarderlove.com/hard-at-work-living-simple/"&gt;&lt;em&gt;Hard at Work, Living Simple&lt;/em&gt;&lt;/a&gt;, putting in to words the feeling I spent so long attempting to quantify and capture but, ultimately, proved too elusive to voice in &lt;a href="http://zacs.site/blog/hard-at-work.html"&gt;my commentary&lt;/a&gt;:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8475,7 +8487,7 @@
             <guid isPermaLink="true">http://www.backupbrain.com/2013/02/enough-already/</guid>
             <pubDate>Wed, 06 Feb 2013 18:49:39 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;When the wagon lumbered up the street proclaiming the news of Aaron Swartz&#8217;s suicide, I jumped right on. I had never even heard of him, but I nevertheless jumped right on the bandwagon, eager to bemoan the passing of an individual many hailed as nothing short of a prodigy. &lt;a href="http://zacs.site/blog/aaron-swartz.html"&gt;I eulogized the man&lt;/a&gt;, &lt;a href="http://zacs.site/blog/lean-into-the-pain.html"&gt;praised&lt;/a&gt; &lt;a href="http://zacs.site/blog/be-more-productive.html"&gt;his&lt;/a&gt; &lt;a href="http://zacs.site/blog/who-writes-wikipedia.html"&gt;work&lt;/a&gt;, and condemned the system that supposedly drove him from this life. Tom Negrino of Backup Brain took a slightly different approach after spending nearly four weeks in embittered silence:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8532,7 +8544,7 @@
             <guid isPermaLink="true">http://ticci.org/what-i-do-for-a-living</guid>
             <pubDate>Tue, 05 Feb 2013 19:32:42 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;A powerful story from Federico Viticci talking about his prolonged battle with cancer, his job as a technology writer, and some of the realizations that combination has forced upon him.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8547,7 +8559,7 @@
             <guid isPermaLink="true">http://wholelarderlove.com/hard-at-work-living-simple/</guid>
             <pubDate>Tue, 05 Feb 2013 19:32:01 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;Rohan Anderson of &lt;a href="http://wholelarderlove.com"&gt;Whole Larder Love&lt;/a&gt; on the pursuit of happiness in a more simple life:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8669,7 +8681,7 @@
             <guid isPermaLink="true">http://wholelarderlove.com/walk-it-off-brother/</guid>
             <pubDate>Mon, 04 Feb 2013 01:07:28 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Rohan Anderson of &lt;a href="http://wholelarderlove.com/"&gt;Whole Larder Love&lt;/a&gt;, also featured in &lt;a href="http://vimeo.com/48864768"&gt;The Smokehouse&lt;/a&gt;, a video I discovered last week chronicling the construction of his personal smokehouse:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8683,7 +8695,7 @@
             <guid isPermaLink="true">http://vimeo.com/1212142</guid>
             <pubDate>Mon, 04 Feb 2013 01:06:38 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;Following this morning&#8217;s &lt;a href="https://twitter.com/ylnt/status/297802332220055552"&gt;announcement&lt;/a&gt; that the popular podcast You Look Nice Today would come to a close &lt;a href="https://twitter.com/ylnt/status/297802897729671168"&gt;with one final episode&lt;/a&gt;, Rebecca O&#8217;Malley tweeted a link to a video from 2009 titled Smart &#38;#38; Funny:&lt;/p&gt;
                 
                 &lt;br /&gt;
@@ -8761,7 +8773,7 @@
             <guid isPermaLink="true">http://www.aaronsw.com/weblog/productivity</guid>
             <pubDate>Thu, 31 Jan 2013 16:10:16 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Aaron Swartz made a number of interesting observations and suggestions throughout this piece. Of those, this is my favorite, found near the end of the article:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8775,7 +8787,7 @@
             <guid isPermaLink="true">http://www.aaronsw.com/weblog/dalio</guid>
             <pubDate>Thu, 31 Jan 2013 15:58:50 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;"The problem is that the topics that are most painful also tend to be the topics that are most important for us: they&#8217;re the projects we most want to do, the relationships we care most about, the decisions that have the biggest consequences for our future, the most dangerous risks that we run. We&#8217;re scared of them because we know the stakes are so high. But if we never think about them, then we can never do anything about them.&#8221;&lt;/p&gt;
                 
                 
@@ -8891,7 +8903,7 @@
             <guid isPermaLink="true">http://freecabinporn.com/post/13641808772/this-must-be-the-place-by-lost-found-films-50</guid>
             <pubDate>Tue, 29 Jan 2013 04:15:59 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;John Coffer, in an excellent video produced by &lt;a href="http://www.lostfoundfilms.com/"&gt;Lost &#38;#38; Found Films&lt;/a&gt;:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -8905,7 +8917,7 @@
             <guid isPermaLink="true">http://freecabinporn.com/post/17212355113/david-cartiers-homestead-in-the-yukon-territory</guid>
             <pubDate>Tue, 29 Jan 2013 04:14:43 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;"The great thing about having my job evaporate into thin air was that we were able to move out of town to this nice, quiet place where the only traffic we ever see is the occasional passing of a neighbor&#8217;s dog team."&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/yukon-territory.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -8930,7 +8942,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/another-cabin-porn-update.html</guid>
             <pubDate>Tue, 29 Jan 2013 04:13:19 GMT</pubDate>
             <description>
-                &lt;/ul&gt;
+                
 &lt;p&gt;Rather than posting separate articles for each cool cabin I came across or interesting story I found on &lt;a href="http://freecabinporn.com"&gt;Cabin Porn&lt;/a&gt; throughout this past day, I decided to condense the day&#8217;s updates into a single post. There are a few cabins, however, whose stories merited more than a simple line item on an imposingly long list, and for those I did make an exception.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/another-cabin-porn-update.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -8952,7 +8964,7 @@
             <guid isPermaLink="true">http://tinyhouseblog.com/tiny-house-concept/christiania-tiny-houses/</guid>
             <pubDate>Mon, 28 Jan 2013 18:48:03 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;"A town within a city, a rebel neighborhood within a well-ordered society. This is Christiania (Freetown), Denmark, a small community smack dab in the middle of Copenhagen, Denmark. Within this community are tiny houses, built by hand and with whatever materials are within reach.&#8221;&lt;/p&gt;
                 
                 
@@ -8969,7 +8981,7 @@
             <guid isPermaLink="true">http://freecabinporn.com/post/28090808148/glass-lodge-in-farellones-chile-submitted-by</guid>
             <pubDate>Mon, 28 Jan 2013 18:47:33 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;To once again reference Ben Brooks&#8217;s article &lt;a href="http://brooksreview.net/2013/01/design-workspace/"&gt;&lt;em&gt;Fatal Design Flaw of Workspaces&lt;/em&gt;&lt;/a&gt;, he described his ideal workspace towards the end of the article:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -9032,7 +9044,7 @@
             <guid isPermaLink="true">http://freecabinporn.com/post/33169675882/the-patron-saint-of-cabin-porn-of-all-the-many</guid>
             <pubDate>Mon, 28 Jan 2013 13:36:49 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;"In 1968, at the age of 51, Dick left a life of ranching, carpentry and heavy machine repair to retire to Twin Lakes, Alaska in what is now Lake Clark National Park. Deposited by float plane, and carrying only the simplest of tools, he set out to build a homestead and survive the winter, alone in the wilderness.&#8221;&lt;/p&gt;
                 
                 
@@ -9049,7 +9061,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/cabin-porn.html</guid>
             <pubDate>Mon, 28 Jan 2013 13:34:43 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;When I finally got around to opening &lt;a href="http://freecabinporn.com/"&gt;Cabin Porn&lt;/a&gt; yesterday evening on another exotic living space binge brought on starting Friday afternoon with Ben Brooks&#8217;s article &lt;a href="http://brooksreview.net/2013/01/design-workspace/"&gt;&lt;em&gt;Fatal Design Flaw of the Workspaces&lt;/em&gt;&lt;/a&gt;, I was excited. Posts like &lt;a href="http://huckberry.com/blog/posts/the-world-s-skinniest-house"&gt;&lt;em&gt;The World&#8217;s Skinniest House&lt;/em&gt;&lt;/a&gt; and &lt;a href="http://huckberry.com/blog/posts/tiny-houses"&gt;&lt;em&gt;Tiny Houses&lt;/em&gt;&lt;/a&gt; over on Huckberry&#160;&#8212;&#160;both linked to in Ben&#8217;s article&#160;&#8212;&#160;had rekindled a long-extinguished flame somewhere inside of me, igniting that visceral desire to discover something new and interesting. Here are a few of my favorites, in no particular order. I would be the happiest man in the world to have any one of these amazing cabins.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/cabin-porn.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -9071,7 +9083,7 @@
             <guid isPermaLink="true">http://brooksreview.net/2013/01/design-workspace/</guid>
             <pubDate>Sun, 27 Jan 2013 17:36:24 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;In pursuit of more perfect compromise between functionality and minimalism, Ben Brooks closed his article on minimalist spaces with an observation I found very vindicating, having made the switch almost wholly myself.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -9085,7 +9097,7 @@
             <guid isPermaLink="true">https://github.com/megamattron/SplinterNet</guid>
             <pubDate>Sat, 26 Jan 2013 23:45:08 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;"SplinterNet is a simple mobile app that allows users to author posts in a similar fashion to blogging or tweeting. These posts can contain text and a single image. However, rather than being hosting on internet servers, users distribute their posts by syncing with other app users via Bluetooth. The peer-to-peer syncing creates an ad hoc distribution network without requiring the use of mobile networks or any other monitored network infrastructure.&#8221;&lt;/p&gt;
                 
                 
@@ -9182,7 +9194,7 @@
             <guid isPermaLink="true">http://www.theverge.com/2013/1/23/3890674/tweeting-the-news-andy-carvin-test-pilots-twitter-journalism</guid>
             <pubDate>Wed, 23 Jan 2013 19:18:51 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;In a space increasingly defined by Apple bloggers and their copycats, it is not only interesting to see another writer&#8217;s process, but also to see how that creator works towards such a different end product using largely the same tools as those obfuscating this space.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -9224,7 +9236,7 @@
             <guid isPermaLink="true">http://coding.smashingmagazine.com/2013/01/21/sneak-peek-future-selectors-level-4/</guid>
             <pubDate>Tue, 22 Jan 2013 16:45:06 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;Lots of interesting things going in in this space right now.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/level-4.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -9304,7 +9316,7 @@
             <guid isPermaLink="true">http://www.aaronsw.com/weblog/stepback</guid>
             <pubDate>Mon, 21 Jan 2013 01:36:34 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;A few days ago in preparation for posting &lt;a href="http://zacs.site/blog/aaron-swartz.html"&gt;&lt;em&gt;We Have Lost One of Our Own&lt;/em&gt;&lt;/a&gt;, a short article I wrote eulogizing Aaron Swartz in response to the news that he had committed suicide, I spent some time perusing his work. This article, Take a Step Back, is one of the many I saved to Instapaper, and the one in which I found this interesting tidbit:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -9318,7 +9330,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/why-the-heck.html</guid>
             <pubDate>Mon, 21 Jan 2013 01:32:32 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;The title reworked for this article, Reginald Braithwaite&#8217;s article &lt;a href="http://raganwald.posterous.com/why-the-fuck"&gt;&lt;em&gt;Why the Fuck?&lt;/em&gt;&lt;/a&gt; posted earlier today not only made it to the Hacker News front page, but to the top spot. He makes an interesting point to begin with, and then anticlimactically ended the piece with a call to arms in the fight against diabetes and obesity. But that&#8217;s his point: today the glamorous projects aren&#8217;t the ones helping people. The greatest technical minds of the previous generation spend their time at the Googles and Apples, at the Facebooks and Microsofts of today. Will we follow in their footsteps, or strike out on our own? And for those that do choose to walk a different path, where will that path lead?&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/why-the-heck.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -9395,7 +9407,7 @@
             <guid isPermaLink="true">http://mattgemmell.com/2013/01/15/writing-tools/</guid>
             <pubDate>Wed, 16 Jan 2013 17:06:03 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Always interesting to read about another writer&#8217;s tools and setup, and Matt Gemmell&#8217;s style makes this piece all the more pleasurable to read.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -9423,7 +9435,7 @@
             <guid isPermaLink="true">http://www.whitehouse.gov/blog/2013/01/15/why-we-re-raising-signature-threshold-we-people</guid>
             <pubDate>Wed, 16 Jan 2013 14:28:11 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;After the petition to build a Death Star and the petition to remove Ortiz from her position at the Department of Injustice (oops, a typo) all garnered the required 25,000 signatures, I suppose it&#8217;s not surprising. Sam Byford has more on this in his post &lt;a href="http://www.theverge.com/2013/1/16/3881672/white-house-petition-signature-threshold-raised"&gt;&lt;em&gt;After Death Star and deportation petitions, White House raises signature threshold to 100,000&lt;/em&gt;&lt;/a&gt; on The Verge.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/we-the-people.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -9584,7 +9596,7 @@
             <guid isPermaLink="true">http://www.brainpickings.org/index.php/2012/09/17/the-meaning-of-life/</guid>
             <pubDate>Sun, 13 Jan 2013 04:06:41 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;An interesting collection of thoughts and observations regarding the meaning of life. These are my two favorites, the first from Frank Donofrio:&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -9610,7 +9622,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/aaron-swartz.html</guid>
             <pubDate>Sat, 12 Jan 2013 22:35:00 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;I planned to work on a number of articles this evening, but then, after I got home a short while ago and opened Hacker News, my evening plans changed as I began to read about Aaron Swartz. Rather than attempt to write about a man I know little of and who I knew nothing of before this afternoon, here are the better articles I have seen floating around the internet:&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/aaron-swartz.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -9672,7 +9684,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/perspective.html</guid>
             <pubDate>Sun, 06 Jan 2013 15:17:55 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;With this post I thought I would try something different: rather than writing a full-fledged post for each of the myriad notes I have created over the past months in Simplenote, I will begin posting whatever I have collected for the potential topic as I would a linked item: with the excerpt as a blockquote along with some commentary if I deem it necessary. With that, then, the first post taken straight from my notepad, in which I attempt to frame the omniscient platform war with a bit of perspective:&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/perspective.html'&gt;Read more...&lt;a&gt;
             </description>
@@ -9738,7 +9750,7 @@
             <guid isPermaLink="true">https://soundcloud.com/motin/dbstep-nasdaq-dubstep</guid>
             <pubDate>Sat, 29 Dec 2012 18:47:11 GMT</pubDate>
             <description>
-                &lt;/blockquote&gt;
+                
 &lt;p&gt;Found this a little bit ago by chance at the bottom of the Hacker News front page. Very, very cool.&lt;/p&gt;
                 
                 &lt;blockquote&gt;
@@ -9755,7 +9767,7 @@
             <guid isPermaLink="true">http://zacs.site/blog/dangerous-toys.html</guid>
             <pubDate>Sat, 29 Dec 2012 03:37:12 GMT</pubDate>
             <description>
-                
+                &lt;/blockquote&gt;
 &lt;p&gt;A few years ago, when I lived in Minnesota, my friend and I split our time between two activities: building robots and building rockets. We built our robots of Legos and our rockets of cardboard and balsa wood. When we weren&#8217;t occupied with one of those endeavors we spent our evenings racing his go-cart around the empty parking lot across from his house, our afternoons building zip lines in his backyard instead of doing the work we were supposed to, and our mornings being homeschooled by our moms. Outside of that relatively small allocation to formalized learning, we were allowed to pursue whatever interested us.&lt;/p&gt;
 &lt;p&gt;&lt;a href='http://zacs.site/blog/dangerous-toys.html'&gt;Read more...&lt;a&gt;
             </description>
