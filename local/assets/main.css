@@ -50,6 +50,10 @@ h5 {
     font-size: 14pt; }
 h6 {
     font-size: 12pt; }
+.headers span { 
+    display: none; }
+.headers:hover span{
+    display: inline; }
 #home section:first-of-type img {
     float: left;
     margin: 0em 1em 0em 0;

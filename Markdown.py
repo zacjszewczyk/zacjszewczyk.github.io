@@ -42,7 +42,9 @@ def Markdown(line):
         fd.close()
     # Header elements, <h1>-<h6>
     elif (line[0] == "#"):
-        line = ("<h%d>"+line.replace("#", "").strip()+"</h%d>") % (line.split(" ")[0].count("#"), line.split(" ")[0].count("#"))+"\n"
+        line = line.split("[")[0].strip()
+        header_id = sub('\W+','', line.title()).strip()
+        line = ("<h%d class=~headers~ id=~%s~>"+line.replace("#", "").strip()+"<span>&nbsp;<a href=~#%s~>#</a></span></h%d>") % (line.split(" ")[0].count("#"), header_id, header_id, line.split(" ")[0].count("#"))+"\n"
         types.append("<h>,,</h>")
     # Images
     elif (line[0:1] == "!["):
@@ -244,6 +246,8 @@ def Markdown(line):
             line = "<br />"
         else:
             line = line.strip()
+
+    line = line.replace("~", "'")
 
     # Return the parsed line, now formatted with HTML.
     return line
