@@ -164,7 +164,8 @@ def AppendToFeed(source):
                     link = line.split("href=\"")[1].split(" ")[0][:-1]
                 if (link[0:4] != "http"):
                     link = "http://"+link
-                line = "            <link>"+link+"</link>\n"
+                line = "            <title>"+line.split("\">")[1][:-4]+"</title>\n"
+                line += "            <link>"+link+"</link>\n"
                 line += "            <guid isPermaLink='true'>"+link+"</guid>\n"
             elif (i == 1):
                 continue
