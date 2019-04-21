@@ -4,7 +4,7 @@
 # Todo: Only import functions from modules that I actually need, not entire module
 from os import listdir, stat, remove, utime, mkdir # File/folder operations
 from os.path import isdir, isfile # File existence operations
-from time import strptime, strftime, mktime, localtime # Managing file modification time
+from time import strptime, strftime, mktime, localtime, gmtime # Managing file modification time
 import datetime # Recording runtime
 from re import search # Regex
 from sys import exit, argv # Command line options
@@ -116,77 +116,85 @@ def AppendContentOfXToY(target, source, timestamp):
 # Parameters:
 # - source: Source file name, including extension. (String)
 def AppendToFeed(source):
-    from time import gmtime
-    from re import findall
-    # Initialzie file descriptors for the source content file and the RSS feed
-    source_fd = open("Content/"+source, "r")
+    # Store the name of the corresponding HTML file in a variable
+    html_filename = source.lower().replace(" ", "-")[0:-3]+"html"
+    
+    # Check to see if a structure file has already been built. If not,
+    # build it.
+    if (not isfile("./local/blog/"+html_filename)):
+        GenPage(source, timestamp)
+
+    # Instantiate a boolean flag variable, "flag". This indicates
+    # whether to include the entire article (True) or truncate it
+    # at the first paragraph (False)
+    flag = True
+
+    # Now that we know there is a structure file built, pull the data
+    # from there.
+    
+    ## Open the feed and source file
     feed_fd = open("./local/rss.xml", "a")
 
-    # Initialize method variables
-    ptype = "linkpost"
-    idx = 0
-
-    # Create a new item in the RSS feed
+    ## Write the opening <item> tag
     feed_fd.write("        <item>\n")
 
-    # For each line in the content file, parse it from Markdown to HTML to XML
-    # for the feed.
-    for line in iter(source_fd.readline, ""):
-        # Escape ampersands.
-        if ("&" in line):
+    with open("./local/blog/"+html_filename, "r") as source_fd:
+        
+        # Skip to the <article tag, then write the opening <article>
+        # tag to the output file.
+        for line in source_fd:
+            if ("<h2" in line): break
+
+        # Iterate over each line of the source structure file.
+        for i, line in enumerate(source_fd):
+            # Strip whitespace
+            line = line.strip()
             line = line.replace("&", "&#38;")
-        
-        # In the first line, classify the article as a linkpost or an original piece.
-        if (idx == 0):
-            ptype = line[6:].strip()
-        # In the second line of the file, add the article title.
-        elif (idx == 1):
-            feed_fd.write("            <title>"+line[7:].strip()+"</title>\n")
-        # In the third line of the file, add the article URL to the title/link.
-        elif (idx == 2):
-            if (ptype == "linkpost"):
-                line = line[6:].strip()
-                if (line[0:4] != "http"):
-                    line = "http://"+line
-                link = line
-                guid = link
-            else:
-                link = "http://zacs.site/blog/"+source.lower().replace(" ", "-")[0:-3]+"html".lower()
-                guid = link
-            feed_fd.write("            <link>"+link+"</link>\n")
-            feed_fd.write("            <guid isPermaLink=\"true\">"+guid+"</guid>\n")
-        # Close the <description> portion of the item.
-        # In the fourth line of the file, read the pubdate, and add it to the article.
-        elif (idx == 3):
-            # pubdate = strptime(line.split(": ")[1].strip(), "%Y/%m/%d %H:%M:%S")
-            # print "EST:",strftime("%a, %-d %b %Y %H:%M:%S", pubdate)+" EST"
-            pubdate = gmtime(mktime(strptime(line.split(": ")[1].strip(), "%Y/%m/%d %H:%M:%S")))
-            # print "GMT:",strftime("%a, %-d %b %Y %H:%M:%S", pubdate)+" GMT"
-            # print
 
-            feed_fd.write("            <pubDate>"+strftime("%a, %d %b %Y %H:%M:%S", pubdate)+" GMT</pubDate>\n")
-            feed_fd.write("            <description>")
-        # Ignore the rest of the header, until the first line of content.
-        # Write the first paragraph to the file.
-        elif (idx == 6):
-            feed_fd.write("\n                "+Markdown(line).replace("<", "&lt;").replace(">", "&gt;").replace("#fn", link+"#fn"))
-        # If a linkpost, write successive lines to the file.
-        elif (idx > 6 and ptype == "linkpost"):
-            if ("iframe" in line):
+            # Check the first two lines of the structure file for a
+            # class tag denoting the type of article. If viewing an
+            # original article, truncate it at the first paragraph by
+            # setting the flag, "flag", to False
+            # print i,":",line
+            if (i == 0):
+                if ("class=\"original\"" in line):
+                    flag = False
+                    link = "https://zacs.site/blog/"+line.split("href=\"")[1].split(" ")[0][:-1]
+                else:
+                    link = line.split("href=\"")[1].split(" ")[0][:-1]
+                if (link[0:4] != "http"):
+                    link = "http://"+link
+                line = "            <link>"+link+"</link>\n"
+                line += "            <guid isPermaLink='true'>"+link+"</guid>\n"
+            elif (i == 1):
                 continue
-            feed_fd.write("\n                "+Markdown(line).replace("<", "&lt;").replace(">", "&gt;"))
-        
-        # Increase the line number
-        idx += 1
+            elif (i == 2):
+                pubdate = gmtime(mktime(strptime(line[16:26].replace("-", "/")+" "+line.split("</a>")[-1][4:-11], "%Y/%m/%d %H:%M:%S")))
+                line = "            <pubDate>"+strftime("%a, %d %b %Y %H:%M:%S", pubdate)+" GMT</pubDate>\n"
+                line += "            <description>\n"
+            # Write subsequent lines to the file. If we are truncating
+            # the file and we encouter the first paragraph, write it to
+            # the output file and then quit.
+            elif (flag == False and line[0:2] == "<p"):
+                feed_fd.write("        "+line.replace('href="/', 'href="https://zacs.site/').replace('"#fn', '"https://zacs.site/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;"))
+                break
+            else:
+                line = "        "+line.replace('href="/', 'href="https://zacs.site/').replace('"#fn', '"https://zacs.site/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;")
 
-    # At the end of the file, write closing XML tags.
-    else:
-        feed_fd.write("\n&lt;p&gt;&lt;a href='%s'&gt;Read more...&lt;a&gt;" % ("http://zacs.site/blog/"+source.lower().replace(" ", "-")[0:-3]+"html".lower()))
-        feed_fd.write("\n            </description>\n        </item>\n")
+            # Stop copying content at the end of the article.
+            if ("&lt;/article&gt;" in line):
+                break
+    
+            # Write all lines from the structure file to the output file
+            # by default.
+            feed_fd.write(line)
 
-    # Close the file descriptors.
+    # Once we have reached the end of the content in the case of a linkpost,
+    # or read the first paragraph in the case of an original article, add a 
+    # "read more" link and close the article.
+    feed_fd.write("\n                <p class='read_more_paragraph'>\n                    <a style='text-decoration:none;' href='blog/%s'>&#x24E9;</a>\n                </p>\n".replace("<", "&lt;").replace(">", "&gt;") % (html_filename))
+    feed_fd.write("            </description>\n        </item>\n")
     feed_fd.close()
-    source_fd.close()
 
 # Method: BuildFromTemplate
 # Purpose: Build a target file, with a specified title and body id, and

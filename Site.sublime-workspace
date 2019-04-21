@@ -168,9 +168,18 @@
 			"file": "Markdown.py",
 			"settings":
 			{
-				"buffer_size": 11507,
+				"buffer_size": 11724,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<h3 class='headers' and then some>",
+			"settings":
+			{
+				"buffer_size": 34,
+				"line_ending": "Unix",
+				"name": "<h3 class='headers' and then some>"
 			}
 		},
 		{
@@ -186,7 +195,7 @@
 			"file": "local/assets/main.css",
 			"settings":
 			{
-				"buffer_size": 3366,
+				"buffer_size": 3448,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -195,7 +204,7 @@
 			"file": "local/rss.xml",
 			"settings":
 			{
-				"buffer_size": 1038333,
+				"buffer_size": 1038727,
 				"line_ending": "Unix"
 			}
 		},
@@ -631,7 +640,7 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 		],
@@ -644,7 +653,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -682,7 +691,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -691,15 +700,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11507,
+						"buffer_size": 11724,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5609,
-								5609
+								1919,
+								1919
 							]
 						],
 						"settings":
@@ -717,14 +726,51 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2172.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 34,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								34,
+								34
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 46,
+								"count": 4,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"auto_name": "<h3 class='headers' and then some>",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "blog.py",
 					"semi_transient": false,
 					"settings":
@@ -767,24 +813,24 @@
 						"translation.y": 10202.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "local/assets/main.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3366,
+						"buffer_size": 3448,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1995,
-								1995
+								1320,
+								1320
 							]
 						],
 						"settings":
@@ -802,19 +848,19 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1465.0,
+						"translation.y": 509.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "local/rss.xml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1038333,
+						"buffer_size": 1038727,
 						"regions":
 						{
 						},
@@ -844,11 +890,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "master.log",
 					"semi_transient": false,
 					"settings":
@@ -880,11 +926,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "deploy.py",
 					"semi_transient": false,
 					"settings":
@@ -918,11 +964,11 @@
 						"translation.y": 5131.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "local/assets/MTV.html",
 					"semi_transient": false,
 					"settings":
@@ -957,11 +1003,11 @@
 						"translation.y": 3668.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "local/assets/m_sw.js",
 					"semi_transient": false,
 					"settings":
@@ -995,11 +1041,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "ModTimes.py",
 					"semi_transient": false,
 					"settings":
@@ -1031,11 +1077,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "Hash.py",
 					"semi_transient": false,
 					"settings":
@@ -1061,11 +1107,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "system/index.html",
 					"semi_transient": false,
 					"settings":
@@ -1098,11 +1144,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "system/projects.html",
 					"semi_transient": false,
 					"settings":
@@ -1129,11 +1175,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "system/error.html",
 					"semi_transient": false,
 					"settings":
@@ -1168,11 +1214,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 15,
 					"file": "system/template.htm",
 					"semi_transient": false,
 					"settings":
@@ -1207,7 +1253,7 @@
 						"translation.y": 621.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
