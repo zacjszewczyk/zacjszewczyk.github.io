@@ -21,7 +21,6 @@ const RUNTIME = 'runtime';
 const PRECACHE_URLS = [
     '/index.html',
     '/projects.html',
-    '/blog.html',
     '/archives.html'
 ];
 
