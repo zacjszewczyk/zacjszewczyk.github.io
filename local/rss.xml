@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 22 Apr 2019 03:14:41 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2019 04:08:26 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Web Dev Security Considerations</title>
+            <link>https://www.256kilobytes.com/content/show/10404/3-5-web-dev-security-considerations-you-didn-t-know-about</link>
+            <guid isPermaLink='true'>https://www.256kilobytes.com/content/show/10404/3-5-web-dev-security-considerations-you-didn-t-know-about</guid>
+            <pubDate>Tue, 23 Apr 2019 16:08:19 GMT</pubDate>
+            <description>
+                &lt;p&gt;This piece, by August Garcia over at the horrendously designed &lt;a href="https://www.256kilobytes.com/"&gt;256 Kilobytes&lt;/a&gt;, is a good counterpoint to &lt;a href="http://www.dtc.umn.edu/'odlyzko/doc/cyberinsecurity.pdf"&gt;a paper I didn&#38;#8217;t bother linking&lt;/a&gt; to &lt;a href="https://news.ycombinator.com/item?id=19442049"&gt;when it hit Hacker News&lt;/a&gt; last month. Just because we cannot build hacker-proof systems does not mean we should avoid easy steps that will make their lives harder.&lt;/p&gt;        &lt;/div&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/web-dev-security-considerations.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>How to increase your chances of finding a hidden camera</title>
             <link>https://sixfortwelve.wordpress.com/2019/04/06/how-to-increase-your-chances-of-finding-a-hidden-camera/</link>
