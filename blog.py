@@ -404,13 +404,21 @@ def GenPage(source, timestamp):
             # print line
             line = line[9:].strip().replace(" ", "/").split("/")
             title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
-        # In the fifth line of the file, write the opening tags to the target, then the file's
-        # content as generated up to this point.
+        # In the fifth line of the file, we're reading the author line. Since we don't do anything
+        # with this, pass.
         elif (idx == 4):
-            target_fd.write(local_content.strip())
+            pass
+        # Blank line between header and content
+        elif (idx == 5):
+            pass
+        # First paragraph. Write the opening tags to the target, then the file's content as
+        # generated up to this point. Then write the first paragraph, parsed.
+        elif (idx == 6):
+            target_fd.write(local_content.replace("{{META_DESC}}", line).strip())
             target_fd.write(title.strip())
+            target_fd.write("\n    "+Markdown(line).strip())
         # For successive lines of the file, parse them as Markdown and write them to the file.
-        elif (idx > 4):
+        elif (idx > 5):
             target_fd.write("\n    "+Markdown(line).strip())
 
         # Increase the line number
