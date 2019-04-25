@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 23 Apr 2019 04:10:09 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 25 Apr 2019 08:25:00 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Marginal Gains</title>
+            <link>https://jackmott.github.io/programming/tools/editor/ide/visual/studio/2016/07/01/marginal-gains.html</link>
+            <guid isPermaLink='true'>https://jackmott.github.io/programming/tools/editor/ide/visual/studio/2016/07/01/marginal-gains.html</guid>
+            <pubDate>Thu, 25 Apr 2019 20:24:44 GMT</pubDate>
+            <description>
+                &lt;p&gt;I found this article after &lt;a href="https://jackmott.github.io/programming/2016/07/22/making-obvious-fast.html"&gt;&lt;em&gt;Making the obvious code fast&lt;/em&gt;&lt;/a&gt;, where Jack Mott explained the impact of ignoring basic optimization. In his 2016 piece &lt;a href="https://jackmott.github.io/programming/tools/editor/ide/visual/studio/2016/07/01/marginal-gains.html"&gt;&lt;em&gt;Marginal Gains&lt;/em&gt;&lt;/a&gt;, he went over some small tips to make developers&#38;#8217; lives easier. He had some good suggestions, and I want to take a minute to emphasize one of his points.&lt;/p&gt;                &lt;p&gt;&lt;strong&gt;Use the command line as much as possible, so that you can automate as much of your work as possible.&lt;/strong&gt; Most programs wrap one or more command line tools. This helps non-technical people. Take out the middleman, though, learn to use the underlying tool, and then write a script to work for you. Automate the boring tasks, so that you can focus on the exciting ones, take on new roles, further your own education, or even start a side hustle.&lt;/p&gt;                &lt;p&gt;If you spend a lot of time optimizing images for the web, for example, &lt;a href="https://imageoptim.com/command-line.html"&gt;let the command line handle that&lt;/a&gt;. Do you work with videos? &lt;a href="https://handbrake.fr/docs/en/1.2.0/cli/command-line-reference.html"&gt;It can handle that, too&lt;/a&gt;. If you spend hours scrolling through thousands of lines of log files, &lt;a href="http://droptips.com/using-grep-to-exclude-lines-containing-certain-characterstext"&gt;why not save some time by taking out all traffic to the server from your developers&#38;#8217; machines?&lt;/a&gt; You cannot do everything with the command line, but you can free yourself from the boring in favor of more challenging and interesting work.&lt;/p&gt;        &lt;/div&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/marginal-gains.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Web Dev Security Considerations</title>
             <link>https://www.256kilobytes.com/content/show/10404/3-5-web-dev-security-considerations-you-didn-t-know-about</link>
