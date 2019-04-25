@@ -204,16 +204,17 @@ def AppendToFeed(source):
 # - target: Target file name, including extension. (String)
 # - title: Value used in meta title field, and <title> element. (String)
 # - bodyid: ID for body element. (String)
+# - description: Value used in meta description field. (String)
 # - sheets: Any stylesheets to be inserted into the <head> element. (String)
 # - passed_content: Body content to insert into the <body> element. (String)
-def BuildFromTemplate(target, title, bodyid, sheets="", passed_content=""):
+def BuildFromTemplate(target, title, bodyid, description="", sheets="", passed_content=""):
     # Make global variable accessible within the method
     global content
 
     # Clear the target file, then write the opening HTML code and any passed content.
     fd = open(target, "w").close()
     fd = open(target, "a")
-    fd.write(content[0].replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
+    fd.write(content[0].replace("{{META_DESC}}", description).replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
     fd.write(passed_content)
     fd.close()
 
@@ -434,13 +435,13 @@ def GenStatic():
     fd = open("system/index.html", "r")
     home = fd.read().split("<!-- DIVIDER -->")
     fd.close()
-    BuildFromTemplate("./local/index.html", "", "home", sheets=home[0], passed_content=home[1])
+    BuildFromTemplate(target="./local/index.html", title="", bodyid="home", description="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things.", sheets=home[0], passed_content=home[1])
 
     # Reference the projects.html source file to generate the front-end structure file.
     fd = open("system/projects.html", "r")
     projects = fd.read().split("<!-- DIVIDER -->")
     fd.close()
-    BuildFromTemplate("./local/projects.html", "Projects - ", "projects", "", passed_content=projects[1])
+    BuildFromTemplate(target="./local/projects.html", title="Projects - ", bodyid="projects", description="The writing, coding, and Computer Aided Drafting and Design (CADD) side projects Zac Szewczyk bulds in his spare time.", sheets="", passed_content=projects[1])
 
     # Build the error.html file.
     BuildFromTemplate("./local/error.html", "Error - ", "error", "", "")
@@ -513,8 +514,8 @@ def Init():
     fd.close()
 
     # Clear and initialize the archives.html and blog.html files.
-    BuildFromTemplate("./local/archives.html", "Post Archives - ", "postarchives")
-    BuildFromTemplate("./local/blog.html", "Blog - ", "blog")
+    BuildFromTemplate(target="./local/archives.html", title="Post Archives - ", bodyid="postarchives", description="Every article Zac Szewczyk has ever posted, in chronological order, split up by year and divided by month.")
+    BuildFromTemplate(target="./local/blog.html", title="Blog - ", bodyid="blog", description="Zac Szewczyk's main blog page, where you will find topics ranging from adventuring and writing to weightlifting and leadership, among other things.")
     
     # Clear and initialize the RSS feed
     fd = open("./local/rss.xml", "w")
