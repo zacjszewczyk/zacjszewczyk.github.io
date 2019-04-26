@@ -10,6 +10,7 @@ from re import search # Regex
 from sys import exit, argv # Command line options
 from Markdown import Markdown
 from ModTimes import CompareMtimes
+from colors import c
 
 # Global variables
 # - types: Keep track of current and two previous line types. (Tuple)
@@ -28,20 +29,6 @@ files = {}
 months = {"01":"January","02":"February","03":"March","04":"April","05":"May","06":"June","07":"July","08":"August","09":"September","10":"October","11":"November","12":"December"}
 weekDays = ("Mon","Tue","Wed","Thu","Fri","Sat","Sun")
 content = ""
-
-# Class: colors
-# Purpose: provide easy access to ASCII escape codes for styling output
-class colors():
-    HEADER = '\033[95m' # Pink
-    OKBLUE = '\033[94m' # Purple
-    OKGREEN = '\033[92m' # Green
-    WARNING = '\033[93m' # Yellow
-    FAIL = '\033[91m' # Red
-    ENDC = '\033[0m' # None
-    BOLD = '\033[1m' # Blue
-    UNDERLINE = '\033[4m' # Underline
-# Instantiate the "colors" class, for output styling
-c = colors()
 
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
