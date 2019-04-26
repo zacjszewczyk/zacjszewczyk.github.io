@@ -373,9 +373,9 @@ def GenPage(source, timestamp):
         if (idx == 0):
             ptype = line[6:].strip()
             if (ptype == "original"):
-                title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+                title += "<article>\n                    <h2 style=\"text-align:center;\">\n                        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
             else:
-                title += "<article>\n    <h2 style=\"text-align:center;\">\n        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+                title += "<article>\n                    <h2 style=\"text-align:center;\">\n                        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
         # In the second line of the file, add the article title.
         elif (idx == 1):
             title = title.replace("{{URL_TITLE}}", line[7:].strip())
@@ -385,12 +385,12 @@ def GenPage(source, timestamp):
             line = line[6:].strip()
             if (line[0:4] != "http" and ("htm" == line[-3:])):
                 line = line.replace(".htm", ".html").replace(" ", "-").lower()
-            title = title.replace("{{URL}}", line)+"\n    </h2>"
+            title = title.replace("{{URL}}", line)+"\n                    </h2>"
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
             # print line
             line = line[9:].strip().replace(" ", "/").split("/")
-            title += """\n    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
+            title += """\n                    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
         # In the fifth line of the file, we're reading the author line. Since we don't do anything
         # with this, pass.
         elif (idx == 4):
@@ -401,18 +401,18 @@ def GenPage(source, timestamp):
         # First paragraph. Write the opening tags to the target, then the file's content as
         # generated up to this point. Then write the first paragraph, parsed.
         elif (idx == 6):
-            target_fd.write(local_content.replace("{{META_DESC}}", line).strip())
-            target_fd.write(title.strip())
-            target_fd.write("\n    "+Markdown(line).strip())
+            target_fd.write(local_content.replace("{{META_DESC}}", line.strip()).strip())
+            target_fd.write("\n                "+title.strip())
+            target_fd.write("\n                    "+Markdown(line).strip())
         # For successive lines of the file, parse them as Markdown and write them to the file.
         elif (idx > 5):
-            target_fd.write("\n    "+Markdown(line).strip())
+            target_fd.write("\n                    "+Markdown(line).strip())
 
         # Increase the line number
         idx += 1
     else:
         # At the end of the file, write closing HTML tags.
-        target_fd.write("\n</div>\n</article>")
+        target_fd.write("\n                    </div>\n                </article>")
         target_fd.write(content[1].replace("assets/", "../assets/").replace("<!-- SCRIPTS BLOCK -->", """""",1))
         
     # Close file descriptors.
