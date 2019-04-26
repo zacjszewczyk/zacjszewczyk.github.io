@@ -67,6 +67,8 @@ def AppendContentOfXToY(target, source, timestamp):
             # Strip whitespace
             line = line.strip()
 
+            # print i,":",line
+
             # Check the first two lines of the structure file for a
             # class tag denoting the type of article. If viewing an
             # original article, truncate it at the first paragraph by
@@ -74,6 +76,7 @@ def AppendContentOfXToY(target, source, timestamp):
             if (i <= 1):
                 if ("class=\"original\"" in line):
                     flag = False
+                line = line.replace("href=\"", "href=\"blog/")
             elif (i == 3):
                 line = line.replace("href=\"", "href=\"blog/")
             # Write subsequent lines to the file. If we are truncating
