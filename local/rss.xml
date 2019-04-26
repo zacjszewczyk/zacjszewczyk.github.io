@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 25 Apr 2019 10:32:20 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2019 07:38:56 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Trading Strength for Conditioning</title>
+            <link>https://zacs.site/blog/trading-strength-for-conditioning.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/trading-strength-for-conditioning.html</guid>
+            <pubDate>Fri, 26 Apr 2019 19:38:25 GMT</pubDate>
+            <description>
+        &lt;p&gt;I talked about &lt;a href="http://zacs.site/blog/my-road-to-weightlifting.html"&gt;my road to weightlifting&lt;/a&gt; the other day, to give you insight into my background. Having reached each end of the fitness spectrum, and after going back and forth between extreme conditioning and extreme strength, I look forward to sharing with you the lessons I learned along the way. As I work to regain the strength I lost over the last month, I want to highlight some of the consequences of that decision. In doing so, I hope to better prepare you for this difficult journey, and help you avoid some common pitfalls.&lt;/p&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/trading-strength-for-conditioning.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Marginal Gains</title>
             <link>https://jackmott.github.io/programming/tools/editor/ide/visual/studio/2016/07/01/marginal-gains.html</link>
