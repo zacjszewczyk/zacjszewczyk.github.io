@@ -541,9 +541,6 @@ def Init():
 # of its operation.
 # Parameters: params: command line parameters (String)
 def Interface(params,search_query="",end_action="continue"):
-    # 'c' is an instance of the 'colors' class, for output styling
-    global c
-
     # Store the menu in a variable so as to provide easy access at any point in time.
     menu = """
     * To search all articles:                        %s-S%s
