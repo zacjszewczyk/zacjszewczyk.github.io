@@ -2,6 +2,7 @@
 
 # Imports
 from colors import c # Style output
+from shutil import copy, copystat
 
 # Method: CopyFile
 # Purpose: Copy an existing file, and optionally preserve metadata
