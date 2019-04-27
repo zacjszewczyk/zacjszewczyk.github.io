@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 26 Apr 2019 10:22:51 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Apr 2019 05:20:06 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Crunchdex Predicts Stock Performance with 92% Accuracy</title>
+            <link>https://hackernoon.com/crunchdex-predicts-stock-performance-with-92-accuracy-18df2cabf605</link>
+            <guid isPermaLink='true'>https://hackernoon.com/crunchdex-predicts-stock-performance-with-92-accuracy-18df2cabf605</guid>
+            <pubDate>Sat, 27 Apr 2019 17:14:40 GMT</pubDate>
+            <description>
+        &lt;p&gt;Dominik Vacikar measured growth signals for 4,000 companies, then searched for historical correlations between those signals and stock market performance. His research lead to some interesting results that he plans to turn into an interest product. This reminded me of &lt;a href="https://zacs.site/projects.html#hnScraper"&gt;my work on a Hacker News scraper&lt;/a&gt;, a project I hope to revive soon.&lt;/p&gt;        &lt;/div&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/crunchdex.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Trading Strength for Conditioning</title>
             <link>https://zacs.site/blog/trading-strength-for-conditioning.html</link>
