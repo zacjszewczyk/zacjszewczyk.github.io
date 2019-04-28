@@ -186,23 +186,16 @@
 			"file": "local/blog.html",
 			"settings":
 			{
-				"buffer_size": 36017,
+				"buffer_size": 35869,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "local/blog/the-last-four-years.html",
-			"settings":
-			{
-				"buffer_size": 13174,
-				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "cp.py",
 			"settings":
 			{
-				"buffer_size": 1999,
+				"buffer_size": 2033,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -245,7 +238,7 @@
 			"file": "local/rss.xml",
 			"settings":
 			{
-				"buffer_size": 1162372,
+				"buffer_size": 1163507,
 				"line_ending": "Unix"
 			}
 		},
@@ -362,12 +355,12 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "package",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
 				"package",
-				"Package Control: Remove Package"
+				"Package Control: List Packages"
 			],
 			[
 				"pack",
@@ -403,6 +396,7 @@
 	},
 	"file_history":
 	[
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/the-last-four-years.html",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/filson-4x4.html",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/CopyFile.py",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/CopyFile",
@@ -529,8 +523,7 @@
 		"/Users/zjszewczyk/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 2 - Mental Preparedness/1 Proactive Planning.txt",
 		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 3 - Material Preparedness/1 The Bug-Out Bag.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 3 - Material Preparedness/5 Acquiring Gear.txt",
-		"/Users/zjszewczyk/Dropbox/Apps/Drafts/2015-08-03-07-07-25.txt"
+		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 3 - Material Preparedness/5 Acquiring Gear.txt"
 	],
 	"find":
 	{
@@ -724,7 +717,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -754,7 +747,7 @@
 						"translation.y": 2876.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -801,7 +794,7 @@
 						"translation.y": 979.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -810,7 +803,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 36017,
+						"buffer_size": 35869,
 						"regions":
 						{
 						},
@@ -825,8 +818,8 @@
 						{
 							"WordCount":
 							{
-								"changes": 4,
-								"count": 2679,
+								"changes": 0,
+								"count": 2639,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -845,53 +838,31 @@
 				},
 				{
 					"buffer": 4,
-					"file": "local/blog/the-last-four-years.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13174,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								895,
-								895
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2914.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "cp.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1999,
+						"buffer_size": 2033,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								98,
+								98
 							]
 						],
 						"settings":
 						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "python"
+							},
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -900,11 +871,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "colors.py",
 					"semi_transient": false,
 					"settings":
@@ -932,7 +903,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "CommandTimer.py",
 					"semi_transient": false,
 					"settings":
@@ -960,7 +931,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "local/assets/manifest.json",
 					"semi_transient": false,
 					"settings":
@@ -986,11 +957,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "local/assets/main.css",
 					"semi_transient": false,
 					"settings":
@@ -1016,16 +987,16 @@
 						"translation.y": 509.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "local/rss.xml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1162372,
+						"buffer_size": 1163507,
 						"regions":
 						{
 						},
@@ -1054,11 +1025,11 @@
 						"translation.y": 349.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 10,
 					"file": "master.log",
 					"semi_transient": false,
 					"settings":
@@ -1082,11 +1053,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 11,
 					"file": "deploy.py",
 					"semi_transient": false,
 					"settings":
@@ -1112,11 +1083,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 12,
 					"file": "local/assets/MTV.html",
 					"semi_transient": false,
 					"settings":
@@ -1142,11 +1113,11 @@
 						"translation.y": 720.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 13,
 					"file": "local/assets/m_sw.js",
 					"semi_transient": false,
 					"settings":
@@ -1180,11 +1151,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 14,
 					"file": "ModTimes.py",
 					"semi_transient": false,
 					"settings":
@@ -1208,11 +1179,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 15,
 					"file": "Hash.py",
 					"semi_transient": false,
 					"settings":
@@ -1238,11 +1209,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 16,
 					"file": "system/index.html",
 					"semi_transient": false,
 					"settings":
@@ -1266,11 +1237,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 17,
 					"file": "system/projects.html",
 					"semi_transient": false,
 					"settings":
@@ -1297,11 +1268,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 18,
 					"file": "system/error.html",
 					"semi_transient": false,
 					"settings":
@@ -1327,11 +1298,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 19,
 					"file": "system/template.htm",
 					"semi_transient": false,
 					"settings":
@@ -1357,7 +1328,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
