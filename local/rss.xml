@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 30 Apr 2019 03:43:10 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2019 04:44:17 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>The Javascript Console</title>
+            <link>https://dzone.com/articles/all-you-can-do-with-the-console-in-javascript</link>
+            <guid isPermaLink='true'>https://dzone.com/articles/all-you-can-do-with-the-console-in-javascript</guid>
+            <pubDate>Wed, 01 May 2019 16:44:05 GMT</pubDate>
+            <description>
+        &lt;p&gt;&lt;a href="http://zacs.site/blog/a-javascript-free-frontend.html"&gt;Avoiding Javascript&lt;/a&gt; also means missing out on cool tricks like these, that make writing good code easier when we have no choice but to use it. I work hard to optimize &lt;a href="https://zacs.site/projects.html#firstCrack"&gt;the Python behind this site&lt;/a&gt;, but did almost nothing with the 400 lines of uncommented Javascript code behind &lt;a href="projects.html#fmtv"&gt;my LMTV RV builder&lt;/a&gt;. I have some serious work ahead of me on that project, and simple tips like &lt;a href="https://dzone.com/articles/all-you-can-do-with-the-console-in-javascript"&gt;these&lt;/a&gt; from Antonio Sanchez will make that a lot easier.&lt;/p&gt;        &lt;/div&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/the-javascript-console.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Crunchdex Predicts Stock Performance with 92% Accuracy</title>
             <link>https://hackernoon.com/crunchdex-predicts-stock-performance-with-92-accuracy-18df2cabf605</link>
