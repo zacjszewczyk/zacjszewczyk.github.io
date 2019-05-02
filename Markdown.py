@@ -94,7 +94,6 @@ def Markdown(line):
     current = types[-1]
     second = types[-2]
     third = types[-3]
-
     if (current != "RAW HTML"):
         # If I've already escaped a ascii code, pass; otherwise escape it.
         if (search("&[a-z]{4}\;", line) != None):
@@ -123,14 +122,15 @@ def Markdown(line):
             ftxt = each.replace("\'", "&#8216;", 1)
             line = line.replace(each, ftxt)
         # Interpret inline code
-        for each in findall("\%[\w:\/\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]\/<>]+\%", line):
-            if (len(each.split(" ")) > 5):
+        for each in findall(r"\%[\w:\/\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]\/<>]+\%", line):
+            if (len(each.split(" ")) > 7):
                 continue
             ftxt = each
             line = line.replace(each, "&&TK&&")
-            ftxt = each.replace("%", "<span class='command'>", 1)
+            ftxt = ftxt.replace("%", "<span class='command'>", 1)
             ftxt = ftxt.replace("%", "</span> ", 1).strip()
-            line = line.replace("&&TK&&", ftxt)            
+            line = line.replace("&&TK&&", ftxt)
+            line = line.replace("&#8217;", "'").replace("&#8216;", "'").replace("&#8221;", '"').replace("&#8220;", '"')
         # Interpret <strong> tags
         for each in findall("\*\*{1}[\w:\"\.\+'\s\.|\(\)#/\\\>\<&=,\$\!\?\;\-\[\]]+\*\*{1}", line):
             ftxt = each
