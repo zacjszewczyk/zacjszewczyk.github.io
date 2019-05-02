@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 01 May 2019 04:44:17 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 May 2019 09:56:33 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Why I Write in Plain Text</title>
+            <link>https://zacs.site/blog/why-i-write-in-plain-text.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/why-i-write-in-plain-text.html</guid>
+            <pubDate>Thu, 02 May 2019 21:56:12 GMT</pubDate>
+            <description>
+        &lt;p&gt;A few days ago, I decided to start an article about my writing setup. Over the years I have dialed it in, and today I have a pretty neat workflow. As I started on that piece, though, I realized that I had never talked about why I write in plain text. Most aspects of my workflow traces back to that choice, so today I want to explain some of the reasons I made it.&lt;/p&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/why-i-write-in-plain-text.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>The Javascript Console</title>
             <link>https://dzone.com/articles/all-you-can-do-with-the-console-in-javascript</link>
