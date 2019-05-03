@@ -1,0 +1,15 @@
+Type: original
+Title: Integrating Sublime Text and Marked 2
+Link: integrating-sublime-text-and-marked-2.html
+Pubdate: 2019/05/03 12:24:59
+Author: Zac Szewczyk
+
+I had a hard time getting Sublime Text to work with [Marked 2](http://marked2app.com/), back when I used Brett's app to proof my writing. Dan Sturm posted [a simple snippet](https://doingthatwrong.com/home/2012/5/21/launching-marked-from-sublime-text-2.html) that launched it using a build system, that failed if Marked came from the App Store. Here's the fix:
+
+<pre>
+{
+    "shell_cmd": "open -a \"/Applications/Marked 2.app\" \"$file\""
+}
+</pre>
+
+Click the "Tools" toolbar menu, scroll down to "Build System", and click "New Build System...". Copy and paste the snippet above, then save the file. If you have "Build System" set to "Automatic", Sublime Text will now open any file without a specific build system in Marked.
