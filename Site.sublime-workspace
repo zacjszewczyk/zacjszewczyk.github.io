@@ -186,7 +186,7 @@
 			"file": "local/blog.html",
 			"settings":
 			{
-				"buffer_size": 35925,
+				"buffer_size": 36478,
 				"line_ending": "Unix"
 			}
 		},
@@ -238,7 +238,7 @@
 			"file": "local/rss.xml",
 			"settings":
 			{
-				"buffer_size": 1164905,
+				"buffer_size": 1166997,
 				"line_ending": "Unix"
 			}
 		},
@@ -687,7 +687,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -755,7 +755,7 @@
 						"translation.y": 2051.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -811,7 +811,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 35925,
+						"buffer_size": 36478,
 						"regions":
 						{
 						},
@@ -981,8 +981,8 @@
 						"selection":
 						[
 							[
-								2394,
-								2394
+								2311,
+								2311
 							]
 						],
 						"settings":
@@ -1003,7 +1003,7 @@
 						"translation.y": 1732.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1012,7 +1012,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1164905,
+						"buffer_size": 1166997,
 						"regions":
 						{
 						},

@@ -7,9 +7,33 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 03 May 2019 04:25:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2019 02:06:08 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>My Setup</title>
+            <link>https://zacs.site/blog/my-setup-2019.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/my-setup-2019.html</guid>
+            <pubDate>Fri, 10 May 2019 14:02:59 GMT</pubDate>
+            <description>
+        &lt;p&gt;Over the years I have dialed in my writing process. I started typing posts in a textbox on Zoomshare; nowadays, I write in a powerful text editor, track changes with version control software, keep redundant backups, and serve this site with a back-end I wrote myself. I have set myself up well with a pretty neat workflow, and today I want to share it with you.&lt;/p&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/my-setup-2019.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Integrating Sublime Text and Proofer</title>
+            <link>https://zacs.site/blog/integrating-sublime-text-and-proofer.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/integrating-sublime-text-and-proofer.html</guid>
+            <pubDate>Wed, 08 May 2019 17:36:27 GMT</pubDate>
+            <description>
+        &lt;p&gt;I wrote about &lt;a href="http://zacs.site/blog/integrating-sublime-text-and-marked-2.html"&gt;using Marked with Sublime Text&lt;/a&gt; before I switched to &lt;a href="https://zacs.site/projects.html#proofer"&gt;Proofer&lt;/a&gt;, so I wanted to take a minute to share the snippet that lets me use Sublime Text with Proofer now.&lt;/p&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/integrating-sublime-text-and-proofer.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Integrating Sublime Text and Marked 2</title>
             <link>https://zacs.site/blog/integrating-sublime-text-and-marked-2.html</link>
