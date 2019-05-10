@@ -15,7 +15,8 @@ article>p {
 #big_table tr td {
     text-align: center;
     padding: 2%;
-    font-size: 200%; }
+    font-size: 200%;
+    line-height: 150%; }
 #archives main article {
     margin: 10px 0; }
 #fn1 {
