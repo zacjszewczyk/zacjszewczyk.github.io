@@ -1,0 +1,15 @@
+Type: linkpost
+Title: An Examination of Google's Bias
+Link: https://www.cjr.org/tow_center/google-news-algorithm.php
+Pubdate: 2019/05/13 17:42:55
+Author: Zac Szewczyk
+
+Nicholas Diakopoulos, at the Columbia Journalism Review, wrote a fascinating piece on Google's growing influence over the news and its bias for left-leaning sources:  
+
+    "The data shows that just 20 news sources account for more than half of article impressions. The top 20 percent of sources (136 of 678) accounted for 86 percent of article impressions."
+
+And then, later:  
+
+    "Our data shows that 62.4 percent of article impressions were from sources rated by that research as left-leaning, whereas 11.3 percent were from sources rated as right-leaning. ... A higher proportion of left-leaning sources appear in Top Stories."
+
+The level to which Google decides the type of stories users see, and the algorithm's evident bias in that decision, ought to chill even those who benefit from it.

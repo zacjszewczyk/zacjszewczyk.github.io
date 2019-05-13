@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 13 May 2019 09:14:31 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 May 2019 09:43:05 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>An Examination of Google's Bias</title>
+            <link>https://www.cjr.org/tow_center/google-news-algorithm.php</link>
+            <guid isPermaLink='true'>https://www.cjr.org/tow_center/google-news-algorithm.php</guid>
+            <pubDate>Mon, 13 May 2019 21:42:55 GMT</pubDate>
+            <description>
+        &lt;p&gt;Nicholas Diakopoulos, at the Columbia Journalism Review, wrote a fascinating piece on Google&#38;#8217;s growing influence over the news and its bias for left-leaning sources:&lt;/p&gt;                &lt;blockquote&gt;        &lt;p&gt;&#38;#8220;The data shows that just 20 news sources account for more than half of article impressions. The top 20 percent of sources (136 of 678) accounted for 86 percent of article impressions.&#38;#8221;&lt;/p&gt;        &lt;/blockquote&gt;        &lt;p&gt;And then, later:&lt;/p&gt;                &lt;blockquote&gt;        &lt;p&gt;&#38;#8220;Our data shows that 62.4 percent of article impressions were from sources rated by that research as left-leaning, whereas 11.3 percent were from sources rated as right-leaning. ... A higher proportion of left-leaning sources appear in Top Stories.&#38;#8221;&lt;/p&gt;        &lt;/blockquote&gt;        &lt;p&gt;The level to which Google decides the type of stories users see, and the algorithm&#38;#8217;s evident bias in that decision, ought to chill even those who benefit from it.&lt;/p&gt;        &lt;/div&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/googles-bias.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Smart versus Intelligent</title>
             <link>https://zacs.site/blog/smart-versus-intelligent.html</link>
