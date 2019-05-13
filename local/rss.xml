@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 10 May 2019 05:42:16 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 May 2019 09:14:31 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Smart versus Intelligent</title>
+            <link>https://zacs.site/blog/smart-versus-intelligent.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/smart-versus-intelligent.html</guid>
+            <pubDate>Mon, 13 May 2019 21:14:22 GMT</pubDate>
+            <description>
+        &lt;p&gt;In an article I will post soon, I mention the difference between smart and intelligent people. I have seen this explained in more ways than I can count, but none the way I define it. Rather than burying this in an already long piece, I want to talk about it here so that I can flesh it out and then cite it later.&lt;/p&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/smart-versus-intelligent.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>My Setup</title>
             <link>https://zacs.site/blog/my-setup-2019.html</link>
