@@ -1,0 +1,7 @@
+Type: linkpost
+Title: A Cisco Router Bug Has Massive Global Implications
+Link: https://www.wired.com/story/cisco-router-bug-secure-boot-trust-anchor/
+Pubdate: 2019/05/14 17:39:39
+Author: Zac Szewczyk
+
+Many have [explained](Proxy Innovation.txt)--in [great](Huawei and Managing 5G Risk.txt) [detail](A Risk Analysis of Huawei.txt)--the dangers of Huawei in the West. They focus on the chance of a hidden vulnerability in those devices, but ommit the fact that even top-tier Western devices have security flaws. This ommission implies that the decision comes down to accepting significant risk by adopting Huawei, in exchange for 5G, or accepting zero risk by shopping elsewhere. As this story demonstrates, though, Western tech may not have built-in vulnerabilities a non-Western nation-state actor could exploit, but it also does not guarantee network security. As this debate continues to rage, I believe we should keep this in mind.

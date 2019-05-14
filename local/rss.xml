@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 14 May 2019 12:46:11 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2019 09:39:57 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>A Cisco Router Bug Has Massive Global Implications</title>
+            <link>https://www.wired.com/story/cisco-router-bug-secure-boot-trust-anchor/</link>
+            <guid isPermaLink='true'>https://www.wired.com/story/cisco-router-bug-secure-boot-trust-anchor/</guid>
+            <pubDate>Tue, 14 May 2019 21:39:39 GMT</pubDate>
+            <description>
+        &lt;p&gt;Many have &lt;a href="http://zacs.site/blog/proxy-innovation.html"&gt;explained&lt;/a&gt;&#38;#160;&#38;#8212;&#38;#160;in &lt;a href="http://zacs.site/blog/huawei-and-managing-5g-risk.html"&gt;great&lt;/a&gt; &lt;a href="http://zacs.site/blog/a-risk-analysis-of-huawei.html"&gt;detail&lt;/a&gt;&#38;#160;&#38;#8212;&#38;#160;the dangers of Huawei in the West. They focus on the chance of a hidden vulnerability in those devices, but ommit the fact that even top-tier Western devices have security flaws. This ommission implies that the decision comes down to accepting significant risk by adopting Huawei, in exchange for 5G, or accepting zero risk by shopping elsewhere. As this story demonstrates, though, Western tech may not have built-in vulnerabilities a non-Western nation-state actor could exploit, but it also does not guarantee network security. As this debate continues to rage, I believe we should keep this in mind.&lt;/p&gt;        &lt;/div&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/cisco-router-bug.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Keeping Up with Current Events</title>
             <link>https://zacs.site/blog/my-morning-reads.html</link>
