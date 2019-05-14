@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 13 May 2019 09:43:05 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2019 12:46:11 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Keeping Up with Current Events</title>
+            <link>https://zacs.site/blog/my-morning-reads.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/my-morning-reads.html</guid>
+            <pubDate>Tue, 14 May 2019 12:46:04 GMT</pubDate>
+            <description>
+        &lt;p&gt;I have always admired the well-informed. Their ability to speak on complex topics, to make thought-provoking points about things of which I know little, impresses me. This happened again a few months ago, with a retired Army Colonel whose knowledge of the American Revolution, the geopolitical landscape, and war floored me. I absorbed all I could from him. He also made me realize that I needed to do a much better job of educating myself and keeping up with current events. I have worked hard to do that over the last three months. Today I want to talk about my strategy for keeping up with world affairs. The self-education side of this coin warrants its own article, so I will save that for later.&lt;/p&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/my-morning-reads.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>An Examination of Google's Bias</title>
             <link>https://www.cjr.org/tow_center/google-news-algorithm.php</link>
