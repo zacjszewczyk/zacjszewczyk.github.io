@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 14 May 2019 09:39:57 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 May 2019 11:39:40 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>My Evening Reads</title>
+            <link>https://zacs.site/blog/my-evening-reads.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/my-evening-reads.html</guid>
+            <pubDate>Wed, 15 May 2019 11:39:28 GMT</pubDate>
+            <description>
+        &lt;p&gt;I follow a lot of websites. In &lt;a href="http://zacs.site/blog/my-morning-reads.html"&gt;&lt;em&gt;My Morning Reads&lt;/em&gt;&lt;/a&gt;, I list the seventeen I use to start my day. These get regular updates and help me keep up on current events. I also follow a lot of websites run by independent writers and small shops. These cover many of the same topics, but due to their size, they do not get updated as often. The unique perspective they bring to the table, though, makes for some of the most interesting reading I do. To round out &lt;a href="http://zacs.site/blog/my-morning-reads.html"&gt;my earlier post&lt;/a&gt;, I want to share this list with you today.&lt;/p&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/my-evening-reads.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>A Cisco Router Bug Has Massive Global Implications</title>
             <link>https://www.wired.com/story/cisco-router-bug-secure-boot-trust-anchor/</link>
