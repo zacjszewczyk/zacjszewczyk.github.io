@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 15 May 2019 11:44:15 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 May 2019 11:06:43 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Vim Tricks</title>
+            <link>https://www.256kilobytes.com/content/show/10503/5-tasks-you-didnt-know-you-could-do-with-vim</link>
+            <guid isPermaLink='true'>https://www.256kilobytes.com/content/show/10503/5-tasks-you-didnt-know-you-could-do-with-vim</guid>
+            <pubDate>Wed, 15 May 2019 23:06:21 GMT</pubDate>
+            <description>
+        &lt;p&gt;I try to keep my machine as close to stock as possible. This makes setup a breeze, helps it stay fast, and means I have less to check when something goes wrong. Although &lt;a href="http://zacs.site/blog/my-setup-2019.html"&gt;I have gotten away from that&lt;/a&gt;, I have plans to re-work my setup soon. I appreciate posts like &lt;a href="https://www.256kilobytes.com/content/show/10503/5-tasks-you-didnt-know-you-could-do-with-vim"&gt;this one&lt;/a&gt;, from August Garcia at 256 Kilobytes, that remind me of these powerful built-in tools, and that I may not need a bunch of flashy third-party apps after all.&lt;/p&gt;        &lt;/div&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/vim-tricks.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>My Evening Reads</title>
             <link>https://zacs.site/blog/my-evening-reads.html</link>

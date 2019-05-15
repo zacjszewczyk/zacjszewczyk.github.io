@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Vim Tricks
+Link: https://www.256kilobytes.com/content/show/10503/5-tasks-you-didnt-know-you-could-do-with-vim
+Pubdate: 2019/05/15 19:06:21
+Author: Zac Szewczyk
+
+I try to keep my machine as close to stock as possible. This makes setup a breeze, helps it stay fast, and means I have less to check when something goes wrong. Although [I have gotten away from that](My Setup 2019.txt), I have plans to re-work my setup soon. I appreciate posts like [this one](https://www.256kilobytes.com/content/show/10503/5-tasks-you-didnt-know-you-could-do-with-vim), from August Garcia at 256 Kilobytes, that remind me of these powerful built-in tools, and that I may not need a bunch of flashy third-party apps after all.
