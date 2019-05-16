@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 15 May 2019 11:06:43 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 May 2019 03:14:04 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Don't Use Amazon Web Services</title>
+            <link>https://zacs.site/blog/don't-use-amazon-web-services.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/don't-use-amazon-web-services.html</guid>
+            <pubDate>Thu, 16 May 2019 15:12:07 GMT</pubDate>
+            <description>
+        &lt;p&gt;I fancy myself a technical guy. I got into web development at a young age, learned to write Python, Perl, C, and a handful of other languages in high school, and got a degree in Computer Science in college. Although I work in an organization not known for its technical prowess, it has worked hard to change that: today, Army Cyber matches industry on the defensive side, and&#38;#160;&#38;#8212;&#38;#160;by law&#38;#160;&#38;#8212;&#38;#160;has far more experience on the offense. I bring all this &lt;a href="http://zacs.site/blog/the-last-four-years.html"&gt;back up&lt;/a&gt; so that you have some context when I say this: don&#38;#8217;t use Amazon Web Services to host your static website; it&#38;#8217;s far too complex. I spent twenty days struggling to work through that process. Today I will share my cautionary tale.&lt;/p&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/don't-use-amazon-web-services.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Vim Tricks</title>
             <link>https://www.256kilobytes.com/content/show/10503/5-tasks-you-didnt-know-you-could-do-with-vim</link>

@@ -1,0 +1,70 @@
+Type: original
+Title: Don't Use Amazon Web Services
+Link: don't-use-amazon-web-services.html
+Pubdate: 2019/05/16 11:12:07
+Author: Zac Szewczyk
+
+I fancy myself a technical guy. I got into web development at a young age, learned to write Python, Perl, C, and a handful of other languages in high school, and got a degree in Computer Science in college. Although I work in an organization not known for its technical prowess, it has worked hard to change that: today, Army Cyber matches industry on the defensive side, and--by law--has far more experience on the offense. I bring all this [back up](The Last Four Years.txt) so that you have some context when I say this: don't use Amazon Web Services to host your static website; it's far too complex. I spent twenty days struggling to work through that process. Today I will share my cautionary tale.  
+
+### Amazon Web Services: The Internet's Backbone
+
+Around 2003, Amazon began using back-end infrastructure designed, created, and maintained in-house. The team that build that back-end grew along with the company. Three years later, it became a public-facing service. Amazon Web Services has since grown to become the strongest player in this space.  
+
+Most people know Amazon as the has-anything online store that delivers in two days or less. Developers also know it as the 800-pound gorilla in the web services room. Although [just a small part of the Internet runs on Amazon Web Services](https://www.quora.com/How-essential-is-AWS-to-the-internet), or AWS, [it captures almost 40% of the sector's revenue](https://www.theverge.com/2018/7/28/17622792/plugin-use-the-internet-without-the-amazon-cloud). From this we may deduce that the platform hosts most of the popular revenue-producing sites in use today. From [Airbnb to Slack and Adobe Connect to Netflix](https://nymag.com/intelligencer/2018/03/when-amazon-web-services-goes-down-so-does-a-lot-of-the-web.html), many people go entire days without leaving AWS infrastructure.  
+
+The market loves AWS, and the handful of civilian developers I know do, too. To help keep that love alive, Amazon attracts new people to its platform with [a free tier](https://aws.amazon.com/free/). This allows those with small projects to use the company's cloud resources at no cost, as long as they stay within some broad limits. Many people host static websites for free on Simple Storage Service, or [S3](https://aws.amazon.com/s3/). Amazon [even](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) [supports](https://aws.amazon.com/getting-started/projects/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-1/) [that](https://aws.amazon.com/getting-started/projects/host-static-website/). Due to the ever-increasing popularity of the platform, the good things I had heard about it, and its great price tag, I decided to use AWS to bring this site back online. 
+
+### Amazon S3: A Fairytale Beginning
+
+I [opened an AWS account](https://aws.amazon.com/free/) on March 29th, 2019. [First Crack](/projects.html#firstCrack) relied on a Node.js front-end at the time, so I spent an hour porting it to a static site builder. I then dove into [setting up the server](https://docs.aws.amazon.com/AmazonS3/latest/dev/HostingWebsiteOnS3Setup.html). That process, although not hard, did prove tricky. I started by creating three Buckets: one for [static hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/HostingWebsiteOnS3Setup.html#step1-create-bucket-config-as-website) of %zacs.site%, the second to [send requests](https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html#root-domain-walkthrough-s3-tasks) for %www.zacs.site% to %zacs.site%, and the third for [server-side logging](https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html). I then made the first two public with [a baffling block of JSON](https://docs.aws.amazon.com/AmazonS3/latest/dev/HostingWebsiteOnS3Setup.html#step2-add-bucket-policy-make-content-public), and pointed my domain to the AWS [Website Endpoint](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteEndpoints.html). Around five hours after I opened my account, I could visit %http://zacs.site%. I called it a win and went to bed around 2:00 AM on March 30th.  
+
+### Amazon Certificate Manager: Seeds of Disillusionment
+
+On the morning of March 30th, I felt good. All had gone well so far. I had just two small items left on my to-do list. First, I wanted to set up HTTPS for better [security](https://www.wired.com/story/google-chrome-https-not-secure-label/) and [search engine ranking](https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html). I also wanted to fix my service worker, which would help with caching, make my site work offline, and round out a perfect score in [Lighthouse](https://developers.google.com/web/tools/lighthouse/). Since using [HTTP kept my service worker from loading](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features), tackling the first would solve both problems. After last night's success, I dove right in.  
+
+On the AWS support site, I found [a helpful post on setting up HTTPS with Amazon CloudFront](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-https-requests-s3/). I did not yet have an SSL certificate, but found a link there to [a page](https://aws.amazon.com/premiumsupport/knowledge-center/install-ssl-cloudfront/) that sent me to [a third post that explained the process for getting one](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html). I had to request a free SSL certificate through [Amazon Certificate Manager](https://aws.amazon.com/certificate-manager/), or ACM. Given these can cost as little as $5 or over $500 per year, I had no problem with this.  
+
+I started the request, but found that I could not finish it. An error message told me new accounts had to contact support to raise the default request limit, which [should have started at 1,000](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_acm). Through a note tucked into [yet another support page](https://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html), I later learned that "new AWS accounts might start with a lower limit". In practice, they start with 0. I sent [a ticket](https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/) in on the morning of March 30th, and got the cap raised to 1,000--the supposed default--three days later on Tuesday, April 2nd.  
+
+Once I could request an SSL certificate, [the process](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html) took a few seconds. Then came the next hurdle: proving I owned my domain. I tried using [DNS records](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html) first, then exposed my [email](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html) address to the public WHOIS database when that failed. Neither worked. Over the next ten days, and almost as many support emails, a well-meaning support rep tried to get me through this opaque process. On April 12th, while waiting for a reply, I changed a setting on some menu that caused AWS to issue the certificate. I do not believe AWS wants its users to earn these through trial and error, but well done if they did.  
+
+I did not know how long this process would take, or how involved it would get when I started. Given the ease with which I set up my site, I did not expect it to take ten days of support emails, web searches, and trial and error. That surprised me. For all I knew, though, everyone went through this drawn-out and complex process. I had my doubts, but I pressed on.  
+
+### Amazon CloudFront: A Fairytale Unraveled
+
+On April 12th, with an SSL certificate "in-hand", I went back to [the post on setting up HTTPS with CloudFront](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-https-requests-s3/). Since the Distribution limit [defaults to 200](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_cloudfront), I should not have had a problem creating my first. Once again, though, in practice it starts at 0. While I waited for that limit increase, I learned some things about [AWS Regions](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
+
+All websites live on actual devices called servers. The greater the distance between them and their users, the slower those websites become. Someone in New York could access a server down the street [0.14 seconds](https://www.keycdn.com/support/what-is-latency) faster than one in the United Kingdom, for example. These delays matter when sending a lot of people a lot of data. Content delivery networks, or CDNs, solve this problem by cloning content all around the world. Traffic from Japan might go to devices near Asia, and traffic from the western United States might go to California. Users can still access data in other parts of the world, but keeping copies on nearby servers yields much lower response times.  
+
+Amazon takes this approach to its web services with Regions. Rather than run S3 out of a single area and use a CDN to spread that data worldwide, Amazon has data centers [across the globe](https://aws.amazon.com/about-aws/global-infrastructure/). Each runs [an instance](https://blog.rackspace.com/aws-101-regions-availability-zones) of the AWS stack. As I waited for my CloudFront limit increase, I learned that CloudFront lived in Virginia. To my dismay, I also learned that it would not work with certificates from other regions. The SSL certificate I had labored over for ten days came from ACM in Ohio.  
+
+With no other choice, I started back at square one. I had raised my certificate limit in the Ohio region, but not Virginia, so I sent a new ticket in on April 12th. Four days later, on April 16th, the AWS support staff complied. By then they had also raised my CloudFront Distribution cap. Eighteen days after I opened my AWS account, I had the resources to use HTTPS. The process of setting it up proved both hard and complex. Trial and error got me through once again, and then the weird edge cases started popping up.  
+
+First, my blog would not update. I could alter any other file in my S3 bucket, or upload a new one, and see that change a few minutes later. This delay made sense, because CDNs need time to propagate these changes. %blog.html% failing to update did not. It turns out CDNs can hold onto old versions of the files they serve, though, so I ended up taking %blog.html% off the network. This fixed my first edge case, but then the real problems started.  
+
+When I refreshed the page, it showed me a long string of special characters. I had seen this before, when my browser tried to read a compressed file as plain text. Some digging lead to [an AWS forum post from 2012](https://forums.aws.amazon.com/thread.jspa?messageID=381831), from a user with the same problem. It looked like some server-side logic made either CloudFront or S3 serve the compressed %blog.html% without the flag that told my browser to decompress it. I confirmed this with a few shell commands: 
+
+<pre class="shell">
+curl https://zacs.site/blog.html
+# "curl URL" sends a GET request to the server at URL. It then prints the server's response to the shell. When I ran the command above, it showed me a long string of question marks. I had a hunch that gzip compression caused this. 
+</pre>
+
+<pre class="shell">
+curl https://zacs.site/blog.html | gunzip
+# This time, "curl" sent that response to "gunzip" before printing it to the shell. "gunzip" decompresses files compressed with gzip. When I ran the command above, it printed raw HTML. This told me the server replied with the compressed "blog.html" file. By default, though, "curl" requests uncompressed files. 
+</pre>
+
+If I got a compressed file without asking for it, what would I get if I asked for a compressed file? This command let me find out: 
+
+<pre class="shell">
+curl https://zacs.site/blog.html -H "Accept-Encoding: gzip"
+# This sent a GET request to my server, and told it to respond with compressed gzip files. Because "curl" does not unzip compressed files, this command should have printed a bunch of question marks to my shell. I got raw HTML.
+</pre>
+
+Let me say this all again. When asked for a compressed file, my server replied with a plain text, unzipped one. When asked for a plain text, unzipped file, it replied with a compressed one. 
+
+I checked my S3 bucket first. The %blog.html% file there had gzip compression, and tags that told AWS that. Somewhere between the S3 bucket and my device, then, CloudFront toggled the compression without toggling that flag. I confirmed this by storing a plain text, unzipped %blog.html% on the server and running those three commands again.
+
+I tried all sorts of hacks to fix this. Adding %Accept-Encoding: gzip% to every header. Taking %blog.html% off CloudFront's CDN. Re-uploading zipped and unzipped versions of the file. Nothing worked. As part of that process, I turned the CDN off and on a few times. After the third half-hour cycle, the problem vanished. Not happy to take my win and call it a day, though, I started poking around the rest of my site. Did this problem affect any other pages? Every page I tested worked except one: [my LMTV RV builder](/assets/MTV.html). I threw in the towel.  
+
+Closing in on two thousand words, I will leave my answer for a later post. Go into this with eyes wide open and you may fare better, but I have my doubts. Having a staff on-hand--and a budget for premium support--might make AWS a great choice. For a small shop looking for an easy way to host a static site, though, find something else.
