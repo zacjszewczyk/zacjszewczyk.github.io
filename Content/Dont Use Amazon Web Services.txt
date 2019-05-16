@@ -1,7 +1,7 @@
 Type: original
 Title: Don't Use Amazon Web Services
-Link: don't-use-amazon-web-services.html
-Pubdate: 2019/05/16 11:12:07
+Link: dont-use-amazon-web-services.html
+Pubdate: 2019/05/16 11:23:46
 Author: Zac Szewczyk
 
 I fancy myself a technical guy. I got into web development at a young age, learned to write Python, Perl, C, and a handful of other languages in high school, and got a degree in Computer Science in college. Although I work in an organization not known for its technical prowess, it has worked hard to change that: today, Army Cyber matches industry on the defensive side, and--by law--has far more experience on the offense. I bring all this [back up](The Last Four Years.txt) so that you have some context when I say this: don't use Amazon Web Services to host your static website; it's far too complex. I spent twenty days struggling to work through that process. Today I will share my cautionary tale.  

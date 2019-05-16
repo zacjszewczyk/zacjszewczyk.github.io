@@ -652,7 +652,7 @@ def Migrate(target, mod_time):
     else:
         article_type = "original"
         article_title = article_content
-        article_url = target.replace(".txt", ".html").replace(" ", "-").lower()
+        article_url = target.replace(".txt", ".html").replace(" ", "-").replace("'","").lower()
         article_content = fd.readline()
 
     # Read the rest of the article's content from the file.
