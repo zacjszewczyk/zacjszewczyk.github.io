@@ -272,7 +272,7 @@ def GenBlog():
                 for timestamp in sorted(files[year][month][day], reverse=True):
                     # For each article made in the month, add an entry on the appropriate
                     # 'month' structure file.
-                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", GetTitle(files[year][month][day][timestamp])))
+                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", GetTitle(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))))
                     
                     # If a structure file already exists, don't rebuild the HTML file for individual articles
                     if (not isfile("./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):                        
@@ -479,12 +479,22 @@ def GetFiles():
 # Purpose: Return the article title of a source file.
 # Parameters:
 # - source: Source file name, including extension. (String)
-def GetTitle(source):
-    # Open a source file and return the article's title.
-    fd = open("Content/"+source, "r")
-    fd.readline()
-    title = fd.readline()[7:]
-    fd.close()
+def GetTitle(source, timestamp):
+    src = "Content/"+source
+
+    with open(src, "r") as source_fd:
+        # Ensure source file contains header. If not, use the Migrate() method to generate it.
+        source_fd = open(src, "r")
+        line = source_fd.readline()
+        if (line[0:5] != "Type:"):
+            Migrate(source, timestamp)
+        source_fd.close()
+        
+        # Open the source file in read mode.
+        source_fd = open(src, "r")
+        source_fd.readline()
+        title = source_fd.readline()[7:]
+
     return title
 
 # Method: Init
