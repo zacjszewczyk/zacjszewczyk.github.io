@@ -177,7 +177,7 @@
 			"file": "blog.py",
 			"settings":
 			{
-				"buffer_size": 36830,
+				"buffer_size": 37239,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -186,7 +186,7 @@
 			"file": "local/blog.html",
 			"settings":
 			{
-				"buffer_size": 32629,
+				"buffer_size": 33130,
 				"line_ending": "Unix"
 			}
 		},
@@ -238,7 +238,7 @@
 			"file": "local/rss.xml",
 			"settings":
 			{
-				"buffer_size": 1177096,
+				"buffer_size": 1178443,
 				"line_ending": "Unix"
 			}
 		},
@@ -542,6 +542,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"article_title",
+			"gettitle",
 			"Markdown(line)",
 			"algorith",
 			"algorithm",
@@ -667,9 +669,7 @@
 			"strftime",
 			"mod_time",
 			"stage",
-			"migrate",
-			"mod_time",
-			"stage"
+			"migrate"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -687,7 +687,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 19,
 			"sheets":
 			[
 				{
@@ -755,7 +755,7 @@
 						"translation.y": 2051.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -764,7 +764,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 36830,
+						"buffer_size": 37239,
 						"regions":
 						{
 							"bookmarks":
@@ -780,8 +780,8 @@
 						"selection":
 						[
 							[
-								32447,
-								32477
+								33544,
+								33544
 							]
 						],
 						"settings":
@@ -799,10 +799,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 13460.0,
+						"translation.y": 13815.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -811,7 +811,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 32629,
+						"buffer_size": 33130,
 						"regions":
 						{
 						},
@@ -841,7 +841,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -879,7 +879,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -907,7 +907,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -935,7 +935,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -965,7 +965,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -1003,7 +1003,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1012,7 +1012,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1177096,
+						"buffer_size": 1178443,
 						"regions":
 						{
 						},
@@ -1129,7 +1129,7 @@
 						"translation.y": 720.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -1167,7 +1167,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1233,7 +1233,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1270,7 +1270,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1311,7 +1311,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1363,6 +1363,15 @@
 						],
 						"settings":
 						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 45,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -1371,7 +1380,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
