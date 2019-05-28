@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 28 May 2019 03:11:25 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 May 2019 03:17:45 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Cyber Journalism and Vulnerability News</title>
+            <link>https://zacs.site/blog/cyber-journalism-and-vulnerability-news.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/cyber-journalism-and-vulnerability-news.html</guid>
+            <pubDate>Tue, 28 May 2019 15:17:34 GMT</pubDate>
+            <description>
+        &lt;p&gt;Robert Graham just reminded me why &lt;a href="http://zacs.site/blog/my-morning-reads.html"&gt;I started reading Errata Security&lt;/a&gt;. I hadn&#38;#8217;t yet gotten around to the recent New York Times article on the Baltimore hack, but &lt;a href="https://blog.erratasec.com/2019/05/a-lesson-in-journalism-vs-cybersecurity.html"&gt;his response&lt;/a&gt; makes it clear that the op-ed is not worth my time. I can only hope Rob&#38;#8217;s post gets as much attention as the piece that prompted it. I also found &lt;a href="https://blog.erratasec.com/2019/05/almost-one-million-vulnerable-to.html"&gt;his dive into the BlueKeep vulnerability&lt;/a&gt; interesting; &lt;a href="https://thehackernews.com"&gt;The Hacker News&lt;/a&gt;, another site I check every morning, &lt;a href="https://thehackernews.com/2019/05/bluekeep-rdp-vulnerability.html?m=1"&gt;has already picked it up&lt;/a&gt;. This is the type of quality content I expect from &lt;a href="http://zacs.site/blog/my-morning-reads.html"&gt;the small-time sites I read&lt;/a&gt;, and once again, Rob delivered.&lt;/p&gt;
+                &lt;p class='read_more_paragraph'&gt;
+                    &lt;a style='text-decoration:none;' href='https://zacs.site/blog/cyber-journalism-and-vulnerability-news.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>How to do hard things</title>
             <link>https://www.drmaciver.com/2019/05/how-to-do-hard-things/</link>

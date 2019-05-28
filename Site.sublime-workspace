@@ -177,7 +177,7 @@
 			"file": "blog.py",
 			"settings":
 			{
-				"buffer_size": 37239,
+				"buffer_size": 37344,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -186,7 +186,7 @@
 			"file": "local/blog.html",
 			"settings":
 			{
-				"buffer_size": 33675,
+				"buffer_size": 34340,
 				"line_ending": "Unix"
 			}
 		},
@@ -238,7 +238,7 @@
 			"file": "local/rss.xml",
 			"settings":
 			{
-				"buffer_size": 1180305,
+				"buffer_size": 1182181,
 				"line_ending": "Unix"
 			}
 		},
@@ -542,6 +542,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"GetTitle",
 			"body",
 			"article_title",
 			"gettitle",
@@ -668,8 +669,7 @@
 			"pubdate",
 			")\n",
 			"strftime",
-			"mod_time",
-			"stage"
+			"mod_time"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -687,7 +687,7 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -764,7 +764,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 37239,
+						"buffer_size": 37344,
 						"regions":
 						{
 							"bookmarks":
@@ -780,8 +780,8 @@
 						"selection":
 						[
 							[
-								33544,
-								33544
+								13275,
+								13275
 							]
 						],
 						"settings":
@@ -799,10 +799,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 13815.0,
+						"translation.y": 5498.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -811,7 +811,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 33675,
+						"buffer_size": 34340,
 						"regions":
 						{
 						},
@@ -1003,7 +1003,7 @@
 						"translation.y": 914.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1012,7 +1012,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1180305,
+						"buffer_size": 1182181,
 						"regions":
 						{
 						},
@@ -1380,7 +1380,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
