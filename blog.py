@@ -270,22 +270,26 @@ def GenBlog():
             for day in sorted(files[year][month], reverse=True):
                 # Sort the sub-dictionaries by keys, timestamps, then iterate over it
                 for timestamp in sorted(files[year][month][day], reverse=True):
-                    # For each article made in the month, add an entry on the appropriate
-                    # 'month' structure file.
-                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", GetTitle(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))))
+                    # # For each article made in the month, add an entry on the appropriate
+                    # # 'month' structure file.
+                    # month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", GetTitle(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))))
                     
                     # If a structure file already exists, don't rebuild the HTML file for individual articles
                     if (not isfile("./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):                        
-                        GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                        article_title = GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     else:
                         if (CompareMtimes("./Content/"+files[year][month][day][timestamp], "./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
-                            pass
+                            article_title = GetTitle(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                         else:
                             # Generate each content file. "year", "month", "day", "timestamp"
                             # identify the file in the dictionary, and the passed time values
                             # designate the desired update time to set the content file.
-                            GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                            article_title = GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     
+                    # For each article made in the month, add an entry on the appropriate
+                    # 'month' structure file.
+                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", article_title))
+
                     # Add the first twenty-five articles to the main blog page.
                     if (file_idx < 25):
                         AppendContentOfXToY("./local/blog", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
