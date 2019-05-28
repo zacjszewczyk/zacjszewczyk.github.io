@@ -381,7 +381,8 @@ def GenPage(source, timestamp):
                 title += "<article>\n                    <h2 style=\"text-align:center;\">\n                        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
         # In the second line of the file, add the article title.
         elif (idx == 1):
-            title = title.replace("{{URL_TITLE}}", line[7:].strip())
+            article_title = line[7:].strip()
+            title = title.replace("{{URL_TITLE}}", article_title)
             local_content = local_content.replace("{{ title }}", line[7:].strip()+" - ")
         # In the third line of the file, add the article URL to the title/link.
         elif (idx == 2):
@@ -424,6 +425,8 @@ def GenPage(source, timestamp):
 
     mtime = strftime("%Y/%m/%d %H:%M:%S", localtime(stat("./Content/"+source).st_mtime))
     utime(dst, ((mktime(strptime(mtime, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mtime, "%Y/%m/%d %H:%M:%S")))))
+
+    return article_title
 
 # Method: GenStatic
 # Purpose: Create home, projects, and error static structure files.
