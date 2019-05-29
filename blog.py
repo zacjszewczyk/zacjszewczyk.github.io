@@ -446,7 +446,7 @@ def GenStatic():
 
     # Build the 404.html file.
     BuildFromTemplate("./local/404.html", "Error - ", "error", "", "")
-    CloseTemplateBuild("./local/404.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style=\"text-align:center;\">Error: 404 Not Found</h2><p>The requested resource at <span style="text-decoration:underline;">"+window.location.href+"</span> could not be found.</p></article>"</script>""")
+    CloseTemplateBuild("./local/404.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style='text-align:center;'>Error: 404 Not Found</h2><p>The requested resource at <span style='text-decoration:underline;'>"+window.location.href+"</span> could not be found.</p></article>"</script>""")
 
 # Method: GetUserInput
 # Purpose: Accept user input and perform basic bounds checking
