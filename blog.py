@@ -29,6 +29,7 @@ files = {}
 months = {"01":"January","02":"February","03":"March","04":"April","05":"May","06":"June","07":"July","08":"August","09":"September","10":"October","11":"November","12":"December"}
 weekDays = ("Mon","Tue","Wed","Thu","Fri","Sat","Sun")
 content = ""
+base_url = "https://zacs.site"
 
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
@@ -149,7 +150,7 @@ def AppendToFeed(source):
             if (i == 0):
                 if ("class=\"original\"" in line):
                     flag = False
-                    link = "https://zacs.site/blog/"+line.split("href=\"")[1].split(" ")[0][:-1]
+                    link = base_url+"/blog/"+line.split("href=\"")[1].split(" ")[0][:-1]
                 else:
                     link = line.split("href=\"")[1].split(" ")[0][:-1]
                 if (link[0:4] != "http"):
@@ -167,10 +168,10 @@ def AppendToFeed(source):
             # the file and we encouter the first paragraph, write it to
             # the output file and then quit.
             elif (flag == False and line[0:2] == "<p"):
-                feed_fd.write("        "+line.replace('href="/', 'href="https://zacs.site/').replace('"#fn', '"https://zacs.site/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;"))
+                feed_fd.write("        "+line.replace('href="/', 'href="'+base_url+'/').replace('"#fn', '"'+base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;"))
                 break
             else:
-                line = "        "+line.replace('href="/', 'href="https://zacs.site/').replace('"#fn', '"https://zacs.site/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;")
+                line = "        "+line.replace('href="/', 'href="'+base_url+'/').replace('"#fn', '"'+base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;")
 
             # Stop copying content at the end of the article.
             if ("&lt;/article&gt;" in line):
@@ -183,7 +184,7 @@ def AppendToFeed(source):
     # Once we have reached the end of the content in the case of a linkpost,
     # or read the first paragraph in the case of an original article, add a 
     # "read more" link and close the article.
-    feed_fd.write("\n                <p class='read_more_paragraph'>\n                    <a style='text-decoration:none;' href='https://zacs.site/blog/%s'>Read more...</a>\n                </p>\n".replace("<", "&lt;").replace(">", "&gt;") % (html_filename))
+    feed_fd.write("\n                <p class='read_more_paragraph'>\n                    <a style='text-decoration:none;' href='"+base_url+"/blog/%s'>Read more...</a>\n                </p>\n".replace("<", "&lt;").replace(">", "&gt;") % (html_filename))
     feed_fd.write("            </description>\n        </item>\n")
     feed_fd.close()
 
