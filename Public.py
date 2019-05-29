@@ -74,7 +74,20 @@ def CopyToDeploy(v=False):
 # Parameters:
 # - v: Boolean that determines whether to print output or not. (Bool)
 def SanitizeDeploy(v=False):
-    
+    # blog.py
+    # Markdown.py
+    # system/404.html
+    # system/index.html
+    # system/projects.html
+    # system/template.htm
+    pass
+
+# Method: GenExFiles
+# Purpose: Create example files in the deployment directory
+# Parameters:
+# - v: Boolean that determines whether to print output or not. (Bool)
+def GenExFiles(v=False):
+    # Content/
 
 # If run as as a standalone program ...
 if (__name__ == "__main__"):
@@ -86,3 +99,5 @@ if (__name__ == "__main__"):
 
     # Copy files to the deployment directory
     CopyToDeploy(verbose)
+    SanitizeDeploy(verbose)
+    GenExFiles(verbose)
