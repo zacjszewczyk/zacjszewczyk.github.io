@@ -69,6 +69,13 @@ def CopyToDeploy(v=False):
     copy("./local/assets/main.css", dst+"local/assets/main.css")
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
 
+# Method: SanitizeDeploy
+# Purpose: Sanitize FirstCrack files before deploying them publcily.
+# Parameters:
+# - v: Boolean that determines whether to print output or not. (Bool)
+def SanitizeDeploy(v=False):
+    
+
 # If run as as a standalone program ...
 if (__name__ == "__main__"):
     # Detect if running in verbose mode
