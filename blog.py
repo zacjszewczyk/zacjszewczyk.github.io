@@ -507,6 +507,23 @@ def GetTitle(source, timestamp):
 #          Make sure ./local exists.
 # Parameters: none
 def Init():
+    # Check for existence of system files and Content directory.
+    # These are requirements for First Crack; it will fail if they do not exist.
+    ## Check for the existence of the "./system" directory first...
+    if (not isdir("./system")):
+        print c.FAIL+"\"./system\" directory does not exist. Exiting."+c.ENDC
+        exit(1)
+    ## ...then for the existence of the Content directory
+    if (not isdir("./Content")):
+        print c.FAIL+"\"./Content\" directory does not exist. Exiting."+c.ENDC
+        exit(1)
+
+    ## Now ensure crucial system files exist
+    for f in ["template.htm", "404.html", "index.html", "projects.html"]:
+        if (not isfile("./system/"+f)):
+            print c.FAIL+"\"./system/"+f+"\" directory does not exist. Exiting."+c.ENDC
+            exit(1)
+
     # Make sure ./local exists with its subfolders
     CheckDirAndCreate("./local")
     CheckDirAndCreate("./local/blog")
