@@ -74,12 +74,12 @@ def CopyToDeploy(v=False):
 # Parameters:
 # - v: Boolean that determines whether to print output or not. (Bool)
 def SanitizeDeploy(v=False):
-    # blog.py
-    # Markdown.py
-    # system/404.html
-    # system/index.html
-    # system/projects.html
-    # system/template.htm
+    # Sanitize blog.py
+    # Sanitize Markdown.py
+    # Sanitize system/404.html
+    # Sanitize system/index.html
+    # Sanitize system/projects.html
+    # Sanitize system/template.htm
     pass
 
 # Method: GenExFiles
@@ -87,7 +87,8 @@ def SanitizeDeploy(v=False):
 # Parameters:
 # - v: Boolean that determines whether to print output or not. (Bool)
 def GenExFiles(v=False):
-    # Content/
+    # Generate example content file
+    pass
 
 # If run as as a standalone program ...
 if (__name__ == "__main__"):
