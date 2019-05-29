@@ -22,3 +22,5 @@ if (not isdir(dst+"local")):
     mkdir(dst+"local")
 if (not isdir(dst+"/local/assets")):
     mkdir(dst+"/local/assets")
+
+copy("./local/assets/main.css", dst+"local/assets/main.css")
