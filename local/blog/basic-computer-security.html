@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="The Internet ranks among the greatest inventions of all time. It gives everyone instant access to mankind's collective wisdom, learned through millions of years of evolution. It connects people across cultures, continents, and time zones. It ushered in an era of unprecedented economic growth. History already recognizes the Internet's remarkable impact, in the few short decades it has existed so far, and its significance will continue to grow as mankind uses it to achieve even greater things down the road."/>
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, zacjszewczyk" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#518341"/>
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:image" content="favicon.ico"/>
+        <meta property="og:title" content="Basic Computer Security - "/>
+        <meta property="og:site_name" content="Zac J. Szewczyk"/>
+        <meta property="og:article:author" content="Zac J. Szewczyk"/>
+        <meta property="og:see_also" content="http://zacjszewczyk.com/"/>
+        
+        <link rel="manifest" href="assets/manifest.json"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="http://zacs.site/rss.xml" />
+        <link rel="author" href="https://plus.google.com/109294852959769775608/about" />
+        <link rel="shortcut icon" href="assets/favicon.ico" size="16x16" type="image/ico" />
+        <link rel="shortcut icon" href="assets/favicon_192.ico" size="192x192" type="image/ico" />
+        <link rel="shortcut icon" href="assets/favicon_512.ico" size="512x512" type="image/ico" />
+        <title>
+            Basic Computer Security - Zac J. Szewczyk
+        </title>
+        <!-- SHEETS -->
+    </head>
+    <body style="opacity:.8;background-color:#F6F6F6;font-family:'Roboto',sans-serif;font-size:13pt;line-height:200%;display:none;" id="post">
+        <header style="text-align:center;font-size:150%;max-width:75em;margin:0 auto;"><!--BLOCK HEADER--></header>
+        <nav style="text-align:center;margin:10% 5%;font-size:15pt;line-height:200%;">
+            <a id="home_link" href="../index.html">Home</a>
+            <a id="blog_link" href="../blog.html">Blog</a>
+            <a id="rss_link" href="/rss.xml">RSS</a>
+            <a id="archives_link" href="../archives.html">Post Archives</a>
+            <a id="projects_link" href="../projects.html">Projects</a>
+        </nav>
+        <main style="max-width:65em;margin:0 auto;margin-bottom:100px;">
+            <section id="content_section">
+                <article>
+                    <h2 style="text-align:center;">
+                        <a href="basic-computer-security.html" class="original">Basic Computer Security</a>
+                    </h2>
+                    <time datetime="2019-05-29" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="2019.html">2019</a>/<a href="2019-05.html">05</a>/29 10:36:49 EST</time>
+                    <p>The Internet ranks among the greatest inventions of all time. It gives everyone instant access to mankind&#8217;s collective wisdom, learned through millions of years of evolution. It connects people across cultures, continents, and time zones. It ushered in an era of unprecedented economic growth. History already recognizes the Internet&#8217;s remarkable impact, in the few short decades it has existed so far, and its significance will continue to grow as mankind uses it to achieve even greater things down the road.</p>
+                    
+                    <p>Despite its immense value, today the Internet kind of sucks. The part of the Internet that most people use, <a href="https://techlog360.com/darknet-vs-dark-web-vs-deep-web-vs-surface-web/">a small subset</a> <a href="https://www.recordedfuture.com/dark-web-reality/">of the entire network</a>, has become filled with ads, trackers, viruses, spyware, and all sorts of bad actors looking to exploit naive users. Mankind managed to turn one of its greatest inventions into a hacker&#8217;s playground, set in a cesspool of invasive monetization strategies. Lucky for us, a few simple steps can do a lot to help mitigate these problems. These tips will do little more than that, though, and I want to make that clear. I wrote this to help mitigate the dangers of ads, trackers, viruses, spyware, and some low-level hackers, not with the intent to make your computer uncrackable. If a smart enough person targets a specific machine, they will get in.</p>
+                    
+                    <h3 class='headers' id='TheEasyFixInstallingSoftware'>The Easy Fix: Installing Software<span>&nbsp;<a href='#TheEasyFixInstallingSoftware'>#</a></span></h3>
+                    
+                    <h4 class='headers' id='BrowserExtensions'>Browser Extensions<span>&nbsp;<a href='#BrowserExtensions'>#</a></span></h4>
+                    
+                    <p>A few key programs can stop most web-based ads, trackers, and the types of resources that load viruses and spyware. Many people work hard to exploit naive users, but many others also work hard to keep those bad actors from doing so; the latter create software like <a href="https://adblockplus.org/">Adblock Plus</a>, <a href="https://www.ghostery.com/">Ghostery</a>, and <a href="https://github.com/gorhill/uBlock">uBlock Origin</a>. Adblock Plus hides ads, which will also make websites load faster. Ghostery stops creepy sites from tracking you around the Internet. uBlock Origin can target anything; on the off chance that the other two miss something, I use it to block individual resources. Although they overlap in some areas, I like using them all because each does a different thing well. Installing all three takes just a few clicks, and even with their default settings, they make browsing the web much better; for even better results, spend some time learning how to fine-tune them.</p>
+                    
+                    <p>Another extension you ought to have, <a href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a>, makes it harder for bad actors to steal your information on public WiFi networks. It works like this: when you visit <span class='command'>https://www.google.com</span>, your traffic to Google gets encrypted so that no one but Google sees it. Websites that use <span class='command'>http://</span> do not use encryption. Bad actors can watch your traffic to websites that do not the <span class='command'>https://</span> prefix. HTTPS Everywhere works to trick every website you visit into using encryption wherever possible, which help keeps your information private.</p>
+                    
+                    <h4 class='headers' id='AntivirusSoftware'>Antivirus Software<span>&nbsp;<a href='#AntivirusSoftware'>#</a></span></h4>
+                    
+                    <p>After browser extensions, antivirus software does a great job as a second layer of defense. Windows comes with basic antivirus software by default, but those looking to beef up their security should check out some great free programs, too. <a href="https://www.avast.com">Avast</a>, for all platforms, scores high in all reviews. Although an easy attack vector, hackers do not have to go through the web browser to access your machine or your network; they may target one&#160;&#8212;&#160;or both&#160;&#8212;&#160;in ways that extensions like Adblock Plus, Ghostery, and uBlock Origin cannot stop. Should someone get into your machine or your network, Avast and similar tools will help detect and remove them. Installing these, too, takes just a few clicks.</p>
+                    
+                    <h3 class='headers' id='TheToughFixAlteringSystemBehavior'>The Tough Fix: Altering System Behavior<span>&nbsp;<a href='#TheToughFixAlteringSystemBehavior'>#</a></span></h3>
+                    
+                    <p>Browser extensions can make it harder for hackers to find easy ways into a target. Antivirus software adds a second layer of security for machines and the network. Good programs such as Avast use passive measures like virus scans, and active measures like blocking suspicious behavior. This basis will serve the average user well. I want to stress that it does not make them immune to all attacks, though, just the most basic ways bad actors steal personal data, infect computers, and trash the web browsing experience. Again, if a smart person targets a specific computer, they will get in. Those looking for better results can take some more advanced steps, though, so I talk about those below. Fair warning, I use a Unix shell and Windows Command Prompt often. It made much more sense to give you short commands than guide you through a complex maze of menus.</p>
+                    
+                    <h4 class='headers' id='AutomaticUpdates'>Automatic Updates<span>&nbsp;<a href='#AutomaticUpdates'>#</a></span></h4>
+                    
+                    <p>Automatic updates take too long, force reboots, and seem to happen at the worst times; turning this feature off, though, makes a hacker&#8217;s job just a little bit easier. Most system updates patch bugs and vulnerabilities a hacker could use as a way into your machine. Do the right thing, turn them on, and let them install often. Do the same for programs from trusted vendors as well. This takes discipline, but it will make you less susceptible to the types of attacks found on public sites like <a href="https://www.exploit-db.com/">Exploit Database</a>. Exploit Database lists hundreds of ways hackers can use old versions of software and operating systems to get into a machine. Stay updated and give yourself less to worry about.</p>
+                    
+                    <h4 class='headers' id='TheHostsFile'>The hosts file<span>&nbsp;<a href='#TheHostsFile'>#</a></span></h4>
+                    
+                    <p>Another simple way to make web browsing just a little bit better involves editing your <span class='command'>host</span> file. In simple terms, every time your computer tries to connect to <span class='command'>www.google.com</span>, it checks a system file to see whether you have visited the website before. If you have, it loads information about <span class='command'>www.google.com</span> from your computer and then serves the site; if not, it looks for that information on the Internet, downloads it, and then serves the site.</p>
+                    
+                    <p>Now imagine that instead of you trying to open Google, a website tried to make a sneaky connection to www.TrackMyUsers.com. Your computer first checks the <span class='command'>hosts</span> file for information about that site, then the Internet, and then loads the page. You can use the <span class='command'>hosts</span> file to fool that sleazy site, though, by giving it the wrong information about www.TrackMyUsers.com. As a result, the sleazy website does not get to track you. Privacy preserved.</p>
+                    
+                    <p>Bad actors use many websites for their sleazy purposes, but many people have gone to great pains to catalog all those pages as well. Several people publish lists with tens of thousands of websites like www.TrackMyUsers.com, with the sole purpose of helping users block them. I found Dan Pollock&#8217;s collection first at <a href="https://someonewhocares.org/hosts/">SomeoneWhoCares.org</a>. After some research, I learned that <a href="https://github.com/StevenBlack/hosts">Steven Black</a> combines fourteen lists and posts <a href="https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts">the result</a> on GitHub.</p>
+                    
+                    <p>If you want to download Steven's code, run the scripts, and set your system up on your own, go for it. On a Mac, though, you can just open Terminal, copy and paste the snippet below, hit Enter, and input your password. The snippet backs up your <span class='command'>hosts</span> file to <span class='command'>hosts.bak</span>, downloads Steven's list, and tells your computer to read this new <span class='command'>hosts</span> file from then on.</p>
+                    
+                    <pre class="shell">sudo cp /etc/hosts /etc/hosts.bak; sudo curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts -o /etc/hosts; dscacheutil -flushcache; sudo killall -HUP mDNSResponder</pre>
+                    
+                    <p>On Windows, open Notepad, open or create the file at <span class='command'>C:\Windows\System32\Drivers\etc\hosts</span>, copy and paste everything on <a href="https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts">this page</a> into Notepad, and save it. Next, click the Start button, type <span class='command'>cmd</span>, right-click Command Prompt and choose "Run as Administrator", then run the command below to tell your computer to read this new hosts file from now on.</p>
+                    
+                    <pre class="cmd">ipconfig /flushdns</pre>
+                    
+                    <p>Any time a website tries to connect to a known bad domain, it will fail. This alone will remove a lot of ads, trackers, and even some known sources of viruses and spyware. Although Adblock Plus, Ghostery, and uBlock Origin also do this, blocking those websites at the system level with your <span class='command'>hosts</span> file means those extensions won't have to work as hard. Because they do less, your browser does less, which can improve browsing speeds. A win all around.</p>
+                    
+                    <h4 class='headers' id='VirtualPrivateNetworks'>Virtual Private Networks<span>&nbsp;<a href='#VirtualPrivateNetworks'>#</a></span></h4>
+                    
+                    <p>I also suggest using a Virtual Private Network, or VPN. Although many websites have gotten much better about encrypting their traffic, <a href="https://hackernoon.com/a-hacker-intercepted-your-wifi-traffic-stole-your-contacts-passwords-financial-data-heres-how-4fc0df9ff152">bad actors can still manage to steal private information from anyone on a public WiFi network</a>. VPNs connect you to a safe server, encrypt your data so no one can snoop on you, and then send your traffic out from that safe server to the world. Although this adds a few extra steps to the process, and will set you back a few dollars per month, it makes stealing your private information and tracking you much harder. Most VPNs also block ads, meaning you will see even less of them.</p>
+                    
+                    <p><a href="https://drewdevault.com/2019/04/19/Your-VPN-is-a-serious-choice.html">Choose a reputable company</a> <a href="https://schub.io/blog/2019/04/08/very-precarious-narrative.html">and you cannot go wrong</a>. <a href="https://nordvpn.com/">NordVPN</a> stands out as one of the best, though, so check it out. NordVPN has clients for the major operating systems, browsers, and phones, so it can protect you everywhere. Follow its simple setup guide and even novice users will have a working VPN setup in no time.</p>
+                    
+                    <h4 class='headers' id='TheRouter'>The Router<span>&nbsp;<a href='#TheRouter'>#</a></span></h4>
+                    
+                    <p>With browser extensions, antivirus software, and a VPN on your machine, hackers will have a much harder time gaining access to your system. Each one of these blocks several avenues of attack, but not every one. Again, if a smart person targets a specific computer, they will get in. Another great way to make that much harder, though, involves locking down your router.</p>
+                    
+                    <p>Most people use the cable company&#8217;s router. It sits on a shelf, and when the Internet stops working, they unplug it, wait a few seconds, then plug it back in. Problem solved. Few understand how these devices work, though, and so most people gloss over them when beefing up their security. Do not make the same mistake.</p>
+                    
+                    <p>All traffic from the home network out to the internet, and from the internet into any device on the home network, goes through the router. Anyone trying to hack into one of your computers has to go through this device. This makes the router your first line of defense against the outside world. Lucky for us, locking it down does not take a lot of work.</p>
+                    
+                    <h5 class='headers' id='LocatingTheRouter'>Locating the Router<span>&nbsp;<a href='#LocatingTheRouter'>#</a></span></h5>
+                    
+                    <p>You must login to your router to change its settings. If you have never done this before, you need to find it on your network. On a Mac, use <span class='command'>netstat</span>. The <span class='command'>grep</span>, <span class='command'>head</span>, and <span class='command'>awk</span> commands after it strip out the things you do not need for this step.</p>
+                    
+                    <pre class="shell">netstat -nr | grep default | head -1 | awk -F " " '{print "Router IP: ",$2}'</pre>
+                    
+                    <p>On a Windows machine, use <span class='command'>ipconfig</span>. <span class='command'>findstr</span> pulls out the line with the IP address for the default gateway.</p>
+                    
+                    <pre class="cmd">ipconfig /all | findstr "Default Gateway"</pre>
+                    
+                    <p>Once you have the router&#8217;s IP address, copy and paste it into your browser. A login window will open. If you have seen this page before, enter your credentials; if not, try the defaults for your cable company. Using &#8220;admin&#8221; as your username and &#8220;admin&#8221;, &#8220;password&#8221;, or leaving the password field blank works most times. You could also try searching for the defaults for your router. Once you have logged in, move on to the next step.</p>
+                    
+                    <p>From here on out, the route you take to change each setting will vary between devices. I will explain what you should change and why, and leave it up to you to get it done.</p>
+                    
+                    <h5 class='headers' id='LoginCredentials'>Login Credentials<span>&nbsp;<a href='#LoginCredentials'>#</a></span></h5>
+                    
+                    <p>First, change your login credentials. Anyone who can find the IP address of your router, a public-facing device, can access it just as you did; once there, a bad actor could do all sorts of things to steal your personal information, attack the machines on your home network, and watch every single thing you do on the Internet. Choose a good password, save your changes, and move on.</p>
+                    
+                    <h5 class='headers' id='FirmwareUpdates'>Firmware Updates<span>&nbsp;<a href='#FirmwareUpdates'>#</a></span></h5>
+                    
+                    <p>Next, update your router&#8217;s firmware. If you can turn on automatic updates, do it. Again, most system updates patch bugs and vulnerabilities a hacker could use as a way into your machine, so turning them on will make you less susceptible to the types of attacks found on public sites like <a href="https://www.exploit-db.com/">Exploit Database</a>, <a href="https://blog.osvdb.org">OSVDB</a>, and <a href="https://cve.mitre.org">Mitre</a>. At the least, update your firmware now and plan on doing this often.</p>
+                    
+                    <h5 class='headers' id='DisableWps'>Disable WPS<span>&nbsp;<a href='#DisableWps'>#</a></span></h5>
+                    
+                    <p>If your router has it, turn off WiFi Protected Setup. Although a nice idea, in practice WPS allows bad actors to bypass the router. By guessing a short PIN number, they gain access to the network without having to enter the much longer WiFi password. Leave this feature on and you risk someone sidestepping your first line of defense.</p>
+                    
+                    <h5 class='headers' id='UseWpa2'>Use WPA2<span>&nbsp;<a href='#UseWpa2'>#</a></span></h5>
+                    
+                    <p>Routers can use a few kinds of encryption. WEP takes almost no time to crack; avoid it at all costs. WPA does a better job, but you should also avoid it. Some routers support WPA2 and AES encryption, so choose that if you can; if not, vanilla WPA2 will keep your data safe.</p>
+                    
+                    <h5 class='headers' id='UseAFirewall'>Use a Firewall<span>&nbsp;<a href='#UseAFirewall'>#</a></span></h5>
+                    
+                    <p>Some routers ship with their firewall turned off by default. Make sure yours has it on, and set it to the strictest level you can without making your network useless. Most people can handle a medium-level filter without any problems, but the stricter you go, the better; in turn, bad actors will have fewer ways to exploit your network.</p>
+                    
+                    <h5 class='headers' id='ScheduleUptime'>Schedule Uptime<span>&nbsp;<a href='#ScheduleUptime'>#</a></span></h5>
+                    
+                    <p>Not all routers support this, but if yours does, set it to turn your network off during certain times of the day. Hackers tend to target businesses at night, with no one around, and home networks at night or during normal business hours, when most people work. This helps them stay unnoticed. They might also choose these times to move lots of data, because you would not notice a drop in speed. Deny them the chance by shutting down whenever you can.</p>
+                    
+                    <h5 class='headers' id='EnableMacAddressFiltering'>Enable MAC Address Filtering<span>&nbsp;<a href='#EnableMacAddressFiltering'>#</a></span></h5>
+                    
+                    <p>Every Internet-connected device has a unique identifier burned into its hardware, called a MAC address. It looks like this: <span class='command'>aa:b1:2c:d3:e4:5f</span>. Turn on MAC address filtering to allow certain devices onto your network, and deny all others.</p>
+                    
+                    <p>On a Unix machine, use the first snippet to find your MAC address; on a Windows computer, use the second. Once found, enter the MAC address on your router, make sure you will <strong>allow</strong> this machine rather than <strong>deny</strong> it, and save the change.</p>
+                    
+                    <pre class="shell">ifconfig | grep ether | head -1 | awk -F " " '{print "MAC address: ",$2}'</pre>
+                    
+                    <pre class="cmd">ipconfig /all | findstr "Physical"</pre>
+                    
+                    <p>Repeat this process for each device you wish to allow on your network. Although not a 100% guarantee that a bad actor cannot get onto your network, they will at least have one more barrier in their way.</p>
+                    
+                    <h3 class='headers' id='TheHardFixChangingYourBehavior'>The Hard Fix: Changing Your Behavior<span>&nbsp;<a href='#TheHardFixChangingYourBehavior'>#</a></span></h3>
+                    
+                    <p>You have locked down your browser, operating system, and network. These steps have made getting into your machine much harder, snooping on you almost impossible, and even gotten rid of those pesky ads and invasive trackers as an added bonus. Thanks to your efforts, though, the most promising attack vector has now become you. Humans almost always make for the best targets, and now that you have locked down most other avenues of approach, the hacker&#8217;s best chance of success lies in targeting you.</p>
+                    
+                    <p>Avoiding social engineering and phishing attacks, the type that target people to gain access to a system, comes down to three things: awareness, skepticism, and conduct. Learn how to spot ads in search results and sham websites trying to pass themselves off as legitimate ones. Distrust by default email attachments and anything that asks for personal information. Avoid installing anything you do not need, even if it comes from a trusted source: it would not take a lot of work for a smart hacker to hijack the Microsoft Office installer, for example, mid-download, and replace it with a version that infects your machine with a virus of some sort. This type of man in the middle attack happens all the time.</p>
+                    
+                    <p>You may have had a tough time with some of the technical tasks here, but changing your behavior will take the most work. There exists a gulf in difficulty between a complicated task like locking down a router, and a hard one like learning situational awareness, training skepticism, and altering your conduct. Work at it, though, and you will deny bad actors one of the most successful attack vectors of all. Along with the technical changes I outlined in the earlier sections, these changes make you a much harder target.</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer style="max-width:65em;margin:0 auto;margin-bottom:100px;">
+            <p>Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.</p>
+            <p>&copy; 2012-2019 Zachary Szewczyk.<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+        </footer>
+        <span id="ipad_device"></span>
+    </body>
+    
+    <script async>document.getElementsByTagName("body")[0].style.display = "block";</script>
+    <script async>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/m_sw.js');
+          console.log("Successfully registered Service Worker.");
+        }
+    </script>
+    <link rel="stylesheet" href="../assets/main.css" type="text/css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138585845-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-138585845-1');
+    </script>
+</html>
