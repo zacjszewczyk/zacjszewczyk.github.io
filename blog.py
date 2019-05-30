@@ -446,9 +446,14 @@ def GenStatic():
     fd.close()
     BuildFromTemplate(target="./local/projects.html", title="Projects - ", bodyid="projects", description="The writing, coding, and Computer Aided Drafting and Design (CADD) side projects Zac Szewczyk bulds in his spare time.", sheets="", passed_content=projects[1])
 
+    # Reference the disclaimers.html source file to generate the front-end structure fule.
+    fd = open("system/disclaimers.html", "r")
+    disclaimers = fd.read().split("<!-- DIVIDER -->")
+    BuildFromTemplate(target="./local/disclaimers.html", title="Disclaimers - ", bodyid="disclaimers", description="Copyright and content disclaimers for Zac Szewczyk's blog.", sheets="", passed_content=disclaimers[1])
+    fd.close()
+
     # Build the 404.html file.
     BuildFromTemplate("./local/404.html", "Error - ", "error", "", "")
-    CloseTemplateBuild("./local/404.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style='text-align:center;'>Error: 404 Not Found</h2><p>The requested resource at <span style='text-decoration:underline;'>"+window.location.href+"</span> could not be found.</p></article>"</script>""")
 
 # Method: GetUserInput
 # Purpose: Accept user input and perform basic bounds checking
@@ -521,7 +526,7 @@ def Init():
         exit(1)
 
     ## Now ensure crucial system files exist
-    for f in ["template.htm", "404.html", "index.html", "projects.html"]:
+    for f in ["template.htm", "404.html", "index.html", "projects.html", "disclaimers.html"]:
         if (not isfile("./system/"+f)):
             print c.FAIL+"\"./system/"+f+"\" directory does not exist. Exiting."+c.ENDC
             exit(1)
@@ -738,6 +743,8 @@ def Terminate():
     CloseTemplateBuild("./local/blog.html")
     CloseTemplateBuild("./local/projects.html")
     CloseTemplateBuild("./local/index.html")
+    CloseTemplateBuild("./local/disclaimers.html")
+    CloseTemplateBuild("./local/404.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style='text-align:center;'>Error: 404 Not Found</h2><p>The requested resource at <span style='text-decoration:underline;'>"+window.location.href+"</span> could not be found.</p></article>"</script>""")
     
     # Write closing tags to the RSS feed.
     fd = open("./local/rss.xml", "a")
