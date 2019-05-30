@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>
     <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 30 May 2019 01:12:12 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 May 2019 07:14:57 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>The Dangers of Public WiFi</title>
+            <link>https://hackernoon.com/a-hacker-intercepted-your-wifi-traffic-stole-your-contacts-passwords-financial-data-heres-how-4fc0df9ff152</link>
+            <guid isPermaLink='true'>https://hackernoon.com/a-hacker-intercepted-your-wifi-traffic-stole-your-contacts-passwords-financial-data-heres-how-4fc0df9ff152</guid>
+            <pubDate>Thu, 30 May 2019 19:14:49 GMT</pubDate>
+            <description>
+        &lt;p&gt;Patrick Wilbur has written a great two-part series on the dangers of public WiFi networks, over at HackerNoon. In &lt;a href="https://hackernoon.com/a-hacker-intercepted-your-wifi-traffic-stole-your-contacts-passwords-financial-data-heres-how-4fc0df9ff152"&gt;part one&lt;/a&gt;, he shows just how little work it takes to steal personal information from unsuspecting users at a cafe. His &lt;a href="https://hackernoon.com/why-are-we-still-sending-so-much-web-traffic-unencrypted-over-the-internet-383317b758ec"&gt;second article&lt;/a&gt; explains some of the reasons that took so little work, as well as a few ways to fix them. &lt;a href="https://hackernoon.com/the-complete-endless-ridiculous-list-of-everything-you-need-to-be-safe-on-public-wi-fi-57fca0a733f7"&gt;Part three&lt;/a&gt; outlines concrete steps the average internet user can take to make themselves less susceptible to these types of attacks. Whether you read all three to understand your vulnerability, or just skip to the end to fix them, everyone should take something away from this series. I also recommend &lt;em&gt;&lt;a href="http://zacs.site/blog/basic-computer-security.html"&gt;Basic Computer Security&lt;/a&gt;&lt;/em&gt;, for the novice and expert alike.&lt;/p&gt;        &lt;/div&gt;
+                <p class='read_more_paragraph'>
+                    <a style='text-decoration:none;' href='https://zacs.site/blog/the-dangers-of-public-wifi.html'&gt;Read more...&lt;/a&gt;
+                &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Basic Computer Security</title>
             <link>https://zacs.site/blog/basic-computer-security.html</link>
