@@ -25,10 +25,10 @@ def CopyToDeploy(v=False):
     copytree("./system", dst+"system")
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
 
-    # Copy "blog.py" and its dependencies to the deployment folder
-    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"blog.py'"+c.OKGREEN+" ... "+c.ENDC)
-    copy("./blog.py", dst+"blog.py")
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    # # Copy "blog.py" and its dependencies to the deployment folder
+    # if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"blog.py'"+c.OKGREEN+" ... "+c.ENDC)
+    # copy("./blog.py", dst+"blog.py")
+    # if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
 
     if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"Markdown.py'"+c.OKGREEN+" ... "+c.ENDC)
     copy("./Markdown.py", dst+"Markdown.py")
@@ -75,6 +75,20 @@ def CopyToDeploy(v=False):
 # - v: Boolean that determines whether to print output or not. (Bool)
 def SanitizeDeploy(v=False):
     # Sanitize blog.py
+    open(dst+"blog.py", "w").close()
+    with open("./blog.py", "r") as source_fd, open(dst+"blog.py", "a") as dst_fd:
+        for line in source_fd:
+            if (line[0:8] == "base_url"):
+                line = line.replace("https://zacs.site", "YOUR BASE URL HERE")
+            if (line[0:6] == "byline"):
+                line = line.replace("Zac J. Szewczyk", "YOUR NAME HERE")
+            if (line[0:21] == "    BuildFromTemplate"):
+                temp = line.split('", ')
+                temp.pop(3)
+                temp.insert(3,'description="DESCRIPTION HERE')
+                line = '", '.join(temp)
+
+            dst_fd.write(line)
     # Sanitize Markdown.py
     # Sanitize system/404.html
     # Sanitize system/index.html
