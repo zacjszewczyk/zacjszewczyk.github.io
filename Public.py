@@ -20,11 +20,12 @@ def CopyToDeploy(v=False):
     rmtree(dst+"system", ignore_errors=True)
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
 
-    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"system'"+c.OKGREEN+" ... "+c.ENDC)
     # Copy the "./system" tree to the deployment folder
+    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"system'"+c.OKGREEN+" ... "+c.ENDC)
     copytree("./system", dst+"system")
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
     
+    # Copy "blog.py" dependencies to the deployment folder
     if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"colors.py'"+c.OKGREEN+" ... "+c.ENDC)
     copy("./colors.py", dst+"colors.py")
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
