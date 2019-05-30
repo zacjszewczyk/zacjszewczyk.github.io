@@ -30,6 +30,7 @@ months = {"01":"January","02":"February","03":"March","04":"April","05":"May","0
 weekDays = ("Mon","Tue","Wed","Thu","Fri","Sat","Sun")
 content = ""
 base_url = "https://zacs.site"
+byline = "Zac J. Szewczyk"
 
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
@@ -395,7 +396,7 @@ def GenPage(source, timestamp):
         elif (idx == 3):
             # print line
             line = line[9:].strip().replace(" ", "/").split("/")
-            title += """\n                    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
+            title += """\n                    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">%s</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], byline, line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
         # In the fifth line of the file, we're reading the author line. Since we don't do anything
         # with this, pass.
         elif (idx == 4):
