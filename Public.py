@@ -87,8 +87,6 @@ def SanitizeDeploy(v=False):
                 temp.pop(3)
                 temp.insert(3,'description="DESCRIPTION HERE')
                 line = '", '.join(temp)
-            if (line[0:35] == '    fd.write("""<?xml version=\'1.0\''):
-                # line = line.replace("Zac J. Szewczyk")
 
             dst_fd.write(line)
     # Sanitize Markdown.py
