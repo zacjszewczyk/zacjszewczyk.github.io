@@ -544,8 +544,8 @@ def Init():
     fd.close()
 
     # Clear and initialize the archives.html and blog.html files.
-    BuildFromTemplate(target="./local/archives.html", title="Post Archives - ", bodyid="postarchives", description="Every article Zac Szewczyk has ever posted, in chronological order, split up by year and divided by month.")
-    BuildFromTemplate(target="./local/blog.html", title="Blog - ", bodyid="blog", description="Zac Szewczyk's main blog page, where you will find topics ranging from adventuring and writing to weightlifting and leadership, among other things.")
+    BuildFromTemplate(target="./local/archives.html", title="Post Archives - ", bodyid="postarchives", description="Every article Zac Szewczyk has ever posted, in chronological order, split up by year and divided by month.", sheets="", passed_content="")
+    BuildFromTemplate(target="./local/blog.html", title="Blog - ", bodyid="blog", description="Zac Szewczyk's main blog page, where you will find topics ranging from adventuring and writing to weightlifting and leadership, among other things.", sheets="", passed_content="")
     
     # Clear and initialize the RSS feed
     fd = open("./local/rss.xml", "w")
