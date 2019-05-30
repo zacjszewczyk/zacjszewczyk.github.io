@@ -24,15 +24,6 @@ def CopyToDeploy(v=False):
     # Copy the "./system" tree to the deployment folder
     copytree("./system", dst+"system")
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
-
-    # # Copy "blog.py" and its dependencies to the deployment folder
-    # if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"blog.py'"+c.OKGREEN+" ... "+c.ENDC)
-    # copy("./blog.py", dst+"blog.py")
-    # if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
-
-    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"Markdown.py'"+c.OKGREEN+" ... "+c.ENDC)
-    copy("./Markdown.py", dst+"Markdown.py")
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
     
     if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"colors.py'"+c.OKGREEN+" ... "+c.ENDC)
     copy("./colors.py", dst+"colors.py")
@@ -75,6 +66,7 @@ def CopyToDeploy(v=False):
 # - v: Boolean that determines whether to print output or not. (Bool)
 def SanitizeDeploy(v=False):
     # Sanitize blog.py
+    if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"blog.py'"+c.OKGREEN+" ... "+c.ENDC)
     open(dst+"blog.py", "w").close()
     with open("./blog.py", "r") as source_fd, open(dst+"blog.py", "a") as dst_fd:
         for line in source_fd:
@@ -87,9 +79,18 @@ def SanitizeDeploy(v=False):
                 temp.pop(3)
                 temp.insert(3,'description="DESCRIPTION HERE')
                 line = '", '.join(temp)
+            dst_fd.write(line)
+    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    
+    # Sanitize Markdown.py
+    if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"Markdown.py'"+c.OKGREEN+" ... "+c.ENDC)
+    open(dst+"Markdown.py", "w").close()
+    with open("./Markdown.py", "r") as source_fd, open(dst+"Markdown.py", "a") as dst_fd:
+        for line in source_fd:
 
             dst_fd.write(line)
-    # Sanitize Markdown.py
+    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+
     # Sanitize system/404.html
     # Sanitize system/index.html
     # Sanitize system/projects.html
