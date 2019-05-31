@@ -409,10 +409,10 @@ def GenPage(source, timestamp):
         elif (idx == 6):
             target_fd.write(local_content.replace("{{META_DESC}}", line.strip()).strip())
             target_fd.write("\n                "+title.strip())
-            target_fd.write("\n                    "+Markdown(line).strip())
+            target_fd.write("\n                    "+Markdown(line, base_url).strip())
         # For successive lines of the file, parse them as Markdown and write them to the file.
         elif (idx > 5):
-            target_fd.write("\n                    "+Markdown(line).strip())
+            target_fd.write("\n                    "+Markdown(line, base_url).strip())
 
         # Increase the line number
         idx += 1

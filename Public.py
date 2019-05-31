@@ -88,7 +88,8 @@ def SanitizeDeploy(v=False):
     open(dst+"Markdown.py", "w").close()
     with open("./Markdown.py", "r") as source_fd, open(dst+"Markdown.py", "a") as dst_fd:
         for line in source_fd:
-
+            if (line[0:21] == "path_to_content_files"):
+                line = line.replace("zjszewczyk", "USERNAME_HERE")
             dst_fd.write(line)
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
 
