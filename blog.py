@@ -526,7 +526,7 @@ def Init():
         exit(1)
 
     ## Now ensure crucial system files exist
-    for f in ["template.htm", "404.html", "index.html", "projects.html", "disclaimers.html"]:
+    for f in ["template.htm", "index.html", "projects.html", "disclaimers.html"]:
         if (not isfile("./system/"+f)):
             print c.FAIL+"\"./system/"+f+"\" directory does not exist. Exiting."+c.ENDC
             exit(1)
