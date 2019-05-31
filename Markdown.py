@@ -149,7 +149,7 @@ def Markdown(line, base_url):
         for each in findall("(\!\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]+\]\(['\(\)\#\;?\@\%\w\&:\,\./\~\s\"\!\#\=\+-]+\))", line):
             desc = each.split("]")[0][2:]
             url = each.split("]")[1].split(" ")[0][1:]
-            if (url.startswith("http://zacjszewczyk.com/")):
+            if (url.startswith(base_url)):
                 # print url.split("/")[-1]
                 url = """/assets/Images/%s""" % (url.split("/")[-1])
             alt = each.split("]")[1].split(" &#8220;")[1].rstrip("&#8221;)")
@@ -165,7 +165,7 @@ def Markdown(line, base_url):
                     if (".htm" == url[-4:]):
                         url = ""+url.replace(" ", "-").lower()
                 else:
-                    url = "http://zacs.site/blog/"+url.replace(" ", "-").replace(".txt", ".html").lower()
+                    url = base_url+"blog/"+url.replace(" ", "-").replace(".txt", ".html").lower()
 
             if (".txt" == url[-4:]):
                 url = url.replace(".txt", "").replace(" ", "-").replace("&#8220;", "").replace("&#8221;", "").replace("&#8217;", "").replace("&#8216;", "").replace("&#8217;", "")
