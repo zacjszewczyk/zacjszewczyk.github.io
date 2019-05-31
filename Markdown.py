@@ -17,7 +17,7 @@ path_to_content_files = "/Users/zjszewczyk/Dropbox/Code/Standalone/"
 # Purpose: Take a raw string from a file, formatted in Markdown, and parse it into HTML.
 # Parameters:
 # - Line: Line to be parsed. (String)
-def Markdown(line):
+def Markdown(line, base_url):
     # Make global variables accessible in the method, and initialize method variables.
     # Must be global to persist between method calls.
     global types, active, pre
