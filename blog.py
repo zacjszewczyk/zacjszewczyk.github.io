@@ -13,15 +13,15 @@ from ModTimes import CompareMtimes
 from colors import c
 
 # Global variables
-# - types: Keep track of current and two previous line types. (Tuple)
-# - active: Keep track of active block-level HTML element. (String)
-# - file_idx: Current file number. (Int)
-# - files: Dictionary with years as the keys, and sub-dictinaries as the 
-#          elements. These elements have months as the keys, and a list
-#          of the posts made in that month as the elements. (Dictionary)
-# - months: A dictionary for converting decimal (string) representations
-#           of months to their names. (Dictionary)
-# - content: A string with the opening and closing HTML tags. (String)
+## - types: Keep track of current and two previous line types. (Tuple)
+## - active: Keep track of active block-level HTML element. (String)
+## - file_idx: Current file number. (Int)
+## - files: Dictionary with years as the keys, and sub-dictinaries as the 
+##          elements. These elements have months as the keys, and a list
+##          of the posts made in that month as the elements. (Dictionary)
+## - months: A dictionary for converting decimal (string) representations
+##           of months to their names. (Dictionary)
+## - content: A string with the opening and closing HTML tags. (String)
 types = ["", "", ""]
 active = ""
 file_idx = 0
@@ -29,10 +29,12 @@ files = {}
 months = {"01":"January","02":"February","03":"March","04":"April","05":"May","06":"June","07":"July","08":"August","09":"September","10":"October","11":"November","12":"December"}
 weekDays = ("Mon","Tue","Wed","Thu","Fri","Sat","Sun")
 content = ""
+
+# Config variables, read in from './EDITME'
+## - base_url: Base website URL (String)
+## - byline: Author name, as it will appear on all articles (String)
 base_url = ""
 byline = ""
-# base_url = "https://zacs.site"
-# byline = "Zac J. Szewczyk"
 
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
@@ -533,6 +535,10 @@ def Init():
                     base_url = line.split(" = ")[1]
                 elif (line[0:6] == "byline"):
                     byline = line.split(" = ")[1]
+
+    if (base_url == "" or byline == ""):
+        print c.FAIL+"Error reading settings from './EDITME'."+c.ENDC
+        exit(1)
 
     # Check for existence of system files and Content directory.
     # These are requirements for First Crack; it will fail if they do not exist.
