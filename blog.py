@@ -577,7 +577,7 @@ def Init():
     fd = open("system/template.htm", "r")
     content = fd.read()
     content = content.split("<!--Divider-->")
-    content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords).replace("{{META_APPNAME}}", meta_appname)
+    content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords).replace("{{META_APPNAME}}", meta_appname).replace("{{META_BYLINE}}", byline).replace("{{META_BASEURL}}", base_url)
     content.append(content[0])
     fd.close()
 
