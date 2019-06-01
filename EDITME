@@ -2,6 +2,7 @@
 # The following variables are required:
 ## base_url - The base URL for your website, i.e. https://zacs.site
 ## byline - The name of the author, as it will display on all posts
+## full_name - The full, legal name of the content owner
 ## meta_keywords - Any additional keywords you would like to include in the META keywords tag
 ## meta_appname - The desired app name, stored in a META tag
 ## twitter - URL to your Twtitter profile
