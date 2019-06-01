@@ -517,7 +517,8 @@ def GetTitle(source, timestamp):
 #          Make sure ./local exists.
 # Parameters: none
 def Init():
-    # Check for the existence of an "EDITME" file, which contains config info
+    # Check for the existence of an "EDITME" file, which contains config info.
+    # On error, notify the user, create the file, and ask the user to run again.
     if (not isfile("./EDITME")):
         stdout.write(c.FAIL+"The FirstCrack config file, './EDITME', does not exist. Creating now ..."+c.ENDC)
         fd = open("./EDITME", "w")
@@ -526,28 +527,31 @@ def Init():
         stdout.write(c.OKGREEN+" done.\n"+c.ENDC)
         print c.WARNING+"Please run again."+c.ENDC
         exit(1)
+    # On success, extract values and store them for use when building the site.
     else:
+        # Make global variables accessible
         global base_url, byline, meta_keywords, meta_appname, twitter_url, insta_url
+        # Open the './EDITME' file
         with open("./EDITME", "r") as fd:
             for line in fd:
-                if (line[0] == "#"):
+                if (line[0] == "#"): # Ignore comments
                     pass
-                elif (line[0:8] == "base_url"):
+                elif (line[0:8] == "base_url"): # Extract base URL for site
                     base_url = line.split(" =")[1].strip()
-                elif (line[0:6] == "byline"):
+                elif (line[0:6] == "byline"): # Extract author byline
                     byline = line.split(" =")[1].strip()
-                elif (line[0:13] == "meta_keywords"):
+                elif (line[0:13] == "meta_keywords"): # Extract additional site keywords
                     meta_keywords = line.split(" =")[1].strip()
-                elif (line[0:12] == "meta_appname"):
+                elif (line[0:12] == "meta_appname"): # Extract app name
                     meta_appname = line.split(" =")[1].strip()
-                elif (line[0:7] == "twitter"):
+                elif (line[0:7] == "twitter"): # Extract Twitter profile URL
                     twitter_url = line.split(" =")[1].strip()
-                elif (line[0:9] == "instagram"):
+                elif (line[0:9] == "instagram"): # Extract Instagram profile URL
                     insta_url = line.split(" =")[1].strip()
 
-
+    # If any of these values were blank, notify the user and throw an error.
     if (base_url == "" or byline == "" or meta_keywords == "" or meta_appname == "" or twitter_url == "" or insta_url == ""):
-        print c.FAIL+"Error reading settings from './EDITME'."+c.ENDC
+        print c.FAIL+"Error reading settings from './EDITME'. Please check file configuration and try again."+c.ENDC
         exit(1)
 
     # Check for existence of system files and Content directory.
@@ -577,11 +581,13 @@ def Init():
     file_idx = 0
     files = {}
 
-    # Open the template file, split it, and store each half in a list.
+    # Open the template file, split it, modify portions as necessary, and store each half in a list.
     fd = open("system/template.htm", "r")
     content = fd.read()
     content = content.split("<!--Divider-->")
+    # This line replaces all generics in the template file with values in config file
     content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords).replace("{{META_APPNAME}}", meta_appname).replace("{{META_BYLINE}}", byline).replace("{{META_BASEURL}}", base_url)
+    # This line replaces placeholders with social media URLs in the config file
     content[1] = content[1].replace("{{TWITTER_URL}}", twitter_url).replace("{{INSTA_URL}}", insta_url)
     content.append(content[0])
     fd.close()
@@ -594,9 +600,6 @@ def Init():
     fd = open("./local/rss.xml", "w")
     fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>Zac J. Szewczyk</title>\n    <link>http://zacs.site/</link>\n    <description>RSS feed for Zac J. Szewczyk's website, found at http://zacs.site/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>\n    <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (datetime.datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
     fd.close()
-
-    # FUTURE: Do this for the Structure directory, minus key system files, to determine
-    # what--if anything--needs updated, rather than rebuilding the site every time.
     
     # Generate a dictionary with years as the keys, and sub-dictinaries as the elements.
     # These elements have months as the keys, and a list of the posts made in that month
