@@ -112,36 +112,6 @@ def SanitizeDeploy(v=False):
         dst_fd.write('<h1 class="headers" id="academicWork"><span><a href="#academicWork">#</a>&nbsp;</span>Academic Work</h1>\n<p>\n    This is an example section heading.\n</p>\n<h2 class="headers" id="capstone">Capstone<span>&nbsp;<a href="#capstone">#</a></span></h2>\n<p>\n    This is example section content.\n</p>\n')
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
 
-    # # Sanitize system/template.htm
-    # if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"system/template.htm'"+c.OKGREEN+" ... "+c.ENDC)
-    # open(dst+"system/template.htm", "w").close()
-    # with open("./system/template.htm", "r") as source_fd, open(dst+"system/template.htm", "a") as dst_fd:
-    #     for line in source_fd:
-    #         if (line[0:29] == '        <meta name="keywords"'):
-    #             line = line[0:39] + 'Enter some keywords here." />\n'
-    #         if (line[0:37] == '        <meta name="application-name"'):
-    #             line = line.replace("Zac Szewczyk", "Name your app here")
-    #         if (line[0:37] == '        <meta property="og:site_name"'):
-    #             line = line.replace("Zac J. Szewczyk", "Enter site name here")
-    #         if (line[0:42] == '        <meta property="og:article:author"'):
-    #             line = line.replace("Zac J. Szewczyk", "Enter author name here")
-    #         if (line[0:36] == '        <meta property="og:see_also"'):
-    #             line = line.replace("http://zacs.site/", "Enter base URL here")
-    #         if (line[0:29] == '        <link rel="alternate"'):
-    #             line = line.replace(" for Zac J. Szewczyk's Blog", "").replace("http://zacs.site", "")
-    #         if (line[0:23] == '            {{ title }}'):
-    #             line = line.replace("Zac J. Szewczyk", "Enter author name here")
-    #         if (line[0:27] == '            <p>Follow me on'):
-    #             line = line.replace("http://twitter.com/zacjszewczyk", "Twitter URL here")
-    #             line = line.replace("https://www.instagram.com/zacjszewczyk/", "Instagram URL here")
-    #         if (line[0:21] == '            <p>&copy;'):
-    #             line = line.replace("Zachary Szewczyk", "Name here")
-    #         if (line[0:83] == '    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138585845-1">'):
-    #             dst_fd.write("</html>")
-    #             break
-    #         dst_fd.write(line)
-    # if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
-
     # Sanitize system/disclaimers.html
     if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"system/disclaimers.html'"+c.OKGREEN+" ... "+c.ENDC)
     open(dst+"system/disclaimers.html", "w").close()
