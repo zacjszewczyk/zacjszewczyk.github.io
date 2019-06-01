@@ -141,6 +141,16 @@ def SanitizeDeploy(v=False):
             dst_fd.write(line)
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
 
+    # Sanitize system/disclaimers.html
+    if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"system/disclaimers.html'"+c.OKGREEN+" ... "+c.ENDC)
+    open(dst+"system/disclaimers.html", "w").close()
+    with open("./system/disclaimers.html", "r") as source_fd, open(dst+"system/disclaimers.html", "a") as dst_fd:
+        for line in source_fd:
+            if (line[0:20] == '    Zachary Szewczyk'):
+                line = line.replace("Zachary Szewczyk", "Name here")
+            dst_fd.write(line)
+    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+
 # Method: GenExFiles
 # Purpose: Create example files in the deployment directory
 # Parameters:
