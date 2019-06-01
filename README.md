@@ -18,6 +18,33 @@ $ cd FirstCrack
 
 That's it.
 
+## Directory Structure
+
+```
+FirstCrack
+|____README.md # This file
+|____blog.py # The blog engine
+|____Markdown.py # The Markdown parser
+|____colors.py # ASCII color code function
+|____ModTimes.py # Method to compare mod times of two input files
+|____Hash.py # Method to hash two input files and return equality
+|
+|____system # Content used to populate select front-end files
+| |____index.html # Content for the home page
+| |____disclaimers.html # Content for the disclaimers page
+| |____projects.html # Content for the projects page
+| |____template.htm # Base HTML template file
+|
+|____Content # Content files. All must end in .txt
+| |____Test Linkpost.txt # An example linkpost
+| |____Test Original Article.txt # An example article
+|
+|____local # First Crack's output directory. Structure files will go in here.
+| |____blog # First Crack will store all content files in here.
+| |____assets # Store images, CSS files, and any other documents in this directory.
+| | |____main.css # The main CSS file for the site.
+```
+
 ## Setup
 
 First Crack requires that you set up a configuration file before it will generate your site. This is a one-time thing and consists of filling out a few variables. First Crack will generate a skeleton config file when you run it for the first time. Do this with the following commands:
