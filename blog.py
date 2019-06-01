@@ -33,10 +33,7 @@ content = ""
 # Config variables, read in from './EDITME'
 ## - base_url: Base website URL (String)
 ## - byline: Author name, as it will appear on all articles (String)
-base_url = ""
-byline = ""
-meta_keywords = ""
-meta_appname = ""
+base_url, byline, meta_keywords, meta_appname, twitter_url, insta_url = "", "", "", "", "", ""
 
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
@@ -528,7 +525,7 @@ def Init():
         print c.WARNING+"Please run again."+c.ENDC
         exit(1)
     else:
-        global base_url, byline, meta_keywords, meta_appname
+        global base_url, byline, meta_keywords, meta_appname, twitter_url, insta_url
         with open("./EDITME", "r") as fd:
             for line in fd:
                 if (line[0] == "#"):
@@ -541,8 +538,13 @@ def Init():
                     meta_keywords = line.split(" = ")[1].strip()
                 elif (line[0:12] == "meta_appname"):
                     meta_appname = line.split(" = ")[1].strip()
+                elif (line[0:7] == "twitter"):
+                    twitter_url = line.split(" = ")[1].strip()
+                elif (line[0:9] == "instagram"):
+                    insta_url = line.split(" = ")[1].strip()
 
-    if (base_url == "" or byline == "" or meta_keywords == "" or meta_appname == ""):
+
+    if (base_url == "" or byline == "" or meta_keywords == "" or meta_appname == "" or twitter_url == "" or insta_url == ""):
         print c.FAIL+"Error reading settings from './EDITME'."+c.ENDC
         exit(1)
 
@@ -578,6 +580,7 @@ def Init():
     content = fd.read()
     content = content.split("<!--Divider-->")
     content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords).replace("{{META_APPNAME}}", meta_appname).replace("{{META_BYLINE}}", byline).replace("{{META_BASEURL}}", base_url)
+    content[1] = content[1].replace("{{TWITTER_URL}}", twitter_url).replace("{{INSTA_URL}}", insta_url)
     content.append(content[0])
     fd.close()
 
