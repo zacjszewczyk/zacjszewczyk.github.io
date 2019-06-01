@@ -3,12 +3,17 @@ First Crack - A simple static blogging engine written in Python
 
 Given a directory of plain text files formatted in Markdown, First Crack will generate a static website of over a thousand pages in less than two seconds.
 
-## Prerequisites
+## Dependencies
+
+First Crack uses built-in Python libraries. It does not rely on any third-party libraries.
+
 ### Python 2.*
 
 I started this project in 2011, with Python 2. You will need Python 2.\* to use my blogging engine. I plan to port it to Python 3 soon. Use with versions other than 2.\* at your own risk.
 
 ## Installation
+
+
 
 ```
 $ git clone https://github.com/zacjszewczyk/FirstCrack.git
