@@ -16,6 +16,11 @@ dst = "../Public/FirstCrack/"
 # Parameters:
 # - v: Boolean that determines whether to print output or not. (Bool)
 def CopyToDeploy(v=False):
+    # Copy "README.md" to the deployment folder
+    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"README.md'"+c.OKGREEN+" ... "+c.ENDC)
+    copy("./README.md", dst+"README.md")
+    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+
     # Clear the "system/*" tree in the deployment folder
     if (v): stdout.write(c.OKGREEN+"Clearing "+c.ENDC+"'"+dst+"system'"+c.OKGREEN+" ... "+c.ENDC)
     rmtree(dst+"system", ignore_errors=True)
