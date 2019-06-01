@@ -598,7 +598,7 @@ def Init():
     
     # Clear and initialize the RSS feed
     fd = open("./local/rss.xml", "w")
-    fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>Zac J. Szewczyk</title>\n    <link>http://zacs.site/</link>\n    <description>RSS feed for Zac J. Szewczyk's website, found at http://zacs.site/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, Zachary Szewczyk. All rights reserved.</copyright>\n    <atom:link href="http://zacs.site/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (datetime.datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
+    fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>%s</title>\n    <link>%s</link>\n    <description>RSS feed for %s's website, found at %s/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, %s. All rights reserved.</copyright>\n    <atom:link href="%s/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (byline, base_url, byline, base_url, byline, base_url, datetime.datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
     fd.close()
     
     # Generate a dictionary with years as the keys, and sub-dictinaries as the elements.
