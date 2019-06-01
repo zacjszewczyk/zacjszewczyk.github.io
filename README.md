@@ -81,7 +81,12 @@ twitter =
 instagram = 
 ```
 
-Assign a value to each variable, save the file, and then build your site.
+Assign a value to each variable, save the file, and then build your site. My first two lines look like this:
+
+```
+base_url = https://zacs.site
+byline = Zac J. Szewczyk
+```
 
 ## Usage
 
