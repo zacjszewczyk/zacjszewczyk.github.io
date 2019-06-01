@@ -128,8 +128,6 @@ def SanitizeDeploy(v=False):
                 line = line.replace("http://zacs.site/", "Enter base URL here")
             if (line[0:29] == '        <link rel="alternate"'):
                 line = line.replace(" for Zac J. Szewczyk's Blog", "").replace("http://zacs.site", "")
-            if (line[0:26] == '        <link rel="author"'):
-                line = line.replace("https://plus.google.com/109294852959769775608/about", "")
             if (line[0:23] == '            {{ title }}'):
                 line = line.replace("Zac J. Szewczyk", "Enter author name here")
             if (line[0:27] == '            <p>Follow me on'):
