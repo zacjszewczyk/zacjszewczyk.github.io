@@ -7,7 +7,7 @@ from os.path import isdir, isfile # File existence operations
 from time import strptime, strftime, mktime, localtime, gmtime # Managing file modification time
 import datetime # Recording runtime
 from re import search # Regex
-from sys import exit, argv # Command line options
+from sys import exit, argv, stdout # Command line options
 from Markdown import Markdown
 from ModTimes import CompareMtimes
 from colors import c
@@ -29,8 +29,10 @@ files = {}
 months = {"01":"January","02":"February","03":"March","04":"April","05":"May","06":"June","07":"July","08":"August","09":"September","10":"October","11":"November","12":"December"}
 weekDays = ("Mon","Tue","Wed","Thu","Fri","Sat","Sun")
 content = ""
-base_url = "https://zacs.site"
-byline = "Zac J. Szewczyk"
+base_url = ""
+byline = ""
+# base_url = "https://zacs.site"
+# byline = "Zac J. Szewczyk"
 
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
@@ -514,6 +516,24 @@ def GetTitle(source, timestamp):
 #          Make sure ./local exists.
 # Parameters: none
 def Init():
+    # Check for the existence of an "EDITME" file, which contains config info
+    if (not isfile("./EDITME")):
+        stdout.write(c.FAIL+"The FirstCrack config file, './EDITME', does not exist. Creating now ..."+c.ENDC)
+
+        stdout.write(c.OKGREEN+" done.\n"+c.ENDC)
+        print c.WARNING+"Please run again."+c.ENDC
+        exit(1)
+    else:
+        global base_url, byline
+        with open("./EDITME", "r") as fd:
+            for line in fd:
+                if (line[0] == "#"):
+                    pass
+                elif (line[0:8] == "base_url"):
+                    base_url = line.split(" = ")[1]
+                elif (line[0:6] == "byline"):
+                    byline = line.split(" = ")[1]
+
     # Check for existence of system files and Content directory.
     # These are requirements for First Crack; it will fail if they do not exist.
     ## Check for the existence of the "./system" directory first...
