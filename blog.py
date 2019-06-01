@@ -729,7 +729,7 @@ def Migrate(target, mod_time):
 
     # Clear the target file, then write it's contents into it after the header information.
     fd = open("Content/"+target, "w")
-    fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, "Zac Szewczyk", article_content.strip()))
+    fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, byline, article_content.strip()))
     fd.close()
 
     # Revert the update time for the target file, to its previous value.
