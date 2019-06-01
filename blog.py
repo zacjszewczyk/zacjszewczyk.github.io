@@ -523,7 +523,7 @@ def Init():
     if (not isfile("./EDITME")):
         stdout.write(c.FAIL+"The FirstCrack config file, './EDITME', does not exist. Creating now ..."+c.ENDC)
         fd = open("./EDITME", "w")
-        fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url =\nbyline =\nmeta_keywords =\nmeta_appname =\ntwitter =\ninstagram =")
+        fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url =\nbyline =\nmeta_keywords =\nmeta_appname =\ntwitter =\ninstagram =")
         fd.close()
         stdout.write(c.OKGREEN+" done.\n"+c.ENDC)
         print c.WARNING+"Please run again."+c.ENDC
