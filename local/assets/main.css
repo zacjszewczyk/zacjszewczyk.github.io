@@ -73,7 +73,7 @@ h6 {
 #projects #rss_link, #projects #archives_link {
     display: none; }
 html, body {
-    margin: 0 2em;
+    margin: 0 1em;
     padding: 0; }
 img {
     max-width: 90%;
@@ -132,7 +132,7 @@ pre {
         font-size: 90%;
     }
     body {
-        margin: 0 2em;
+        margin: 0 1em;
     }
     #big_table tbody tr td {
         display: inline-block;
