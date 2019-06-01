@@ -54,13 +54,13 @@ $ chmod 755 ./blog.py
 $ ./blog.py
 ```
 
-You have to fill in the config file before First Crack will build your site, so do this by opening ./EDITME in your editor of choice. You can do this in the terminal with vi, using the following command:
+You have to fill in the config file before First Crack will build your site, so do this by opening `EDITME` in your editor of choice. You can do this in the terminal with `vi`:
 
 ```
 $ vi ./EDITME
 ```
 
-The config file, EDITME, looks like this:
+The config file, `EDITME`, looks like this:
 
 ```
 # FirstCrack configuration document
@@ -91,7 +91,7 @@ To build a website with First Crack, enter the following command:
 $ ./blog.py
 ```
 
-First Crack ships with two example content files, which it uses to build an example website. View that site by opening the index.html file in the local directory, or by entering the following command:
+First Crack ships with two example content files, which it uses to build an example website. View that site by opening the `index.html` file in the `local` directory, or by entering the following command:
 
 ```
 $ open local/index.html
@@ -105,7 +105,7 @@ First Crack has a few advanced features that make managing a website easier, whi
 $ ./blog.py -a
 ```
 
-First Crack will display a menu of available commands, along with an explanation of each. Enter "-h" at any time to view the help menu. First Crack will continue prompting you for input in this mode until you exit it with either "exit" or "!exit". You can also run any of these commands directly from the command line. For example, to clear all structure files, use the following command:
+First Crack will display a menu of available commands, along with an explanation of each. Enter `-h` at any time to view the help menu. First Crack will continue prompting you for input in this mode until you exit it with either `exit` or `!exit`. You can also run any of these commands directly from the command line. For example, to clear all structure files, use the following command:
 
 ```
 $ ./blog.py -R
