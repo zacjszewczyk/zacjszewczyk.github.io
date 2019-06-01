@@ -1,7 +1,7 @@
 First Crack
 ===========
 
-## A simple static blogging engine written in Python
+`A simple static blogging engine written in Python`
 
 Given a directory of plain text files formatted in [Markdown](http://daringfireball.net/projects/markdown/), First Crack will generate a static website of over a thousand pages in less than two seconds.
 
