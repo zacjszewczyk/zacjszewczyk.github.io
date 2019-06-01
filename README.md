@@ -58,7 +58,7 @@ Assign a value to each variable, save the file, and then build your site.
 
 ## Usage
 
-To build a website with FirstCrack, enter the following command:
+To build a website with First Crack, enter the following command:
 
 ```
 $ ./blog.py
@@ -78,15 +78,23 @@ First Crack has a few advanced features that make managing a website easier, whi
 $ ./blog.py -a
 ```
 
-First Crack will display a menu of available commands, along with an explanation of each. Enter "-h" at any time to view the help menu. You can also run any of these commands directly from your command line. For example, to clear all structure files, use the following command:
+First Crack will display a menu of available commands, along with an explanation of each. Enter "-h" at any time to view the help menu. First Crack will continue prompting you for input in this mode until you exit it with either "exit" or "!exit". You can also run any of these commands directly from the command line. For example, to clear all structure files, use the following command:
 
 ```
 $ ./blog.py -R
 ```
 
+## Making a New Post
+
+Like everything else, the process for making a new post is simple. See the files in the Content directory for examples of a linkpost and an original article. To make a new post, save a text file in the Content directory and build the site. First Crack will only build files that have changed since you last ran it, and then re-build the blog and archive pages as necessary. 
+
 ## Background and Motivation
 
-I started this project in 2011. After trying many content management systems, I decided to roll my own. After a few months of work, I began running my website on something I called First Crack. Over the years, that project morphed into the one you see before you today.
+I started this project in 2011. After trying many of the day's most popular content management systems, I decided to roll my own. I began running my website on something I called First Crack a few months later. Over the years, that project morphed into the one you see before you today.
+
+I designed First Crack with ease of use, speed, and versatility in mind. I believe these goals are evident in the engine's dead-simple setup, its ability to build over one thousand pages in less than two seconds, and the lightweight website it produces.
+
+After almost a decade, content management systems have gotten much better since I started this project. I have yet to find anything First Crack cannot do, though, or an engine that wins out in the design goals I mentioned above. I like working on First Crack, and I look forward to adding cool new features in the future.
 
 ## License
 
