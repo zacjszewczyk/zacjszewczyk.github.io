@@ -588,7 +588,7 @@ def Init():
     # This line replaces all generics in the template file with values in config file
     content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords).replace("{{META_APPNAME}}", meta_appname).replace("{{META_BYLINE}}", byline).replace("{{META_BASEURL}}", base_url)
     # This line replaces placeholders with social media URLs in the config file
-    content[1] = content[1].replace("{{TWITTER_URL}}", twitter_url).replace("{{INSTA_URL}}", insta_url)
+    content[1] = content[1].replace("{{META_BYLINE}}", byline).replace("{{TWITTER_URL}}", twitter_url).replace("{{INSTA_URL}}", insta_url)
     content.append(content[0])
     fd.close()
 
