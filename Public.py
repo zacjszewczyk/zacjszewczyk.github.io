@@ -133,6 +133,8 @@ def SanitizeDeploy(v=False):
             if (line[0:27] == '            <p>Follow me on'):
                 line = line.replace("http://twitter.com/zacjszewczyk", "Twitter URL here")
                 line = line.replace("https://www.instagram.com/zacjszewczyk/", "Instagram URL here")
+            if (line[0:21] == '            <p>&copy;'):
+                line = line.replace("Zachary Szewczyk", "Name here")
             if (line[0:83] == '    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138585845-1">'):
                 dst_fd.write("</html>")
                 break

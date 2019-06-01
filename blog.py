@@ -453,7 +453,7 @@ def GenStatic():
     fd.close()
 
     # Build the 404.html file.
-    BuildFromTemplate("./local/404.html", "Error - ", "error", "", "")
+    BuildFromTemplate(target="./local/404.html", title="Error - ", bodyid="error", description="", sheets="", passed_content="")
 
 # Method: GetUserInput
 # Purpose: Accept user input and perform basic bounds checking
