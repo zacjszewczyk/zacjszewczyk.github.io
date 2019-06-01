@@ -35,6 +35,7 @@ content = ""
 ## - byline: Author name, as it will appear on all articles (String)
 base_url = ""
 byline = ""
+meta_keywords = ""
 
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
@@ -526,7 +527,7 @@ def Init():
         print c.WARNING+"Please run again."+c.ENDC
         exit(1)
     else:
-        global base_url, byline
+        global base_url, byline, meta_keywords
         with open("./EDITME", "r") as fd:
             for line in fd:
                 if (line[0] == "#"):
@@ -535,8 +536,10 @@ def Init():
                     base_url = line.split(" = ")[1]
                 elif (line[0:6] == "byline"):
                     byline = line.split(" = ")[1]
+                elif (line[0:13] == "meta_keywords"):
+                    meta_keywords == line.split(" = ")[1]
 
-    if (base_url == "" or byline == ""):
+    if (base_url == "" or byline == "" or meta_keywords == ""):
         print c.FAIL+"Error reading settings from './EDITME'."+c.ENDC
         exit(1)
 
@@ -571,6 +574,7 @@ def Init():
     fd = open("system/template.htm", "r")
     content = fd.read()
     content = content.split("<!--Divider-->")
+    content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords)
     content.append(content[0])
     fd.close()
 
