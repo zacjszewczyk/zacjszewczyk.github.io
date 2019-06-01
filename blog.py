@@ -188,7 +188,7 @@ def AppendToFeed(source):
     # Once we have reached the end of the content in the case of a linkpost,
     # or read the first paragraph in the case of an original article, add a 
     # "read more" link and close the article.
-    feed_fd.write("\n                <p class='read_more_paragraph'>\n                    <a style='text-decoration:none;' href='"+base_url+"/blog/%s'>Read more...</a>\n                </p>\n".replace("<", "&lt;").replace(">", "&gt;") % (html_filename))
+    feed_fd.write("\n                <p class='read_more_paragraph'>\n                    <a style='text-decoration:none;' href='%s/blog/%s'>Read more...</a>\n                </p>\n".replace("<", "&lt;").replace(">", "&gt;") % (base_url, html_filename))
     feed_fd.write("            </description>\n        </item>\n")
     feed_fd.close()
 
