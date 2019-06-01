@@ -33,7 +33,7 @@ content = ""
 # Config variables, read in from './EDITME'
 ## - base_url: Base website URL (String)
 ## - byline: Author name, as it will appear on all articles (String)
-base_url, byline, meta_keywords, meta_appname, twitter_url, insta_url = "", "", "", "", "", ""
+base_url, byline, full_name, meta_keywords, meta_appname, twitter_url, insta_url = "", "", "", "", "", "", ""
 
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
@@ -437,6 +437,7 @@ def GenPage(source, timestamp):
 # Purpose: Create home, projects, and error static structure files.
 # Parameters: none
 def GenStatic():
+    global full_name
     # Reference the index.html source file to generate the front-end structure file.
     fd = open("system/index.html", "r")
     home = fd.read().split("<!-- DIVIDER -->")
@@ -452,7 +453,7 @@ def GenStatic():
     # Reference the disclaimers.html source file to generate the front-end structure fule.
     fd = open("system/disclaimers.html", "r")
     disclaimers = fd.read().split("<!-- DIVIDER -->")
-    BuildFromTemplate(target="./local/disclaimers.html", title="Disclaimers - ", bodyid="disclaimers", description="Copyright and content disclaimers for Zac Szewczyk's blog.", sheets="", passed_content=disclaimers[1])
+    BuildFromTemplate(target="./local/disclaimers.html", title="Disclaimers - ", bodyid="disclaimers", description="Copyright and content disclaimers for Zac Szewczyk's blog.", sheets="", passed_content=disclaimers[1].replace("{{NAME}}", full_name))
     fd.close()
 
     # Build the 404.html file.
@@ -530,7 +531,7 @@ def Init():
     # On success, extract values and store them for use when building the site.
     else:
         # Make global variables accessible
-        global base_url, byline, meta_keywords, meta_appname, twitter_url, insta_url
+        global base_url, byline, full_name, meta_keywords, meta_appname, twitter_url, insta_url
         # Open the './EDITME' file
         with open("./EDITME", "r") as fd:
             for line in fd:
@@ -540,6 +541,8 @@ def Init():
                     base_url = line.split(" =")[1].strip()
                 elif (line[0:6] == "byline"): # Extract author byline
                     byline = line.split(" =")[1].strip()
+                elif (line[0:9] == "full_name"): # Extract author full (legal) name
+                    full_name = line.split(" =")[1].strip()
                 elif (line[0:13] == "meta_keywords"): # Extract additional site keywords
                     meta_keywords = line.split(" =")[1].strip()
                 elif (line[0:12] == "meta_appname"): # Extract app name
@@ -588,7 +591,7 @@ def Init():
     # This line replaces all generics in the template file with values in config file
     content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords).replace("{{META_APPNAME}}", meta_appname).replace("{{META_BYLINE}}", byline).replace("{{META_BASEURL}}", base_url)
     # This line replaces placeholders with social media URLs in the config file
-    content[1] = content[1].replace("{{META_BYLINE}}", byline).replace("{{TWITTER_URL}}", twitter_url).replace("{{INSTA_URL}}", insta_url)
+    content[1] = content[1].replace("{{META_BYLINE}}", full_name).replace("{{TWITTER_URL}}", twitter_url).replace("{{INSTA_URL}}", insta_url)
     content.append(content[0])
     fd.close()
 
