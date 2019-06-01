@@ -112,35 +112,35 @@ def SanitizeDeploy(v=False):
         dst_fd.write('<h1 class="headers" id="academicWork"><span><a href="#academicWork">#</a>&nbsp;</span>Academic Work</h1>\n<p>\n    This is an example section heading.\n</p>\n<h2 class="headers" id="capstone">Capstone<span>&nbsp;<a href="#capstone">#</a></span></h2>\n<p>\n    This is example section content.\n</p>\n')
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
 
-    # Sanitize system/template.htm
-    if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"system/template.htm'"+c.OKGREEN+" ... "+c.ENDC)
-    open(dst+"system/template.htm", "w").close()
-    with open("./system/template.htm", "r") as source_fd, open(dst+"system/template.htm", "a") as dst_fd:
-        for line in source_fd:
-            if (line[0:29] == '        <meta name="keywords"'):
-                line = line[0:39] + 'Enter some keywords here." />\n'
-            if (line[0:37] == '        <meta name="application-name"'):
-                line = line.replace("Zac Szewczyk", "Name your app here")
-            if (line[0:37] == '        <meta property="og:site_name"'):
-                line = line.replace("Zac J. Szewczyk", "Enter site name here")
-            if (line[0:42] == '        <meta property="og:article:author"'):
-                line = line.replace("Zac J. Szewczyk", "Enter author name here")
-            if (line[0:36] == '        <meta property="og:see_also"'):
-                line = line.replace("http://zacs.site/", "Enter base URL here")
-            if (line[0:29] == '        <link rel="alternate"'):
-                line = line.replace(" for Zac J. Szewczyk's Blog", "").replace("http://zacs.site", "")
-            if (line[0:23] == '            {{ title }}'):
-                line = line.replace("Zac J. Szewczyk", "Enter author name here")
-            if (line[0:27] == '            <p>Follow me on'):
-                line = line.replace("http://twitter.com/zacjszewczyk", "Twitter URL here")
-                line = line.replace("https://www.instagram.com/zacjszewczyk/", "Instagram URL here")
-            if (line[0:21] == '            <p>&copy;'):
-                line = line.replace("Zachary Szewczyk", "Name here")
-            if (line[0:83] == '    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138585845-1">'):
-                dst_fd.write("</html>")
-                break
-            dst_fd.write(line)
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    # # Sanitize system/template.htm
+    # if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"system/template.htm'"+c.OKGREEN+" ... "+c.ENDC)
+    # open(dst+"system/template.htm", "w").close()
+    # with open("./system/template.htm", "r") as source_fd, open(dst+"system/template.htm", "a") as dst_fd:
+    #     for line in source_fd:
+    #         if (line[0:29] == '        <meta name="keywords"'):
+    #             line = line[0:39] + 'Enter some keywords here." />\n'
+    #         if (line[0:37] == '        <meta name="application-name"'):
+    #             line = line.replace("Zac Szewczyk", "Name your app here")
+    #         if (line[0:37] == '        <meta property="og:site_name"'):
+    #             line = line.replace("Zac J. Szewczyk", "Enter site name here")
+    #         if (line[0:42] == '        <meta property="og:article:author"'):
+    #             line = line.replace("Zac J. Szewczyk", "Enter author name here")
+    #         if (line[0:36] == '        <meta property="og:see_also"'):
+    #             line = line.replace("http://zacs.site/", "Enter base URL here")
+    #         if (line[0:29] == '        <link rel="alternate"'):
+    #             line = line.replace(" for Zac J. Szewczyk's Blog", "").replace("http://zacs.site", "")
+    #         if (line[0:23] == '            {{ title }}'):
+    #             line = line.replace("Zac J. Szewczyk", "Enter author name here")
+    #         if (line[0:27] == '            <p>Follow me on'):
+    #             line = line.replace("http://twitter.com/zacjszewczyk", "Twitter URL here")
+    #             line = line.replace("https://www.instagram.com/zacjszewczyk/", "Instagram URL here")
+    #         if (line[0:21] == '            <p>&copy;'):
+    #             line = line.replace("Zachary Szewczyk", "Name here")
+    #         if (line[0:83] == '    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138585845-1">'):
+    #             dst_fd.write("</html>")
+    #             break
+    #         dst_fd.write(line)
+    # if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
 
     # Sanitize system/disclaimers.html
     if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"system/disclaimers.html'"+c.OKGREEN+" ... "+c.ENDC)
@@ -159,8 +159,6 @@ def SanitizeDeploy(v=False):
 def GenExFiles(v=False):
     with open(dst+"Content/Test Original Article.txt", "w") as dst_fd:
         dst_fd.write("Test Original Article\n=====================\n\nThis is a test original article. Posts of this type appear with darker, non-underlined titles, and are truncated on the main page, archives page, and in the RSS feed.  \n\nStet posse an has, ut elit oratio nusquam mei, an eos posidonium concludaturque. Viris audiam voluptua ea duo, vis quod dolorem delicata et. Eos discere admodum an. Magna eligendi maluisset qui et. Ea nullam salutatus complectitur his, omnium omnesque ocurreret cum ad, quas impetus detracto qui ei. Mei mutat utamur tibique id, eum elitr tractatos voluptatum an.\n\nDiam graeco ei vis, equidem vivendo his ut. Eu lorem error iudico per, no iisque blandit necessitatibus nec. Ei velit tacimates sensibus sea. Vim meis consul urbanitas ea, choro laoreet verterem id usu, has alterum volumus scripserit ad. Sed expetenda gubergren ea, an nam integre pericula inciderint. Quodsi inciderint definitiones in sit, ea sea incorrupte sadipscing.\n\nSuas choro expetenda eum et. Wisi mucius iuvaret eu mel, pro harum euismod epicuri at. Cu qui praesent principes conclusionemque, ea ius vide intellegat, cibo nominati maluisset vis ad. Eum ei augue appareat invenire, minim discere inciderint usu eu. Blandit detracto deleniti ex duo, ad pro decore conceptam liberavisse. Ea sea sint ignota, te usu impetus consetetur. Mel aeterno inciderint an.\n\nNec hinc aliquando concludaturque in. Eos virtute suavitate et. Stet congue honestatis vis at, velit tantas at qui, homero habemus vituperata nec at. Ad cum dolores mentitum, no nam aperiam vivendum evertitur.")
-    
-    # utime("Content/"+target, ((mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
     sleep(1)
     with open(dst+"Content/Test Linkpost.txt", "w") as dst_fd:
         dst_fd.write("# [Test Linkpost](https://zacs.site/) #\n\nThis is a test linkpost. Posts of this type appear with lighter, underlined titles, and are truncated displayed in full text on the main page, archives page, and in the RSS feed.  \n\nLorem ipsum dolor sit amet, his ad possim theophrastus comprehensam, illud tempor dolorum te quo. Quaerendum cotidieque id mel. Nam ne facer invidunt, discere reformidans nec id, vel adipiscing argumentum eu. Has et modus illum, simul mentitum ius ad, primis delenit interesset te quo.\n\nMel ea quaeque eripuit, has vidit probatus ocurreret no. Ius no alii verterem, ea vim legere vivendo, qui utinam tritani te. Ea sit quando tempor nemore. Ne justo prompta officiis nec, ea erant invenire principes his. Omnium noluisse at pri, novum utinam dolores et vel, ea altera tibique partiendo est. Hinc porro clita ut has.\n\nCum te debet volumus. Ius ne enim fugit exerci, everti invidunt perfecto sea ad. Oratio vocent praesent vel ex, quo odio definitiones id. Perfecto molestiae abhorreant an vix, sumo quaestio id mel, sed falli verterem et. Te omnium lucilius consectetuer mea.")

@@ -520,7 +520,9 @@ def Init():
     # Check for the existence of an "EDITME" file, which contains config info
     if (not isfile("./EDITME")):
         stdout.write(c.FAIL+"The FirstCrack config file, './EDITME', does not exist. Creating now ..."+c.ENDC)
-
+        fd = open("./EDITME", "w")
+        fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url =\nbyline =\nmeta_keywords =\nmeta_appname =\ntwitter =\ninstagram =")
+        fd.close()
         stdout.write(c.OKGREEN+" done.\n"+c.ENDC)
         print c.WARNING+"Please run again."+c.ENDC
         exit(1)
@@ -531,17 +533,17 @@ def Init():
                 if (line[0] == "#"):
                     pass
                 elif (line[0:8] == "base_url"):
-                    base_url = line.split(" = ")[1].strip()
+                    base_url = line.split(" =")[1].strip()
                 elif (line[0:6] == "byline"):
-                    byline = line.split(" = ")[1].strip()
+                    byline = line.split(" =")[1].strip()
                 elif (line[0:13] == "meta_keywords"):
-                    meta_keywords = line.split(" = ")[1].strip()
+                    meta_keywords = line.split(" =")[1].strip()
                 elif (line[0:12] == "meta_appname"):
-                    meta_appname = line.split(" = ")[1].strip()
+                    meta_appname = line.split(" =")[1].strip()
                 elif (line[0:7] == "twitter"):
-                    twitter_url = line.split(" = ")[1].strip()
+                    twitter_url = line.split(" =")[1].strip()
                 elif (line[0:9] == "instagram"):
-                    insta_url = line.split(" = ")[1].strip()
+                    insta_url = line.split(" =")[1].strip()
 
 
     if (base_url == "" or byline == "" or meta_keywords == "" or meta_appname == "" or twitter_url == "" or insta_url == ""):
