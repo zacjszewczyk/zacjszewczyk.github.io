@@ -553,7 +553,7 @@ def Init():
                     insta_url = line.split(" =")[1].strip()
 
     # If any of these values were blank, notify the user and throw an error.
-    if (base_url == "" or byline == "" or meta_keywords == "" or meta_appname == "" or twitter_url == "" or insta_url == ""):
+    if (base_url == "" or byline == "" or full_name == "" or meta_keywords == "" or meta_appname == "" or twitter_url == "" or insta_url == ""):
         print c.FAIL+"Error reading settings from './EDITME'. Please check file configuration and try again."+c.ENDC
         exit(1)
 
