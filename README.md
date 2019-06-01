@@ -6,7 +6,7 @@ Given a directory of plain text files formatted in Markdown, First Crack will ge
 ## Prerequisites
 ### Python 2.*
 
-I started this project in 2011, with Python 2. You will need Python 2.* to use my blogging engine. I plan to port it to Python 3 soon. Use with versions other than 2.* at your own risk.
+I started this project in 2011, with Python 2. You will need Python 2.\* to use my blogging engine. I plan to port it to Python 3 soon. Use with versions other than 2.\* at your own risk.
 
 ## Installation
 
