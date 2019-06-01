@@ -537,7 +537,7 @@ def Init():
                 elif (line[0:6] == "byline"):
                     byline = line.split(" = ")[1]
                 elif (line[0:13] == "meta_keywords"):
-                    meta_keywords == line.split(" = ")[1]
+                    meta_keywords = line.split(" = ")[1]
 
     if (base_url == "" or byline == "" or meta_keywords == ""):
         print c.FAIL+"Error reading settings from './EDITME'."+c.ENDC
