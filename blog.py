@@ -36,6 +36,7 @@ content = ""
 base_url = ""
 byline = ""
 meta_keywords = ""
+meta_appname = ""
 
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
@@ -527,19 +528,21 @@ def Init():
         print c.WARNING+"Please run again."+c.ENDC
         exit(1)
     else:
-        global base_url, byline, meta_keywords
+        global base_url, byline, meta_keywords, meta_appname
         with open("./EDITME", "r") as fd:
             for line in fd:
                 if (line[0] == "#"):
                     pass
                 elif (line[0:8] == "base_url"):
-                    base_url = line.split(" = ")[1]
+                    base_url = line.split(" = ")[1].strip()
                 elif (line[0:6] == "byline"):
-                    byline = line.split(" = ")[1]
+                    byline = line.split(" = ")[1].strip()
                 elif (line[0:13] == "meta_keywords"):
-                    meta_keywords = line.split(" = ")[1]
+                    meta_keywords = line.split(" = ")[1].strip()
+                elif (line[0:12] == "meta_appname"):
+                    meta_appname = line.split(" = ")[1].strip()
 
-    if (base_url == "" or byline == "" or meta_keywords == ""):
+    if (base_url == "" or byline == "" or meta_keywords == "" or meta_appname == ""):
         print c.FAIL+"Error reading settings from './EDITME'."+c.ENDC
         exit(1)
 
@@ -574,7 +577,7 @@ def Init():
     fd = open("system/template.htm", "r")
     content = fd.read()
     content = content.split("<!--Divider-->")
-    content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords)
+    content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords).replace("{{META_APPNAME}}", meta_appname)
     content.append(content[0])
     fd.close()
 
