@@ -7,7 +7,7 @@
 ## meta_appname - The desired app name, stored in a META tag
 ## twitter - URL to your Twtitter profile
 ## instagram - URL to your Instagram profile
-base_url = https://zacs.site
+base_url = https://zacs.site/
 byline = Zac J. Szewczyk
 full_name = Zachary Szewczyk
 meta_keywords = Zac Szewczyk, Zachary Szewczyk, zacjszewczyk
