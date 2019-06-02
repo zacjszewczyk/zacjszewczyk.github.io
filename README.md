@@ -9,7 +9,7 @@ First Crack does not rely on any third-party tools, code, or frameworks. Because
 
 ## Installation
 
-Because First Crack has no dependencies, installation is a breeze: just clone the repository. Open a shell and type the following two commands:
+Because First Crack has no dependencies, installation is a breeze: just clone the repository. Open a shell and type the following commands:
 
 ```
 $ git clone https://zjszewczyk@bitbucket.org/zjszewczyk/firstcrack-public.git
