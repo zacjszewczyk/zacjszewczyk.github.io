@@ -9,7 +9,7 @@ First Crack does not rely on any third-party tools, code, or frameworks. Because
 
 ## Installation
 
-Because First Crack has no dependencies, installation is a breeze: just clone the repository.
+Because First Crack has no dependencies, installation is a breeze: just clone the repository. Open a shell and type the following two commands:
 
 ```
 $ git clone https://github.com/zacjszewczyk/FirstCrack.git
@@ -84,7 +84,7 @@ instagram =
 Assign a value to each variable, save the file, and then build your site. My first two lines look like this:
 
 ```
-base_url = https://zacs.site
+base_url = https://zacs.site/
 byline = Zac J. Szewczyk
 ```
 
@@ -110,7 +110,7 @@ First Crack has a few advanced features that make managing a website easier, whi
 $ ./blog.py -a
 ```
 
-First Crack will display a menu of available commands, along with an explanation of each. Enter `-h` at any time to view the help menu. First Crack will continue prompting you for input in this mode until you exit it with either `exit` or `!exit`. You can also run any of these commands directly from the command line. For example, to clear all structure files, use the following command:
+First Crack will display a menu of available commands, along with an explanation of each. Enter `-h` at any time to view the help menu. First Crack will continue prompting you for input in this mode until you exit it with either `exit` or `!exit`. You can also run any of these commands directly from the command line. For example, to clear all structure files and rebuilt the entire site, use the following command:
 
 ```
 $ ./blog.py -R
