@@ -14,9 +14,9 @@ import time
 #print "replace:\t\t",t.timeit("string.replace('things','nothing')","string = 'Temp string with some things in it.'",number=10000)
 #print "re.sub:\t\t",t.timeit("re.sub('things','nothing',string)","import re; string = 'Temp string with some things in it.'",number=10000)
 
-# print "endswith:\t",t.timeit("each.endswith('.txt')","each = 'Were Live.txt'", number=10000)
-# print "in:\t\t",t.timeit("'.txt' in each","each = 'Were Live.txt'", number=10000)
-# print "index:\t\t",t.timeit("'txt' == each[-3:]","each = 'Were Live.txt'", number=10000)
+print "endswith:\t",t.timeit("each.endswith('.txt')","each = 'Were Live.txt'", number=10000)
+print "in:\t\t",t.timeit("'.txt' in each","each = 'Were Live.txt'", number=10000)
+print "index:\t\t",t.timeit("'txt' == each[-3:]","each = 'Were Live.txt'", number=10000)
 
 # print "endswith:\t",t.timeit("each.startswith('http')","each = 'http://Were Live.txt'", number=10000)
 # print "index:\t\t",t.timeit("'http' == each[0:4]","each = 'http://Were Live.txt'", number=10000)
@@ -33,17 +33,17 @@ import time
 # to_exec = "makelower(each)"
 # print "translate:\t",t.timeit(stmt=to_exec,setup=func, number=10000)
 
-environment = """\
-from sys import modules
-from sys import stdout
-"""
-to_exec = "from sys import stdout"
-print "duplicate:\t",t.timeit(stmt=to_exec,setup=environment, number=10000)
-environment = """\
-from sys import modules
-"""
-to_exec = """\
-if ("stdout" not in modules.keys()):
-    from sys import modules
-"""
-print "check:\t\t",t.timeit(stmt=to_exec,setup=environment, number=10000)
+# environment = """\
+# from sys import modules
+# from sys import stdout
+# """
+# to_exec = "from sys import stdout"
+# print "duplicate:\t",t.timeit(stmt=to_exec,setup=environment, number=10000)
+# environment = """\
+# from sys import modules
+# """
+# to_exec = """\
+# if ("stdout" not in modules.keys()):
+#     from sys import modules
+# """
+# print "check:\t\t",t.timeit(stmt=to_exec,setup=environment, number=10000)

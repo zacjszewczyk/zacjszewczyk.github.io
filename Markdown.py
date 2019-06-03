@@ -122,7 +122,7 @@ def Markdown(line, base_url):
             ftxt = each.replace("\'", "&#8216;", 1)
             line = line.replace(each, ftxt)
         # Interpret inline code
-        for each in findall(r"\%[\w:\/\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]\/<>]+\%", line):
+        for each in findall(r"\%[\(\)\w:\/\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]\/<>]+\%", line):
             if (len(each.split(" ")) > 7):
                 continue
             ftxt = each
