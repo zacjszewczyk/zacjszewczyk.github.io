@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="When I started blogging, I bounced around between places like Zoomshare, FreeWebs, and WordPres. Nothing fit, though, and so in 2011 I built my own content management system. I started running my website on [First Crack](/projects.html#firstCrack) a few months later. Easy, fast, and portable, my engine has no dependencies, builds a static website of over one thousand pages in less than two seconds, and works just as well as a server daemon as it does on my home machine. I stopped posting public updates to the code base in 2015, but kept working on the project in private. Today I re-release First Crack to the world."/>
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, zacjszewczyk" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#518341"/>
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:image" content="favicon.ico"/>
+        <meta property="og:title" content="Re-Introducing First Crack - "/>
+        <meta property="og:site_name" content="Zac J. Szewczyk"/>
+        <meta property="og:article:author" content="Zac J. Szewczyk"/>
+        <meta property="og:see_also" content="https://zacs.site/" />
+        
+        <link rel="manifest" href="assets/manifest.json"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="https://zacs.site/rss.xml" />
+        <link rel="shortcut icon" href="assets/favicon.ico" size="16x16" type="image/ico" />
+        <link rel="shortcut icon" href="assets/favicon_192.ico" size="192x192" type="image/ico" />
+        <link rel="shortcut icon" href="assets/favicon_512.ico" size="512x512" type="image/ico" />
+        <title>
+            Re-Introducing First Crack - Zac J. Szewczyk
+        </title>
+        <!-- SHEETS -->
+    </head>
+    <body style="opacity:.8;background-color:#F6F6F6;font-family:'Roboto',sans-serif;font-size:13pt;line-height:200%;display:none;" id="post">
+        <header style="text-align:center;font-size:150%;max-width:75em;margin:0 auto;"><!--BLOCK HEADER--></header>
+        <nav style="text-align:center;margin:10% 5%;font-size:15pt;line-height:200%;">
+            <a id="home_link" href="../index.html">Home</a>
+            <a id="blog_link" href="../blog.html">Blog</a>
+            <a id="rss_link" href="/rss.xml">RSS</a>
+            <a id="archives_link" href="../archives.html">Post Archives</a>
+            <a id="projects_link" href="../projects.html">Projects</a>
+            <a id="disclaimers_link" href="disclaimers.html">Disclaimers</a>
+        </nav>
+        <main style="max-width:65em;margin:0 auto;margin-bottom:100px;">
+            <section id="content_section">
+                <article>
+                    <h2 style="text-align:center;">
+                        <a href="re-introducing-first-crack.html" class="original">Re-Introducing First Crack</a>
+                    </h2>
+                    <time datetime="2019-06-04" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="2019.html">2019</a>/<a href="2019-06.html">06</a>/04 20:05:02 EST</time>
+                    <p>When I started blogging, I bounced around between places like Zoomshare, FreeWebs, and WordPres. Nothing fit, though, and so in 2011 I built my own content management system. I started running my website on <a href="/projects.html#firstCrack">First Crack</a> a few months later. Easy, fast, and portable, my engine has no dependencies, builds a static website of over one thousand pages in less than two seconds, and works just as well as a server daemon as it does on my home machine. I stopped posting public updates to the code base in 2015, but kept working on the project in private. Today I re-release First Crack to the world.</p>
+                    
+                    <p>Check out <a href="https://bitbucket.org/zjszewczyk/firstcrack-public/">the repository</a> for installation, setup, and usage instructions. In brief, though, just download the files and run <span class='command'>blog.py</span>. First Crack will take care of the rest. Here, I want to talk about the steps I took to build an easy, fast, and portable blogging engine.</p>
+                    
+                    <p>Above all else, I wanted to build First Crack with stock Python. Developers abandon projects all the time, and I did not want to put a critical feature in someone else's hands. Relying on one or more third-party functions would have made setting up First Crack harder, too. I also could not count on others to prioritize speed. Take, for example, checking file extensions. <span class='command'>filename.endswith('.txt')</span> takes about three times as long as <span class='command'>'txt' == filename[-3:]</span>, and four times as long as <span class='command'>'.txt' in filename</span>. This change alone sped my engine up by almost 25%. This approach did have some downsides, though. It meant a ton of work at first, and then even more debugging and working out edge cases. In exchange, I had full control of every aspect of the project. I could optimize every little detail for peak performance, and avoid wasting time creating runtime environments on new systems. That seemed worth it then, and I stand by that choice now.</p>
+                    
+                    <p>I also wanted to make First Crack easy to use, which meant hiding a lot of work behind the scenes. I wrote, re-wrote, and wrote again functions for parsing Markdown, working with files, and building valid HTML documents and RSS feeds. This gave me an engine that not only ran anywhere and ran fast, but also one that turned simple Markdown files into a feature-rich, metadata-heavy blog, without any input from the user. The user can get into the weeds if they want to, but they don&#8217;t have to. I worked hard to make that possible with First Crack. Just give it a flat directory of plain text content files, and it will do the rest.</p>
+                    
+                    <p>After almost a decade, content management systems have gotten much better since I started this project. Today, I have no doubt I could make something like Squarespace or WordPress work for me. I have yet to find anything First Crack cannot do, though, or an engine that wins out in ease of use, speed, and versatility. I like working on First Crack, and I look forward to adding cool new features in the future. <a href="/projects.html#firstCrack">I hope you will give it a try</a>, and I hope you will let me know what you think.</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer style="max-width:65em;margin:0 auto;margin-bottom:100px;">
+            <p>Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.</p>
+            <p>&copy; 2012-2019 Zachary Szewczyk.<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+        </footer>
+        <span id="ipad_device"></span>
+    </body>
+    
+    <script async>document.getElementsByTagName("body")[0].style.display = "block";</script>
+    <!-- <script async>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/../assets/m_sw.js');
+          console.log("Successfully registered Service Worker.");
+        }
+    </script> -->
+    <link rel="stylesheet" href="../assets/main.css" type="text/css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138585845-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-138585845-1');
+    </script>
+</html>
