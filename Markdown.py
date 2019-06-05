@@ -123,6 +123,8 @@ def Markdown(line, base_url):
             line = line.replace(each, ftxt)
         # Interpret inline code
         for each in findall(r"\%[\(\)\w:\/\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]\/<>]+\%", line):
+            line = line.strip().replace("&#8217;", "'").replace("&#8216;", "'").replace("&#8221;", '"').replace("&#8220;", '"')
+            each = each.replace("&#8217;", "'").replace("&#8216;", "'").replace("&#8221;", '"').replace("&#8220;", '"')
             if (len(each.split(" ")) > 7):
                 continue
             ftxt = each
@@ -130,7 +132,6 @@ def Markdown(line, base_url):
             ftxt = ftxt.replace("%", "<span class='command'>", 1)
             ftxt = ftxt.replace("%", "</span> ", 1).strip()
             line = line.replace("&&TK&&", ftxt)
-            line = line.replace("&#8217;", "'").replace("&#8216;", "'").replace("&#8221;", '"').replace("&#8220;", '"')
         # Interpret <strong> tags
         for each in findall("\*\*{1}[\w:\"\.\+'\s\.|\(\)#/\\\>\<&=,\$\!\?\;\-\[\]]+\*\*{1}", line):
             ftxt = each
