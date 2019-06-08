@@ -310,7 +310,7 @@ def GenBlog():
                         buff += """\n    </tr>\n</table>\n</article>\n"""
                         archives_fd = open("./local/archives.html", "a")
                         archives_fd.write(buff)
-                        archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='%s.html'>%s</a></article>" % (year, year))
+                        archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s.html'>%s</a></article>" % (year, year))
                         archives_fd.close()
                         temp = year
 
