@@ -321,7 +321,7 @@ def GenBlog():
                     else:
                         if (temp != year):
                             archives_fd = open("./local/archives.html", "a")
-                            archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='%s.html'>%s</a></article>" % (year, year))
+                            archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s.html'>%s</a></article>" % (year, year))
                             archives_fd.close()
                             temp = year
                         AppendContentOfXToY("./local/archives", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
