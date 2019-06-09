@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/Cellar/python/3.7.3/bin/python3
 
 # Imports
 # Todo: Only import functions from modules that I actually need, not entire module
@@ -72,7 +72,7 @@ def AppendContentOfXToY(target, source, timestamp):
             # Strip whitespace
             line = line.strip()
 
-            # print i,":",line
+            # print(i,":",line)
 
             # Check the first two lines of the structure file for a
             # class tag denoting the type of article. If viewing an
@@ -150,7 +150,7 @@ def AppendToFeed(source):
             # class tag denoting the type of article. If viewing an
             # original article, truncate it at the first paragraph by
             # setting the flag, "flag", to False
-            # print i,":",line
+            # print(i,":",line)
             if (i == 0):
                 if ("class=\"original\"" in line):
                     flag = False
@@ -397,7 +397,7 @@ def GenPage(source, timestamp):
             title = title.replace("{{URL}}", line)+"\n                    </h2>"
         # In the fourth line of the file, read the pubdate, and add it to the article.
         elif (idx == 3):
-            # print line
+            # print(line)
             line = line[9:].strip().replace(" ", "/").split("/")
             title += """\n                    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">%s</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], byline, line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
         # In the fifth line of the file, we're reading the author line. Since we don't do anything
@@ -468,15 +468,15 @@ def GetUserInput(prompt):
 
     # Prompt the user for valid input
     while True:
-        string = raw_input(prompt)
+        string = input(prompt)
         
         # Do not allow empty strings
         if (len(string) == 0):
-            print c.WARNING+"Input cannot be empty."+c.ENDC
+            print(c.WARNING+"Input cannot be empty."+c.ENDC)
             continue
         # Do not allow more than 32 characters
         elif (len(string) > 32):
-            print c.WARNING+"Input bound exceeded."+c.ENDC
+            print(c.WARNING+"Input bound exceeded."+c.ENDC)
             continue
         # If we get here, we have valid input
         break
@@ -526,7 +526,7 @@ def Init():
         fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url =\nbyline =\nmeta_keywords =\nmeta_appname =\ntwitter =\ninstagram =")
         fd.close()
         stdout.write(c.OKGREEN+" done.\n"+c.ENDC)
-        print c.WARNING+"Please run again."+c.ENDC
+        print(c.WARNING+"Please run again."+c.ENDC)
         exit(1)
     # On success, extract values and store them for use when building the site.
     else:
@@ -554,24 +554,24 @@ def Init():
 
     # If any of these values were blank, notify the user and throw an error.
     if (base_url == "" or byline == "" or full_name == "" or meta_keywords == "" or meta_appname == "" or twitter_url == "" or insta_url == ""):
-        print c.FAIL+"Error reading settings from './EDITME'. Please check file configuration and try again."+c.ENDC
+        print(c.FAIL+"Error reading settings from './EDITME'. Please check file configuration and try again."+c.ENDC)
         exit(1)
 
     # Check for existence of system files and Content directory.
     # These are requirements for First Crack; it will fail if they do not exist.
     ## Check for the existence of the "./system" directory first...
     if (not isdir("./system")):
-        print c.FAIL+"\"./system\" directory does not exist. Exiting."+c.ENDC
+        print(c.FAIL+"\"./system\" directory does not exist. Exiting."+c.ENDC)
         exit(1)
     ## ...then for the existence of the Content directory
     if (not isdir("./Content")):
-        print c.FAIL+"\"./Content\" directory does not exist. Exiting."+c.ENDC
+        print(c.FAIL+"\"./Content\" directory does not exist. Exiting."+c.ENDC)
         exit(1)
 
     ## Now ensure crucial system files exist
     for f in ["template.htm", "index.html", "projects.html", "disclaimers.html"]:
         if (not isfile("./system/"+f)):
-            print c.FAIL+"\"./system/"+f+"\" directory does not exist. Exiting."+c.ENDC
+            print(c.FAIL+"\"./system/"+f+"\" directory does not exist. Exiting."+c.ENDC)
             exit(1)
 
     # Make sure ./local exists with its subfolders
@@ -635,23 +635,23 @@ def Interface(params,search_query="",end_action="continue"):
     * To exit this mode and quit the program:        %s!exit%s
     """ % (c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
 
-    # Using the "-a" parameter enters Authoring mode, so print the welcome message
+    # Using the "-a" parameter enters Authoring mode, so print(the welcome message)
     if "-a" in params:
-        print ("""Welcome to First Crack's "Authoring" mode.\n\nEntering "-h" into the prompt at any point in time will display the menu below.\n%s""" % (menu))
+        print(("""Welcome to First Crack's "Authoring" mode.\n\nEntering "-h" into the prompt at any point in time will display the menu below.\n%s""" % (menu)))
 
     # Continue prompting the user for input until they enter a valid argument
     while (True):
         # If the user entered this mode with the "-a" parameter, prompt them for
         # new input. Otherwise, proceed with their request.
         if "-a" in params:
-            query = raw_input("#: ")
+            query = input("#: ")
         else:
             query = str(params)
         params = ""
 
-        # Print the menu of valid commands to the terminal.
+        # Print(the menu of valid commands to the terminal.)
         if (search("-h", query) or search("help", query)):
-            print (menu)
+            print((menu))
 
         # Search all articles
         if (search("-S", query) != None):
@@ -671,9 +671,9 @@ def Interface(params,search_query="",end_action="continue"):
                 # Search each line of the file, case insensitively
                 res = SearchFile(file, search_string)
                 if (res):
-                    print "\nFile: "+c.UNDERLINE+file+c.ENDC
+                    print("\nFile: "+c.UNDERLINE+file+c.ENDC)
                     for match in res:
-                        print "    %sLine %d:%s %s" % (c.BOLD, match[0], c.ENDC, match[1])
+                        print("    %sLine %d:%s %s" % (c.BOLD, match[0], c.ENDC, match[1]))
 
         # Revert post timestamps
         if (search("-r", query)):
@@ -757,8 +757,8 @@ def Revert(tgt):
     mtime = strftime("%Y/%m/%d %H:%M:%S", localtime(stat(tgt).st_mtime))
     
     if (mod_time != mtime):
-        print "Does not match for",tgt
-        print "Reverting to",mod_time
+        print("Does not match for",tgt)
+        print("Reverting to",mod_time)
         utime(tgt, ((mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
 
 # Method: SearchFile
@@ -801,14 +801,14 @@ if __name__ == '__main__':
     # If the user just runs the file, notify them that they can use "-a"
     # to enter "Authoring Mode". Then build the site.
     if (len(argv) == 1):
-        print c.UNDERLINE+"Note"+c.ENDC+": You can use '-a' to enter 'Authoring Mode'"
+        print(c.UNDERLINE+"Note"+c.ENDC+": You can use '-a' to enter 'Authoring Mode'")
     # If they have run the program with a single parameter, bounds check
     # it, then send them to the interface
     elif (len(argv) == 2):
         # Don't allow double or single quatation marks, or input over 2
         # characters long
         if ('"' in argv[1] or "'" in argv[1] or len(argv[1]) > 2):
-            print c.FAIL+"Invalid parameters"+c.ENDC
+            print(c.FAIL+"Invalid parameters"+c.ENDC)
             exit(0)
 
         # Send the user to the CLI
@@ -819,7 +819,7 @@ if __name__ == '__main__':
         Interface(argv[1],argv[2],"exit")
 
     else:
-        print c.FAIL+"Too many parameters"+c.ENDC
+        print(c.FAIL+"Too many parameters"+c.ENDC)
         exit(0)
 
     t1 = datetime.datetime.now()
@@ -834,4 +834,4 @@ if __name__ == '__main__':
 
     t2 = datetime.datetime.now()
 
-    print ("Execution time: "+c.OKGREEN+str(t2-t1)+"s"+c.ENDC)
+    print(("Execution time: "+c.OKGREEN+str(t2-t1)+"s"+c.ENDC))

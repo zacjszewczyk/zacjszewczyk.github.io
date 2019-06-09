@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/Cellar/python/3.7.3/bin/python3
 
 # Imports
 from shutil import rmtree, copytree, copy # For directory and file operations

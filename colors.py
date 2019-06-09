@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/Cellar/python/3.7.3/bin/python3
 
 # Class: c(olors)
 # Purpose: provide easy access to ASCII escape codes for styling output
