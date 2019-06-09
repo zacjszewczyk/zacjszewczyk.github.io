@@ -5,7 +5,7 @@ Given a directory of plain text files formatted in [Markdown](http://daringfireb
 
 ## Dependencies
 
-First Crack does not rely on any third-party tools, code, or frameworks. Because I started this project in 2011, though, with Python 2, you will need Python 2.\* to use my blogging engine. I plan to port it to Python 3 soon. Use with versions other than 2.\* at your own risk.
+First Crack does not rely on any third-party tools, code, or frameworks. It uses Python 3.7.3, although you may have to adjust the path to the Python binary. Thanks to a bug in my development environment, I have to point my Python 3 projects to `#!/usr/local/Cellar/python/3.7.3/bin/python3`. If you have Python 3 installed alongside Python 2 in the `/usr/bin/` directory, simple change the first line of the Python files in this project to `/usr/bin/python3`.
 
 ## Installation
 
