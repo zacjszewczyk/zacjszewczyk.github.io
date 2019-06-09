@@ -14,9 +14,9 @@ import time
 #print "replace:\t\t",t.timeit("string.replace('things','nothing')","string = 'Temp string with some things in it.'",number=10000)
 #print "re.sub:\t\t",t.timeit("re.sub('things','nothing',string)","import re; string = 'Temp string with some things in it.'",number=10000)
 
-print "endswith:\t",t.timeit("each.endswith('.txt')","each = 'Were Live.txt'", number=10000)
-print "in:\t\t",t.timeit("'.txt' in each","each = 'Were Live.txt'", number=10000)
-print "index:\t\t",t.timeit("'txt' == each[-3:]","each = 'Were Live.txt'", number=10000)
+# print "endswith:\t",t.timeit("each.endswith('.txt')","each = 'Were Live.txt'", number=10000)
+# print "in:\t\t",t.timeit("'.txt' in each","each = 'Were Live.txt'", number=10000)
+# print "index:\t\t",t.timeit("'txt' == each[-3:]","each = 'Were Live.txt'", number=10000)
 
 # print "endswith:\t",t.timeit("each.startswith('http')","each = 'http://Were Live.txt'", number=10000)
 # print "index:\t\t",t.timeit("'http' == each[0:4]","each = 'http://Were Live.txt'", number=10000)
@@ -47,3 +47,50 @@ print "index:\t\t",t.timeit("'txt' == each[-3:]","each = 'Were Live.txt'", numbe
 #     from sys import modules
 # """
 # print "check:\t\t",t.timeit(stmt=to_exec,setup=environment, number=10000)
+
+# environment = """\
+# line = \"Hello my name is Zac.\""""
+# to_exec = "line[0].isalpha()"
+# print("isalpha:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+# environment = """\
+# from re import match
+# line = \"Hello my name is Zac.\""""
+# to_exec = """\
+# match('[a-zA-Z]', line[0])
+# """
+# print("regex:\t\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+
+# environment = """\
+# line = "Consumers tend to allow the wrong factors to influence this process. Blind loyalty, because their family has always driven a certain brand. Nationalism, as if the parent company's owners' nationality ought to influence one of the most expensive investments they will ever make. Fuel efficiency when gas prices peak, yet casual disregard for it when they fall. Marketing campaigns. Fad technologies. People buy cars for all sorts of bad reasons, but I wanted to do better. How could I strip away folk wisdom, ignorance, and short-sightedness, though? How could I ignore all the tired tropes, and the flashy accessories, to find vehicles whose cost best matched their worth? I could do this by focusing not on the sticker price, a figure the manufacturer believes most consumers will value their product at because of the factors above, but rather by focusing on reliability and longevity--two metrics I could approximate as one, by examining resale value. Years down the road, when they have traded those ephemeral criteria for meaningful ones, the amount of money the average person will exchange for a given vehicle is a much better measure of its actual worth. This is the criterion by which I began narrowing my search."
+# """
+# to_exec = """\
+# if ("--" in line):
+#     line = line.replace("--", "&#160;&#8212;&#160;")
+# """
+# print("check first:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+# # environment = """\
+# # """
+# to_exec = """\
+# line = line.replace("&", "&#38;")
+# """
+# print("no check:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+
+environment = """\
+line = "## Title here"
+"""
+to_exec = """\
+i = 0
+for ch in line:
+    if (ch == " "):
+        break
+    elif (ch == "#"):
+        i += 1
+print(i)
+"""
+print("loop:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+# environment = """\
+# """
+to_exec = """\
+len(line) - len(line.lstrip("#"))
+"""
+print("no check:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
