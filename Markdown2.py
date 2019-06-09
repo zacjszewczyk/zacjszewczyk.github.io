@@ -8,6 +8,7 @@ class Markdown:
     __html = ""
     __tracker = ["", "", ""]
     __state = ""
+    __closing_tag = ""
 
     __delchars = ''.join(c for c in map(chr, range(256)) if not c.isalnum())
 
@@ -42,8 +43,9 @@ class Markdown:
             self.__raw = ""
             self.__html = line.strip()
 
-            if (self.__tracker[-2] in ["ul", "li"]):
-                self.__html = "</ul>\n"+self.__html
+            if (self.__tracker[-2] in ["ul", "li", "blockquote", "ol"]):
+                self.__html = self.__closing_tag+"\n"+self.__html
+                self.__closing_tag = ""
 
             return self.__html
         elif (line[0] == "<"):
@@ -63,6 +65,11 @@ class Markdown:
                 self.__updateTracker("li")
             else:
                 self.__updateTracker("ul")
+            self.__closing_tag = "</ul>"
+        elif (line[0].isdigit()):
+            self.__updateTracker("ol")
+            self.__closing_tag = "</ol>"
+
         ## Paragraph
         ### Paragraphs second. These can start with letters, or--in the case of
         ### italics or bold--one or more '*' or '_' not followed by a space,
@@ -72,8 +79,16 @@ class Markdown:
         ## Header
         elif (line[0] == '#'):
             self.__updateTracker("header")
+        ## Header rule (<hr>)
+        elif (line[0:3] == "---"):
+            self.__updateTracker("hr")
+        ## Blockquote
+        elif (line[0] == ">"):
+            self.__updateTracker("blockquote")
+            self.__closing_tag = "</blockquote>"
         # Catch an unknown line type
         else:
+            print("   ",line)
             self.__updateTracker("UNKNOWN")
 
         line = line.strip()
@@ -89,10 +104,24 @@ class Markdown:
         elif (self.__tracker[-1] == "li"):
             line = "    <li>"+line[2:]+"</li>"
         
+        ## Ordered list
+        elif (self.__tracker[-1] == "ol"):
+            if (self.__tracker[-2] == "ol"):
+                line = "    <li>"+line[3:]+"</li>"
+            else:
+                line = "<ol>\n    <li>"+line[3:]+"</li>"
+
         ## Header
         elif (self.__tracker[-1] == "header"):
             l = len(line) - len(line.lstrip("#"))
             line = "<h"+str(l)+" id=\""+''.join(ch for ch in line if ch.isalnum())+"\">"+line.lstrip("#").rstrip("#").strip()+"<h"+str(l)+">"
+
+        ## Blockquote
+        elif (self.__tracker[-1] == "blockquote"):
+            if (self.__tracker[-2] == "blockquote"):
+                line = "    "+line[2:]+""
+            else:
+                line = "<blockquote>\n    "+line[2:]+""
 
         # Generic parsing
         line = line.replace("---", "<hr />")
@@ -122,6 +151,9 @@ class Markdown:
 
         ## Parse single quotatin marks
         line = line.replace(" '", " &#8216;").replace("' ", "&#8217; ")
+
+        ## Parse aposrophes
+        line = line.replace("'", "&#39;")
 
         ## Parse double quotation marks
         line = line.replace(' "', " &#8220;").replace('" ', "&#8221; ")
