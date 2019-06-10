@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="I like Antonio's idea, a lot. As much as [I try to keep my system stock](My Setup 2019.txt), this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:"/>
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, zacjszewczyk" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#518341"/>
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:image" content="favicon.ico"/>
+        <meta property="og:title" content="Setting Up a Development Environment with Git - "/>
+        <meta property="og:site_name" content="Zac J. Szewczyk"/>
+        <meta property="og:article:author" content="Zac J. Szewczyk"/>
+        <meta property="og:see_also" content="https://zacs.site/" />
+        
+        <link rel="manifest" href="assets/manifest.json"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="https://zacs.site/rss.xml" />
+        <link rel="shortcut icon" href="assets/favicon.ico" size="16x16" type="image/ico" />
+        <link rel="shortcut icon" href="assets/favicon_192.ico" size="192x192" type="image/ico" />
+        <link rel="shortcut icon" href="assets/favicon_512.ico" size="512x512" type="image/ico" />
+        <title>
+            Setting Up a Development Environment with Git - Zac J. Szewczyk
+        </title>
+        <!-- SHEETS -->
+    </head>
+    <body style="opacity:.8;background-color:#F6F6F6;font-family:sans-serif;font-size:13pt;line-height:200%;display:none;" id="post">
+        <header style="text-align:center;font-size:150%;max-width:75em;margin:0 auto;"><!--BLOCK HEADER--></header>
+        <nav style="text-align:center;margin:10% 5%;font-size:15pt;line-height:200%;">
+            <a id="home_link" href="../index.html">Home</a>
+            <a id="blog_link" href="../blog.html">Blog</a>
+            <a id="rss_link" href="/rss.xml">RSS</a>
+            <a id="archives_link" href="../archives.html">Post Archives</a>
+            <a id="projects_link" href="../projects.html">Projects</a>
+            <a id="disclaimers_link" href="disclaimers.html">Disclaimers</a>
+        </nav>
+        <main style="max-width:65em;margin:0 auto;margin-bottom:100px;">
+            <section id="content_section">
+                <article>
+                    <h2 style="text-align:center;">
+                        <a href="https://martinovic.blog/post/home_git/" class="linkpost">Setting Up a Development Environment with Git</a>
+                    </h2>
+                    <time datetime="2019-06-10" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="2019.html">2019</a>/<a href="2019-06.html">06</a>/10 11:50:12 EST</time>
+                    <p>I like Antonio&#8217;s idea, a lot. As much as <a href="https://zacs.site/blog/my-setup-2019.html">I try to keep my system stock</a>, this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:</p>
+                    
+                    <pre>
+                    $ alias gs="git status"
+                    $ alias gac="git add . && git commit -m"
+                    $ alias gp="git push"
+                    </pre>
+                    
+                    <p><a href="https://zacs.site/blog/my-setup-2019.html">I have talked about these aliases before</a>; they make interacting with Git just a little bit easier. <a href="https://bitsofco.de/git-aliases-for-lazy-developers/">Hat-tip to Ire Aderinokun for the idea</a>.</p>
+                    
+                    <pre class="shell">
+                    alias gits="find ./ -name '.git' 2> /dev/null | grep -v '.Trash'"
+                    </pre>
+                    
+                    <p>This neat snippet searches the current directory, and all sub directories, for Git repos. I have a lot of coding projects <a href="/projects.html">in the works</a>, and this helps me keep track of them.</p>
+                    
+                    <pre class="shell">
+                    alias r="source ~/.bash_profile"
+                    </pre>
+                    
+                    <p>This lets me refresh my bash profile whenever I make a change&#160;&#8212;&#160;for example, adding a new alias or script. Simple, and handy.</p>
+                    
+                    <pre class="shell">
+                    alias search="grep -rnw './' -e "
+                    </pre>
+                    
+                    <p>This alias gives me search functionality in the terminal, so I can avoid opening up Finder for most simple queries.</p>
+                    
+                    <pre class="shell">
+                    alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+                    </pre>
+                    
+                    <p>This neat little command displays the current directory contents, and all its sub-directories, as a tree. I used this to create the tree in <a href="/projects.html#firstCrack">the First Crack readme file</a>. <a href="http://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/">Hat-tip to OS X Daily for this one</a>.</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer style="max-width:65em;margin:0 auto;margin-bottom:100px;">
+            <p>Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.</p>
+            <p>&copy; 2012-2019 Zachary Szewczyk.<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+        </footer>
+        <span id="ipad_device"></span>
+    </body>
+    
+    <script async>document.getElementsByTagName("body")[0].style.display = "block";</script>
+    <!-- <script async>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/../assets/m_sw.js');
+          console.log("Successfully registered Service Worker.");
+        }
+    </script> -->
+    <link rel="stylesheet" href="../assets/main.css" type="text/css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138585845-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-138585845-1');
+    </script>
+</html>

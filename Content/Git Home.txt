@@ -1,0 +1,39 @@
+Type: linkpost
+Title: Setting Up a Development Environment with Git
+Link: https://martinovic.blog/post/home_git/
+Pubdate: 2019/06/10 11:50:12
+Author: Zac J. Szewczyk
+
+I like Antonio's idea, a lot. As much as [I try to keep my system stock](My Setup 2019.txt), this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:
+
+<pre>
+$ alias gs="git status"
+$ alias gac="git add . && git commit -m"
+$ alias gp="git push"
+</pre>
+
+[I have talked about these aliases before](My Setup 2019.txt); they make interacting with Git just a little bit easier. [Hat-tip to Ire Aderinokun for the idea](https://bitsofco.de/git-aliases-for-lazy-developers/).
+
+<pre class="shell">
+alias gits="find ./ -name '.git' 2> /dev/null | grep -v '.Trash'"
+</pre>
+
+This neat snippet searches the current directory, and all sub directories, for Git repos. I have a lot of coding projects [in the works](/projects.html), and this helps me keep track of them.
+
+<pre class="shell">
+alias r="source ~/.bash_profile"
+</pre>
+
+This lets me refresh my bash profile whenever I make a change--for example, adding a new alias or script. Simple, and handy.
+
+<pre class="shell">
+alias search="grep -rnw './' -e "
+</pre>
+
+This alias gives me search functionality in the terminal, so I can avoid opening up Finder for most simple queries. 
+
+<pre class="shell">
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+</pre>
+
+This neat little command displays the current directory contents, and all its sub-directories, as a tree. I used this to create the tree in [the First Crack readme file](/projects.html#firstCrack). [Hat-tip to OS X Daily for this one](http://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/).
