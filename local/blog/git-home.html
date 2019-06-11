@@ -38,45 +38,45 @@
         </nav>
         <main style="max-width:65em;margin:0 auto;margin-bottom:100px;">
             <section id="content_section">
-                <article>
+<article>
                     <h2 style="text-align:center;">
                         <a href="https://martinovic.blog/post/home_git/" class="linkpost">Setting Up a Development Environment with Git</a>
                     </h2>
                     <time datetime="2019-06-10" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="2019.html">2019</a>/<a href="2019-06.html">06</a>/10 11:50:12 EST</time>
-                    <p>I like Antonio&#8217;s idea, a lot. As much as <a href="https://zacs.site/blog/my-setup-2019.html">I try to keep my system stock</a>, this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:</p>
-                    
-                    <pre>
-                    $ alias gs="git status"
-                    $ alias gac="git add . && git commit -m"
-                    $ alias gp="git push"
-                    </pre>
-                    
-                    <p><a href="https://zacs.site/blog/my-setup-2019.html">I have talked about these aliases before</a>; they make interacting with Git just a little bit easier. <a href="https://bitsofco.de/git-aliases-for-lazy-developers/">Hat-tip to Ire Aderinokun for the idea</a>.</p>
-                    
-                    <pre class="shell">
-                    alias gits="find ./ -name '.git' 2> /dev/null | grep -v '.Trash'"
-                    </pre>
-                    
-                    <p>This neat snippet searches the current directory, and all sub directories, for Git repos. I have a lot of coding projects <a href="/projects.html">in the works</a>, and this helps me keep track of them.</p>
-                    
-                    <pre class="shell">
-                    alias r="source ~/.bash_profile"
-                    </pre>
-                    
-                    <p>This lets me refresh my bash profile whenever I make a change&#160;&#8212;&#160;for example, adding a new alias or script. Simple, and handy.</p>
-                    
-                    <pre class="shell">
-                    alias search="grep -rnw './' -e "
-                    </pre>
-                    
-                    <p>This alias gives me search functionality in the terminal, so I can avoid opening up Finder for most simple queries.</p>
-                    
-                    <pre class="shell">
-                    alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-                    </pre>
-                    
-                    <p>This neat little command displays the current directory contents, and all its sub-directories, as a tree. I used this to create the tree in <a href="/projects.html#firstCrack">the First Crack readme file</a>. <a href="http://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/">Hat-tip to OS X Daily for this one</a>.</p>
-                    </div>
+<p>I like Antonio&#8217;s idea, a lot. As much as <a href="https://zacs.site/blog/my-setup-2019.html">I try to keep my system stock</a>, this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:</p>
+
+<pre>
+$ alias gs="git status"
+$ alias gac="git add . && git commit -m"
+$ alias gp="git push"
+</pre>
+
+<p><a href="https://zacs.site/blog/my-setup-2019.html">I have talked about these aliases before</a>; they make interacting with Git just a little bit easier. <a href="https://bitsofco.de/git-aliases-for-lazy-developers/">Hat-tip to Ire Aderinokun for the idea</a>.</p>
+
+<pre class="shell">
+alias gits="find ./ -name '.git' 2> /dev/null | grep -v '.Trash'"
+</pre>
+
+<p>This neat snippet searches the current directory, and all sub directories, for Git repos. I have a lot of coding projects <a href="/projects.html">in the works</a>, and this helps me keep track of them.</p>
+
+<pre class="shell">
+alias r="source ~/.bash_profile"
+</pre>
+
+<p>This lets me refresh my bash profile whenever I make a change&#160;&#8212;&#160;for example, adding a new alias or script. Simple, and handy.</p>
+
+<pre class="shell">
+alias search="grep -rnw './' -e "
+</pre>
+
+<p>This alias gives me search functionality in the terminal, so I can avoid opening up Finder for most simple queries.</p>
+
+<pre class="shell">
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+</pre>
+
+<p>This neat little command displays the current directory contents, and all its sub-directories, as a tree. I used this to create the tree in <a href="/projects.html#firstCrack">the First Crack readme file</a>. <a href="http://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/">Hat-tip to OS X Daily for this one</a>.</p>
+</div>
                 </article>
             </section>
         </main>

@@ -70,7 +70,7 @@ def AppendContentOfXToY(target, source, timestamp):
         # Iterate over each line of the source structure file.
         for i, line in enumerate(source_fd):
             # Strip whitespace
-            line = line.strip()
+            # line = line.strip()
 
             # print(i,":",line)
 
@@ -411,17 +411,17 @@ def GenPage(source, timestamp):
         # generated up to this point. Then write the first paragraph, parsed.
         elif (idx == 6):
             target_fd.write(local_content.replace("{{META_DESC}}", line.strip()).strip())
-            target_fd.write("\n                "+title.strip())
-            target_fd.write("\n                    "+Markdown(line, base_url).strip())
+            target_fd.write("\n"+title.strip())
+            target_fd.write("\n"+Markdown(line, base_url).strip())
         # For successive lines of the file, parse them as Markdown and write them to the file.
         elif (idx > 5):
-            target_fd.write("\n                    "+Markdown(line, base_url).strip())
+            target_fd.write("\n"+Markdown(line, base_url).strip())
 
         # Increase the line number
         idx += 1
     else:
         # At the end of the file, write closing HTML tags.
-        target_fd.write("\n                    </div>\n                </article>")
+        target_fd.write("\n</div>\n                </article>")
         target_fd.write(content[1].replace("assets/", "../assets/").replace("<!-- SCRIPTS BLOCK -->", """""",1))
         
     # Close file descriptors.

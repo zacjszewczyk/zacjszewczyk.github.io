@@ -38,25 +38,25 @@
         </nav>
         <main style="max-width:65em;margin:0 auto;margin-bottom:100px;">
             <section id="content_section">
-                <article>
+<article>
                     <h2 style="text-align:center;">
                         <a href="integrating-sublime-text-and-proofer.html" class="original">Integrating Sublime Text and Proofer</a>
                     </h2>
                     <time datetime="2019-05-08" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="2019.html">2019</a>/<a href="2019-05.html">05</a>/08 13:36:27 EST</time>
-                    <p>I wrote about <a href="https://zacs.site/blog/integrating-sublime-text-and-marked-2.html">using Marked with Sublime Text</a> before I switched to <a href="/projects.html#proofer">Proofer</a>, so I wanted to take a minute to share the snippet that lets me use Sublime Text with Proofer now.</p>
-                    
-                    <p>The code below creates a new Build System. Every time you &#8220;build&#8221; a text file with it, Sublime Text sends the open document to Proofer. Proofer then generates an HTML file that contains document statistics, visualizes word repetition, and highlights complex words and phrases. Open &#8220;index.html&#8221; in your browser and go to work.</p>
-                    
-                    <pre>
-                    {
-                    "cmd": ["/path/to/Proofer/Proofer.py", "$file", "-sublime"],
-                    "path": "/path/to/Proofer/",
-                    "working_dir": "/path/to/Proofer/"
-                    }
-                    </pre>
-                    
-                    <p>To get this running on your computer, click &#8220;Tools&#8221;, scroll down to &#8220;Build System&#8221;, and click &#8220;New Build System...&#8221;. Copy and paste the snippet above after you fix the path fields, then save the file. If you have &#8220;Build System&#8221; set to &#8220;Automatic&#8221;, Sublime Text will now open build every file in Proofer by default. You can change this in the &#8220;Build System&#8221; menu.</p>
-                    </div>
+<p>I wrote about <a href="https://zacs.site/blog/integrating-sublime-text-and-marked-2.html">using Marked with Sublime Text</a> before I switched to <a href="/projects.html#proofer">Proofer</a>, so I wanted to take a minute to share the snippet that lets me use Sublime Text with Proofer now.</p>
+
+<p>The code below creates a new Build System. Every time you &#8220;build&#8221; a text file with it, Sublime Text sends the open document to Proofer. Proofer then generates an HTML file that contains document statistics, visualizes word repetition, and highlights complex words and phrases. Open &#8220;index.html&#8221; in your browser and go to work.</p>
+
+<pre>
+{
+"cmd": ["/path/to/Proofer/Proofer.py", "$file", "-sublime"],
+"path": "/path/to/Proofer/",
+"working_dir": "/path/to/Proofer/"
+}
+</pre>
+
+<p>To get this running on your computer, click &#8220;Tools&#8221;, scroll down to &#8220;Build System&#8221;, and click &#8220;New Build System...&#8221;. Copy and paste the snippet above after you fix the path fields, then save the file. If you have &#8220;Build System&#8221; set to &#8220;Automatic&#8221;, Sublime Text will now open build every file in Proofer by default. You can change this in the &#8220;Build System&#8221; menu.</p>
+</div>
                 </article>
             </section>
         </main>
