@@ -10,5 +10,5 @@ open("out.html", "w").close()
 
 with open("./Test.txt", "r") as fd, open("out.html", "a") as o_fd:
     for line in fd:
-        sleep(0.5)
+        sleep(1)
         o_fd.write(m.html(line)+'\n')

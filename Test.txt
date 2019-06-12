@@ -4,7 +4,7 @@
 * [Overview2](#overview)
 * [Overview3](#overview)
     * [Philosophy](#philosophy)
-    * [Inline HTML](#html)
+        * [Inline HTML](#html)
     * [Automatic Escaping for Special Characters](#autoescape)
 * [Block Elements](#block)
     * [Paragraphs and Line Breaks](#p)
