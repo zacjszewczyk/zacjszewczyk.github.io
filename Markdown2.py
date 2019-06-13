@@ -99,7 +99,16 @@ class Markdown:
             else:
                 self.line_type_tracker.append("ul")
         elif (__line[0].isdigit() and __line[1] == ".") or (__line[0:2].isdigit() and __line[3] == "."):
-            self.line_type_tracker.append("ol")
+            if (self.queryIndentTracker(-1) > self.queryIndentTracker(-2)):
+                self.line_type_tracker.append("ol")
+            elif (self.queryIndentTracker(-1) < self.queryIndentTracker(-2)):
+                self.line_type_tracker.append("/ol")
+            elif (self.line_type_tracker[-1] == "ol" or self.line_type_tracker[-1] == "li"):
+                self.line_type_tracker.append("li")
+            elif (self.line_type_tracker[-1] == "/ol" and len(self.close_out) != 0):
+                self.line_type_tracker.append("li")
+            else:
+                self.line_type_tracker.append("ol")
         else:
             self.line_type_tracker.append("p")
 
@@ -114,7 +123,6 @@ class Markdown:
         return self.line_indent_tracker[__pos]
 
     def closeOut(self):
-        print(self.close_out)
         return '\n'.join(self.close_out)
 
     def html(self, __line):
@@ -138,12 +146,15 @@ class Markdown:
 
         if (self.getLineType(-1) == "ul"):
             __line = "<ul>"+'\n'+"    <li>"+__line[2:]+"</li>"
-            self.close_out.append("</ul>")
+            self.close_out.append("</ul>\n")
+        elif (self.getLineType(-1) == "ol"):
+            __line = "<ol>"+'\n'+"    <li>"+". ".join(__line.split(". ")[1:])+"</li>"
+            self.close_out.append("</ol>\n")
         elif (self.getLineType(-1) == "li"):
             __line = "    <li>"+__line[2:]+"</li>"
-        elif (self.getLineType(-1) == "/ul"):
-            __line = "</ul>\n<li>"+__line[2:]+"</li>"
-            self.close_out.remove("</ul>")
+        elif (self.getLineType(-1) == "/ol"):
+            __line = "</ol>\n<li>"+__line[2:]+"</li>"
+            self.close_out.remove("</ol>")
 
 
         # if (self.getLineType(-1) in ["ul", "ol"]):
