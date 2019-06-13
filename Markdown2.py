@@ -5,56 +5,66 @@ import re
 class Markdown:
     # Init
 
-    def parseInlineMD(self, ln):
-        line = ln.rstrip('\n')
+    def parseInlineMD(self, __line):
+        __line = __line.rstrip('\n')
         
         # Generic parsing
-        line = line.replace("---", "<hr />")
+        __line = __line.replace("---", "<hr />")
 
         ## Escape ampersands. Replace them with the appropriate HTML entity.
-        line = line.replace("&", "&#38;")
+        __line = __line.replace("&", "&#38;")
 
         ## Parse emdashes
-        line = line.replace("--", "&#160;&#8212;&#160;")
+        __line = __line.replace("--", "&#160;&#8212;&#160;")
 
         ## Parse escaped asteriscs, to keep them from being interpreted as
         ## asterics indicating bold or italic text.
-        line = line.replace("\*", "&#42;")
+        __line = __line.replace("\*", "&#42;")
 
         ## Prase **, or <strong> tags, first, to keep them from being
         ## interpreted as <em> tags...
-        while ("**" in line):
-            line = line.replace("**", "<strong>", 1).replace("**", "</strong>", 1)
+        while ("**" in __line):
+            __line = __line.replace("**", "<strong>", 1).replace("**", "</strong>", 1)
 
         ## ... then parse the remaining <em> tags
-        while ("*" in line):
-            if (line[0] == "*" and line[1] == " "):
-                line = "*"+line[1:].replace("*", "<em>", 1).replace("*", "</em>", 1)
+        while ("*" in __line):
+            if (__line[0] == "*" and __line[1] == " "):
+                __line = "*"+__line[1:].replace("*", "<em>", 1).replace("*", "</em>", 1)
                 break
-            line = line.replace("*", "<em>", 1).replace("*", "</em>", 1)
+            __line = __line.replace("*", "<em>", 1).replace("*", "</em>", 1)
 
-        ## Parse inline code
-        while ("`" in line):
-            line = line.replace("`", "<pre>", 1).replace("`", "</pre>", 1)
+        ## Parse in__line code
+        while ("`" in __line):
+            __line = __line.replace("`", "<pre>", 1).replace("`", "</pre>", 1)
 
         ## Parse single quotatin marks
-        line = line.replace(" '", " &#8216;").replace("' ", "&#8217; ")
+        __line = __line.replace(" '", " &#8216;").replace("' ", "&#8217; ")
 
         ## Parse aposrophes
-        line = line.replace("'", "&#39;")
+        __line = __line.replace("'", "&#39;")
 
         ## Parse double quotation marks
-        line = line.replace(' "', " &#8220;").replace('" ', "&#8221; ")
+        __line = __line.replace(' "', " &#8220;").replace('" ', "&#8221; ")
 
         ## Parse links
-        for each in re.findall("\[([^\]]+)\]\(([^\)]+)\)", line):
-            line = line.replace("["+each[0]+"]("+each[1]+")", "<a href=\""+each[1]+"\">"+each[0]+"</a>")
+        for each in re.findall("\[([^\]]+)\]\(([^\)]+)\)", __line):
+            __line = __line.replace("["+each[0]+"]("+each[1]+")", "<a href=\""+each[1]+"\">"+each[0]+"</a>")
 
-        return line
+        return __line
 
     line_tracker = ["", "", ""]
     line_type_tracker = ["", "", ""]
     line_indent_tracker = [0, 0, 0]
+    
+    opening_map = {"ul" : "<ul>", "li" : "<li>"}
+    closing_map = {"ul" : "</ul>", "li" : "</li>"}
+
+    unordered_list = ["*", "+", "-"]
+
+    close_out = []
+
+    def getLineType(self, __pos):
+        return self.line_type_tracker[__pos]
 
     def trimTracker(self, __trkr):
         if (len(__trkr) > 3):
@@ -78,7 +88,16 @@ class Markdown:
         elif (__line[0] == "{"):
             self.line_type_tracker.append("idx")
         elif (__line[0] in ['*', '+', '-'] and __line[1] == ' '):
-            self.line_type_tracker.append("ul")
+            if (self.queryIndentTracker(-1) > self.queryIndentTracker(-2)):
+                self.line_type_tracker.append("ul")
+            elif (self.queryIndentTracker(-1) < self.queryIndentTracker(-2)):
+                self.line_type_tracker.append("/ul")
+            elif (self.line_type_tracker[-1] == "ul" or self.line_type_tracker[-1] == "li"):
+                self.line_type_tracker.append("li")
+            elif (self.line_type_tracker[-1] == "/ul" and len(self.close_out) != 0):
+                self.line_type_tracker.append("li")
+            else:
+                self.line_type_tracker.append("ul")
         elif (__line[0].isdigit() and __line[1] == ".") or (__line[0:2].isdigit() and __line[3] == "."):
             self.line_type_tracker.append("ol")
         else:
@@ -86,24 +105,52 @@ class Markdown:
 
         self.trimTracker(self.line_type_tracker)
 
-
     def updateIndentTracker(self, __line):
         self.line_indent_tracker.append(len(__line) - len(__line.lstrip(' ')))
 
         self.trimTracker(self.line_indent_tracker)
 
-    def html(self, line):
-        # Remove trailing newline
-        line = line.rstrip('\n')
+    def queryIndentTracker(self, __pos):
+        return self.line_indent_tracker[__pos]
 
-        self.updateLineTracker(line)
-        self.updateLineTypeTracker(line)
-        self.updateIndentTracker(line)
+    def closeOut(self):
+        print(self.close_out)
+        return '\n'.join(self.close_out)
+
+    def html(self, __line):
+        # Remove trailing newline
+        __line = __line.rstrip('\n')
+
+        self.updateIndentTracker(__line)
+        self.updateLineTracker(__line)
+        self.updateLineTypeTracker(__line)
 
         print(self.line_tracker)
         print(self.line_type_tracker)
         print(self.line_indent_tracker)
         print()
+
+        __line = __line.lstrip(' ')
+        if (len(__line) == 0):
+            __line = self.closeOut()
+            self.close_out = []
+            return __line
+
+        if (self.getLineType(-1) == "ul"):
+            __line = "<ul>"+'\n'+"    <li>"+__line[2:]+"</li>"
+            self.close_out.append("</ul>")
+        elif (self.getLineType(-1) == "li"):
+            __line = "    <li>"+__line[2:]+"</li>"
+        elif (self.getLineType(-1) == "/ul"):
+            __line = "</ul>\n<li>"+__line[2:]+"</li>"
+            self.close_out.remove("</ul>")
+
+
+        # if (self.getLineType(-1) in ["ul", "ol"]):
+        #     if (self.getLineType(-2) in ["ul", "ol"]):
+        #         __line = "<li>"+__line.split('\n')[-1][2:]+"</li>"
+        #     else:
+        #         __line = self.opening_map[self.getLineType(-1)]+'\n'+"<li>"+__line[2:]+"</li>"
 
         # # Remove trailing newline
         # line = line.rstrip('\n')
@@ -179,4 +226,4 @@ class Markdown:
         # print("NEW: '%s'" % line)
         # print ("TRACKER: "+str(self.tracker))
 
-        return line
+        return __line
