@@ -20,11 +20,12 @@ class Markdown:
             __line = __line.replace("**", "<strong>", 1).replace("**", "</strong>", 1)
 
         ## ... then parse the remaining <em> tags
-        while ("*" in __line):
-            if (__line[0] == "*" and __line[1] == " "):
-                __line = "*"+__line[1:].replace("*", "<em>", 1).replace("*", "</em>", 1)
-                break
-            __line = __line.replace("*", "<em>", 1).replace("*", "</em>", 1)
+        if (__line.count("*") % 2 == 0):
+            while ("*" in __line):
+                if (__line[0] == "*" and __line[1] == " "):
+                    __line = "*"+__line[1:].replace("*", "<em>", 1).replace("*", "</em>", 1)
+                    break
+                __line = __line.replace("*", "<em>", 1).replace("*", "</em>", 1)
 
         ## Parse in__line code
         while ("`" in __line):
