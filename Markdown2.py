@@ -94,7 +94,7 @@ class Markdown:
                 self.line_type_tracker.append("/ul")
             elif (self.line_type_tracker[-1] == "ul" or self.line_type_tracker[-1] == "li"):
                 self.line_type_tracker.append("li")
-            elif (self.line_type_tracker[-1] == "/ul" and len(self.close_out) != 0):
+            elif (len(self.close_out) != 0):
                 self.line_type_tracker.append("li")
             else:
                 self.line_type_tracker.append("ul")
@@ -147,14 +147,17 @@ class Markdown:
         if (self.getLineType(-1) == "ul"):
             __line = "<ul>"+'\n'+"    <li>"+__line[2:]+"</li>"
             self.close_out.append("</ul>\n")
+        elif (self.getLineType(-1) == "/ul"):
+            __line = "</ul>\n<li>"+__line[2:]+"</li>"
+            self.close_out.remove("</ul>\n")
         elif (self.getLineType(-1) == "ol"):
             __line = "<ol>"+'\n'+"    <li>"+". ".join(__line.split(". ")[1:])+"</li>"
             self.close_out.append("</ol>\n")
-        elif (self.getLineType(-1) == "li"):
-            __line = "    <li>"+__line[2:]+"</li>"
         elif (self.getLineType(-1) == "/ol"):
             __line = "</ol>\n<li>"+__line[2:]+"</li>"
-            self.close_out.remove("</ol>")
+            self.close_out.remove("</ol>\n")
+        elif (self.getLineType(-1) == "li"):
+            __line = "    <li>"+__line[2:]+"</li>"
 
 
         # if (self.getLineType(-1) in ["ul", "ol"]):
