@@ -11,15 +11,8 @@ class Markdown:
         # Generic parsing
         __line = __line.replace("---", "<hr />")
 
-        ## Escape ampersands. Replace them with the appropriate HTML entity.
-        __line = __line.replace("&", "&#38;")
-
         ## Parse emdashes
         __line = __line.replace("--", "&#160;&#8212;&#160;")
-
-        ## Parse escaped asteriscs, to keep them from being interpreted as
-        ## asterics indicating bold or italic text.
-        __line = __line.replace("\*", "&#42;")
 
         ## Prase **, or <strong> tags, first, to keep them from being
         ## interpreted as <em> tags...
@@ -35,7 +28,7 @@ class Markdown:
 
         ## Parse in__line code
         while ("`" in __line):
-            __line = __line.replace("`", "<pre>", 1).replace("`", "</pre>", 1)
+            __line = __line.replace("`", "<code>", 1).replace("`", "</code>", 1)
 
         ## Parse single quotatin marks
         __line = __line.replace(" '", " &#8216;").replace("' ", "&#8217; ")
@@ -62,6 +55,7 @@ class Markdown:
     unordered_list = ["*", "+", "-"]
 
     close_out = []
+    pre = False
 
     def getLineType(self, __pos):
         return self.line_type_tracker[__pos]
@@ -109,6 +103,14 @@ class Markdown:
                 self.line_type_tracker.append("li")
             else:
                 self.line_type_tracker.append("ol")
+        elif (__line[0] == ">"):
+            if (self.line_type_tracker[-1] == "blockquote" or self.line_type_tracker[-1] == "bqt"):
+                self.line_type_tracker.append("bqt")
+            else:
+                self.line_type_tracker.append("blockquote")
+        elif (__line[0:4] == "```"):
+            self.line_type_tracker.append("pre")
+            self.pre = not self.pre
         else:
             self.line_type_tracker.append("p")
 
@@ -125,6 +127,19 @@ class Markdown:
     def closeOut(self):
         return '\n'.join(self.close_out)
 
+    def escapeCharacters(self, __line):
+        ## Escape ampersands. Replace them with the appropriate HTML entity.
+        __line = __line.replace("&", "&#38;")
+
+        ## Parse escaped asteriscs, to keep them from being interpreted as
+        ## asterics indicating bold or italic text.
+        __line = __line.replace("\*", "&#42;")
+
+        ## Escape < and > signs
+        __line = __line.replace("<", "&lt;").replace(">", "&gt;")
+
+        return __line
+
     def html(self, __line):
         # Remove trailing newline
         __line = __line.rstrip('\n')
@@ -138,26 +153,79 @@ class Markdown:
         print(self.line_indent_tracker)
         print()
 
+        # Handle code blocks
+        if (self.getLineType(-1) == "pre"):
+            if (self.pre == True):
+                return "<pre>"
+            return "</pre>"
+        if (self.pre == True):
+            return __line
+
         __line = __line.lstrip(' ')
+
+        __line = self.escapeCharacters(__line)
+
         if (len(__line) == 0):
             __line = self.closeOut()
             self.close_out = []
             return __line
 
+        # Handle unorered lists
+        ## Opening tags
         if (self.getLineType(-1) == "ul"):
             __line = "<ul>"+'\n'+"    <li>"+__line[2:]+"</li>"
             self.close_out.append("</ul>\n")
+        ## Closing tags
         elif (self.getLineType(-1) == "/ul"):
             __line = "</ul>\n<li>"+__line[2:]+"</li>"
             self.close_out.remove("</ul>\n")
+        # Handle ordered lists
+        ## Opening tags
         elif (self.getLineType(-1) == "ol"):
             __line = "<ol>"+'\n'+"    <li>"+". ".join(__line.split(". ")[1:])+"</li>"
             self.close_out.append("</ol>\n")
+        ## Closing tags
         elif (self.getLineType(-1) == "/ol"):
             __line = "</ol>\n<li>"+__line[2:]+"</li>"
             self.close_out.remove("</ol>\n")
+        # Handle list elements
         elif (self.getLineType(-1) == "li"):
             __line = "    <li>"+__line[2:]+"</li>"
+        # Handle blockquotes
+        elif (self.getLineType(-1) == "blockquote"):
+            __line = "<blockquote>\n    <p>"+__line[5:]+"</p>"
+            self.close_out.append("</blockquote>\n")
+        elif (self.getLineType(-1) == "bqt"):
+            __line = "    <p>"+__line[5:]+"</p>"
+        # Handle headers
+        elif (self.getLineType(-1) == "header"):
+            l = len(__line) - len(__line.lstrip("#"))
+            __line = "<h"+str(l)+" id=\""+''.join(ch for ch in __line if ch.isalnum())+"\">"+__line.lstrip("#").rstrip("#").strip()+"</h"+str(l)+">"
+            return __line
+        # Handle horizontal rules
+        elif (self.getLineType(-1) == "hr"):
+            return "<hr />"
+        # Handle images
+        elif (self.getLineType(-1) == "img"):
+            __line = __line.split("]")
+            desc = __line[0][2:]
+            url = __line[1].split(" ")[0][1:]
+            alt = __line[1].split(" ")[1][1:-2]
+            return "<div class='image'><img src='%s' alt='%s' title='%s' /></div>" % (url, alt, desc)
+        # Handle series index
+        elif (self.getLineType(-1) == "idx"):
+            with open("./Content/System/"+__line[1:-1], "r") as fd:
+                __line = "<ul style=\"border:1px dashed gray\" id=\"series_index\">\n"
+                for each in fd:
+                    __line += "    <li>"+each.strip()+"</li>\n"
+                __line += "</ul>"
+            return __line
+        # Otherwise, treat as a paragraph
+        else:
+            __line = "<p>"+__line+"</p>"
+
+
+        __line = self.parseInlineMD(__line)
 
 
         # if (self.getLineType(-1) in ["ul", "ol"]):
