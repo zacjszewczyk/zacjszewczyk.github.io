@@ -1,10 +1,18 @@
-#!/usr/local/Cellar/python/3.7.3/bin/python3
+#!/usr/local/bin/python3
 
-import re
+# Import methods
+from re import findall # re.findall, for links
 
 class Markdown:
     # Init
 
+    # Method: parseInlineMD
+    # Purpose: Turn all inline MD tags into HTML.
+    # Parameters:
+    # - self: Class namespace
+    # - __line: Input line to process, mangled (String)
+    # Return:
+    # - Parsed line (String)
     def parseInlineMD(self, __line):
         __line = __line.rstrip('\n')
         
@@ -41,7 +49,7 @@ class Markdown:
         __line = __line.replace(' "', " &#8220;").replace('" ', "&#8221; ")
 
         ## Parse links
-        for each in re.findall("\[([^\]]+)\]\(([^\)]+)\)", __line):
+        for each in findall("\[([^\]]+)\]\(([^\)]+)\)", __line):
             __line = __line.replace("["+each[0]+"]("+each[1]+")", "<a href=\""+each[1]+"\">"+each[0]+"</a>")
 
         return __line
@@ -58,17 +66,43 @@ class Markdown:
     close_out = []
     pre = False
 
+    # Method: getLineType
+    # Purpose: Return the type of line for the specified position.
+    # Parameters:
+    # - self: Class namespace
+    # - __pos: Desired position, mangled.
+    # Return:
+    # - Type of line at specified position (String)
     def getLineType(self, __pos):
         return self.line_type_tracker[__pos]
 
+    # Method: trimTracker
+    # Purpose: Keep tracker lists to a max of three elements.
+    # Parameters:
+    # - self: Class namespace
+    # - __trkr: Reference to tracker to be trimmed.
+    # Return: None.
     def trimTracker(self, __trkr):
         if (len(__trkr) > 3):
             __trkr.pop(0)
 
+    # Method: updateLineTracker
+    # Purpose: Keep track of raw lines.
+    # Parameters:
+    # - self: Class namespace
+    # - __line: Raw Markdown line, mangled.
+    # Return: None.
     def updateLineTracker(self, __line):
         self.line_tracker.append(__line)
         self.trimTracker(self.line_tracker)
 
+    # Method: updateLineTypeTracker
+    # Purpose: Determine type of line, and whether it is part of a larger
+    # block-level element, and annotate that in the line type tracker.
+    # Parameters:
+    # - self: Class namespace
+    # - __line: Input line to process, mangled. (String)
+    # Return: None.
     def updateLineTypeTracker(self, __line):
         __line = __line.lstrip(' ')
 
@@ -117,17 +151,44 @@ class Markdown:
 
         self.trimTracker(self.line_type_tracker)
 
+    # Method: updateIndentTracker
+    # Purpose: Keep track of the indentation level.
+    # Parameters:
+    # - self: Class namespace
+    # - __line: Input line to process, mangled. (String)
+    # Return: None
     def updateIndentTracker(self, __line):
         self.line_indent_tracker.append(len(__line) - len(__line.lstrip(' ')))
 
         self.trimTracker(self.line_indent_tracker)
 
+    # Method: queryIndentTracker
+    # Purpose: Return the indent level for the specified line.
+    # Parameters:
+    # - self: Class namespace
+    # - __pos: Desired position, mangled. (Int)
+    # Return:
+    # - Indent level for specified line. (Int)
     def queryIndentTracker(self, __pos):
         return self.line_indent_tracker[__pos]
 
+    # Method: closeOut
+    # Purpose: Write closing HTML tags for any open block-level elements.
+    # Parameters:
+    # - self: Class namespace
+    # Return:
+    # - String with each closing HTML tag on its own line. (String)
     def closeOut(self):
         return '\n'.join(self.close_out)
 
+    # Method: escapeCharacters
+    # Purpose: Escape &, *, <, and > characters in the text before they are
+    # processed as Markdown tags.
+    # Parameters:
+    # - self: Class namespace
+    # - __line: Input line, mangled. (String)
+    # Return:
+    # - Line with &, *, <, and > escaped using their HTML entities. (String)
     def escapeCharacters(self, __line):
         ## Escape ampersands. Replace them with the appropriate HTML entity.
         __line = __line.replace("&", "&#38;")
@@ -141,6 +202,16 @@ class Markdown:
 
         return __line
 
+    # Method: html
+    # Purpose:
+    # - 1. Update the trackers with new lines to continue building the HTML
+    #      document, and
+    # - 2. Ingest raw Markdown line, process it, and return valid HTML.
+    # Parameters:
+    # - self: Class namespace
+    # - __line: Input line, mangled. (String)
+    # Return:
+    # - Line formatted with HTML. (String)
     def html(self, __line):
         # Remove trailing newline
         __line = __line.rstrip('\n')

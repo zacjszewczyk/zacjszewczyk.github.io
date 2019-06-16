@@ -1,4 +1,4 @@
-#!/usr/local/Cellar/python/3.7.3/bin/python3
+#!/usr/local/bin/python3
 
 from Markdown2 import Markdown
 from time import sleep
