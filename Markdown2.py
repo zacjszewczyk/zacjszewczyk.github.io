@@ -339,3 +339,13 @@ class Markdown:
         __line = self.__parseInlineMD(__line)
 
         return __line
+
+    # Method: raw
+    # Purpose: Return raw line at specified position.
+    # Parameters:
+    # - self: Class namespace
+    # - __pos: Desired position, mangled. (Int)
+    # Return:
+    # - Raw, unprocessed Markdown line (String)
+    def raw(self, __pos):
+        return self.line_tracker(__pos)
