@@ -13,7 +13,7 @@ class Markdown:
     __pre = False
 
     # Method: __parseInlineMD
-    # Purpose: Turn all inline MD tags into HTML.
+    # Purpose: Turn all inline Markdown tags into HTML.
     # Parameters:
     # - self: Class namespace
     # - __line: Input line to process, mangled (String)
