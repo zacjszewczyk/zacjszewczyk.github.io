@@ -1,4 +1,4 @@
-#!/usr/local/Cellar/python/3.7.3/bin/python3
+#!/usr/local/bin/python3
 
 from re import findall, search, sub, match, search # Import re functions
 from os import chdir # Import chdir to locate content files
