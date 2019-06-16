@@ -19,8 +19,7 @@ class Markdown:
     # Return:
     # - Parsed line. (String)
     def __parseInlineMD(self, __line):
-        # Parser tracks leading whitespace, so remove it to make parsing the
-        # line easier.
+        # Parser tracks leading whitespace, so remove it.
         __line = __line.rstrip('\n')
         
         # Parse horizontal rules and emdashes
@@ -100,51 +99,74 @@ class Markdown:
     # - __line: Input line to process, mangled. (String)
     # Return: None.
     def __updateLineTypeTracker(self, __line):
+        # Parser tracks leading whitespace, so remove it.
         __line = __line.lstrip(' ')
 
-        if (len(__line) == 0):
+        if (len(__line) == 0): # Blank line.
             self.__line_type_tracker.append("blank")
-        elif (__line[0] == "#"):
+        elif (__line[0] == "#"): # Header.
             self.__line_type_tracker.append("header")
-        elif (__line[0:4] == "---"):
+        elif (__line[0:4] == "---"): # Horizontal rule.
             self.__line_type_tracker.append("hr")
-        elif (__line[0:2] == "!["):
+        elif (__line[0:2] == "!["): # Image.
             self.__line_type_tracker.append("img")
-        elif (__line[0] == "{"):
+        elif (__line[0] == "{"): # Post index, with remote content.
             self.__line_type_tracker.append("idx")
+        # Unordered list, as evidenced by a line starting with *, +, or -
         elif (__line[0] in ['*', '+', '-'] and __line[1] == ' '):
+            # If the line is indented from the previous one, start a new list
             if (self.__queryIndentTracker(-1) > self.__queryIndentTracker(-2)):
                 self.__line_type_tracker.append("ul")
+            # If a line is un-indented from the previous one, close out a list.
             elif (self.__queryIndentTracker(-1) < self.__queryIndentTracker(-2)):
                 self.__line_type_tracker.append("/ul")
+            # If the parser finds a list element preceeded by another list
+            # element or an opening list tag, treat this line as a list element
             elif (self.__line_type_tracker[-1] == "ul" or self.__line_type_tracker[-1] == "li"):
                 self.__line_type_tracker.append("li")
+            # If the line is for an unordered list and there is still an active
+            # list, treat it as a list element.
             elif (len(self.__close_out) != 0):
                 self.__line_type_tracker.append("li")
+            # Otherwise, treat the line as the first in a new list.
             else:
                 self.__line_type_tracker.append("ul")
+        # Ordered list, as evidenced by [0-9]\. or [0-9]{2}\.
         elif (__line[0].isdigit() and __line[1] == ".") or (__line[0:2].isdigit() and __line[3] == "."):
+            # If the line is indented from the previous one, start a new list
             if (self.__queryIndentTracker(-1) > self.__queryIndentTracker(-2)):
                 self.__line_type_tracker.append("ol")
+            # If a line is un-indented from the previous one, close out a list.
             elif (self.__queryIndentTracker(-1) < self.__queryIndentTracker(-2)):
                 self.__line_type_tracker.append("/ol")
+            # If the parser finds a list element preceeded by another list
+            # element or an opening list tag, treat this line as a list element
             elif (self.__line_type_tracker[-1] == "ol" or self.__line_type_tracker[-1] == "li"):
                 self.__line_type_tracker.append("li")
+            # If the line is for an unordered list and there is still an active
+            # list, treat it as a list element.
             elif (self.__line_type_tracker[-1] == "/ol" and len(self.__close_out) != 0):
                 self.__line_type_tracker.append("li")
+            # Otherwise, treat the line as the first in a new list.
             else:
                 self.__line_type_tracker.append("ol")
-        elif (__line[0] == ">"):
+        elif (__line[0] == ">"): # Blockquote
+            # If the line is preceeded by an blockquote tag or the parser
+            # is already in a blockquote, continue parsing the existing
+            # blockquote
             if (self.__line_type_tracker[-1] == "blockquote" or self.__line_type_tracker[-1] == "bqt"):
                 self.__line_type_tracker.append("bqt")
+            # Otherwise, treat this line as the opening of a new blockquote
             else:
                 self.__line_type_tracker.append("blockquote")
-        elif (__line[0:4] == "```"):
+        elif (__line[0:4] == "```"): # Preformatted code block
             self.__line_type_tracker.append("pre")
+            # Toggle the boolean for tracking if the parser is in a code block
             self.__pre = not self.__pre
-        else:
+        else: # Default to handling the line as a paragraph
             self.__line_type_tracker.append("p")
 
+        # Trim the tracker to a max of 3 elements.
         self.__trimTracker(self.__line_type_tracker)
 
     # Method: __updateIndentTracker
@@ -154,8 +176,8 @@ class Markdown:
     # - __line: Input line to process, mangled. (String)
     # Return: None
     def __updateIndentTracker(self, __line):
+        # Count leading spaces, and append to the line tracker list
         self.__line_indent_tracker.append(len(__line) - len(__line.lstrip(' ')))
-
         self.__trimTracker(self.__line_indent_tracker)
 
     # Method: __queryIndentTracker
@@ -186,11 +208,11 @@ class Markdown:
     # Return:
     # - Line with &, *, <, and > escaped using their HTML entities. (String)
     def __escapeCharacters(self, __line):
-        ## Escape ampersands. Replace them with the appropriate HTML entity.
+        # Escape ampersands. Replace them with the appropriate HTML entity.
         __line = __line.replace("&", "&#38;")
 
-        ## Parse escaped asteriscs, to keep them from being interpreted as
-        ## asterics indicating bold or italic text.
+        # Escape escaped asteriscs, to keep them from being read as bold or
+        # italic text.
         __line = __line.replace("\*", "&#42;")
 
         ## Escape < and > signs
@@ -212,16 +234,19 @@ class Markdown:
         # Remove trailing newline
         __line = __line.rstrip('\n')
 
+        # Update trackers
         self.__updateIndentTracker(__line)
         self.__updateLineTracker(__line)
         self.__updateLineTypeTracker(__line)
 
-        print(self.__line_tracker)
-        print(self.__line_type_tracker)
-        print(self.__line_indent_tracker)
-        print()
+        # Print statements, for debugging.
+        # print(self.__line_tracker)
+        # print(self.__line_type_tracker)
+        # print(self.__line_indent_tracker)
+        # print()
 
-        # Handle code blocks
+        # Handle preformatted code blocks. First write the opening <pre> tag,
+        # then return the unprocessed line.
         if (self.__getLineType(-1) == "pre"):
             if (self.__pre == True):
                 return "<pre>"
@@ -229,45 +254,55 @@ class Markdown:
         if (self.__pre == True):
             return __line
 
+        # Parser tracks leading whitespace, so remove it.
         __line = __line.lstrip(' ')
 
+        # Escape &, *, <, and > characters
         __line = self.__escapeCharacters(__line)
 
+        # If the parser finds a blank line, close open block-level elements,
+        # reset the block-level element tracker, and return the blank line.
         if (len(__line) == 0):
             __line = self.__closeOut()
             self.__close_out = []
             return __line
 
         # Handle unorered lists
-        ## Opening tags
+        ## Write opening tag and append the closing tag to the block-level
+        ## element tracker.
         if (self.__getLineType(-1) == "ul"):
             __line = "<ul>"+'\n'+"    <li>"+__line[2:]+"</li>"
             self.__close_out.append("</ul>\n")
-        ## Closing tags
+        ## Write closing tag and remove a closing tag from the block-level
+        ## element tracker.
         elif (self.__getLineType(-1) == "/ul"):
             __line = "</ul>\n<li>"+__line[2:]+"</li>"
             self.__close_out.remove("</ul>\n")
         # Handle ordered lists
-        ## Opening tags
+        ## Write opening tag and append the closing tag to the block-level
+        ## element tracker.
         elif (self.__getLineType(-1) == "ol"):
             __line = "<ol>"+'\n'+"    <li>"+". ".join(__line.split(". ")[1:])+"</li>"
             self.__close_out.append("</ol>\n")
-        ## Closing tags
+        ## Write closing tag and remove a closing tag from the block-level
+        ## element tracker.
         elif (self.__getLineType(-1) == "/ol"):
             __line = "</ol>\n<li>"+__line[2:]+"</li>"
             self.__close_out.remove("</ol>\n")
-        # Handle list elements
+        # Handle list elements for both unordered and ordered lists.
         elif (self.__getLineType(-1) == "li"):
             __line = "    <li>"+__line[2:]+"</li>"
-        # Handle blockquotes
+        # Handle blockquotes, new and a continuation of an existing one.
         elif (self.__getLineType(-1) == "blockquote"):
             __line = "<blockquote>\n    <p>"+__line[5:]+"</p>"
             self.__close_out.append("</blockquote>\n")
         elif (self.__getLineType(-1) == "bqt"):
             __line = "    <p>"+__line[5:]+"</p>"
-        # Handle headers
+        # Handle header elements
         elif (self.__getLineType(-1) == "header"):
+            # Count the number of # at the beginning of the line.
             l = len(__line) - len(__line.lstrip("#"))
+            # Write the header with the appropriate level, based on number of #
             __line = "<h"+str(l)+" id=\""+''.join(ch for ch in __line if ch.isalnum())+"\">"+__line.lstrip("#").rstrip("#").strip()+"</h"+str(l)+">"
             return __line
         # Handle horizontal rules
@@ -275,24 +310,32 @@ class Markdown:
             return "<hr />"
         # Handle images
         elif (self.__getLineType(-1) == "img"):
+            # This feels a bit clunky, but seems like the best alternative to
+            # regex capture groups, which seem unreliable.
             __line = __line.split("]")
             desc = __line[0][2:]
             url = __line[1].split(" ")[0][1:]
             alt = __line[1].split(" ")[1][1:-2]
             return "<div class='image'><img src='%s' alt='%s' title='%s' /></div>" % (url, alt, desc)
-        # Handle series index
+        # Handle series index. This is a non-standard Markdown convention that
+        # lets the writer reference an external file that contains a list of
+        # links to other articles in a related series, and include them
+        # automatically.
         elif (self.__getLineType(-1) == "idx"):
+            # Open the target file, write the opening <ul> tag, and add each
+            # link in the file to the new index.
             with open("./Content/System/"+__line[1:-1], "r") as fd:
                 __line = "<ul style=\"border:1px dashed gray\" id=\"series_index\">\n"
                 for each in fd:
                     __line += "    <li>"+each.strip()+"</li>\n"
                 __line += "</ul>"
             return __line
-        # Otherwise, treat as a paragraph
+        # Default to treating the line as a paragraph
         else:
             __line = "<p>"+__line+"</p>"
 
-
+        # Once all the block-level parsing is done, parse the inline Markdown
+        # tags.
         __line = self.__parseInlineMD(__line)
 
         return __line
