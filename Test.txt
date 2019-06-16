@@ -1,5 +1,4 @@
-Markdown: Syntax
-================
+# Markdown: Syntax
 
 <ul id="ProjectSubmenu">
     <li><a href="/projects/markdown/" title="Markdown Project Page">Main</a></li>
@@ -29,9 +28,9 @@ Markdown: Syntax
     * [Backslash Escapes](#backslash)
     * [Automatic Links](#autolink)
 
-**Note:** This document is itself written using Markdown; you can [see the source for it by adding '.text' to the URL][/projects/markdown/syntax.text].
+**Note:** This document is itself written using Markdown; you can [see the source for it by adding '.text' to the URL](/projects/markdown/syntax.text).
 
----
+* * *
 
 ## Overview
 ### Philosophy
@@ -50,8 +49,7 @@ Markdown is not a replacement for HTML, or even close to it. Its syntax is very 
 
 For any markup that is not covered by Markdown's syntax, you simply use HTML itself. There's no need to preface it or delimit it to indicate that you're switching from Markdown to HTML; you just use the tags.
 
-The only restrictions are that block-level HTML elements -- e.g. `<div>`,
-`<table>`, `<pre>`, `<p>`, etc. -- must be separated from surrounding content by blank lines, and the start and end tags of the block should not be indented with tabs or spaces. Markdown is smart enough not to add extra (unwanted) `<p>` tags around HTML block-level tags.
+The only restrictions are that block-level HTML elements -- e.g. `<div>`, `<table>`, `<pre>`, `<p>`, etc. -- must be separated from surrounding content by blank lines, and the start and end tags of the block should not be indented with tabs or spaces. Markdown is smart enough not to add extra (unwanted) `<p>` tags around HTML block-level tags.
 
 For example, to add an HTML table to a Markdown article:
 
@@ -125,24 +123,9 @@ The implication of the "one or more consecutive lines of text" rule is that Mark
 
 When you *do* want to insert a `<br />` break tag using Markdown, you end a line with two or more spaces, then type return.
 
-Yes, this takes a tad more effort to create a `<br />`, but a simplistic
-"every line break is a `<br />`" rule wouldn't work for Markdown.
-Markdown's email-style [blockquoting](#blockquote) and multi-paragraph [list items](#list)
-work best -- and look better -- when you format them with hard breaks.
+Yes, this takes a tad more effort to create a `<br />`, but a simplistic "every line break is a `<br />`" rule wouldn't work for Markdown. Markdown's email-style [blockquoting](#blockquote) and multi-paragraph [list items](#list) work best -- and look better -- when you format them with hard breaks.
 
 ### Headers
-
-Markdown supports two styles of headers.
-
-Setext-style headers are "underlined" using equal signs (for first-level headers) and dashes (for second-level headers). For example:
-
-    This is an H1
-    =============
-
-    This is an H2
-    -------------
-
-Any number of underlining `=`'s or `-`'s will work.
 
 Atx-style headers use 1-6 hash characters at the start of the line,
 corresponding to header levels 1-6. For example:
@@ -175,12 +158,9 @@ Markdown uses email-style `>` characters for blockquoting. If you're familiar wi
 
 Markdown allows you to be lazy and only put the `>` before the first line of a hard-wrapped paragraph:
 
-    > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-    consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-    Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+    > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 
-    > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-    id sem consectetuer libero luctus adipiscing.
+    > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.
 
 Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by adding additional levels of `>`:
 
@@ -209,8 +189,7 @@ Any decent text editor should make email-style quoting easy. For example, with B
 
 Markdown supports ordered (numbered) and unordered (bulleted) lists.
 
-Unordered lists use asterisks, pluses, and hyphens -- interchangably
--- as list markers:
+Unordered lists use asterisks, pluses, and hyphens -- interchangably -- as list markers:
 
     * Red
     * Green
@@ -262,51 +241,14 @@ List markers typically start at the left margin, but may be indented by up to th
 
 To make lists look nice, you can wrap items with hanging indents:
 
-    * Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
-        viverra nec, fringilla in, laoreet vitae, risus.
-    * Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
-        Suspendisse id sem consectetuer libero luctus adipiscing.
-
-But if you want to be lazy, you don't have to:
-
-    * Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
-    viverra nec, fringilla in, laoreet vitae, risus.
-    * Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
-    Suspendisse id sem consectetuer libero luctus adipiscing.
-
-If list items are separated by blank lines, Markdown will wrap the items in `<p>` tags in the HTML output. For example, this input:
-
-    * Bird
-    * Magic
-
-will turn into:
-
-    <ul>
-    <li>Bird</li>
-    <li>Magic</li>
-    </ul>
-
-But this:
-
-    * Bird
-
-    * Magic
-
-will turn into:
-
-    <ul>
-    <li><p>Bird</p></li>
-    <li><p>Magic</p></li>
-    </ul>
+    * Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+    * Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.
 
 List items may consist of multiple paragraphs. Each subsequent paragraph in a list item must be indented by either 4 spaces or one tab:
 
     1.  This is a list item with two paragraphs. Lorem ipsum dolor
         sit amet, consectetuer adipiscing elit. Aliquam hendrerit
         mi posuere lectus.
-
         Vestibulum enim wisi, viverra nec, fringilla in, laoreet
         vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
         sit amet velit.
@@ -316,10 +258,7 @@ List items may consist of multiple paragraphs. Each subsequent paragraph in a li
 It looks nice if you indent every line of the subsequent paragraphs, but here again, Markdown will allow you to be lazy:
 
     * This is a list item with two paragraphs.
-
-        This is the second paragraph in the list item. You're
-    only required to indent the first line. Lorem ipsum dolor
-    sit amet, consectetuer adipiscing elit.
+    This is the second paragraph in the list item. You're only required to indent the first line. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
     * Another item in the same list.
 
@@ -330,12 +269,6 @@ To put a blockquote within a list item, the blockquote's `>` delimiters need to 
         > This is a blockquote
         > inside a list item.
 
-To put a code block within a list item, the code block needs to be indented *twice* -- 8 spaces or two tabs:
-
-    * A list item with a code block:
-
-            <code goes here>
-
 
 It's worth noting that it's possible to trigger an ordered list by accident, by writing something like this:
 
@@ -344,8 +277,6 @@ It's worth noting that it's possible to trigger an ordered list by accident, by 
 In other words, a *number-period-space* sequence at the beginning of a line. To avoid this, you can backslash-escape the period:
 
     1986\. What a great season.
-
-
 
 <h3 id="precode">Code Blocks</h3>
 
@@ -407,24 +338,15 @@ You can produce a horizontal rule tag (`<hr />`) by placing three or more hyphen
 
     * * *
 
-    ***
-
-    *****
-
-    - - -
-
-    ---------------------------------------
-
-
-* * *
+    ---
 
 ## Span Elements
 
 ### Links
 
-Markdown supports two style of links: *inline* and *reference*.
+Markdown supports one style of links: *inline*.
 
-In both styles, the link text is delimited by [square brackets].
+The link text is delimited by [square brackets].
 
 To create an inline link, use a set of regular parentheses immediately after the link text's closing square bracket. Inside the parentheses,
 put the URL where you want the link to point, along with an *optional*
@@ -445,107 +367,6 @@ Will produce:
 If you're referring to a local resource on the same server, you can use relative paths:
 
     See my [About](/about/) page for details.   
-
-Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link:
-
-    This is [an example][id] reference-style link.
-
-You can optionally use a space to separate the sets of brackets:
-
-    This is [an example] [id] reference-style link.
-
-Then, anywhere in the document, you define your link label like this, on a line by itself:
-
-    [id]: http://example.com/  "Optional Title Here"
-
-That is:
-
-* Square brackets containing the link identifier (optionally
-    indented from the left margin using up to three spaces);
-* followed by a colon;
-* followed by one or more spaces (or tabs);
-* followed by the URL for the link;
-* optionally followed by a title attribute for the link, enclosed
-    in double or single quotes, or enclosed in parentheses.
-
-The following three link definitions are equivalent:
-
-    [foo]: http://example.com/  "Optional Title Here"
-    [foo]: http://example.com/  'Optional Title Here'
-    [foo]: http://example.com/  (Optional Title Here)
-
-**Note:** There is a known bug in Markdown.pl 1.0.1 which prevents single quotes from being used to delimit link titles.
-
-The link URL may, optionally, be surrounded by angle brackets:
-
-    [id]: <http://example.com/>  "Optional Title Here"
-
-You can put the title attribute on the next line and use extra spaces or tabs for padding, which tends to look better with longer URLs:
-
-    [id]: http://example.com/longish/path/to/resource/here
-        "Optional Title Here"
-
-Link definitions are only used for creating links during Markdown processing, and are stripped from your document in the HTML output.
-
-Link definition names may consist of letters, numbers, spaces, and punctuation -- but they are *not* case sensitive. E.g. these two links:
-
-    [link text][a]
-    [link text][A]
-
-are equivalent.
-
-The *implicit link name* shortcut allows you to omit the name of the link, in which case the link text itself is used as the name. Just use an empty set of square brackets -- e.g., to link the word "Google" to the google.com web site, you could simply write:
-
-    [Google][]
-
-And then define the link:
-
-    [Google]: http://google.com/
-
-Because link names may contain spaces, this shortcut even works for multiple words in the link text:
-
-    Visit [Daring Fireball][] for more information.
-
-And then define the link:
-    
-    [Daring Fireball]: http://daringfireball.net/
-
-Link definitions can be placed anywhere in your Markdown document. I tend to put them immediately after each paragraph in which they're used, but if you want, you can put them all at the end of your document, sort of like footnotes.
-
-Here's an example of reference links in action:
-
-    I get 10 times more traffic from [Google] [1] than from
-    [Yahoo] [2] or [MSN] [3].
-
-      [1]: http://google.com/        "Google"
-      [2]: http://search.yahoo.com/  "Yahoo Search"
-      [3]: http://search.msn.com/    "MSN Search"
-
-Using the implicit link name shortcut, you could instead write:
-
-    I get 10 times more traffic from [Google][] than from
-    [Yahoo][] or [MSN][].
-
-      [google]: http://google.com/        "Google"
-      [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
-      [msn]:    http://search.msn.com/    "MSN Search"
-
-Both of the above examples will produce the following HTML output:
-
-    <p>I get 10 times more traffic from <a href="http://google.com/"
-    title="Google">Google</a> than from
-    <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a>
-    or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
-
-For comparison, here is the same paragraph written using Markdown's inline link style:
-
-    I get 10 times more traffic from [Google](http://google.com/ "Google")
-    than from [Yahoo](http://search.yahoo.com/ "Yahoo Search") or
-    [MSN](http://search.msn.com/ "MSN Search").
-
-The point of reference-style links is not that they're easier to write. The point is that with reference-style links, your document source is vastly more readable. Compare the above examples: using reference-style links, the paragraph itself is only 81 characters long; with inline-style links, it's 176 characters; and as raw HTML, it's 234 characters. In the raw HTML, there's more markup than there is text.
-
-With Markdown's reference-style links, a source document much more closely resembles the final output, as rendered in a browser. By allowing you to move the markup-related metadata out of the paragraph, you can add links without interrupting the narrative flow of your prose.
 
 <h3 id="em">Emphasis</h3>
 
@@ -581,11 +402,9 @@ To produce a literal asterisk or underscore at a position where it would otherwi
 
     \*this text is surrounded by literal asterisks\*
 
-
-
 <h3 id="code">Code</h3>
 
-To indicate a span of code, wrap it with backtick quotes (`` ` ``). Unlike a pre-formatted code block, a code span indicates code within a normal paragraph. For example:
+To indicate a span of code, wrap it with backtick quotes (\`). Unlike a pre-formatted code block, a code span indicates code within a normal paragraph. For example:
 
     Use the `printf()` function.
 
@@ -678,19 +497,6 @@ Markdown supports a shortcut style for creating "automatic" links for URLs and e
 Markdown will turn this into:
 
     <a href="http://example.com/">http://example.com/</a>
-
-Automatic links for email addresses work similarly, except that Markdown will also perform a bit of randomized decimal and hex entity-encoding to help obscure your address from address-harvesting spambots. For example, Markdown will turn this:
-
-    <address@example.com>
-
-into something like this:
-
-    <a href="&#x6D;&#x61;i&#x6C;&#x74;&#x6F;:&#x61;&#x64;&#x64;&#x72;&#x65;
-    &#115;&#115;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6C;e&#x2E;&#99;&#111;
-    &#109;">&#x61;&#x64;&#x64;&#x72;&#x65;&#115;&#115;&#64;&#101;&#120;&#x61;
-    &#109;&#x70;&#x6C;e&#x2E;&#99;&#111;&#109;</a>
-
-which will render in a browser as a clickable link to "address@example.com".
 
 (This sort of entity-encoding trick will indeed fool many, if not most, address-harvesting bots, but it definitely won't fool all of them. It's better than nothing, but an address published in this way will probably eventually start receiving spam.)
 

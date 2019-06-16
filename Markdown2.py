@@ -1,7 +1,15 @@
 #!/usr/local/bin/python3
 
+# Feature Roadmap
+## 1. Clean up Test.txt file. Make sure it implements the version of the spec I want it to.
+
+## "    " can also indicate a code block
+## Nested blockquotes, i.e. ">" and then "> >"
+## Parsing Markdown in blockquotes, i.e. "> # This is a header in a blockquote"
+
 # Import methods
 from re import findall # re.findall, for links
+from os.path import isfile
 
 class Markdown:
     # Initialize variables
@@ -104,9 +112,11 @@ class Markdown:
 
         if (len(__line) == 0): # Blank line.
             self.__line_type_tracker.append("blank")
+        elif (__line[0] == "<"): # Raw HTML
+            self.__line_type_tracker.append("raw")
         elif (__line[0] == "#"): # Header.
             self.__line_type_tracker.append("header")
-        elif (__line[0:4] == "---" or line[0:7] == "* * *"): # Horizontal rule.
+        elif (__line[0:4] == "---" or __line[0:7] == "* * *"): # Horizontal rule.
             self.__line_type_tracker.append("hr")
         elif (__line[0:2] == "!["): # Image.
             self.__line_type_tracker.append("img")
@@ -211,6 +221,9 @@ class Markdown:
         # Escape ampersands. Replace them with the appropriate HTML entity.
         __line = __line.replace("&", "&#38;")
 
+        # Escape backtick quotes
+        __line = __line.replace("\`", "&#8245;")
+
         # Escape escaped asteriscs, to keep them from being read as bold or
         # italic text.
         __line = __line.replace("\*", "&#42;")
@@ -240,10 +253,10 @@ class Markdown:
         self.__updateLineTypeTracker(__line)
 
         # Print statements, for debugging.
-        # print(self.__line_tracker)
-        # print(self.__line_type_tracker)
-        # print(self.__line_indent_tracker)
-        # print()
+        print(self.__line_tracker)
+        print(self.__line_type_tracker)
+        print(self.__line_indent_tracker)
+        print()
 
         # Handle preformatted code blocks. First write the opening <pre> tag,
         # then return the unprocessed line.
@@ -251,7 +264,7 @@ class Markdown:
             if (self.__pre == True):
                 return "<pre>"
             return "</pre>"
-        if (self.__pre == True):
+        if (self.__pre == True or self.__getLineType(-1) == "raw"):
             return __line
 
         # Parser tracks leading whitespace, so remove it.
@@ -314,8 +327,12 @@ class Markdown:
             # regex capture groups, which seem unreliable.
             __line = __line.split("]")
             desc = __line[0][2:]
-            url = __line[1].split(" ")[0][1:]
-            alt = __line[1].split(" ")[1][1:-2]
+            if (" " in __line[1]):
+                url = __line[1].split(" ")[0][1:]
+                alt = __line[1].split(" ")[1][1:-2]
+            else:
+                url = __line[1][1:-1]
+                alt = ""
             return "<div class='image'><img src='%s' alt='%s' title='%s' /></div>" % (url, alt, desc)
         # Handle series index. This is a non-standard Markdown convention that
         # lets the writer reference an external file that contains a list of
@@ -324,6 +341,8 @@ class Markdown:
         elif (self.__getLineType(-1) == "idx"):
             # Open the target file, write the opening <ul> tag, and add each
             # link in the file to the new index.
+            if (not isfile("./Content/System/"+__line[1:-1])):
+                return "<blink>ERROR: Index file does not exist.</blink>"
             with open("./Content/System/"+__line[1:-1], "r") as fd:
                 __line = "<ul style=\"border:1px dashed gray\" id=\"series_index\">\n"
                 for each in fd:
