@@ -5,6 +5,17 @@ from re import findall # re.findall, for links
 
 class Markdown:
     # Init
+    line_tracker = ["", "", ""]
+    line_type_tracker = ["", "", ""]
+    line_indent_tracker = [0, 0, 0]
+    
+    opening_map = {"ul" : "<ul>", "li" : "<li>"}
+    closing_map = {"ul" : "</ul>", "li" : "</li>"}
+
+    unordered_list = ["*", "+", "-"]
+
+    close_out = []
+    pre = False
 
     # Method: parseInlineMD
     # Purpose: Turn all inline MD tags into HTML.
@@ -53,18 +64,6 @@ class Markdown:
             __line = __line.replace("["+each[0]+"]("+each[1]+")", "<a href=\""+each[1]+"\">"+each[0]+"</a>")
 
         return __line
-
-    line_tracker = ["", "", ""]
-    line_type_tracker = ["", "", ""]
-    line_indent_tracker = [0, 0, 0]
-    
-    opening_map = {"ul" : "<ul>", "li" : "<li>"}
-    closing_map = {"ul" : "</ul>", "li" : "</li>"}
-
-    unordered_list = ["*", "+", "-"]
-
-    close_out = []
-    pre = False
 
     # Method: getLineType
     # Purpose: Return the type of line for the specified position.
