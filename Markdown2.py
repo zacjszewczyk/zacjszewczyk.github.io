@@ -5,12 +5,11 @@ from re import findall # re.findall, for links
 
 class Markdown:
     # Initialize variables
-    __line_tracker = ["", "", ""]
-    __line_type_tracker = ["", "", ""]
-    __line_indent_tracker = [0, 0, 0]
-
-    __close_out = []
-    __pre = False
+    __line_tracker = ["", "", ""] # Last three lines, raw.
+    __line_type_tracker = ["", "", ""] # Type of last three lines.
+    __line_indent_tracker = [0, 0, 0] # Indent level of last three lines.
+    __close_out = [] # List of block-level elements that still need closed out.
+    __pre = False # Yes/no, is the parser in a <pre> tag?
 
     # Method: __parseInlineMD
     # Purpose: Turn all inline Markdown tags into HTML.
@@ -18,43 +17,46 @@ class Markdown:
     # - self: Class namespace
     # - __line: Input line to process, mangled (String)
     # Return:
-    # - Parsed line (String)
+    # - Parsed line. (String)
     def __parseInlineMD(self, __line):
+        # Parser tracks leading whitespace, so remove it to make parsing the
+        # line easier.
         __line = __line.rstrip('\n')
         
-        # Generic parsing
+        # Parse horizontal rules and emdashes
         __line = __line.replace("---", "<hr />")
-
-        ## Parse emdashes
         __line = __line.replace("--", "&#160;&#8212;&#160;")
 
-        ## Prase **, or <strong> tags, first, to keep them from being
+        ## Prase **, or <strong>, tags first, to keep them from being
         ## interpreted as <em> tags...
         while ("**" in __line):
             __line = __line.replace("**", "<strong>", 1).replace("**", "</strong>", 1)
 
-        ## ... then parse the remaining <em> tags
+        ## ... then parse the remaining <em> tags. Make sure there is an even
+        # number of * to parse as <em> ... </em>.
         if (__line.count("*") % 2 == 0):
             while ("*" in __line):
+                # This if skips over the leading "* " in an unordered list, and
+                # parses the rest of the line for <em> tags.
                 if (__line[0] == "*" and __line[1] == " "):
                     __line = "*"+__line[1:].replace("*", "<em>", 1).replace("*", "</em>", 1)
                     break
                 __line = __line.replace("*", "<em>", 1).replace("*", "</em>", 1)
 
-        ## Parse in__line code
+        ## Parse inline code with <code> ... </code> tags.
         while ("`" in __line):
             __line = __line.replace("`", "<code>", 1).replace("`", "</code>", 1)
 
-        ## Parse single quotatin marks
+        ## Parse single quotatin marks.
         __line = __line.replace(" '", " &#8216;").replace("' ", "&#8217; ")
 
-        ## Parse aposrophes
+        ## Parse aposrophes.
         __line = __line.replace("'", "&#39;")
 
-        ## Parse double quotation marks
+        ## Parse double quotation marks.
         __line = __line.replace(' "', " &#8220;").replace('" ', "&#8221; ")
 
-        ## Parse links
+        ## Parse links.
         for each in findall("\[([^\]]+)\]\(([^\)]+)\)", __line):
             __line = __line.replace("["+each[0]+"]("+each[1]+")", "<a href=\""+each[1]+"\">"+each[0]+"</a>")
 
