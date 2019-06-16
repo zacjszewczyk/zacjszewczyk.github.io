@@ -106,7 +106,7 @@ class Markdown:
             self.__line_type_tracker.append("blank")
         elif (__line[0] == "#"): # Header.
             self.__line_type_tracker.append("header")
-        elif (__line[0:4] == "---"): # Horizontal rule.
+        elif (__line[0:4] == "---" or line[0:7] == "* * *"): # Horizontal rule.
             self.__line_type_tracker.append("hr")
         elif (__line[0:2] == "!["): # Image.
             self.__line_type_tracker.append("img")
