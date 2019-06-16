@@ -4,18 +4,13 @@
 from re import findall # re.findall, for links
 
 class Markdown:
-    # Init
-    line_tracker = ["", "", ""]
-    line_type_tracker = ["", "", ""]
-    line_indent_tracker = [0, 0, 0]
-    
-    opening_map = {"ul" : "<ul>", "li" : "<li>"}
-    closing_map = {"ul" : "</ul>", "li" : "</li>"}
+    # Initialize variables
+    __line_tracker = ["", "", ""]
+    __line_type_tracker = ["", "", ""]
+    __line_indent_tracker = [0, 0, 0]
 
-    unordered_list = ["*", "+", "-"]
-
-    close_out = []
-    pre = False
+    __close_out = []
+    __pre = False
 
     # Method: parseInlineMD
     # Purpose: Turn all inline MD tags into HTML.
@@ -73,7 +68,7 @@ class Markdown:
     # Return:
     # - Type of line at specified position (String)
     def getLineType(self, __pos):
-        return self.line_type_tracker[__pos]
+        return self.__line_type_tracker[__pos]
 
     # Method: trimTracker
     # Purpose: Keep tracker lists to a max of three elements.
@@ -92,8 +87,8 @@ class Markdown:
     # - __line: Raw Markdown line, mangled.
     # Return: None.
     def updateLineTracker(self, __line):
-        self.line_tracker.append(__line)
-        self.trimTracker(self.line_tracker)
+        self.__line_tracker.append(__line)
+        self.trimTracker(self.__line_tracker)
 
     # Method: updateLineTypeTracker
     # Purpose: Determine type of line, and whether it is part of a larger
@@ -106,49 +101,49 @@ class Markdown:
         __line = __line.lstrip(' ')
 
         if (len(__line) == 0):
-            self.line_type_tracker.append("blank")
+            self.__line_type_tracker.append("blank")
         elif (__line[0] == "#"):
-            self.line_type_tracker.append("header")
+            self.__line_type_tracker.append("header")
         elif (__line[0:4] == "---"):
-            self.line_type_tracker.append("hr")
+            self.__line_type_tracker.append("hr")
         elif (__line[0:2] == "!["):
-            self.line_type_tracker.append("img")
+            self.__line_type_tracker.append("img")
         elif (__line[0] == "{"):
-            self.line_type_tracker.append("idx")
+            self.__line_type_tracker.append("idx")
         elif (__line[0] in ['*', '+', '-'] and __line[1] == ' '):
             if (self.queryIndentTracker(-1) > self.queryIndentTracker(-2)):
-                self.line_type_tracker.append("ul")
+                self.__line_type_tracker.append("ul")
             elif (self.queryIndentTracker(-1) < self.queryIndentTracker(-2)):
-                self.line_type_tracker.append("/ul")
-            elif (self.line_type_tracker[-1] == "ul" or self.line_type_tracker[-1] == "li"):
-                self.line_type_tracker.append("li")
-            elif (len(self.close_out) != 0):
-                self.line_type_tracker.append("li")
+                self.__line_type_tracker.append("/ul")
+            elif (self.__line_type_tracker[-1] == "ul" or self.__line_type_tracker[-1] == "li"):
+                self.__line_type_tracker.append("li")
+            elif (len(self.__close_out) != 0):
+                self.__line_type_tracker.append("li")
             else:
-                self.line_type_tracker.append("ul")
+                self.__line_type_tracker.append("ul")
         elif (__line[0].isdigit() and __line[1] == ".") or (__line[0:2].isdigit() and __line[3] == "."):
             if (self.queryIndentTracker(-1) > self.queryIndentTracker(-2)):
-                self.line_type_tracker.append("ol")
+                self.__line_type_tracker.append("ol")
             elif (self.queryIndentTracker(-1) < self.queryIndentTracker(-2)):
-                self.line_type_tracker.append("/ol")
-            elif (self.line_type_tracker[-1] == "ol" or self.line_type_tracker[-1] == "li"):
-                self.line_type_tracker.append("li")
-            elif (self.line_type_tracker[-1] == "/ol" and len(self.close_out) != 0):
-                self.line_type_tracker.append("li")
+                self.__line_type_tracker.append("/ol")
+            elif (self.__line_type_tracker[-1] == "ol" or self.__line_type_tracker[-1] == "li"):
+                self.__line_type_tracker.append("li")
+            elif (self.__line_type_tracker[-1] == "/ol" and len(self.__close_out) != 0):
+                self.__line_type_tracker.append("li")
             else:
-                self.line_type_tracker.append("ol")
+                self.__line_type_tracker.append("ol")
         elif (__line[0] == ">"):
-            if (self.line_type_tracker[-1] == "blockquote" or self.line_type_tracker[-1] == "bqt"):
-                self.line_type_tracker.append("bqt")
+            if (self.__line_type_tracker[-1] == "blockquote" or self.__line_type_tracker[-1] == "bqt"):
+                self.__line_type_tracker.append("bqt")
             else:
-                self.line_type_tracker.append("blockquote")
+                self.__line_type_tracker.append("blockquote")
         elif (__line[0:4] == "```"):
-            self.line_type_tracker.append("pre")
-            self.pre = not self.pre
+            self.__line_type_tracker.append("pre")
+            self.__pre = not self.__pre
         else:
-            self.line_type_tracker.append("p")
+            self.__line_type_tracker.append("p")
 
-        self.trimTracker(self.line_type_tracker)
+        self.trimTracker(self.__line_type_tracker)
 
     # Method: updateIndentTracker
     # Purpose: Keep track of the indentation level.
@@ -157,9 +152,9 @@ class Markdown:
     # - __line: Input line to process, mangled. (String)
     # Return: None
     def updateIndentTracker(self, __line):
-        self.line_indent_tracker.append(len(__line) - len(__line.lstrip(' ')))
+        self.__line_indent_tracker.append(len(__line) - len(__line.lstrip(' ')))
 
-        self.trimTracker(self.line_indent_tracker)
+        self.trimTracker(self.__line_indent_tracker)
 
     # Method: queryIndentTracker
     # Purpose: Return the indent level for the specified line.
@@ -169,7 +164,7 @@ class Markdown:
     # Return:
     # - Indent level for specified line. (Int)
     def queryIndentTracker(self, __pos):
-        return self.line_indent_tracker[__pos]
+        return self.__line_indent_tracker[__pos]
 
     # Method: closeOut
     # Purpose: Write closing HTML tags for any open block-level elements.
@@ -178,7 +173,7 @@ class Markdown:
     # Return:
     # - String with each closing HTML tag on its own line. (String)
     def closeOut(self):
-        return '\n'.join(self.close_out)
+        return '\n'.join(self.__close_out)
 
     # Method: escapeCharacters
     # Purpose: Escape &, *, <, and > characters in the text before they are
@@ -219,17 +214,17 @@ class Markdown:
         self.updateLineTracker(__line)
         self.updateLineTypeTracker(__line)
 
-        print(self.line_tracker)
-        print(self.line_type_tracker)
-        print(self.line_indent_tracker)
+        print(self.__line_tracker)
+        print(self.__line_type_tracker)
+        print(self.__line_indent_tracker)
         print()
 
         # Handle code blocks
         if (self.getLineType(-1) == "pre"):
-            if (self.pre == True):
+            if (self.__pre == True):
                 return "<pre>"
             return "</pre>"
-        if (self.pre == True):
+        if (self.__pre == True):
             return __line
 
         __line = __line.lstrip(' ')
@@ -238,34 +233,34 @@ class Markdown:
 
         if (len(__line) == 0):
             __line = self.closeOut()
-            self.close_out = []
+            self.__close_out = []
             return __line
 
         # Handle unorered lists
         ## Opening tags
         if (self.getLineType(-1) == "ul"):
             __line = "<ul>"+'\n'+"    <li>"+__line[2:]+"</li>"
-            self.close_out.append("</ul>\n")
+            self.__close_out.append("</ul>\n")
         ## Closing tags
         elif (self.getLineType(-1) == "/ul"):
             __line = "</ul>\n<li>"+__line[2:]+"</li>"
-            self.close_out.remove("</ul>\n")
+            self.__close_out.remove("</ul>\n")
         # Handle ordered lists
         ## Opening tags
         elif (self.getLineType(-1) == "ol"):
             __line = "<ol>"+'\n'+"    <li>"+". ".join(__line.split(". ")[1:])+"</li>"
-            self.close_out.append("</ol>\n")
+            self.__close_out.append("</ol>\n")
         ## Closing tags
         elif (self.getLineType(-1) == "/ol"):
             __line = "</ol>\n<li>"+__line[2:]+"</li>"
-            self.close_out.remove("</ol>\n")
+            self.__close_out.remove("</ol>\n")
         # Handle list elements
         elif (self.getLineType(-1) == "li"):
             __line = "    <li>"+__line[2:]+"</li>"
         # Handle blockquotes
         elif (self.getLineType(-1) == "blockquote"):
             __line = "<blockquote>\n    <p>"+__line[5:]+"</p>"
-            self.close_out.append("</blockquote>\n")
+            self.__close_out.append("</blockquote>\n")
         elif (self.getLineType(-1) == "bqt"):
             __line = "    <p>"+__line[5:]+"</p>"
         # Handle headers
