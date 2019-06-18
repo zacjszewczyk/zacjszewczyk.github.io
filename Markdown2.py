@@ -263,8 +263,18 @@ class Markdown:
         if (self.__getLineType(-1) == "pre"):
             if (self.__pre == True):
                 return "<pre>"
+                # return "<pre>\n"+__line
             return "</pre>"
-        if (self.__pre == True or self.__getLineType(-1) == "raw"):
+            # return __line+"\n</pre>"
+        
+        # if (self.__pre == True and self.__queryIndentTracker(-1) == 0):
+        #     self.__pre = False
+        #     return __line+"\n</pre>"
+        
+        if (self.__pre == True):
+            return self.__escapeCharacters(__line)
+
+        if (self.__getLineType(-1) == "raw"):
             return __line
 
         # Parser tracks leading whitespace, so remove it.

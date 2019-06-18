@@ -1,5 +1,7 @@
 <h1 id="MarkdownSyntax">Markdown: Syntax</h1>
 
+<p>Note that Markdown formatting syntax is not processed within block-level HTML tags. E.g., you can&#39;t use Markdown-style <code><em>emphasis</em></code> inside an HTML block.</p>
+
 <ul id="ProjectSubmenu">
     <li><a href="/projects/markdown/" title="Markdown Project Page">Main</a></li>
     <li><a href="/projects/markdown/basics" title="Markdown Basics">Basics</a></li>
@@ -64,15 +66,13 @@
 
 <p>For example, to add an HTML table to a Markdown article:</p>
 
-<p>This is a regular paragraph.</p>
-
-    <table>
-        <tr>
-            <td>Foo</td>
-        </tr>
-    </table>
-
-<p>This is another regular paragraph.</p>
+<pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Foo&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
 
 <p>Note that Markdown formatting syntax is not processed within block-level HTML tags. E.g., you can&#39;t use Markdown-style <code><em>emphasis</em></code> inside an HTML block.</p>
 
@@ -82,17 +82,20 @@
 
 <h3 id="AutomaticEscapingforSpecialCharacters">Automatic Escaping for Special Characters</h3>
 
-<p>In HTML, there are two characters that demand special treatment: <code>&lt;</code></p>
-<p>and <code>&#38;</code>. Left angle brackets are used to start tags; ampersands are used to denote HTML entities. If you want to use them as literal characters, you must escape them as entities, e.g. <code>&#38;lt;</code>, and</p>
+<p>In HTML, there are two characters that demand special treatment: <code>&lt;</code> and <code>&#38;</code>. Left angle brackets are used to start tags; ampersands are used to denote HTML entities. If you want to use them as literal characters, you must escape them as entities, e.g. <code>&#38;lt;</code>, and</p>
 <p><code>&#38;amp;</code>.</p>
 
 <p>Ampersands in particular are bedeviling for web writers. If you want to write about &#8216;AT&#38;T&#39;, you need to write &#8216;<code>AT&#38;amp;T</code>&#39;. You even need to escape ampersands within URLs. Thus, if you want to link to:</p>
 
-<p>http://images.google.com/images?num=30&#38;q=larry+bird</p>
+<pre>
+    http://images.google.com/images?num=30&#38;q=larry+bird
+</pre>
 
 <p>you need to encode the URL as:</p>
 
-<p>http://images.google.com/images?num=30&#38;amp;q=larry+bird</p>
+<pre>
+    http://images.google.com/images?num=30&#38;amp;q=larry+bird
+</pre>
 
 <p>in your anchor tag <code>href</code> attribute. Needless to say, this is easy to forget, and is probably the single most common source of HTML validation errors in otherwise well-marked-up web sites.</p>
 
@@ -100,26 +103,35 @@
 
 <p>So, if you want to include a copyright symbol in your article, you can write:</p>
 
-<p>&#38;copy;</p>
+<pre>
+    &#38;copy;
+</pre>
 
 <p>and Markdown will leave it alone. But if you write:</p>
 
-<p>AT&#38;T</p>
+<pre>
+    AT&#38;T
+</pre>
 
 <p>Markdown will translate it to:</p>
 
-<p>AT&#38;amp;T</p>
+<pre>
+    AT&#38;amp;T
+</pre>
 
 <p>Similarly, because Markdown supports <a href="#html">inline HTML</a>, if you use angle brackets as delimiters for HTML tags, Markdown will treat them as such. But if you write:</p>
 
-<p>4 &lt; 5</p>
+<pre>
+    4 &lt; 5
+</pre>
 
 <p>Markdown will translate it to:</p>
 
-<p>4 &#38;lt; 5</p>
+<pre>
+    4 &#38;lt; 5
+</pre>
 
-<p>However, inside Markdown code spans and blocks, angle brackets and ampersands are <em>always</em> encoded automatically. This makes it easy to use Markdown to write about HTML code. (As opposed to raw HTML, which is a terrible format for writing about HTML syntax, because every single <code>&lt;</code></p>
-<p>and <code>&#38;</code> in your example code needs to be escaped.)</p>
+<p>However, inside Markdown code spans and blocks, angle brackets and ampersands are <em>always</em> encoded automatically. This makes it easy to use Markdown to write about HTML code. (As opposed to raw HTML, which is a terrible format for writing about HTML syntax, because every single <code>&lt;</code> and <code>&#38;</code> in your example code needs to be escaped.)</p>
 
 <hr />
 
@@ -141,19 +153,23 @@
 <p>Atx-style headers use 1-6 hash characters at the start of the line,</p>
 <p>corresponding to header levels 1-6. For example:</p>
 
-<h1 id="ThisisanH1">This is an H1</h1>
+<pre>
+# This is an H1
 
-<h2 id="ThisisanH2">This is an H2</h2>
+## This is an H2
 
-<h6 id="ThisisanH6">This is an H6</h6>
+###### This is an H6
+</pre>
 
 <p>Optionally, you may &#8220;close&#8221; atx-style headers. This is purely cosmetic &#160;&#8212;&#160; you can use this if you think it looks better. The closing hashes don&#39;t even need to match the number of hashes used to open the header. (The number of opening hashes determines the header level.) :</p>
 
-<h1 id="ThisisanH1">This is an H1</h1>
+<pre>
+# This is an H1 #
 
-<h2 id="ThisisanH2">This is an H2</h2>
+## This is an H2 ##
 
-<h3 id="ThisisanH3">This is an H3</h3>
+### This is an H3 ######
+</pre>
 
 
 <h3 id="Blockquotes">Blockquotes</h3>
