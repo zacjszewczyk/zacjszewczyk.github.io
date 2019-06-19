@@ -8,9 +8,11 @@ from time import strptime, strftime, mktime, localtime, gmtime # Managing file m
 import datetime # Recording runtime
 from re import search # Regex
 from sys import exit, argv, stdout # Command line options
-from Markdown import Markdown
+from Markdown2 import Markdown
 from ModTimes import CompareMtimes
 from colors import c
+
+md = Markdown()
 
 # Global variables
 ## - types: Keep track of current and two previous line types. (Tuple)
@@ -412,10 +414,10 @@ def GenPage(source, timestamp):
         elif (idx == 6):
             target_fd.write(local_content.replace("{{META_DESC}}", line.strip()).strip())
             target_fd.write("\n"+title.strip())
-            target_fd.write("\n"+Markdown(line, base_url).strip())
+            target_fd.write("\n"+md.html(line).strip())
         # For successive lines of the file, parse them as Markdown and write them to the file.
         elif (idx > 5):
-            target_fd.write("\n"+Markdown(line, base_url).strip())
+            target_fd.write("\n"+md.html(line).strip())
 
         # Increase the line number
         idx += 1
