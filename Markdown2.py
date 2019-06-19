@@ -221,6 +221,9 @@ class Markdown:
         # Escape ampersands. Replace them with the appropriate HTML entity.
         __line = __line.replace("&", "&#38;")
 
+        for each in findall("`[^`\n]+`", __line):
+            __line = __line.replace(each, each.replace("*", "&#42;"))
+
         # Escape backtick quotes
         __line = __line.replace("\`", "&#8245;")
 
@@ -280,7 +283,7 @@ class Markdown:
         # Parser tracks leading whitespace, so remove it.
         __line = __line.lstrip(' ')
 
-        # Escape &, *, <, and > characters
+        # Escape &, *, <, and > characters. Also escape inline code blocks.
         __line = self.__escapeCharacters(__line)
 
         # If the parser finds a blank line, close open block-level elements,
@@ -361,7 +364,10 @@ class Markdown:
             return __line
         # Default to treating the line as a paragraph
         else:
-            __line = "<p>"+__line+"</p>"
+            if (__line[-2:] == "  "):
+                __line = "<p>"+__line.rstrip(' ')+"</p>\n\n<br />"
+            else:
+                __line = "<p>"+__line+"</p>"
 
         # Once all the block-level parsing is done, parse the inline Markdown
         # tags.

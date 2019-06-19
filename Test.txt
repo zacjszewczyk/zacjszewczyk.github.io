@@ -1,7 +1,5 @@
 # Markdown: Syntax
 
-Note that Markdown formatting syntax is not processed within block-level HTML tags. E.g., you can't use Markdown-style `*emphasis*` inside an HTML block.
-
 <ul id="ProjectSubmenu">
     <li><a href="/projects/markdown/" title="Markdown Project Page">Main</a></li>
     <li><a href="/projects/markdown/basics" title="Markdown Basics">Basics</a></li>
@@ -71,8 +69,7 @@ Unlike block-level HTML tags, Markdown syntax *is* processed within span-level t
 
 ### Automatic Escaping for Special Characters
 
-In HTML, there are two characters that demand special treatment: `<` and `&`. Left angle brackets are used to start tags; ampersands are used to denote HTML entities. If you want to use them as literal characters, you must escape them as entities, e.g. `&lt;`, and
-`&amp;`.
+In HTML, there are two characters that demand special treatment: `<` and `&`. Left angle brackets are used to start tags; ampersands are used to denote HTML entities. If you want to use them as literal characters, you must escape them as entities, e.g. `&lt;`, and `&amp;`.
 
 Ampersands in particular are bedeviling for web writers. If you want to write about 'AT&T', you need to write '`AT&amp;T`'. You even need to escape ampersands within URLs. Thus, if you want to link to:
 

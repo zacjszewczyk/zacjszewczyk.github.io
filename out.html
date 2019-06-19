@@ -1,7 +1,5 @@
 <h1 id="MarkdownSyntax">Markdown: Syntax</h1>
 
-<p>Note that Markdown formatting syntax is not processed within block-level HTML tags. E.g., you can&#39;t use Markdown-style <code><em>emphasis</em></code> inside an HTML block.</p>
-
 <ul id="ProjectSubmenu">
     <li><a href="/projects/markdown/" title="Markdown Project Page">Main</a></li>
     <li><a href="/projects/markdown/basics" title="Markdown Basics">Basics</a></li>
@@ -74,7 +72,7 @@
 &lt;/table&gt;
 </pre>
 
-<p>Note that Markdown formatting syntax is not processed within block-level HTML tags. E.g., you can&#39;t use Markdown-style <code><em>emphasis</em></code> inside an HTML block.</p>
+<p>Note that Markdown formatting syntax is not processed within block-level HTML tags. E.g., you can&#39;t use Markdown-style <code>&#42;emphasis&#42;</code> inside an HTML block.</p>
 
 <p>Span-level HTML tags &#160;&#8212;&#160; e.g. <code>&lt;span&gt;</code>, <code>&lt;cite&gt;</code>, or <code>&lt;del&gt;</code> &#160;&#8212;&#160; can be used anywhere in a Markdown paragraph, list item, or header. If you want, you can even use HTML tags instead of Markdown formatting; e.g. if you&#39;d prefer to use HTML <code>&lt;a&gt;</code> or <code>&lt;img&gt;</code> tags instead of Markdown&#39;s link or image syntax, go right ahead.</p>
 
@@ -82,8 +80,7 @@
 
 <h3 id="AutomaticEscapingforSpecialCharacters">Automatic Escaping for Special Characters</h3>
 
-<p>In HTML, there are two characters that demand special treatment: <code>&lt;</code> and <code>&#38;</code>. Left angle brackets are used to start tags; ampersands are used to denote HTML entities. If you want to use them as literal characters, you must escape them as entities, e.g. <code>&#38;lt;</code>, and</p>
-<p><code>&#38;amp;</code>.</p>
+<p>In HTML, there are two characters that demand special treatment: <code>&lt;</code> and <code>&#38;</code>. Left angle brackets are used to start tags; ampersands are used to denote HTML entities. If you want to use them as literal characters, you must escape them as entities, e.g. <code>&#38;lt;</code>, and <code>&#38;amp;</code>.</p>
 
 <p>Ampersands in particular are bedeviling for web writers. If you want to write about &#8216;AT&#38;T&#39;, you need to write &#8216;<code>AT&#38;amp;T</code>&#39;. You even need to escape ampersands within URLs. Thus, if you want to link to:</p>
 
@@ -429,11 +426,13 @@
 
 <p>If you&#39;re referring to a local resource on the same server, you can use relative paths:</p>
 
-<p>See my <a href="/about/">About</a> page for details.   </p>
+<p>See my <a href="/about/">About</a> page for details.</p>
+
+<br />
 
 <h3 id="em">Emphasis</h3>
 
-<p>Markdown treats asterisks (<code>*</code>) and underscores (<code>_</code>) as indicators of emphasis. Text wrapped with one <code>*</code> or <code>_</code> will be wrapped with an HTML <code>&lt;em&gt;</code> tag; double <code>*</code>&#39;s or <code>_</code>&#39;s will be wrapped with an HTML <code>&lt;strong&gt;</code> tag. E.g., this input:</p>
+<p>Markdown treats asterisks (<code>&#42;</code>) and underscores (<code>_</code>) as indicators of emphasis. Text wrapped with one <code>&#42;</code> or <code>_</code> will be wrapped with an HTML <code>&lt;em&gt;</code> tag; double <code>&#42;</code>&#39;s or <code>_</code>&#39;s will be wrapped with an HTML <code>&lt;strong&gt;</code> tag. E.g., this input:</p>
 
 <p><em>single asterisks</em></p>
 
@@ -459,7 +458,7 @@
 
 <p>un<em>frigging</em>believable</p>
 
-<p>But if you surround an <code>*</code> or <code>_</code> with spaces, it&#39;ll be treated as a literal asterisk or underscore.</p>
+<p>But if you surround an <code>&#42;</code> or <code>_</code> with spaces, it&#39;ll be treated as a literal asterisk or underscore.</p>
 
 <p>To produce a literal asterisk or underscore at a position where it would otherwise be used as an emphasis delimiter, you can backslash escape it:</p>
 
