@@ -161,7 +161,7 @@ class Markdown:
             else:
                 self.__line_type_tracker.append("ol")
         elif (__line[0] == ">"): # Blockquote
-            # If the line is preceeded by an blockquote tag or the parser
+            # If the line is preceeded by a blockquote tag or the parser
             # is already in a blockquote, continue parsing the existing
             # blockquote
             if (self.__line_type_tracker[-1] == "blockquote" or self.__line_type_tracker[-1] == "bqt"):
@@ -323,7 +323,10 @@ class Markdown:
             __line = "<blockquote>\n    <p>"+__line[5:]+"</p>"
             self.__close_out.append("</blockquote>\n")
         elif (self.__getLineType(-1) == "bqt"):
-            __line = "    <p>"+__line[5:]+"</p>"
+            if (__line[5:] == ''):
+                __line = ''
+            else:
+                __line = "    <p>"+__line[5:]+"</p>"
         # Handle header elements
         elif (self.__getLineType(-1) == "header"):
             # Count the number of # at the beginning of the line.
