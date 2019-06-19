@@ -110,7 +110,7 @@ class Markdown:
         # Parser tracks leading whitespace, so remove it.
         __line = __line.lstrip(' ')
 
-        if (len(__line) == 0): # Blank line.
+        if (len(__line.strip()) == 0): # Blank line.
             self.__line_type_tracker.append("blank")
         elif (__line[0] == "<"): # Raw HTML
             self.__line_type_tracker.append("raw")
@@ -129,6 +129,8 @@ class Markdown:
                 self.__line_type_tracker.append("ul")
             # If a line is un-indented from the previous one, close out a list.
             elif (self.__queryIndentTracker(-1) < self.__queryIndentTracker(-2)):
+                print(self.__queryIndentTracker(-1))
+                print(self.__queryIndentTracker(-2))
                 self.__line_type_tracker.append("/ul")
             # If the parser finds a list element preceeded by another list
             # element or an opening list tag, treat this line as a list element
@@ -186,8 +188,11 @@ class Markdown:
     # - __line: Input line to process, mangled. (String)
     # Return: None
     def __updateIndentTracker(self, __line):
+        if (__line.strip() == ""):
+            self.__line_indent_tracker.append(0)
         # Count leading spaces, and append to the line tracker list
-        self.__line_indent_tracker.append(len(__line) - len(__line.lstrip(' ')))
+        else:
+            self.__line_indent_tracker.append(len(__line) - len(__line.lstrip(' ')))
         self.__trimTracker(self.__line_indent_tracker)
 
     # Method: __queryIndentTracker
@@ -256,10 +261,10 @@ class Markdown:
         self.__updateLineTypeTracker(__line)
 
         # Print statements, for debugging.
-        print(self.__line_tracker)
-        print(self.__line_type_tracker)
-        print(self.__line_indent_tracker)
-        print()
+        # print(self.__line_tracker)
+        # print(self.__line_type_tracker)
+        # print(self.__line_indent_tracker)
+        # print()
 
         # Handle preformatted code blocks. First write the opening <pre> tag,
         # then return the unprocessed line.
@@ -367,7 +372,7 @@ class Markdown:
             return __line
         # Default to treating the line as a paragraph
         else:
-            if (__line[-2:] == "  "):
+            if (__line[-3:] == "   "):
                 __line = "<p>"+__line.rstrip(' ')+"</p>\n\n<br />"
             else:
                 __line = "<p>"+__line+"</p>"
