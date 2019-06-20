@@ -37,13 +37,13 @@ content = ""
 ## - byline: Author name, as it will appear on all articles (String)
 base_url, byline, full_name, meta_keywords, meta_appname, twitter_url, insta_url = "", "", "", "", "", "", ""
 
-# Method: AppendContentOfXToY
+# Method: AppendContent2OfXToY
 # Purpose: Append the first paragraph of an original article, or
 #          the entirety of a linkpost, to a target file.
 # Parameters:
 # - target: Target file name, including extension. (String)
 # - source: Source file name, including extension. (String)
-def AppendContentOfXToY(target, source, timestamp):
+def AppendContent2OfXToY(target, source, timestamp):
     # Store the name of the corresponding HTML file in a variable
     html_filename = source.lower().replace(" ", "-")[0:-3]+"html"
     
@@ -281,7 +281,7 @@ def GenBlog():
                     if (not isfile("./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):                        
                         article_title = GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     else:
-                        if (CompareMtimes("./Content/"+files[year][month][day][timestamp], "./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
+                        if (CompareMtimes("./Content2/"+files[year][month][day][timestamp], "./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
                             article_title = GetTitle(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                         else:
                             # Generate each content file. "year", "month", "day", "timestamp"
@@ -295,7 +295,7 @@ def GenBlog():
 
                     # Add the first twenty-five articles to the main blog page.
                     if (file_idx < 25):
-                        AppendContentOfXToY("./local/blog", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                        AppendContent2OfXToY("./local/blog", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     # Write the years in which a post was made to the header element, in a
                     # big table to facilitate easy reading. 
                     elif (file_idx == 25):
@@ -317,7 +317,7 @@ def GenBlog():
                         temp = year
 
                         # Add the twenty-sixth article to the archives page.
-                        AppendContentOfXToY("./local/archives", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                        AppendContent2OfXToY("./local/archives", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     
                     # Add all other articles to the archives page.
                     else:
@@ -326,7 +326,7 @@ def GenBlog():
                             archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s.html'>%s</a></article>" % (year, year))
                             archives_fd.close()
                             temp = year
-                        AppendContentOfXToY("./local/archives", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                        AppendContent2OfXToY("./local/archives", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                     
                     # Add all articles to the RSS feed.
                     AppendToFeed(files[year][month][day][timestamp])
@@ -353,7 +353,7 @@ def GenBlog():
 def GenPage(source, timestamp):
     global content
 
-    src = "Content/"+source
+    src = "Content2/"+source
     dst = "./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html"
 
     # Ensure source file contains header. If not, use the Migrate() method to generate it.
@@ -431,7 +431,7 @@ def GenPage(source, timestamp):
     target_fd.close()
     source_fd.close()
 
-    mtime = strftime("%Y/%m/%d %H:%M:%S", localtime(stat("./Content/"+source).st_mtime))
+    mtime = strftime("%Y/%m/%d %H:%M:%S", localtime(stat("./Content2/"+source).st_mtime))
     utime(dst, ((mktime(strptime(mtime, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mtime, "%Y/%m/%d %H:%M:%S")))))
 
     return article_title
@@ -497,7 +497,7 @@ def GetFiles():
 # Parameters:
 # - source: Source file name, including extension. (String)
 def GetTitle(source, timestamp):
-    src = "Content/"+source
+    src = "Content2/"+source
 
     with open(src, "r") as source_fd:
         # Ensure source file contains header. If not, use the Migrate() method to generate it.
@@ -560,15 +560,15 @@ def Init():
         print(c.FAIL+"Error reading settings from './EDITME'. Please check file configuration and try again."+c.ENDC)
         exit(1)
 
-    # Check for existence of system files and Content directory.
+    # Check for existence of system files and Content2 directory.
     # These are requirements for First Crack; it will fail if they do not exist.
     ## Check for the existence of the "./system" directory first...
     if (not isdir("./system")):
         print(c.FAIL+"\"./system\" directory does not exist. Exiting."+c.ENDC)
         exit(1)
-    ## ...then for the existence of the Content directory
-    if (not isdir("./Content")):
-        print(c.FAIL+"\"./Content\" directory does not exist. Exiting."+c.ENDC)
+    ## ...then for the existence of the Content2 directory
+    if (not isdir("./Content2")):
+        print(c.FAIL+"\"./Content2\" directory does not exist. Exiting."+c.ENDC)
         exit(1)
 
     ## Now ensure crucial system files exist
@@ -610,9 +610,9 @@ def Init():
     # Generate a dictionary with years as the keys, and sub-dictinaries as the elements.
     # These elements have months as the keys, and a list of the posts made in that month
     # as the elements.
-    for each in listdir("Content"):
+    for each in listdir("Content2"):
         if (".txt" in each):
-            mtime = strftime("%Y/%m/%d/%H:%M:%S", localtime(stat("Content/"+each).st_mtime)).split("/")
+            mtime = strftime("%Y/%m/%d/%H:%M:%S", localtime(stat("Content2/"+each).st_mtime)).split("/")
             if (mtime[0] not in files):
                 files[mtime[0]] = {}
             if (mtime[1] not in files[mtime[0]]):
@@ -665,8 +665,8 @@ def Interface(params,search_query="",end_action="continue"):
             else:
                 search_string = search_query
 
-            # Iterate over the entire ./Content dirctory
-            for file in listdir("Content"):
+            # Iterate over the entire ./Content2 dirctory
+            for file in listdir("Content2"):
                 # Only inspect text files
                 if (not ".txt" in file):
                     continue
@@ -680,9 +680,9 @@ def Interface(params,search_query="",end_action="continue"):
 
         # Revert post timestamps
         if (search("-r", query)):
-            for files in listdir("Content"):
+            for files in listdir("Content2"):
                 if (files.endswith(".txt")):
-                    Revert("Content/"+files)
+                    Revert("Content2/"+files)
 
         # Remove all existing structure files
         if (search("-R", query) != None):
@@ -713,7 +713,7 @@ def Interface(params,search_query="",end_action="continue"):
 # - mod_time: Timestamp for reverting update time, format %Y/%m/%d %H:%M:%S. (String)
 def Migrate(target, mod_time):
     # Open the target file and read the first line.
-    fd = open("Content/"+target, "r")
+    fd = open("Content2/"+target, "r")
     article_content = fd.readline()
 
     # Detect a linkpost or an original article, and parse the information appropriately.
@@ -734,12 +734,12 @@ def Migrate(target, mod_time):
     fd.close()
 
     # Clear the target file, then write it's contents into it after the header information.
-    fd = open("Content/"+target, "w")
+    fd = open("Content2/"+target, "w")
     fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, byline, article_content.strip()))
     fd.close()
 
     # Revert the update time for the target file, to its previous value.
-    utime("Content/"+target, ((mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
+    utime("Content2/"+target, ((mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
 
     # Return the read article type, for debugging.
     return article_type
@@ -771,7 +771,7 @@ def Revert(tgt):
 # - q: String to search for (String)
 def SearchFile(tgt, q):
     ret = []
-    with open("Content/"+tgt) as fd:
+    with open("Content2/"+tgt) as fd:
         idx = 0
         for line in fd:
             if (q.lower() in line.lower()):
