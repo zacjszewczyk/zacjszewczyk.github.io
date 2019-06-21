@@ -6,11 +6,11 @@ Author: Zac J. Szewczyk
 
 I like Antonio's idea, a lot. As much as [I try to keep my system stock](My Setup 2019.txt), this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:
 
-<pre>
+```
 $ alias gs="git status"
 $ alias gac="git add . && git commit -m"
 $ alias gp="git push"
-</pre>
+```
 
 [I have talked about these aliases before](My Setup 2019.txt); they make interacting with Git just a little bit easier. [Hat-tip to Ire Aderinokun for the idea](https://bitsofco.de/git-aliases-for-lazy-developers/).
 
@@ -30,7 +30,7 @@ This lets me refresh my bash profile whenever I make a change--for example, addi
 alias search="grep -rnw './' -e "
 </pre>
 
-This alias gives me search functionality in the terminal, so I can avoid opening up Finder for most simple queries. 
+This alias gives me search functionality in the terminal, so I can avoid opening up Finder for most simple queries.
 
 <pre class="shell">
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"

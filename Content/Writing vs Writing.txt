@@ -4,6 +4,6 @@ Link: http://shawnblanc.net/2011/02/writing-vs-writing/
 Pubdate: 2013/06/03 17:00:24
 Author: Zac Szewczyk
 
-Shawn Blanc in an article published over two years ago, which he linked to earlier this afternoon in [a linked-list post](http://shawnblanc.net/2013/06/maierson-editing/):  
+Shawn Blanc in an article published over two years ago, which he linked to earlier this afternoon in [a linked-list post](http://shawnblanc.net/2013/06/maierson-editing/):
 
-    "But suppose one day I do arrive at some level of skill where the ink flows like honey and the prose like fine wine. I wonder if I'd even realize it. It may very well feel just like it does right now -- like today -- when it seems as if I can't even put two words together using copy and paste."
+> "But suppose one day I do arrive at some level of skill where the ink flows like honey and the prose like fine wine. I wonder if I'd even realize it. It may very well feel just like it does right now -- like today -- when it seems as if I can't even put two words together using copy and paste."

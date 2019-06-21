@@ -4,6 +4,6 @@ Link: http://www.theverge.com/2013/2/21/4010016/liveson-uses-artificial-intellig
 Pubdate: 2013/02/22 12:05:12
 Author: Zac Szewczyk
 
-"'We are at the very beginning of the build process,' Dave Bedwood, creative partner at Lean Mean Fighting Machine, said in an email. 'This site is very much for people to sign up now, get a second twitter account, private to them, and just watch it learn and grow. As A.I advances, then maybe we will then get into it being able to copy syntax. When you die, if you've had this account for a long time, it may be able to keep tweeting as you.'"  
+"'We are at the very beginning of the build process,' Dave Bedwood, creative partner at Lean Mean Fighting Machine, said in an email. 'This site is very much for people to sign up now, get a second twitter account, private to them, and just watch it learn and grow. As A.I advances, then maybe we will then get into it being able to copy syntax. When you die, if you've had this account for a long time, it may be able to keep tweeting as you.'"
 
 Although skeptical at first, the more I thought about it--especially in light of the impressive learning capabilities of the [quadracopters previously linked to](Quadracopters.txt)--the more I became convinced that this step in artificial intelligence was not only possible, but something we will likely see in the coming years. And while I fail to see a need for such a service, it is very interesting challenge I would nevertheless love to see successful.

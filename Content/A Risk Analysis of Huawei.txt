@@ -4,8 +4,8 @@ Link: https://www.lawfareblog.com/risk-analysis-huawei-5g
 Pubdate: 2019/04/17 17:16:04
 Author: Zac Szewczyk
 
-Nicholas Weaver on the technical challenges to calling Huawei "safe", and why that might not matter:  
+Nicholas Weaver on the technical challenges to calling Huawei "safe", and why that might not matter:
 
-    "...the code that Huawei uses, like so much of the rest of the code running the world, is simply a nightmare: It is complex, written in an 'unsafe' manner, using 'unsafe' languages. The scale and complexity make it impossible to analyze the code to look for new bugs, let alone efforts at sabotage. ... [and] the dirty secret is that most of the world's computing infrastructure is a similar nightmare."  
+> "...the code that Huawei uses, like so much of the rest of the code running the world, is simply a nightmare: It is complex, written in an 'unsafe' manner, using 'unsafe' languages. The scale and complexity make it impossible to analyze the code to look for new bugs, let alone efforts at sabotage. ... [and] the dirty secret is that most of the world's computing infrastructure is a similar nightmare."
 
 Two takeaways: 1) Choosing to use Huawei does not mean choosing to invite the Chinese government into a network. United States intelligence agencies have on-demand access to these networks; do not be so naive to believe other nations refrained from using similar tactics to the same results. And 2) 5G may not live up to all the hype. Even if it does, improving 4G infrastructure as AT&T did with its 5GE network may shrink that delta to the point where the risk does not outweigh the benefit.

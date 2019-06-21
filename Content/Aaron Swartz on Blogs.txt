@@ -4,6 +4,6 @@ Link: http://www.aaronsw.com/weblog/stepback
 Pubdate: 2013/01/20 20:36:34
 Author: Zac Szewczyk
 
-A few days ago in preparation for posting [*We Have Lost One of Our Own*](Aaron Swartz.txt), a short article I wrote eulogizing Aaron Swartz in response to the news that he had committed suicide, I spent some time perusing his work. This article, Take a Step Back, is one of the many I saved to Instapaper, and the one in which I found this interesting tidbit:  
+A few days ago in preparation for posting [*We Have Lost One of Our Own*](Aaron Swartz.txt), a short article I wrote eulogizing Aaron Swartz in response to the news that he had committed suicide, I spent some time perusing his work. This article, Take a Step Back, is one of the many I saved to Instapaper, and the one in which I found this interesting tidbit:
 
-    "There are the blogs on 'life hacks,' which are full of gadgets and gizmos that seem to cause more problems than they solve. There are the anti-procrastination blogs, where the author has a constant stream of epiphanies that all seem to amount to 'just put away the distractions and get stuff done.' And there are the charlatans, who tell you that all your wildest dreams can come true if you just follow their patented advice."
+> "There are the blogs on 'life hacks,' which are full of gadgets and gizmos that seem to cause more problems than they solve. There are the anti-procrastination blogs, where the author has a constant stream of epiphanies that all seem to amount to 'just put away the distractions and get stuff done.' And there are the charlatans, who tell you that all your wildest dreams can come true if you just follow their patented advice."

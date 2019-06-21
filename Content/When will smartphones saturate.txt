@@ -4,6 +4,6 @@ Link: http://www.asymco.com/2014/01/07/when-will-smartphones-saturate/
 Pubdate: 2014/01/08 20:52:43
 Author: Zac Szewczyk
 
-> "Although 2013 was often cited as the year when smartphones saturated ('everybody that wants one has one'), the total population of users will likely take another decade to reach maximum. The point of inflection in global growth could be expected in 2017. ... What most observers sensed was the point of inflection in growth in North America and Western Europe. Those regions are 11% of the world's population."  
+> "Although 2013 was often cited as the year when smartphones saturated ('everybody that wants one has one'), the total population of users will likely take another decade to reach maximum. The point of inflection in global growth could be expected in 2017. ... What most observers sensed was the point of inflection in growth in North America and Western Europe. Those regions are 11% of the world's population."
 
 A characteristically excellent article by Horace Dediu of Asymco. Horace Dediu, Benedict Evans, and Ben Thompson constantly vie for the top spot as my favorite data-driven writer. As much as I enjoyed [*Chromebooks and the Cost of Complexity*](http://stratechery.com/2014/chromebooks-cost-complexity/), Horace might have inched his way ahead with this one. As usual, I find his perspective on data--even more so than his revered graphs--fascinating.

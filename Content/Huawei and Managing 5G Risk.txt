@@ -4,6 +4,6 @@ Link: https://www.lawfareblog.com/huawei-and-managing-5g-risk
 Pubdate: 2019/04/10 12:29:11
 Author: Zac Szewczyk
 
-I planned to include a link to this piece in [*Proxy Innovation*](Proxy Innovation.txt). As that article grew from a brief comment into a more in-depth rundown of the U.S.-Huawei situation, though, I pulled Herb Lin's [*Huawei and Managing 5G Risk*](https://www.lawfareblog.com/huawei-and-managing-5g-risk) out for its own post.  
+I planned to include a link to this piece in [*Proxy Innovation*](Proxy Innovation.txt). As that article grew from a brief comment into a more in-depth rundown of the U.S.-Huawei situation, though, I pulled Herb Lin's [*Huawei and Managing 5G Risk*](https://www.lawfareblog.com/huawei-and-managing-5g-risk) out for its own post.
 
 Where the five articles I linked to [last time](Proxy Innovation.txt) focused on this situation at a high level, Herb Lin delves into the technical arguments for and against Huawei's adoption by the West. As it turns out, the decision to adopt or blacklist the company comes down to a much more complicated risk-benefit analysis, even if conclusive evidence linking it to the Chinese government surfaces. [Tom Wheeler and Robert Williams agree](https://www.lawfareblog.com/keeping-huawei-hardware-out-us-not-enough-secure-5g). Check these pieces out, too, if you still want more to read after [my last post](Proxy Innovation.txt).

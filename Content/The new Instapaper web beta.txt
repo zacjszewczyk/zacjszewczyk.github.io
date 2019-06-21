@@ -4,10 +4,10 @@ Link: http://blog.instapaper.com/post/57817543037
 Pubdate: 2013/08/12 22:02:55
 Author: Zac Szewczyk
 
-With the beta release of Instapaper's newly overhauled and undeniably much more attractive website, we are finally beginning to see some of the great new features Marco sold Instapaper to Betaworks for. As I said in [*What Happened to Instapaper?*](What Happened to Instapaper.txt), I'm very excited to see where the company takes Instapaper in the near future. A new website was a wonderful place to begin.  
+With the beta release of Instapaper's newly overhauled and undeniably much more attractive website, we are finally beginning to see some of the great new features Marco sold Instapaper to Betaworks for. As I said in [*What Happened to Instapaper?*](What Happened to Instapaper.txt), I'm very excited to see where the company takes Instapaper in the near future. A new website was a wonderful place to begin.
 
-And for those thinking Betaworks has sat on their hands for the last four months, Marco Arment dispels that notion in [his blog post responding to the announcement](http://www.marco.org/2013/08/09/instapaper-design-beta):  
+And for those thinking Betaworks has sat on their hands for the last four months, Marco Arment dispels that notion in [his blog post responding to the announcement](http://www.marco.org/2013/08/09/instapaper-design-beta):
 
-    "Betaworks has only owned Instapaper for a few months so far, and they've already hired a staff, moved the entire infrastructure to AWS, improved support, rewritten much of the back end, and overhauled the website design."  
+> "Betaworks has only owned Instapaper for a few months so far, and they've already hired a staff, moved the entire infrastructure to AWS, improved support, rewritten much of the back end, and overhauled the website design."
 
 This is a very promising start. Next up: a new version of Instapaper for iOS, likely to be released around the same time iOS 7 hits the market.

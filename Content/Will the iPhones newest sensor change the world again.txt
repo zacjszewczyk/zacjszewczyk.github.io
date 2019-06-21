@@ -4,10 +4,10 @@ Link: http://www.theverge.com/2013/9/10/4716098/fingerprint-analysis-touch-id-se
 Pubdate: 2013/09/10 21:07:30
 Author: Zac Szewczyk
 
-In an excellent article posted to The Verge earlier this afternoon Casey Newton made the point I intended to discuss this evening almost as an aside near the end of his article:  
+In an excellent article posted to The Verge earlier this afternoon Casey Newton made the point I intended to discuss this evening almost as an aside near the end of his article:
 
-    "Apple could also let users log in to other apps and services using a fingerprints, providing secure authentication into apps and websites with a couple of taps. If biometric solutions become widely adopted, the tech industry could begin to phase out--or at least augment--the flawed, familiar password."  
+> "Apple could also let users log in to other apps and services using a fingerprints, providing secure authentication into apps and websites with a couple of taps. If biometric solutions become widely adopted, the tech industry could begin to phase out--or at least augment--the flawed, familiar password."
 
-With the advent of Passbook in iOS 6, Apple began handling important personal information such as credit card numbers, boarding passes, and gift cards. A few months ago in June, when  the company announced iCloud Keychain, it expanded that domain to include passwords, but only on the Mac platform. Before too long--hopefully prior to iOS 8--I foresee Apple marrying these two technologies with Touch ID on iOS to give users the ability to not only unlock their phone with a fingerprint, but login to websites and apps with that same technology.  
+With the advent of Passbook in iOS 6, Apple began handling important personal information such as credit card numbers, boarding passes, and gift cards. A few months ago in June, when  the company announced iCloud Keychain, it expanded that domain to include passwords, but only on the Mac platform. Before too long--hopefully prior to iOS 8--I foresee Apple marrying these two technologies with Touch ID on iOS to give users the ability to not only unlock their phone with a fingerprint, but login to websites and apps with that same technology.
 
 Touch ID in its current form is a technology in its infancy; it will take time before we see the full potential of the groundbreaking feature, and perhaps even longer before we realize it.

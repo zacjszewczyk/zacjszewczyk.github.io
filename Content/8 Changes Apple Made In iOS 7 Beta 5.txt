@@ -4,6 +4,6 @@ Link: http://www.cultofmac.com/238967/8-changes-apple-made-in-ios-7-beta-5/
 Pubdate: 2013/08/07 19:46:45
 Author: Zac Szewczyk
 
-"Ability to disable Control Center while using apps. The feature previously worked no matter where you were in iOS 7. Now you can select to have it turned off whenever an app is open. It can also be disabled on the lock screen."  
+"Ability to disable Control Center while using apps. The feature previously worked no matter where you were in iOS 7. Now you can select to have it turned off whenever an app is open. It can also be disabled on the lock screen."
 
 Immediately upon reading this it struck me how very strange it is for Apple, notorious for choosing the one experience it considers best and enforcing it with a hard and unyielding hand, to give its users control over such a major feature in iOS 7. I wouldn't be surprised to see the setting gone by the next beta release.

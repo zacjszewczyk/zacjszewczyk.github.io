@@ -4,10 +4,10 @@ Link: http://www.randsinrepose.com/archives/2012/09/18/the_second_test.html
 Pubdate: 2013/05/30 14:53:16
 Author: Zac Szewczyk
 
-Michael Lopp explaining why engineers, in his experience, appear to hate you:  
+Michael Lopp explaining why engineers, in his experience, appear to hate you:
 
-    "In your company, there are three kinds of people. There are those you are aware of, but who don't immediately affect your world. There are those who mildly affect  your world and upon whom you have a lightweight dependency. And there are those who are an active part of your world. You depend on them.  
+> "In your company, there are three kinds of people. There are those you are aware of, but who don't immediately affect your world. There are those who mildly affect  your world and upon whom you have a lightweight dependency. And there are those who are an active part of your world. You depend on them.
 
-    "I don't want to depend on you. It's nothing personal, it's just that as an engineer I irrationally believe that anything I don't build with my own hands is going to get fucked up by someone else. I believe this because I've spent a good portion of my life watching other well-meaning people sit down at a computer and simply... make things harder for themselves."  
+> "I don't want to depend on you. It's nothing personal, it's just that as an engineer I irrationally believe that anything I don't build with my own hands is going to get fucked up by someone else. I believe this because I've spent a good portion of my life watching other well-meaning people sit down at a computer and simply... make things harder for themselves."
 
 Replace "company" with "life" in the first paragraph and he just explained me. The entire article, in fact, and his characterization of the engineer describes my personality to a T. Well said, Mr. Lopp, well said.

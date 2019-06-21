@@ -4,116 +4,128 @@ Link: basic-computer-security.html
 Pubdate: 2019/05/29 10:36:49
 Author: Zac Szewczyk
 
-The Internet ranks among the greatest inventions of all time. It gives everyone instant access to mankind's collective wisdom, learned through millions of years of evolution. It connects people across cultures, continents, and time zones. It ushered in an era of unprecedented economic growth. History already recognizes the Internet's remarkable impact, in the few short decades it has existed so far, and its significance will continue to grow as mankind uses it to achieve even greater things down the road.  
+The Internet ranks among the greatest inventions of all time. It gives everyone instant access to mankind's collective wisdom, learned through millions of years of evolution. It connects people across cultures, continents, and time zones. It ushered in an era of unprecedented economic growth. History already recognizes the Internet's remarkable impact, in the few short decades it has existed so far, and its significance will continue to grow as mankind uses it to achieve even greater things down the road.
 
-Despite its immense value, today the Internet kind of sucks. The part of the Internet that most people use, [a small subset](https://techlog360.com/darknet-vs-dark-web-vs-deep-web-vs-surface-web/) [of the entire network](https://www.recordedfuture.com/dark-web-reality/), has become filled with ads, trackers, viruses, spyware, and all sorts of bad actors looking to exploit naive users. Mankind managed to turn one of its greatest inventions into a hacker's playground, set in a cesspool of invasive monetization strategies. Lucky for us, a few simple steps can do a lot to help mitigate these problems. These tips will do little more than that, though, and I want to make that clear. I wrote this to help mitigate the dangers of ads, trackers, viruses, spyware, and some low-level hackers, not with the intent to make your computer uncrackable. If a smart enough person targets a specific machine, they will get in.  
+Despite its immense value, today the Internet kind of sucks. The part of the Internet that most people use, [a small subset](https://techlog360.com/darknet-vs-dark-web-vs-deep-web-vs-surface-web/) [of the entire network](https://www.recordedfuture.com/dark-web-reality/), has become filled with ads, trackers, viruses, spyware, and all sorts of bad actors looking to exploit naive users. Mankind managed to turn one of its greatest inventions into a hacker's playground, set in a cesspool of invasive monetization strategies. Lucky for us, a few simple steps can do a lot to help mitigate these problems. These tips will do little more than that, though, and I want to make that clear. I wrote this to help mitigate the dangers of ads, trackers, viruses, spyware, and some low-level hackers, not with the intent to make your computer uncrackable. If a smart enough person targets a specific machine, they will get in.
 
 ### The Easy Fix: Installing Software
 
 #### Browser Extensions
 
-A few key programs can stop most web-based ads, trackers, and the types of resources that load viruses and spyware. Many people work hard to exploit naive users, but many others also work hard to keep those bad actors from doing so; the latter create software like [Adblock Plus](https://adblockplus.org/), [Ghostery](https://www.ghostery.com/), and [uBlock Origin](https://github.com/gorhill/uBlock). Adblock Plus hides ads, which will also make websites load faster. Ghostery stops creepy sites from tracking you around the Internet. uBlock Origin can target anything; on the off chance that the other two miss something, I use it to block individual resources. Although they overlap in some areas, I like using them all because each does a different thing well. Installing all three takes just a few clicks, and even with their default settings, they make browsing the web much better; for even better results, spend some time learning how to fine-tune them.  
+A few key programs can stop most web-based ads, trackers, and the types of resources that load viruses and spyware. Many people work hard to exploit naive users, but many others also work hard to keep those bad actors from doing so; the latter create software like [Adblock Plus](https://adblockplus.org/), [Ghostery](https://www.ghostery.com/), and [uBlock Origin](https://github.com/gorhill/uBlock). Adblock Plus hides ads, which will also make websites load faster. Ghostery stops creepy sites from tracking you around the Internet. uBlock Origin can target anything; on the off chance that the other two miss something, I use it to block individual resources. Although they overlap in some areas, I like using them all because each does a different thing well. Installing all three takes just a few clicks, and even with their default settings, they make browsing the web much better; for even better results, spend some time learning how to fine-tune them.
 
-Another extension you ought to have, [HTTPS Everywhere](https://www.eff.org/https-everywhere), makes it harder for bad actors to steal your information on public WiFi networks. It works like this: when you visit %https://www.google.com%, your traffic to Google gets encrypted so that no one but Google sees it. Websites that use %http://% do not use encryption. Bad actors can watch your traffic to websites that do not the %https://% prefix. HTTPS Everywhere works to trick every website you visit into using encryption wherever possible, which help keeps your information private.  
+Another extension you ought to have, [HTTPS Everywhere](https://www.eff.org/https-everywhere), makes it harder for bad actors to steal your information on public WiFi networks. It works like this: when you visit `https://www.google.com`, your traffic to Google gets encrypted so that no one but Google sees it. Websites that use `http://` do not use encryption. Bad actors can watch your traffic to websites that do not the `https://` prefix. HTTPS Everywhere works to trick every website you visit into using encryption wherever possible, which help keeps your information private.
 
 #### Antivirus Software
 
-After browser extensions, antivirus software does a great job as a second layer of defense. Windows comes with basic antivirus software by default, but those looking to beef up their security should check out some great free programs, too. [Avast](https://www.avast.com), for all platforms, scores high in all reviews. Although an easy attack vector, hackers do not have to go through the web browser to access your machine or your network; they may target one--or both--in ways that extensions like Adblock Plus, Ghostery, and uBlock Origin cannot stop. Should someone get into your machine or your network, Avast and similar tools will help detect and remove them. Installing these, too, takes just a few clicks.  
+After browser extensions, antivirus software does a great job as a second layer of defense. Windows comes with basic antivirus software by default, but those looking to beef up their security should check out some great free programs, too. [Avast](https://www.avast.com), for all platforms, scores high in all reviews. Although an easy attack vector, hackers do not have to go through the web browser to access your machine or your network; they may target one--or both--in ways that extensions like Adblock Plus, Ghostery, and uBlock Origin cannot stop. Should someone get into your machine or your network, Avast and similar tools will help detect and remove them. Installing these, too, takes just a few clicks.
 
 ### The Tough Fix: Altering System Behavior
 
-Browser extensions can make it harder for hackers to find easy ways into a target. Antivirus software adds a second layer of security for machines and the network. Good programs such as Avast use passive measures like virus scans, and active measures like blocking suspicious behavior. This basis will serve the average user well. I want to stress that it does not make them immune to all attacks, though, just the most basic ways bad actors steal personal data, infect computers, and trash the web browsing experience. Again, if a smart person targets a specific computer, they will get in. Those looking for better results can take some more advanced steps, though, so I talk about those below. Fair warning, I use a Unix shell and Windows Command Prompt often. It made much more sense to give you short commands than guide you through a complex maze of menus.  
+Browser extensions can make it harder for hackers to find easy ways into a target. Antivirus software adds a second layer of security for machines and the network. Good programs such as Avast use passive measures like virus scans, and active measures like blocking suspicious behavior. This basis will serve the average user well. I want to stress that it does not make them immune to all attacks, though, just the most basic ways bad actors steal personal data, infect computers, and trash the web browsing experience. Again, if a smart person targets a specific computer, they will get in. Those looking for better results can take some more advanced steps, though, so I talk about those below. Fair warning, I use a Unix shell and Windows Command Prompt often. It made much more sense to give you short commands than guide you through a complex maze of menus.
 
 #### Automatic Updates
 
-Automatic updates take too long, force reboots, and seem to happen at the worst times; turning this feature off, though, makes a hacker's job just a little bit easier. Most system updates patch bugs and vulnerabilities a hacker could use as a way into your machine. Do the right thing, turn them on, and let them install often. Do the same for programs from trusted vendors as well. This takes discipline, but it will make you less susceptible to the types of attacks found on public sites like [Exploit Database](https://www.exploit-db.com/). Exploit Database lists hundreds of ways hackers can use old versions of software and operating systems to get into a machine. Stay updated and give yourself less to worry about.  
+Automatic updates take too long, force reboots, and seem to happen at the worst times; turning this feature off, though, makes a hacker's job just a little bit easier. Most system updates patch bugs and vulnerabilities a hacker could use as a way into your machine. Do the right thing, turn them on, and let them install often. Do the same for programs from trusted vendors as well. This takes discipline, but it will make you less susceptible to the types of attacks found on public sites like [Exploit Database](https://www.exploit-db.com/). Exploit Database lists hundreds of ways hackers can use old versions of software and operating systems to get into a machine. Stay updated and give yourself less to worry about.
 
 #### The hosts file
 
-Another simple way to make web browsing just a little bit better involves editing your %host% file. In simple terms, every time your computer tries to connect to %www.google.com%, it checks a system file to see whether you have visited the website before. If you have, it loads information about %www.google.com% from your computer and then serves the site; if not, it looks for that information on the Internet, downloads it, and then serves the site.  
+Another simple way to make web browsing just a little bit better involves editing your `host` file. In simple terms, every time your computer tries to connect to `www.google.com`, it checks a system file to see whether you have visited the website before. If you have, it loads information about `www.google.com` from your computer and then serves the site; if not, it looks for that information on the Internet, downloads it, and then serves the site.
 
-Now imagine that instead of you trying to open Google, a website tried to make a sneaky connection to www.TrackMyUsers.com. Your computer first checks the %hosts% file for information about that site, then the Internet, and then loads the page. You can use the %hosts% file to fool that sleazy site, though, by giving it the wrong information about www.TrackMyUsers.com. As a result, the sleazy website does not get to track you. Privacy preserved.  
+Now imagine that instead of you trying to open Google, a website tried to make a sneaky connection to www.TrackMyUsers.com. Your computer first checks the `hosts` file for information about that site, then the Internet, and then loads the page. You can use the `hosts` file to fool that sleazy site, though, by giving it the wrong information about www.TrackMyUsers.com. As a result, the sleazy website does not get to track you. Privacy preserved.
 
-Bad actors use many websites for their sleazy purposes, but many people have gone to great pains to catalog all those pages as well. Several people publish lists with tens of thousands of websites like www.TrackMyUsers.com, with the sole purpose of helping users block them. I found Dan Pollock's collection first at [SomeoneWhoCares.org](https://someonewhocares.org/hosts/). After some research, I learned that [Steven Black](https://github.com/StevenBlack/hosts) combines fourteen lists and posts [the result](https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts) on GitHub.  
+Bad actors use many websites for their sleazy purposes, but many people have gone to great pains to catalog all those pages as well. Several people publish lists with tens of thousands of websites like www.TrackMyUsers.com, with the sole purpose of helping users block them. I found Dan Pollock's collection first at [SomeoneWhoCares.org](https://someonewhocares.org/hosts/). After some research, I learned that [Steven Black](https://github.com/StevenBlack/hosts) combines fourteen lists and posts [the result](https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts) on GitHub.
 
-If you want to download Steven's code, run the scripts, and set your system up on your own, go for it. On a Mac, though, you can just open Terminal, copy and paste the snippet below, hit Enter, and input your password. The snippet backs up your %hosts% file to %hosts.bak%, downloads Steven's list, and tells your computer to read this new %hosts% file from then on.  
+If you want to download Steven's code, run the scripts, and set your system up on your own, go for it. On a Mac, though, you can just open Terminal, copy and paste the snippet below, hit Enter, and input your password. The snippet backs up your `hosts` file to `hosts.bak`, downloads Steven's list, and tells your computer to read this new `hosts` file from then on.
 
-<pre class="shell">sudo cp /etc/hosts /etc/hosts.bak; sudo curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts -o /etc/hosts; dscacheutil -flushcache; sudo killall -HUP mDNSResponder</pre>
+```
+sudo cp /etc/hosts /etc/hosts.bak; sudo curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts -o /etc/hosts; dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+```
 
-On Windows, open Notepad, open or create the file at %C:\Windows\System32\Drivers\etc\hosts%, copy and paste everything on [this page](https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts) into Notepad, and save it. Next, click the Start button, type %cmd%, right-click Command Prompt and choose "Run as Administrator", then run the command below to tell your computer to read this new hosts file from now on.  
+On Windows, open Notepad, open or create the file at `C:\Windows\System32\Drivers\etc\hosts`, copy and paste everything on [this page](https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts) into Notepad, and save it. Next, click the Start button, type `cmd`, right-click Command Prompt and choose "Run as Administrator", then run the command below to tell your computer to read this new hosts file from now on.
 
-<pre class="cmd">ipconfig /flushdns</pre>
+```
+ipconfig /flushdns
+```
 
-Any time a website tries to connect to a known bad domain, it will fail. This alone will remove a lot of ads, trackers, and even some known sources of viruses and spyware. Although Adblock Plus, Ghostery, and uBlock Origin also do this, blocking those websites at the system level with your %hosts% file means those extensions won't have to work as hard. Because they do less, your browser does less, which can improve browsing speeds. A win all around.  
+Any time a website tries to connect to a known bad domain, it will fail. This alone will remove a lot of ads, trackers, and even some known sources of viruses and spyware. Although Adblock Plus, Ghostery, and uBlock Origin also do this, blocking those websites at the system level with your `hosts` file means those extensions won't have to work as hard. Because they do less, your browser does less, which can improve browsing speeds. A win all around.
 
 #### Virtual Private Networks
 
-I also suggest using a Virtual Private Network, or VPN. Although many websites have gotten much better about encrypting their traffic, [bad actors can still manage to steal private information from anyone on a public WiFi network](https://hackernoon.com/a-hacker-intercepted-your-wifi-traffic-stole-your-contacts-passwords-financial-data-heres-how-4fc0df9ff152). VPNs connect you to a safe server, encrypt your data so no one can snoop on you, and then send your traffic out from that safe server to the world. Although this adds a few extra steps to the process, and will set you back a few dollars per month, it makes stealing your private information and tracking you much harder. Most VPNs also block ads, meaning you will see even less of them.  
+I also suggest using a Virtual Private Network, or VPN. Although many websites have gotten much better about encrypting their traffic, [bad actors can still manage to steal private information from anyone on a public WiFi network](https://hackernoon.com/a-hacker-intercepted-your-wifi-traffic-stole-your-contacts-passwords-financial-data-heres-how-4fc0df9ff152). VPNs connect you to a safe server, encrypt your data so no one can snoop on you, and then send your traffic out from that safe server to the world. Although this adds a few extra steps to the process, and will set you back a few dollars per month, it makes stealing your private information and tracking you much harder. Most VPNs also block ads, meaning you will see even less of them.
 
-[Choose a reputable company](https://drewdevault.com/2019/04/19/Your-VPN-is-a-serious-choice.html) [and you cannot go wrong](https://schub.io/blog/2019/04/08/very-precarious-narrative.html). [NordVPN](https://nordvpn.com/) stands out as one of the best, though, so check it out. NordVPN has clients for the major operating systems, browsers, and phones, so it can protect you everywhere. Follow its simple setup guide and even novice users will have a working VPN setup in no time.  
+Choose [a reputable company](https://drewdevault.com/2019/04/19/Your-VPN-is-a-serious-choice.html) [and you cannot go wrong](https://schub.io/blog/2019/04/08/very-precarious-narrative.html). [NordVPN](https://nordvpn.com/) stands out as one of the best, though, so check it out. NordVPN has clients for the major operating systems, browsers, and phones, so it can protect you everywhere. Follow its simple setup guide and even novice users will have a working VPN setup in no time.
 
-#### The Router 
+#### The Router
 
-With browser extensions, antivirus software, and a VPN on your machine, hackers will have a much harder time gaining access to your system. Each one of these blocks several avenues of attack, but not every one. Again, if a smart person targets a specific computer, they will get in. Another great way to make that much harder, though, involves locking down your router.  
+With browser extensions, antivirus software, and a VPN on your machine, hackers will have a much harder time gaining access to your system. Each one of these blocks several avenues of attack, but not every one. Again, if a smart person targets a specific computer, they will get in. Another great way to make that much harder, though, involves locking down your router.
 
-Most people use the cable company's router. It sits on a shelf, and when the Internet stops working, they unplug it, wait a few seconds, then plug it back in. Problem solved. Few understand how these devices work, though, and so most people gloss over them when beefing up their security. Do not make the same mistake.  
+Most people use the cable company's router. It sits on a shelf, and when the Internet stops working, they unplug it, wait a few seconds, then plug it back in. Problem solved. Few understand how these devices work, though, and so most people gloss over them when beefing up their security. Do not make the same mistake.
 
-All traffic from the home network out to the internet, and from the internet into any device on the home network, goes through the router. Anyone trying to hack into one of your computers has to go through this device. This makes the router your first line of defense against the outside world. Lucky for us, locking it down does not take a lot of work.  
+All traffic from the home network out to the internet, and from the internet into any device on the home network, goes through the router. Anyone trying to hack into one of your computers has to go through this device. This makes the router your first line of defense against the outside world. Lucky for us, locking it down does not take a lot of work.
 
 ##### Locating the Router
 
-You must login to your router to change its settings. If you have never done this before, you need to find it on your network. On a Mac, use %netstat%. The %grep%, %head%, and %awk% commands after it strip out the things you do not need for this step.  
+You must login to your router to change its settings. If you have never done this before, you need to find it on your network. On a Mac, use `netstat`. The `grep`, `head`, and `awk` commands after it strip out the things you do not need for this step.
 
-<pre class="shell">netstat -nr | grep default | head -1 | awk -F " " '{print "Router IP: ",$2}'</pre>
+```
+netstat -nr | grep default | head -1 | awk -F " " '{print "Router IP: ",$2}'
+```
 
-On a Windows machine, use %ipconfig%. %findstr% pulls out the line with the IP address for the default gateway.  
+On a Windows machine, use `ipconfig`. `findstr` pulls out the line with the IP address for the default gateway.
 
-<pre class="cmd">ipconfig /all | findstr "Default Gateway"</pre>
+```
+ipconfig /all | findstr "Default Gateway"
+```
 
-Once you have the router's IP address, copy and paste it into your browser. A login window will open. If you have seen this page before, enter your credentials; if not, try the defaults for your cable company. Using "admin" as your username and "admin", "password", or leaving the password field blank works most times. You could also try searching for the defaults for your router. Once you have logged in, move on to the next step.  
+Once you have the router's IP address, copy and paste it into your browser. A login window will open. If you have seen this page before, enter your credentials; if not, try the defaults for your cable company. Using "admin" as your username and "admin", "password", or leaving the password field blank works most times. You could also try searching for the defaults for your router. Once you have logged in, move on to the next step.
 
-From here on out, the route you take to change each setting will vary between devices. I will explain what you should change and why, and leave it up to you to get it done.  
+From here on out, the route you take to change each setting will vary between devices. I will explain what you should change and why, and leave it up to you to get it done.
 
 ##### Login Credentials
 
-First, change your login credentials. Anyone who can find the IP address of your router, a public-facing device, can access it just as you did; once there, a bad actor could do all sorts of things to steal your personal information, attack the machines on your home network, and watch every single thing you do on the Internet. Choose a good password, save your changes, and move on.  
+First, change your login credentials. Anyone who can find the IP address of your router, a public-facing device, can access it just as you did; once there, a bad actor could do all sorts of things to steal your personal information, attack the machines on your home network, and watch every single thing you do on the Internet. Choose a good password, save your changes, and move on.
 
 ##### Firmware Updates
 
-Next, update your router's firmware. If you can turn on automatic updates, do it. Again, most system updates patch bugs and vulnerabilities a hacker could use as a way into your machine, so turning them on will make you less susceptible to the types of attacks found on public sites like [Exploit Database](https://www.exploit-db.com/), [OSVDB](https://blog.osvdb.org), and [Mitre](https://cve.mitre.org). At the least, update your firmware now and plan on doing this often.  
+Next, update your router's firmware. If you can turn on automatic updates, do it. Again, most system updates patch bugs and vulnerabilities a hacker could use as a way into your machine, so turning them on will make you less susceptible to the types of attacks found on public sites like [Exploit Database](https://www.exploit-db.com/), [OSVDB](https://blog.osvdb.org), and [Mitre](https://cve.mitre.org). At the least, update your firmware now and plan on doing this often.
 
 ##### Disable WPS
 
-If your router has it, turn off WiFi Protected Setup. Although a nice idea, in practice WPS allows bad actors to bypass the router. By guessing a short PIN number, they gain access to the network without having to enter the much longer WiFi password. Leave this feature on and you risk someone sidestepping your first line of defense.  
+If your router has it, turn off WiFi Protected Setup. Although a nice idea, in practice WPS allows bad actors to bypass the router. By guessing a short PIN number, they gain access to the network without having to enter the much longer WiFi password. Leave this feature on and you risk someone sidestepping your first line of defense.
 
 ##### Use WPA2
 
-Routers can use a few kinds of encryption. WEP takes almost no time to crack; avoid it at all costs. WPA does a better job, but you should also avoid it. Some routers support WPA2 and AES encryption, so choose that if you can; if not, vanilla WPA2 will keep your data safe.  
+Routers can use a few kinds of encryption. WEP takes almost no time to crack; avoid it at all costs. WPA does a better job, but you should also avoid it. Some routers support WPA2 and AES encryption, so choose that if you can; if not, vanilla WPA2 will keep your data safe.
 
 ##### Use a Firewall
 
-Some routers ship with their firewall turned off by default. Make sure yours has it on, and set it to the strictest level you can without making your network useless. Most people can handle a medium-level filter without any problems, but the stricter you go, the better; in turn, bad actors will have fewer ways to exploit your network.  
+Some routers ship with their firewall turned off by default. Make sure yours has it on, and set it to the strictest level you can without making your network useless. Most people can handle a medium-level filter without any problems, but the stricter you go, the better; in turn, bad actors will have fewer ways to exploit your network.
 
 ##### Schedule Uptime
 
-Not all routers support this, but if yours does, set it to turn your network off during certain times of the day. Hackers tend to target businesses at night, with no one around, and home networks at night or during normal business hours, when most people work. This helps them stay unnoticed. They might also choose these times to move lots of data, because you would not notice a drop in speed. Deny them the chance by shutting down whenever you can.  
+Not all routers support this, but if yours does, set it to turn your network off during certain times of the day. Hackers tend to target businesses at night, with no one around, and home networks at night or during normal business hours, when most people work. This helps them stay unnoticed. They might also choose these times to move lots of data, because you would not notice a drop in speed. Deny them the chance by shutting down whenever you can.
 
 ##### Enable MAC Address Filtering
 
-Every Internet-connected device has a unique identifier burned into its hardware, called a MAC address. It looks like this: %aa:b1:2c:d3:e4:5f%. Turn on MAC address filtering to allow certain devices onto your network, and deny all others.  
+Every Internet-connected device has a unique identifier burned into its hardware, called a MAC address. It looks like this: `aa:b1:2c:d3:e4:5f`. Turn on MAC address filtering to allow certain devices onto your network, and deny all others.
 
-On a Unix machine, use the first snippet to find your MAC address; on a Windows computer, use the second. Once found, enter the MAC address on your router, make sure you will **allow** this machine rather than **deny** it, and save the change.  
+On a Unix machine, use the first snippet to find your MAC address; on a Windows computer, use the second. Once found, enter the MAC address on your router, make sure you will **allow** this machine rather than **deny** it, and save the change.
 
-<pre class="shell">ifconfig | grep ether | head -1 | awk -F " " '{print "MAC address: ",$2}'</pre>
+```
+ifconfig | grep ether | head -1 | awk -F " " '{print "MAC address: ",$2}'
+```
 
-<pre class="cmd">ipconfig /all | findstr "Physical"</pre>
+```
+ipconfig /all | findstr "Physical"
+```
 
-Repeat this process for each device you wish to allow on your network. Although not a 100% guarantee that a bad actor cannot get onto your network, they will at least have one more barrier in their way.  
+Repeat this process for each device you wish to allow on your network. Although not a 100% guarantee that a bad actor cannot get onto your network, they will at least have one more barrier in their way.
 
 ### The Hard Fix: Changing Your Behavior
 
-You have locked down your browser, operating system, and network. These steps have made getting into your machine much harder, snooping on you almost impossible, and even gotten rid of those pesky ads and invasive trackers as an added bonus. Thanks to your efforts, though, the most promising attack vector has now become you. Humans almost always make for the best targets, and now that you have locked down most other avenues of approach, the hacker's best chance of success lies in targeting you.  
+You have locked down your browser, operating system, and network. These steps have made getting into your machine much harder, snooping on you almost impossible, and even gotten rid of those pesky ads and invasive trackers as an added bonus. Thanks to your efforts, though, the most promising attack vector has now become you. Humans almost always make for the best targets, and now that you have locked down most other avenues of approach, the hacker's best chance of success lies in targeting you.
 
-Avoiding social engineering and phishing attacks, the type that target people to gain access to a system, comes down to three things: awareness, skepticism, and conduct. Learn how to spot ads in search results and sham websites trying to pass themselves off as legitimate ones. Distrust by default email attachments and anything that asks for personal information. Avoid installing anything you do not need, even if it comes from a trusted source: it would not take a lot of work for a smart hacker to hijack the Microsoft Office installer, for example, mid-download, and replace it with a version that infects your machine with a virus of some sort. This type of man in the middle attack happens all the time.  
+Avoiding social engineering and phishing attacks, the type that target people to gain access to a system, comes down to three things: awareness, skepticism, and conduct. Learn how to spot ads in search results and sham websites trying to pass themselves off as legitimate ones. Distrust by default email attachments and anything that asks for personal information. Avoid installing anything you do not need, even if it comes from a trusted source: it would not take a lot of work for a smart hacker to hijack the Microsoft Office installer, for example, mid-download, and replace it with a version that infects your machine with a virus of some sort. This type of man in the middle attack happens all the time.
 
 You may have had a tough time with some of the technical tasks here, but changing your behavior will take the most work. There exists a gulf in difficulty between a complicated task like locking down a router, and a hard one like learning situational awareness, training skepticism, and altering your conduct. Work at it, though, and you will deny bad actors one of the most successful attack vectors of all. Along with the technical changes I outlined in the earlier sections, these changes make you a much harder target.

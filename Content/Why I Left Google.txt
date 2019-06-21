@@ -4,8 +4,8 @@ Link: http://blogs.msdn.com/b/jw_on_tech/archive/2012/03/13/why-i-left-google.as
 Pubdate: 2013/03/22 11:30:16
 Author: Zac Szewczyk
 
-James Whittaker on Google's metamorphosis from a tech company to the machine that churned out Google+:  
+James Whittaker on Google's metamorphosis from a tech company to the machine that churned out Google+:
 
-    "The Google I was passionate about was a technology company that empowered its employees to innovate. The Google I left was an advertising company with a single corporate-mandated focus."  
+> "The Google I was passionate about was a technology company that empowered its employees to innovate. The Google I left was an advertising company with a single corporate-mandated focus."
 
 It's too bad, too: Google has given us some of the best web services since the dawn of the internet. For the past decade or so, Google has remained the unquestioned king of the web--of that fact there is no doubt. Doubt enters in, however, when we start to ask the simple question, "for how much longer?"

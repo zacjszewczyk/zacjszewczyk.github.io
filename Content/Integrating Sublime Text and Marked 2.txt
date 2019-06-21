@@ -8,7 +8,7 @@ I had a hard time getting Sublime Text to work with [Marked 2](http://marked2app
 
 <pre>
 {
-    "shell_cmd": "open -a \"/Applications/Marked 2.app\" \"$file\""
+> "shell_cmd": "open -a \"/Applications/Marked 2.app\" \"$file\""
 }
 </pre>
 
