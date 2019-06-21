@@ -174,10 +174,10 @@ def AppendToFeed(source):
             # the file and we encouter the first paragraph, write it to
             # the output file and then quit.
             elif (flag == False and line[0:2] == "<p"):
-                feed_fd.write("        "+line.replace('href="/', 'href="'+base_url+'/').replace('"#fn', '"'+base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;"))
+                feed_fd.write(""+line.replace('href="/', 'href="'+base_url+'/').replace('"#fn', '"'+base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;"))
                 break
             else:
-                line = "        "+line.replace('href="/', 'href="'+base_url+'/').replace('"#fn', '"'+base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;")
+                line = ""+line.replace('href="/', 'href="'+base_url+'/').replace('"#fn', '"'+base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;")
 
             # Stop copying content at the end of the article.
             if ("&lt;/article&gt;" in line):
@@ -185,12 +185,13 @@ def AppendToFeed(source):
     
             # Write all lines from the structure file to the output file
             # by default.
-            feed_fd.write(line)
+            feed_fd.write(line+'\n')
 
     # Once we have reached the end of the content in the case of a linkpost,
     # or read the first paragraph in the case of an original article, add a 
     # "read more" link and close the article.
-    feed_fd.write("\n                <p class='read_more_paragraph'>\n                    <a style='text-decoration:none;' href='%s/blog/%s'>Read more...</a>\n                </p>\n".replace("<", "&lt;").replace(">", "&gt;") % (base_url, html_filename))
+    # feed_fd.write("\n                <p class='read_more_paragraph'>\n                    <a style='text-decoration:none;' href='%s/blog/%s'>Read more...</a>\n                </p>\n".replace("<", "&lt;").replace(">", "&gt;") % (base_url, html_filename))
+    feed_fd.write("\n<p class='read_more_paragraph'>\n<a style='text-decoration:none;' href='%s/blog/%s'>Read more...</a>\n</p>\n".replace("<", "&lt;").replace(">", "&gt;") % (base_url, html_filename))
     feed_fd.write("            </description>\n        </item>\n")
     feed_fd.close()
 
