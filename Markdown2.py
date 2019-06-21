@@ -1,23 +1,21 @@
 #!/usr/local/bin/python3
 
-# Feature Roadmap
-## 1. Clean up Test.txt file. Make sure it implements the version of the spec I want it to.
-
-## "    " can also indicate a code block
-## Nested blockquotes, i.e. ">" and then "> >"
-## Parsing Markdown in blockquotes, i.e. "> # This is a header in a blockquote"
-
 # Import methods
 from re import findall # re.findall, for links
 from os.path import isfile
 
 class Markdown:
+    # Method: __init__
+    # Purpose: Accept base URL for relative links
+    # Parameters:
+    # - self: Class namespace
+    # - base_url: Base URL for relative links. (String)
+    # Return: none
     def __init__(self, base_url):
         self.base_url = base_url
 
-    base_url = ""
-
     # Initialize variables
+    base_url = "" # Base URL, given for relative links
     __line_tracker = ["", "", ""] # Last three lines, raw.
     __line_type_tracker = ["", "", ""] # Type of last three lines.
     __line_indent_tracker = [0, 0, 0] # Indent level of last three lines.
@@ -158,8 +156,6 @@ class Markdown:
                 self.__line_type_tracker.append("ul")
             # If a line is un-indented from the previous one, close out a list.
             elif (self.__queryIndentTracker(-1) < self.__queryIndentTracker(-2)):
-                # print(self.__queryIndentTracker(-1))
-                # print(self.__queryIndentTracker(-2))
                 self.__line_type_tracker.append("/ul")
             # If the parser finds a list element preceeded by another list
             # element or an opening list tag, treat this line as a list element
@@ -416,6 +412,12 @@ class Markdown:
         
         return __line
 
+    # Method: clear
+    # Purpose: Clear all trackers, so original class instance can be used for
+    # multiple files.
+    # Parameters:
+    # - self: Class namespace
+    # Return: none
     def clear(self):
         self.__line_tracker = ["", "", ""] # Last three lines, raw.
         self.__line_type_tracker = ["", "", ""] # Type of last three lines.
