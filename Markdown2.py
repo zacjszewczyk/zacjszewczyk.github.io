@@ -1,5 +1,7 @@
 #!/usr/local/bin/python3
 
+# Footnotes
+
 # Import methods
 from re import findall # re.findall, for links
 from os.path import isfile

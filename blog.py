@@ -14,9 +14,6 @@ from colors import c
 
 md = Markdown("https://zacs.site/")
 
-# Footnotes
-# RSS feed
-
 # Global variables
 ## - types: Keep track of current and two previous line types. (Tuple)
 ## - active: Keep track of active block-level HTML element. (String)
