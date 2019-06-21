@@ -12,6 +12,11 @@ from re import findall # re.findall, for links
 from os.path import isfile
 
 class Markdown:
+    def __init__(self, base_url):
+        self.base_url = base_url
+
+    base_url = ""
+
     # Initialize variables
     __line_tracker = ["", "", ""] # Last three lines, raw.
     __line_type_tracker = ["", "", ""] # Type of last three lines.
@@ -28,7 +33,9 @@ class Markdown:
     # - Parsed line. (String)
     def __parseInlineMD(self, __line):
         # Parser tracks leading whitespace, so remove it.
-        __line = __line.rstrip('\n')
+        __line = __line.lstrip(' ').rstrip('\n')
+        if (len(__line) == 0):
+            return ""
         
         # Parse horizontal rules and emdashes
         __line = __line.replace("---", "<hr />")
@@ -56,16 +63,38 @@ class Markdown:
 
         ## Parse single quotatin marks.
         __line = __line.replace(" '", " &#8216;").replace("' ", "&#8217; ")
+        for each in findall("(\w+'[\w+|\s+])", __line):
+            __line = __line.replace(each, each.replace("\'", "&#8217;"))
+        for each in findall("([\s\(;]'\w+)", __line):
+            __line = __line.replace(each, each.replace("\'", "&#8216;", 1))
 
         ## Parse aposrophes.
-        __line = __line.replace("'", "&#39;")
+        __line = __line.replace("'", "&#8217;")
 
         ## Parse double quotation marks.
         __line = __line.replace(' "', " &#8220;").replace('" ', "&#8221; ")
+        for each in findall("([\s\<\>\\\*\/\[\-\(;]+\"[\[\w\%\#\\*<\>]+)", __line):
+            __line = __line.replace(each, each.replace("\"", "&#8220;", 1))
+        for each in findall("([\)\w+\.]+\"[\s\)\]\<\>\.\*\-\,\&])", __line):
+            __line = __line.replace(each, each.replace("\"", "&#8221;", 1))
+
+        if (__line[0] == '"'):
+            __line = '&#8220;'+__line[1:]
+        if (__line[-1] == '"'):
+            __line = __line[0:-1]+"&#8221;"
 
         ## Parse links.
-        for each in findall("\[([^\]]+)\]\(([^\)]+)\)", __line):
-            __line = __line.replace("["+each[0]+"]("+each[1]+")", "<a href=\""+each[1]+"\">"+each[0]+"</a>")
+        for each in findall("\[([^\]]+)\]\(([^\)]*)\)", __line):
+            title = each[0]
+            url = each[1]
+
+            if (len(url) == 0):
+                url = title.replace("<em>", "").replace("</em>", "")+".txt"
+
+            if (url[-4:] == ".txt"):
+                url = self.base_url+"blog/"+url.lower().replace("&#8217;", "").replace(" ", "-").replace(".txt", ".html")
+
+            __line = __line.replace("["+each[0]+"]("+each[1]+")", "<a href=\""+url+"\">"+title+"</a>")
 
         return __line
 
@@ -112,7 +141,7 @@ class Markdown:
 
         if (len(__line.strip()) == 0): # Blank line.
             self.__line_type_tracker.append("blank")
-        elif (__line[0] == "<"): # Raw HTML
+        elif (__line[0] == "<" and (__line[0:4] != "<pre" and __line[0:5] != "</pre")): # Raw HTML
             self.__line_type_tracker.append("raw")
         elif (__line[0] == "#"): # Header.
             self.__line_type_tracker.append("header")
@@ -120,7 +149,7 @@ class Markdown:
             self.__line_type_tracker.append("hr")
         elif (__line[0:2] == "!["): # Image.
             self.__line_type_tracker.append("img")
-        elif (__line[0] == "{"): # Post index, with remote content.
+        elif (__line[0] == "{" and self.__pre == False): # Post index, with remote content.
             self.__line_type_tracker.append("idx")
         # Unordered list, as evidenced by a line starting with *, +, or -
         elif (__line[0] in ['*', '+', '-'] and __line[1] == ' '):
@@ -129,8 +158,8 @@ class Markdown:
                 self.__line_type_tracker.append("ul")
             # If a line is un-indented from the previous one, close out a list.
             elif (self.__queryIndentTracker(-1) < self.__queryIndentTracker(-2)):
-                print(self.__queryIndentTracker(-1))
-                print(self.__queryIndentTracker(-2))
+                # print(self.__queryIndentTracker(-1))
+                # print(self.__queryIndentTracker(-2))
                 self.__line_type_tracker.append("/ul")
             # If the parser finds a list element preceeded by another list
             # element or an opening list tag, treat this line as a list element
@@ -171,7 +200,7 @@ class Markdown:
             # Otherwise, treat this line as the opening of a new blockquote
             else:
                 self.__line_type_tracker.append("blockquote")
-        elif (__line[0:4] == "```"): # Preformatted code block
+        elif (__line[0:4] == "```" or __line[0:4] == "<pre" or __line[0:5] == "</pre"): # Preformatted code block
             self.__line_type_tracker.append("pre")
             # Toggle the boolean for tracking if the parser is in a code block
             self.__pre = not self.__pre
@@ -325,23 +354,24 @@ class Markdown:
             __line = "    <li>"+__line[2:]+"</li>"
         # Handle blockquotes, new and a continuation of an existing one.
         elif (self.__getLineType(-1) == "blockquote"):
-            __line = "<blockquote>\n    <p>"+__line[5:]+"</p>"
+            __line = "<blockquote>\n    <p>"+self.__parseInlineMD(__line[5:])+"</p>"
             self.__close_out.append("</blockquote>\n")
         elif (self.__getLineType(-1) == "bqt"):
             if (__line[5:] == ''):
                 __line = ''
             else:
-                __line = "    <p>"+__line[5:]+"</p>"
+                __line = "    <p>"+self.__parseInlineMD(__line[5:])+"</p>"
         # Handle header elements
         elif (self.__getLineType(-1) == "header"):
             # Count the number of # at the beginning of the line.
             l = len(__line) - len(__line.lstrip("#"))
+            anchor = ''.join(ch for ch in __line.split(":")[0] if ch.isalnum())
             # Write the header with the appropriate level, based on number of #
-            __line = "<h"+str(l)+" id=\""+''.join(ch for ch in __line if ch.isalnum())+"\">"+__line.lstrip("#").rstrip("#").strip()+"</h"+str(l)+">"
+            __line = "<h"+str(l)+" class=\"headers\" id=\""+anchor+"\">"+__line.strip("#").strip()+"<span>&nbsp;<a href=\"#"+anchor+"\">#</a></span></h"+str(l)+">"
             return __line
         # Handle horizontal rules
         elif (self.__getLineType(-1) == "hr"):
-            return "<hr />"
+            return "<hr style='margin:50px auto;width:50%;border:0;border-bottom:1px dashed #ccc;background:#999;' />"
         # Handle images
         elif (self.__getLineType(-1) == "img"):
             # This feels a bit clunky, but seems like the best alternative to
@@ -350,7 +380,9 @@ class Markdown:
             desc = __line[0][2:]
             if (" " in __line[1]):
                 url = __line[1].split(" ")[0][1:]
-                alt = __line[1].split(" ")[1][1:-2]
+                if ("zacjszewczyk" in url):
+                    url = "/assets/"+url.split(".com/")[1]
+                alt = __line[1].split(" ", 1)[1][1:-2]
             else:
                 url = __line[1][1:-1]
                 alt = ""
@@ -379,9 +411,17 @@ class Markdown:
 
         # Once all the block-level parsing is done, parse the inline Markdown
         # tags.
-        __line = self.__parseInlineMD(__line)
-
+        if (self.__getLineType(-1) != "blockquote" and self.__getLineType(-1) != "bqt"):
+            __line = self.__parseInlineMD(__line)
+        
         return __line
+
+    def clear(self):
+        self.__line_tracker = ["", "", ""] # Last three lines, raw.
+        self.__line_type_tracker = ["", "", ""] # Type of last three lines.
+        self.__line_indent_tracker = [0, 0, 0] # Indent level of last three lines.
+        self.__close_out = [] # List of block-level elements that still need closed out.
+        self.__pre = False # Yes/no, is the parser in a <pre> tag?
 
     # Method: raw
     # Purpose: Return raw line at specified position.
@@ -391,4 +431,4 @@ class Markdown:
     # Return:
     # - Raw, unprocessed Markdown line (String)
     def raw(self, __pos):
-        return self.line_tracker(__pos)
+        return self.__line_tracker(__pos)
