@@ -208,6 +208,8 @@ class Markdown:
             self.__line_type_tracker.append("pre")
             # Toggle the boolean for tracking if the parser is in a code block
             self.__pre = not self.__pre
+        elif (__line[0:2] == "[>"): # Footnote
+            print(__line)
         else: # Default to handling the line as a paragraph
             self.__line_type_tracker.append("p")
 
