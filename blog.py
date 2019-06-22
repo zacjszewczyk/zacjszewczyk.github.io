@@ -292,7 +292,7 @@ def GenBlog():
                     
                     # For each article made in the month, add an entry on the appropriate
                     # 'month' structure file.
-                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", article_title))
+                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", article_title.strip()))
 
                     # Add the first twenty-five articles to the main blog page.
                     if (file_idx < 25):

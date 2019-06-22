@@ -96,6 +96,12 @@ class Markdown:
 
             __line = __line.replace("["+each[0]+"]("+each[1]+")", "<a href=\""+url+"\">"+title+"</a>")
 
+        # Parse footnotes
+        for each in findall("(\[\^[0-9]+\])", __line):
+            mark = each[2:-1]
+            url = """<sup id="fnref"""+mark+""""><a href="#fn"""+mark+"""" rel="footnote">"""+mark+"""</a></sup>"""
+            __line = __line.replace(each, url)
+
         return __line
 
     # Method: __getLineType
