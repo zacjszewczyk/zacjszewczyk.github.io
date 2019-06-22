@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 22 Jun 2019 10:55:25 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jun 2019 08:48:49 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Writing Turn-Offs</title>
+            <link>https://zacs.site//blog/writing-turn-offs.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/writing-turn-offs.html</guid>
+
+            <pubDate>Sat, 22 Jun 2019 20:48:17 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I read &lt;a href="http://detect-respond.blogspot.com/2015/10/a-simple-hunting-maturity-model.html"&gt;a rundown of a cyber security threat hunting model&lt;/a&gt; the other day. Right at the start, the author&#38;#8217;s definition of &#38;#8220;hunting&#38;#8221; jumped out at me. It jumped out at me because he defined it well&#38;#160;&#38;#8212;&#38;#160;which reminded me of all the times I have seen others fail at this&#38;#160;&#38;#8212;&#38;#160;and prompted this post.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/writing-turn-offs.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Setting Up a Development Environment with Git</title>
             <link>https://martinovic.blog/post/home_git/</link>

@@ -1,0 +1,25 @@
+Type: original
+Title: Writing Turn-Offs
+Link: writing-turn-offs.html
+Pubdate: 2019/06/22 16:48:17
+Author: Zac J. Szewczyk
+
+I read [a rundown of a cyber security threat hunting model](http://detect-respond.blogspot.com/2015/10/a-simple-hunting-maturity-model.html) the other day. Right at the start, the author's definition of "hunting" jumped out at me. It jumped out at me because he defined it well--which reminded me of all the times I have seen others fail at this--and prompted this post.
+
+From his article: 
+
+> "Before we can talk about hunting maturity, though, we need to discuss what, exactly, we mean when we say 'hunting'.  I usually define hunting as the collective name for any manual or machine-assisted techniques used to detect security incidents.  I refer to it as a 'collective name' since there are many different techniques hunters might use to find the bad guys, and no single one of them is always 'right'."
+
+I like this. David gives us *his* definition of the term, keeps it concise, then explains it further to create a shared understanding between him and his reader. Those outside of the cyber security field will find value here in [a well-written piece on a technical topic](http://detect-respond.blogspot.com/2015/10/a-simple-hunting-maturity-model.html#!/2015/10/a-simple-hunting-maturity-model.html), and those within it ought to check it out for its relevance to their job. I wanted to highlight David's piece today for those reasons, and as a way in to talking about some writing turn-offs.
+
+Writing turn-offs do two things. First, they make me want to stop reading. They tend to indicate an inability to communicate well, which does not bode well for the rest of the piece. They also make the author seem less credible. They tend to stem from inexperience, a weak grasp on the topic, or a lack of creativity. In a world where I can find another expert in seconds, I will. For the most part, though, they just rub me the wrong way. Teachers love to talk about what "good" writing looks like, without ever showing their students what bad writing looks like; today I want to do just that.
+
+### The Dictionary Definition
+
+Lazy writers like to start with something like, "The dictionary defines 'hunting' as, 'the act of one that hunts'." I despise this. If I wanted a canned definition, I would go to Webster. Using one shows me that you have done nothing to make your work worth my time. It also shows me that you do not know the topic well enough to explain it. I came to you because I wanted to learn about the nuances of a complex topic, from the perspective of an expert. This tells me I won't, and that you aren't. Almost every time I see this, I close the page and find an answer somewhere else.
+
+### Emoticons, Emojis, Irregular Punction, and Exclamation Points
+
+I like writing that evokes emotion; I do not like it forced upon me. Writers should apply "Show, don't tell" to more than just fiction. Emoticons, emojis, exclamation points, and the like try to take the place of well-crafted prose. They do not do this well. Write well, and the work you craft will reflect the emotion you felt while forming it. I like Elmore Leonard's rule for exclamation points, and his advice for writing in general: ["You are allowed no more than two or three per 100,000 words of prose.](https://www.fastcompany.com/3016163/elmore-leonards-10-simple-rules-for-writing) Great stuff.
+
+I try to keep an open mind, but writers who use dictionary definitions and try to shove their enthusiasm down my throat rub me the wrong way. Don't give your readers a reason to find their answer elsewhere, because in a world where I can find another expert in seconds, I will.
