@@ -30,13 +30,6 @@ footer p {
     line-height: 150%;
     color: #0F0F0F;
 }
-.footnote {
-    margin: 50px 0px; }
-.footnote>p {
-    text-align: left !important;
-    font-size: 11pt; }
-.footnote>p:last-of-type {
-    display: inline; }
 h1 {
     text-align: right;
     margin: 50px 0px;

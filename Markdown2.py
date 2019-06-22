@@ -209,7 +209,7 @@ class Markdown:
             # Toggle the boolean for tracking if the parser is in a code block
             self.__pre = not self.__pre
         elif (__line[0:2] == "[>"): # Footnote
-            print(__line)
+            self.__line_type_tracker.append("fn")
         else: # Default to handling the line as a paragraph
             self.__line_type_tracker.append("p")
 
@@ -408,6 +408,13 @@ class Markdown:
                     __line += "    <li>"+each.strip()+"</li>\n"
                 __line += "</ul>"
             return __line
+        # Handle footnotes
+        elif (self.__getLineType(-1) == "fn"):
+            # line = line.replace("div ", "div id=\"fn"+str(mark)+"\" ")+"""<a class="fn" title="return to article" href="#fnref"""+str(mark)+"""\">&#x21a9;</a>"""
+            mark = __line.split("]", 1)[0][5:]
+            print (mark)
+            __line = "<p id='fn%s'><a class='fn' title='return to article' href='#fnref%s'>&#x21a9;</a>&nbsp;%s</p>" % (mark, mark, self.__parseInlineMD(__line[8:]))
+            print(__line)
         # Default to treating the line as a paragraph
         else:
             if (__line[-3:] == "   "):
@@ -417,7 +424,7 @@ class Markdown:
 
         # Once all the block-level parsing is done, parse the inline Markdown
         # tags.
-        if (self.__getLineType(-1) != "blockquote" and self.__getLineType(-1) != "bqt"):
+        if (self.__getLineType(-1) != "blockquote" and self.__getLineType(-1) != "bqt" and self.__getLineType(-1) != "fn"):
             __line = self.__parseInlineMD(__line)
         
         return __line

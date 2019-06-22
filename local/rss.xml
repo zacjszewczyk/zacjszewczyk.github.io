@@ -7,7 +7,7 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 22 Jun 2019 10:37:10 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jun 2019 10:55:25 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -6792,7 +6792,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 &lt;p&gt;I don&#38;#8217;t mean to go on a rant, but as a brief aside I do not understand the appeal of such small trucks. I can see the place of cars, vans, SUVs, and F-150-esq trucks in the jobs consumers hire vehicles to do, but when it comes to these small &#38;#8220;trucks&#38;#8221; I am at a loss. Granted, their perpetuated existence indicates continued demand for such a form factor, but I can&#38;#8217;t for the life of my understand its appeal. Perhaps this is the naivety of youth and machismo of a nineteen-year-old speaking, but if I had the need for a flat bed and an additional four miles to each gallon without the bulk of an F-150 or above&#38;#160;&#38;#8212;&#38;#160;the only reasons I could see someone purchasing one of these vehicles&#38;#160;&#38;#8212;&#38;#160;I would swallow my second and third criteria and buy a Ford F-series anyways.&lt;/p&gt;
 
-&lt;p&gt;[&#38;gt;1] As opposed to the dinky Ford Rangers that have somehow managed to subsume the moniker.&lt;/p&gt;
+&lt;p id='fn1'&gt;&lt;a class='fn' title='return to article' href='#fnref1'&gt;&#38;#x21a9;&lt;/a&gt;&#38;nbsp;As opposed to the dinky Ford Rangers that have somehow managed to subsume the moniker.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p class='read_more_paragraph'&gt;
@@ -7104,7 +7104,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 &lt;p&gt;&lt;a href="https://zacs.site/blog/benedict-evans-on-simplicity.html"&gt;Speaking of Ben Evans and Amazon&lt;/a&gt; back in August&lt;sup id="fnref1"&gt;&lt;a href="https://zacs.site//blog/benedict-evans-on-amazons-profits.html#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;, when Amazon was the hot topic of discussion amongst the small circles we tend to frequent, he neatly and concisely explained many of the mysteries surrounding the company. For instance, why does Amazon turn nearly zero profit? And why, for crying out loud, do so many have such considerable faith in this curious company?&lt;/p&gt;
 
-&lt;p&gt;[&#38;gt;1] This should give you a general idea as to how good I am at keeping up with my Instapaper queue.&lt;/p&gt;
+&lt;p id='fn1'&gt;&lt;a class='fn' title='return to article' href='#fnref1'&gt;&#38;#x21a9;&lt;/a&gt;&#38;nbsp;This should give you a general idea as to how good I am at keeping up with my Instapaper queue.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p class='read_more_paragraph'&gt;
@@ -7681,7 +7681,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 &lt;p&gt;Good luck to you, Marco; we await Overcast&#38;#8217;s release in eager anticipation.&lt;/p&gt;
 
-&lt;p&gt;[&#38;gt;1] I can&#38;#8217;t help but think of Ben Brooks&#38;#8217; article &lt;a href="http://brooksreview.net/2013/05/tumblr-yahoo/"&gt;&lt;em&gt;Yahoo! + Tumblr. = !!&lt;/em&gt;&lt;/a&gt; on the topic every time I think about this acquisition.&lt;/p&gt;
+&lt;p id='fn1'&gt;&lt;a class='fn' title='return to article' href='#fnref1'&gt;&#38;#x21a9;&lt;/a&gt;&#38;nbsp;I can&#38;#8217;t help but think of Ben Brooks&#38;#8217; article &lt;a href="http://brooksreview.net/2013/05/tumblr-yahoo/"&gt;&lt;em&gt;Yahoo! + Tumblr. = !!&lt;/em&gt;&lt;/a&gt; on the topic every time I think about this acquisition.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p class='read_more_paragraph'&gt;
