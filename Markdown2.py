@@ -144,10 +144,10 @@ class Markdown:
         # Unordered list, as evidenced by a line starting with *, +, or -
         elif (__line[0] in ['*', '+', '-'] and __line[1] == ' '):
             # If the line is indented from the previous one, start a new list
-            if (self.__queryIndentTracker(-1) > self.__queryIndentTracker(-2)):
+            if (self.__line_indent_tracker[-1] > self.__line_indent_tracker[-2]):
                 self.__line_type_tracker.append("ul")
             # If a line is un-indented from the previous one, close out a list.
-            elif (self.__queryIndentTracker(-1) < self.__queryIndentTracker(-2)):
+            elif (self.__line_indent_tracker[-1] < self.__line_indent_tracker[-2]):
                 self.__line_type_tracker.append("/ul")
             # If the parser finds a list element preceeded by another list
             # element or an opening list tag, treat this line as a list element
@@ -163,10 +163,10 @@ class Markdown:
         # Ordered list, as evidenced by [0-9]\. or [0-9]{2}\.
         elif (__line[0].isdigit() and __line[1] == ".") or (__line[0:2].isdigit() and __line[3] == "."):
             # If the line is indented from the previous one, start a new list
-            if (self.__queryIndentTracker(-1) > self.__queryIndentTracker(-2)):
+            if (self.__line_indent_tracker[-1] > self.__line_indent_tracker[-2]):
                 self.__line_type_tracker.append("ol")
             # If a line is un-indented from the previous one, close out a list.
-            elif (self.__queryIndentTracker(-1) < self.__queryIndentTracker(-2)):
+            elif (self.__line_indent_tracker[-1] < self.__line_indent_tracker[-2]):
                 self.__line_type_tracker.append("/ol")
             # If the parser finds a list element preceeded by another list
             # element or an opening list tag, treat this line as a list element
@@ -213,16 +213,6 @@ class Markdown:
         else:
             self.__line_indent_tracker.append(len(__line) - len(__line.lstrip(' ')))
         self.__trimTracker(self.__line_indent_tracker)
-
-    # Method: __queryIndentTracker
-    # Purpose: Return the indent level for the specified line.
-    # Parameters:
-    # - self: Class namespace
-    # - __pos: Desired position, mangled. (Int)
-    # Return:
-    # - Indent level for specified line. (Int)
-    def __queryIndentTracker(self, __pos):
-        return self.__line_indent_tracker[__pos]
 
     # Method: __closeOut
     # Purpose: Write closing HTML tags for any open block-level elements.
