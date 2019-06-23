@@ -98,16 +98,6 @@ class Markdown:
 
         return __line
 
-    # Method: __getLineType
-    # Purpose: Return the type of line for the specified position.
-    # Parameters:
-    # - self: Class namespace
-    # - __pos: Desired position, mangled.
-    # Return:
-    # - Type of line at specified position (String)
-    def __getLineType(self, __pos):
-        return self.__line_type_tracker[__pos]
-
     # Method: __trimTracker
     # Purpose: Keep tracker lists to a max of three elements.
     # Parameters:
@@ -297,7 +287,7 @@ class Markdown:
 
         # Handle preformatted code blocks. First write the opening <pre> tag,
         # then return the unprocessed line.
-        if (self.__getLineType(-1) == "pre"):
+        if (self.__line_type_tracker[-1] == "pre"):
             if (self.__pre == True):
                 return "<pre>"
                 # return "<pre>\n"+__line
@@ -306,7 +296,7 @@ class Markdown:
         if (self.__pre == True):
             return self.__escapeCharacters(__line)
 
-        if (self.__getLineType(-1) == "raw"):
+        if (self.__line_type_tracker[-1] == "raw"):
             return __line
 
         # Parser tracks leading whitespace, so remove it.
@@ -325,39 +315,39 @@ class Markdown:
         # Handle unorered lists
         ## Write opening tag and append the closing tag to the block-level
         ## element tracker.
-        if (self.__getLineType(-1) == "ul"):
+        if (self.__line_type_tracker[-1] == "ul"):
             __line = "<ul>"+'\n'+"    <li>"+__line[2:]+"</li>"
             self.__close_out.append("</ul>\n")
         ## Write closing tag and remove a closing tag from the block-level
         ## element tracker.
-        elif (self.__getLineType(-1) == "/ul"):
+        elif (self.__line_type_tracker[-1] == "/ul"):
             __line = "</ul>\n<li>"+__line[2:]+"</li>"
             self.__close_out.remove("</ul>\n")
         # Handle ordered lists
         ## Write opening tag and append the closing tag to the block-level
         ## element tracker.
-        elif (self.__getLineType(-1) == "ol"):
+        elif (self.__line_type_tracker[-1] == "ol"):
             __line = "<ol>"+'\n'+"    <li>"+". ".join(__line.split(". ")[1:])+"</li>"
             self.__close_out.append("</ol>\n")
         ## Write closing tag and remove a closing tag from the block-level
         ## element tracker.
-        elif (self.__getLineType(-1) == "/ol"):
+        elif (self.__line_type_tracker[-1] == "/ol"):
             __line = "</ol>\n<li>"+__line[2:]+"</li>"
             self.__close_out.remove("</ol>\n")
         # Handle list elements for both unordered and ordered lists.
-        elif (self.__getLineType(-1) == "li"):
+        elif (self.__line_type_tracker[-1] == "li"):
             __line = "    <li>"+__line[2:]+"</li>"
         # Handle blockquotes, new and a continuation of an existing one.
-        elif (self.__getLineType(-1) == "blockquote"):
+        elif (self.__line_type_tracker[-1] == "blockquote"):
             __line = "<blockquote>\n    <p>"+self.__parseInlineMD(__line[5:])+"</p>"
             self.__close_out.append("</blockquote>\n")
-        elif (self.__getLineType(-1) == "bqt"):
+        elif (self.__line_type_tracker[-1] == "bqt"):
             if (__line[5:] == ''):
                 __line = ''
             else:
                 __line = "    <p>"+self.__parseInlineMD(__line[5:])+"</p>"
         # Handle header elements
-        elif (self.__getLineType(-1) == "header"):
+        elif (self.__line_type_tracker[-1] == "header"):
             # Count the number of # at the beginning of the line.
             l = len(__line) - len(__line.lstrip("#"))
             anchor = ''.join(ch for ch in __line.split(":")[0] if ch.isalnum())
@@ -365,10 +355,10 @@ class Markdown:
             __line = "<h"+str(l)+" class=\"headers\" id=\""+anchor+"\">"+__line.strip("#").strip()+"<span>&nbsp;<a href=\"#"+anchor+"\">#</a></span></h"+str(l)+">"
             return __line
         # Handle horizontal rules
-        elif (self.__getLineType(-1) == "hr"):
+        elif (self.__line_type_tracker[-1] == "hr"):
             return "<hr style='margin:50px auto;width:50%;border:0;border-bottom:1px dashed #ccc;background:#999;' />"
         # Handle images
-        elif (self.__getLineType(-1) == "img"):
+        elif (self.__line_type_tracker[-1] == "img"):
             # This feels a bit clunky, but seems like the best alternative to
             # regex capture groups, which seem unreliable.
             __line = __line.split("]")
@@ -386,7 +376,7 @@ class Markdown:
         # lets the writer reference an external file that contains a list of
         # links to other articles in a related series, and include them
         # automatically.
-        elif (self.__getLineType(-1) == "idx"):
+        elif (self.__line_type_tracker[-1] == "idx"):
             # Open the target file, write the opening <ul> tag, and add each
             # link in the file to the new index.
             if (not isfile("./Content/System/"+__line[1:-1])):
@@ -398,7 +388,7 @@ class Markdown:
                 __line += "</ul>"
             return __line
         # Handle footnotes
-        elif (self.__getLineType(-1) == "fn"):
+        elif (self.__line_type_tracker[-1] == "fn"):
             # line = line.replace("div ", "div id=\"fn"+str(mark)+"\" ")+"""<a class="fn" title="return to article" href="#fnref"""+str(mark)+"""\">&#x21a9;</a>"""
             mark = __line.split("]", 1)[0][5:]
             __line = "<p id='fn%s'><a class='fn' title='return to article' href='#fnref%s'>&#x21a9;</a>&nbsp;%s</p>" % (mark, mark, self.__parseInlineMD(__line[8:]))
@@ -411,7 +401,7 @@ class Markdown:
 
         # Once all the block-level parsing is done, parse the inline Markdown
         # tags.
-        if (self.__getLineType(-1) not in ["blockquote", "bqt", "fn"]):
+        if (self.__line_type_tracker[-1] not in ["blockquote", "bqt", "fn"]):
             __line = self.__parseInlineMD(__line)
         
         return __line
