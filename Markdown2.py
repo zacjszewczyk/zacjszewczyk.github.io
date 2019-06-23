@@ -34,6 +34,8 @@ class Markdown:
     def __parseInlineMD(self, __line):
         # Parser tracks leading whitespace, so remove it.
         __line = __line.strip()
+
+        # If the remaining line length is 0, return blank line.
         if (len(__line) == 0):
             return ""
         
@@ -44,6 +46,8 @@ class Markdown:
         ## interpreted as <em> tags...
         while ("**" in __line):
             __line = __line.replace("**", "<strong>", 1).replace("**", "</strong>", 1)
+
+        # Performance test to this point
 
         ## ... then parse the remaining <em> tags. Make sure there is an even
         # number of * to parse as <em> ... </em>.
@@ -60,25 +64,19 @@ class Markdown:
         while ("`" in __line):
             __line = __line.replace("`", "<code>", 1).replace("`", "</code>", 1)
 
-        ## Parse single quotatin marks.
-        __line = __line.replace(" '", " &#8216;").replace("' ", "&#8217; ")
-        for each in findall("(\w+'[\w+|\s+])", __line):
-            __line = __line.replace(each, each.replace("\'", "&#8217;"))
-        for each in findall("([\s\(;]'\w+)", __line):
-            __line = __line.replace(each, each.replace("\'", "&#8216;", 1))
-
         ## Parse aposrophes.
-        __line = __line.replace("'", "&#8217;")
+        for each in findall("\w'\w", __line):
+            __line = __line.replace(each, each.replace("'", "&#8217;"))
+        
+        ## Parse single quotatin marks.
+        for each in findall("\'[^\']+\'", __line):
+            __line = __line.replace(each, each.replace("'", "&#8216;", 1).replace("'", "&#8217;", 1))
 
         ## Parse double quotation marks.
-        __line = __line.replace(' "', " &#8220;").replace('" ', "&#8221; ")
-        for each in findall("([\s\<\>\\\*\/\[\-\(;]+\"[\[\w\%\#\\*<\>]+)", __line):
-            __line = __line.replace(each, each.replace("\"", "&#8220;", 1))
-        for each in findall("([\)\w+\.]+\"[\s\)\]\<\>\.\*\-\,\&])", __line):
-            __line = __line.replace(each, each.replace("\"", "&#8221;", 1))
-
+        for each in findall("\"[^\"]+\"", __line):
+            __line = __line.replace(each, each.replace('"', "&#8220;", 1).replace('"', "&#8221;", 1))
         if (__line[0] == '"'):
-            __line = '&#8220;'+__line[1:]
+            __line = __line.replace('"', "&#8220;", 1)
         if (__line[-1] == '"'):
             __line = __line[0:-1]+"&#8221;"
 
@@ -89,7 +87,6 @@ class Markdown:
 
             if (len(url) == 0):
                 url = title.replace("<em>", "").replace("</em>", "")+".txt"
-
             if (url[-4:] == ".txt"):
                 url = self.__base_url+"blog/"+url.lower().replace("&#8217;", "").replace(" ", "-").replace(".txt", ".html")
 

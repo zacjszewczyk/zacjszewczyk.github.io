@@ -98,15 +98,27 @@ import time
 environment = """\
 import re
 em = re.compile(r"\*[^\*]+\*")
-line = "I don't have an infant son to take care of, so I cannot speak to that adventure, but I can speak to its effects: every so often I undergo bouts of insomnia-like symptoms where no matter how much I may want to sleep, regardless of how significantly tomorrow's test will effect my grade, it's all I can do to hold myself still while my mind races. *What am I doing tomorrow? Did I finish all my homework? Will I have time to listen to that latest podcast episode? How about write? It's been far too long since I've written anything but a link post. But I have so many articles in Instapaper...will I have time to finish them tomorrow?* They say those who sleep well at night will never possess the perspective to truly appreciate the inability to sleep, and I completely agree with that: shortly after these experiences end, as I forget how truly terrible the last few nights were, even I begin to lose perspective; it really wasn't *that* bad, after all. But losing sleep is: I never feel motivated to do anything, nothing interests me, I have a short temper and an even shorter tolerance for others, everything loses its luster, and the list goes on and on. Least of all, I feel the urge to create: that's the last thing I want to do after managing to fall asleep only to wake up a few hours later. I can only imagine how rough Sid has it right now."
+line = '"I dont have an infant son to take care of, so I cannot speak to that adventure, but I can speak to its effects:" every so often I undergo bouts of insomnia-like symptoms where no matter how much I may want to sleep, regardless of how significantly tomorrows test will effect my grade, its all I can do to hold myself still while my mind races. "What am I doing tomorrow? Did I finish all my homework? Will I have time to listen to that latest podcast episode? How about write? Its been far too long since Ive written anything but a link post. But I have so many articles in Instapaper...will I have time to finish them tomorrow?" They say those who sleep well at night will never possess the perspective to truly appreciate the inability to sleep, and I completely agree with that: shortly after these experiences end, as I forget how truly terrible the last few nights were, even I begin to lose perspective; it really wasnt "that" bad, after all. But losing sleep is: I never feel motivated to do anything, nothing interests me, I have a short temper and an even shorter tolerance for others, everything loses its luster, and the list goes on and on. Least of all, I feel the urge to create: thats the last thing I want to do after managing to fall asleep only to wake up a few hours later. I can only imagine how rough Sid has it right now.'
 """
-to_exec = """\
-while ("*" in line):
-    line = line.replace("*", "<em>", 1).replace("*", "</em>", 1)
+to_exec = r"""
+## Parse double quotation marks.
+line = line.replace(' "', " &#8220;").replace('" ', "&#8221; ")
+for each in re.findall("([\s\<\>\\\*\/\[\-\(;]+\"[\[\w\%\#\\*<\>]+)", line):
+    line = line.replace(each, each.replace("\"", "&#8220;", 1))
+for each in re.findall("([\)\w+\.]+\"[\s\)\]\<\>\.\*\-\,\&])", line):
+    line = line.replace(each, each.replace("\"", "&#8221;", 1))
+
+if (line[0] == '"'):
+    line = '&#8220;'+line[1:]
+if (line[-1] == '"'):
+    line = line[0:-1]+"&#8221;"
 """
 print("while:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
-to_exec = """\
-for each in re.findall(em, line):
-    line = line.replace(each, each.replace("*", "<em>", 1).replace("*", "</em>", 1))
+to_exec = r"""
+# Parse double-quote quotations
+for each in re.findall("\"[^\"]+\"", line):
+    line = line.replace(each, each.replace('"', "&#8220;", 1).replace('"', "&#8221;", 1))
+print(line)
+print()
 """
 print("regex:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
