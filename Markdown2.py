@@ -51,13 +51,8 @@ class Markdown:
 
         ## ... then parse the remaining <em> tags. Make sure there is an even
         # number of * to parse as <em> ... </em>.
-        if (__line.count("*") % 2 == 0):
+        if (__line.count("*") != 1):
             while ("*" in __line):
-                # This if skips over the leading "* " in an unordered list, and
-                # parses the rest of the line for <em> tags.
-                if (__line[0] == "*" and __line[1] == " "):
-                    __line = "*"+__line[1:].replace("*", "<em>", 1).replace("*", "</em>", 1)
-                    break
                 __line = __line.replace("*", "<em>", 1).replace("*", "</em>", 1)
 
         ## Parse inline code with <code> ... </code> tags.
@@ -71,6 +66,9 @@ class Markdown:
         ## Parse single quotatin marks.
         for each in findall("\'[^\']+\'", __line):
             __line = __line.replace(each, each.replace("'", "&#8216;", 1).replace("'", "&#8217;", 1))
+
+        ## Catch apostrophes without the trailing conjugation
+        __line = __line.replace("'", "&#8217;")
 
         ## Parse double quotation marks.
         for each in findall("\"[^\"]+\"", __line):
@@ -304,11 +302,6 @@ class Markdown:
                 return "<pre>"
                 # return "<pre>\n"+__line
             return "</pre>"
-            # return __line+"\n</pre>"
-        
-        # if (self.__pre == True and self.__queryIndentTracker(-1) == 0):
-        #     self.__pre = False
-        #     return __line+"\n</pre>"
         
         if (self.__pre == True):
             return self.__escapeCharacters(__line)
@@ -418,7 +411,7 @@ class Markdown:
 
         # Once all the block-level parsing is done, parse the inline Markdown
         # tags.
-        if (self.__getLineType(-1) != "blockquote" and self.__getLineType(-1) != "bqt" and self.__getLineType(-1) != "fn"):
+        if (self.__getLineType(-1) not in ["blockquote", "bqt", "fn"]):
             __line = self.__parseInlineMD(__line)
         
         return __line
