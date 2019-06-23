@@ -411,9 +411,7 @@ class Markdown:
         elif (self.__getLineType(-1) == "fn"):
             # line = line.replace("div ", "div id=\"fn"+str(mark)+"\" ")+"""<a class="fn" title="return to article" href="#fnref"""+str(mark)+"""\">&#x21a9;</a>"""
             mark = __line.split("]", 1)[0][5:]
-            print (mark)
             __line = "<p id='fn%s'><a class='fn' title='return to article' href='#fnref%s'>&#x21a9;</a>&nbsp;%s</p>" % (mark, mark, self.__parseInlineMD(__line[8:]))
-            print(__line)
         # Default to treating the line as a paragraph
         else:
             if (__line[-3:] == "   "):
