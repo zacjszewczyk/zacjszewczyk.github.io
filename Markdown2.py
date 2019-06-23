@@ -11,13 +11,13 @@ class Markdown:
     # Purpose: Accept base URL for relative links
     # Parameters:
     # - self: Class namespace
-    # - base_url: Base URL for relative links. (String)
+    # - __base_url: Base URL for relative links. (String)
     # Return: none
-    def __init__(self, base_url):
-        self.base_url = base_url
+    def __init__(self, base_url=""):
+        self.__base_url = base_url
 
     # Initialize variables
-    base_url = "" # Base URL, given for relative links
+    __base_url = "" # Base URL, given for relative links
     __line_tracker = ["", "", ""] # Last three lines, raw.
     __line_type_tracker = ["", "", ""] # Type of last three lines.
     __line_indent_tracker = [0, 0, 0] # Indent level of last three lines.
@@ -33,12 +33,11 @@ class Markdown:
     # - Parsed line. (String)
     def __parseInlineMD(self, __line):
         # Parser tracks leading whitespace, so remove it.
-        __line = __line.lstrip(' ').rstrip('\n')
+        __line = __line.strip()
         if (len(__line) == 0):
             return ""
         
-        # Parse horizontal rules and emdashes
-        __line = __line.replace("---", "<hr />")
+        # Parse  emdashes
         __line = __line.replace("--", "&#160;&#8212;&#160;")
 
         ## Prase **, or <strong>, tags first, to keep them from being
@@ -92,7 +91,7 @@ class Markdown:
                 url = title.replace("<em>", "").replace("</em>", "")+".txt"
 
             if (url[-4:] == ".txt"):
-                url = self.base_url+"blog/"+url.lower().replace("&#8217;", "").replace(" ", "-").replace(".txt", ".html")
+                url = self.__base_url+"blog/"+url.lower().replace("&#8217;", "").replace(" ", "-").replace(".txt", ".html")
 
             __line = __line.replace("["+each[0]+"]("+each[1]+")", "<a href=\""+url+"\">"+title+"</a>")
 
