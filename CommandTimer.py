@@ -75,22 +75,38 @@ import time
 # """
 # print("no check:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
 
-environment = """\
-line = "## Title here"
-"""
-to_exec = """\
-i = 0
-for ch in line:
-    if (ch == " "):
-        break
-    elif (ch == "#"):
-        i += 1
-print(i)
-"""
-print("loop:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
 # environment = """\
+# line = "## Title here"
 # """
-to_exec = """\
-len(line) - len(line.lstrip("#"))
+# to_exec = """\
+# i = 0
+# for ch in line:
+#     if (ch == " "):
+#         break
+#     elif (ch == "#"):
+#         i += 1
+# print(i)
+# """
+# print("loop:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+# # environment = """\
+# # """
+# to_exec = """\
+# len(line) - len(line.lstrip("#"))
+# """
+# print("no check:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+
+environment = """\
+import re
+em = re.compile(r"\*[^\*]+\*")
+line = "I don't have an infant son to take care of, so I cannot speak to that adventure, but I can speak to its effects: every so often I undergo bouts of insomnia-like symptoms where no matter how much I may want to sleep, regardless of how significantly tomorrow's test will effect my grade, it's all I can do to hold myself still while my mind races. *What am I doing tomorrow? Did I finish all my homework? Will I have time to listen to that latest podcast episode? How about write? It's been far too long since I've written anything but a link post. But I have so many articles in Instapaper...will I have time to finish them tomorrow?* They say those who sleep well at night will never possess the perspective to truly appreciate the inability to sleep, and I completely agree with that: shortly after these experiences end, as I forget how truly terrible the last few nights were, even I begin to lose perspective; it really wasn't *that* bad, after all. But losing sleep is: I never feel motivated to do anything, nothing interests me, I have a short temper and an even shorter tolerance for others, everything loses its luster, and the list goes on and on. Least of all, I feel the urge to create: that's the last thing I want to do after managing to fall asleep only to wake up a few hours later. I can only imagine how rough Sid has it right now."
 """
-print("no check:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+to_exec = """\
+while ("*" in line):
+    line = line.replace("*", "<em>", 1).replace("*", "</em>", 1)
+"""
+print("while:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+to_exec = """\
+for each in re.findall(em, line):
+    line = line.replace(each, each.replace("*", "<em>", 1).replace("*", "</em>", 1))
+"""
+print("regex:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
