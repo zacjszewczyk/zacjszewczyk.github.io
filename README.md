@@ -1,11 +1,38 @@
 First Crack - A simple static blogging engine written in Python
 ===============================================================
 
-Given a directory of plain text files formatted in [Markdown](http://daringfireball.net/projects/markdown/), First Crack will generate a static website of over a thousand pages in less than two seconds. For a live demo, check out [my website](https://zacs.site/). I have used First Crack as the back-end for my site since 2011, and today I re-release the code base to the world.
+Given a directory of a thousand [Markdown](http://daringfireball.net/projects/markdown/) files, First Crack will generate a full-featured, lightweight, static website in less than two seconds. For a live demo, check out [my website](https://zacs.site/). I have used First Crack as the back-end for my site since 2011.
+
+## Table of Contents
+* [Front-End Features](#front-end-features)
+* [Back-End Features](#back-end-features)
+* [Dependencies](#dependencies)
+* [Installation](#installation)
+* [Directory Structure](#directory-structure)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Advanced Usage](#advanced-usage)
+* [Making a New Post](#making-a-new-post)
+* [Background and Motivation](#background-and-motivation)
+* [License](#license)
+
+## Front-End Features
+
+* **Lightweight** - First Crack builds a lightweight, minimalist website. A typical page loads less than 80KB of data--for comparison, a typical Medium post loads over 3000KB.
+* Full-featured - Who says a static site generator can't have cool features? One of my favorites is the Post Archives. This page makes finding a certain article easy by displaying every post you have ever published. It also allows you to view a list of posts by year and month, too. Each post's byline also includes links to the year and month it was published, so you can easily narrow your search with just a few clicks.
+* **Beautiful blog** - I built First Crack to be a blogging engine, and it remains true to that core today. The blog it builds presents clean articles in an aesthetically pleasing manner, whether viewed on a large desktop computer of a small mobile phone. I designed the default layout to remove the need for "Reader Views", by showing you exactly what you need and nothing you don't.
+* **Custom landing page** - I like to think of personal websites as a public resume. As such, they ought to help you put your best foot forward--and First Crack allows you to do just that, with a custom landing page. Use this page to talk about yourself, your projects, and anything else--and let your viewers check out your blog later. Don't make your thoughts on Agile the first thing a new employer sees.
+
+## Back-End Features
+
+* **No dependencies** - I wrote First Crack in vanilla Python. First Crack has no dependencies. 
+* **Fast** - I put a lot of work into optimizing every single operation First Crack executes, and it shows: given a thousand unique Markdown files, First Crack will generate individual pages for each article, and archive pages broken up by month and year published, in less than two seconds. As of the June 2019 release, First Crack does this in around 1.25 seconds, with a warm cache.
+* **Easy to use** - To build a website with First Crack, drop a few Markdown files into the `Content` directory and run `blog.py`. That's it, First Crack takes care of the rest.
+* **Platform-agnostic** - Don't worry about spinning up a special server if you use First Crack: even the most basic, bare-bones, underpowered web server can handle serving the static site this engine builds.
 
 ## Dependencies
 
-First Crack does not rely on any third-party tools, code, or frameworks. It uses Python 3.7.3, although you may have to adjust the path to the Python binary. Thanks to a bug in my development environment, I have to point my Python 3 projects to `#!/usr/local/Cellar/python/3.7.3/bin/python3`. If you have Python 3 installed alongside Python 2 in the `/usr/bin/` directory, simple change the first line of the Python files in this project to `/usr/bin/python3`.
+First Crack does not rely on any third-party tools, code, or frameworks. It uses Python 3.7.3, although you may have to adjust the path to the Python binary. Thanks to a bug in my development environment, I have to point my Python 3 projects to `#!/usr/local/bin/python3` rather than the usual `#!/usr/bin/python3`. If you have Python 3 installed alongside Python 2 in the `/usr/bin/` directory, simply change the first line of the Python files in this project to `#!/usr/bin/python3`.
 
 ## Installation
 
@@ -19,6 +46,8 @@ $ cd FirstCrack
 That's it.
 
 ## Directory Structure
+
+On install, First Crack consists of this README, five Python scripts, a `system` directory that houses the content for four static pages, a `Content` directory with two example content files, and a `local` directory where First Crack will store all structure files. For now, `local` just has the main CSS file for the site. Check out the tree below for a more succinct explanation.
 
 ```
 FirstCrack
@@ -96,7 +125,7 @@ To build a website with First Crack, enter the following command:
 $ ./blog.py
 ```
 
-First Crack ships with two example content files, which it uses to build an example website. View that site by opening the `index.html` file in the `local` directory, or by entering the following command:
+That's it. First Crack ships with two example content files, which it uses to build an example website. View that site by opening the `index.html` file in the `local` directory, or by entering the following command:
 
 ```
 $ open local/index.html
