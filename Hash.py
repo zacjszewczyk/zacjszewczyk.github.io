@@ -1,5 +1,4 @@
 #!/usr/local/bin/python3
-# Edit path based on Python 3 binary location
 
 import hashlib
 
