@@ -12,8 +12,6 @@ from Markdown2 import Markdown
 from ModTimes import CompareMtimes
 from colors import c
 
-md = Markdown("https://zacs.site/")
-
 # Global variables
 ## - types: Keep track of current and two previous line types. (Tuple)
 ## - active: Keep track of active block-level HTML element. (String)
@@ -31,6 +29,7 @@ files = {}
 months = {"01":"January","02":"February","03":"March","04":"April","05":"May","06":"June","07":"July","08":"August","09":"September","10":"October","11":"November","12":"December"}
 weekDays = ("Mon","Tue","Wed","Thu","Fri","Sat","Sun")
 content = ""
+md = ""
 
 # Config variables, read in from './EDITME'
 ## - base_url: Base website URL (String)
@@ -586,9 +585,12 @@ def Init():
     CheckDirAndCreate("./local/assets")
 
     # Make global variables accessible in the method, and initialize method variables.
-    global file_idx, files, content
+    global md, file_idx, files, content
     file_idx = 0
     files = {}
+
+    # Initialize Markdown Parser
+    md = Markdown(base_url)
 
     # Open the template file, split it, modify portions as necessary, and store each half in a list.
     fd = open("system/template.htm", "r")
