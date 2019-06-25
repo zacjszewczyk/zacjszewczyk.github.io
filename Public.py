@@ -89,13 +89,21 @@ def SanitizeDeploy(v=False):
             dst_fd.write(line)
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
     
-    # Sanitize Markdown.py
-    if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"Markdown.py'"+c.OKGREEN+" ... "+c.ENDC)
-    open(dst+"Markdown.py", "w").close()
-    with open("./Markdown.py", "r") as source_fd, open(dst+"Markdown.py", "a") as dst_fd:
+    # # Sanitize Markdown.py
+    # if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"Markdown.py'"+c.OKGREEN+" ... "+c.ENDC)
+    # open(dst+"Markdown.py", "w").close()
+    # with open("./Markdown.py", "r") as source_fd, open(dst+"Markdown.py", "a") as dst_fd:
+    #     for line in source_fd:
+    #         if (line[0:21] == "path_to_content_files"):
+    #             line = line.replace("zjszewczyk", "USERNAME_HERE")
+    #         dst_fd.write(line)
+    # if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+
+    # Sanitize Markdown2.py
+    if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"Markdown2.py'"+c.OKGREEN+" ... "+c.ENDC)
+    open(dst+"Markdown2.py", "w").close()
+    with open("./Markdown2.py", "r") as source_fd, open(dst+"Markdown2.py", "a") as dst_fd:
         for line in source_fd:
-            if (line[0:21] == "path_to_content_files"):
-                line = line.replace("zjszewczyk", "USERNAME_HERE")
             dst_fd.write(line)
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
 
