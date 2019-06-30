@@ -1,0 +1,77 @@
+Type: original
+Title: First Crack Release Notes, June 2019
+Link: first-crack-release-notes-0619.html
+Pubdate: 2019/06/30 06:36:10
+Author: Zac J. Szewczyk
+
+Since [re-releasing First Crack](Re Introducing First Crack.txt), I have made some great progress on the project. Not enough for version 2.0, though, so I spent the last few days thinking about how I wanted to post new versions. In short, I decided not to.  
+
+[Traditional software versioning](https://en.wikipedia.org/wiki/Software_versioning) implies a cycle of feature integration--feedback--improvement that I neither have the user base nor the inclination to do. I also don't want to take such a formal approach to a hobby I work on in my spare time. I still want to talk about improvements, so instead of versions, I plan to post monthly release notes for First Crack. This series will serve as a written record of the changes I make and the thought process behind them, as well as a good way for those interested in the project to keep up with it.
+
+## June Activity
+
+First, the changes I made in June. These are now live at [Github](https://github.com/zacjszewczyk/FirstCrack-Public) and [Bitbucket](https://bitbucket.org/zjszewczyk/firstcrack-public/src/master/).
+
+### Public Release
+
+It took me a long time to [re-releases First Crack](Re Introducing First Crack.txt), but I finally did it. This new version does more, builds a more feature-rich website, and implements a larger subset of the Markdown spec. It now has the versatility and polish a public project should, unlike [its predecessor](https://github.com/zacjszewczyk/FirstCrack). This release was long overdue, but--I think--worth the wait.
+
+### Python 3 Migration
+
+I started writing First Crack in 2012, with Python 2; I ported it to Python 3 in June. This involved swapping a few `print` statements with the new `print()` functions.
+
+### Canned "Pretty Print"
+
+I believe in generating valid HTML files that also look good: the former because I care about being a good programmer, and the latter because it makes debugging easier. First Crack still builds valid HTML files, but I canned "pretty print". It created too many problems with `<pre>` blocks that I could not solve with the old Markdown parser. I plan to revisit this once I work out the kinks in the new one.
+
+### Stateful Markdown Parser
+
+Ahead of First Crack's re-release, I identified the Markdown parser as the oldest, hackiest part of the code base. As the least optimized, most called method in the project, re-writing it seemed like a great idea. This had the potential to have a huge positive impact, and so I set out with a few goals in mind. I wanted to build a more reliable parser, less susceptible to weird edge cases, that implemented more of the Markdown spec. This would mean more overhead, so I also wanted the method to stay fast. I set out to do this over the next few months, but ended up finishing it a couple days later. The new version met each of my goals, and runs about 25% faster than its predecessor. I plan to release it as its own project soon.
+
+### Improved Documentation
+
+I made the last change in June to First Crack's documentation. In particular, I spent some time fleshing out [the README](https://github.com/zacjszewczyk/Standalone-FirstCrack), with the goal of doing a better job explaining the aspects that make my project great. I settled on four short bullet points on First Crack's front- and back-end features. I now highlight the project's strengths right at the start: a lightweight, full-featured, beautiful blog with a custom landing page, and a fast, easy to use, platform-agnostic engine to build it.
+
+## July Plan
+
+Going forward, I plan to focus my efforts on these areas in July, 2019.
+
+### Re-Implement "Pretty Print"
+
+See above, but in brief: now that First Crack uses a stateful Markdown parser, I would like to re-implement the "pretty print" feature I canned before the re-write. I like reading well-formatted HTML.
+
+### Release Markdown Parser
+
+Speaking of the new Markdown parser, I would also like to release it as its own project in July. Usage would look like this:
+
+```
+$ python3
+>>> import Markdown
+>>> md = Markdown()
+>>>
+>>> raw_markdown = "Hi, **this** is a sentence with a [link](https://google.com) to *Google*."
+>>>
+>>> print(md.html(raw_markdown))
+Hi, <strong>this</strong> is a sentence with a <a href="https://google.com">link</a> to <em>Google</em>.
+```
+
+Before I can do that, though, I have a few bugs to work out with the Markdown implementation, and I would like to enable parsing multi-line strings and entire files at once. 
+
+### Publish Implementation of Markdown Spec
+
+There are some peculiarities to my implementation of the Markdown spec, so I want to outline those differences in a formal document. I picture something similar to [the original Markdown syntax document on Daringfireball](https://daringfireball.net/projects/markdown/syntax.text).
+
+### Guided Setup
+
+I would also like to add a guided setup to my project. Right now, First Crack forces the user to fill out a config file before it builds their website. I would like to make this a guided process, where First Crack asks the user questions and builds that config file itself. At this stage, I want to focus on lowering the barrier to entry for a new user, and making First Crack more attractive. 
+
+### Better Documentation
+
+I did a lot to improve First Crack's documentation in June, but I will always have more work in this area. That will look like more robust comments in the scripts, but I want to focus on the README. As the first document most people will read about the project, I want to make it compelling, informative, and fun. I have a few broad ideas going into this, based on good examples from other projects:
+
+* GIFs of the install and run process that show simplicity, ease, and speed.
+* Performance graphs of First Crack's back-end performance versus other, similar engines. At less than two seconds to build a website of over one thousand pages, 
+* Performance graphs of the web pages First Crack builds versus the pages common content management systems build. 
+* Screenshots. This site is a live demo of the engine, but I like the idea of having a few pictures in there, too. 
+
+I have a lot of work ahead of me, but I look forward to it.
