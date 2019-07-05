@@ -1,0 +1,27 @@
+Type: original
+Title: Run Your Own Website
+Link: own-your-platform.html
+Pubdate: 2019/07/05 09:24:09
+Author: Zac J. Szewczyk
+
+I go back and forth on running my own website. I love [working](Re Introducing First Crack.txt) [on](First Crack Release Notes 0619.txt) [First Crack](/projects.html#firstCrack), but that work can become trying. I have little time for [projects](/projects.html), and the more I spend coding, the less I [read](My Morning Reads.txt) and write. On net, though, I consider this [a worthy pursuit](http://blairreeves.me/2019/01/10/yes-you-should-blog/), and so I do not plan to move away from my setup any time soon. Many feel the same, and over the last few months in particular, I have seen a lot [more people](http://blairreeves.me/2019/03/08/taking-control-of-your-internet/) express this on [websites of their own](http://john.ankarstrom.se/html/). I would like to add my voice to theirs today.
+
+I started thinking about this a few months ago, after reading a since-deleted article on Medium. Its author had a few reasons for leaving the platform, a lack of control over his work primary amongst them. His piece reminded of the reasons I went this route a long time ago, and the reasons I stick with it today. I have touched on them a [couple](Why I Write in Plain Text.txt) [times](My Setup 2019.txt) before, but today I want to spend an entire article on the subject.
+
+First, let me clarify what "run your own website" means. Under my definition, you must have 1) total control over your content, and 2) the ability to make it public or private at any time. This excludes Medium, for example, because the company owns all the content you publish there. It can also exclude hosted engines like Blogger: if you come back to writing [after a four year break](The Last Four Years.txt) to find your host shuttered, you may no longer have the ability to manage that work. Good backups can mitigate this risk, though, so you do not have to start from zero. Of course, you may go to the other extreme and [write your own blogging engine](Re Introducing First Crack.txt) that [builds a site](First Crack Release Notes 0619.txt) you can [upload to any web server](Dont Use Amazon Web Services.txt), but you do not have to.
+
+No matter how you go about it, you should run your own website. You should have total control over your content and the ability to make it public or private at any time, for these reasons in particular:
+
+### Your Website as a Resume
+
+At a high level, I think of my website as a resume. Anyone who wants to know more about me, or wants to see [examples of my work](/projects.html), can come [here](/). Use your website to give potential employers and new acquaintances a polished first impression. You can also use it to streamline information sharing: when CADD came up with my boss, I wrote down [the URL to my projects page](/projects.html). He can check it out, or not, and neither of us has to deal with the awkward hassle of emailing models or pictures back and forth.
+
+I could just have a public Facebook profile, and post all my projects on Medium. The idea of telling my boss to "Just look me up on Facebook", though, or of seeing a company bundle my hard work into a package for profit, does not appeal to me.
+    
+### Your Website as a Record
+
+I also like to think of my website as a record. When I read something interesting, I write about it--some times in great detail, other times with a simple note about the part that made it worth reading. Some posts just have [handy snippets that I can pull out to use on other machines](Git Home.txt). I may also write about complex subjects to clarify, condense, and record my thoughts on a topic, or to teach me something new. I can then refer back to these documents, and point others to them as well.
+
+This has proven more useful than I thought possible. In particular, a record of my thoughts on complex topics has come in handy. When those subjects come up, rather than re-hash a messy thought process, I can use these well-structured, well-reasoned, and--perhaps most important--well-researched documents to guide the conversation.
+
+When I started writing this, I planned to have more reasons for running your own website. In broad strokes, though, this about covers it: run your own website to make a great first impression, and to streamline information sharing. Whether talking to a new boss or trying to show off one a cool project, this will make your life much easier. You will find a whole host of other, [less tangible benefits](http://blairreeves.me/2019/01/10/yes-you-should-blog/) in this hobby, but I will leave them for you to discover on your own.

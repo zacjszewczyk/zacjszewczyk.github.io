@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 30 Jun 2019 10:36:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 01:24:40 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Run Your Own Website</title>
+            <link>https://zacs.site//blog/own-your-platform.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/own-your-platform.html</guid>
+
+            <pubDate>Fri, 05 Jul 2019 13:24:09 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I go back and forth on running my own website. I love &lt;a href="https://zacs.site/blog/re-introducing-first-crack.html"&gt;working&lt;/a&gt; &lt;a href="https://zacs.site/blog/first-crack-release-notes-0619.html"&gt;on&lt;/a&gt; &lt;a href="https://zacs.site//projects.html#firstCrack"&gt;First Crack&lt;/a&gt;, but that work can become trying. I have little time for &lt;a href="https://zacs.site//projects.html"&gt;projects&lt;/a&gt;, and the more I spend coding, the less I &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;read&lt;/a&gt; and write. On net, though, I consider this &lt;a href="http://blairreeves.me/2019/01/10/yes-you-should-blog/"&gt;a worthy pursuit&lt;/a&gt;, and so I do not plan to move away from my setup any time soon. Many feel the same, and over the last few months in particular, I have seen a lot &lt;a href="http://blairreeves.me/2019/03/08/taking-control-of-your-internet/"&gt;more people&lt;/a&gt; express this on &lt;a href="http://john.ankarstrom.se/html/"&gt;websites of their own&lt;/a&gt;. I would like to add my voice to theirs today.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/own-your-platform.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>First Crack Release Notes, June 2019</title>
             <link>https://zacs.site//blog/first-crack-release-notes-0619.html</link>
