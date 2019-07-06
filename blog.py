@@ -528,7 +528,7 @@ def Init():
     if (not isfile("./EDITME")):
         stdout.write(c.FAIL+"The FirstCrack config file, './EDITME', does not exist. Creating now ..."+c.ENDC)
         fd = open("./EDITME", "w")
-        fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url =\nbyline =\nmeta_keywords =\nmeta_appname =\ntwitter =\ninstagram =")
+        fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = \nbyline = \nfull_name = \nmeta_keywords = \nmeta_appname = \ntwitter = \ninstagram =")
         fd.close()
         stdout.write(c.OKGREEN+" done.\n"+c.ENDC)
         print(c.WARNING+"Please run again."+c.ENDC)
@@ -543,24 +543,26 @@ def Init():
                 if (line[0] == "#"): # Ignore comments
                     pass
                 elif (line[0:8] == "base_url"): # Extract base URL for site
-                    base_url = line.split(" =")[1].strip()
+                    base_url = line.split(" = ")[1].strip()
                 elif (line[0:6] == "byline"): # Extract author byline
-                    byline = line.split(" =")[1].strip()
+                    byline = line.split(" = ")[1].strip()
                 elif (line[0:9] == "full_name"): # Extract author full (legal) name
-                    full_name = line.split(" =")[1].strip()
+                    full_name = line.split(" = ")[1].strip()
                 elif (line[0:13] == "meta_keywords"): # Extract additional site keywords
-                    meta_keywords = line.split(" =")[1].strip()
+                    meta_keywords = line.split(" = ")[1].strip()
                 elif (line[0:12] == "meta_appname"): # Extract app name
-                    meta_appname = line.split(" =")[1].strip()
+                    meta_appname = line.split(" = ")[1].strip()
                 elif (line[0:7] == "twitter"): # Extract Twitter profile URL
-                    twitter_url = line.split(" =")[1].strip()
+                    twitter_url = line.split(" = ")[1].strip()
                 elif (line[0:9] == "instagram"): # Extract Instagram profile URL
-                    insta_url = line.split(" =")[1].strip()
+                    insta_url = line.split(" = ")[1].strip()
 
     # If any of these values were blank, notify the user and throw an error.
-    if (base_url == "" or byline == "" or full_name == "" or meta_keywords == "" or meta_appname == "" or twitter_url == "" or insta_url == ""):
+    if (base_url == "" or byline == "" or full_name == ""):
         print(c.FAIL+"Error reading settings from './EDITME'. Please check file configuration and try again."+c.ENDC)
         exit(1)
+    elif (meta_keywords == "" or meta_appname == "" or twitter_url == "" or insta_url == ""):
+        print(c.WARNING+"You have not finished initializing the configuration file. Please finish setting up './EDITME'.")
 
     # Check for existence of system files and Content directory.
     # These are requirements for First Crack; it will fail if they do not exist.
