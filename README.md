@@ -78,18 +78,14 @@ FirstCrack
 
 ## Setup
 
-First Crack requires that you set up a configuration file before it will generate your site. This is a one-time thing and consists of filling out a few variables. First Crack will generate a skeleton config file when you run it for the first time. Do this with the following commands:
+First Crack requires that you set up a configuration file before it will generate your site. This allows it to customize the site to your domain name and your niche, and build a copyright and disclaimers page with your name as the content owner. First Crack will walk you through this process the first time you run it. Do this with the following commands:
 
 ```
 $ chmod 755 ./blog.py
 $ ./blog.py
 ```
 
-You have to fill in the config file before First Crack will build your site, so do this by opening `EDITME` in your editor of choice. You can do this in the terminal with `vi`:
-
-```
-$ vi ./EDITME
-```
+First Crack will tell you that the configuration file, `./EDITME`, does not exist. It will then ask if you want to set it up. Answer `y` and hit return. First Crack will not build your website unless you answer each question. If one does not apply to you, enter `None`. 
 
 The config file, `EDITME`, looks like this:
 
@@ -112,12 +108,7 @@ twitter =
 instagram = 
 ```
 
-Assign a value to each variable, save the file, and then build your site. My first two lines look like this:
-
-```
-base_url = https://zacs.site/
-byline = Zac J. Szewczyk
-```
+You can go back and change these values at any time. Firs Crack will update your site to reflect that change the next time you run `blog.py`. Once you finish filling them out for the first time, First Crack will build your site. Check it out with `open local/index.html`, which will open the local copy in your default browser. 
 
 ## Usage
 
