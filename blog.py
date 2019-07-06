@@ -479,8 +479,8 @@ def GetUserInput(prompt):
         if (len(string) == 0):
             print(c.WARNING+"Input cannot be empty."+c.ENDC)
             continue
-        # Do not allow more than 32 characters
-        elif (len(string) > 32):
+        # Do not allow more than 64 characters
+        elif (len(string) > 64):
             print(c.WARNING+"Input bound exceeded."+c.ENDC)
             continue
         # If we get here, we have valid input
@@ -523,20 +523,38 @@ def GetTitle(source, timestamp):
 #          Make sure ./local exists.
 # Parameters: none
 def Init():
+    # Make global variables accessible
+    global base_url, byline, full_name, meta_keywords, meta_appname, twitter_url, insta_url
+
     # Check for the existence of an "EDITME" file, which contains config info.
-    # On error, notify the user, create the file, and ask the user to run again.
+    # On error, notify the user, create the file, and prompt the user to fill it out.
     if (not isfile("./EDITME")):
-        stdout.write(c.FAIL+"The FirstCrack config file, './EDITME', does not exist. Creating now ..."+c.ENDC)
-        fd = open("./EDITME", "w")
-        fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = \nbyline = \nfull_name = \nmeta_keywords = \nmeta_appname = \ntwitter = \ninstagram =")
-        fd.close()
-        stdout.write(c.OKGREEN+" done.\n"+c.ENDC)
-        print(c.WARNING+"Please run again."+c.ENDC)
-        exit(1)
+        stdout.write(c.FAIL+"The FirstCrack config file, './EDITME', does not exist. Would you like to create it now?\n"+c.ENDC)
+        res = GetUserInput("(y/n) # ")
+        print(res)
+
+        while (res != "y" and res != "n"):
+            stdout.write(c.FAIL+"Invalid input. Please try again.\n"+c.ENDC)
+            res = GetUserInput("(y/n) # ")
+
+        if (res == "y"):
+            base_url = GetUserInput("Enter your domain name (ex: https://zacs.site): ")
+            byline = GetUserInput("Enter your name, as it will appear in the byline on all posts: ")
+            full_name = GetUserInput("Enter the full, legal name of the content owner: ")
+            meta_keywords = GetUserInput("Enter any additional keywords that apply to your website: ")
+            meta_appname = GetUserInput("Enter the desired app name: ")
+            twitter_url = GetUserInput("URL to your Twtitter profile: ")
+            insta_url = GetUserInput("URL to your Instagram profile: ")
+            fd = open("./EDITME", "w")
+            fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = %s\nbyline = %s\nfull_name = %s\nmeta_keywords = %s\nmeta_appname = %s\ntwitter = %s\ninstagram = %s" % (base_url, byline, full_name, meta_keywords, meta_appname, twitter_url, insta_url))
+            fd.close()
+        elif (res == "n"):
+            print(c.FAIL+"Configuration file not created."+c.ENDC)
+            print(c.WARNING+"Please run again."+c.ENDC)
+            exit(0)
+
     # On success, extract values and store them for use when building the site.
     else:
-        # Make global variables accessible
-        global base_url, byline, full_name, meta_keywords, meta_appname, twitter_url, insta_url
         # Open the './EDITME' file
         with open("./EDITME", "r") as fd:
             for line in fd:
