@@ -13,6 +13,7 @@ Given a directory of a thousand [Markdown](http://daringfireball.net/projects/ma
 * [Usage](#usage)
 * [Advanced Usage](#advanced-usage)
 * [Making a New Post](#making-a-new-post)
+* [Editing an Existing Post](#editing-an-existing-post)
 * [Background and Motivation](#background-and-motivation)
 * [License](#license)
 
@@ -148,6 +149,12 @@ $ ./blog.py -R
 ## Making a New Post
 
 Like everything else, the process for making a new post is simple. See the files in the Content directory for examples of a linkpost and an original article. To make a new post, save a text file in the Content directory and build the site. First Crack will only build files that have changed since you last ran it, and then re-build the blog and archive pages as necessary. 
+
+## Editing an Existing Post
+
+To edit an existing post, just edit the text file in the `Content` directory, then build the site. First Crack will keep the original publication date, but change the content. You can change the original publication date, title, and author by editing the file's header, and then rebuilding the site. 
+
+## 
 
 ## Background and Motivation
 
