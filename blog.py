@@ -531,20 +531,28 @@ def Init():
     if (not isfile("./EDITME")):
         stdout.write(c.FAIL+"The FirstCrack config file, './EDITME', does not exist. Would you like to create it now?\n"+c.ENDC)
         res = GetUserInput("(y/n) # ")
-        print(res)
 
         while (res != "y" and res != "n"):
             stdout.write(c.FAIL+"Invalid input. Please try again.\n"+c.ENDC)
             res = GetUserInput("(y/n) # ")
 
         if (res == "y"):
-            base_url = GetUserInput("Enter your domain name (ex: https://zacs.site): ")
-            byline = GetUserInput("Enter your name, as it will appear in the byline on all posts: ")
-            full_name = GetUserInput("Enter the full, legal name of the content owner: ")
-            meta_keywords = GetUserInput("Enter any additional keywords that apply to your website: ")
-            meta_appname = GetUserInput("Enter the desired app name: ")
-            twitter_url = GetUserInput("URL to your Twtitter profile: ")
-            insta_url = GetUserInput("URL to your Instagram profile: ")
+            print(c.UNDERLINE+"Base URL"+c.ENDC+": The base domain name for your website, i.e. https://zacs.site")
+            print(c.UNDERLINE+"Byline"+c.ENDC+": The name of the author, as you want it to display on all blog posts.")
+            print(c.UNDERLINE+"Full name"+c.ENDC+": The full, legal name of the content owner, used to generate the copyright notice.")
+            print(c.UNDERLINE+"Keywords"+c.ENDC+": Any keywords you would like a search engine to use to send visitors to your website.\n          At the least, I suggest alternate spellings of your name and nicknames.")
+            print(c.UNDERLINE+"App name"+c.ENDC+": The app name a user will see if they save your website to their home screen. I recommend using your name.")
+            print(c.UNDERLINE+"Twitter URL"+c.ENDC+": The URL to your Twtitter profile, to give your readers somewhere to interact with you.")
+            print(c.UNDERLINE+"Instagram URL"+c.ENDC+": The URL to your Instagram profile, to give your readers somewhere else to interact with you. ")
+            print()
+
+            base_url = GetUserInput("Base URL: ").rstrip("/")
+            byline = GetUserInput("Byline: ")
+            full_name = GetUserInput("Full name: ")
+            meta_keywords = GetUserInput("Keywords: ")
+            meta_appname = GetUserInput("App name: ")
+            twitter_url = GetUserInput("Twitter URL: ")
+            insta_url = GetUserInput("Instagram URL: ")
             fd = open("./EDITME", "w")
             fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = %s\nbyline = %s\nfull_name = %s\nmeta_keywords = %s\nmeta_appname = %s\ntwitter = %s\ninstagram = %s" % (base_url, byline, full_name, meta_keywords, meta_appname, twitter_url, insta_url))
             fd.close()
