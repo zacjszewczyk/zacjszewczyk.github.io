@@ -14,6 +14,7 @@ Given a directory of a thousand [Markdown](http://daringfireball.net/projects/ma
 * [Advanced Usage](#advanced-usage)
 * [Making a New Post](#making-a-new-post)
 * [Editing an Existing Post](#editing-an-existing-post)
+* [Editing an Existing Page](#editing-an-existing-page)
 * [Background and Motivation](#background-and-motivation)
 * [License](#license)
 
@@ -154,7 +155,9 @@ Like everything else, the process for making a new post is simple. See the files
 
 To edit an existing post, just edit the text file in the `Content` directory, then build the site. First Crack will keep the original publication date, but change the content. You can change the original publication date, title, and author by editing the file's header, and then rebuilding the site. 
 
-## 
+## Editing an Existing Page
+
+First Crack ships with a handful of static pages that live in the `system` folder: `index.html`, `projects.html`, `disclaimers.html`, and `template.htm`. When it builds a website, First Crack gets content for the home page from `index.html`, content for the projects page from `projects.html`, and content for the disclaimers page from `disclaimers.html`. If you want to change any of them, then, just edit those files. Put any JavaScript snippets above the `<!-- DIVIDER -->` line, and the HTML content below it. 
 
 ## Background and Motivation
 
