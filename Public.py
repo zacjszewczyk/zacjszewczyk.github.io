@@ -154,10 +154,10 @@ if (__name__ == "__main__"):
     else:
         verbose = False
 
-    # Clear deployment directory if it exists
-    if (isdir(dst)):
-        rmtree(dst)
-        mkdir(dst)
+    # # Clear deployment directory if it exists
+    # if (isdir(dst)):
+    #     rmtree(dst)
+    #     mkdir(dst)
 
     # Copy files to the deployment directory
     CopyToDeploy(verbose)
