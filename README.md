@@ -11,6 +11,7 @@ Given a directory of a thousand [Markdown](http://daringfireball.net/projects/ma
 * [Directory Structure](#directory-structure)
 * [Setup](#setup)
 * [Usage](#usage)
+* [Website Structure](#website-structure)
 * [Advanced Usage](#advanced-usage)
 * [Making a New Post](#making-a-new-post)
 * [Editing an Existing Post](#editing-an-existing-post)
@@ -122,6 +123,23 @@ That's it. First Crack ships with two example content files, which it uses to bu
 
 ```
 $ open local/index.html
+```
+
+## Website Structure
+
+First Crack builds five pages and one RSS feed out of the box. The diagram below depicts the default site structure, which grows as you make new blog posts. First Crack updates the blog, RSS feed, and archives every time you post something new, but refers to the HTML files in the `system` folder for the content of the home and projects pages. To make this new site yours, you will need to start by editing those two documents, then wrap up by posting your first article.
+
+```
+YourDomain.com
+|____Home (index.html)
+|____Blog (blog.html)
+| | |____ Test Original Article (test-original-article.html)
+| | |____ Test Linkpost (test-linkpost.html)
+| | |____ ...
+| |____RSS (rss.html)
+| |____Post Archives (archives.html)
+|____Projects (projectx.html)
+|____Disclaimers (disclaimers.html)
 ```
 
 ## Advanced Usage
