@@ -32,10 +32,8 @@ rebuild:
 #          to remote source control repository.
 # Prerequisites: none
 deploy:
-	@firebase deploy
-	@git add .
-	@git commit -m "New post deployed."
-	@git push
+	@firebase deploy || echo "No Firebase deployment found."
+	-@(git add . 2> /dev/null && git commit -m "Deployment commit on "`date` && git push) || echo "No local repo found: "`date`
 
 # Rule: EDITME
 # Purpose: Create the config file on first run.
