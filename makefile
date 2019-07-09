@@ -42,18 +42,21 @@ deploy:
 # Purpose: Display the help menu.
 # Prerequisites: none
 help:
-	@echo $help_menu
+	@echo "To update your website:                     make"
+	@echo "To rebuild all structure files:             make rebuild"
+	@echo "To enter First Crack's 'Authoring' mode:    make author"
+	@echo "To deploy with Firebase and update the                   "
+	@echo "remote repo:                                make deploy"
+	@echo "To view this help menu again:               make help"
 
 # Rule: .config
 # Purpose: On first run, 1) Display help menu, and
 #          2) create hidden config file.
 # Prerequisites: none
-.config:
-	@echo "Welcome to First Crack."
+.config: help
 	@echo
 	@echo "This menu will appear until you finish setting up your website. After that, you can access it at again at any time with the command 'make help'." 
 	@echo
-	@echo $help_menu
+	@echo "First Crack will now prompt you to create the config file. Proceed by entering 'y' at the prompt."
 	@echo
-	@echo "First Crack will now prompt you to create the config file.
-	@echo
+	@./blog.py
