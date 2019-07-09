@@ -1,11 +1,18 @@
 .PHONY: default
 .PHONY: rebuild
+.PHONY: deploy
 
 default: EDITME
-	./blog.py
+	@./blog.py
 
 rebuild:
-	./blog.py -R
+	@./blog.py -R
+
+deploy:
+	@firebase deploy
+	@git add .
+	@git commit -m "New post deployed."
+	@gp
 
 EDITME:
 	@echo "First run. Creating EDITME"

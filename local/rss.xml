@@ -7,9 +7,25 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 08 Jul 2019 11:40:28 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jul 2019 12:09:27 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Google Ads for Social Engineering</title>
+            <link>https://www.nytimes.com/2019/07/07/opinion/google-ads.html</link>
+            <guid isPermaLink='true'>https://www.nytimes.com/2019/07/07/opinion/google-ads.html</guid>
+
+            <pubDate>Tue, 09 Jul 2019 12:09:20 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Patrick Berlinquette followed &lt;a href="http://redirectmethod.org"&gt;Google&#38;#8217;s model for ad-based social engineering&lt;/a&gt;, to impressive results. My mind immediately went to much less consequential marketing campaigns. It looks like Google just shared the keys to success.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/google-ads.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Don't Call Yourself A Programmer, And Other Career Advice</title>
             <link>https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/</link>
