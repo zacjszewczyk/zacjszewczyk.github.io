@@ -34,6 +34,12 @@ author:
 rebuild:
 	@./blog.py -R
 
+# Rule: preview
+# Purpose: Try to open the website in the browser.
+# Prerequisites: none
+preview:
+	-@(open ./local/index.html || firefox ./local/index.html) || echo `date`": No browser found."
+
 # Rule: deploy
 # Purpose: Deploy with Google Firebase, and commit changes
 #          to remote source control repository.
@@ -41,12 +47,6 @@ rebuild:
 deploy:
 	-@firebase deploy 2> /dev/null || echo `date`": No Firebase deployment found."
 	-@(git add . 2> /dev/null && git commit -m "Deployment commit on "`date` && git push) || echo `date`": No local repo found."
-
-# Rule: preview
-# Purpose: Try to open the website in the browser.
-# Prerequisites: none
-preview:
-	-@(open ./local/index.html || firefox ./local/index.html) || echo `date`": No browser found."
 
 # Rule: help
 # Purpose: Display the help menu.
@@ -56,6 +56,7 @@ help:
 	@echo "To rebuild all structure files:             make rebuild"
 	@echo "To enter First Crack's 'Authoring' mode:    make author"
 	@echo "To deploy with Firebase and update the                   "
+	@echo "To preview the website in your browser:     make preview"
 	@echo "remote repo:                                make deploy"
 	@echo "To view this help menu again:               make help"
 
