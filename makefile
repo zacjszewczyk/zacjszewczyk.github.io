@@ -55,8 +55,8 @@ help:
 	@echo "To update your website:                     make"
 	@echo "To rebuild all structure files:             make rebuild"
 	@echo "To enter First Crack's 'Authoring' mode:    make author"
-	@echo "To deploy with Firebase and update the                   "
 	@echo "To preview the website in your browser:     make preview"
+	@echo "To deploy with Firebase and update the                   "
 	@echo "remote repo:                                make deploy"
 	@echo "To view this help menu again:               make help"
 
