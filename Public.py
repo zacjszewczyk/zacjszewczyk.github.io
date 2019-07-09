@@ -21,6 +21,11 @@ def CopyToDeploy(v=False):
     copy("./README.md", dst+"README.md")
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
 
+    # Copy "makefile" to the deployment folder
+    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"makefile'"+c.OKGREEN+" ... "+c.ENDC)
+    copy("./makefile", dst+"makefile")
+    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+
     # Clear the "system/*" tree in the deployment folder
     if (v): stdout.write(c.OKGREEN+"Clearing "+c.ENDC+"'"+dst+"system'"+c.OKGREEN+" ... "+c.ENDC)
     rmtree(dst+"system", ignore_errors=True)
