@@ -19,7 +19,7 @@
 # Purpose: Update the website.
 # Prerequisites:
 # - .config: Create the hidden config file on first run.
-default: EDITME
+default: .config
 	@./blog.py
 
 # Rule: author
@@ -71,4 +71,3 @@ help:
 	@echo "First Crack will now prompt you to create the config file. Proceed by entering 'y' at the prompt."
 	@echo
 	@chmod 755 blog.py
-	@./blog.py
