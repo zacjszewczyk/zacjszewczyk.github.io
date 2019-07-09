@@ -109,7 +109,7 @@ twitter =
 instagram = 
 ```
 
-You can go back and change these values at any time. Firs Crack will update your site to reflect that change the next time you run `make` or `./blog.py`. Once you finish filling them out for the first time, First Crack will build your site. Check it out with `open local/index.html`, which will open the local copy in your default browser. 
+You can go back and change these values at any time. First Crack will update your site to reflect that change the next time you run `make` or `./blog.py`. Once you finish filling them out for the first time, First Crack will build your site. Check it out with `open local/index.html`, which will open the local copy in your default browser. 
 
 ## Usage
 
