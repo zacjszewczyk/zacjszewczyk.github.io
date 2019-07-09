@@ -12,7 +12,7 @@ deploy:
 	@firebase deploy
 	@git add .
 	@git commit -m "New post deployed."
-	@gp
+	@git push
 
 EDITME:
 	@echo "First run. Creating EDITME"
