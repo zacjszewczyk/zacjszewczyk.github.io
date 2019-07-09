@@ -64,7 +64,8 @@ help:
 # Purpose: On first run, 1) Display help menu, and
 #          2) create hidden config file.
 # Prerequisites: none
-.config: help
+.config:
+	@make help
 	@echo
 	@echo "This menu will appear until you finish setting up your website. After that, you can access it at again at any time with the command 'make help'." 
 	@echo
