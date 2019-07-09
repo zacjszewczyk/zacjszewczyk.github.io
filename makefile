@@ -1,3 +1,5 @@
+# Reference document: https://www.gnu.org/software/make/manual/make.html
+
 # PHONY declarations
 ## default - Update the website.
 ## author  - Enter First Crack's "Authoring" mode.
