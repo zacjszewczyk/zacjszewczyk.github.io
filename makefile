@@ -4,12 +4,14 @@
 ## default - Update the website.
 ## author  - Enter First Crack's "Authoring" mode.
 ## rebuild - Rebuild all structure files.
+## preview - Try to open the website in the browser.
 ## deploy  - Deploy with Google Firebase, and commit changes
 ##           to remote source control repository.
 ## help    - Display the help menu.
 .PHONY: default
 .PHONY: author
 .PHONY: rebuild
+.PHONY: preview
 .PHONY: deploy
 .PHONY: help
 
@@ -37,8 +39,14 @@ rebuild:
 #          to remote source control repository.
 # Prerequisites: none
 deploy:
-	-@firebase deploy 2> /dev/null || echo "No Firebase deployment found: "`date`
-	-@(git add . 2> /dev/null && git commit -m "Deployment commit on "`date` && git push) || echo "No local repo found: "`date`
+	-@firebase deploy 2> /dev/null || echo `date`": No Firebase deployment found."
+	-@(git add . 2> /dev/null && git commit -m "Deployment commit on "`date` && git push) || echo `date`": No local repo found."
+
+# Rule: preview
+# Purpose: Try to open the website in the browser.
+# Prerequisites: none
+preview:
+	-@(open ./local/index.html || firefox ./local/index.html) || echo `date`": No browser found."
 
 # Rule: help
 # Purpose: Display the help menu.
