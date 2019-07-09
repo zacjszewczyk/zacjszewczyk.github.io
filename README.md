@@ -55,6 +55,7 @@ On install, First Crack consists of this README, five Python scripts, a `system`
 ```
 FirstCrack
 |____README.md # This file.
+|____makefile # A simplified command line interface for First Crack.
 |____blog.py # The blog engine.
 |____Markdown.py # The Markdown parser.
 |____colors.py # ASCII color code function.
@@ -79,16 +80,15 @@ FirstCrack
 
 ## Setup
 
-First Crack requires that you set up a configuration file before it will generate your site. This allows it to customize the site to your domain name and your niche, and build a copyright and disclaimers page with your name as the content owner. First Crack will walk you through this process the first time you run it. Do this with the following commands:
+First Crack requires that you set up a configuration file before it will generate your site. This allows it to customize the site to your domain name and your niche, and build a copyright and disclaimers page with your name as the content owner. First Crack will walk you through this process the first time you run it. Do this with the following command:
 
 ```
-$ chmod 755 ./blog.py
-$ ./blog.py
+$ make
 ```
 
-First Crack will tell you that the configuration file, `./EDITME`, does not exist. It will then ask if you want to set it up. Answer `y` and hit return. First Crack will not build your website unless you answer each question. If one does not apply to you, enter `None`. 
+First Crack will tell you that the configuration file, `./.config`, does not exist. It will then ask if you want to set it up. Answer `y` and hit return. First Crack will not build your website unless you answer each question. If one does not apply to you, enter `None`. 
 
-The config file, `EDITME`, looks like this:
+The config file, `.config`, looks like this:
 
 ```
 # FirstCrack configuration document
@@ -109,11 +109,17 @@ twitter =
 instagram = 
 ```
 
-You can go back and change these values at any time. Firs Crack will update your site to reflect that change the next time you run `blog.py`. Once you finish filling them out for the first time, First Crack will build your site. Check it out with `open local/index.html`, which will open the local copy in your default browser. 
+You can go back and change these values at any time. Firs Crack will update your site to reflect that change the next time you run `make` or `./blog.py`. Once you finish filling them out for the first time, First Crack will build your site. Check it out with `open local/index.html`, which will open the local copy in your default browser. 
 
 ## Usage
 
 To build a website with First Crack, enter the following command:
+
+```
+$ make
+```
+
+You can also just run the Python file, with this command:
 
 ```
 $ ./blog.py
@@ -122,7 +128,7 @@ $ ./blog.py
 That's it. First Crack ships with two example content files, which it uses to build an example website. View that site by opening the `index.html` file in the `local` directory, or by entering the following command:
 
 ```
-$ open local/index.html
+$ make preview
 ```
 
 ## Website Structure
@@ -144,15 +150,17 @@ YourDomain.com
 
 ## Advanced Usage
 
-First Crack has a few advanced features that make managing a website easier, which are accessible in the "Authoring" mode. To enter "Authoring" mode, use the following command:
+First Crack has a few advanced features that make managing a website easier, which are accessible in the "Authoring" mode. To enter "Authoring" mode, use one of the following commands:
 
 ```
+$ make author
 $ ./blog.py -a
 ```
 
-First Crack will display a menu of available commands, along with an explanation of each. Enter `-h` at any time to view the help menu. First Crack will continue prompting you for input in this mode until you exit it with either `exit` or `!exit`. You can also run any of these commands directly from the command line. For example, to clear all structure files and rebuilt the entire site, use the following command:
+First Crack will display a menu of available commands, along with an explanation of each. Enter `-h` at any time to view the help menu. First Crack will continue prompting you for input in this mode until you exit it with either `exit` or `!exit`. You can also run any of these commands directly from the command line. For example, to clear all structure files and rebuilt the entire site, use one of the following commands:
 
 ```
+$ make rebuild
 $ ./blog.py -R
 ```
 
