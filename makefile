@@ -46,7 +46,7 @@ preview:
 # Prerequisites: none
 deploy:
 	-@firebase deploy 2> /dev/null || echo `date`": No Firebase deployment found."
-	-@(git add . 2> /dev/null && git commit -m "Deployment commit on "`date` && git push) || echo `date`": No local repo found."
+	-@(git add . 2> /dev/null && git commit -m "Deployment commit on `date`" && git push) || echo `date`": No local repo found."
 
 # Rule: help
 # Purpose: Display the help menu.
