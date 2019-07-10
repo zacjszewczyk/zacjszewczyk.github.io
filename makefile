@@ -8,12 +8,14 @@
 ## deploy  - Deploy with Google Firebase, and commit changes
 ##           to remote source control repository.
 ## help    - Display the help menu.
+## pull    - Pull changes from remote repo.
 .PHONY: default
 .PHONY: author
 .PHONY: rebuild
 .PHONY: preview
 .PHONY: deploy
 .PHONY: help
+.PHONY: pull
 
 # Rule: default
 # Purpose: Update the website.
@@ -72,3 +74,9 @@ help:
 	@echo "First Crack will now prompt you to create the config file. Proceed by entering 'y' at the prompt."
 	@echo
 	@chmod 755 blog.py
+
+# Rule: pull
+# Purpose: Pull changes from remote repo.
+# Prerequisites: none
+pull:
+	git pull https://github.com/zacjszewczyk/Standalone-FirstCrack.git
