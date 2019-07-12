@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 11 Jul 2019 09:25:53 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2019 09:59:53 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>How to Run Your Own Website</title>
+            <link>https://zacs.site//blog/how-to-own-your-platform.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/how-to-own-your-platform.html</guid>
+
+            <pubDate>Fri, 12 Jul 2019 21:59:51 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I wanted to get into this &lt;a href="https://zacs.site/blog/own-your-platform.html"&gt;when I explained why you should manage your own website&lt;/a&gt;, but that got a little long and this topic deserves its own post. I have talked before about &lt;a href="https://zacs.site/blog/my-setup-2019.html"&gt;my setup&lt;/a&gt; and &lt;a href="https://zacs.site/blog/re-introducing-first-crack.html"&gt;my&lt;/a&gt; &lt;a href="https://zacs.site/blog/first-crack-release-notes-0619.html"&gt;blog&lt;/a&gt; &lt;a href="https://zacs.site//projects.html#firstCrack"&gt;engine&lt;/a&gt;, First Crack, but today I want to explain how I run my site, so that you can run yours. &lt;a href="https://news.ycombinator.com/item?id=20362319#20363104"&gt;I agree&lt;/a&gt; that most technical people underestimate the difficulty of setting up a website, and so today I will make that easy.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/how-to-own-your-platform.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Misunderstood Technology</title>
             <link>https://www.regulus.com/blog/tesla-model-3-spoofed-off-the-highway-regulus-researches-hack-navigation-system-causing-car-to-steer-off-road/</link>
