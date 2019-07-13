@@ -7,9 +7,25 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 12 Jul 2019 10:12:35 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 11:55:19 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>A basic collaboration workflow on Gist</title>
+            <link>http://www.focustheweb.com/2015/04/06/a-basic-collaboration-workflow-on-gist.html</link>
+            <guid isPermaLink='true'>http://www.focustheweb.com/2015/04/06/a-basic-collaboration-workflow-on-gist.html</guid>
+
+            <pubDate>Sat, 13 Jul 2019 11:55:13 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I have used GitHub &lt;a href="https://zacs.site/blog/my-setup-2019.html"&gt;for a while now&lt;/a&gt;, but even more over the last few weeks. Gists have proven especially useful, as a quick and easy way to take notes at work. I had a hunch these might &lt;a href="https://help.github.com/en/articles/forking-and-cloning-gists"&gt;work like a GitHub repository&lt;/a&gt;, and Giovanni Cappellotto confirmed my suspicion. Hat-tip to him for his nice walkthrough of a simple collaboration workflow.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/workflow-on-gist.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>How to Run Your Own Website</title>
             <link>https://zacs.site//blog/how-to-own-your-platform.html</link>

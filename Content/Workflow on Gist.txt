@@ -1,0 +1,7 @@
+Type: linkpost
+Title: A basic collaboration workflow on Gist
+Link: http://www.focustheweb.com/2015/04/06/a-basic-collaboration-workflow-on-gist.html
+Pubdate: 2019/07/13 07:55:13
+Author: Zac J. Szewczyk
+
+I have used GitHub [for a while now](My Setup 2019.txt), but even more over the last few weeks. Gists have proven especially useful, as a quick and easy way to take notes at work. I had a hunch these might [work like a GitHub repository](https://help.github.com/en/articles/forking-and-cloning-gists), and Giovanni Cappellotto confirmed my suspicion. Hat-tip to him for his nice walkthrough of a simple collaboration workflow.
