@@ -7,9 +7,25 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 13 Jul 2019 11:55:19 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jul 2019 01:21:07 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Cheap or Free Static Hosting</title>
+            <link>https://alignedleft.com/resources/cheap-web-hosting</link>
+            <guid isPermaLink='true'>https://alignedleft.com/resources/cheap-web-hosting</guid>
+
+            <pubDate>Sat, 20 Jul 2019 13:20:47 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I found Scott Murray&#38;#8217;s post &lt;a href="https://zacs.site/blog/dont-use-amazon-web-services.html"&gt;after I started looking for something to replace Amazon S3&lt;/a&gt;. He lists a bunch of places for cheap or free static hosting, most of which I had never heard of. If &lt;a href="https://zacs.site/blog/how-to-own-your-platform.html"&gt;Google Firebase&lt;/a&gt; will not work for you, check this post out for some other ideas.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/cheap-or-free-static-hosting.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>A basic collaboration workflow on Gist</title>
             <link>http://www.focustheweb.com/2015/04/06/a-basic-collaboration-workflow-on-gist.html</link>
