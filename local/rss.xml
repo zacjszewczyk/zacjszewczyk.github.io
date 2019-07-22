@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 20 Jul 2019 01:21:07 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2019 11:11:57 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Common Security Pitfalls</title>
+            <link>https://dzone.com/articles/most-common-security-fails-part-1</link>
+            <guid isPermaLink='true'>https://dzone.com/articles/most-common-security-fails-part-1</guid>
+
+            <pubDate>Mon, 22 Jul 2019 11:11:34 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Tom Smith over at DZone, one of [a handful of websites&lt;/p&gt;
+&lt;p&gt;I read every day](My Morning Reads.txt), just finished a great three-part series on common cybersecurity shortfalls. He highlights the importance of basic countermeasures, like encryption and patching, all the way up to complex topics like attack vectors. I recommend all three: &lt;a href="https://dzone.com/articles/most-common-security-fails-part-1"&gt;part 1&lt;/a&gt;, &lt;a href="https://dzone.com/articles/most-common-security-fails-part-2"&gt;part 2&lt;/a&gt;, and &lt;a href="https://dzone.com/articles/most-common-security-fails-other-part-3"&gt;part 3&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/common-security-pitfalls.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Cheap or Free Static Hosting</title>
             <link>https://alignedleft.com/resources/cheap-web-hosting</link>
