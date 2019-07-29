@@ -71,6 +71,12 @@ help:
 	@echo
 	@echo "This menu will appear until you finish setting up your website. After that, you can access it at again at any time with the command 'make help'." 
 	@echo
+	@printf "Checking for Python 3 ... "
+	@which python3 | grep "python3"
+	@if [$? == 0]; then
+	@echo "found"
+	@fi
+	@echo
 	@echo "First Crack will now prompt you to create the config file. Proceed by entering 'y' at the prompt."
 	@echo
 	@chmod 755 blog.py
