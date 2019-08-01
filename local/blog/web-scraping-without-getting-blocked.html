@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="{{META_DESC}}"/>
+        <meta name="description" content="I threw together a web scraper the other day for a project at work. Since web scraping is easy, I had extra time, and I needed to poll a few hundred pages from a single domain often, I rotate through a pool of user agent strings and randomize my request pattern to make it less likely that the server will block me. [Hacker News](https://news.ycombinator.org) once blocked me after [I did not take precautions like these](/projects.html#hnScraper), so I made sure to avoid that this time around. Pierre over at ScrapingNinja [talked about these and a few other strategies yesterday](https://www.scrapingninja.co/blog/web-scraping-without-getting-blocked). Looks like I have a few features to add."/>
         <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, zacjszewczyk" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="application-name" content="Zac Szewczyk">
@@ -11,7 +11,7 @@
         <meta name="robots" content="index, follow" />
 
         <meta property="og:image" content="favicon.ico"/>
-        <meta property="og:title" content="Post Archives - "/>
+        <meta property="og:title" content="A guide to Web Scraping without getting blocked - "/>
         <meta property="og:site_name" content="Zac J. Szewczyk"/>
         <meta property="og:article:author" content="Zac J. Szewczyk"/>
         <meta property="og:see_also" content="https://zacs.site/" />
@@ -22,11 +22,11 @@
         <link rel="shortcut icon" href="assets/favicon_192.ico" size="192x192" type="image/ico" />
         <link rel="shortcut icon" href="assets/favicon_512.ico" size="512x512" type="image/ico" />
         <title>
-            Post Archives - Zac J. Szewczyk
+            A guide to Web Scraping without getting blocked - Zac J. Szewczyk
         </title>
         <!-- SHEETS -->
     </head>
-    <body style="opacity:.8;background-color:#F6F6F6;font-family:sans-serif;font-size:13pt;line-height:200%;" id="archives">
+    <body style="opacity:.8;background-color:#F6F6F6;font-family:sans-serif;font-size:13pt;line-height:200%;" id="post">
         <header style="text-align:center;font-size:150%;max-width:75em;margin:0 auto;"><!--BLOCK HEADER--></header>
         <nav style="text-align:center;margin:10% 5%;font-size:15pt;line-height:200%;">
             <a id="home_link" href="../index.html">Home</a>
@@ -38,26 +38,14 @@
         </nav>
         <main style="max-width:65em;margin:0 auto;margin-bottom:100px;">
             <section id="content_section">
-                <table style="width:100%;padding:20pt 0;" id="big_table">    <tr>
-        <td>2019</td>
-    </tr>
-    <tr>
-        <td><a href="2019-08.html">August</a></td>
-    </tr>
-    <tr>
-        <td><a href="2019-07.html">July</a></td>
-    </tr>
-    <tr>
-        <td><a href="2019-06.html">June</a></td>
-    </tr>
-    <tr>
-        <td><a href="2019-05.html">May</a></td>
-    </tr>
-    <tr>
-        <td><a href="2019-04.html">April</a></td>
-    </tr>
-</table>
-
+<article>
+                    <h2 style="text-align:center;">
+                        <a href="https://www.scrapingninja.co/blog/web-scraping-without-getting-blocked" class="linkpost">A guide to Web Scraping without getting blocked</a>
+                    </h2>
+                    <time datetime="2019-08-01" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="2019.html">2019</a>/<a href="2019-08.html">08</a>/01 07:26:31 EST</time>
+<p>I threw together a web scraper the other day for a project at work. Since web scraping is easy, I had extra time, and I needed to poll a few hundred pages from a single domain often, I rotate through a pool of user agent strings and randomize my request pattern to make it less likely that the server will block me. <a href="https://news.ycombinator.org">Hacker News</a> once blocked me after <a href="/projects.html#hnScraper">I did not take precautions like these</a>, so I made sure to avoid that this time around. Pierre over at ScrapingNinja <a href="https://www.scrapingninja.co/blog/web-scraping-without-getting-blocked">talked about these and a few other strategies yesterday</a>. Looks like I have a few features to add.</p>
+</div>
+                </article>
             </section>
         </main>
         <footer style="max-width:65em;margin:0 auto;margin-bottom:100px;">
@@ -66,7 +54,7 @@
         </footer>
         <span id="ipad_device"></span>
     </body>
-    <!-- SCRIPTS BLOCK -->
+    
     <!-- <script async>document.getElementsByTagName("body")[0].style.display = "block";</script> -->
     <!-- <script async>
         if ('serviceWorker' in navigator) {

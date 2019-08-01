@@ -1,0 +1,7 @@
+Type: linkpost
+Title: A guide to Web Scraping without getting blocked
+Link: https://www.scrapingninja.co/blog/web-scraping-without-getting-blocked
+Pubdate: 2019/08/01 07:26:31
+Author: Zac J. Szewczyk
+
+I threw together a web scraper the other day for a project at work. Since web scraping is easy, I had extra time, and I needed to poll a few hundred pages from a single domain often, I rotate through a pool of user agent strings and randomize my request pattern to make it less likely that the server will block me. [Hacker News](https://news.ycombinator.org) once blocked me after [I did not take precautions like these](/projects.html#hnScraper), so I made sure to avoid that this time around. Pierre over at ScrapingNinja [talked about these and a few other strategies yesterday](https://www.scrapingninja.co/blog/web-scraping-without-getting-blocked). Looks like I have a few features to add.

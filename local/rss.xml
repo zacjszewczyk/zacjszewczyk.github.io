@@ -7,9 +7,25 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 31 Jul 2019 12:59:25 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2019 11:26:38 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>A guide to Web Scraping without getting blocked</title>
+            <link>https://www.scrapingninja.co/blog/web-scraping-without-getting-blocked</link>
+            <guid isPermaLink='true'>https://www.scrapingninja.co/blog/web-scraping-without-getting-blocked</guid>
+
+            <pubDate>Thu, 01 Aug 2019 11:26:31 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I threw together a web scraper the other day for a project at work. Since web scraping is easy, I had extra time, and I needed to poll a few hundred pages from a single domain often, I rotate through a pool of user agent strings and randomize my request pattern to make it less likely that the server will block me. &lt;a href="https://news.ycombinator.org"&gt;Hacker News&lt;/a&gt; once blocked me after &lt;a href="https://zacs.site//projects.html#hnScraper"&gt;I did not take precautions like these&lt;/a&gt;, so I made sure to avoid that this time around. Pierre over at ScrapingNinja &lt;a href="https://www.scrapingninja.co/blog/web-scraping-without-getting-blocked"&gt;talked about these and a few other strategies yesterday&lt;/a&gt;. Looks like I have a few features to add.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/web-scraping-without-getting-blocked.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>American Diesel</title>
             <link>https://zacs.site//blog/american-diesel.html</link>
