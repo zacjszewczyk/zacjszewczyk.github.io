@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 01 Aug 2019 11:26:38 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 12:56:20 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Don't Overthink, Act</title>
+            <link>https://zacs.site//blog/wicked-problems.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/wicked-problems.html</guid>
+
+            <pubDate>Fri, 02 Aug 2019 12:56:14 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Leo Babuta of &lt;a href="https://zenhabits.net/"&gt;Zen Habits&lt;/a&gt; wrote about &lt;a href="https://zenhabits.net/overthink/"&gt;a great way to combat overthinking&lt;/a&gt; the other day: just make the best decision you can now, given limited information and time to make it. Many will scoff at this idea, for making important choices in particular, but I disagree: I like his approach a lot, because it has worked well for me for almost everything.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/wicked-problems.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>A guide to Web Scraping without getting blocked</title>
             <link>https://www.scrapingninja.co/blog/web-scraping-without-getting-blocked</link>

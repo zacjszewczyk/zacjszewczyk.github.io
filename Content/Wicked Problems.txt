@@ -1,0 +1,15 @@
+Type: original
+Title: Don't Overthink, Act
+Link: wicked-problems.html
+Pubdate: 2019/08/02 08:56:14
+Author: Zac J. Szewczyk
+
+Leo Babuta of [Zen Habits](https://zenhabits.net/) wrote about [a great way to combat overthinking](https://zenhabits.net/overthink/) the other day: just make the best decision you can now, given limited information and time to make it. Many will scoff at this idea, for making important choices in particular, but I disagree: I like his approach a lot, because it has worked well for me for almost everything.
+
+Leo wrote his article with simple decisions in mind. Where to eat dinner, what movie to watch, and the like. For choices like these, with little real downside, this approach makes sense. The difference between the best choice and any one of the "wrong" ones is minor, if it exists at all, so just pick one. Spare yourself the agony of indecision. When it comes to more consequential decisions, though, the value of his approach becomes less clear.
+
+Should you jump into college? What about a new house? A career shift? No. Find something lucrative and interesting, then enroll. Pick a good house in an area you like, then buy. Study a few career fields and job markets, then jump. When it comes time to enroll, buy, or jump, though--to make a decision, just make one. Do not waste a semester thinking about it. Do not lose a great home to indecision. Leo's approach applies just as well here, to these important decisions. You must still do your due diligence first, but having done so, act--and act now.
+
+To those who continue denying the value of this approach, what do you hope to gain? The greatest challenges, wicked problems[^1], by definition have no right answer. Will your indecision lead to a better solution? Introspection, research, and due diligence may, but your inability to choose a path never will. Even if you have to make it with limited information and in a time crunch, just make the best decision you can now. Act.
+
+[>1] "Wicked problem" sounds like what someone from New England calls a normal problem, but it actually describes an ill-structured and ill-defined challenge for which no solution exists. Better solutions may exist, but you will never find *the* right answer--only more right ones. Pages 9 to 12 (location 13 to 16) of [Army Training and Doctrine Command Pamphlet 525-5-500: Commander's Appreciation and Campaign Design](https://adminpubs.tradoc.army.mil/pamphlets/TP525-5-500.pdf) does a great job of talking about wicked problems in great detail.
