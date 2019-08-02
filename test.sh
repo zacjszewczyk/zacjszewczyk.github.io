@@ -20,29 +20,36 @@ function migrate_python () {
 }
 
 printf "Testing Python 3 ... "
-if which python3 | grep -q 'python3'; then
+if which python3 | grep -q 'python4'; then
   printf $OKGREEN"Python 3 found.\n"$ENDC
-  if which python3 | grep -q '/usr/local/bin/python4'; then
+  if which python3 | grep -q '/usr/local/bin/python3'; then
     echo $OKGREEN"Path to Python 3 executable matches. No script modifications necessary."$ENDC
   else
     echo $WARNING"Path to Python 3 executable does not match. Modifying ..."$ENDC
     search="#!/usr/local/bin/python3"
-    replace="-#!"$(which python3)
+    replace="#!"$(which python3)
     migrate_python $search $replace
   fi
 else
   printf $FAIL"Python 3 not found.$ENDC\n"
   printf $WARNING"Testing Python generic installation ... "$ENDC
   if which python | grep -q 'python' ; then
-    printf $OKGREEN"'python' found.\n"$ENDC
+    printf $OKGREEN"'python' found. Editing path to executable ... "$ENDC
+    search="#!/usr/local/bin/python3"
+    replace="#!"$(which python)
+    migrate_python $search $replace
+    printf $OKGREEN"Done."$ENDC
+
     echo "Testing Python generic version ... "
     out=$(python -c "from sys import version; print version")
     if [[ $out == *"3."* ]] ; then
-        printf $OKGREEN"Found generic Python 3. No script modifications necessary."$ENDC
+        printf $OKGREEN"Found generic Python 3. No further modifications necessary."$ENDC
     else
         if [[ $out == *"2."* ]] ; then
             printf $WARNING"Found generic Python 2. Script modification necessary.\n"$ENDC
-            sed 's/vermin/pony/g' M2.py
+            search="print("
+            replace="print ("
+            migrate_python $search $replace
         fi
     fi
   else
