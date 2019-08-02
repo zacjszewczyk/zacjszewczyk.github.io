@@ -26,6 +26,11 @@ def CopyToDeploy(v=False):
     copy("./makefile", dst+"makefile")
     if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
 
+    # Copy ".sys.sh" to the deployment folder
+    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+".sys.sh'"+c.OKGREEN+" ... "+c.ENDC)
+    copy("./.sys.sh", dst+".sys.sh")
+    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+
     # Clear the "system/*" tree in the deployment folder
     if (v): stdout.write(c.OKGREEN+"Clearing "+c.ENDC+"'"+dst+"system'"+c.OKGREEN+" ... "+c.ENDC)
     rmtree(dst+"system", ignore_errors=True)
