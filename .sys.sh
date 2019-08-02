@@ -20,7 +20,7 @@ function migrate_python () {
 }
 
 printf "Testing Python 3 ... "
-if which python3 | grep -q 'python3'; then
+if which python3 | grep -q 'python4'; then
   printf $OKGREEN"Python 3 found.\n"$ENDC
   if which python3 | grep -q '/usr/local/bin/python3'; then
     echo $OKGREEN"Path to Python 3 executable matches. No script modifications necessary."$ENDC
@@ -47,9 +47,9 @@ else
     else
         if [[ $out == *"2."* ]] ; then
             printf $WARNING"Found generic Python 2. Script modification necessary.\n"$ENDC
-            search="print("
-            replace="print ("
-            migrate_python $search $replace
+            search='print('
+            replace='print ('
+            migrate_python "$search" "$replace"
         fi
     fi
   else

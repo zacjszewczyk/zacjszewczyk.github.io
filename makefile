@@ -71,9 +71,9 @@ help:
 	@echo
 	@echo "This menu will appear until you finish setting up your website. After that, you can access it at again at any time with the command 'make help'." 
 	@echo
-	@printf "Checking system requirements ..."
+	@echo "Checking system requirements."
 	@./.sys.sh
-	printf "Done."
+	@echo "Done checking system requirements."
 	@echo
 	@echo "First Crack will now prompt you to create the config file. Proceed by entering 'y' at the prompt."
 	@echo
