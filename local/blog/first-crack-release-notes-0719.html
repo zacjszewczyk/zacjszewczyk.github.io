@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="I have done a bit of work on First Crack [since last month's update](First Crack Release Notes 0619.txt). It's time I shared it with you."/>
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, zacjszewczyk" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#518341"/>
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:image" content="favicon.ico"/>
+        <meta property="og:title" content="First Crack Release Notes, July 2019 - "/>
+        <meta property="og:site_name" content="Zac J. Szewczyk"/>
+        <meta property="og:article:author" content="Zac J. Szewczyk"/>
+        <meta property="og:see_also" content="https://zacs.site/" />
+        
+        <link rel="manifest" href="assets/manifest.json"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for Zac J. Szewczyk's Blog" href="https://zacs.site/rss.xml" />
+        <link rel="shortcut icon" href="assets/favicon.ico" size="16x16" type="image/ico" />
+        <link rel="shortcut icon" href="assets/favicon_192.ico" size="192x192" type="image/ico" />
+        <link rel="shortcut icon" href="assets/favicon_512.ico" size="512x512" type="image/ico" />
+        <title>
+            First Crack Release Notes, July 2019 - Zac J. Szewczyk
+        </title>
+        <!-- SHEETS -->
+    </head>
+    <body style="opacity:.8;background-color:#F6F6F6;font-family:sans-serif;font-size:13pt;line-height:200%;" id="post">
+        <header style="text-align:center;font-size:150%;max-width:75em;margin:0 auto;"><!--BLOCK HEADER--></header>
+        <nav style="text-align:center;margin:10% 5%;font-size:15pt;line-height:200%;">
+            <a id="home_link" href="../index.html">Home</a>
+            <a id="blog_link" href="../blog.html">Blog</a>
+            <a id="rss_link" href="/rss.xml">RSS</a>
+            <a id="archives_link" href="../archives.html">Post Archives</a>
+            <a id="projects_link" href="../projects.html">Projects</a>
+            <a id="disclaimers_link" href="disclaimers.html">Disclaimers</a>
+        </nav>
+        <main style="max-width:65em;margin:0 auto;margin-bottom:100px;">
+            <section id="content_section">
+<article>
+                    <h2 style="text-align:center;">
+                        <a href="first-crack-release-notes-0719.html" class="original">First Crack Release Notes, July 2019</a>
+                    </h2>
+                    <time datetime="2019-08-03" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="2019.html">2019</a>/<a href="2019-08.html">08</a>/03 09:07:32 EST</time>
+<p>I have done a bit of work on First Crack <a href="https://zacs.site/blog/first-crack-release-notes-0619.html">since last month&#8217;s update</a>. It&#8217;s time I shared it with you.  </p>
+
+<h2 class="headers" id="JulyActivity">July Activity<span>&nbsp;<a href="#JulyActivity">#</a></span></h2>
+
+<p>First, the things I did in July.</p>
+
+<h3 class="headers" id="GuidedSetup">Guided Setup<span>&nbsp;<a href="#GuidedSetup">#</a></span></h3>
+
+<p>When <a href="https://zacs.site/blog/re-introducing-first-crack.html">I re-released First Crack</a> in June, it forced the user to fill out a settings file before building their website. This felt clunky and raised the barrier to entry for new users, so I added a guided setup in July. Now, rather than making the user fill out a config file, First Crack guides them through the process by asking questions for each field. With this update, it even finds the Python 2 or 3 binary on their system, and modifies the engine to run on either version&#160;&#8212;&#160;all behind the scenes. This adds a little more polish to the engine.</p>
+
+<h3 class="headers" id="makefileIntegration">makefile Integration<span>&nbsp;<a href="#makefileIntegration">#</a></span></h3>
+
+<p>As I thought about ways to lower First Crack&#8217;s barrier to entry, I identified two easy areas for improvement: editing the path to the Python executable, and knowing how to run the engine. On my machine, Python 3 lives in <code>/usr/local/bin/</code>. Most machines have the binary in <code>/usr/bin/</code>, though, and so new users must first locate their binary and then edit six files to reflect that path. I did not like this, but given the complexity of the task at hand, it did not seem unrealistic. I also told new users to run <code>blog.py</code>, which assumes they know to use either <code>./blog.py</code> or <code>python blog.py</code>. This also seemed reasonable, but why not make both easier?</p>
+
+<p>I started with a shell script. This could have solved my first problem, by detecting the version of Python on the host machine and then modifying the scripts as needed. It would not have solved the second, though, and I knew I could do better. I settled on a makefile. This allowed me to abstract the back-end by reducing <code>./blog.py</code> to build the site to <code>make</code>. This simple command takes care of finding the Python binary, editing the scripts, handling file permissions, and walking the user through the setup process. I used the makefile to abstract other things, too, like previewing (<code>make preview</code>) and deploying (<code>make deploy</code>) the website. I think this turned out great.</p>
+
+<h3 class="headers" id="Python2Integration">Python 2 Integration<span>&nbsp;<a href="#Python2Integration">#</a></span></h3>
+
+<p>Moving First Crack to Python 3 took all of a few minutes <a href="https://zacs.site/blog/first-crack-release-notes-0619.html">last month</a>, so this month I decided to re-add support for the millions of devices running Python 2. During the first run, First Crack mow finds Python on the user&#8217;s system and modifies itself to work in either Python 2 or 3, based on what it finds.</p>
+
+<h3 class="headers" id="ImprovedDocumentation">Improved Documentation<span>&nbsp;<a href="#ImprovedDocumentation">#</a></span></h3>
+
+<p>As part of these changes, I also spent some time on <a href="https://github.com/zacjszewczyk/Standalone-FirstCrack">the README</a>. As I said <a href="https://zacs.site/blog/first-crack-release-notes-0619.html">last time</a>, I will always have more work to do in this area, and in July, I spent some more time there.</p>
+
+<h2 class="headers" id="AugustaPlan">Augusta Plan<span>&nbsp;<a href="#AugustaPlan">#</a></span></h2>
+
+<p>Going forward, I plan to focus my efforts on these areas in Augusta, 2019. I carried some of these over from <a href="https://zacs.site/blog/first-crack-release-notes-0619.html">last month&#8217;s update</a>.</p>
+
+<h3 class="headers" id="ReImplementPrettyPrint">Re-Implement "Pretty Print"<span>&nbsp;<a href="#ReImplementPrettyPrint">#</a></span></h3>
+
+<p>I would still like to re-implement the &#8220;pretty print&#8221; feature now that First Crack uses a stateful Markdown parser. I did not get to this in July, so I pushed it to August.</p>
+
+<h3 class="headers" id="ReleaseMarkdownParser">Release Markdown Parser<span>&nbsp;<a href="#ReleaseMarkdownParser">#</a></span></h3>
+
+<p>I would still like to release the Markdown parser as its own project. I still have some bugs to work out, though, and I would like to add the ability to parse multi-line strings and entire files at once. Perhaps in August.</p>
+
+<h3 class="headers" id="PublishImplementationofMarkdownSpec">Publish Implementation of Markdown Spec<span>&nbsp;<a href="#PublishImplementationofMarkdownSpec">#</a></span></h3>
+
+<p>I still want to outline the peculiarities of my implementation of the Markdown spec in a formal document. That has yet to happen.</p>
+
+<h3 class="headers" id="ImproveDocumentation">Improve Documentation<span>&nbsp;<a href="#ImproveDocumentation">#</a></span></h3>
+
+<p>I did some work on the documenation this month, but as always, I could do more. Again, a few of the ways I think I can improve the README in particular: </p>
+
+<ul>
+    <li>GIFs of the install and run process that show simplicity, ease, and speed.</li>
+<li>Performance graphs of First Crack&#8217;s back-end performance versus other, similar engines. At less than two seconds to build a website of over one thousand pages, I want to highlight this.</li>
+<li>Performance graphs of the web pages First Crack builds versus the pages common content management systems build. </li>
+<li>Screenshots. This site is a live demo of the engine, but I like the idea of having a few pictures in there, too. </li>
+</ul>
+<p>I got a few things done in July. Again, though, I have a lot of work ahead of me. I look forward to it, as always.</p>
+</div>
+                </article>
+            </section>
+        </main>
+        <footer style="max-width:65em;margin:0 auto;margin-bottom:100px;">
+            <p>Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.</p>
+            <p>&copy; 2012-2019 Zachary Szewczyk.<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+        </footer>
+        <span id="ipad_device"></span>
+    </body>
+    
+    <!-- <script async>document.getElementsByTagName("body")[0].style.display = "block";</script> -->
+    <!-- <script async>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/../assets/m_sw.js');
+          console.log("Successfully registered Service Worker.");
+        }
+    </script> -->
+    <link rel="stylesheet" href="../assets/main.css" type="text/css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138585845-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-138585845-1');
+    </script>
+</html>
