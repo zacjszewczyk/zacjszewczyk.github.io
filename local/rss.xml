@@ -7,9 +7,30 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 08 Aug 2019 11:12:56 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Aug 2019 04:15:56 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Performance Matters</title>
+            <link>https://www.hillelwayne.com/post/performance-matters/</link>
+            <guid isPermaLink='true'>https://www.hillelwayne.com/post/performance-matters/</guid>
+
+            <pubDate>Fri, 09 Aug 2019 16:15:43 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Hillel Wayne explains why EMT&#38;#8217;s continue to use error-prone paper Patient Care Reports even though they have digital replacements: the software is too slow.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;It wasn’t even &lt;em&gt;that&lt;/em&gt; slow. Something like a quarter-second lag when you opened a dropdown or clicked a button. ... Did that quarter-second lag kill anyone? Was there someone who wouldn&#38;#8217;t have died if the ePCR was just a little bit faster, fast enough to be usable? And the people who built it: did they ask the same questions? Did they say &#38;#8216;premature optimization is bad&#38;#8217; and not think about performance until it was too late? ... Most of us aren&#38;#8217;t writing critical software. But this isn&#38;#8217;t &#38;#8216;critical software&#38;#8217;, either: nobody will suddenly die if it breaks. You just switch back to paper PCRs. But it could have saved lives. At scale, it could have saved people dying from PCR errors.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This struck a chord with me. I once spent the first three hours of my day signing 10 PDFs on a horrendously underpowered thin client&#38;#160;&#38;#8212;&#38;#160;and it shocked my co-workers when they heard I got through all of them before lunch. None of that work was critical, but the work I had to put off to get it done was. No one thought that through when they bought these machines, though: they saw small numbers in the &#38;#8220;Total&#38;#8221; and &#38;#8220;Recurring&#38;#8221; costs columns, and signed without question. Someone made a similar poor choice for digital Patient Care Reports, and although no one will ever take the time to know the true cost of either miscalculation, make no mistake&#38;#160;&#38;#8212;&#38;#160;in both cases, it is high.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/performance-matters.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Setting Yourself Up for Vanlife Failure</title>
             <link>https://jalopnik.com/vanlife-can-be-cheaper-weirder-and-more-accessible-th-1836822787</link>
