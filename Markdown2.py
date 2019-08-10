@@ -174,6 +174,10 @@ class Markdown:
             # Otherwise, treat the line as the first in a new list.
             else:
                 self.__line_type_tracker.append("ol")
+        elif (__line[0] == "+" and __line[1] == "-"): # Table
+            self.__line_type_tracker.append("table")
+        elif  (__line[0] == "|"): # Table rows
+            self.__line_type_tracker.append("tr")
         elif (__line[0] == ">"): # Blockquote
             # If the line is preceeded by a blockquote tag or the parser
             # is already in a blockquote, continue parsing the existing
@@ -323,6 +327,13 @@ class Markdown:
         # Handle list elements for both unordered and ordered lists.
         elif (self.__line_type_tracker[-1] == "li"):
             __line = "    <li>"+__line[2:]+"</li>"
+        # Handle tables
+        elif (self.__line_type_tracker[-1] == "table"):
+            __line = "<table>\n"
+            self.__close_out.append("</table>\n")
+        # Handle table rows
+        elif (self.__line_type_tracker[-1] == "tr"):
+            __line = "<tr>\n    <td>"+__line.lstrip("|").rstrip("|").replace("|", "</td><td>")+"</td>\n</tr>"
         # Handle blockquotes, new and a continuation of an existing one.
         elif (self.__line_type_tracker[-1] == "blockquote"):
             __line = "<blockquote>\n    <p>"+self.__parseInlineMD(__line[5:])+"</p>"
