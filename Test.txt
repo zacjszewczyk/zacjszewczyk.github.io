@@ -1,5 +1,13 @@
 # Markdown: Syntax
 
++--------+--------+--------+
+| Cell 1 | Cell 2 | Cell 3 |
++--------+--------+--------+
+| Cell 4 | Cell 5 | Cell 6 |
++--------+--------+--------+
+| Cell 1 | Cell 2 | Cell 3 |
++--------+--------+--------+
+
 <ul id="ProjectSubmenu">
     <li><a href="/projects/markdown/" title="Markdown Project Page">Main</a></li>
     <li><a href="/projects/markdown/basics" title="Markdown Basics">Basics</a></li>
