@@ -102,16 +102,6 @@ class Markdown:
 
         return __line
 
-    # Method: __trimTracker
-    # Purpose: Keep tracker lists to a max of three elements.
-    # Parameters:
-    # - self: Class namespace
-    # - __trkr: Reference to tracker to be trimmed.
-    # Return: None.
-    def __trimTracker(self, __trkr):
-        if (len(__trkr) > 3):
-            __trkr.pop(0)
-
     # Method: __updateLineTracker
     # Purpose: Keep track of raw lines.
     # Parameters:
@@ -120,7 +110,8 @@ class Markdown:
     # Return: None.
     def __updateLineTracker(self, __line):
         self.__line_tracker.append(__line)
-        self.__trimTracker(self.__line_tracker)
+        if (len(self.__line_tracker) > 3):
+            self.__line_tracker.pop(0)
 
     # Method: __updateLineTypeTracker
     # Purpose: Determine type of line, and whether it is part of a larger
@@ -202,7 +193,8 @@ class Markdown:
             self.__line_type_tracker.append("p")
 
         # Trim the tracker to a max of 3 elements.
-        self.__trimTracker(self.__line_type_tracker)
+        if (len(self.__line_type_tracker) > 3):
+            self.__line_type_tracker.pop(0)
 
     # Method: __updateIndentTracker
     # Purpose: Keep track of the indentation level.
@@ -216,7 +208,8 @@ class Markdown:
         # Count leading spaces, and append to the line tracker list
         else:
             self.__line_indent_tracker.append(len(__line) - len(__line.lstrip(' ')))
-        self.__trimTracker(self.__line_indent_tracker)
+        if (len(self.__line_indent_tracker) > 3):
+            self.__line_indent_tracker.pop(0)
 
     # Method: __closeOut
     # Purpose: Write closing HTML tags for any open block-level elements.
@@ -284,7 +277,6 @@ class Markdown:
         if (self.__line_type_tracker[-1] == "pre"):
             if (self.__pre == True):
                 return "<pre>"
-                # return "<pre>\n"+__line
             return "</pre>"
         
         if (self.__pre == True):
