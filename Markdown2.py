@@ -175,7 +175,10 @@ class Markdown:
             else:
                 self.__line_type_tracker.append("ol")
         elif (__line[0] == "+" and __line[1] == "-"): # Table
-            self.__line_type_tracker.append("table")
+            if (self.__line_type_tracker[-1] != "tr"):
+                self.__line_type_tracker.append("table")
+            else:
+                self.__line_type_tracker.append("tr")
         elif  (__line[0] == "|"): # Table rows
             self.__line_type_tracker.append("tr")
         elif (__line[0] == ">"): # Blockquote
@@ -333,7 +336,10 @@ class Markdown:
             self.__close_out.append("</table>\n")
         # Handle table rows
         elif (self.__line_type_tracker[-1] == "tr"):
-            __line = "<tr>\n    <td>"+__line.lstrip("|").rstrip("|").replace("|", "</td><td>")+"</td>\n</tr>"
+            if (__line[0] == "+"):
+                __line = ""
+            else:
+                __line = "<tr>\n    <td>"+__line.lstrip("|").rstrip("|").replace("|", "</td><td>")+"</td>\n</tr>"
         # Handle blockquotes, new and a continuation of an existing one.
         elif (self.__line_type_tracker[-1] == "blockquote"):
             __line = "<blockquote>\n    <p>"+self.__parseInlineMD(__line[5:])+"</p>"
