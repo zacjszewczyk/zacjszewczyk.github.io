@@ -7,9 +7,30 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 10 Aug 2019 12:18:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Aug 2019 08:42:12 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>You Might Not be The Smartest</title>
+            <link>https://carter.sande.duodecima.technology/javascript-page-navigation/</link>
+            <guid isPermaLink='true'>https://carter.sande.duodecima.technology/javascript-page-navigation/</guid>
+
+            <pubDate>Mon, 12 Aug 2019 20:42:10 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Many developers have a tendency to consider themselves smarter than everyone else&#38;#160;&#38;#8212;&#38;#160;or at least, smarter than the person who wrote the platform they build on. Web developers have made a habit of this, but as Carter Sande &lt;a href="https://carter.sande.duodecima.technology/javascript-page-navigation/"&gt;points out&lt;/a&gt;, that just might not be the case.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;I think it&#38;#8217;s best to build small, simple, standards-based web pages. Browser developers are really good at their jobs, and they&#38;#8217;ve spent a lot of time on features like progressive rendering that help your sites feel fast without any effort on your part. It&#38;#8217;s not worth it to try and go behind their backs&#38;#160;&#38;#8212;&#38;#160;premature optimizations like client-side navigation are hard to build, don&#38;#8217;t work very well, will probably be obsolete in a couple years, and make life worse for a decent portion of your users.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://zacs.site//projects.html#codingProjects"&gt;I try to be a smart developer&lt;/a&gt;, but not a smarter developer than I actually am.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/im-smarter.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Reframing PRT</title>
             <link>https://zacs.site//blog/reframing-prt.html</link>
