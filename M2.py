@@ -5,7 +5,6 @@ import datetime
 from os import listdir
 import threading
 import concurrent.futures
-import multiprocessing
 
 thread_local = threading.local()
 def get_m():
@@ -42,6 +41,7 @@ t2 = datetime.datetime.now()
 print(("Threading execution time: "+str(t2-t1)+"s"))
 
 t1 = datetime.datetime.now()
+import multiprocessing
 with multiprocessing.Pool() as pool:
     pool.map(handle_file, files)
 t2 = datetime.datetime.now()
