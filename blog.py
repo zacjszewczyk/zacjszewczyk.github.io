@@ -242,6 +242,9 @@ def CloseTemplateBuild(target, scripts=""):
     fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", scripts))
     fd.close()
 
+# Method: HandleYear
+# Purpose: Process all the posts in a year.
+# Parameters: none
 def HandleYear(year):
     # Make global variables accessible in the method, and initialize method variables.
     global files
@@ -298,6 +301,9 @@ def HandleYear(year):
     year_fd.write("</table>\n"+content[1].replace("assets/", "../assets/"))
     year_fd.close()
 
+# Method: GenBlog
+# Purpose: Generate the blog, archives, and feed.
+# Parameters: none
 def GenBlog():
     # Make global variables accessible in the method, and initialize method variables.
     global files
