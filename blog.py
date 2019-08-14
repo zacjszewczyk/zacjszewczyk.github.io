@@ -11,6 +11,7 @@ from sys import exit, argv, stdout # Command line options
 from Markdown2 import Markdown
 from ModTimes import CompareMtimes
 from colors import c
+from multiprocessing import Pool
 
 # Global variables
 ## - types: Keep track of current and two previous line types. (Tuple)
@@ -365,10 +366,11 @@ def GenBlog():
 # Purpose: Generate the blog.
 # Parameters: none
 def GenSite():
-    import multiprocessing
-    with multiprocessing.Pool() as pool:
+    # Use multithreading to speed up processing each year's posts
+    with Pool() as pool:
         pool.map(HandleYear, sorted(files, reverse=True))
 
+    # Build the blog and archives pages, and the feed
     GenBlog()
 
     # Write closing HTML Tags to archives.html and blog.html, using Terminate()
