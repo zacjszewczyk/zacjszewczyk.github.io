@@ -1,17 +1,16 @@
 #!/usr/local/bin/python3
 
 # Imports
-# Todo: Only import functions from modules that I actually need, not entire module
 from os import listdir, stat, remove, utime, mkdir # File/folder operations
-from os.path import isdir, isfile # File existence operations
-from time import strptime, strftime, mktime, localtime, gmtime # Managing file modification time
+from os.path import isdir, isfile # File/folder existence operations
+from time import strptime, strftime, mktime, localtime, gmtime # Managing file mod time
 import datetime # Recording runtime
 from re import search # Regex
 from sys import exit, argv, stdout # Command line options
-from Markdown2 import Markdown
-from ModTimes import CompareMtimes
-from colors import c
-from multiprocessing import Pool
+from Markdown2 import Markdown # Markdown parser
+from ModTimes import CompareMtimes # Compare file mod times
+from colors import c # Output styling
+from multiprocessing import Pool # Multiprocessing
 
 # Global variables
 ## - types: Keep track of current and two previous line types. (Tuple)
