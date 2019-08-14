@@ -13,19 +13,12 @@ from colors import c # Output styling
 from multiprocessing import Pool # Multiprocessing
 
 # Global variables
-## - types: Keep track of current and two previous line types. (Tuple)
-## - active: Keep track of active block-level HTML element. (String)
 ## - files: Dictionary with years as the keys, and sub-dictinaries as the 
 ##          elements. These elements have months as the keys, and a list
 ##          of the posts made in that month as the elements. (Dictionary)
-## - months: A dictionary for converting decimal (string) representations
-##           of months to their names. (Dictionary)
 ## - content: A string with the opening and closing HTML tags. (String)
-types = ["", "", ""]
-active = ""
+## - md: Placeholder for instance of Markdown parser. (Class)
 files = {}
-months = {"01":"January","02":"February","03":"March","04":"April","05":"May","06":"June","07":"July","08":"August","09":"September","10":"October","11":"November","12":"December"}
-weekDays = ("Mon","Tue","Wed","Thu","Fri","Sat","Sun")
 content = ""
 md = ""
 
@@ -73,17 +66,12 @@ def AppendContentOfXToY(target, source, timestamp):
 
         # Iterate over each line of the source structure file.
         for i, line in enumerate(source_fd):
-            # Strip whitespace
-            # line = line.strip()
-
-            # print(i,":",line)
-
             # Check the first two lines of the structure file for a
             # class tag denoting the type of article. If viewing an
             # original article, truncate it at the first paragraph by
             # setting the flag, "flag", to False
             if (i <= 1):
-                if ("class=\"original\"" in line):
+                if ('class="original"' in line):
                     flag = False
                     line = line.replace("href=\"", "href=\"blog/")
             elif (i == 3):
