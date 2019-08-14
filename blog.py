@@ -244,108 +244,127 @@ def CloseTemplateBuild(target, scripts=""):
     fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", scripts))
     fd.close()
 
-# Method: GenBlog
-# Purpose: Generate the blog.
-# Parameters: none
-def GenBlog():
+def HandleYear(year):
     # Make global variables accessible in the method, and initialize method variables.
     global files
     global file_idx
     global content
 
-    # Sort the files dictionary by keys, year, then iterate over it
-    for year in sorted(files, reverse=True):
-        # For each year in which a post was made, generate a 'year' file, that
-        # contains links to each month in which a post was published.
+    # For each year in which a post was made, generate a 'year' file, that
+    # contains links to each month in which a post was published.
 
-        # Clear the 'year' file
-        year_fd = open("./local/blog/"+year+".html", "w").close()
-        year_fd = open("./local/blog/"+year+".html", "a")
+    # Clear the 'year' file
+    year_fd = open("./local/blog/"+year+".html", "w").close()
+    year_fd = open("./local/blog/"+year+".html", "a")
+    # Write the opening HTML tags
+    year_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1).replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1))
+    # Insert a 'big table' into the document, to better display the months listed.
+    year_fd.write("""<table style="width:100%;padding:20pt 0;" id="big_table">""")
+    year_fd.write("    <tr>\n        <td>%s</td>\n    </tr>\n" % (year))
+    # Sort the sub-dictionaries by keys, months, then iterate over it. For each
+    # month in which a post was made, generate a 'month' file that contains all
+    # posts made during that month.
+    for month in sorted(files[year], reverse=True):
+        # Add a link to the month, to the year file it belongs to.
+        year_fd.write("    <tr>\n        <td><a href=\"%s\">%s</a></td>\n    </tr>\n" % (year+"-"+month+".html", months[month]))
+        # Clear the 'month' file
+        month_fd = open("./local/blog/"+year+"-"+month+".html", "w").close()
+        month_fd = open("./local/blog/"+year+"-"+month+".html", "a")
         # Write the opening HTML tags
-        year_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1).replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1))
-        # Insert a 'big table' into the document, to better display the months listed.
-        year_fd.write("""<table style="width:100%;padding:20pt 0;" id="big_table">""")
-        year_fd.write("    <tr>\n        <td>%s</td>\n    </tr>\n" % (year))
-        # Sort the sub-dictionaries by keys, months, then iterate over it. For each
-        # month in which a post was made, generate a 'month' file that contains all
-        # posts made during that month.
-        for month in sorted(files[year], reverse=True):
-            # Add a link to the month, to the year file it belongs to.
-            year_fd.write("    <tr>\n        <td><a href=\"%s\">%s</a></td>\n    </tr>\n" % (year+"-"+month+".html", months[month]))
-            # Clear the 'month' file
-            month_fd = open("./local/blog/"+year+"-"+month+".html", "w").close()
-            month_fd = open("./local/blog/"+year+"-"+month+".html", "a")
-            # Write the opening HTML tags
-            month_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1).replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1).replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\""+year+".html\">"+year+"</a>\n</p>\n</article>", 1))
-            
-            # Sort the sub-dictionaries by keys, days, then iterate over it.
-            for day in sorted(files[year][month], reverse=True):
-                # Sort the sub-dictionaries by keys, timestamps, then iterate over it
-                for timestamp in sorted(files[year][month][day], reverse=True):
-                    # If a structure file already exists, don't rebuild the HTML file for individual articles
-                    if (not isfile("./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):                        
-                        article_title = GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
-                    else:
-                        if (CompareMtimes("./Content/"+files[year][month][day][timestamp], "./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
-                            article_title = GetTitle(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
-                        else:
-                            # Generate each content file. "year", "month", "day", "timestamp"
-                            # identify the file in the dictionary, and the passed time values
-                            # designate the desired update time to set the content file.
-                            article_title = GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
-                    
-                    # For each article made in the month, add an entry on the appropriate
-                    # 'month' structure file.
-                    month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", article_title.strip()))
-
-                    # Add the first twenty-five articles to the main blog page.
-                    if (file_idx < 25):
-                        AppendContentOfXToY("./local/blog", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
-                    # Write the years in which a post was made to the header element, in a
-                    # big table to facilitate easy reading. 
-                    elif (file_idx == 25):
-                        # This block just puts three year entries in the first row, ends
-                        # the row, and then puts three more year entries in the second row.
-                        # This code is stored in 'buff', and then added to the archives
-                        # page.
-                        buff = """\n<article>\n<table style="width:100%;padding:2% 0;" id="big_table">\n    <tr>\n"""
-                        for each in sorted(files, reverse=True)[:3]:
-                            buff += """\n        <td>\n            <a href=\"blog/%s\">%s</a>\n        </td>""" % (each.lower()+".html", each)
-                        buff += """\n    </tr>\n    <tr>\n"""
-                        for each in sorted(files, reverse=True)[3:]:
-                            buff += """\n        <td>\n            <a href=\"blog/%s\">%s</a>\n        </td>""" % (each.lower()+".html", each)
-                        buff += """\n    </tr>\n</table>\n</article>\n"""
-                        archives_fd = open("./local/archives.html", "a")
-                        archives_fd.write(buff)
-                        archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s.html'>%s</a></article>" % (year, year))
-                        archives_fd.close()
-                        temp = year
-
-                        # Add the twenty-sixth article to the archives page.
-                        AppendContentOfXToY("./local/archives", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
-                    
-                    # Add all other articles to the archives page.
-                    else:
-                        if (temp != year):
-                            archives_fd = open("./local/archives.html", "a")
-                            archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s.html'>%s</a></article>" % (year, year))
-                            archives_fd.close()
-                            temp = year
-                        AppendContentOfXToY("./local/archives", files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
-                    
-                    # Add all articles to the RSS feed.
-                    AppendToFeed(files[year][month][day][timestamp])
-                    
-                    # Increase the file index.
-                    file_idx += 1
-            
-            # Write closing HTML tags to the month file.
-            month_fd.write(content[1].replace("assets/", "../assets/"))
-            month_fd.close()
+        month_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1).replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1).replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\""+year+".html\">"+year+"</a>\n</p>\n</article>", 1))
         
-        # Write closing HTML tags to the year file.
-        year_fd.write("</table>\n"+content[1].replace("assets/", "../assets/"))
-        year_fd.close()
+        # Sort the sub-dictionaries by keys, days, then iterate over it.
+        for day in sorted(files[year][month], reverse=True):
+            # Sort the sub-dictionaries by keys, timestamps, then iterate over it
+            for timestamp in sorted(files[year][month][day], reverse=True):
+                # If a structure file already exists, don't rebuild the HTML file for individual articles
+                if (not isfile("./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):                        
+                    article_title = GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                else:
+                    if (CompareMtimes("./Content/"+files[year][month][day][timestamp], "./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
+                        article_title = GetTitle(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                    else:
+                        # Generate each content file. "year", "month", "day", "timestamp"
+                        # identify the file in the dictionary, and the passed time values
+                        # designate the desired update time to set the content file.
+                        article_title = GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                
+                # For each article made in the month, add an entry on the appropriate
+                # 'month' structure file.
+                month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", article_title.strip()))
+        
+        # Write closing HTML tags to the month file.
+        month_fd.write(content[1].replace("assets/", "../assets/"))
+        month_fd.close()
+    
+    # Write closing HTML tags to the year file.
+    year_fd.write("</table>\n"+content[1].replace("assets/", "../assets/"))
+    year_fd.close()
+
+def GenBlog():
+    # Make global variables accessible in the method, and initialize method variables.
+    global files
+    global file_idx
+
+    file_idx = 0
+    buff = []
+
+    for year in sorted(files, reverse=True):
+        for month in sorted(files[year], reverse=True):
+                for day in sorted(files[year][month], reverse=True):
+                    for timestamp in sorted(files[year][month][day], reverse=True):
+                        buff.append([files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp)])
+    for fname, timestamp in buff:
+        # Add the first twenty-five articles to the main blog page.
+        if (file_idx < 25):
+            AppendContentOfXToY("./local/blog", fname, timestamp)
+        # Write the years in which a post was made to the header element, in a
+        # big table to facilitate easy reading. 
+        elif (file_idx == 25):
+            # This block just puts three year entries in the first row, ends
+            # the row, and then puts three more year entries in the second row.
+            # This code is stored in 'buff', and then added to the archives
+            # page.
+            buff = """\n<article>\n<table style="width:100%;padding:2% 0;" id="big_table">\n    <tr>\n"""
+            for each in sorted(files, reverse=True)[:3]:
+                buff += """\n        <td>\n            <a href=\"blog/%s\">%s</a>\n        </td>""" % (each.lower()+".html", each)
+            buff += """\n    </tr>\n    <tr>\n"""
+            for each in sorted(files, reverse=True)[3:]:
+                buff += """\n        <td>\n            <a href=\"blog/%s\">%s</a>\n        </td>""" % (each.lower()+".html", each)
+            buff += """\n    </tr>\n</table>\n</article>\n"""
+            archives_fd = open("./local/archives.html", "a")
+            archives_fd.write(buff)
+            archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s.html'>%s</a></article>" % (year, year))
+            archives_fd.close()
+            temp = year
+
+            # Add the twenty-sixth article to the archives page.
+            AppendContentOfXToY("./local/archives", fname, timestamp)
+
+        # Add all other articles to the archives page.
+        else:
+            if (temp != year):
+                archives_fd = open("./local/archives.html", "a")
+                archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s.html'>%s</a></article>" % (year, year))
+                archives_fd.close()
+                temp = year
+            AppendContentOfXToY("./local/archives", fname, timestamp)
+
+        # Add all articles to the RSS feed.
+        AppendToFeed(fname)
+
+        # Increase the file index.
+        file_idx += 1
+
+# Method: GenSite
+# Purpose: Generate the blog.
+# Parameters: none
+def GenSite():
+    import multiprocessing
+    with multiprocessing.Pool() as pool:
+        pool.map(HandleYear, sorted(files, reverse=True))
+
+    GenBlog()
 
     # Write closing HTML Tags to archives.html and blog.html, using Terminate()
     Terminate()
@@ -869,12 +888,12 @@ if __name__ == '__main__':
     t1 = datetime.datetime.now()
     Init()
     GenStatic()
-    GenBlog()
+    GenSite()
     
     # import cProfile
     # cProfile.run("Init()")
     # cProfile.run("GenStatic()")
-    # cProfile.run("GenBlog()")
+    # cProfile.run("GenSite()")
 
     t2 = datetime.datetime.now()
 
