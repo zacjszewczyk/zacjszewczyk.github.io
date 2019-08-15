@@ -17,6 +17,7 @@ from multiprocessing import Pool # Multiprocessing
 ##          elements. These elements have months as the keys, and a list
 ##          of the posts made in that month as the elements. (Dictionary)
 ## - content: A string with the opening and closing HTML tags. (String)
+## - months: A map of month numbers to names (Dictionary)
 ## - md: Placeholder for instance of Markdown parser. (Class)
 files = {}
 content = ""
@@ -300,15 +301,15 @@ def GenBlog():
     # file_idx: Current file number. (Int)
     # buff: [File names, timestamps] for all posts. (List)
     file_idx = 0
-    buff = []
+    file_buffer = []
 
     for year in sorted(files, reverse=True):
         for month in sorted(files[year], reverse=True):
                 for day in sorted(files[year][month], reverse=True):
                     for timestamp in sorted(files[year][month][day], reverse=True):
-                        buff.append([files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp)])
+                        file_buffer.append([files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp)])
 
-    for fname, timestamp in buff:
+    for fname, timestamp in file_buffer:
         # Add the first twenty-five articles to the main blog page.
         if (file_idx < 25):
             AppendContentOfXToY("./local/blog", fname, timestamp)
@@ -349,6 +350,8 @@ def GenBlog():
 
         # Increase the file index.
         file_idx += 1
+
+    del file_buffer
 
 # Method: GenSite
 # Purpose: Generate the blog.
@@ -467,18 +470,21 @@ def GenStatic():
     home = fd.read().split("<!-- DIVIDER -->")
     fd.close()
     BuildFromTemplate(target="./local/index.html", title="", bodyid="home", description="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things.", sheets=home[0], passed_content=home[1])
+    del home
 
     # Reference the projects.html source file to generate the front-end structure file.
     fd = open("system/projects.html", "r")
     projects = fd.read().split("<!-- DIVIDER -->")
     fd.close()
     BuildFromTemplate(target="./local/projects.html", title="Projects - ", bodyid="projects", description="The writing, coding, and Computer Aided Drafting and Design (CADD) side projects Zac Szewczyk bulds in his spare time.", sheets="", passed_content=projects[1])
+    del projects
 
     # Reference the disclaimers.html source file to generate the front-end structure fule.
     fd = open("system/disclaimers.html", "r")
     disclaimers = fd.read().split("<!-- DIVIDER -->")
     BuildFromTemplate(target="./local/disclaimers.html", title="Disclaimers - ", bodyid="disclaimers", description="Copyright and content disclaimers for Zac Szewczyk's blog.", sheets="", passed_content=disclaimers[1].replace("{{NAME}}", full_name))
     fd.close()
+    del disclaimers
 
     # Build the 404.html file.
     BuildFromTemplate(target="./local/404.html", title="Error - ", bodyid="error", description="", sheets="", passed_content="")
@@ -608,7 +614,7 @@ def Init():
     # If any of these values were blank, notify the user and throw an error.
     if (base_url == "" or byline == "" or full_name == ""):
         print(c.FAIL+"Error reading settings from './.config'. Please check file configuration and try again."+c.ENDC)
-        exit(1)
+        exit(0)
     elif (meta_keywords == "" or meta_appname == "" or twitter_url == "" or insta_url == ""):
         print(c.WARNING+"You have not finished initializing the configuration file. Please finish setting up './.config'.")
 
@@ -626,7 +632,7 @@ def Init():
     ## Now ensure crucial system files exist
     for f in ["template.htm", "index.html", "projects.html", "disclaimers.html"]:
         if (not isfile("./system/"+f)):
-            print(c.FAIL+"\"./system/"+f+"\" directory does not exist. Exiting."+c.ENDC)
+            print(c.FAIL+"\"./system/"+f+"\" does not exist. Exiting."+c.ENDC)
             exit(1)
 
     # Make sure ./local exists with its subfolders
@@ -880,14 +886,16 @@ if __name__ == '__main__':
         exit(0)
 
     t1 = datetime.datetime.now()
-    Init()
-    GenStatic()
-    GenSite()
+    # Init()
+    # GenStatic()
+    # GenSite()
     
-    # import cProfile
+    import cProfile
     # cProfile.run("Init()")
     # cProfile.run("GenStatic()")
-    # cProfile.run("GenSite()")
+    Init()
+    GenStatic()
+    cProfile.run("GenSite()")
 
     t2 = datetime.datetime.now()
 
