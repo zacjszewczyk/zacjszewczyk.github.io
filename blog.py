@@ -886,16 +886,14 @@ if __name__ == '__main__':
         exit(0)
 
     t1 = datetime.datetime.now()
-    # Init()
-    # GenStatic()
-    # GenSite()
-    
-    import cProfile
-    # cProfile.run("Init()")
-    # cProfile.run("GenStatic()")
     Init()
     GenStatic()
-    cProfile.run("GenSite()")
+    GenSite()
+    
+    # import cProfile
+    # cProfile.run("Init()")
+    # cProfile.run("GenStatic()")
+    # cProfile.run("GenSite()")
 
     t2 = datetime.datetime.now()
 
