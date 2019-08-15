@@ -809,7 +809,6 @@ def Migrate(target, mod_time):
 # Parameters: 
 # - tgt: Target file name (String)
 def Revert(tgt):
-    
     fd = open(tgt, "r")
     fd.readline()
     fd.readline()
