@@ -7,9 +7,25 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 14 Aug 2019 03:53:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Aug 2019 10:47:34 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Dimensions for an Expedition Rig that Fits in a Shipping Container</title>
+            <link>https://zacs.site//blog/shipping-container-expedition-rig.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/shipping-container-expedition-rig.html</guid>
+
+            <pubDate>Thu, 15 Aug 2019 10:46:46 GMT</pubDate>
+            <description>
+
+&lt;style&gt;table{margin:0 auto;margin-bottom:2em;border-collapse:collapse;table-layout:fixed}table,td,th,tr{border:.1em solid #000;padding:.5em}tr:nth-child(odd){background-color:#efefef}td:hover{background-color:#cfcfcf}.highlight{background-color:#f4f186}&lt;/style&gt;
+
+&lt;p&gt;I have spent a lot of time researching, planning, and &lt;a href="https://zacs.site//projects.html#lmtvRV"&gt;designing&lt;/a&gt; a full-size, custom-built expedition rig. I hope to start this massive project in the next few years. A few weeks ago, though, I took a brief detour down a different path. Rather than a huge RV based on the M1083 LMTV chassis, I spent a few days thinking I would go with a medium-duty utility vehicle instead. The Mitsubishi FG4x4 and the Isuzu N-series, I reasoned, had a few advantages over the LMTV.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/shipping-container-expedition-rig.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Why Does Infrastructure Cost So Much?</title>
             <link>https://www.strongtowns.org/journal/2019/7/31/why-does-infrastructure-cost-so-much</link>
