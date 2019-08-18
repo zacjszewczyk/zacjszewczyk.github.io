@@ -7,7 +7,7 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 18 Aug 2019 07:14:18 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 18 Aug 2019 07:23:08 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -551,7 +551,7 @@
 
 &lt;pre&gt;
 $ alias gs="git status"
-$ alias gac="git add . &#38;#38;&#38;#38; git commit -m"
+$ alias gac="git add . &#38;&#38;#38; git commit -m"
 $ alias gp="git push"
 &lt;/pre&gt;
 
@@ -1119,7 +1119,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
             <pubDate>Thu, 11 Apr 2019 15:38:51 GMT</pubDate>
             <description>
 
-&lt;p&gt;With all the talk of Huawei &lt;a href="https://zacs.site/blog/proxy-innovation.html"&gt;over the last&lt;/a&gt; &lt;a href="https://zacs.site/blog/huawei-and-managing-5g-risk.html"&gt;few days&lt;/a&gt;, I want to spend a minute on AT&#38;#38;T. You may have seen the company in the news for &lt;a href="https://www.engadget.com/2019/04/09/att-5g-live-in-seven-more-cities/"&gt;expanding 5G to new cities&lt;/a&gt; &lt;a href="https://www.engadget.com/2019/03/22/opensignal-study-att-5g-e-speeds/"&gt;despite poor performance&lt;/a&gt;. In short, &lt;a href="https://www.theverge.com/2019/1/7/18172355/att-fake-5g-logo-rolling-out-samsung-lg"&gt;AT&#38;#38;T markets an optimized 4G LTE network as 5GE&lt;/a&gt;. Even if AT&#38;#38;T did offer actual 5G, &lt;a href="https://www.theverge.com/2019/4/9/18303494/att-5g-service-19-cities-verizon-samsung-s10-exclusivity-tmobile-hot-spot"&gt;no U.S. devices could use it&lt;/a&gt;; it does not. Huawei receives so much attention in this space because it is the first company to offer an actual 5G network, a feat no one else can match.&lt;/p&gt;
+&lt;p&gt;With all the talk of Huawei &lt;a href="https://zacs.site/blog/proxy-innovation.html"&gt;over the last&lt;/a&gt; &lt;a href="https://zacs.site/blog/huawei-and-managing-5g-risk.html"&gt;few days&lt;/a&gt;, I want to spend a minute on AT&#38;T. You may have seen the company in the news for &lt;a href="https://www.engadget.com/2019/04/09/att-5g-live-in-seven-more-cities/"&gt;expanding 5G to new cities&lt;/a&gt; &lt;a href="https://www.engadget.com/2019/03/22/opensignal-study-att-5g-e-speeds/"&gt;despite poor performance&lt;/a&gt;. In short, &lt;a href="https://www.theverge.com/2019/1/7/18172355/att-fake-5g-logo-rolling-out-samsung-lg"&gt;AT&#38;#38;T markets an optimized 4G LTE network as 5GE&lt;/a&gt;. Even if AT&#38;#38;T did offer actual 5G, &lt;a href="https://www.theverge.com/2019/4/9/18303494/att-5g-service-19-cities-verizon-samsung-s10-exclusivity-tmobile-hot-spot"&gt;no U.S. devices could use it&lt;/a&gt;; it does not. Huawei receives so much attention in this space because it is the first company to offer an actual 5G network, a feat no one else can match.&lt;/p&gt;
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/a-note-on-att-5g.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
@@ -4208,7 +4208,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
             <pubDate>Mon, 31 Mar 2014 12:40:03 GMT</pubDate>
             <description>
 
-&lt;p&gt;In episode fifty-eight of the Accidental Tech Podcast, Marco, John, and Casey did some follow-up on their previous episode in which they discussed&#38;#160;&#38;#8212;&#38;#160;among other topics&#38;#160;&#38;#8212;&#38;#160;sexism. In response to the previous week&#38;#8217;s show, &lt;a href="http://atp.fm/episodes/57-smorgasbord-of-pronunciation"&gt;ATP 57: &lt;em&gt;Smorgasbord Of Pronunciation&lt;/em&gt;&lt;/a&gt;, I wrote the gruesomely-titled &lt;a href="https://zacs.site/blog/hedge-yourself.html"&gt;&lt;em&gt;Hedge Yourself Before They Wreck Yourself&lt;/em&gt;&lt;/a&gt;&#38;#160;&#38;#8212;&#38;#160;a poorly-executed play on the &#38;#8220;check yourself before you wreck yourself&#38;#8221; clich&#38;#38;#233;&#38;#160;&#38;#8212;&#38;#160;wherein I talked about my dislike of the culture surrounding social causes. Although I tried to publish that piece before the trio recorded ATP fifty-eight, I missed it by a day and posted my article late. After finally putting it out for all to see though, I went and listened to episode &lt;a href="http://atp.fm/episodes/58-always-on-vacation-in-california"&gt;58: &lt;em&gt;Always on Vacation in California&lt;/em&gt;&lt;/a&gt;. To my surprise, within the first few minutes Marco validated everything I had opined against in my unfortunately-titled piece. For the unindoctrinated, here&#38;#8217;s a transcript of the pertinent parts:&lt;/p&gt;
+&lt;p&gt;In episode fifty-eight of the Accidental Tech Podcast, Marco, John, and Casey did some follow-up on their previous episode in which they discussed&#38;#160;&#38;#8212;&#38;#160;among other topics&#38;#160;&#38;#8212;&#38;#160;sexism. In response to the previous week&#38;#8217;s show, &lt;a href="http://atp.fm/episodes/57-smorgasbord-of-pronunciation"&gt;ATP 57: &lt;em&gt;Smorgasbord Of Pronunciation&lt;/em&gt;&lt;/a&gt;, I wrote the gruesomely-titled &lt;a href="https://zacs.site/blog/hedge-yourself.html"&gt;&lt;em&gt;Hedge Yourself Before They Wreck Yourself&lt;/em&gt;&lt;/a&gt;&#38;#160;&#38;#8212;&#38;#160;a poorly-executed play on the &#38;#8220;check yourself before you wreck yourself&#38;#8221; clich&#38;#233;&#38;#160;&#38;#8212;&#38;#160;wherein I talked about my dislike of the culture surrounding social causes. Although I tried to publish that piece before the trio recorded ATP fifty-eight, I missed it by a day and posted my article late. After finally putting it out for all to see though, I went and listened to episode &lt;a href="http://atp.fm/episodes/58-always-on-vacation-in-california"&gt;58: &lt;em&gt;Always on Vacation in California&lt;/em&gt;&lt;/a&gt;. To my surprise, within the first few minutes Marco validated everything I had opined against in my unfortunately-titled piece. For the unindoctrinated, here&#38;#8217;s a transcript of the pertinent parts:&lt;/p&gt;
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/always-on-vacation-in-california.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
@@ -4562,7 +4562,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
             <pubDate>Sat, 22 Mar 2014 14:14:41 GMT</pubDate>
             <description>
 
-&lt;p&gt;Fantastic interview by John Arlidge of Time Magazine with Apple&#38;#8217;s famed designer Jony Ive. I will do neither the disservice of taking a pull-quote from this piece, for you really should read it in its entirety rather than in pieces, but I will say this: the key takeaway, I felt, is the remarkable humanity of this entire process: from inception to creation to ultimate release, at no point in the life of these devices does anyone measure their viability, utility, or success by something so mundane as technical specifications. Rather, it all comes down to the human element&#38;#160;&#38;#8212;&#38;#160;the experience, to use a rather clich&#38;#38;#233;d turn of phrase, for in the end, when all is said and done, what else is left but the device in your hand?&lt;/p&gt;
+&lt;p&gt;Fantastic interview by John Arlidge of Time Magazine with Apple&#38;#8217;s famed designer Jony Ive. I will do neither the disservice of taking a pull-quote from this piece, for you really should read it in its entirety rather than in pieces, but I will say this: the key takeaway, I felt, is the remarkable humanity of this entire process: from inception to creation to ultimate release, at no point in the life of these devices does anyone measure their viability, utility, or success by something so mundane as technical specifications. Rather, it all comes down to the human element&#38;#160;&#38;#8212;&#38;#160;the experience, to use a rather clich&#38;#233;d turn of phrase, for in the end, when all is said and done, what else is left but the device in your hand?&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p class='read_more_paragraph'&gt;
@@ -5391,7 +5391,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
             <pubDate>Fri, 14 Feb 2014 17:52:13 GMT</pubDate>
             <description>
 
-&lt;p&gt;I cited this quote &lt;a href="https://twitter.com/zacjszewczyk/status/434380340157616128"&gt;on Twitter&lt;/a&gt; and I&#38;#8217;ll do so again here: &#38;#8220;Saying &#38;#8216;Microsoft missed mobile&#38;#8217; is a bit unfair ... Not that that should make Satya Nadella sleep any better at night.&#38;#8221; I love this, and I found the rest of Ben&#38;#8217;s article on Microsoft&#38;#8217;s mobility saga very interesting as well. This is Strat&#38;#38;#275;chery at its best, folks; great work by Ben Thompson, as usual.&lt;/p&gt;
+&lt;p&gt;I cited this quote &lt;a href="https://twitter.com/zacjszewczyk/status/434380340157616128"&gt;on Twitter&lt;/a&gt; and I&#38;#8217;ll do so again here: &#38;#8220;Saying &#38;#8216;Microsoft missed mobile&#38;#8217; is a bit unfair ... Not that that should make Satya Nadella sleep any better at night.&#38;#8221; I love this, and I found the rest of Ben&#38;#8217;s article on Microsoft&#38;#8217;s mobility saga very interesting as well. This is Strat&#38;#275;chery at its best, folks; great work by Ben Thompson, as usual.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p class='read_more_paragraph'&gt;
@@ -6158,7 +6158,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
             <pubDate>Mon, 20 Jan 2014 12:42:14 GMT</pubDate>
             <description>
 
-&lt;p&gt;Back from a weekend camping, I had a lot of catching up to do. Beginning with some four hundred unread tweets yesterday afternoon and approximately fifty RSS items, I have finally made my way to Instapaper where I had Linus Edwards&#38;#8217;s ninth installment of his Daily Zen series&#38;#160;&#38;#8212;&#38;#160;&lt;a href="http://vintagezen.com/zen/2014/1/16/dz9"&gt;&lt;em&gt;The Daily Zen &#38;#38;#35;9 &#38;#8220;Exposed &#38;#38; Obscured&#38;#8221;&lt;/em&gt;&lt;/a&gt;&#38;#160;&#38;#8212;&#38;#160;waiting for me. I only found his blog recently, but &lt;a href="https://zacs.site/blog/winners-losers-and-high-school.html"&gt;given the nature&lt;/a&gt; of &lt;a href="http://vintagezen.com/zen/2014/1/10/dz8"&gt;his last post&lt;/a&gt; it came as no surprise that I liked this one a great deal. Specifically, his thoughts on why we, as a community, write on the internet and publishing our own personal blogs struck me in particular:&lt;/p&gt;
+&lt;p&gt;Back from a weekend camping, I had a lot of catching up to do. Beginning with some four hundred unread tweets yesterday afternoon and approximately fifty RSS items, I have finally made my way to Instapaper where I had Linus Edwards&#38;#8217;s ninth installment of his Daily Zen series&#38;#160;&#38;#8212;&#38;#160;&lt;a href="http://vintagezen.com/zen/2014/1/16/dz9"&gt;&lt;em&gt;The Daily Zen &#38;#35;9 &#38;#8220;Exposed &#38;#38; Obscured&#38;#8221;&lt;/em&gt;&lt;/a&gt;&#38;#160;&#38;#8212;&#38;#160;waiting for me. I only found his blog recently, but &lt;a href="https://zacs.site/blog/winners-losers-and-high-school.html"&gt;given the nature&lt;/a&gt; of &lt;a href="http://vintagezen.com/zen/2014/1/10/dz8"&gt;his last post&lt;/a&gt; it came as no surprise that I liked this one a great deal. Specifically, his thoughts on why we, as a community, write on the internet and publishing our own personal blogs struck me in particular:&lt;/p&gt;
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/the-reasons-i-write.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
@@ -6997,7 +6997,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
             <pubDate>Sun, 22 Dec 2013 15:04:59 GMT</pubDate>
             <description>
 
-&lt;p&gt;Recently, Phil Robertson of the sensational cable TV program Duck Dynasty has drawn quite a bit of &lt;a href="http://www.npr.org/blogs/monkeysee/2013/12/19/255430555/duck-and-cover-what-exactly-is-the-point"&gt;flack&lt;/a&gt; for his very Christian views kept largely hidden until now through A&#38;#38;E&#38;#8217;s refusal to air his more candid statements. Setting personal opinions aside though and totally disregard the absurdity of crucifying Phil for his beliefs because today&#38;#8217;s hyper-sensitive, disgustingly entitled society seeks to vilify everyone who challenges their nuanced values, and looking at this from an unbiased standpoint, a very interesting lifestyle emerges in &lt;a href="http://www.gq.com/entertainment/television/201401/duck-dynasty-phil-robertson"&gt;Drew Magary&#38;#8217;s article for GQ&lt;/a&gt;&#38;#160;&#38;#8212;&#38;#160;incidentally, the article that started this whole debacle. The entire piece is excellent, but if I had to pick my favorite line it came down to Drew&#38;#8217;s revelatory experience toward the end, for I can relate to that very feeling myself:&lt;/p&gt;
+&lt;p&gt;Recently, Phil Robertson of the sensational cable TV program Duck Dynasty has drawn quite a bit of &lt;a href="http://www.npr.org/blogs/monkeysee/2013/12/19/255430555/duck-and-cover-what-exactly-is-the-point"&gt;flack&lt;/a&gt; for his very Christian views kept largely hidden until now through A&#38;E&#38;#8217;s refusal to air his more candid statements. Setting personal opinions aside though and totally disregard the absurdity of crucifying Phil for his beliefs because today&#38;#8217;s hyper-sensitive, disgustingly entitled society seeks to vilify everyone who challenges their nuanced values, and looking at this from an unbiased standpoint, a very interesting lifestyle emerges in &lt;a href="http://www.gq.com/entertainment/television/201401/duck-dynasty-phil-robertson"&gt;Drew Magary&#38;#8217;s article for GQ&lt;/a&gt;&#38;#160;&#38;#8212;&#38;#160;incidentally, the article that started this whole debacle. The entire piece is excellent, but if I had to pick my favorite line it came down to Drew&#38;#8217;s revelatory experience toward the end, for I can relate to that very feeling myself:&lt;/p&gt;
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/drew-magarys-fantastic-interview-with-phil-robertson.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
@@ -7465,7 +7465,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
             <pubDate>Mon, 18 Nov 2013 13:11:33 GMT</pubDate>
             <description>
 
-&lt;p&gt;I feel like Gene Munster, where just as he perpetually beats upon his iTV drum so, too, do I &lt;a href="https://zacs.site/blog/the-ipad-pro.html"&gt;all&lt;/a&gt; too &lt;a href="https://zacs.site/blog/clocking-down-the-mini.html"&gt;frequently&lt;/a&gt; return to the iPad Pro. Since Apple&#38;#8217;s iPad event, after receiving my MacBook Pro, and all throughout the ensuing period during which I began to define the different roles this new device and my trusty iPad would fill, this topic and Tim Cook&#38;#8217;s comment to that effect have occupied a great deal of my consciousness. Unfortunately, I could find no written record of Tim Cook referring to such a device despite numerous verbal accounts; however, when questioned before October&#38;#8217;s iPad event as to whether Apple would release an iPad Pro, he responded (with a smile) in saying, &#38;#8220;We already make one: the 11&#38;#38;#8243; MacBook Air.&#38;#8221; I find this statement interesting for a number of reasons.&lt;/p&gt;
+&lt;p&gt;I feel like Gene Munster, where just as he perpetually beats upon his iTV drum so, too, do I &lt;a href="https://zacs.site/blog/the-ipad-pro.html"&gt;all&lt;/a&gt; too &lt;a href="https://zacs.site/blog/clocking-down-the-mini.html"&gt;frequently&lt;/a&gt; return to the iPad Pro. Since Apple&#38;#8217;s iPad event, after receiving my MacBook Pro, and all throughout the ensuing period during which I began to define the different roles this new device and my trusty iPad would fill, this topic and Tim Cook&#38;#8217;s comment to that effect have occupied a great deal of my consciousness. Unfortunately, I could find no written record of Tim Cook referring to such a device despite numerous verbal accounts; however, when questioned before October&#38;#8217;s iPad event as to whether Apple would release an iPad Pro, he responded (with a smile) in saying, &#38;#8220;We already make one: the 11&#38;#8243; MacBook Air.&#38;#8221; I find this statement interesting for a number of reasons.&lt;/p&gt;
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/more-on-the-ipad-pro.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
@@ -7885,7 +7885,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
             <pubDate>Wed, 23 Oct 2013 02:54:10 GMT</pubDate>
             <description>
 
-&lt;p&gt;I would have loved to have this back when I played Pokmon LeafGreen and Pokmon Saphire. Instead I had Prima Games&#38;#8217; &lt;a href="http://www.amazon.com/Pokemon-Pokedex-Collectors-Edition-Official/dp/0761547614/ref=sr_1_1?ie=UTF8&#38;#38;qid=1382496492&#38;#38;sr=8-1&#38;#38;keywords=pokedex+collectors+edition"&gt;&lt;em&gt;Pokmon Pokedex Collector&#38;#8217;s Edition&lt;/em&gt;&lt;/a&gt; which, although a great book for its time, simply cannot compare to the power Wolfram|Alpha will afford its users. I don&#38;#8217;t even play the game any more and I&#38;#8217;m still excited.&lt;/p&gt;
+&lt;p&gt;I would have loved to have this back when I played Pokmon LeafGreen and Pokmon Saphire. Instead I had Prima Games&#38;#8217; &lt;a href="http://www.amazon.com/Pokemon-Pokedex-Collectors-Edition-Official/dp/0761547614/ref=sr_1_1?ie=UTF8&#38;qid=1382496492&#38;sr=8-1&#38;keywords=pokedex+collectors+edition"&gt;&lt;em&gt;Pokmon Pokedex Collector&#38;#8217;s Edition&lt;/em&gt;&lt;/a&gt; which, although a great book for its time, simply cannot compare to the power Wolfram|Alpha will afford its users. I don&#38;#8217;t even play the game any more and I&#38;#8217;m still excited.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p class='read_more_paragraph'&gt;
@@ -9546,7 +9546,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
             <pubDate>Thu, 13 Jun 2013 01:12:27 GMT</pubDate>
             <description>
 
-&lt;p&gt;Almost every time Apple releases a new version of iOS, someone has the &lt;a href="https://twitter.com/search?q=shit%20from%3Amarcoarment&#38;#38;src=typd"&gt;Marco Arment &#38;#8220;Well, shit&#38;#8221; moment&lt;/a&gt;. The time, most prominently, it was &lt;a href="https://agilebits.com/onepassword"&gt;1Password&#38;#8217;s&lt;/a&gt; turn, although other small, one-off app developers likely had similar reactions throughout the keynote.&lt;/p&gt;
+&lt;p&gt;Almost every time Apple releases a new version of iOS, someone has the &lt;a href="https://twitter.com/search?q=shit%20from%3Amarcoarment&#38;src=typd"&gt;Marco Arment &#38;#8220;Well, shit&#38;#8221; moment&lt;/a&gt;. The time, most prominently, it was &lt;a href="https://agilebits.com/onepassword"&gt;1Password&#38;#8217;s&lt;/a&gt; turn, although other small, one-off app developers likely had similar reactions throughout the keynote.&lt;/p&gt;
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/bang-youre-dead.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
