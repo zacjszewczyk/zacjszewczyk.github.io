@@ -3,7 +3,7 @@
 # Footnotes
 
 # Import methods
-from re import findall # re.findall, for links
+from re import findall, sub # for links and ampersands
 from os.path import isfile
 
 class Markdown:
@@ -237,8 +237,9 @@ class Markdown:
     # - Line with &, *, <, and > escaped using their HTML entities. (String)
     def __escapeCharacters(self, __line):
         # Escape ampersands. Replace them with the appropriate HTML entity.
-        for each in findall("(&\w*\s)", __line):
-            __line = __line.replace(each, each.replace("&", "&#38;"))
+        __line = sub(r"(&)(\w*[\s\.\,])", r"&#38;\2", __line)
+        # for each in findall("(&\w*\s)", __line):
+        #     __line = __line.replace(each, each.replace("&", "&#38;"))
 
         for each in findall("`[^`\n]+`", __line):
             __line = __line.replace(each, each.replace("*", "&#42;"))

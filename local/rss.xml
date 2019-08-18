@@ -7,7 +7,7 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 18 Aug 2019 07:24:54 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 18 Aug 2019 09:08:39 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -1119,7 +1119,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
             <pubDate>Thu, 11 Apr 2019 15:38:51 GMT</pubDate>
             <description>
 
-&lt;p&gt;With all the talk of Huawei &lt;a href="https://zacs.site/blog/proxy-innovation.html"&gt;over the last&lt;/a&gt; &lt;a href="https://zacs.site/blog/huawei-and-managing-5g-risk.html"&gt;few days&lt;/a&gt;, I want to spend a minute on AT&#38;T. You may have seen the company in the news for &lt;a href="https://www.engadget.com/2019/04/09/att-5g-live-in-seven-more-cities/"&gt;expanding 5G to new cities&lt;/a&gt; &lt;a href="https://www.engadget.com/2019/03/22/opensignal-study-att-5g-e-speeds/"&gt;despite poor performance&lt;/a&gt;. In short, &lt;a href="https://www.theverge.com/2019/1/7/18172355/att-fake-5g-logo-rolling-out-samsung-lg"&gt;AT&#38;#38;T markets an optimized 4G LTE network as 5GE&lt;/a&gt;. Even if AT&#38;#38;T did offer actual 5G, &lt;a href="https://www.theverge.com/2019/4/9/18303494/att-5g-service-19-cities-verizon-samsung-s10-exclusivity-tmobile-hot-spot"&gt;no U.S. devices could use it&lt;/a&gt;; it does not. Huawei receives so much attention in this space because it is the first company to offer an actual 5G network, a feat no one else can match.&lt;/p&gt;
+&lt;p&gt;With all the talk of Huawei &lt;a href="https://zacs.site/blog/proxy-innovation.html"&gt;over the last&lt;/a&gt; &lt;a href="https://zacs.site/blog/huawei-and-managing-5g-risk.html"&gt;few days&lt;/a&gt;, I want to spend a minute on AT&#38;#38;T. You may have seen the company in the news for &lt;a href="https://www.engadget.com/2019/04/09/att-5g-live-in-seven-more-cities/"&gt;expanding 5G to new cities&lt;/a&gt; &lt;a href="https://www.engadget.com/2019/03/22/opensignal-study-att-5g-e-speeds/"&gt;despite poor performance&lt;/a&gt;. In short, &lt;a href="https://www.theverge.com/2019/1/7/18172355/att-fake-5g-logo-rolling-out-samsung-lg"&gt;AT&#38;#38;T markets an optimized 4G LTE network as 5GE&lt;/a&gt;. Even if AT&#38;#38;T did offer actual 5G, &lt;a href="https://www.theverge.com/2019/4/9/18303494/att-5g-service-19-cities-verizon-samsung-s10-exclusivity-tmobile-hot-spot"&gt;no U.S. devices could use it&lt;/a&gt;; it does not. Huawei receives so much attention in this space because it is the first company to offer an actual 5G network, a feat no one else can match.&lt;/p&gt;
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/a-note-on-att-5g.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
