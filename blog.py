@@ -329,6 +329,7 @@ def GenBlog():
             buff += """\n    </tr>\n</table>\n</article>\n"""
             archives_fd = open("./local/archives.html", "a")
             archives_fd.write(buff)
+            del buff
             archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s.html'>%s</a></article>" % (year, year))
             archives_fd.close()
             temp = year
@@ -437,6 +438,7 @@ def GenPage(source, timestamp):
         # generated up to this point. Then write the first paragraph, parsed.
         elif (idx == 6):
             target_fd.write(local_content.replace("{{META_DESC}}", line.replace('"', "&#34;").strip()).strip())
+            del local_content
             target_fd.write("\n"+title.strip())
             target_fd.write("\n"+md.html(line).strip())
         # For successive lines of the file, parse them as Markdown and write them to the file.
@@ -512,13 +514,6 @@ def GetUserInput(prompt):
         break
     return string
 
-# Method: GetFiles
-# Purpose: Return the global variable files, to make it accessible in a method
-# Parameters: none
-def GetFiles():
-    global files
-    return files
-
 # Method: GetTitle
 # Purpose: Return the article title of a source file.
 # Parameters:
@@ -526,18 +521,18 @@ def GetFiles():
 def GetTitle(source, timestamp):
     src = "Content/"+source
 
-    with open(src, "r") as source_fd:
-        # Ensure source file contains header. If not, use the Migrate() method to generate it.
-        source_fd = open(src, "r")
-        line = source_fd.readline()
-        if (line[0:5] != "Type:"):
-            Migrate(source, timestamp)
+    # Ensure source file contains header. If not, use the Migrate() method to generate it.
+    source_fd = open(src, "r")
+    line = source_fd.readline()
+    if (line[0:5] != "Type:"):
         source_fd.close()
-        
-        # Open the source file in read mode.
-        source_fd = open(src, "r")
-        source_fd.readline()
-        title = source_fd.readline()[7:]
+        Migrate(source, timestamp)
+    
+    # Open the source file in read mode.
+    source_fd = open(src, "r")
+    source_fd.readline()
+    title = source_fd.readline()[7:]
+    source_fd.close()
 
     return title
 
@@ -797,6 +792,8 @@ def Migrate(target, mod_time):
     fd = open("Content/"+target, "w")
     fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, byline, article_content.strip()))
     fd.close()
+
+    del article_type, article_content, article_title, article_url
 
     # Revert the update time for the target file, to its previous value.
     utime("Content/"+target, ((mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
