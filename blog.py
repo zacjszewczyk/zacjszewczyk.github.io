@@ -815,10 +815,8 @@ def Revert(tgt):
     fd.readline()
     mod_time = mktime(strptime(fd.readline()[9:].strip(), "%Y/%m/%d %H:%M:%S"))
     fd.close()
-
-    mtime = stat(tgt).st_mtime
     
-    if (mod_time != mtime):
+    if (mod_time != stat(tgt).st_mtime):
         print("Does not match for",tgt)
         print("Reverting to",mod_time)
         utime(tgt, (mod_time, mod_time))
