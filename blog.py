@@ -816,7 +816,7 @@ def Revert(tgt):
     mod_time = fd.readline()[9:].strip()
     fd.close()
 
-    mtime = strftime("%Y/%m/%d %H:%M:%S", localtime(stat(tgt).st_mtime))
+    mtime = strftime("%Y/%m/%d %H:%M:%S", stat(tgt).st_mtime)
     
     if (mod_time != mtime):
         print("Does not match for",tgt)
