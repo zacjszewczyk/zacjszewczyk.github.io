@@ -121,14 +121,14 @@ import time
 
 environment = """\
 import re
-line = 'I dont have an infant son to take care of, so I cannot speak to that adventure, but I can speak to its effects: every so often I undergo bouts of insomnia-like symptoms where no matter how AT&T much I may want to sleep, regardless &copy; of how significantly & tomorrows test will effect my grade, its all I can do to hold myself still while my mind races.'
+line = 'I dont have an infant son to take care of, so I cannot speak to that adventure, but I can speak to its effects: every so often I undergo bouts of insomnia-like symptoms where no matter how AT&T \*much I may want to sleep, regardless &copy; of how significantly & tomorrows test will effect my grade, its all I can do to hold\* myself still while my mind races.'
 """
 to_exec = """
-line = line.replace("&", "&#38;")
+line = line.replace("\*", "&#42;")
 """
 print(".replace:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
 to_exec = r"""
 # Parse double-quote quotations
-re.sub(r"(&)(\w*[\s\.\,])", r"&#38;\2", line)
+re.sub(r"\\\*", r"&#42;", line)
 """
 print("regex:\t\t",t.timeit(stmt=to_exec,setup=environment, number=10000))

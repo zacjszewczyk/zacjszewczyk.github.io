@@ -241,12 +241,6 @@ class Markdown:
         # for each in findall("(&\w*\s)", __line):
         #     __line = __line.replace(each, each.replace("&", "&#38;"))
 
-        for each in findall("`[^`\n]+`", __line):
-            __line = __line.replace(each, each.replace("*", "&#42;"))
-
-        # Escape backtick quotes
-        __line = __line.replace("\`", "&#8245;")
-
         # Escape escaped asteriscs, to keep them from being read as bold or
         # italic text.
         __line = __line.replace("\*", "&#42;")
