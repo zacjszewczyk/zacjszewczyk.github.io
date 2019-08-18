@@ -100,6 +100,8 @@ def AppendContentOfXToY(target, source, timestamp):
     target_fd.write("</article>")
     target_fd.close()
 
+    del html_filename, flag, target_fd
+
 # Method: AppendToFeed
 # Purpose: Append the content of a source file to the RSS feed.
 # Parameters:
@@ -128,7 +130,6 @@ def AppendToFeed(source):
     feed_fd.write("        <item>\n")
 
     with open("./local/blog/"+html_filename, "r") as source_fd:
-        
         # Skip to the <article tag, then write the opening <article>
         # tag to the output file.
         for line in source_fd:
@@ -187,6 +188,8 @@ def AppendToFeed(source):
     feed_fd.write("            </description>\n        </item>\n")
     feed_fd.close()
 
+    del html_filename, flag, feed_fd
+
 # Method: BuildFromTemplate
 # Purpose: Build a target file, with a specified title and body id, and
 # optional fields for inserted stylesheets and content
@@ -207,6 +210,8 @@ def BuildFromTemplate(target, title, bodyid, description="", sheets="", passed_c
     fd.write(content[0].replace("{{META_DESC}}", description).replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
     fd.write(passed_content)
     fd.close()
+
+    del fd
 
 # Method: CheckDirAndCreate
 # Purpose: Check for the existence of a given directory, and create it if it
@@ -231,6 +236,8 @@ def CloseTemplateBuild(target, scripts=""):
     fd = open(target, "a")
     fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", scripts))
     fd.close()
+
+    del fd
 
 # Method: HandleYear
 # Purpose: Process all the posts in a year.
@@ -290,6 +297,8 @@ def HandleYear(year):
     # Write closing HTML tags to the year file.
     year_fd.write("</table>\n"+content[1].replace("assets/", "../assets/"))
     year_fd.close()
+
+    del article_title, year_fd, month_fd
 
 # Method: GenBlog
 # Purpose: Generate the blog, archives, and feed.
@@ -352,7 +361,7 @@ def GenBlog():
         # Increase the file index.
         file_idx += 1
 
-    del file_buffer
+    del file_idx, file_buffer, archives_fd
 
 # Method: GenSite
 # Purpose: Generate the blog.
@@ -460,6 +469,8 @@ def GenPage(source, timestamp):
     mtime = stat("./Content/"+source).st_mtime
     utime(dst, (mtime, mtime))
 
+    del src, dst, source_fd, idx, title, target_fd, mtime
+
     return article_title
 
 # Method: GenStatic
@@ -491,6 +502,8 @@ def GenStatic():
     # Build the 404.html file.
     BuildFromTemplate(target="./local/404.html", title="Error - ", bodyid="error", description="", sheets="", passed_content="")
 
+    del fd
+
 # Method: GetUserInput
 # Purpose: Accept user input and perform basic bounds checking
 # Parameters:
@@ -501,7 +514,7 @@ def GetUserInput(prompt):
     # Prompt the user for valid input
     while True:
         string = input(prompt)
-        
+
         # Do not allow empty strings
         if (len(string) == 0):
             print(c.WARNING+"Input cannot be empty."+c.ENDC)
@@ -533,6 +546,8 @@ def GetTitle(source, timestamp):
     source_fd.readline()
     title = source_fd.readline()[7:]
     source_fd.close()
+
+    del src, source_fd, line
 
     return title
 
@@ -579,6 +594,8 @@ def Init():
             print(c.FAIL+"Configuration file not created."+c.ENDC)
             print(c.WARNING+"Please run again."+c.ENDC)
             exit(0)
+
+        del res
 
         # Remove the migration script.
         if (isfile("./.sys.sh")):
@@ -677,6 +694,8 @@ def Init():
             if (mtime[3] not in files[mtime[0]][mtime[1]][mtime[2]]):
                 files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = {}
             files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = each
+
+    del fd
 
 # Method: Interface
 # Purpose: Provide a command line interface for the script, for more granular control
@@ -793,7 +812,7 @@ def Migrate(target, mod_time):
     fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, byline, article_content.strip()))
     fd.close()
 
-    del article_type, article_content, article_title, article_url
+    del fd, article_type, article_content, article_title, article_url
 
     # Revert the update time for the target file, to its previous value.
     utime("Content/"+target, ((mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
@@ -817,6 +836,8 @@ def Revert(tgt):
         print("Does not match for",tgt)
         print("Reverting to",mod_time)
         utime(tgt, (mod_time, mod_time))
+
+    del fd, mod_time
 
 # Method: SearchFile
 # Purpose: Search for a string within a file.
@@ -851,6 +872,8 @@ def Terminate():
     fd = open("./local/rss.xml", "a")
     fd.write("""\n</channel>\n</rss>""")
     fd.close()
+
+    del fd
 
 # If run as an individual file, generate the site and report runtime.
 # If imported, only make methods available to imported program.
