@@ -159,7 +159,7 @@ def AppendToFeed(source):
             elif (i == 1):
                 continue
             elif (i == 2):
-                pubdate = gmtime(mktime(strptime(line[16:26].replace("-", "/")+" "+line.split("</a>")[-1][4:-11], "%Y/%m/%d %H:%M:%S")))
+                pubdate = gmtime(mktime(strptime(line[16:26]+" "+line.split("</a>")[-1][4:-11], "%Y-%m-%d %H:%M:%S")))
                 line = "            <pubDate>"+strftime("%a, %d %b %Y %H:%M:%S", pubdate)+" GMT</pubDate>\n"
                 line += "            <description>\n"
             # Write subsequent lines to the file. If we are truncating
