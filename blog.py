@@ -813,15 +813,15 @@ def Revert(tgt):
     fd.readline()
     fd.readline()
     fd.readline()
-    mod_time = fd.readline()[9:].strip()
+    mod_time = mktime(strptime(fd.readline()[9:].strip(), "%Y/%m/%d %H:%M:%S"))
     fd.close()
 
-    mtime = strftime("%Y/%m/%d %H:%M:%S", stat(tgt).st_mtime)
+    mtime = stat(tgt).st_mtime
     
     if (mod_time != mtime):
         print("Does not match for",tgt)
         print("Reverting to",mod_time)
-        utime(tgt, ((mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
+        utime(tgt, (mod_time, mod_time))
 
 # Method: SearchFile
 # Purpose: Search for a string within a file.
