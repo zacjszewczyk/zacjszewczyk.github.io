@@ -238,8 +238,7 @@ class Markdown:
     def __escapeCharacters(self, __line):
         # Escape ampersands. Replace them with the appropriate HTML entity.
         __line = __line.replace("&", "&#38;")
-        for each in findall("&[\w\s]+(?=\s)", __line):
-            print(each)
+        # for each in findall("&[\w\s]+(?=\s)", __line):
             # __line = __line.replace(each, each.replace("&", "&#38;"))
 
         for each in findall("`[^`\n]+`", __line):
