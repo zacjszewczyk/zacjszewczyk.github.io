@@ -182,7 +182,7 @@
 
 <blockquote>
     <p>Metadata:</p>
-<p>title&#38;nbsp;&#38;nbsp;&#38;nbsp;&#38;nbsp;: Prologue</p>
+<p>title&nbsp;&nbsp;&nbsp;&nbsp;: Prologue</p>
 <p>Chapter #0.1: start 182.089000, end 271.979000</p>
 </blockquote>
 <p>There will be an entry similar to this one for each chapter in the video. Each entry contains the following information: the chapter&#8217;s title, number, and start and end time, in seconds. From this information you can fairly easily discern a chapter&#8217;s place in the video, and change the chapter&#8217;s name in HandBrake&#8217;s main window if you wish. To change a chapter&#8217;s name, simple double-click the entry in the Chapter Name column, then type in the desired chapter name.</p>
@@ -193,31 +193,31 @@
 <p><a href="http://www.axis.com/products/video/about_networkvideo/compression.htm">Interframe prediction</a> is a process that involves storing a fully independent reference frame, called an I-frame, and comparing it to a variable number of subsequent frames. If any similarities are found between the I-frame and those subsequent frames, the duplicate data will not be stored in the subsequent frames and will instead be referenced from the I-frame. Frames that reference data are one of two types: P- or B-frames. P-frames can make references to parts of earlier I- or P-frames instead of storing that information, and on average contain around 50% of the data an I-frame does. B-frames, on the other hand, make references to preceding <em>and</em> succeeding I- or P-frames, and can contain as little as 25% of the data an I-frame stores. Here are a few examples to aid in the comprehension of this concept:</p>
 
 <blockquote>
-    <p>I&#38;nbsp;&#38;nbsp;I&#38;nbsp;&#38;nbsp;I&#38;nbsp;&#38;nbsp;I</p>
+    <p>I&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;I</p>
 </blockquote>
 <p>This is an example of how videos that do not use interframe prediction store information: each frame as an entirely independent image with no references made to previous (or succeeding) frames regardless of whether or not any duplicate information is present between them. Now if that video were to be converted and the use of P-frames was enabled, it would look something like this:</p>
 
 <blockquote>
-    <p>I&#38;nbsp;&#38;nbsp;P&#38;nbsp;&#38;nbsp;P&#38;nbsp;&#38;nbsp;P</p>
+    <p>I&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;P</p>
 </blockquote>
 <p>Frame #1 is the I-frame, as the set must start with a full image containing all the information; frames #2, #3, and #4 are all P-frames that reference either the I-frame or one of the preceding P-frames, and only include the information that has changed between its frame and the preceding frame. So, for example, if these four frames were part of a longer video of a person walking to a house, the I-frame would contain everything: the person, the house, and the surroundings. The P-frames, then, would reference the house and the surroundings from the I-frame, as those would remain consistent from frame to frame, and would only include the person&#8217;s movement between each frame.</p>
 
 <p>Now think back to my description of P-frames: when I was explaining P-frames, I described them to contain as little as 50% of the data in an I-frame. Even in a four-frame example such as this, the decrease in size is significant. If P- <em>and</em> B-frames are used though, the size decrease becomes even more significant. The resulting video, when played, would look something like this:</p>
 
 <blockquote>
-    <p>I&#38;nbsp;&#38;nbsp;B&#38;nbsp;&#38;nbsp;B&#38;nbsp;&#38;nbsp;P</p>
+    <p>I&nbsp;&nbsp;B&nbsp;&nbsp;B&nbsp;&nbsp;P</p>
 </blockquote>
 <p>In this video, the first frame is an I-frame. Then, instead of three P-frames, two B-frames are substituted for the middle P-frames. The video ends with a P-frame due to the B-frames&#8217; requirement of having something to reference both preceding them as well as succeeding them. However, due to the nature of B-frames, the video is actually encoded with this frame order:</p>
 
 <blockquote>
-    <p>I&#38;nbsp;&#38;nbsp;P&#38;nbsp;&#38;nbsp;B&#38;nbsp;&#38;nbsp;B</p>
+    <p>I&nbsp;&nbsp;P&nbsp;&nbsp;B&nbsp;&nbsp;B</p>
 </blockquote>
 <p>The frames are stored within the video in this order because B-frames must have a frame to reference both preceding them <em>and</em> succeeding them, so the encoder must first encode the I-frame, then encode a P-frame in order to give those B-frames something to reference in front of and behind them. Once the I- and P-frames have been encoded, the two B-frames are encoded and inserted between those two frames, resulting in what you end up watching: I B B P. Otherwise, if the frames were encoded in the same order as they are perceived, the B-frames would have no succeeding frames to reference, and would therefore be incomplete. But the encoder does not encode the first frame (the I-frame), encode the second frame (the P-frame), and then insert two additional frames between them&#160;&#8212;&#160;that would only result in <em>larger</em> files, not smaller ones. Instead, this is the process the encoder uses:</p>
 
 <ol>
     <li>Encode the first frame in the set. This is the fully-independent I-frame. The video now looks like this: &#8220;I&#8221;</li>
-<li> Jump ahead and encode the fourth frame in the video, totally disregarding frames #2 and #3. Note that it is only the fourth frame in this example and could vary depending on the conversion settings. Now, the video looks like this: &#8220;I&#38;nbsp;&#38;nbsp;P&#8221; Where &#8220;I&#8221; is the first frame, and &#8220;P&#8221; is actually the <em>fourth</em> frame in the video, not the second; it is only placed in the second&#8217;s place for the time being. You can think of the frames in the example above as in this order to make the concept clearer: I _ _ P.</li>
-<li> Next, the I- and P-frames are compared: any differences found between them&#160;&#8212;&#160;and there will be quite a few since the first frame is frame #1 and the second frame is actually #4&#160;&#8212;&#160;are made into B-frames. The number of B-frames used is a parameter for the conversion, and therefore will vary. The finished video looks like this: &#8220;I&#38;nbsp;&#38;nbsp;B&#38;nbsp;&#38;nbsp;B&#38;nbsp;&#38;nbsp;P&#8221;</li>
+<li> Jump ahead and encode the fourth frame in the video, totally disregarding frames #2 and #3. Note that it is only the fourth frame in this example and could vary depending on the conversion settings. Now, the video looks like this: &#8220;I&nbsp;&nbsp;P&#8221; Where &#8220;I&#8221; is the first frame, and &#8220;P&#8221; is actually the <em>fourth</em> frame in the video, not the second; it is only placed in the second&#8217;s place for the time being. You can think of the frames in the example above as in this order to make the concept clearer: I _ _ P.</li>
+<li> Next, the I- and P-frames are compared: any differences found between them&#160;&#8212;&#160;and there will be quite a few since the first frame is frame #1 and the second frame is actually #4&#160;&#8212;&#160;are made into B-frames. The number of B-frames used is a parameter for the conversion, and therefore will vary. The finished video looks like this: &#8220;I&nbsp;&nbsp;B&nbsp;&nbsp;B&nbsp;&nbsp;P&#8221;</li>
 </ol>
 <p>In the end, we wind up with a video that, instead of containing four full-image frames, has a single full-image frame followed by three reference frames. By discarding frames #2 and #3 in this example and substituting them with B-frames containing up to 25% of the data the original frames would have, the output video will be much smaller than the original. The use of this sort of compression makes eliminating a great deal of data that does not necessarily need to be there possible, with little cost to the overall quality of the video. However, due to the fact that, in this case, two frames are completely discarded and their contents interpolated from the surrounding frames, there is some decrease in quality.</p>
 
