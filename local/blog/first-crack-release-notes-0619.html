@@ -85,13 +85,13 @@
 
 <pre>
 $ python3
-&gt;&gt;&gt; import Markdown
-&gt;&gt;&gt; md = Markdown()
-&gt;&gt;&gt;
-&gt;&gt;&gt; raw_markdown = "Hi, **this** is a sentence with a [link](https://google.com) to *Google*."
-&gt;&gt;&gt;
-&gt;&gt;&gt; print(md.html(raw_markdown))
-Hi, &lt;strong&gt;this&lt;/strong&gt; is a sentence with a &lt;a href="https://google.com"&gt;link&lt;/a&gt; to &lt;em&gt;Google&lt;/em&gt;.
+>>> import Markdown
+>>> md = Markdown()
+>>>
+>>> raw_markdown = "Hi, **this** is a sentence with a [link](https://google.com) to *Google*."
+>>>
+>>> print(md.html(raw_markdown))
+Hi, <strong>this</strong> is a sentence with a <a href="https://google.com">link</a> to <em>Google</em>.
 </pre>
 
 <p>Before I can do that, though, I have a few bugs to work out with the Markdown implementation, and I would like to enable parsing multi-line strings and entire files at once. </p>

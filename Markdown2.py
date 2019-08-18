@@ -288,7 +288,7 @@ class Markdown:
             return "</pre>"
         
         if (self.__pre == True):
-            return self.__escapeCharacters(__line)
+            return __line
 
         if (self.__line_type_tracker[-1] == "raw"):
             return __line

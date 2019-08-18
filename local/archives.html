@@ -124,14 +124,14 @@
 
 <pre>
 $ alias gs="git status"
-$ alias gac="git add . &&#38; git commit -m"
+$ alias gac="git add . && git commit -m"
 $ alias gp="git push"
 </pre>
 
 <p><a href="https://zacs.site/blog/my-setup-2019.html">I have talked about these aliases before</a>; they make interacting with Git just a little bit easier. <a href="https://bitsofco.de/git-aliases-for-lazy-developers/">Hat-tip to Ire Aderinokun for the idea</a>.</p>
 
 <pre>
-alias gits="find ./ -name '.git' 2&gt; /dev/null | grep -v '.Trash'"
+alias gits="find ./ -name '.git' 2> /dev/null | grep -v '.Trash'"
 </pre>
 
 <p>This neat snippet searches the current directory, and all sub directories, for Git repos. I have a lot of coding projects <a href="/projects.html">in the works</a>, and this helps me keep track of them.</p>

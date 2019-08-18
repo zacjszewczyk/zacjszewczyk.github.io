@@ -7,7 +7,7 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 18 Aug 2019 07:23:08 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 18 Aug 2019 07:24:54 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -551,14 +551,14 @@
 
 &lt;pre&gt;
 $ alias gs="git status"
-$ alias gac="git add . &#38;&#38;#38; git commit -m"
+$ alias gac="git add . &#38;&#38; git commit -m"
 $ alias gp="git push"
 &lt;/pre&gt;
 
 &lt;p&gt;&lt;a href="https://zacs.site/blog/my-setup-2019.html"&gt;I have talked about these aliases before&lt;/a&gt;; they make interacting with Git just a little bit easier. &lt;a href="https://bitsofco.de/git-aliases-for-lazy-developers/"&gt;Hat-tip to Ire Aderinokun for the idea&lt;/a&gt;.&lt;/p&gt;
 
 &lt;pre&gt;
-alias gits="find ./ -name '.git' 2&#38;gt; /dev/null | grep -v '.Trash'"
+alias gits="find ./ -name '.git' 2&gt; /dev/null | grep -v '.Trash'"
 &lt;/pre&gt;
 
 &lt;p&gt;This neat snippet searches the current directory, and all sub directories, for Git repos. I have a lot of coding projects &lt;a href="https://zacs.site//projects.html"&gt;in the works&lt;/a&gt;, and this helps me keep track of them.&lt;/p&gt;
