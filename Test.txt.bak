@@ -92,7 +92,7 @@ and Markdown will leave it alone. But if you write:
 AT&T
 ```
 
-Markdown will translate it to:
+Markdown will translate AT & T to:
 
 ```
     AT&amp;T
