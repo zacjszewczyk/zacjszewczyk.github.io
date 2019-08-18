@@ -28,4 +28,4 @@ For the most part, First Crack's Markdown stays true to John Gruber's spec. It d
 
 ## Inline HTML and Special Characters
 
-John Gruber's spec allows for inline HTML. First Crack does not. I could not think of any reason anyone would choose `<strong>bold</strong>` over `**bold**`. His spec also allows for 
+John Gruber's spec allows for inline HTML. First Crack does not. I could not think of any reason anyone <strong>would</strong> choose `<strong>bold</strong>` over `**bold**`. His spec also allows for 
