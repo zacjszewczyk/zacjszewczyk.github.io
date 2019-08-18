@@ -455,8 +455,8 @@ def GenPage(source, timestamp):
     target_fd.close()
     source_fd.close()
 
-    mtime = strftime("%Y/%m/%d %H:%M:%S", localtime(stat("./Content/"+source).st_mtime))
-    utime(dst, ((mktime(strptime(mtime, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mtime, "%Y/%m/%d %H:%M:%S")))))
+    mtime = stat("./Content/"+source).st_mtime
+    utime(dst, (mtime, mtime))
 
     return article_title
 
