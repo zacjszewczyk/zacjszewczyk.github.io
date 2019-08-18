@@ -361,7 +361,7 @@ def GenBlog():
         # Increase the file index.
         file_idx += 1
 
-    del file_idx, file_buffer, archives_fd
+    del file_idx, file_buffer
 
 # Method: GenSite
 # Purpose: Generate the blog.
@@ -572,13 +572,13 @@ def Init():
             res = GetUserInput("(y/n) # ")
 
         if (res == "y"):
-            print(c.UNDERLINE+"Base URL"+c.ENDC+": The base domain name for your website, i.e. https://zacs.site")
+            print(c.UNDERLINE+"Base URL"+c.ENDC+": The base domain for your website, i.e. https://zacs.site")
             print(c.UNDERLINE+"Byline"+c.ENDC+": The name of the author, as you want it to display on all blog posts.")
-            print(c.UNDERLINE+"Full name"+c.ENDC+": The full, legal name of the content owner, used to generate the copyright notice.")
-            print(c.UNDERLINE+"Keywords"+c.ENDC+": Any keywords you would like a search engine to use to send visitors to your website.\n          At the least, I suggest alternate spellings of your name and nicknames.")
-            print(c.UNDERLINE+"App name"+c.ENDC+": The app name a user will see if they save your website to their home screen. I recommend using your name.")
-            print(c.UNDERLINE+"Twitter URL"+c.ENDC+": The URL to your Twtitter profile, to give your readers somewhere to interact with you.")
-            print(c.UNDERLINE+"Instagram URL"+c.ENDC+": The URL to your Instagram profile, to give your readers somewhere else to interact with you. ")
+            print(c.UNDERLINE+"Full name"+c.ENDC+": The full, legal name of the content owner, for the copyright notice.")
+            print(c.UNDERLINE+"Keywords"+c.ENDC+": Key words that describe your website.")
+            print(c.UNDERLINE+"App name"+c.ENDC+": The name users will see if they put your site on their home screen.")
+            print(c.UNDERLINE+"Twitter URL"+c.ENDC+": The URL to your Twtitter profile.")
+            print(c.UNDERLINE+"Instagram URL"+c.ENDC+": The URL to your Instagram profile.")
             print()
 
             base_url = GetUserInput("Base URL: ").rstrip("/")

@@ -43,11 +43,13 @@ First Crack does not rely on any third-party tools, code, or frameworks. It uses
 Because First Crack has no dependencies, installation is a breeze: just clone the repository. Open a shell and type the following commands:
 
 ```
-$ git clone https://zjszewczyk@bitbucket.org/zjszewczyk/firstcrack-public.git
+$ git clone https://zjszewczyk@bitbucket.org/zjszewczyk/firstcrack-public.git FirstCrack
 $ cd FirstCrack
 ```
 
 That's it.
+
+![Animated gif of the install process](./local/assets/Images/system/install.gif)
 
 ## Directory Structure
 
@@ -88,6 +90,8 @@ $ make
 ```
 
 First Crack will tell you that the configuration file, `./.config`, does not exist. It will then ask if you want to set it up. Answer `y` and hit return. First Crack will not build your website unless you answer each question. If one does not apply to you, enter `None`. 
+
+![Animated gif of the setup process](./local/assets/Images/system/setup.gif)
 
 The config file, `.config`, looks like this:
 
@@ -164,6 +168,8 @@ First Crack will display a menu of available commands, along with an explanation
 $ make rebuild
 $ ./blog.py -R
 ```
+
+![Animated gif of the authoring process](./local/assets/Images/system/author.gif)
 
 ## Making a New Post
 
