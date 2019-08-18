@@ -124,6 +124,8 @@ To build a website with First Crack, enter the following command:
 $ make
 ```
 
+![Animated gif of using First Crack](./local/assets/Images/system/usage.gif)
+
 You can also just run the Python file, with this command:
 
 ```
