@@ -812,7 +812,7 @@ def Migrate(target, mod_time):
     fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, byline, article_content.strip()))
     fd.close()
 
-    del fd, article_type, article_content, article_title, article_url
+    del fd, article_content, article_title, article_url
 
     # Revert the update time for the target file, to its previous value.
     utime("Content/"+target, ((mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S"))), (mktime(strptime(mod_time, "%Y/%m/%d %H:%M:%S")))))
