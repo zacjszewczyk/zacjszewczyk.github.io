@@ -370,7 +370,10 @@ def GenBlog():
 # Purpose: Generate the Explore page
 # Parameters: Random articles to include
 def GenExplore(files):
-    BuildFromTemplate("./local/explore.html", "Explore", "explore", description="Explore page", sheets="", passed_content=str(files))
+    BuildFromTemplate("./local/explore.html", "Explore", "explore", description="Explore page", sheets="", passed_content="")
+    for each in files:
+        AppendContentOfXToY("./local/explore", each[0], each[1])
+    CloseTemplateBuild("./local/explore.html")
 
 # Method: GenSite
 # Purpose: Generate the blog.
