@@ -11,6 +11,7 @@ from Markdown2 import Markdown # Markdown parser
 from ModTimes import CompareMtimes # Compare file mod times
 from colors import c # Output styling
 from multiprocessing import Pool # Multiprocessing
+from random import choices # Building Explore page
 
 # Global variables
 ## - files: Dictionary with years as the keys, and sub-dictinaries as the 
@@ -361,7 +362,15 @@ def GenBlog():
         # Increase the file index.
         file_idx += 1
 
+    GenExplore(choices(file_buffer, k=3))
+
     del file_idx, file_buffer
+
+# Method: GenExplore
+# Purpose: Generate the Explore page
+# Parameters: Random articles to include
+def GenExplore(files):
+    BuildFromTemplate("./local/explore.html", "Explore", "explore", description="Explore page", sheets="", passed_content=str(files))
 
 # Method: GenSite
 # Purpose: Generate the blog.
