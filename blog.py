@@ -370,9 +370,15 @@ def GenBlog():
 # Purpose: Generate the Explore page
 # Parameters: Random articles to include
 def GenExplore(files):
+    # Start the template build
     BuildFromTemplate("./local/explore.html", "Explore", "explore", description="Explore page", sheets="", passed_content="")
+    # Add intro paragraph
+    with open("./local/explore.html", "a") as fd:
+        fd.write("<article>\n<p>\nEvery time I update this site, new articles appear here. This helps unearth old, unpopular posts that&#160;&#8212;&#160;left alone&#160;&#8212;&#160;no one would ever read again.\n</p>\n</article>")
+    # Append contents of random files
     for each in files:
         AppendContentOfXToY("./local/explore", each[0], each[1])
+    # Close the template build
     CloseTemplateBuild("./local/explore.html")
 
 # Method: GenSite
