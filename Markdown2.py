@@ -126,7 +126,7 @@ class Markdown:
 
         if (len(__line.strip()) == 0): # Blank line.
             self.__line_type_tracker.append("blank")
-        elif (__line[0] == "<" and (__line[0:4] != "<pre" and __line[0:5] != "</pre")): # Raw HTML
+        elif (__line[0] == "<"): # Raw HTML
             self.__line_type_tracker.append("raw")
         elif (__line[0] == "#"): # Header.
             self.__line_type_tracker.append("header")
