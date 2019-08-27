@@ -6,7 +6,7 @@ from os.path import isdir, isfile # File/folder existence operations
 from time import strptime, strftime, mktime, localtime, gmtime # Managing file mod time
 import datetime # Recording runtime
 from re import search # Regex
-from sys import exit, argv, stdout # Command line options
+from sys import exit, argv, stdout, stdin # Command line options
 from Markdown2 import Markdown # Markdown parser
 from ModTimes import CompareMtimes # Compare file mod times
 from colors import c # Output styling
@@ -529,18 +529,63 @@ def GenStatic():
 def GetUserInput(prompt):
     global c
 
+    from tty import setraw, setcbreak # Raw input
+    import termios
+
+    def CommandLine(prompt):
+        backup = termios.tcgetattr(stdin)
+
+        setraw(stdin)
+        input = ""
+        index = 0
+        while True: # loop for each character
+            # Print current input-string with prompt
+            stdout.write(u"\u001b[1000D")
+            stdout.write(u"\u001b[0K")
+            stdout.write(prompt+" "+input)
+            stdout.write(u"\u001b[1000D")
+            stdout.write(u"\u001b[" + str(index+len(prompt)+1) + "C")    
+            stdout.flush()
+            char = ord(stdin.read(1)) # read one char and get char code
+            
+            # Manage internal data-model
+            if char == 3: # CTRL-C
+                termios.tcsetattr(stdin, termios.TCSAFLUSH, backup)
+                return
+            elif 32 <= char <= 126: # Normal letters
+                input = input[:index] + chr(char) +  input[index:]
+                index += 1
+            elif char in {10, 13}: # Enter key
+                index = 0
+                termios.tcsetattr(stdin, termios.TCSAFLUSH, backup)
+                break
+            elif char == 27: # Arrow keys
+                next1, next2 = ord(stdin.read(1)), ord(stdin.read(1))
+                if next1 == 91:
+                    if next2 == 68: # Left
+                        index = max(0, index - 1)
+                    elif next2 == 67: # Right
+                        index = min(len(input), index + 1)
+            elif char == 127: # Delete
+                input = input[:index-1] + input[index:]
+                index -= 1
+            stdout.flush()
+
+        stdout.write('\n')
+        stdout.write(u"\u001b[1000D")
+        return input
+
     # Prompt the user for valid input
     while True:
-        string = input(prompt)
+        # string = input(prompt)
+        string = CommandLine(prompt)
 
         # Do not allow empty strings
         if (len(string) == 0):
             print(c.WARNING+"Input cannot be empty."+c.ENDC)
-            continue
         # Do not allow more than 64 characters
         elif (len(string) > 64):
             print(c.WARNING+"Input bound exceeded."+c.ENDC)
-            continue
         # If we get here, we have valid input
         break
     return string
@@ -739,7 +784,7 @@ def Interface(params,search_query="",end_action="continue"):
         # If the user entered this mode with the "-a" parameter, prompt them for
         # new input. Otherwise, proceed with their request.
         if "-a" in params:
-            query = input("#: ")
+            query = GetUserInput("#: ")
         else:
             query = str(params)
         params = ""
