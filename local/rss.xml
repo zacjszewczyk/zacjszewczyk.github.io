@@ -7,9 +7,27 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 28 Aug 2019 12:33:01 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2019 12:34:47 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Build your own Command Line with ANSI escape codes</title>
+            <link>http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html</link>
+            <guid isPermaLink='true'>http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html</guid>
+
+            <pubDate>Wed, 28 Aug 2019 12:34:42 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I wanted to add some terminal output styling to a work project, but the &lt;a href="http://pueblo.sourceforge.net/doc/manual/ansi_color_codes.html"&gt;ANSI color codes&lt;/a&gt; just would not work. A quick search lead me to this awesome article by Li Haoyi, &lt;a href="http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html"&gt;&lt;em&gt;Build your own Command Line with ANSI escape codes&lt;/em&gt;&lt;/a&gt;. His post gave me just what I needed, and pushed me to make &lt;a href="https://zacs.site//projects.html#firstCrack"&gt;First Crack&lt;/a&gt;&#38;#8217;s command line interface a bit better by adding support for cursor navigation. It took some fiddling, but thanks to &lt;a href="https://pastebin.com/7YpKyKPe"&gt;a helpful tip from commenter dkrmr&lt;/a&gt;, I got it working.&lt;/p&gt;
+
+&lt;p&gt;I did not plan on linking to his article, but after referencing it for two days, I came around. Li pulls off some pretty cool stuff with some pretty basic tools. Very cool.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/build-your-own-cli.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Sportsmobiles and Expensive Rigs</title>
             <link>https://expeditionportal.com/e-series-revival-sportsmobiles-rebirth-of-the-econoline/</link>
