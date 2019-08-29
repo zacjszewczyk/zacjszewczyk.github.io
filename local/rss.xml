@@ -7,9 +7,25 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 28 Aug 2019 12:34:47 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 29 Aug 2019 11:20:06 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>China Chopper still active 9 years later</title>
+            <link>https://blog.talosintelligence.com/2019/08/china-chopper-still-active-9-years-later.html</link>
+            <guid isPermaLink='true'>https://blog.talosintelligence.com/2019/08/china-chopper-still-active-9-years-later.html</guid>
+
+            <pubDate>Thu, 29 Aug 2019 11:20:01 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Cisco Talos Intelligence Group certainly does not need my endorsement, but for extensive, in-depth analysis like this, they definitely have it. Add it to your list, if it&#38;#8217;s not &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;already there&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/china-chopper.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Build your own Command Line with ANSI escape codes</title>
             <link>http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html</link>
