@@ -283,6 +283,8 @@ class Markdown:
                     return "<pre class='shell'>"
                 elif ("python" in __line):
                     return "<pre class='python'>"
+                elif ("cmd" in __line):
+                    return "<pre class='cmd'>"
                 return "<pre>"
             return "</pre>"
         
