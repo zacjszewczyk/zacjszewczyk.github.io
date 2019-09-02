@@ -1,0 +1,61 @@
+Type: original
+Title: First Crack Release Notes, August 2019
+Link: first-crack-release-notes-0819.html
+Pubdate: 2019/09/02 08:19:35
+Author: Zac J. Szewczyk
+
+I have done a bit of work on First Crack [since last month's update](First Crack Release Notes 0719.txt). It's time I shared it with you.  
+
+## August Activity
+
+First, the things I did in August.
+
+### Added support for Markdown tables
+
+I have written for over a decade without needing to use a table. That need presented itself this month in an as of yet unpublished article. Rather than taking a few seconds to insert one in HTML, I spent much longer adding support for Markdown tables. Even [the extended Markdown spec](https://www.markdownguide.org/extended-syntax/) does not allow for anything more than basic rows and columns, so neither does First Crack. I thought about trying to create a syntax of my own, for things like multi-column headers and footers, but at that point I might as well just use HTML.
+
+First Crack now supports basic tables. As any implementation of the Markdown spec should, First Crack also allows for arbitrary HTML code to cover more complex use cases.
+
+### Explored concurrency
+
+I have a huge backlog of articles in Instapaper. One of them, [on using concurrency to speed up Python programs](https://realpython.com/python-concurrency/), pushed me to do some [premature optimization](Performance Matters.txt). First Crack read a thousand text files, then turned them into a website of over a thousand web pages in under two seconds. This seemed like a prime candidate for concurrency. I tried threading first, thinking that it would help my engine as an I/O-bound program, but this slowed it down. No luck. I tried multiprocessing next, which helps CPU-bound programs execute faster by splitting tasks up between multiple cores. With almost no real work, this change cut runtime by over 10%. A nice, easy win. 
+
+The code review I did as part of this process lead to some other optimizations. Taken together, all these changes cut First Crack's runtime by almost 30%. It now builds this site, with over a thousand pages, in less than one second.
+
+### Created usage vignettes
+
+I have wanted to make some animated GIFs for a while now, as a way to showcase First Crack's simplicity, ease of use, and speed. I got to this in August. The readme now contains a handful of quick vignettes that cover installation, setup, and usage. I used [Terminalizer](https://github.com/faressoft/terminalizer/blob/master/README.md) to make them, and they turned out great.
+
+### Added "Explore" page
+
+[Elliot Costa](Exploring a Website.txt) made a great point in [*Exploring the vastness of a website*](https://elliott.computer/exploring-the-vastness-of-a-website/): platforms seek to focus users on a tiny sliver of content--to drive high engagement at precise targets. Explore pages, on the other hand, he argued, "are unique in that they unearth things that are not necessarily the most popular or the most recent." I like this idea, a lot, and so I added it to First Crack in August. Now, every time I build the site, First Crack chooses three articles at random for the [Explore](/explore.html) page. This helps unearth old, unpopular posts that--left alone--no one would ever read again.
+
+#### Improved command line interface
+
+I wanted to add some output styling to a work project, but the [ANSI color codes](http://pueblo.sourceforge.net/doc/manual/ansi_color_codes.html) just would not work. A quick search lead me to an awesome article by Li Haoyi called [*Build your own Command Line with ANSI escape codes*](http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html). His post gave me just what I needed, and pushed me to make First Crack's command line interface a bit better by adding support for cursor navigation. It took some fiddling, but thanks to [a helpful tip from commenter dkrmr](https://pastebin.com/7YpKyKPe), I got it working.
+
+## September Plan
+
+Going forward, I plan to focus on these areas in September, 2019. I carried most of these over from [last month's update](First Crack Release Notes 0719.txt), some of which I carried over from [June's update](First Crack Release Notes 0619.txt).
+
+### Re-Implement "Pretty Print"
+
+I would still like to re-implement the "pretty print" feature now that First Crack uses a stateful Markdown parser. Low priority, but something I want to get done nonetheless.
+
+### Release Markdown Parser
+
+I still want to release my Markdown parser as its own project. I still have some bugs to work out, though, I want to go public with greater coverage of the spec, and I would like to add the ability to parse multi-line strings and entire files at once.
+
+### Publish Implementation of Markdown Spec
+
+I still want to outline the peculiarities of my implementation of the Markdown spec. This would cover weird edge cases for the most part, but documenting these shortfalls would still have value so that those who use my engine will have some sort of explanation for why their article looks weird, and so that I may one day fix them. I made some progress here this month, but not enough for a finished product.
+
+### Improve Documentation
+
+I did some work on the documentation this month, but as always, I could do more. Again, a few of the ways I think I can improve the README in particular: 
+
+* Performance graphs of First Crack's back-end performance versus other, similar engines. At less than two seconds to build a website of over one thousand pages, I want to highlight this.
+* Performance graphs of the web pages First Crack builds versus the pages common content management systems build. 
+* Screenshots. This site is a live demo of the engine, but I like the idea of having a few pictures in there, too. 
+
+I got a few things done. Again, though, I have a lot of work ahead of me. I look forward to it.
