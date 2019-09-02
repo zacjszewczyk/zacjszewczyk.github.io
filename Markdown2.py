@@ -279,6 +279,10 @@ class Markdown:
         # then return the unprocessed line.
         if (self.__line_type_tracker[-1] == "pre"):
             if (self.__pre == True):
+                if ("shell" in __line):
+                    return "<pre class='shell'>"
+                elif ("python" in __line):
+                    return "<pre class='python'>"
                 return "<pre>"
             return "</pre>"
         

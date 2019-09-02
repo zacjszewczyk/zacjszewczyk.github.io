@@ -54,25 +54,25 @@ $ alias gp="git push"
 
 <p><a href="https://zacs.site/blog/my-setup-2019.html">I have talked about these aliases before</a>; they make interacting with Git just a little bit easier. <a href="https://bitsofco.de/git-aliases-for-lazy-developers/">Hat-tip to Ire Aderinokun for the idea</a>.</p>
 
-<pre>
+<pre class='shell'>
 alias gits="find ./ -name '.git' 2> /dev/null | grep -v '.Trash'"
 </pre>
 
 <p>This neat snippet searches the current directory, and all sub directories, for Git repos. I have a lot of coding projects <a href="/projects.html">in the works</a>, and this helps me keep track of them.</p>
 
-<pre>
+<pre class='shell'>
 alias r="source ~/.bash_profile"
 </pre>
 
 <p>This lets me refresh my bash profile whenever I make a change&#160;&#8212;&#160;for example, adding a new alias or script. Simple, and handy.</p>
 
-<pre>
+<pre class='shell'>
 alias search="grep -rnw './' -e "
 </pre>
 
 <p>This alias gives me search functionality in the terminal, so I can avoid opening up Finder for most simple queries.</p>
 
-<pre>
+<pre class='shell'>
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 </pre>
 
