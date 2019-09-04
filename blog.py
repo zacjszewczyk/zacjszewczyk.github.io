@@ -265,39 +265,41 @@ def AppendContentOfXToY(target, source, timestamp):
     
     ## Open the source and the target files
     target_fd = open(target+".html", "a")
-    with open("./local/blog/"+html_filename, "r") as source_fd:
+    source_fd = open("./local/blog/"+html_filename, "r")
         
-        # Skip to the <article tag, then write the opening <article>
-        # tag to the output file.
-        for i, line in enumerate(source_fd):
-            if ("<article" in line): target_fd.write("<article>"); break
+    # Skip to the <article tag, then write the opening <article>
+    # tag to the output file.
+    for i, line in enumerate(source_fd):
+        if ("<article" in line): target_fd.write("<article>"); break
 
-        # Iterate over each line of the source structure file.
-        for i, line in enumerate(source_fd):
-            # Check the first two lines of the structure file for a
-            # class tag denoting the type of article. If viewing an
-            # original article, truncate it at the first paragraph by
-            # setting the flag, "flag", to False
-            if (i <= 1):
-                if ('class="original"' in line):
-                    flag = False
-                    line = line.replace("href=\"", "href=\"blog/")
-            elif (i == 3):
+    # Iterate over each line of the source structure file.
+    for i, line in enumerate(source_fd):
+        # Check the first two lines of the structure file for a
+        # class tag denoting the type of article. If viewing an
+        # original article, truncate it at the first paragraph by
+        # setting the flag, "flag", to False
+        if (i <= 1):
+            if ('class="original"' in line):
+                flag = False
                 line = line.replace("href=\"", "href=\"blog/")
-            # Write subsequent lines to the file. If we are truncating
-            # the file and we encouter the first paragraph, write it to
-            # the output file and then quit.
-            elif (flag == False and line[0:2] == "<p"):
-                target_fd.write(line)
-                break
-
-            # Stop copying content at the end of the article.
-            if ("</article>" in line):
-                break
-    
-            # Write all lines from the structure file to the output file
-            # by default.
+        elif (i == 3):
+            line = line.replace("href=\"", "href=\"blog/")
+        # Write subsequent lines to the file. If we are truncating
+        # the file and we encouter the first paragraph, write it to
+        # the output file and then quit.
+        elif (flag == False and line[0:2] == "<p"):
             target_fd.write(line)
+            break
+
+        # Stop copying content at the end of the article.
+        if ("</article>" in line):
+            break
+
+        # Write all lines from the structure file to the output file
+        # by default.
+        target_fd.write(line)
+    
+    source_fd.close()
 
     # Once we have reached the end of the content in the case of a linkpost,
     # or read the first paragraph in the case of an original article, add a 
@@ -336,56 +338,57 @@ def AppendToFeed(source):
     ## Write the opening <item> tag
     feed_fd.write("        <item>\n")
 
-    with open("./local/blog/"+html_filename, "r") as source_fd:
-        # Skip to the <article tag, then write the opening <article>
-        # tag to the output file.
-        for i, line in enumerate(source_fd):
-            if ("<h2" in line): break
+    source_fd = open("./local/blog/"+html_filename, "r")
+    # Skip to the <article tag, then write the opening <article>
+    # tag to the output file.
+    for i, line in enumerate(source_fd):
+        if ("<h2" in line): break
 
-        # Iterate over each line of the source structure file.
-        for i, line in enumerate(source_fd):
-            # Strip whitespace
-            line = line.strip()
-            line = line.replace("&", "&#38;")
+    # Iterate over each line of the source structure file.
+    for i, line in enumerate(source_fd):
+        # Strip whitespace
+        line = line.strip()
+        line = line.replace("&", "&#38;")
 
-            # Check the first two lines of the structure file for a
-            # class tag denoting the type of article. If viewing an
-            # original article, truncate it at the first paragraph by
-            # setting the flag, "flag", to False
-            # print(i,":",line)
-            if (i == 0):
-                if ("class=\"original\"" in line):
-                    flag = False
-                    link = conf.base_url+"/blog/"+line.split("href=\"")[1].split(" ")[0][:-1]
-                else:
-                    link = line.split("href=\"")[1].split(" ")[0][:-1]
-                if (link[0:4] != "http"):
-                    link = "http://"+link
-                line = "            <title>"+line.split("\">")[1][:-4]+"</title>\n"
-                line += "            <link>"+link+"</link>\n"
-                line += "            <guid isPermaLink='true'>"+link+"</guid>\n"
-            elif (i == 1):
-                continue
-            elif (i == 2):
-                pubdate = gmtime(mktime(strptime(line[16:26]+" "+line.split("</a>")[-1][4:-11], "%Y-%m-%d %H:%M:%S")))
-                line = "            <pubDate>"+strftime("%a, %d %b %Y %H:%M:%S", pubdate)+" GMT</pubDate>\n"
-                line += "            <description>\n"
-            # Write subsequent lines to the file. If we are truncating
-            # the file and we encouter the first paragraph, write it to
-            # the output file and then quit.
-            elif (flag == False and line[0:2] == "<p"):
-                feed_fd.write(""+line.replace('href="/', 'href="'+conf.base_url+'/').replace('"#fn', '"'+conf.base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;"))
-                break
+        # Check the first two lines of the structure file for a
+        # class tag denoting the type of article. If viewing an
+        # original article, truncate it at the first paragraph by
+        # setting the flag, "flag", to False
+        # print(i,":",line)
+        if (i == 0):
+            if ("class=\"original\"" in line):
+                flag = False
+                link = conf.base_url+"/blog/"+line.split("href=\"")[1].split(" ")[0][:-1]
             else:
-                line = ""+line.replace('href="/', 'href="'+conf.base_url+'/').replace('"#fn', '"'+conf.base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;")
+                link = line.split("href=\"")[1].split(" ")[0][:-1]
+            if (link[0:4] != "http"):
+                link = "http://"+link
+            line = "            <title>"+line.split("\">")[1][:-4]+"</title>\n"
+            line += "            <link>"+link+"</link>\n"
+            line += "            <guid isPermaLink='true'>"+link+"</guid>\n"
+        elif (i == 1):
+            continue
+        elif (i == 2):
+            pubdate = gmtime(mktime(strptime(line[16:26]+" "+line.split("</a>")[-1][4:-11], "%Y-%m-%d %H:%M:%S")))
+            line = "            <pubDate>"+strftime("%a, %d %b %Y %H:%M:%S", pubdate)+" GMT</pubDate>\n"
+            line += "            <description>\n"
+        # Write subsequent lines to the file. If we are truncating
+        # the file and we encouter the first paragraph, write it to
+        # the output file and then quit.
+        elif (flag == False and line[0:2] == "<p"):
+            feed_fd.write(""+line.replace('href="/', 'href="'+conf.base_url+'/').replace('"#fn', '"'+conf.base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;"))
+            break
+        else:
+            line = ""+line.replace('href="/', 'href="'+conf.base_url+'/').replace('"#fn', '"'+conf.base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;")
 
-            # Stop copying content at the end of the article.
-            if ("&lt;/article&gt;" in line):
-                break
-    
-            # Write all lines from the structure file to the output file
-            # by default.
-            feed_fd.write(line+'\n')
+        # Stop copying content at the end of the article.
+        if ("&lt;/article&gt;" in line):
+            break
+
+        # Write all lines from the structure file to the output file
+        # by default.
+        feed_fd.write(line+'\n')
+    source_fd.close()
 
     # Once we have reached the end of the content in the case of a linkpost,
     # or read the first paragraph in the case of an original article, add a 
@@ -413,9 +416,10 @@ def BuildFromTemplate(target, title, bodyid, description="", sheets="", passed_c
 
     # Clear the target file, then write the opening HTML code and any passed content.
     open(target, "w").close()
-    with open(target, "a") as fd:
-        fd.write(content[0].replace("{{META_DESC}}", description).replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
-        fd.write(passed_content)
+    fd = open(target, "a")
+    fd.write(content[0].replace("{{META_DESC}}", description).replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
+    fd.write(passed_content)
+    fd.close()
         
     # Cleanup
     del fd
@@ -440,8 +444,9 @@ def CloseTemplateBuild(target, scripts=""):
     global content
 
     # Write the trailing HTML tags from the template to the target file.
-    with open(target, "a") as fd:
-        fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", scripts))
+    fd = open(target, "a")
+    fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", scripts))
+    fd.close()
 
     # Cleanup
     del fd
@@ -582,8 +587,9 @@ def GenExplore(files):
     # Start the template build
     BuildFromTemplate("./local/explore.html", "Explore", "explore", description="Explore page", sheets="", passed_content="")
     # Add intro paragraph
-    with open("./local/explore.html", "a") as fd:
-        fd.write("<article>\n<p>\nEvery time I update this site, new articles appear here. This helps unearth old, unpopular posts that&#160;&#8212;&#160;left alone&#160;&#8212;&#160;no one would ever read again.\n</p>\n</article>")
+    fd = open("./local/explore.html", "a")
+    fd.write("<article>\n<p>\nEvery time I update this site, new articles appear here. This helps unearth old, unpopular posts that&#160;&#8212;&#160;left alone&#160;&#8212;&#160;no one would ever read again.\n</p>\n</article>")
+    fd.close()
     # Append contents of random files
     for each in files:
         AppendContentOfXToY("./local/explore", each[0], each[1])
@@ -711,20 +717,23 @@ def GenPage(source, timestamp):
 # Parameters: none
 def GenStatic():
     # Reference the index.html source file to generate the front-end structure file.
-    with open("system/index.html", "r") as fd:
-        home = fd.read().split("<!-- DIVIDER -->")
+    fd = open("system/index.html", "r")
+    home = fd.read().split("<!-- DIVIDER -->")
+    fd.close()
     BuildFromTemplate(target="./local/index.html", title="", bodyid="home", description="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things.", sheets=home[0], passed_content=home[1])
     del home
 
     # Reference the projects.html source file to generate the front-end structure file.
-    with open("system/projects.html", "r") as fd:
-        projects = fd.read().split("<!-- DIVIDER -->")
+    fd = open("system/projects.html", "r")
+    projects = fd.read().split("<!-- DIVIDER -->")
+    fd.close()
     BuildFromTemplate(target="./local/projects.html", title="Projects - ", bodyid="projects", description="The writing, coding, and Computer Aided Drafting and Design (CADD) side projects Zac Szewczyk bulds in his spare time.", sheets="", passed_content=projects[1])
     del projects
 
     # Reference the disclaimers.html source file to generate the front-end structure fule.
-    with open("system/disclaimers.html", "r") as fd:
-        disclaimers = fd.read().split("<!-- DIVIDER -->")
+    fd = open("system/disclaimers.html", "r")
+    disclaimers = fd.read().split("<!-- DIVIDER -->")
+    fd.close()
     BuildFromTemplate(target="./local/disclaimers.html", title="Disclaimers - ", bodyid="disclaimers", description="Copyright and content disclaimers for Zac Szewczyk's blog.", sheets="", passed_content=disclaimers[1].replace("{{NAME}}", conf.full_name))
     del disclaimers
 
@@ -793,8 +802,9 @@ def Init():
             conf.meta_appname = GetUserInput("App name: ")
             conf.twitter_url = GetUserInput("Twitter URL: ")
             conf.insta_url = GetUserInput("Instagram URL: ")
-            with open("./.config", "w") as fd:
-                fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = %s\nbyline = %s\nfull_name = %s\nmeta_keywords = %s\nmeta_appname = %s\ntwitter = %s\ninstagram = %s" % (conf.base_url, conf.byline, conf.full_name, conf.meta_keywords, conf.meta_appname, conf.twitter_url, conf.insta_url))
+            fd = open("./.config", "w")
+            fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = %s\nbyline = %s\nfull_name = %s\nmeta_keywords = %s\nmeta_appname = %s\ntwitter = %s\ninstagram = %s" % (conf.base_url, conf.byline, conf.full_name, conf.meta_keywords, conf.meta_appname, conf.twitter_url, conf.insta_url))
+            fd.close()
         else:
             print(c.FAIL+"Configuration file not created."+c.ENDC)
             print(c.WARNING+"Please run again."+c.ENDC)
@@ -810,22 +820,23 @@ def Init():
     # On success, extract values and store them for use when building the site.
     else:
         # Open the './.config' file
-        with open("./.config", "r") as fd:
-            for i, line in enumerate(fd):
-                if (i == 9): # Extract base URL for site
-                    conf.base_url = line.split(" = ")[1].strip()
-                elif (i == 10): # Extract author byline
-                    conf.byline = line.split(" = ")[1].strip()
-                elif (i == 11): # Extract author full (legal) name
-                    conf.full_name = line.split(" = ")[1].strip()
-                elif (i == 12): # Extract additional site keywords
-                    conf.meta_keywords = line.split(" = ")[1].strip()
-                elif (i == 13): # Extract app name
-                    conf.meta_appname = line.split(" = ")[1].strip()
-                elif (i == 14): # Extract Twitter profile URL
-                    conf.twitter_url = line.split(" = ")[1].strip()
-                elif (i == 15): # Extract Instagram profile URL
-                    conf.insta_url = line.split(" = ")[1].strip()
+        fd = open("./.config", "r")
+        for i, line in enumerate(fd):
+            if (i == 9): # Extract base URL for site
+                conf.base_url = line.split(" = ")[1].strip()
+            elif (i == 10): # Extract author byline
+                conf.byline = line.split(" = ")[1].strip()
+            elif (i == 11): # Extract author full (legal) name
+                conf.full_name = line.split(" = ")[1].strip()
+            elif (i == 12): # Extract additional site keywords
+                conf.meta_keywords = line.split(" = ")[1].strip()
+            elif (i == 13): # Extract app name
+                conf.meta_appname = line.split(" = ")[1].strip()
+            elif (i == 14): # Extract Twitter profile URL
+                conf.twitter_url = line.split(" = ")[1].strip()
+            elif (i == 15): # Extract Instagram profile URL
+                conf.insta_url = line.split(" = ")[1].strip()
+        fd.close()
         
         # Cleanup
         del fd
@@ -867,23 +878,25 @@ def Init():
     md = Markdown(conf.base_url)
 
     # Open the template file, split it, modify portions as necessary, and store each half in a list.
-    with open("system/template.htm", "r") as fd:
-        content = fd.read()
-        content = content.split("<!--Divider-->")
-        # This line replaces all generics in the template file with values in config file
-        content[0] = content[0].replace("{{META_KEYWORDS}}", conf.meta_keywords).replace("{{META_APPNAME}}", conf.meta_appname).replace("{{META_BYLINE}}", conf.byline).replace("{{META_BASEURL}}", conf.base_url)
-        # This line replaces placeholders with social media URLs in the config file
-        content[1] = content[1].replace("{{META_BYLINE}}", conf.full_name).replace("{{TWITTER_URL}}", conf.twitter_url).replace("{{INSTA_URL}}", conf.insta_url)
-        content.append(content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("explore.html", "../explore.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1))
+    fd = open("system/template.htm", "r")
+    content = fd.read()
+    content = content.split("<!--Divider-->")
+    # This line replaces all generics in the template file with values in config file
+    content[0] = content[0].replace("{{META_KEYWORDS}}", conf.meta_keywords).replace("{{META_APPNAME}}", conf.meta_appname).replace("{{META_BYLINE}}", conf.byline).replace("{{META_BASEURL}}", conf.base_url)
+    # This line replaces placeholders with social media URLs in the config file
+    content[1] = content[1].replace("{{META_BYLINE}}", conf.full_name).replace("{{TWITTER_URL}}", conf.twitter_url).replace("{{INSTA_URL}}", conf.insta_url)
+    content.append(content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("explore.html", "../explore.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1))
+    fd.close()
 
     # Clear and initialize the archives.html and blog.html files.
     BuildFromTemplate(target="./local/archives.html", title="Post Archives - ", bodyid="postarchives", description="Every article Zac Szewczyk has ever posted, in chronological order, split up by year and divided by month.", sheets="", passed_content="")
     BuildFromTemplate(target="./local/blog.html", title="Blog - ", bodyid="blog", description="Zac Szewczyk's main blog page, where you will find topics ranging from adventuring and writing to weightlifting and leadership, among other things.", sheets="", passed_content="")
     
     # Clear and initialize the RSS feed
-    with open("./local/rss.xml", "w") as fd:
-        fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>%s</title>\n    <link>%s</link>\n    <description>RSS feed for %s's website, found at %s/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, %s. All rights reserved.</copyright>\n    <atom:link href="%s/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (conf.byline, conf.base_url, conf.byline, conf.base_url, conf.byline, conf.base_url, datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
-    
+    fd = open("./local/rss.xml", "w")
+    fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>%s</title>\n    <link>%s</link>\n    <description>RSS feed for %s's website, found at %s/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, %s. All rights reserved.</copyright>\n    <atom:link href="%s/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (conf.byline, conf.base_url, conf.byline, conf.base_url, conf.byline, conf.base_url, datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
+    fd.close()
+
     # Generate a dictionary with years as the keys, and sub-dictinaries as the elements.
     # These elements have months as the keys, and a list of the posts made in that month
     # as the elements.
@@ -932,8 +945,9 @@ def Migrate(target, mod_time):
     fd.close()
 
     # Clear the target file, then write it's contents into it after the header information.
-    with open("Content/"+target, "w") as fd:
-        fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, byline, article_content.strip()))
+    fd = open("Content/"+target, "w")
+    fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, byline, article_content.strip()))
+    fd.close()
 
     # Cleanup
     del fd, article_content, article_title, article_url
@@ -971,12 +985,13 @@ def Revert(tgt):
 # - q: String to search for (String)
 def SearchFile(tgt, q):
     ret = []
-    with open("Content/"+tgt) as fd:
-        idx = 0
-        for i, line in enumerate(fd):
-            if (q.lower() in line.lower()):
-                ret.append([idx, line.strip()])
-            idx += 1
+    fd = open("Content/"+tgt)
+    idx = 0
+    for i, line in enumerate(fd):
+        if (q.lower() in line.lower()):
+            ret.append([idx, line.strip()])
+        idx += 1
+    fd.close()
     if (len(ret) == 0):
         return False
     return ret
@@ -994,8 +1009,9 @@ def Terminate():
     CloseTemplateBuild("./local/404.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style='text-align:center;'>Error: 404 Not Found</h2><p>The requested resource at <span style='text-decoration:underline;'>"+window.location.href+"</span> could not be found.</p></article>"</script>""")
     
     # Write closing tags to the RSS feed.
-    with open("./local/rss.xml", "a") as fd:
-        fd.write("""\n</channel>\n</rss>""")
+    fd = open("./local/rss.xml", "a")
+    fd.write("""\n</channel>\n</rss>""")
+    fd.close()
         
     # Cleanup
     del fd
