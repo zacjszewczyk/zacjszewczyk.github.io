@@ -32,7 +32,7 @@ def ActivateInterface():
         print(c.UNDERLINE+"Note"+c.ENDC+": You can use '-a' to enter 'Authoring Mode'")
     # If they have run the program with a single parameter, bounds check
     # it, then send them to the interface
-    elif (len(argv) == 2):
+    elif (len(argv) < 4):
         # Don't allow double or single quatation marks, or input over 2
         # characters long
         if ('"' in argv[1] or "'" in argv[1] or len(argv[1]) > 2):
@@ -42,9 +42,9 @@ def ActivateInterface():
         # Send the user to the CLI
         DisplayInterface(argv[1:])
     
-    # Allow the user to search from the CLI
-    elif (len(argv) == 3 and argv[1] == "-S"):
-        DisplayInterface(argv[1],argv[2],"quit")
+    # # Allow the user to search from the CLI
+    # elif (len(argv) == 3 and argv[1] == "-S"):
+    #     DisplayInterface(argv[1],argv[2],"quit")
 
     else: # Too many parameters
         print(c.FAIL+"Too many parameters"+c.ENDC)
@@ -111,7 +111,7 @@ def DisplayInterface(params,search_query="",end_action="continue"):
         else:
             # Cleanup
             del menu
-            exit(0)
+            break
 
 # Method: GetUserInput
 # Purpose: Accept user input and perform basic bounds checking
@@ -678,7 +678,6 @@ def GenPage(source, timestamp):
         # generated up to this point. Then write the first paragraph, parsed.
         elif (idx == 6):
             target_fd.write(local_content.replace("{{META_DESC}}", line.replace('"', "&#34;").strip()).strip())
-            del local_content
             target_fd.write("\n"+title.strip())
             target_fd.write("\n"+md.html(line).strip())
         # For successive lines of the file, parse them as Markdown and write them to the file.
@@ -952,7 +951,7 @@ def Init():
     
     # Clear and initialize the RSS feed
     with open("./local/rss.xml", "w") as fd:
-        fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>%s</title>\n    <link>%s</link>\n    <description>RSS feed for %s's website, found at %s/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, %s. All rights reserved.</copyright>\n    <atom:link href="%s/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (conf.byline, conf.base_url, conf.byline, conf.base_url, conf.byline, conf.base_url, datetime.datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
+        fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>%s</title>\n    <link>%s</link>\n    <description>RSS feed for %s's website, found at %s/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, %s. All rights reserved.</copyright>\n    <atom:link href="%s/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (conf.byline, conf.base_url, conf.byline, conf.base_url, conf.byline, conf.base_url, datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
     
     # Generate a dictionary with years as the keys, and sub-dictinaries as the elements.
     # These elements have months as the keys, and a list of the posts made in that month
