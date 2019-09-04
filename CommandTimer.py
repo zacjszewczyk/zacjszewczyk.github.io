@@ -134,18 +134,32 @@ import time
 # """
 # print("regex:\t\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
 
-environment = """\
-import os
-"""
+# environment = """\
+# import os
+# """
+# to_exec = """
+# for each in os.listdir("./Content"):
+#     pass
+# """
+# print("listdir:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+# to_exec = """
+# for dirpath, dirnames, filenames in os.walk('./Content'):
+#     for f in filenames:
+#         pass
+#     break
+# """
+# print("os.walk:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+
+environment = """"""
 to_exec = """
-for each in os.listdir("./Content"):
-    pass
+with open("./blog.py", "r") as fd:
+    fd.readline()
 """
-print("listdir:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+print("with:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
 to_exec = """
-for dirpath, dirnames, filenames in os.walk('./Content'):
-    for f in filenames:
-        pass
-    break
+fd = open("./blog.py", "r")
+fd.readline()
+fd.close()
+
 """
-print("os.walk:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
+print("open:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
