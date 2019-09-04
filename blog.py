@@ -206,13 +206,10 @@ def BuildFromTemplate(target, title, bodyid, description="", sheets="", passed_c
     global content
 
     # Clear the target file, then write the opening HTML code and any passed content.
-    fd = open(target, "w").close()
-    fd = open(target, "a")
-    fd.write(content[0].replace("{{META_DESC}}", description).replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
-    fd.write(passed_content)
-    fd.close()
-
-    del fd
+    open(target, "w").close()
+    with open(target, "a") as fd:
+        fd.write(content[0].replace("{{META_DESC}}", description).replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
+        fd.write(passed_content)
 
 # Method: CheckDirAndCreate
 # Purpose: Check for the existence of a given directory, and create it if it
@@ -234,11 +231,8 @@ def CloseTemplateBuild(target, scripts=""):
     global content
 
     # Write the trailing HTML tags from the template to the target file.
-    fd = open(target, "a")
-    fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", scripts))
-    fd.close()
-
-    del fd
+    with open(target, "a") as fd:
+        fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", scripts))
 
 # Method: HandleYear
 # Purpose: Process all the posts in a year.
@@ -495,30 +489,25 @@ def GenPage(source, timestamp):
 # Parameters: none
 def GenStatic():
     # Reference the index.html source file to generate the front-end structure file.
-    fd = open("system/index.html", "r")
-    home = fd.read().split("<!-- DIVIDER -->")
-    fd.close()
+    with open("system/index.html", "r") as fd:
+        home = fd.read().split("<!-- DIVIDER -->")
     BuildFromTemplate(target="./local/index.html", title="", bodyid="home", description="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things.", sheets=home[0], passed_content=home[1])
     del home
 
     # Reference the projects.html source file to generate the front-end structure file.
-    fd = open("system/projects.html", "r")
-    projects = fd.read().split("<!-- DIVIDER -->")
-    fd.close()
+    with open("system/projects.html", "r") as fd:
+        projects = fd.read().split("<!-- DIVIDER -->")
     BuildFromTemplate(target="./local/projects.html", title="Projects - ", bodyid="projects", description="The writing, coding, and Computer Aided Drafting and Design (CADD) side projects Zac Szewczyk bulds in his spare time.", sheets="", passed_content=projects[1])
     del projects
 
     # Reference the disclaimers.html source file to generate the front-end structure fule.
-    fd = open("system/disclaimers.html", "r")
-    disclaimers = fd.read().split("<!-- DIVIDER -->")
+    with open("system/disclaimers.html", "r") as fd:
+        disclaimers = fd.read().split("<!-- DIVIDER -->")
     BuildFromTemplate(target="./local/disclaimers.html", title="Disclaimers - ", bodyid="disclaimers", description="Copyright and content disclaimers for Zac Szewczyk's blog.", sheets="", passed_content=disclaimers[1].replace("{{NAME}}", conf.full_name))
-    fd.close()
     del disclaimers
 
     # Build the 404.html file.
     BuildFromTemplate(target="./local/404.html", title="Error - ", bodyid="error", description="", sheets="", passed_content="")
-
-    del fd
 
 # Method: GetUserInput
 # Purpose: Accept user input and perform basic bounds checking
@@ -647,7 +636,7 @@ def Init():
             conf.insta_url = GetUserInput("Instagram URL: ")
             with open("./.config", "w") as fd:
                 fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = %s\nbyline = %s\nfull_name = %s\nmeta_keywords = %s\nmeta_appname = %s\ntwitter = %s\ninstagram = %s" % (conf.base_url, conf.byline, conf.full_name, conf.meta_keywords, conf.meta_appname, conf.twitter_url, conf.insta_url))
-        elif (res == "n"):
+        else:
             print(c.FAIL+"Configuration file not created."+c.ENDC)
             print(c.WARNING+"Please run again."+c.ENDC)
             exit(0)
@@ -690,11 +679,11 @@ def Init():
     ## Check for the existence of the "./system" directory first...
     if (not isdir("./system")):
         print(c.FAIL+"\"./system\" directory does not exist. Exiting."+c.ENDC)
-        exit(1)
+        exit(0)
     ## ...then for the existence of the Content directory
     if (not isdir("./Content")):
         print(c.FAIL+"\"./Content\" directory does not exist. Exiting."+c.ENDC)
-        exit(1)
+        exit(0)
 
     ## Now ensure crucial system files exist
     for f in ["template.htm", "index.html", "projects.html", "disclaimers.html"]:
@@ -920,11 +909,8 @@ def Terminate():
     CloseTemplateBuild("./local/404.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style='text-align:center;'>Error: 404 Not Found</h2><p>The requested resource at <span style='text-decoration:underline;'>"+window.location.href+"</span> could not be found.</p></article>"</script>""")
     
     # Write closing tags to the RSS feed.
-    fd = open("./local/rss.xml", "a")
-    fd.write("""\n</channel>\n</rss>""")
-    fd.close()
-
-    del fd
+    with open("./local/rss.xml", "a") as fd:
+        fd.write("""\n</channel>\n</rss>""")
 
 # If run as an individual file, generate the site and report runtime.
 # If imported, only make methods available to imported program.
