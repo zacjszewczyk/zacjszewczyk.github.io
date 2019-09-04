@@ -9,7 +9,6 @@ from sys import exit, argv, stdout, stdin # Command line interface
 from tty import setraw, setcbreak # Raw input
 from termios import tcgetattr, tcsetattr, TCSAFLUSH # Backup/resume shell
 from os.path import exists # Reading input files
-from locale import getpreferredencoding # Speed up file opens
 
 # Class: c(olors)
 # Purpose: provide easy access to ANSI escape codes for styling output
@@ -211,12 +210,13 @@ def GetLine(prompt):
 # Imports
 from os import listdir, stat, remove, utime, mkdir # File/folder operations
 from os.path import isdir, isfile # File/folder existence operations
-from time import strptime, strftime, mktime, localtime, gmtime # Managing file mod time
+from time import strptime, strftime, mktime, localtime, gmtime # mod time ops
 from datetime import datetime # Recording runtime
 from Markdown2 import Markdown # Markdown parser
 from ModTimes import CompareMtimes # Compare file mod times
 from multiprocessing import Pool # Multiprocessing
 from random import choices # Building Explore page
+from locale import getpreferredencoding # Speed up file opens
 
 # Global variables
 ## - files: Dictionary with years as the keys, and sub-dictinaries as the 
