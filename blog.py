@@ -251,11 +251,6 @@ class conf():
 def AppendContentOfXToY(target, source, timestamp):
     # Store the name of the corresponding HTML file in a variable
     html_filename = source.lower().replace(" ", "-")[0:-3]+"html"
-    
-    # Check to see if a structure file has already been built. If not,
-    # build it.
-    if (not isfile("./local/blog/"+html_filename)):
-        GenPage(source, timestamp)
 
     # Instantiate a boolean flag variable, "flag". This indicates
     # whether to include the entire article (True) or truncate it
@@ -320,11 +315,6 @@ def AppendContentOfXToY(target, source, timestamp):
 def AppendToFeed(source):
     # Store the name of the corresponding HTML file in a variable
     html_filename = source.lower().replace(" ", "-")[0:-3]+"html"
-    
-    # Check to see if a structure file has already been built. If not,
-    # build it.
-    if (not isfile("./local/blog/"+html_filename)):
-        GenPage(source, timestamp)
 
     # Instantiate a boolean flag variable, "flag". This indicates
     # whether to include the entire article (True) or truncate it
@@ -1024,14 +1014,14 @@ if __name__ == '__main__':
     ActivateInterface()
 
     t1 = datetime.now()
-    # Init()
-    # GenStatic()
-    # GenSite()
+    Init()
+    GenStatic()
+    GenSite()
     
-    import cProfile
-    cProfile.run("Init()")
-    cProfile.run("GenStatic()")
-    cProfile.run("GenSite()")
+    # import cProfile
+    # cProfile.run("Init()")
+    # cProfile.run("GenStatic()")
+    # cProfile.run("GenSite()")
 
     t2 = datetime.now()
 
