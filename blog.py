@@ -9,6 +9,7 @@ from sys import exit, argv, stdout, stdin # Command line interface
 from tty import setraw, setcbreak # Raw input
 from termios import tcgetattr, tcsetattr, TCSAFLUSH # Backup/resume shell
 from os.path import exists # Reading input files
+from locale import getpreferredencoding # Speed up file opens
 
 # Class: c(olors)
 # Purpose: provide easy access to ANSI escape codes for styling output
@@ -228,6 +229,7 @@ files = {}
 content = ""
 months = {"01":"January","02":"February","03":"March","04":"April","05":"May","06":"June","07":"July","08":"August","09":"September","10":"October","11":"November","12":"December"}
 md = ""
+ENCODING = getpreferredencoding()
 
 # Config variables, read in from './.config'
 ## - base_url: The base domain name for your website, i.e. https://zacs.site"). (String)
@@ -1022,14 +1024,14 @@ if __name__ == '__main__':
     ActivateInterface()
 
     t1 = datetime.now()
-    Init()
-    GenStatic()
-    GenSite()
+    # Init()
+    # GenStatic()
+    # GenSite()
     
-    # import cProfile
-    # cProfile.run("Init()")
-    # cProfile.run("GenStatic()")
-    # cProfile.run("GenSite()")
+    import cProfile
+    cProfile.run("Init()")
+    cProfile.run("GenStatic()")
+    cProfile.run("GenSite()")
 
     t2 = datetime.now()
 
