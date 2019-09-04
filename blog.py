@@ -4,8 +4,8 @@
 from os import listdir, stat, remove, utime, mkdir # File/folder operations
 from os.path import isdir, isfile # File/folder existence operations
 from time import strptime, strftime, mktime, localtime, gmtime # Managing file mod time
-import datetime # Recording runtime
-from re import search # Regex
+from datetime import datetime # Recording runtime
+from re import search # Regex -- Get this out!
 from sys import exit, argv, stdout, stdin # Command line options
 from Markdown2 import Markdown # Markdown parser
 from ModTimes import CompareMtimes # Compare file mod times
@@ -986,7 +986,7 @@ if __name__ == '__main__':
         print(c.FAIL+"Too many parameters"+c.ENDC)
         exit(0)
 
-    t1 = datetime.datetime.now()
+    t1 = datetime.now()
     Init()
     GenStatic()
     GenSite()
@@ -996,7 +996,7 @@ if __name__ == '__main__':
     # cProfile.run("GenStatic()")
     # cProfile.run("GenSite()")
 
-    t2 = datetime.datetime.now()
+    t2 = datetime.now()
 
     print(("Execution time: "+c.OKGREEN+str(t2-t1)+"s"+c.ENDC))
     
