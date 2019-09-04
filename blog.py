@@ -968,6 +968,7 @@ if __name__ == '__main__':
         print(c.UNDERLINE+"Note"+c.ENDC+": You can use '-a' to enter 'Authoring Mode'")
     # If they have run the program with a single parameter, bounds check
     # it, then send them to the interface
+    # This needs work! Make it more like ReadLater's implementation.
     elif (len(argv) == 2):
         # Don't allow double or single quatation marks, or input over 2
         # characters long
