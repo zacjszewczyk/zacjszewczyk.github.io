@@ -75,7 +75,10 @@ def DisplayInterface(params,search_query="",end_action="continue"):
         elif ("-S" in params): # Search all articles
             # If one has not been provided, get a string to search all files for
             if (search_query == ""):
-                search_query = GetUserInput("Enter search string: ")
+                if (len(params) == 2):
+                    search_query = params[1]
+                else:
+                    search_query = GetUserInput("Enter search string: ")
             # Iterate over the entire ./Content dirctory
             for file in listdir("Content"):
                 # Only inspect text files
@@ -90,13 +93,16 @@ def DisplayInterface(params,search_query="",end_action="continue"):
             # Cleanup
             del res
         elif ("-r" in params): # Revert post timestamps
+            print("Reverting post timestamps.")
             for files in listdir("Content"):
                 if (files.endswith(".txt")):
                     Revert("Content/"+files)
         elif ("-R" in params): # Rebuild all structure files
+            print("Rebuilding all structure files.")
             for files in listdir("./local/blog"):
                 if (files.endswith(".html")):
                     remove("./local/blog/"+files)
+            return False
         elif ("!exit" in params): # Exit without building site
             exit(0)
         else: # Exit then build site
@@ -973,10 +979,6 @@ def SearchFile(tgt, q):
             idx += 1
     if (len(ret) == 0):
         return False
-    
-    # Cleanup
-    del ret
-    
     return ret
 
 # Method: Terminate
