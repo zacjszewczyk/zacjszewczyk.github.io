@@ -64,7 +64,7 @@ def AppendContentOfXToY(target, source, timestamp):
         
         # Skip to the <article tag, then write the opening <article>
         # tag to the output file.
-        for line in source_fd:
+        for i, line in enumerate(source_fd):
             if ("<article" in line): target_fd.write("<article>"); break
 
         # Iterate over each line of the source structure file.
@@ -133,7 +133,7 @@ def AppendToFeed(source):
     with open("./local/blog/"+html_filename, "r") as source_fd:
         # Skip to the <article tag, then write the opening <article>
         # tag to the output file.
-        for line in source_fd:
+        for i, line in enumerate(source_fd):
             if ("<h2" in line): break
 
         # Iterate over each line of the source structure file.
@@ -429,7 +429,7 @@ def GenPage(source, timestamp):
     title = ""
 
     # Iterate over each line in the source content file.
-    for line in iter(source_fd.readline, ""):
+    for i, line in enumerate(source_fd):
         # In the first line, classify the article as a linkpost or an original piece.
         if (idx == 0):
             ptype = line[6:].strip()
@@ -667,22 +667,20 @@ def Init():
     else:
         # Open the './.config' file
         with open("./.config", "r") as fd:
-            for line in fd:
-                if (line[0] == "#"): # Ignore comments
-                    pass
-                elif (line[0:8] == "base_url"): # Extract base URL for site
+            for i, line in enumerate(fd):
+                if (i == 9): # Extract base URL for site
                     base_url = line.split(" = ")[1].strip()
-                elif (line[0:6] == "byline"): # Extract author byline
+                elif (i == 10): # Extract author byline
                     byline = line.split(" = ")[1].strip()
-                elif (line[0:9] == "full_name"): # Extract author full (legal) name
+                elif (i == 11): # Extract author full (legal) name
                     full_name = line.split(" = ")[1].strip()
-                elif (line[0:13] == "meta_keywords"): # Extract additional site keywords
+                elif (i == 12): # Extract additional site keywords
                     meta_keywords = line.split(" = ")[1].strip()
-                elif (line[0:12] == "meta_appname"): # Extract app name
+                elif (i == 13): # Extract app name
                     meta_appname = line.split(" = ")[1].strip()
-                elif (line[0:7] == "twitter"): # Extract Twitter profile URL
+                elif (i == 14): # Extract Twitter profile URL
                     twitter_url = line.split(" = ")[1].strip()
-                elif (line[0:9] == "instagram"): # Extract Instagram profile URL
+                elif (i == 15): # Extract Instagram profile URL
                     insta_url = line.split(" = ")[1].strip()
 
     # If any of these values were blank, notify the user and throw an error.
@@ -722,15 +720,14 @@ def Init():
     md = Markdown(base_url)
 
     # Open the template file, split it, modify portions as necessary, and store each half in a list.
-    fd = open("system/template.htm", "r")
-    content = fd.read()
-    content = content.split("<!--Divider-->")
-    # This line replaces all generics in the template file with values in config file
-    content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords).replace("{{META_APPNAME}}", meta_appname).replace("{{META_BYLINE}}", byline).replace("{{META_BASEURL}}", base_url)
-    # This line replaces placeholders with social media URLs in the config file
-    content[1] = content[1].replace("{{META_BYLINE}}", full_name).replace("{{TWITTER_URL}}", twitter_url).replace("{{INSTA_URL}}", insta_url)
-    content.append(content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("explore.html", "../explore.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1))
-    fd.close()
+    with open("system/template.htm", "r") as fd:
+        content = fd.read()
+        content = content.split("<!--Divider-->")
+        # This line replaces all generics in the template file with values in config file
+        content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords).replace("{{META_APPNAME}}", meta_appname).replace("{{META_BYLINE}}", byline).replace("{{META_BASEURL}}", base_url)
+        # This line replaces placeholders with social media URLs in the config file
+        content[1] = content[1].replace("{{META_BYLINE}}", full_name).replace("{{TWITTER_URL}}", twitter_url).replace("{{INSTA_URL}}", insta_url)
+        content.append(content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("explore.html", "../explore.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1))
 
     # Clear and initialize the archives.html and blog.html files.
     BuildFromTemplate(target="./local/archives.html", title="Post Archives - ", bodyid="postarchives", description="Every article Zac Szewczyk has ever posted, in chronological order, split up by year and divided by month.", sheets="", passed_content="")
@@ -910,7 +907,7 @@ def SearchFile(tgt, q):
     ret = []
     with open("Content/"+tgt) as fd:
         idx = 0
-        for line in fd:
+        for i, line in enumerate(fd):
             if (q.lower() in line.lower()):
                 ret.append([idx, line.strip()])
             idx += 1
