@@ -255,7 +255,7 @@ def HandleYear(year):
     year_fd = open("./local/blog/"+year+".html", "w").close()
     year_fd = open("./local/blog/"+year+".html", "a")
     # Write the opening HTML tags
-    year_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1).replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("explore.html", "../explore.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1))
+    year_fd.write(content[2].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1))
     # Insert a 'big table' into the document, to better display the months listed.
     year_fd.write("""<table style="width:100%;padding:20pt 0;" id="big_table">""")
     year_fd.write("    <tr>\n        <td>%s</td>\n    </tr>\n" % (year))
@@ -269,7 +269,7 @@ def HandleYear(year):
         month_fd = open("./local/blog/"+year+"-"+month+".html", "w").close()
         month_fd = open("./local/blog/"+year+"-"+month+".html", "a")
         # Write the opening HTML tags
-        month_fd.write(content[0].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1).replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("explore.html", "../explore.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1).replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\""+year+".html\">"+year+"</a>\n</p>\n</article>", 1))
+        month_fd.write(content[2].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1).replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\""+year+".html\">"+year+"</a>\n</p>\n</article>", 1))
         
         # Sort the sub-dictionaries by keys, days, then iterate over it.
         for day in sorted(files[year][month], reverse=True):
@@ -423,7 +423,7 @@ def GenPage(source, timestamp):
     target_fd = open(dst, "a")
 
     # Insert Javascript code for device detection.
-    local_content = content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("explore.html", "../explore.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1).replace("{{ BODYID }}", "post",1)
+    local_content = content[2].replace("{{ BODYID }}", "post",1)
     
     # Initialize idx to track line numbers, and title to hold the title block of each article.
     idx = 0
@@ -730,7 +730,7 @@ def Init():
     content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords).replace("{{META_APPNAME}}", meta_appname).replace("{{META_BYLINE}}", byline).replace("{{META_BASEURL}}", base_url)
     # This line replaces placeholders with social media URLs in the config file
     content[1] = content[1].replace("{{META_BYLINE}}", full_name).replace("{{TWITTER_URL}}", twitter_url).replace("{{INSTA_URL}}", insta_url)
-    content.append(content[0])
+    content.append(content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("explore.html", "../explore.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1))
     fd.close()
 
     # Clear and initialize the archives.html and blog.html files.
