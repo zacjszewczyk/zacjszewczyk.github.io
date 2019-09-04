@@ -266,8 +266,8 @@ def AppendContentOfXToY(target, source, timestamp):
     # from there.
     
     ## Open the source and the target files
-    target_fd = open(target+".html", "a")
-    source_fd = open("./local/blog/"+html_filename, "r")
+    target_fd = open(target+".html", "a", encoding=ENCODING)
+    source_fd = open("./local/blog/"+html_filename, "r", encoding=ENCODING)
         
     # Skip to the <article tag, then write the opening <article>
     # tag to the output file.
@@ -335,12 +335,12 @@ def AppendToFeed(source):
     # from there.
     
     ## Open the feed and source file
-    feed_fd = open("./local/rss.xml", "a")
+    feed_fd = open("./local/rss.xml", "a", encoding=ENCODING)
 
     ## Write the opening <item> tag
     feed_fd.write("        <item>\n")
 
-    source_fd = open("./local/blog/"+html_filename, "r")
+    source_fd = open("./local/blog/"+html_filename, "r", encoding=ENCODING)
     # Skip to the <article tag, then write the opening <article>
     # tag to the output file.
     for i, line in enumerate(source_fd):
@@ -417,8 +417,8 @@ def BuildFromTemplate(target, title, bodyid, description="", sheets="", passed_c
     global content
 
     # Clear the target file, then write the opening HTML code and any passed content.
-    open(target, "w").close()
-    fd = open(target, "a")
+    open(target, "w", encoding=ENCODING).close()
+    fd = open(target, "a", encoding=ENCODING)
     fd.write(content[0].replace("{{META_DESC}}", description).replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
     fd.write(passed_content)
     fd.close()
@@ -446,7 +446,7 @@ def CloseTemplateBuild(target, scripts=""):
     global content
 
     # Write the trailing HTML tags from the template to the target file.
-    fd = open(target, "a")
+    fd = open(target, "a", encoding=ENCODING)
     fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", scripts))
     fd.close()
 
@@ -464,8 +464,8 @@ def HandleYear(year):
     # contains links to each month in which a post was published.
 
     # Clear the 'year' file
-    year_fd = open("./local/blog/"+year+".html", "w").close()
-    year_fd = open("./local/blog/"+year+".html", "a")
+    year_fd = open("./local/blog/"+year+".html", "w", encoding=ENCODING).close()
+    year_fd = open("./local/blog/"+year+".html", "a", encoding=ENCODING)
     # Write the opening HTML tags
     year_fd.write(content[2].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1))
     # Insert a 'big table' into the document, to better display the months listed.
@@ -478,8 +478,8 @@ def HandleYear(year):
         # Add a link to the month, to the year file it belongs to.
         year_fd.write("    <tr>\n        <td><a href=\"%s\">%s</a></td>\n    </tr>\n" % (year+"-"+month+".html", months[month]))
         # Clear the 'month' file
-        month_fd = open("./local/blog/"+year+"-"+month+".html", "w").close()
-        month_fd = open("./local/blog/"+year+"-"+month+".html", "a")
+        month_fd = open("./local/blog/"+year+"-"+month+".html", "w", encoding=ENCODING).close()
+        month_fd = open("./local/blog/"+year+"-"+month+".html", "a", encoding=ENCODING)
         # Write the opening HTML tags
         month_fd.write(content[2].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1).replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\""+year+".html\">"+year+"</a>\n</p>\n</article>", 1))
         
@@ -552,7 +552,7 @@ def GenBlog():
             for each in sorted(files, reverse=True)[3:]:
                 buff += """\n        <td>\n            <a href=\"blog/%s\">%s</a>\n        </td>""" % (each.lower()+".html", each)
             buff += """\n    </tr>\n</table>\n</article>\n"""
-            archives_fd = open("./local/archives.html", "a")
+            archives_fd = open("./local/archives.html", "a", encoding=ENCODING)
             archives_fd.write(buff)
             del buff
             archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s.html'>%s</a></article>" % (year, year))
@@ -565,7 +565,7 @@ def GenBlog():
         # Add all other articles to the archives page.
         else:
             if (temp != year):
-                archives_fd = open("./local/archives.html", "a")
+                archives_fd = open("./local/archives.html", "a", encoding=ENCODING)
                 archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s.html'>%s</a></article>" % (year, year))
                 archives_fd.close()
                 temp = year
@@ -589,7 +589,7 @@ def GenExplore(files):
     # Start the template build
     BuildFromTemplate("./local/explore.html", "Explore", "explore", description="Explore page", sheets="", passed_content="")
     # Add intro paragraph
-    fd = open("./local/explore.html", "a")
+    fd = open("./local/explore.html", "a", encoding=ENCODING)
     fd.write("<article>\n<p>\nEvery time I update this site, new articles appear here. This helps unearth old, unpopular posts that&#160;&#8212;&#160;left alone&#160;&#8212;&#160;no one would ever read again.\n</p>\n</article>")
     fd.close()
     # Append contents of random files
@@ -632,18 +632,18 @@ def GenPage(source, timestamp):
     dst = "./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html"
 
     # Ensure source file contains header. If not, use the Migrate() method to generate it.
-    source_fd = open(src, "r")
+    source_fd = open(src, "r", encoding=ENCODING)
     line = source_fd.readline()
     if (line[0:5] != "Type:"):
         Migrate(source, timestamp)
     source_fd.close()
     
     # Open the source file in read mode.
-    source_fd = open(src, "r")
+    source_fd = open(src, "r", encoding=ENCODING)
 
     # Use the source file's name to calculate, clear, and re-open the structure file.
-    target_fd = open(dst, "w").close()
-    target_fd = open(dst, "a")
+    target_fd = open(dst, "w", encoding=ENCODING).close()
+    target_fd = open(dst, "a", encoding=ENCODING)
 
     # Insert Javascript code for device detection.
     local_content = content[2].replace("{{ BODYID }}", "post",1)
@@ -719,21 +719,21 @@ def GenPage(source, timestamp):
 # Parameters: none
 def GenStatic():
     # Reference the index.html source file to generate the front-end structure file.
-    fd = open("system/index.html", "r")
+    fd = open("system/index.html", "r", encoding=ENCODING)
     home = fd.read().split("<!-- DIVIDER -->")
     fd.close()
     BuildFromTemplate(target="./local/index.html", title="", bodyid="home", description="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things.", sheets=home[0], passed_content=home[1])
     del home
 
     # Reference the projects.html source file to generate the front-end structure file.
-    fd = open("system/projects.html", "r")
+    fd = open("system/projects.html", "r", encoding=ENCODING)
     projects = fd.read().split("<!-- DIVIDER -->")
     fd.close()
     BuildFromTemplate(target="./local/projects.html", title="Projects - ", bodyid="projects", description="The writing, coding, and Computer Aided Drafting and Design (CADD) side projects Zac Szewczyk bulds in his spare time.", sheets="", passed_content=projects[1])
     del projects
 
     # Reference the disclaimers.html source file to generate the front-end structure fule.
-    fd = open("system/disclaimers.html", "r")
+    fd = open("system/disclaimers.html", "r", encoding=ENCODING)
     disclaimers = fd.read().split("<!-- DIVIDER -->")
     fd.close()
     BuildFromTemplate(target="./local/disclaimers.html", title="Disclaimers - ", bodyid="disclaimers", description="Copyright and content disclaimers for Zac Szewczyk's blog.", sheets="", passed_content=disclaimers[1].replace("{{NAME}}", conf.full_name))
@@ -753,14 +753,14 @@ def GetTitle(source, timestamp):
     src = "Content/"+source
 
     # Ensure source file contains header. If not, use the Migrate() method to generate it.
-    source_fd = open(src, "r")
+    source_fd = open(src, "r", encoding=ENCODING)
     line = source_fd.readline()
     if (line[0:5] != "Type:"):
         source_fd.close()
         Migrate(source, timestamp)
     
     # Open the source file in read mode.
-    source_fd = open(src, "r")
+    source_fd = open(src, "r", encoding=ENCODING)
     source_fd.readline()
     title = source_fd.readline()[7:]
     source_fd.close()
@@ -804,7 +804,7 @@ def Init():
             conf.meta_appname = GetUserInput("App name: ")
             conf.twitter_url = GetUserInput("Twitter URL: ")
             conf.insta_url = GetUserInput("Instagram URL: ")
-            fd = open("./.config", "w")
+            fd = open("./.config", "w", encoding=ENCODING)
             fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = %s\nbyline = %s\nfull_name = %s\nmeta_keywords = %s\nmeta_appname = %s\ntwitter = %s\ninstagram = %s" % (conf.base_url, conf.byline, conf.full_name, conf.meta_keywords, conf.meta_appname, conf.twitter_url, conf.insta_url))
             fd.close()
         else:
@@ -822,7 +822,7 @@ def Init():
     # On success, extract values and store them for use when building the site.
     else:
         # Open the './.config' file
-        fd = open("./.config", "r")
+        fd = open("./.config", "r", encoding=ENCODING)
         for i, line in enumerate(fd):
             if (i == 9): # Extract base URL for site
                 conf.base_url = line.split(" = ")[1].strip()
@@ -880,7 +880,7 @@ def Init():
     md = Markdown(conf.base_url)
 
     # Open the template file, split it, modify portions as necessary, and store each half in a list.
-    fd = open("system/template.htm", "r")
+    fd = open("system/template.htm", "r", encoding=ENCODING)
     content = fd.read()
     content = content.split("<!--Divider-->")
     # This line replaces all generics in the template file with values in config file
@@ -895,7 +895,7 @@ def Init():
     BuildFromTemplate(target="./local/blog.html", title="Blog - ", bodyid="blog", description="Zac Szewczyk's main blog page, where you will find topics ranging from adventuring and writing to weightlifting and leadership, among other things.", sheets="", passed_content="")
     
     # Clear and initialize the RSS feed
-    fd = open("./local/rss.xml", "w")
+    fd = open("./local/rss.xml", "w", encoding=ENCODING)
     fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>%s</title>\n    <link>%s</link>\n    <description>RSS feed for %s's website, found at %s/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, %s. All rights reserved.</copyright>\n    <atom:link href="%s/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (conf.byline, conf.base_url, conf.byline, conf.base_url, conf.byline, conf.base_url, datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
     fd.close()
 
@@ -926,7 +926,7 @@ def Init():
 # - mod_time: Timestamp for reverting update time, format %Y/%m/%d %H:%M:%S. (String)
 def Migrate(target, mod_time):
     # Open the target file and read the first line.
-    fd = open("Content/"+target, "r")
+    fd = open("Content/"+target, "r", encoding=ENCODING)
     article_content = fd.readline()
 
     # Detect a linkpost or an original article, and parse the information appropriately.
@@ -947,7 +947,7 @@ def Migrate(target, mod_time):
     fd.close()
 
     # Clear the target file, then write it's contents into it after the header information.
-    fd = open("Content/"+target, "w")
+    fd = open("Content/"+target, "w", encoding=ENCODING)
     fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, byline, article_content.strip()))
     fd.close()
 
@@ -965,7 +965,7 @@ def Migrate(target, mod_time):
 # Parameters: 
 # - tgt: Target file name (String)
 def Revert(tgt):
-    fd = open(tgt, "r")
+    fd = open(tgt, "r", encoding=ENCODING)
     fd.readline()
     fd.readline()
     fd.readline()
@@ -987,7 +987,7 @@ def Revert(tgt):
 # - q: String to search for (String)
 def SearchFile(tgt, q):
     ret = []
-    fd = open("Content/"+tgt)
+    fd = open("Content/"+tgt, encoding=ENCODING)
     idx = 0
     for i, line in enumerate(fd):
         if (q.lower() in line.lower()):
@@ -1011,7 +1011,7 @@ def Terminate():
     CloseTemplateBuild("./local/404.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style='text-align:center;'>Error: 404 Not Found</h2><p>The requested resource at <span style='text-decoration:underline;'>"+window.location.href+"</span> could not be found.</p></article>"</script>""")
     
     # Write closing tags to the RSS feed.
-    fd = open("./local/rss.xml", "a")
+    fd = open("./local/rss.xml", "a", encoding=ENCODING)
     fd.write("""\n</channel>\n</rss>""")
     fd.close()
         
