@@ -41,10 +41,6 @@ def ActivateInterface():
 
         # Send the user to the CLI
         DisplayInterface(argv[1:])
-    
-    # # Allow the user to search from the CLI
-    # elif (len(argv) == 3 and argv[1] == "-S"):
-    #     DisplayInterface(argv[1],argv[2],"quit")
 
     else: # Too many parameters
         print(c.FAIL+"Too many parameters"+c.ENDC)
@@ -732,77 +728,6 @@ def GenStatic():
     # Cleanup
     del fd
 
-# Method: GetUserInput
-# Purpose: Accept user input and perform basic bounds checking
-# Parameters:
-# - prompt: Text to prompt the user for input (String)
-def GetUserInput(prompt):
-
-    from tty import setraw, setcbreak # Raw input
-    import termios
-
-    def CommandLine(prompt):
-        backup = termios.tcgetattr(stdin)
-
-        setraw(stdin)
-        input = ""
-        index = 0
-        while True: # loop for each character
-            # Print current input-string with prompt
-            stdout.write(u"\u001b[1000D")
-            stdout.write(u"\u001b[0K")
-            stdout.write(prompt+" "+input)
-            stdout.write(u"\u001b[1000D")
-            stdout.write(u"\u001b[" + str(index+len(prompt)+1) + "C")    
-            stdout.flush()
-            char = ord(stdin.read(1)) # read one char and get char code
-            
-            # Manage internal data-model
-            if char == 3: # CTRL-C
-                termios.tcsetattr(stdin, termios.TCSAFLUSH, backup)
-                return
-            elif 32 <= char <= 126: # Normal letters
-                input = input[:index] + chr(char) +  input[index:]
-                index += 1
-            elif char in {10, 13}: # Enter key
-                index = 0
-                termios.tcsetattr(stdin, termios.TCSAFLUSH, backup)
-                break
-            elif char == 27: # Arrow keys
-                next1, next2 = ord(stdin.read(1)), ord(stdin.read(1))
-                if next1 == 91:
-                    if next2 == 68: # Left
-                        index = max(0, index - 1)
-                    elif next2 == 67: # Right
-                        index = min(len(input), index + 1)
-            elif char == 127: # Delete
-                input = input[:index-1] + input[index:]
-                index -= 1
-            stdout.flush()
-
-        stdout.write('\n')
-        stdout.write(u"\u001b[1000D")
-        
-        # Cleanup
-        del backup, char, 
-        
-        return input
-
-    # Prompt the user for valid input
-    while True:
-        # string = input(prompt)
-        string = CommandLine(prompt)
-
-        # Do not allow empty strings
-        if (len(string) == 0):
-            print(c.WARNING+"Input cannot be empty."+c.ENDC)
-        # Do not allow more than 64 characters
-        elif (len(string) > 64):
-            print(c.WARNING+"Input bound exceeded."+c.ENDC)
-        # If we get here, we have valid input
-        break
-    return string
-
 # Method: GetTitle
 # Purpose: Return the article title of a source file.
 # Parameters:
@@ -971,93 +896,6 @@ def Init():
             
     # Cleanup
     del fd
-
-# Method: Interface
-# Purpose: Provide a command line interface for the script, for more granular control
-# of its operation.
-# Parameters: params: command line parameters (String)
-def Interface(params,search_query="",end_action="continue"):
-    # Store the menu in a variable so as to provide easy access at any point in time.
-    menu = """
-    * To search all articles:                        %s-S%s
-    * To revert post timestamps:                     %s-r%s
-    * To clear all structure files:                  %s-R%s
-    * To display this menu:                          %s-h%s
-    * To exit this mode and build the site:          %sexit%s
-    * To exit this mode and quit the program:        %s!exit%s
-    """ % (c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
-
-    # Using the "-a" parameter enters Authoring mode, so print(the welcome message)
-    if "-a" in params:
-        print(("""Welcome to First Crack's "Authoring" mode.\n\nEntering "-h" into the prompt at any point in time will display the menu below.\n%s""" % (menu)))
-
-    # Continue prompting the user for input until they enter a valid argument
-    while (True):
-        # If the user entered this mode with the "-a" parameter, prompt them for
-        # new input. Otherwise, proceed with their request.
-        if "-a" in params:
-            query = GetUserInput("#: ")
-        else:
-            query = str(params)
-        params = ""
-
-        # Print(the menu of valid commands to the terminal.)
-        if (search("-h", query) or search("help", query)):
-            print(menu)
-
-        # Search all articles
-        if (search("-S", query) != None):
-            # If one has not been provided, get a string to search all files for
-            if (search_query == ""):
-                search_string = GetUserInput("Enter string to search for: ")
-            else:
-                search_string = search_query
-
-            # Iterate over the entire ./Content dirctory
-            for file in listdir("Content"):
-                # Only inspect text files
-                if (not ".txt" in file):
-                    continue
-
-                # Search each line of the file, case insensitively
-                res = SearchFile(file, search_string)
-                if (res):
-                    print("\nFile: "+c.UNDERLINE+file+c.ENDC)
-                    for match in res:
-                        print("    %sLine %d:%s %s" % (c.BOLD, match[0], c.ENDC, match[1]))
-                        
-            # Cleanup
-            del search_string, res
-
-        # Revert post timestamps
-        if (search("-r", query)):
-            for files in listdir("Content"):
-                if (files.endswith(".txt")):
-                    Revert("Content/"+files)
-
-        # Remove all existing structure files
-        if (search("-R", query) != None):
-            for files in listdir("./local/blog"):
-                if (files.endswith(".html")):
-                    remove("./local/blog/"+files)
-            return False
-
-        # Exit the command-line interface and prevent the site from rebuilding.
-        if (search("!exit", query) != None):
-            exit(0)
-        
-        # Exit the command-line interface and proceed with site build.
-        if (search("exit", query) != None) or (search("logout", query) != None):
-            return False
-        # Accept user input again
-        else:
-            if (end_action == "continue"):
-                params = "-a"
-            else:
-                exit(0)
-                
-    # Cleanup
-    del menu
 
 # Method: Migrate
 # Purpose: For files without the header information in their first five lines, generate
