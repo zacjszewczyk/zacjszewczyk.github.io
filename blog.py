@@ -33,7 +33,8 @@ md = ""
 ## - meta_appname: The app name a user will see if they save your website to their home screen. (String)
 ## - twitter_url: The URL to your Twtitter profile. (String)
 ## - instagram_url: The URL to your Instagram profile. (String)
-base_url, byline, full_name, meta_keywords, meta_appname, twitter_url, insta_url = "", "", "", "", "", "", ""
+class conf():
+    base_url, byline, full_name, meta_keywords, meta_appname, twitter_url, insta_url = "", "", "", "", "", "", ""
 
 # Method: AppendContentOfXToY
 # Purpose: Append the first paragraph of an original article, or
@@ -150,7 +151,7 @@ def AppendToFeed(source):
             if (i == 0):
                 if ("class=\"original\"" in line):
                     flag = False
-                    link = base_url+"/blog/"+line.split("href=\"")[1].split(" ")[0][:-1]
+                    link = conf.base_url+"/blog/"+line.split("href=\"")[1].split(" ")[0][:-1]
                 else:
                     link = line.split("href=\"")[1].split(" ")[0][:-1]
                 if (link[0:4] != "http"):
@@ -168,10 +169,10 @@ def AppendToFeed(source):
             # the file and we encouter the first paragraph, write it to
             # the output file and then quit.
             elif (flag == False and line[0:2] == "<p"):
-                feed_fd.write(""+line.replace('href="/', 'href="'+base_url+'/').replace('"#fn', '"'+base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;"))
+                feed_fd.write(""+line.replace('href="/', 'href="'+conf.base_url+'/').replace('"#fn', '"'+conf.base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;"))
                 break
             else:
-                line = ""+line.replace('href="/', 'href="'+base_url+'/').replace('"#fn', '"'+base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;")
+                line = ""+line.replace('href="/', 'href="'+conf.base_url+'/').replace('"#fn', '"'+conf.base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;")
 
             # Stop copying content at the end of the article.
             if ("&lt;/article&gt;" in line):
@@ -184,7 +185,7 @@ def AppendToFeed(source):
     # Once we have reached the end of the content in the case of a linkpost,
     # or read the first paragraph in the case of an original article, add a 
     # "read more" link and close the article.
-    feed_fd.write("\n<p class='read_more_paragraph'>\n<a style='text-decoration:none;' href='%s/blog/%s'>Read more...</a>\n</p>\n".replace("<", "&lt;").replace(">", "&gt;") % (base_url, html_filename))
+    feed_fd.write("\n<p class='read_more_paragraph'>\n<a style='text-decoration:none;' href='%s/blog/%s'>Read more...</a>\n</p>\n".replace("<", "&lt;").replace(">", "&gt;") % (conf.base_url, html_filename))
     feed_fd.write("            </description>\n        </item>\n")
     feed_fd.close()
 
@@ -244,8 +245,7 @@ def CloseTemplateBuild(target, scripts=""):
 # Parameters: none
 def HandleYear(year):
     # Make global variables accessible in the method, and initialize method variables.
-    global files
-    global content
+    global files, content
 
     # For each year in which a post was made, generate a 'year' file, that
     # contains links to each month in which a post was published.
@@ -452,7 +452,7 @@ def GenPage(source, timestamp):
         elif (idx == 3):
             # print(line)
             line = line[9:].strip().replace(" ", "/").split("/")
-            title += """\n                    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">%s</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], byline, line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
+            title += """\n                    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">%s</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], conf.byline, line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
         # In the fifth line of the file, we're reading the author line. Since we don't do anything
         # with this, pass.
         elif (idx == 4):
@@ -494,7 +494,6 @@ def GenPage(source, timestamp):
 # Purpose: Create home, projects, and error static structure files.
 # Parameters: none
 def GenStatic():
-    global full_name
     # Reference the index.html source file to generate the front-end structure file.
     fd = open("system/index.html", "r")
     home = fd.read().split("<!-- DIVIDER -->")
@@ -512,7 +511,7 @@ def GenStatic():
     # Reference the disclaimers.html source file to generate the front-end structure fule.
     fd = open("system/disclaimers.html", "r")
     disclaimers = fd.read().split("<!-- DIVIDER -->")
-    BuildFromTemplate(target="./local/disclaimers.html", title="Disclaimers - ", bodyid="disclaimers", description="Copyright and content disclaimers for Zac Szewczyk's blog.", sheets="", passed_content=disclaimers[1].replace("{{NAME}}", full_name))
+    BuildFromTemplate(target="./local/disclaimers.html", title="Disclaimers - ", bodyid="disclaimers", description="Copyright and content disclaimers for Zac Szewczyk's blog.", sheets="", passed_content=disclaimers[1].replace("{{NAME}}", conf.full_name))
     fd.close()
     del disclaimers
 
@@ -526,7 +525,6 @@ def GenStatic():
 # Parameters:
 # - prompt: Text to prompt the user for input (String)
 def GetUserInput(prompt):
-    global c
 
     from tty import setraw, setcbreak # Raw input
     import termios
@@ -620,9 +618,6 @@ def GetTitle(source, timestamp):
 #          Make sure ./local exists.
 # Parameters: none
 def Init():
-    # Make global variables accessible
-    global base_url, byline, full_name, meta_keywords, meta_appname, twitter_url, insta_url
-
     # Check for the existence of a ".config" file, which contains config info.
     # On error, notify the user, create the file, and prompt the user to fill it out.
     if (not isfile("./.config")):
@@ -643,15 +638,15 @@ def Init():
             print(c.UNDERLINE+"Instagram URL"+c.ENDC+": The URL to your Instagram profile.")
             print()
 
-            base_url = GetUserInput("Base URL: ").rstrip("/")
-            byline = GetUserInput("Byline: ")
-            full_name = GetUserInput("Full name: ")
-            meta_keywords = GetUserInput("Keywords: ")
-            meta_appname = GetUserInput("App name: ")
-            twitter_url = GetUserInput("Twitter URL: ")
-            insta_url = GetUserInput("Instagram URL: ")
+            conf.base_url = GetUserInput("Base URL: ").rstrip("/")
+            conf.byline = GetUserInput("Byline: ")
+            conf.full_name = GetUserInput("Full name: ")
+            conf.meta_keywords = GetUserInput("Keywords: ")
+            conf.meta_appname = GetUserInput("App name: ")
+            conf.twitter_url = GetUserInput("Twitter URL: ")
+            conf.insta_url = GetUserInput("Instagram URL: ")
             with open("./.config", "w") as fd:
-                fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = %s\nbyline = %s\nfull_name = %s\nmeta_keywords = %s\nmeta_appname = %s\ntwitter = %s\ninstagram = %s" % (base_url, byline, full_name, meta_keywords, meta_appname, twitter_url, insta_url))
+                fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = %s\nbyline = %s\nfull_name = %s\nmeta_keywords = %s\nmeta_appname = %s\ntwitter = %s\ninstagram = %s" % (conf.base_url, conf.byline, conf.full_name, conf.meta_keywords, conf.meta_appname, conf.twitter_url, conf.insta_url))
         elif (res == "n"):
             print(c.FAIL+"Configuration file not created."+c.ENDC)
             print(c.WARNING+"Please run again."+c.ENDC)
@@ -669,25 +664,25 @@ def Init():
         with open("./.config", "r") as fd:
             for i, line in enumerate(fd):
                 if (i == 9): # Extract base URL for site
-                    base_url = line.split(" = ")[1].strip()
+                    conf.base_url = line.split(" = ")[1].strip()
                 elif (i == 10): # Extract author byline
-                    byline = line.split(" = ")[1].strip()
+                    conf.byline = line.split(" = ")[1].strip()
                 elif (i == 11): # Extract author full (legal) name
-                    full_name = line.split(" = ")[1].strip()
+                    conf.full_name = line.split(" = ")[1].strip()
                 elif (i == 12): # Extract additional site keywords
-                    meta_keywords = line.split(" = ")[1].strip()
+                    conf.meta_keywords = line.split(" = ")[1].strip()
                 elif (i == 13): # Extract app name
-                    meta_appname = line.split(" = ")[1].strip()
+                    conf.meta_appname = line.split(" = ")[1].strip()
                 elif (i == 14): # Extract Twitter profile URL
-                    twitter_url = line.split(" = ")[1].strip()
+                    conf.twitter_url = line.split(" = ")[1].strip()
                 elif (i == 15): # Extract Instagram profile URL
-                    insta_url = line.split(" = ")[1].strip()
+                    conf.insta_url = line.split(" = ")[1].strip()
 
     # If any of these values were blank, notify the user and throw an error.
-    if (base_url == "" or byline == "" or full_name == ""):
+    if (conf.base_url == "" or conf.byline == "" or conf.full_name == ""):
         print(c.FAIL+"Error reading settings from './.config'. Please check file configuration and try again."+c.ENDC)
         exit(0)
-    elif (meta_keywords == "" or meta_appname == "" or twitter_url == "" or insta_url == ""):
+    elif (conf.meta_keywords == "" or conf.meta_appname == "" or conf.twitter_url == "" or conf.insta_url == ""):
         print(c.WARNING+"You have not finished initializing the configuration file. Please finish setting up './.config'.")
 
     # Check for existence of system files and Content directory.
@@ -717,16 +712,16 @@ def Init():
     files = {}
 
     # Initialize Markdown Parser
-    md = Markdown(base_url)
+    md = Markdown(conf.base_url)
 
     # Open the template file, split it, modify portions as necessary, and store each half in a list.
     with open("system/template.htm", "r") as fd:
         content = fd.read()
         content = content.split("<!--Divider-->")
         # This line replaces all generics in the template file with values in config file
-        content[0] = content[0].replace("{{META_KEYWORDS}}", meta_keywords).replace("{{META_APPNAME}}", meta_appname).replace("{{META_BYLINE}}", byline).replace("{{META_BASEURL}}", base_url)
+        content[0] = content[0].replace("{{META_KEYWORDS}}", conf.meta_keywords).replace("{{META_APPNAME}}", conf.meta_appname).replace("{{META_BYLINE}}", conf.byline).replace("{{META_BASEURL}}", conf.base_url)
         # This line replaces placeholders with social media URLs in the config file
-        content[1] = content[1].replace("{{META_BYLINE}}", full_name).replace("{{TWITTER_URL}}", twitter_url).replace("{{INSTA_URL}}", insta_url)
+        content[1] = content[1].replace("{{META_BYLINE}}", conf.full_name).replace("{{TWITTER_URL}}", conf.twitter_url).replace("{{INSTA_URL}}", conf.insta_url)
         content.append(content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("explore.html", "../explore.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1))
 
     # Clear and initialize the archives.html and blog.html files.
@@ -734,9 +729,8 @@ def Init():
     BuildFromTemplate(target="./local/blog.html", title="Blog - ", bodyid="blog", description="Zac Szewczyk's main blog page, where you will find topics ranging from adventuring and writing to weightlifting and leadership, among other things.", sheets="", passed_content="")
     
     # Clear and initialize the RSS feed
-    fd = open("./local/rss.xml", "w")
-    fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>%s</title>\n    <link>%s</link>\n    <description>RSS feed for %s's website, found at %s/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, %s. All rights reserved.</copyright>\n    <atom:link href="%s/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (byline, base_url, byline, base_url, byline, base_url, datetime.datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
-    fd.close()
+    with open("./local/rss.xml", "w") as fd:
+        fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>%s</title>\n    <link>%s</link>\n    <description>RSS feed for %s's website, found at %s/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, %s. All rights reserved.</copyright>\n    <atom:link href="%s/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (conf.byline, conf.base_url, conf.byline, conf.base_url, conf.byline, conf.base_url, datetime.datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
     
     # Generate a dictionary with years as the keys, and sub-dictinaries as the elements.
     # These elements have months as the keys, and a list of the posts made in that month
@@ -753,8 +747,6 @@ def Init():
             if (mtime[3] not in files[mtime[0]][mtime[1]][mtime[2]]):
                 files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = {}
             files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = each
-
-    del fd
 
 # Method: Interface
 # Purpose: Provide a command line interface for the script, for more granular control
