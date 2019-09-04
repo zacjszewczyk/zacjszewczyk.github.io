@@ -102,7 +102,8 @@ def AppendContentOfXToY(target, source, timestamp):
     target_fd.write("</article>")
     target_fd.close()
 
-    del html_filename, flag, target_fd
+    # Cleanup
+    del html_filename, flag, target_fd, source_fd
 
 # Method: AppendToFeed
 # Purpose: Append the content of a source file to the RSS feed.
@@ -189,7 +190,8 @@ def AppendToFeed(source):
     feed_fd.write("            </description>\n        </item>\n")
     feed_fd.close()
 
-    del html_filename, flag, feed_fd
+    # Cleanup
+    del html_filename, flag, feed_fd, source_fd, pubdate
 
 # Method: BuildFromTemplate
 # Purpose: Build a target file, with a specified title and body id, and
@@ -210,6 +212,9 @@ def BuildFromTemplate(target, title, bodyid, description="", sheets="", passed_c
     with open(target, "a") as fd:
         fd.write(content[0].replace("{{META_DESC}}", description).replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
         fd.write(passed_content)
+        
+    # Cleanup
+    del fd
 
 # Method: CheckDirAndCreate
 # Purpose: Check for the existence of a given directory, and create it if it
@@ -233,6 +238,9 @@ def CloseTemplateBuild(target, scripts=""):
     # Write the trailing HTML tags from the template to the target file.
     with open(target, "a") as fd:
         fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", scripts))
+
+    # Cleanup
+    del fd
 
 # Method: HandleYear
 # Purpose: Process all the posts in a year.
@@ -292,6 +300,7 @@ def HandleYear(year):
     year_fd.write("</table>\n"+content[1].replace("assets/", "../assets/"))
     year_fd.close()
 
+    # Cleanup
     del article_title, year_fd, month_fd
 
 # Method: GenBlog
@@ -302,9 +311,11 @@ def GenBlog():
     global files
 
     # file_idx: Current file number. (Int)
-    # buff: [File names, timestamps] for all posts. (List)
+    # buff: [File names, timestamps] for all posts. (List)\
+    # temp: Year placeholder
     file_idx = 0
     file_buffer = []
+    temp = ""
 
     for year in sorted(files, reverse=True):
         for month in sorted(files[year], reverse=True):
@@ -357,7 +368,8 @@ def GenBlog():
 
     GenExplore(choices(file_buffer, k=3))
 
-    del file_idx, file_buffer
+    # Cleanup
+    del file_idx, file_buffer, temp
 
 # Method: GenExplore
 # Purpose: Generate the Explore page
@@ -373,6 +385,9 @@ def GenExplore(files):
         AppendContentOfXToY("./local/explore", each[0], each[1])
     # Close the template build
     CloseTemplateBuild("./local/explore.html")
+    
+    # Cleanup
+    del fd
 
 # Method: GenSite
 # Purpose: Generate the blog.
@@ -387,6 +402,9 @@ def GenSite():
 
     # Write closing HTML Tags to archives.html and blog.html, using Terminate()
     Terminate()
+    
+    # Cleanup
+    del pool
 
 # Method: GenPage
 # Purpose: Given a source content file, generate a corresponding HTML structure file.
@@ -480,7 +498,8 @@ def GenPage(source, timestamp):
     mtime = stat("./Content/"+source).st_mtime
     utime(dst, (mtime, mtime))
 
-    del src, dst, source_fd, idx, title, target_fd, mtime
+    # Cleanup
+    del src, dst, source_fd, idx, title, target_fd, mtime, local_content, ptype
 
     return article_title
 
@@ -508,6 +527,9 @@ def GenStatic():
 
     # Build the 404.html file.
     BuildFromTemplate(target="./local/404.html", title="Error - ", bodyid="error", description="", sheets="", passed_content="")
+    
+    # Cleanup
+    del fd
 
 # Method: GetUserInput
 # Purpose: Accept user input and perform basic bounds checking
@@ -559,6 +581,10 @@ def GetUserInput(prompt):
 
         stdout.write('\n')
         stdout.write(u"\u001b[1000D")
+        
+        # Cleanup
+        del backup, char, 
+        
         return input
 
     # Prompt the user for valid input
@@ -596,6 +622,7 @@ def GetTitle(source, timestamp):
     title = source_fd.readline()[7:]
     source_fd.close()
 
+    # Cleanup
     del src, source_fd, line
 
     return title
@@ -641,6 +668,7 @@ def Init():
             print(c.WARNING+"Please run again."+c.ENDC)
             exit(0)
 
+        # Cleanup
         del res
 
         # Remove the migration script.
@@ -666,6 +694,9 @@ def Init():
                     conf.twitter_url = line.split(" = ")[1].strip()
                 elif (i == 15): # Extract Instagram profile URL
                     conf.insta_url = line.split(" = ")[1].strip()
+        
+        # Cleanup
+        del fd
 
     # If any of these values were blank, notify the user and throw an error.
     if (conf.base_url == "" or conf.byline == "" or conf.full_name == ""):
@@ -736,6 +767,9 @@ def Init():
             if (mtime[3] not in files[mtime[0]][mtime[1]][mtime[2]]):
                 files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = {}
             files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = each
+            
+    # Cleanup
+    del fd
 
 # Method: Interface
 # Purpose: Provide a command line interface for the script, for more granular control
@@ -768,11 +802,10 @@ def Interface(params,search_query="",end_action="continue"):
 
         # Print(the menu of valid commands to the terminal.)
         if (search("-h", query) or search("help", query)):
-            print((menu))
+            print(menu)
 
         # Search all articles
         if (search("-S", query) != None):
-            
             # If one has not been provided, get a string to search all files for
             if (search_query == ""):
                 search_string = GetUserInput("Enter string to search for: ")
@@ -791,6 +824,9 @@ def Interface(params,search_query="",end_action="continue"):
                     print("\nFile: "+c.UNDERLINE+file+c.ENDC)
                     for match in res:
                         print("    %sLine %d:%s %s" % (c.BOLD, match[0], c.ENDC, match[1]))
+                        
+            # Cleanup
+            del search_string, res
 
         # Revert post timestamps
         if (search("-r", query)):
@@ -818,6 +854,9 @@ def Interface(params,search_query="",end_action="continue"):
                 params = "-a"
             else:
                 exit(0)
+                
+    # Cleanup
+    del menu
 
 # Method: Migrate
 # Purpose: For files without the header information in their first five lines, generate
@@ -848,10 +887,10 @@ def Migrate(target, mod_time):
     fd.close()
 
     # Clear the target file, then write it's contents into it after the header information.
-    fd = open("Content/"+target, "w")
-    fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, byline, article_content.strip()))
-    fd.close()
+    with open("Content/"+target, "w") as fd:
+        fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, byline, article_content.strip()))
 
+    # Cleanup
     del fd, article_content, article_title, article_url
 
     # Revert the update time for the target file, to its previous value.
@@ -877,6 +916,7 @@ def Revert(tgt):
         print("Reverting to",mod_time)
         utime(tgt, (mod_time, mod_time))
 
+    # Cleanup
     del fd, mod_time
 
 # Method: SearchFile
@@ -894,6 +934,10 @@ def SearchFile(tgt, q):
             idx += 1
     if (len(ret) == 0):
         return False
+    
+    # Cleanup
+    del ret
+    
     return ret
 
 # Method: Terminate
@@ -911,6 +955,9 @@ def Terminate():
     # Write closing tags to the RSS feed.
     with open("./local/rss.xml", "a") as fd:
         fd.write("""\n</channel>\n</rss>""")
+        
+    # Cleanup
+    del fd
 
 # If run as an individual file, generate the site and report runtime.
 # If imported, only make methods available to imported program.
@@ -952,3 +999,6 @@ if __name__ == '__main__':
     t2 = datetime.datetime.now()
 
     print(("Execution time: "+c.OKGREEN+str(t2-t1)+"s"+c.ENDC))
+    
+    # Cleanup
+    del t1, t2
