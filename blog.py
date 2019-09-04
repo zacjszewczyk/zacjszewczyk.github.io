@@ -184,7 +184,6 @@ def AppendToFeed(source):
     # Once we have reached the end of the content in the case of a linkpost,
     # or read the first paragraph in the case of an original article, add a 
     # "read more" link and close the article.
-    # feed_fd.write("\n                <p class='read_more_paragraph'>\n                    <a style='text-decoration:none;' href='%s/blog/%s'>Read more...</a>\n                </p>\n".replace("<", "&lt;").replace(">", "&gt;") % (base_url, html_filename))
     feed_fd.write("\n<p class='read_more_paragraph'>\n<a style='text-decoration:none;' href='%s/blog/%s'>Read more...</a>\n</p>\n".replace("<", "&lt;").replace(">", "&gt;") % (base_url, html_filename))
     feed_fd.write("            </description>\n        </item>\n")
     feed_fd.close()
@@ -276,7 +275,7 @@ def HandleYear(year):
             # Sort the sub-dictionaries by keys, timestamps, then iterate over it
             for timestamp in sorted(files[year][month][day], reverse=True):
                 # If a structure file already exists, don't rebuild the HTML file for individual articles
-                if (not isfile("./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):                        
+                if (not isfile("./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
                     article_title = GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
                 else:
                     if (CompareMtimes("./Content/"+files[year][month][day][timestamp], "./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
