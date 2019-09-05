@@ -126,6 +126,8 @@ class Markdown:
 
         if (len(__line.strip()) == 0): # Blank line.
             self.__line_type_tracker.append("blank")
+        elif (__line == "{EOF}"): # End of file
+            self.__line_type_tracker.append("EOF")
         elif (__line[0] == "<" and (__line[0:4] != "<pre" and __line[0:5] != "</pre")): # Raw HTML
             self.__line_type_tracker.append("raw")
         elif (__line[0] == "#"): # Header.
@@ -302,7 +304,7 @@ class Markdown:
 
         # If the parser finds a blank line, close open block-level elements,
         # reset the block-level element tracker, and return the blank line.
-        if (len(__line) == 0):
+        if (len(__line) == 0 or self.__line_type_tracker[-1] == "EOF"):
             __line = self.__closeOut()
             self.__close_out = []
             return __line

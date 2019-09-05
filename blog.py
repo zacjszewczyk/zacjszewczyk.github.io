@@ -390,7 +390,7 @@ def AppendToFeed(source):
     feed_fd.close()
 
     # Cleanup
-    del html_filename, flag, feed_fd, source_fd, pubdate
+    del html_filename, flag, feed_fd, source_fd
 
 # Method: BuildFromTemplate
 # Purpose: Build a target file, with a specified title and body id, and
@@ -689,6 +689,7 @@ def GenPage(source, timestamp):
         idx += 1
     else:
         # At the end of the file, write closing HTML tags.
+        target_fd.write("\n"+md.html("{EOF}"))
         target_fd.write("\n</div>\n                </article>")
         target_fd.write(content[1].replace("assets/", "../assets/").replace("<!-- SCRIPTS BLOCK -->", """""",1))
         
@@ -938,7 +939,7 @@ def Migrate(target, mod_time):
 
     # Clear the target file, then write it's contents into it after the header information.
     fd = open("Content/"+target, "w", encoding=ENCODING)
-    fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, byline, article_content.strip()))
+    fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, conf.byline, article_content.strip()))
     fd.close()
 
     # Cleanup
