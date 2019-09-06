@@ -7,9 +7,35 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 05 Sep 2019 11:41:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Sep 2019 11:14:54 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Pushing to Multiple Repos</title>
+            <link>https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos</link>
+            <guid isPermaLink='true'>https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos</guid>
+
+            <pubDate>Fri, 06 Sep 2019 11:11:37 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Full credit to Alex Armstrong and &lt;a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos"&gt;his helpful article&lt;/a&gt; for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these four lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.&lt;/p&gt;
+
+&lt;pre class='shell'&gt;
+git init
+git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL
+git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL
+git add .; git commit -m "Initial commit."; git push
+&lt;/pre&gt;
+
+&lt;p&gt;These simple commands make sure that for all my projects, I have a local copy, a local backup, a cloud backup, and two more off-site copies of all my work&#38;#160;&#38;#8212;&#38;#160;just in case.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/pushing-to-multiple-repos.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>How to Manage Stress as a Developer: Practical Tips</title>
             <link>https://thevaluable.dev/developer-stress-management/</link>

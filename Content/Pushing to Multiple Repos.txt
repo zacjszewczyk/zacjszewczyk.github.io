@@ -1,0 +1,16 @@
+Type: linkpost
+Title: Pushing to Multiple Repos
+Link: https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos
+Pubdate: 2019/09/06 07:11:37
+Author: Zac J. Szewczyk
+
+Full credit to Alex Armstrong and [his helpful article](https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos) for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these four lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.
+
+``` shell
+git init
+git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL
+git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL
+git add .; git commit -m "Initial commit."; git push
+```
+
+These simple commands make sure that for all my projects, I have a local copy, a local backup, a cloud backup, and two more off-site copies of all my work--just in case.

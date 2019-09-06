@@ -192,7 +192,7 @@ class Markdown:
             # Otherwise, treat this line as the opening of a new blockquote
             else:
                 self.__line_type_tracker.append("blockquote")
-        elif (__line[0:4] == "```" or __line[0:4] == "<pre" or __line[0:5] == "</pre"): # Preformatted code block
+        elif (__line[0:3] == "```" or __line[0:4] == "<pre" or __line[0:5] == "</pre"): # Preformatted code block
             self.__line_type_tracker.append("pre")
             # Toggle the boolean for tracking if the parser is in a code block
             self.__pre = not self.__pre
