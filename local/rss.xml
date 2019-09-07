@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 06 Sep 2019 11:14:54 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Sep 2019 05:45:50 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>How to Buy and Import a Rig</title>
+            <link>https://www.outsideonline.com/2399588/how-to-buy-import-rigs-trucks-vans</link>
+            <guid isPermaLink='true'>https://www.outsideonline.com/2399588/how-to-buy-import-rigs-trucks-vans</guid>
+
+            <pubDate>Sat, 07 Sep 2019 17:45:41 GMT</pubDate>
+            <description>
+
+&lt;p&gt;A very cool video on a very cool subject: importing one of the awesome adventure rigs available in other parts of the world, to the United States. Bryan Rogala does a nice job breaking this process down, and shows off Brett Wilhelm&#38;#8217;s neat Toyota Townace, too.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/how-to-buy-and-import-a-rig.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Pushing to Multiple Repos</title>
             <link>https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos</link>
