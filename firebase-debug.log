@@ -1,0 +1,36 @@
+[debug] [2019-09-10T11:37:50.801Z] ----------------------------------------------------------------------
+[debug] [2019-09-10T11:37:50.803Z] Command:       /usr/local/Cellar/node/11.10.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-09-10T11:37:50.803Z] CLI Version:   7.0.2
+[debug] [2019-09-10T11:37:50.803Z] Platform:      darwin
+[debug] [2019-09-10T11:37:50.803Z] Node Version:  v11.10.0
+[debug] [2019-09-10T11:37:50.814Z] Time:          Tue Sep 10 2019 07:37:50 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-09-10T11:37:50.814Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-10T11:37:50.824Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-10T11:37:50.824Z] > authorizing via signed-in user
+[debug] [2019-09-10T11:37:50.824Z] [iam] checking project static-site-45060 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-09-10T11:37:50.826Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-09-10T11:37:50.826Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-09-10T11:37:51.140Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-10T11:37:51.151Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/static-site-45060:testIamPermissions  
+
+[debug] [2019-09-10T11:37:51.551Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-10T11:37:51.554Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/static-site-45060  
+ 
+[debug] [2019-09-10T11:37:51.920Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'static-site-45060'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-09-10T11:37:51.923Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/static-site-45060/versions  
+
+[debug] [2019-09-10T11:37:55.296Z] Error: Client network socket disconnected before secure TLS connection was established
+    at TLSSocket.onConnectEnd (_tls_wrap.js:1218:19)
+    at Object.onceWrapper (events.js:285:13)
+    at TLSSocket.emit (events.js:202:15)
+    at TLSSocket.EventEmitter.emit (domain.js:446:20)
+    at endReadableNT (_stream_readable.js:1129:12)
+    at processTicksAndRejections (internal/process/next_tick.js:76:17)
+[error] 
+[error] Error: Server Error. Client network socket disconnected before secure TLS connection was established

@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 09 Sep 2019 12:33:29 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Sep 2019 11:37:40 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Pre-rendering static websites with wget</title>
+            <link>https://apex.sh/blog/post/pre-render-wget/</link>
+            <guid isPermaLink='true'>https://apex.sh/blog/post/pre-render-wget/</guid>
+
+            <pubDate>Tue, 10 Sep 2019 11:37:32 GMT</pubDate>
+            <description>
+
+&lt;p&gt;What a cool idea from TJ Holowaychuk. For a while before I &lt;a href="https://zacs.site/blog/re-introducing-first-crack.html"&gt;re-released First Crack&lt;/a&gt;, my static blog engine, I used a custom Node.js frontend to serve my site. I ended up overhauling the project to build a static website instead, but I could have just used this neat trick instead.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/pre-rendering-static-websites-with-wget.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Bollinger to unveil electric off-roaders next month</title>
             <link>https://electrek.co/2019/08/26/bollinger-electric-pickup-truck-b1-utility-truck-b2-price-prototypes/amp/</link>
