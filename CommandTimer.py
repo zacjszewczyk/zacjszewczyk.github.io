@@ -304,7 +304,7 @@ for word in string.split(" "):
 print("old:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
 environment = """\
 from re import findall
-def SyllableCount(word):
+def MySyllableCount(word):
     word = word.lower()
 
     syls = 0 # Number of added syllables
@@ -316,7 +316,6 @@ def SyllableCount(word):
 
     #2) If doesn't end with "ted" or "tes" or "ses" or "ied" or "ies", discard "es" and "ed" at the end.
     # if it has only 1 vowel or 1 set of consecutive vowels, discard. (like "speed", "fled" etc.)
-
     double_vowel = len(findall(r'[eaoui][eaoui]',word))
 
     if word[-2:] in ["es", "ed"]:
@@ -330,12 +329,11 @@ def SyllableCount(word):
     if word[-1:] == "e" :
         if word[-2:] == "le" and word not in ['whole','mobile','pole','male','female','hale','pale','tale','sale','aisle','whale','while']:
             pass
-
         else :
             disc+=1
 
     #4) check if consecutive vowels exists, triplets or pairs, count them as one.
-    disc+=double_vowel + len(findall(r'[eaoui][eaoui][eaoui]',word))
+    disc += double_vowel + len(findall(r'[eaoui][eaoui][eaoui]',word))
 
     #5) count remaining vowels in word.
     numVowels = len(findall(r'[eaoui]',word))
@@ -390,14 +388,12 @@ def SyllableCount(word):
         if word in ["doesn't", "isn't", "shouldn't", "couldn't","wouldn't"]:
             syls+=1
         else:
-            pass   
+            pass
 
     #14) Handling the exceptional words.
-
     # exception_del are words that need less syllables
     if word in ['fortunately','unfortunately']:
         disc+=1
-
     # exception_add are words that need extra syllables
     if word in ['serious','crucial']:
         syls+=1     
@@ -408,6 +404,6 @@ string = "A very cool video on a very cool subject: importing one of the awesome
 """
 to_exec = """
 for word in string.split(" "):
-    sylls = SyllableCount(word)
+    sylls = MySyllableCount(word)
 """
 print("new:\t",t.timeit(stmt=to_exec,setup=environment, number=10000))
