@@ -44,33 +44,69 @@
 Every time I update this site, new articles appear here. This helps unearth old, unpopular posts that&#160;&#8212;&#160;left alone&#160;&#8212;&#160;no one would ever read again.
 </p>
 </article><article>                    <h2 style="text-align:center;">
-                        <a href="http://tabdump.com/blog/2014/2/18/two-days" class="linkpost">Two Days Matter</a>
+                        <a href="http://blairreeves.me/2019/01/10/yes-you-should-blog/" class="linkpost">Yes, you should blog</a>
                     </h2>
-                    <time datetime="2014-02-18" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="blog/2014.html">2014</a>/<a href="blog/2014-02.html">02</a>/18 15:44:41 EST</time>
-<p>Interesting perspective from Stefan Constantinescu on the news. There has been a great deal of talk in similar veins as of late, questioning not only the relevance of articles written in response to news stories, but their long-term value as well. This question has been posed as particularly damning to the Apple-tech-blog niche, where it combines with the oft-cited criticism that this segment&#8217;s participants do little but constantly compliment one another. Taken in tandem, they form a juggernaut of sorts calling in to question the very worth of the profession so many writers have devoted themselves to. In the coming weeks, months, and&#160;&#8212;&#160;hopefully&#160;&#8212;&#160;years, this is a question I must think about long and hard, for my answer will inform the direction I ultimately take this site in.</p>
+                    <time datetime="2019-04-17" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="blog/2019.html">2019</a>/<a href="blog/2019-04.html">04</a>/17 13:34:49 EST</time>
+<p>I have an article in the works on a similar topic, but I wanted to take a minute to highlight this piece by one of my favorite new writers, <a href="http://blairreeves.me/">Blair Reeves</a>, before I reference it there. He makes some great points about the value of blogging, even if you have no intention of ever turning it into a revenue stream.</p>
 
 </div>
 
     <p class='read_more_paragraph'>
-        <a style='text-decoration:none;' href='blog/two-days-matter.html'>&#x24E9;</a>
+        <a style='text-decoration:none;' href='blog/yes-you-should-blog.html'>&#x24E9;</a>
     </p></article><article>                    <h2 style="text-align:center;">
-                        <a href="blog/digg-reader.html" class="original">Bring it in, Betaworks</a>
+                        <a href="https://martinovic.blog/post/home_git/" class="linkpost">Setting Up a Development Environment with Git</a>
                     </h2>
-                    <time datetime="2013-07-01" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="blog/2013.html">2013</a>/<a href="blog/2013-07.html">07</a>/01 21:45:58 EST</time>
-<p>Two days ago Betaworks&#160;&#8212;&#160;creator of the popular iOS game Dots, the company behind Digg&#8217;s rise back to fame, and proud owner of Instapaper&#160;&#8212;&#160;opened Digg Reader to the public after greatly accelerating its development following the announcement of Google Reader&#8217;s impending demise. Especially for a product upon which work was not schedule to begin until the end of this year, Digg Reader is a very impressive entrant into the RSS reader market.</p>
+                    <time datetime="2019-06-10" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="blog/2019.html">2019</a>/<a href="blog/2019-06.html">06</a>/10 11:50:12 EST</time>
+<p>I like Antonio&#8217;s idea, a lot. As much as <a href="https://zacs.site/blog/my-setup-2019.html">I try to keep my system stock</a>, this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:</p>
 
-    <p class='read_more_paragraph'>
-        <a style='text-decoration:none;' href='blog/digg-reader.html'>&#x24E9;</a>
-    </p></article><article>                    <h2 style="text-align:center;">
-                        <a href="http://shawnblanc.net/2014/07/on-working-from-home-and-running-a-business/" class="linkpost">On Working From Home and Running a Business</a>
-                    </h2>
-                    <time datetime="2014-07-31" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="blog/2014.html">2014</a>/<a href="blog/2014-07.html">07</a>/31 20:23:28 EST</time>
-<p>Great primer from Shawn Blanc for anyone hoping to take their work home and go indie. Someday, I hope I will have cause to return to this.</p>
+<pre>
+$ alias gs="git status"
+$ alias gac="git add . && git commit -m"
+$ alias gp="git push"
+</pre>
+
+<p><a href="https://zacs.site/blog/my-setup-2019.html">I have talked about these aliases before</a>; they make interacting with Git just a little bit easier. <a href="https://bitsofco.de/git-aliases-for-lazy-developers/">Hat-tip to Ire Aderinokun for the idea</a>.</p>
+
+<pre class='shell'>
+alias gits="find ./ -name '.git' 2> /dev/null | grep -v '.Trash'"
+</pre>
+
+<p>This neat snippet searches the current directory, and all sub directories, for Git repos. I have a lot of coding projects <a href="/projects.html">in the works</a>, and this helps me keep track of them.</p>
+
+<pre class='shell'>
+alias r="source ~/.bash_profile"
+</pre>
+
+<p>This lets me refresh my bash profile whenever I make a change&#160;&#8212;&#160;for example, adding a new alias or script. Simple, and handy.</p>
+
+<pre class='shell'>
+alias search="grep -rnw './' -e "
+</pre>
+
+<p>This alias gives me search functionality in the terminal, so I can avoid opening up Finder for most simple queries.</p>
+
+<pre class='shell'>
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+</pre>
+
+<p>This neat little command displays the current directory contents, and all its sub-directories, as a tree. I used this to create the tree in <a href="/projects.html#firstCrack">the First Crack readme file</a>. <a href="http://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/">Hat-tip to OS X Daily for this one</a>.</p>
 
 </div>
 
     <p class='read_more_paragraph'>
-        <a style='text-decoration:none;' href='blog/on-working-from-home.html'>&#x24E9;</a>
+        <a style='text-decoration:none;' href='blog/git-home.html'>&#x24E9;</a>
+    </p></article><article>                    <h2 style="text-align:center;">
+                        <a href="http://blog.instapaper.com/post/61764950884" class="linkpost">InstaRank v1.0</a>
+                    </h2>
+                    <time datetime="2013-09-25" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="blog/2013.html">2013</a>/<a href="blog/2013-09.html">09</a>/25 17:19:47 EST</time>
+<p>I realize in my last two articles, <a href="https://zacs.site/blog/instapaper-5.html"><em>Instapaper 5</em></a>&#160;&#8212;&#160;in which I made a number of proposals for Instapaper 5&#160;&#8212;&#160;and <a href="https://zacs.site/blog/betaworks-releases-instapaper-5.html"><em>Betaworks Releases Instapaper 5</em></a>&#160;&#8212;&#160;in which I conveyed my mostly positive feelings on the new release&#160;&#8212;&#160;I likely appeared very critical of Betaworks and their continued work on Instapaper. This is not the case: while I do feel a better launch strategy entailing a service-wide design overhaul and one in which they added a larger set of new features to Instapaper would have greatly helped the platform, I am not of the opinion that Betaworks did not improve the app in Instapaper 5; the impressive new InstaRank feature is a prime example of this.</p>
+
+<p>That said though, I cannot help but feel that this feature, too, would have benefited from some additional development time. I may&#160;&#8212;&#160;and the blog post linked earlier confirms this suspicion&#160;&#8212;&#160;be an outlier in that I prefer to keep my Instapaper queue small, in the four to eight article range, and read in chronological order. This is a roundabout way to say that I will find little use in Instapaper&#8217;s new Popularity sorting algorithm, but not that I could not at some point in the future: a section similar to The Feature&#160;&#8212;&#160;available under &#8220;Browse&#8221; on the iPhone&#160;&#8212;&#160;populated with articles ranked using the InstaRank algorithm through which I could find and save articles to my queue for consumption at a later date would be very useful indeed.</p>
+
+</div>
+
+    <p class='read_more_paragraph'>
+        <a style='text-decoration:none;' href='blog/instarank-v10.html'>&#x24E9;</a>
     </p></article>
             </section>
         </main>

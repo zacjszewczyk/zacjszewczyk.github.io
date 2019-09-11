@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 10 Sep 2019 11:37:40 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Sep 2019 11:38:05 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Build a USB Cable</title>
+            <link>https://josef-adamcik.cz/electronics/need-a-usb-cable-build-on.html</link>
+            <guid isPermaLink='true'>https://josef-adamcik.cz/electronics/need-a-usb-cable-build-on.html</guid>
+
+            <pubDate>Wed, 11 Sep 2019 11:37:53 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Josef Adamcik wrote a neat how-to on building a custom USB cable. It looks great. I can see myself doing something like this, maybe for &lt;a href="https://zacs.site//projects.html#lmtvRV"&gt;my RV build&lt;/a&gt;&#38;#160;&#38;#8212;&#38;#160;&lt;a href="https://josef-adamcik.cz/electronics/buiding-a-custom-keyboard-katana60.html"&gt;building my own keyboard&lt;/a&gt;, though, not so much. Still, interesting stuff.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/build-a-usb-cable.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Pre-rendering static websites with wget</title>
             <link>https://apex.sh/blog/post/pre-render-wget/</link>
