@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Tesla's Autopilot found partly to blame for 2018 crash on the 405
+Link: https://www.latimes.com/business/story/2019-09-04/tesla-autopilot-is-found-partly-to-blame-for-2018-freeway-crash
+Pubdate: 2019/09/14 09:52:50
+Author: Zac J. Szewczyk
+
+The fact that anyone finds this surprising [is mind boggling](Misunderstood Technology.txt). The fact that anyone would use this as evidence that Tesla's Autopilot system is somehow unsafe blows my mind. The authors cited two accidents involving Tesla's Autopilot system, meanwhile I pass an accident caused by an inattentive driver about once a month on my three mile drive from work back to my house. We would be **lucky** to have such an "unsafe" system driving our cars.
