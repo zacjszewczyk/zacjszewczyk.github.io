@@ -14,15 +14,14 @@ class Markdown:
     # - __base_url: Base URL for relative links. (String)
     # Return: none
     def __init__(self, base_url=""):
-        self.__base_url = base_url
-
-    # Initialize variables
-    __base_url = "" # Base URL, given for relative links
-    __line_tracker = ["", "", ""] # Last three lines, raw.
-    __line_type_tracker = ["", "", ""] # Type of last three lines.
-    __line_indent_tracker = [0, 0, 0] # Indent level of last three lines.
-    __close_out = [] # List of block-level elements that still need closed out.
-    __pre = False # Yes/no, is the parser in a <pre> tag?
+        # Initialize variables
+        self.__base_url = base_url # Base URL, given for relative links
+        self.__line_tracker = ["", "", ""] # Last three lines, raw.
+        self.__line_type_tracker = ["", "", ""] # Type of last three lines.
+        self.__line_indent_tracker = [0, 0, 0] # Indent level of last three lines.
+        self.__close_out = [] # List of block-level elements that still need closed out.
+        self.__pre = False # Yes/no, is the parser in a <pre> tag?
+        self.__html = False # Yes/no, is this an HTML file?
 
     # Method: __parseInlineMD
     # Purpose: Turn all inline Markdown tags into HTML.
@@ -123,6 +122,10 @@ class Markdown:
     def __updateLineTypeTracker(self, __line):
         # Parser tracks leading whitespace, so remove it.
         __line = __line.lstrip(' ')
+
+        if (__line == "<html>"):
+            if (self.__line_type_tracker[-2] == "" and self.__line_type_tracker[-3] == ""):
+                self.__html = True
 
         if (len(__line.strip()) == 0): # Blank line.
             self.__line_type_tracker.append("blank")
@@ -263,6 +266,11 @@ class Markdown:
     # Return:
     # - Line formatted with HTML. (String)
     def html(self, __line):
+        if (self.__html == True):
+            if ("{EOF}" in __line):
+                return ""
+            return __line
+
         # Remove trailing newline
         __line = __line.rstrip('\n')
 
