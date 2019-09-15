@@ -4,6 +4,106 @@
 		"selected_items":
 		[
 			[
+				"sear",
+				"search_query"
+			],
+			[
+				"Appen",
+				"AppendContentOfXToY"
+			],
+			[
+				"Gen",
+				"GenStatic"
+			],
+			[
+				"Get",
+				"GetUserInput"
+			],
+			[
+				"__line_",
+				"__line_type_tracker"
+			],
+			[
+				"indent",
+				"__queryIndentTracker"
+			],
+			[
+				"line",
+				"line_type_tracker"
+			],
+			[
+				"is",
+				"isdigit"
+			],
+			[
+				"line_",
+				"line_indent_tracker"
+			],
+			[
+				"closing",
+				"closing_map"
+			],
+			[
+				"inde",
+				"indent_level"
+			],
+			[
+				"open",
+				"opening_tags"
+			],
+			[
+				"parse",
+				"parseInlineMD"
+			],
+			[
+				"__U",
+				"__updateTracker"
+			],
+			[
+				"print",
+				"printStats"
+			],
+			[
+				"twitter",
+				"twitter_url"
+			],
+			[
+				"insta",
+				"insta_url"
+			],
+			[
+				"twitt",
+				"twitter_url"
+			],
+			[
+				"META_",
+				"META_BASEURL"
+			],
+			[
+				"O",
+				"OKGREEN"
+			],
+			[
+				"Close",
+				"CloseTemplateBuild"
+			],
+			[
+				"passed",
+				"passed_content"
+			],
+			[
+				"Build",
+				"BuildFromTemplate"
+			],
+			[
+				"Sani",
+				"SanitizeDeploy"
+			],
+			[
+				"E",
+				"Error"
+			],
+			[
 				"Cop",
 				"CopyFile"
 			],
@@ -156,6 +256,62 @@
 	"buffers":
 	[
 		{
+			"file": "Public.py",
+			"settings":
+			{
+				"buffer_size": 11121,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "#!/usr/bin/python"
+			}
+		},
+		{
+			"file": "makefile",
+			"settings":
+			{
+				"buffer_size": 2698,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".sys.sh",
+			"settings":
+			{
+				"buffer_size": 2357,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Markdown.py",
+			"settings":
+			{
+				"buffer_size": 11955,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Markdown2.py",
+			"settings":
+			{
+				"buffer_size": 20295,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "Markdown2.py"
+			}
+		},
+		{
+			"file": "M2.py",
+			"settings":
+			{
+				"buffer_size": 1917,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "/Users/zjszewczyk/Desktop/Test/untitled.py",
 			"settings":
 			{
@@ -165,36 +321,10 @@
 			}
 		},
 		{
-			"file": "Markdown.py",
-			"settings":
-			{
-				"buffer_size": 11832,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "blog.py",
-			"settings":
-			{
-				"buffer_size": 37344,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "local/blog.html",
-			"settings":
-			{
-				"buffer_size": 34433,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "cp.py",
 			"settings":
 			{
-				"buffer_size": 2033,
+				"buffer_size": 2040,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -203,7 +333,7 @@
 			"file": "colors.py",
 			"settings":
 			{
-				"buffer_size": 372,
+				"buffer_size": 379,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -212,7 +342,42 @@
 			"file": "CommandTimer.py",
 			"settings":
 			{
-				"buffer_size": 2389,
+				"buffer_size": 17321,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Content/Pushing to Multiple Repos.txt",
+			"settings":
+			{
+				"buffer_size": 929,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "local/blog/pushing-to-multiple-repos.html",
+			"settings":
+			{
+				"buffer_size": 5333,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Memory.py",
+			"settings":
+			{
+				"buffer_size": 3177,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "Memory.py"
+			}
+		},
+		{
+			"contents": "\"I dont have an infant son to take care of, so I cannot speak to that adventure, but I can speak to its effects:\" every so often I undergo bouts of insomnia-like symptoms where no matter how much I may want to sleep, regardless of how significantly tomorrows test will effect my grade, its all I can do to hold myself still while my mind races. \"What am I doing tomorrow? Did I finish all my homework? Will I have time to listen to that latest podcast episode? How about write? Its been far too long since Ive written anything but a link post. But I have so many articles in Instapaper...will I have time to finish them tomorrow?\" They say those who sleep well at night will never possess the perspective to truly appreciate the inability to sleep, and I completely agree with that: shortly after these experiences end, as I forget how truly terrible the last few nights were, even I begin to lose perspective; it really wasnt \"that\" bad, after all. But losing sleep is: I never feel motivated to do anything, nothing interests me, I have a short temper and an even shorter tolerance for others, everything loses its luster, and the list goes on and on. Least of all, I feel the urge to create: thats the last thing I want to do after managing to fall asleep only to wake up a few hours later. I can only imagine how rough Sid has it right now.",
+			"settings":
+			{
+				"buffer_size": 1344,
 				"line_ending": "Unix"
 			}
 		},
@@ -229,7 +394,7 @@
 			"file": "local/assets/main.css",
 			"settings":
 			{
-				"buffer_size": 3475,
+				"buffer_size": 3532,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -238,7 +403,17 @@
 			"file": "local/rss.xml",
 			"settings":
 			{
-				"buffer_size": 1185088,
+				"buffer_size": 1212628,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 12531,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -254,7 +429,7 @@
 			"file": "deploy.py",
 			"settings":
 			{
-				"buffer_size": 17053,
+				"buffer_size": 17060,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -290,7 +465,7 @@
 			"file": "Hash.py",
 			"settings":
 			{
-				"buffer_size": 538,
+				"buffer_size": 546,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -299,7 +474,7 @@
 			"file": "system/index.html",
 			"settings":
 			{
-				"buffer_size": 2384,
+				"buffer_size": 2379,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -308,26 +483,63 @@
 			"file": "system/projects.html",
 			"settings":
 			{
-				"buffer_size": 22516,
+				"buffer_size": 22591,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "system/error.html",
+			"file": "system/disclaimers.html",
 			"settings":
 			{
-				"buffer_size": 4101,
-				"line_ending": "Windows"
+				"buffer_size": 1622,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "system/template.htm",
 			"settings":
 			{
-				"buffer_size": 3672,
+				"buffer_size": 3660,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blog.py",
+			"settings":
+			{
+				"buffer_size": 48059,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "local/404.html",
+			"settings":
+			{
+				"buffer_size": 3950,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Test.txt.bak",
+			"settings":
+			{
+				"buffer_size": 20655,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Test.txt",
+			"settings":
+			{
+				"buffer_size": 1642,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "Markdown Test Sheet"
 			}
 		}
 	],
@@ -382,6 +594,13 @@
 		"height": 132.0,
 		"history":
 		[
+			"os.chwd(\"~/Dropbox/Code/Standalone/\")",
+			"import os",
+			"open(\".sys.sh\", \"r\")",
+			"print(sys.cwd)",
+			"print sys.cwd",
+			"import sys",
+			"ls",
 			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
@@ -396,7 +615,57 @@
 	},
 	"file_history":
 	[
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/My Setup 2019.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/cabin-porn-roundup-713.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Test.txt.bak.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/WithThreads.py",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/test.sh",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/M2.py",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/EDITME",
+		"/Users/zjszewczyk/Dropbox/Code/Public/FirstCrack/system/index.html",
+		"/Users/zjszewczyk/Dropbox/Code/Public/FirstCrack/system/projects.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Cyber Journalism and Vulnerability News.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/git-home.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/system/projects.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/low-end-apple-bloggers.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/looking-to-ios-8.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/full-time-blogging.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Headbutting the Wall.txt",
+		"/Users/zjszewczyk/Desktop/test.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/cap.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Conv.py",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/out.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content2/Changes to First Crack.txt",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/archives.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content2/Basic Computer Security.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content2/Bang Youre Dead.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/bang-youre-dead.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content2/Apple buys 14 billion in stock.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/apple-acquires-burstly.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content2/The Real Comprehensive Terminal Guide.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content2/An Edgy iPhone 6 Concept.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/amazons-pr-genius.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content2/iOS 8 Wishlists.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/integrating-sublime-text-and-proofer.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content2/Integrating Sublime Text and Marked 2.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content2/Integrating Sublime Text and Proofer.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content2/Glass Lodge.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content2/Git Home.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content2/10 Typeface Pairs for Cash Poor Designers.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Glass Lodge.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Choosing a VPN service is a serious decision.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/googles-bias.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Git Home.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Complete Overhaul.txt",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/3test.py",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/README.md",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/system/template.htm",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/system/404.html",
+		"/Users/zjszewczyk/Dropbox/Code/Public/FirstCrack/blog.py",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/disclaimers.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/system/error.html",
+		"/Users/zjszewczyk/Dropbox/Code/Standalone/m_sw.js.bak",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/the-last-four-years.html",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/filson-4x4.html",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/CopyFile.py",
@@ -411,7 +680,6 @@
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/blog/amazons-whale-strategy.html",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Amazons Whale Strategy.txt",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Simple not Easy.txt",
-		"/Users/zjszewczyk/Dropbox/Code/Standalone/m_sw.js.bak",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/local/index.html",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/Content/Cascade Mountains Excursion.txt",
 		"/Users/zjszewczyk/Dropbox/Code/Standalone/assets/MTV.css",
@@ -474,56 +742,7 @@
 		"/Users/zjszewczyk/Sites/index.php",
 		"/private/etc/apache2/httpd.conf",
 		"/private/etc/apache2/httpd.conf.bak",
-		"/Users/zjszewczyk/Dropbox/Code/Flask/templates/5by5.html",
-		"/Users/zjszewczyk/Dropbox/Code/Flask/templates/admin.html",
-		"/Users/zjszewczyk/Dropbox/Code/Flask/Content/Starting Over.txt",
-		"/Users/zjszewczyk/Dropbox/Code/Flask/flaskr.db",
-		"/Users/zjszewczyk/Dropbox/Code/Flask/templates/projects.html",
-		"/Users/zjszewczyk/Desktop/Katie/Structure/gf.py",
-		"/Users/zjszewczyk/Desktop/Katie/Structure/A-Brief-Naval-Gaze.htm",
-		"/Users/zjszewczyk/Desktop/Katie/Fiction/D5.txt",
-		"/Users/zjszewczyk/Desktop/Katie/GYFG.txt",
-		"/Users/zjszewczyk/Desktop/Apoc_Gui.txt",
-		"/Users/zjszewczyk/Desktop/Func.py",
-		"/Users/zjszewczyk/Dropbox/Trip Itinerary.txt",
-		"/Users/zjszewczyk/Desktop/Worlds_Together_Worlds_Apart.bibtex",
-		"/Users/zjszewczyk/Dropbox/Prep/4Runner Build/4Runner.txt",
-		"/Users/zjszewczyk/Desktop/Katie/Things that could be wrong.txt",
-		"/Users/zjszewczyk/Downloads/Stanford_NLP/test.txt",
-		"/Users/zjszewczyk/Downloads/Stanford_NLP/test.txt.xml",
-		"/Users/zjszewczyk/Downloads/Capstone/Parse.py",
-		"/Users/zjszewczyk/Downloads/Capstone/boa_output.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Stable/Update.py",
-		"/Users/zjszewczyk/Desktop/LNII.csv",
-		"/Users/zjszewczyk/Dropbox/YSU/Fall 2017/Senior Project/capture_commits.boa",
-		"/Users/zjszewczyk/Dropbox/YSU/Fall 2017/Intro to Polysci/Essay 1/Critical Thinking Essay Outline.txt",
-		"/Users/zjszewczyk/Desktop/Latex.md",
-		"/Users/zjszewczyk/Desktop/Temp.txt",
-		"/Users/zjszewczyk/Dropbox/YSU/Spring 2017/Operating Systems/OS Final Project/OS Final Project/makefile",
-		"/Users/zjszewczyk/Dropbox/YSU/Spring 2017/Operating Systems/OS Final Project/OS Final Project/make",
-		"/Users/zjszewczyk/Dropbox/Writing/Blog/Integrating Sublime Text and Marked 2.txt",
-		"/Users/zjszewczyk/Library/Application Support/Sublime Text 3/Packages/User/Marked.sublime-build",
-		"/Users/zjszewczyk/Dropbox/Writing/Blog/12 resolutions for programmers.txt",
-		"/Users/zjszewczyk/Dropbox/Writing/Book/.gitignore",
-		"/Users/zacjszewczyk/Dropbox/Writing/Book/Part 6 - Long-Term Prepping/Outline.txt",
-		"/Users/zjszewczyk/Dropbox/Prep/Homemade Healing Salve Recipe.txt",
-		"/Users/zjszewczyk/Dropbox/Prep/SMB Plan.txt",
-		"/Users/zacjszewczyk/Dropbox/Writing/Book/Part 4 - Physical Preparedness/5 Skill Acquisition.txt",
-		"/Users/zacjszewczyk/Dropbox/Writing/Book/Part 4 - Physical Preparedness/4 Physical Fitness Post Collapse.txt",
-		"/Users/zacjszewczyk/Dropbox/Writing/Book/Part 4 - Physical Preparedness/3 Building a Holistic Fitness Regimen.txt",
-		"/Users/zacjszewczyk/Dropbox/Writing/Book/Part 4 - Physical Preparedness/2 Diet and Nutrition.txt",
-		"/Users/zacjszewczyk/Dropbox/Writing/Book/Part 4 - Physical Preparedness/1 The Importance of Physical Fitness.txt",
-		"/Users/zacjszewczyk/Dropbox/Writing/Book/Part 4 - Physical Preparedness/Outline.txt",
-		"/Users/zacjszewczyk/Dropbox/Writing/Book/Part 3 - Material Preparedness/4 Equipping Your Go-Bag.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 2 - Mental Preparedness/3 The Action Plan.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 6 - Long-Term Prepping/Outline.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 3 - Material Preparedness/7 The Prepper's EDC.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 4 - Physical Preparedness/index.md",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 4 - Physical Preparedness/Outline.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 3 - Material Preparedness/6 The End Product.txt",
-		"/Users/zjszewczyk/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 2 - Mental Preparedness/1 Proactive Planning.txt",
-		"/Users/zjszewczyk/Dropbox/Code/FirstCrack/Book/Content/Part 3 - Material Preparedness/1 The Bug-Out Bag.txt"
+		"/Users/zjszewczyk/Dropbox/Code/Flask/templates/5by5.html"
 	],
 	"find":
 	{
@@ -531,7 +750,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 91.0,
+		"height": 116.0,
 		"where_history":
 		[
 			""
@@ -542,134 +761,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"GetTitle",
-			"body",
-			"article_title",
-			"gettitle",
-			"Markdown(line)",
-			"algorith",
-			"algorithm",
-			"img",
-			"<img>",
-			"<span>",
-			"<h1",
-			"tinyHouse",
-			"class=\"headers\"",
-			"</h3",
-			"<h2",
-			"migrate",
-			"genpage",
-			"buildfrom",
-			"main blog",
-			"description",
-			"buildfromtemplate",
-			"copy",
-			"cp",
-			"</div>",
-			"yet still just as relevan",
-			"filson-4x4",
-			"filson-4",
-			"financialsamur",
-			"localtime",
-			"deploy",
-			"time datetime",
-			"<article>",
-			"appendcontentofxtoy",
-			"genpage",
-			"timestamp",
-			"html_path",
-			"<!-- SHEETS",
-			"genpage",
-			".write",
-			"appendcontentofx",
-			"linkpost",
-			"'",
-			"= '",
-			".replace(\"&",
-			"XML",
-			"escape",
-			"appendToFeed",
-			"\"./local/blog/\"+source.lower().replace(\" \", \"-\")[0:-3]+\"html\"",
-			"\"Content/\"+source",
-			"GenPage",
-			";#38;#38;",
-			"master",
-			"logs",
-			"blog/",
-			"devnull",
-			"copyfile",
-			"from sys import stdout",
-			"dst",
-			"src",
-			"file",
-			"i",
-			"d",
-			"line",
-			"fd",
-			"log",
-			"logs",
-			"output_log",
-			"file",
-			"b",
-			"session",
-			"b",
-			"s3",
-			"session",
-			"i",
-			"deploy",
-			"devnull",
-			"fnull",
-			"FNULL",
-			"_FNULL",
-			"content_type",
-			"content_encoding",
-			"dst",
-			"src",
-			"file",
-			"files",
-			"subdirs",
-			"path",
-			"d",
-			"folder",
-			"tree",
-			"mtime",
-			"FNULL",
-			"mtime",
-			"_dst",
-			"_tgt",
-			"f_out",
-			"f_in",
-			"_dst",
-			"_tgt",
-			"name",
-			"files",
-			"subdirs",
-			"path",
-			"i",
-			"target",
-			"end",
-			"group",
-			"delimeters",
-			"groups",
-			"field",
-			"labels",
-			"d__",
-			"assets",
-			"./stage/as",
-			"xml",
-			"b.upload",
-			"\"./",
+			"self.__html",
+			"pool",
+			"open",
+			"open]",
+			"open",
+			"open(",
+			"with open",
+			"with ",
 			"print",
-			"from os import",
-			"from os.path",
-			"dst",
-			"tgt",
-			"b.upload",
-			"description",
-			"pubdate",
-			")\n",
-			"strftime",
-			"mod_time"
+			"search_query",
+			"datetime.date",
+			"terminate",
+			"global",
+			"gensite",
+			"genstatic",
+			"exists",
+			"global",
+			"base_url",
+			"for line in",
+			"enumerate",
+			"for line in",
+			"genpage",
+			"          ",
+			".replace(\"index.html",
+			"content[",
+			"genpage",
+			"content[2]",
+			"javascript",
+			".replace(\"index.html",
+			"content[2",
+			".replace(\"index.html",
+			"explore",
+			"pre",
+			"pool",
+			"blog",
+			"blog.ht",
+			"rel=",
+			"%",
+			"  ",
+			"end_action",
+			"interface",
+			"Interface",
+			"isdir",
+			"getuserinput",
+			"command_line",
+			"GetUserInput",
+			"getuserinput",
+			"sys.",
+			"getuserinput",
+			"sys.",
+			"blog.html",
+			"explore",
+			"article",
+			"&",
+			"parseInline",
+			"(&\\w*\\s)",
+			"<\\w",
+			"&[\\s\\w]+(?=\\s)",
+			"&",
+			"Markdown",
+			"spec",
+			"meta_appname",
+			"=",
+			"getFiles",
+			"str[a-z]time",
+			"%Y/",
+			"strptime",
+			"genstati",
+			"base_url",
+			"md",
+			"file_idx",
+			"GenBlog",
+			"files",
+			"genpage",
+			"close_out",
+			"trimtracker",
+			"Found",
+			"mktime",
+			"utime",
+			"done",
+			".py",
+			"python",
+			"    ",
+			"^(    )+",
+			"^    ",
+			"    ",
+			"^.",
+			" = ",
+			"@",
+			"`",
+			"bitbucket.org",
+			"site",
+			"blog",
+			"page",
+			"\\n",
+			"#",
+			"\\\\n",
+			"            ",
+			"\\n",
+			"=",
+			" = ",
+			"elif",
+			"self.__queryIndentTracker\\(",
+			"line_",
+			"self.__getLineType\\(",
+			"self.__getLineType",
+			"__getLineType",
+			"getLineType",
+			"\"",
+			"\\*",
+			"*",
+			"\"",
+			"__line",
+			"blockquote",
+			"'",
+			"print",
+			"em",
+			"--",
+			"base_url",
+			"fn",
+			"footnote",
+			"Content2",
+			"\\.",
+			"buildfromtemplate",
+			">",
+			"</pre",
+			"<pre",
+			"`"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -687,11 +906,230 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "Public.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11121,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8753,
+								8756
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "python"
+							},
+							"auto_name": "#!/usr/bin/python",
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 6177.0,
+						"translation.y": 2674.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2698,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								933,
+								933
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 114,
+								"count": 319,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Makefile/Makefile.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 21.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": ".sys.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1224,
+								1224
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 4,
+								"count": 152,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Markdown.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11955,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6657,
+								6657
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 417.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Markdown2.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20295,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11967,
+								11967
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "python"
+							},
+							"auto_name": "Markdown2.py",
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "M2.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1917,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								807,
+								807
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "python"
+							},
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "/Users/zjszewczyk/Desktop/Test/untitled.py",
 					"semi_transient": false,
 					"settings":
@@ -703,8 +1141,46 @@
 						"selection":
 						[
 							[
-								264,
-								264
+								612,
+								612
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "python"
+							},
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "cp.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2040,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								24,
+								24
 							]
 						],
 						"settings":
@@ -717,24 +1193,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 28,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "Markdown.py",
+					"buffer": 8,
+					"file": "colors.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11832,
+						"buffer_size": 379,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5353,
-								5408
+								379,
+								131
 							]
 						],
 						"settings":
@@ -745,43 +1221,32 @@
 								"modified": true,
 								"selection": true,
 								"status": -1,
-								"syntax": "python"
+								"syntax": "plain text"
 							},
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2051.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "blog.py",
+					"buffer": 9,
+					"file": "CommandTimer.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 37344,
+						"buffer_size": 17321,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-								],
-								"scope": "bookmarks"
-							}
 						},
 						"selection":
 						[
 							[
-								13275,
-								13275
+								17227,
+								17227
 							]
 						],
 						"settings":
@@ -795,23 +1260,59 @@
 								"syntax": "python"
 							},
 							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5498.0,
+						"translation.y": 8828.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "local/blog.html",
+					"buffer": 10,
+					"file": "Content/Pushing to Multiple Repos.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 34433,
+						"buffer_size": 929,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								528,
+								519
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 148,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "local/blog/pushing-to-multiple-repos.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5333,
 						"regions":
 						{
 						},
@@ -827,9 +1328,9 @@
 							"WordCount":
 							{
 								"changes": 0,
-								"count": 2595,
-								"modified": false,
-								"selection": false,
+								"count": 184,
+								"modified": true,
+								"selection": true,
 								"status": -1,
 								"syntax": "plain text"
 							},
@@ -838,85 +1339,56 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 582.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "cp.py",
+					"buffer": 12,
+					"file": "Memory.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2033,
+						"buffer_size": 3177,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								98,
-								98
+								2893,
+								2893
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": -1,
+								"changes": 9,
+								"count": 0,
 								"modified": true,
 								"selection": true,
 								"status": -1,
 								"syntax": "python"
 							},
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "colors.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 372,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								36,
-								36
-							]
-						],
-						"settings":
-						{
+							"auto_name": "Memory.py",
 							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1409.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "CommandTimer.py",
+					"buffer": 13,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2389,
+						"buffer_size": 1344,
 						"regions":
 						{
 						},
@@ -924,22 +1396,23 @@
 						[
 							[
 								0,
-								0
+								113
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/Regular Expressions/RegExp.sublime-syntax",
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 14,
 					"file": "local/assets/manifest.json",
 					"semi_transient": false,
 					"settings":
@@ -965,24 +1438,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 29,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 15,
 					"file": "local/assets/main.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3475,
+						"buffer_size": 3532,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1852,
-								1852
+								2258,
+								2258
 							]
 						],
 						"settings":
@@ -1000,19 +1473,19 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 914.0,
+						"translation.y": 1805.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 16,
 					"file": "local/rss.xml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1185088,
+						"buffer_size": 1212628,
 						"regions":
 						{
 						},
@@ -1038,14 +1511,51 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 349.0,
+						"translation.y": 1013.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12531,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7305,
+								7305
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 220,
+								"count": 1788,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2188.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 18,
 					"file": "master.log",
 					"semi_transient": false,
 					"settings":
@@ -1069,24 +1579,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 31,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 19,
 					"file": "deploy.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17053,
+						"buffer_size": 17060,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								689,
-								267
+								24,
+								24
 							]
 						],
 						"settings":
@@ -1099,11 +1609,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 20,
 					"file": "local/assets/MTV.html",
 					"semi_transient": false,
 					"settings":
@@ -1129,11 +1639,11 @@
 						"translation.y": 720.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 30,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 21,
 					"file": "local/assets/m_sw.js",
 					"semi_transient": false,
 					"settings":
@@ -1151,14 +1661,6 @@
 						],
 						"settings":
 						{
-							"WordCount":
-							{
-								"changes": -1,
-								"modified": true,
-								"selection": true,
-								"status": -1,
-								"syntax": "javascript"
-							},
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -1167,11 +1669,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 22,
 					"file": "ModTimes.py",
 					"semi_transient": false,
 					"settings":
@@ -1183,8 +1685,8 @@
 						"selection":
 						[
 							[
-								51,
-								64
+								17,
+								17
 							]
 						],
 						"settings":
@@ -1195,24 +1697,196 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 23,
 					"file": "Hash.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 538,
+						"buffer_size": 546,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								35,
-								35
+								385,
+								385
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "system/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2032,
+								2032
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "system/projects.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22591,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5947,
+								5947
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "system/disclaimers.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1622,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1622,
+								1622
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "system/template.htm",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3660,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2054,
+								2054
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 59,
+								"count": 44,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "blog.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 48059,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										23678,
+										23678
+									],
+									[
+										26883,
+										26883
+									]
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								26843,
+								26843
 							]
 						],
 						"settings":
@@ -1230,157 +1904,127 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "system/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2384,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1346,
-								1346
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 14,
-								"count": 296,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "system/projects.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 22516,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 2414,
-								"count": 2760,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"spell_check": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "system/error.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4101,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "system/template.htm",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3672,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3302,
-								3098
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 45,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 976.0,
+						"translation.y": 12622.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "local/404.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								984,
+								984
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 110,
+								"count": 58,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "Test.txt.bak",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3084,
+								3084
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 69,
+								"count": 2753,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "Test.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1642,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1568,
+								1568
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 2460,
+								"count": 170,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"auto_name": "Markdown Test Sheet",
+							"spell_check": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
 					"type": "text"
 				}
 			]
@@ -1388,7 +2032,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 31.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -1429,7 +2073,7 @@
 	"project": "Site.sublime-project",
 	"replace":
 	{
-		"height": 58.0
+		"height": 60.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1467,7 +2111,7 @@
 	"show_open_files": true,
 	"show_tabs": false,
 	"side_bar_visible": true,
-	"side_bar_width": 200.0,
+	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
