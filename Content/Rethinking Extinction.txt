@@ -1,0 +1,11 @@
+Type: linkpost
+Title: Rethinking Extinction
+Link: https://aeon.co/essays/we-are-not-edging-up-to-a-mass-extinction
+Pubdate: 2019/09/16 07:07:51
+Author: Zac J. Szewczyk
+
+Stewart Brand, with a fascinating look at the results of conservation efforts amidst cries that the sky is falling:
+
+> "The trends are favourable. Conservation efforts often appear in the media like a series of defeats and retreats, but as soon as you look up from the crisis-of-the-month, you realise that, in aggregate, conservation is winning. The ecologist Stuart Pimm at Duke University in North Carolina claims that conservationists have already reduced the rate of extinction by 75 per cent. Getting the world's extinction rate back down to normal is a reasonable goal for this century. Restoring full natural bioabundance in most of the world will take longer, however. It would mean bringing wildlife populations back up to the marvellous level of ecological richness that existed before human impact. That could be a two-century goal."
+
+We could all do with a bit less alarmism, and a bit more reality in its place.

@@ -7,9 +7,31 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 14 Sep 2019 05:09:10 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Sep 2019 11:07:59 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Rethinking Extinction</title>
+            <link>https://aeon.co/essays/we-are-not-edging-up-to-a-mass-extinction</link>
+            <guid isPermaLink='true'>https://aeon.co/essays/we-are-not-edging-up-to-a-mass-extinction</guid>
+
+            <pubDate>Mon, 16 Sep 2019 11:07:51 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Stewart Brand, with a fascinating look at the results of conservation efforts amidst cries that the sky is falling:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;The trends are favourable. Conservation efforts often appear in the media like a series of defeats and retreats, but as soon as you look up from the crisis-of-the-month, you realise that, in aggregate, conservation is winning. The ecologist Stuart Pimm at Duke University in North Carolina claims that conservationists have already reduced the rate of extinction by 75 per cent. Getting the world&#38;#8217;s extinction rate back down to normal is a reasonable goal for this century. Restoring full natural bioabundance in most of the world will take longer, however. It would mean bringing wildlife populations back up to the marvellous level of ecological richness that existed before human impact. That could be a two-century goal.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We could all do with a bit less alarmism, and a bit more reality in its place.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/rethinking-extinction.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Tesla's Autopilot found partly to blame for 2018 crash on the 405</title>
             <link>https://www.latimes.com/business/story/2019-09-04/tesla-autopilot-is-found-partly-to-blame-for-2018-freeway-crash</link>
