@@ -1,0 +1,7 @@
+Type: linkpost
+Title: How to Boost a Distributed Team
+Link: https://blog.softwaremill.com/how-to-boost-your-distributed-team-dbe5b2a0472e
+Pubdate: 2019/09/17 07:45:18
+Author: Zac J. Szewczyk
+
+Łukasz Zuchowski has some great advice for making better distributed teams. This covers many of the things I have heard elsewhere. Some of these apply to centralized teams, too.
