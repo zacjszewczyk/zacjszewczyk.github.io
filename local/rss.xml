@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 17 Sep 2019 11:45:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Sep 2019 11:34:01 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Outfitting My 4Runner for Adventure</title>
+            <link>https://zacs.site//blog/outfitting-my-4runner-for-adventure.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/outfitting-my-4runner-for-adventure.html</guid>
+
+            <pubDate>Wed, 18 Sep 2019 11:33:54 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Today I get to spend some more time on one of my favorite topics, &lt;a href="https://zacs.site/blog/before-now-and-future.html"&gt;the vehicles you use to get the gear you pack to the places you want to go&lt;/a&gt;. I outlined the process that led to my 4Runner in &lt;a href="https://zacs.site/blog/choosing-an-adventure-rig.html"&gt;&lt;em&gt;Choosing an Adventure Rig&lt;/em&gt;&lt;/a&gt;, and today I want to talk about its loadout. In the first part of this article, I will talk about the gear that stays in my vehicle full-time; in the second, I will outline a basic packing list for a typical adventure.  &lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/outfitting-my-4runner-for-adventure.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>How to Boost a Distributed Team</title>
             <link>https://blog.softwaremill.com/how-to-boost-your-distributed-team-dbe5b2a0472e</link>
