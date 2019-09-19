@@ -7,9 +7,30 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 18 Sep 2019 11:38:45 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Sep 2019 11:05:33 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Growth hacks: coffee with an experienced engineer you don't know</title>
+            <link>https://blog.pragmaticengineer.com/growth-hacks-coffee-with-an-engineer/</link>
+            <guid isPermaLink='true'>https://blog.pragmaticengineer.com/growth-hacks-coffee-with-an-engineer/</guid>
+
+            <pubDate>Thu, 19 Sep 2019 11:05:28 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Gergely Orosz has some great advice for professional networking, for people who don&#38;#8217;t do networking well.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;A surprisingly efficient networking method I found was doing cold reach-outs to more experienced software engineers, offering to buy them coffee or lunch. In exchange, I asked them to share their advice ... What I did not expect was this approach to be far more valuable than just a one-off networking session. In all cases, I had fascinating conversations on problems they were facing and found myself explaining the biggest challenges on my plate. ... developers buying coffee and having a chat with other, local developers is an underrate hack for professional growth. It is also under-used.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/growth-hacks.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Outfitting My 4Runner for Adventure</title>
             <link>https://zacs.site//blog/outfitting-my-4runner-for-adventure.html</link>
