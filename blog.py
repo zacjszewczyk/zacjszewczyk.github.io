@@ -1020,9 +1020,9 @@ if __name__ == '__main__':
     GenSite()
     
     # import cProfile
-    # cProfile.run("Init()")
-    # cProfile.run("GenStatic()")
-    # cProfile.run("GenSite()")
+    # cProfile.run("Init()", "./init.cprof")
+    # cProfile.run("GenStatic()", "./init.cprof")
+    # cProfile.run("GenSite()", "./init.cprof")
 
     t2 = datetime.now()
 
