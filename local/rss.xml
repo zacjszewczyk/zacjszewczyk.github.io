@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 01 Oct 2019 11:29:44 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 02 Oct 2019 11:11:52 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>More Git Aliases</title>
+            <link>https://victorzhou.com/blog/git-aliases/</link>
+            <guid isPermaLink='true'>https://victorzhou.com/blog/git-aliases/</guid>
+
+            <pubDate>Wed, 02 Oct 2019 11:11:48 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I have talked before about &lt;a href="https://zacs.site/blog/git-home.html"&gt;some of the aliases I use in my development environment&lt;/a&gt;, and how these and &lt;a href="https://zacs.site/blog/pushing-to-multiple-repos.html"&gt;other little tricks&lt;/a&gt; make my life just a bit easier. Victor Zhou wrote a neat post about his aliases, and about while they don&#38;#8217;t save him much time in the end, they make his life a little easier, too.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/more-git-aliases.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Land Shark Outfitters KISS Drawers</title>
             <link>https://landsharkoutfitters.com/KISS-Drawers.php</link>
