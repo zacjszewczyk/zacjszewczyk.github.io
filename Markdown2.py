@@ -34,14 +34,14 @@ class Markdown:
         # Add a <br /> if three or more trailing spaces.
         if ((len(__line) - len(__line.rstrip(' '))) > 2):
             __line = __line.strip() + "<br />"
-        
+
         # Parser tracks leading whitespace, so remove it.
         __line = __line.strip()
 
         # If the remaining line length is 0, return blank line.
         if (len(__line) == 0):
             return ""
-        
+
         # Parse  emdashes
         __line = __line.replace("--", "&#160;&#8212;&#160;")
 
@@ -65,7 +65,7 @@ class Markdown:
         ## Parse aposrophes.
         for each in findall("\w'\w", __line):
             __line = __line.replace(each, each.replace("'", "&#8217;"))
-        
+
         ## Parse single quotatin marks.
         for each in findall("\'[^\']+\'", __line):
             __line = __line.replace(each, each.replace("'", "&#8216;", 1).replace("'", "&#8217;", 1))
@@ -297,7 +297,7 @@ class Markdown:
                     return "<pre class='cmd'>"
                 return "<pre>"
             return "</pre>"
-        
+
         if (self.__pre == True):
             return __line
 
@@ -418,7 +418,7 @@ class Markdown:
         # tags.
         if (self.__line_type_tracker[-1] not in ["blockquote", "bqt", "fn"]):
             __line = self.__parseInlineMD(__line)
-        
+
         return __line
 
     # Method: clear

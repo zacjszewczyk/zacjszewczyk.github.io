@@ -107,7 +107,7 @@ def DisplayInterface(params,search_query="",end_action="continue"):
             exit(0)
         else: # Exit then build site
             return False
-        
+
         if (end_action == "continue"):
             params = GetUserInput("#: ")
         else:
@@ -134,16 +134,16 @@ def GetUserInput(prompt):
         elif (len(string) > 256):
             print(c.WARNING+"Input bound exceeded."+c.ENDC)
             continue
-        
+
         # If we get here, we have valid input
         break
-        
+
     # Send the user's input back to the requesting method.
     return string
 
 # Method: GetLine
 # Purpose: Read a line from the user, allowing for cursor movement.
-# Parameters: 
+# Parameters:
 # - prompt: Text to prompt the user for input (String)
 def GetLine(prompt):
     # Backup the shell session, to restore it later.
@@ -153,7 +153,7 @@ def GetLine(prompt):
     setraw(stdin)
     input = ""
     index = 0
-    
+
     # Continue accepting input until the user aborts the process (CTRL-C)
     # or hits the enter key.
     while True:
@@ -162,12 +162,12 @@ def GetLine(prompt):
         stdout.write(u"\u001b[0K")
         stdout.write(prompt+" "+input)
         stdout.write(u"\u001b[1000D")
-        stdout.write(u"\u001b[" + str(index+len(prompt)+1) + "C")    
+        stdout.write(u"\u001b[" + str(index+len(prompt)+1) + "C")
         stdout.flush()
-        
+
         # Read a single character and get its code.
         char = ord(stdin.read(1))
-        
+
         # Manage internal data-model
         if char == 3: # CTRL-C
             # Restore shell session from backup, then exit.
@@ -199,10 +199,10 @@ def GetLine(prompt):
     # On exit, print a newline and reset the cursor left.
     stdout.write('\n')
     stdout.write(u"\u001b[1000D")
-    
+
     # Cleanup
     del index, char
-    
+
     # Return the string the user's input.
     return input
 ## END CLI BLOCK
@@ -219,7 +219,7 @@ from random import choices # Building Explore page
 from locale import getpreferredencoding # Speed up file opens
 
 # Global variables
-## - files: Dictionary with years as the keys, and sub-dictinaries as the 
+## - files: Dictionary with years as the keys, and sub-dictinaries as the
 ##          elements. These elements have months as the keys, and a list
 ##          of the posts made in that month as the elements. (Dictionary)
 ## - content: A string with the opening and closing HTML tags. (String)
@@ -259,11 +259,11 @@ def AppendContentOfXToY(target, source, timestamp):
 
     # Now that we know there is a structure file built, pull the data
     # from there.
-    
+
     ## Open the source and the target files
     target_fd = open(target+".html", "a", encoding=ENCODING)
     source_fd = open("./local/blog/"+html_filename, "r", encoding=ENCODING)
-        
+
     # Skip to the <article tag, then write the opening <article>
     # tag to the output file.
     for i, line in enumerate(source_fd):
@@ -295,11 +295,11 @@ def AppendContentOfXToY(target, source, timestamp):
         # Write all lines from the structure file to the output file
         # by default.
         target_fd.write(line)
-    
+
     source_fd.close()
 
     # Once we have reached the end of the content in the case of a linkpost,
-    # or read the first paragraph in the case of an original article, add a 
+    # or read the first paragraph in the case of an original article, add a
     # "read more" link and close the article.
     target_fd.write("\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='blog/%s'>&#x24E9;</a>\n    </p>" % (html_filename))
     target_fd.write("</article>")
@@ -323,7 +323,7 @@ def AppendToFeed(source):
 
     # Now that we know there is a structure file built, pull the data
     # from there.
-    
+
     ## Open the feed and source file
     feed_fd = open("./local/rss.xml", "a", encoding=ENCODING)
 
@@ -383,7 +383,7 @@ def AppendToFeed(source):
     source_fd.close()
 
     # Once we have reached the end of the content in the case of a linkpost,
-    # or read the first paragraph in the case of an original article, add a 
+    # or read the first paragraph in the case of an original article, add a
     # "read more" link and close the article.
     feed_fd.write("\n<p class='read_more_paragraph'>\n<a style='text-decoration:none;' href='%s/blog/%s'>Read more...</a>\n</p>\n".replace("<", "&lt;").replace(">", "&gt;") % (conf.base_url, html_filename))
     feed_fd.write("            </description>\n        </item>\n")
@@ -412,7 +412,7 @@ def BuildFromTemplate(target, title, bodyid, description="", sheets="", passed_c
     fd.write(content[0].replace("{{META_DESC}}", description).replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
     fd.write(passed_content)
     fd.close()
-        
+
     # Cleanup
     del fd
 
@@ -472,7 +472,7 @@ def HandleYear(year):
         month_fd = open("./local/blog/"+year+"-"+month+".html", "a", encoding=ENCODING)
         # Write the opening HTML tags
         month_fd.write(content[2].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1).replace("<!--BLOCK HEADER-->", "<article>\n<p>\n"+months[month]+", <a href=\""+year+".html\">"+year+"</a>\n</p>\n</article>", 1))
-        
+
         # Sort the sub-dictionaries by keys, days, then iterate over it.
         for day in sorted(files[year][month], reverse=True):
             # Sort the sub-dictionaries by keys, timestamps, then iterate over it
@@ -488,15 +488,15 @@ def HandleYear(year):
                         # identify the file in the dictionary, and the passed time values
                         # designate the desired update time to set the content file.
                         article_title = GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
-                
+
                 # For each article made in the month, add an entry on the appropriate
                 # 'month' structure file.
                 month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", article_title.strip()))
-        
+
         # Write closing HTML tags to the month file.
         month_fd.write(content[1].replace("assets/", "../assets/"))
         month_fd.close()
-    
+
     # Write closing HTML tags to the year file.
     year_fd.write("</table>\n"+content[1].replace("assets/", "../assets/"))
     year_fd.close()
@@ -529,7 +529,7 @@ def GenBlog():
         if (file_idx < 25):
             AppendContentOfXToY("./local/blog", fname, timestamp)
         # Write the years in which a post was made to the header element, in a
-        # big table to facilitate easy reading. 
+        # big table to facilitate easy reading.
         elif (file_idx == 25):
             # This block just puts three year entries in the first row, ends
             # the row, and then puts three more year entries in the second row.
@@ -587,7 +587,7 @@ def GenExplore(files):
         AppendContentOfXToY("./local/explore", each[0], each[1])
     # Close the template build
     CloseTemplateBuild("./local/explore.html")
-    
+
     # Cleanup
     del fd
 
@@ -604,7 +604,7 @@ def GenSite():
 
     # Write closing HTML Tags to archives.html and blog.html, using Terminate()
     Terminate()
-    
+
     # Cleanup
     del pool
 
@@ -627,7 +627,7 @@ def GenPage(source, timestamp):
     if (line[0:5] != "Type:"):
         Migrate(source, timestamp)
     source_fd.close()
-    
+
     # Open the source file in read mode.
     source_fd = open(src, "r", encoding=ENCODING)
 
@@ -637,7 +637,7 @@ def GenPage(source, timestamp):
 
     # Insert Javascript code for device detection.
     local_content = content[2].replace("{{ BODYID }}", "post",1)
-    
+
     # Initialize idx to track line numbers, and title to hold the title block of each article.
     idx = 0
     title = ""
@@ -683,7 +683,7 @@ def GenPage(source, timestamp):
         # For successive lines of the file, parse them as Markdown and write them to the file.
         elif (idx > 5):
             # print(src)
-            target_fd.write("\n"+md.html(line).strip())
+            target_fd.write("\n"+md.html(line).rstrip('\n'))
 
         # Increase the line number
         idx += 1
@@ -692,7 +692,7 @@ def GenPage(source, timestamp):
         target_fd.write("\n"+md.html("{EOF}"))
         target_fd.write("\n</div>\n                </article>")
         target_fd.write(content[1].replace("assets/", "../assets/").replace("<!-- SCRIPTS BLOCK -->", """""",1))
-        
+
     # Close file descriptors.
     target_fd.close()
     source_fd.close()
@@ -732,7 +732,7 @@ def GenStatic():
 
     # Build the 404.html file.
     BuildFromTemplate(target="./local/404.html", title="Error - ", bodyid="error", description="", sheets="", passed_content="")
-    
+
     # Cleanup
     del fd
 
@@ -749,7 +749,7 @@ def GetTitle(source, timestamp):
     if (line[0:5] != "Type:"):
         source_fd.close()
         Migrate(source, timestamp)
-    
+
     # Open the source file in read mode.
     source_fd = open(src, "r", encoding=ENCODING)
     source_fd.readline()
@@ -830,7 +830,7 @@ def Init():
             elif (i == 15): # Extract Instagram profile URL
                 conf.insta_url = line.split(" = ")[1].strip()
         fd.close()
-        
+
         # Cleanup
         del fd
 
@@ -884,7 +884,7 @@ def Init():
     # Clear and initialize the archives.html and blog.html files.
     BuildFromTemplate(target="./local/archives.html", title="Post Archives - ", bodyid="postarchives", description="Every article Zac Szewczyk has ever posted, in chronological order, split up by year and divided by month.", sheets="", passed_content="")
     BuildFromTemplate(target="./local/blog.html", title="Blog - ", bodyid="blog", description="Zac Szewczyk's main blog page, where you will find topics ranging from adventuring and writing to weightlifting and leadership, among other things.", sheets="", passed_content="")
-    
+
     # Clear and initialize the RSS feed
     fd = open("./local/rss.xml", "w", encoding=ENCODING)
     fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>%s</title>\n    <link>%s</link>\n    <description>RSS feed for %s's website, found at %s/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, %s. All rights reserved.</copyright>\n    <atom:link href="%s/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (conf.byline, conf.base_url, conf.byline, conf.base_url, conf.byline, conf.base_url, datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
@@ -905,7 +905,7 @@ def Init():
             if (mtime[3] not in files[mtime[0]][mtime[1]][mtime[2]]):
                 files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = {}
             files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = each
-            
+
     # Cleanup
     del fd
 
@@ -953,7 +953,7 @@ def Migrate(target, mod_time):
 
 # Method: Revert
 # Purpose: Check file timestamp against article timestamp. Correct if necessary.
-# Parameters: 
+# Parameters:
 # - tgt: Target file name (String)
 def Revert(tgt):
     fd = open(tgt, "r", encoding=ENCODING)
@@ -962,7 +962,7 @@ def Revert(tgt):
     fd.readline()
     mod_time = mktime(strptime(fd.readline()[9:].strip(), "%Y/%m/%d %H:%M:%S"))
     fd.close()
-    
+
     if (mod_time != stat(tgt).st_mtime):
         print("Does not match for",tgt)
         print("Reverting to",mod_time)
@@ -973,7 +973,7 @@ def Revert(tgt):
 
 # Method: SearchFile
 # Purpose: Search for a string within a file.
-# Parameters: 
+# Parameters:
 # - tgt: Target file name (String)
 # - q: String to search for (String)
 def SearchFile(tgt, q):
@@ -1000,12 +1000,12 @@ def Terminate():
     CloseTemplateBuild("./local/index.html")
     CloseTemplateBuild("./local/disclaimers.html")
     CloseTemplateBuild("./local/404.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style='text-align:center;'>Error: 404 Not Found</h2><p>The requested resource at <span style='text-decoration:underline;'>"+window.location.href+"</span> could not be found.</p></article>"</script>""")
-    
+
     # Write closing tags to the RSS feed.
     fd = open("./local/rss.xml", "a", encoding=ENCODING)
     fd.write("""\n</channel>\n</rss>""")
     fd.close()
-        
+
     # Cleanup
     del fd
 
@@ -1018,7 +1018,7 @@ if __name__ == '__main__':
     Init()
     GenStatic()
     GenSite()
-    
+
     # import cProfile
     # cProfile.run("Init()", "./init.cprof")
     # cProfile.run("GenStatic()", "./init.cprof")
@@ -1027,6 +1027,6 @@ if __name__ == '__main__':
     t2 = datetime.now()
 
     print(("Execution time: "+c.OKGREEN+str(t2-t1)+"s"+c.ENDC))
-    
+
     # Cleanup
     del t1, t2
