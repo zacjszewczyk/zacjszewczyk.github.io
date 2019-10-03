@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 03 Oct 2019 11:25:28 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 11:26:20 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>The Importance of Proper Trailer Loading</title>
+            <link>https://jalopnik.com/this-demonstration-shows-why-proper-trailer-loading-is-1838296236</link>
+            <guid isPermaLink='true'>https://jalopnik.com/this-demonstration-shows-why-proper-trailer-loading-is-1838296236</guid>
+
+            <pubDate>Thu, 03 Oct 2019 11:26:12 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I see &lt;a href="https://youtu.be/fWd8ml9mFMo"&gt;U-Haul&#38;#8217;s video on the importance of proper trailer loading&lt;/a&gt; resurface every once in a while, and most recently at &lt;a href="https://jalopnik.com/this-demonstration-shows-why-proper-trailer-loading-is-1838296236"&gt;Jalopnik&lt;/a&gt;. I &lt;a href="https://zacs.site/blog/building-my-4runner-sleeping-platform.html"&gt;do my best&lt;/a&gt; to avoid &lt;a href="https://zacs.site/blog/expedition-rigs.html"&gt;trailers&lt;/a&gt;. I don&#38;#8217;t even like pulling them on paved roads, and off-road, they make all but the easiest tracks impossible. If you get stuck using one, though, at least know how to load it.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/the-importance-of-proper-trailer-loading.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>More Git Aliases</title>
             <link>https://victorzhou.com/blog/git-aliases/</link>
