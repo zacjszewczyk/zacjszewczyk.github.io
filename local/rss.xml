@@ -7,9 +7,31 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 04 Oct 2019 11:06:12 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 04 Oct 2019 11:19:12 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Building a Syllable Dictionary with Python</title>
+            <link>https://zacs.site//blog/building-a-syllable-dictionary-with-python.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/building-a-syllable-dictionary-with-python.html</guid>
+
+            <pubDate>Fri, 04 Oct 2019 23:19:07 GMT</pubDate>
+            <description>
+
+&lt;html&gt;
+&lt;style type="text/css"&gt;
+.string { background-color: #fff0f0 }
+.keyword {color: #008800; font-weight: bold }
+.int { color: #0000DD; font-weight: bold }
+.comment { color: #888888 }
+&lt;/style&gt;
+
+&lt;p&gt;As most projects do, this one started small. I already had a way to preview Markdown files. &lt;a href="https://zacs.site//projects.html#proofer"&gt;Proofer&lt;/a&gt; also counts words, sentences, and paragraphs, then averages those values and estimates reading time. The script finds &lt;a href="http://www.plainenglish.co.uk/the-a-z-of-alternative-words.html"&gt;complex or overused phrases&lt;/a&gt;, and highlights repeated words, be verbs, and adverbs that make for weak writing, too. It also calculates the Gunning Fog Index, and scores for the Flesch-Kincaid reading ease and grade level tests. I built this script to give me a few more features than &lt;a href="https://marked2app.com/"&gt;Marked&lt;/a&gt;, which I had used to proof my writing for years. It worked well, but runtime shot up if it had to process posts with more than a few hundred words. I set out to fix this, and ended up building an entire syllable dictionary in Python. Proofer has still not gotten any faster.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/building-a-syllable-dictionary-with-python.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>The Importance of Proper Trailer Loading</title>
             <link>https://jalopnik.com/this-demonstration-shows-why-proper-trailer-loading-is-1838296236</link>
