@@ -616,7 +616,8 @@ def GenSite():
 def GenPage(source, timestamp):
     global content
 
-    md.clear()
+    # md.clear()
+    md = Markdown(conf.base_url)
 
     src = "Content/"+source
     dst = "./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html"
@@ -701,7 +702,7 @@ def GenPage(source, timestamp):
     utime(dst, (mtime, mtime))
 
     # Cleanup
-    del src, dst, source_fd, idx, title, target_fd, mtime, local_content, ptype
+    del src, dst, source_fd, idx, title, target_fd, mtime, local_content, ptype, md
 
     return article_title
 
