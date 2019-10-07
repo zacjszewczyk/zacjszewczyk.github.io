@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 07 Oct 2019 12:34:19 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2019 12:01:23 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>First Crack Release Notes, September 2019</title>
+            <link>https://zacs.site//blog/first-crack-release-notes-0919.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/first-crack-release-notes-0919.html</guid>
+
+            <pubDate>Mon, 07 Oct 2019 12:01:17 GMT</pubDate>
+            <description>
+
+&lt;p&gt;As I rolled into the last week of September, I started thinking about this post and how I have done almost nothing for it. I put a lot of work into some major performance wins &lt;a href="https://zacs.site/blog/first-crack-release-notes-0819.html"&gt;last month&lt;/a&gt;, but lost almost all that momentum when I decided to write my own &lt;a href="https://www.instapaper.com"&gt;Instapaper&lt;/a&gt;-like read later service in September. It needs some more work before I release it, but I will. I did get a couple things done, though, even if I did forget to post this until the first week of October had already passed; I did not neglect &lt;a href="https://zacs.site//projects.html#firstCrack"&gt;First Crack&lt;/a&gt; entirely.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/first-crack-release-notes-0919.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Building a Syllable Dictionary with Python</title>
             <link>https://zacs.site//blog/building-a-syllable-dictionary-with-python.html</link>
