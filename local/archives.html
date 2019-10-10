@@ -63,6 +63,25 @@
 </table>
 </article>
 <article style='text-align:center;padding:20pt;font-size:200%;'><a href='/blog/2012.html'>2012</a></article><article>                    <h2 style="text-align:center;">
+                        <a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos" class="linkpost">Pushing to Multiple Repos</a>
+                    </h2>
+                    <time datetime="2019-09-06" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="blog/2019.html">2019</a>/<a href="blog/2019-09.html">09</a>/06 07:11:37 EST</time>
+<p>Full credit to Alex Armstrong and <a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos">his helpful article</a> for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these four lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.</p>
+
+<pre class='shell'>
+git init
+git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL
+git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL
+git add .; git commit -m "Initial commit."; git push
+</pre>
+
+<p>These simple commands make sure that for all my projects, I have a local copy, a local backup, a cloud backup, and two more off-site copies of all my work&#160;&#8212;&#160;just in case.</p>
+
+</div>
+
+    <p class='read_more_paragraph'>
+        <a style='text-decoration:none;' href='blog/pushing-to-multiple-repos.html'>&#x24E9;</a>
+    </p></article><article>                    <h2 style="text-align:center;">
                         <a href="https://thevaluable.dev/developer-stress-management/" class="linkpost">How to Manage Stress as a Developer: Practical Tips</a>
                     </h2>
                     <time datetime="2019-09-05" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="blog/2019.html">2019</a>/<a href="blog/2019-09.html">09</a>/05 07:09:55 EST</time>
