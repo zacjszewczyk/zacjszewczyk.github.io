@@ -163,7 +163,7 @@ code {
     background-color: #444;
     color: #e4e4e4;
   }
-  a {
+  a, .linkpost, .original {
     color: #e39777;
   }
   img {
