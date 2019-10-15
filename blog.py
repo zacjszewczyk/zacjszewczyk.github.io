@@ -440,8 +440,8 @@ def CloseTemplateBuild(target, scripts=""):
 def HandleYear(year):
     # Make global variables accessible in the method, and initialize method variables.
     global files, content
-	
-	# Initialize Markdown Parser
+
+    # Initialize Markdown Parser
     md = Markdown(conf.base_url)
 
     # For each year in which a post was made, generate a 'year' file, that
@@ -697,7 +697,7 @@ def GenPage(source, timestamp):
 
     # Cleanup
     del src, dst, source_fd, idx, title, target_fd, mtime, local_content, ptype
-	# del md
+    # del md
 
     return article_title
 
@@ -855,16 +855,16 @@ def Init():
             exit(1)
 
     # Make sure ./local exists with its subfolders
-	if (not isdir("./local")):
+    if (not isdir("./local")):
         mkdir("./local")
-	if (not isdir("./local/blog")):
+    if (not isdir("./local/blog")):
         mkdir("./local/blog")
     if (not isdir("./local/assets")):
         mkdir("./local/assets")
 
     # Make global variables accessible in the method, and initialize method variables.
     global files, content
-	# global md
+    # global md
     files = {}
 
     # Open the template file, split it, modify portions as necessary, and store each half in a list.
