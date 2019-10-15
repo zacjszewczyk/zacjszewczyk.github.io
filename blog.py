@@ -416,15 +416,6 @@ def BuildFromTemplate(target, title, bodyid, description="", sheets="", passed_c
     # Cleanup
     del fd
 
-# Method: CheckDirAndCreate
-# Purpose: Check for the existence of a given directory, and create it if it
-#          doesn't exist.
-# Parameters:
-# - tgt: Directory to test and maybe create
-def CheckDirAndCreate(tgt):
-    if (not isdir(tgt)):
-        mkdir(tgt)
-
 # Method: CloseTemplateBuild
 # Purpose: Open the target file and write the closing HTML to it, with an
 #          optional field for inserted scripts.
@@ -864,9 +855,12 @@ def Init():
             exit(1)
 
     # Make sure ./local exists with its subfolders
-    CheckDirAndCreate("./local")
-    CheckDirAndCreate("./local/blog")
-    CheckDirAndCreate("./local/assets")
+	if (not isdir("./local")):
+        mkdir("./local")
+	if (not isdir("./local/blog")):
+        mkdir("./local/blog")
+    if (not isdir("./local/assets")):
+        mkdir("./local/assets")
 
     # Make global variables accessible in the method, and initialize method variables.
     global files, content
