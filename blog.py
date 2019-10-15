@@ -449,6 +449,9 @@ def CloseTemplateBuild(target, scripts=""):
 def HandleYear(year):
     # Make global variables accessible in the method, and initialize method variables.
     global files, content
+	
+	# Initialize Markdown Parser
+    md = Markdown(conf.base_url)
 
     # For each year in which a post was made, generate a 'year' file, that
     # contains links to each month in which a post was published.
@@ -614,10 +617,10 @@ def GenSite():
 # - source: Filename of the source content file. (String)
 # - timestamp: Timestamp for reverting update time, format %Y/%m/%d %H:%M:%S. (String)
 def GenPage(source, timestamp):
-    global content
+    global content, md
 
-    # md.clear()
-    md = Markdown(conf.base_url)
+    md.clear()
+    # md = Markdown(conf.base_url)
 
     src = "Content/"+source
     dst = "./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html"
@@ -702,7 +705,8 @@ def GenPage(source, timestamp):
     utime(dst, (mtime, mtime))
 
     # Cleanup
-    del src, dst, source_fd, idx, title, target_fd, mtime, local_content, ptype, md
+    del src, dst, source_fd, idx, title, target_fd, mtime, local_content, ptype
+	# del md
 
     return article_title
 
@@ -865,11 +869,9 @@ def Init():
     CheckDirAndCreate("./local/assets")
 
     # Make global variables accessible in the method, and initialize method variables.
-    global md, files, content
+    global files, content
+	# global md
     files = {}
-
-    # Initialize Markdown Parser
-    md = Markdown(conf.base_url)
 
     # Open the template file, split it, modify portions as necessary, and store each half in a list.
     fd = open("system/template.htm", "r", encoding=ENCODING)
