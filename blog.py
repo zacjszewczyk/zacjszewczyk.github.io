@@ -862,9 +862,6 @@ def Init():
     global files, content, md
     files = {}
 
-    # Initialize Markdown Parser
-    md = Markdown(conf.base_url)
-
     # Open the template file, split it, modify portions as necessary, and store each half in a list.
     fd = open("system/template.htm", "r", encoding=ENCODING)
     content = fd.read()
