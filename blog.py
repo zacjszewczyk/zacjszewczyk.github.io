@@ -440,12 +440,6 @@ def CloseTemplateBuild(target, scripts=""):
 def HandleYear(year):
     # Make global variables accessible in the method, and initialize method variables.
     global files, content
-<<<<<<< HEAD
-
-    # Initialize Markdown Parser
-    md = Markdown(conf.base_url)
-=======
->>>>>>> parent of 85b8eb592... Tried to fix MD parser.
 
     # For each year in which a post was made, generate a 'year' file, that
     # contains links to each month in which a post was published.
@@ -699,12 +693,7 @@ def GenPage(source, timestamp):
     utime(dst, (mtime, mtime))
 
     # Cleanup
-<<<<<<< HEAD
-    del src, dst, source_fd, idx, title, target_fd, mtime, local_content, ptype
-    # del md
-=======
     del src, dst, source_fd, idx, title, target_fd, mtime, local_content, ptype, md
->>>>>>> parent of 85b8eb592... Tried to fix MD parser.
 
     return article_title
 
@@ -870,12 +859,7 @@ def Init():
         mkdir("./local/assets")
 
     # Make global variables accessible in the method, and initialize method variables.
-<<<<<<< HEAD
-    global files, content
-    # global md
-=======
-    global md, files, content
->>>>>>> parent of 85b8eb592... Tried to fix MD parser.
+    global files, content, md
     files = {}
 
     # Initialize Markdown Parser
