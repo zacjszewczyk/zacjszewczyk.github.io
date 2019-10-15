@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Writing is Thinking
+Link: https://blog.stephsmith.io/learning-to-write-with-confidence/
+Pubdate: 2019/10/15 07:30:23
+Author: Zac J. Szewczyk
+
+The first time I read through Steph Smith's [*Writing is Thinking: Learning to Write with Confidence*](https://blog.stephsmith.io/learning-to-write-with-confidence/), I thought it was fine. Then I read it again. The second time, I thought it was great--an interesting breakdown of a much more mature writing process than my own, that gave me some good ideas for writing more and writing better. I have not done much writing about writing [since I started again](Before Now and Future.txt), but I hope to; maybe something like [this](https://blog.stephsmith.io/learning-to-write-with-confidence/), about how Steph's piece changes my process, will be my first.
