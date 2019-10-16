@@ -7,9 +7,31 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 15 Oct 2019 04:09:50 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2019 12:30:19 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Computer Files are Going Extinct</title>
+            <link>https://onezero.medium.com/the-death-of-the-computer-file-doc-43cb028c0506</link>
+            <guid isPermaLink='true'>https://onezero.medium.com/the-death-of-the-computer-file-doc-43cb028c0506</guid>
+
+            <pubDate>Wed, 16 Oct 2019 12:30:15 GMT</pubDate>
+            <description>
+
+&lt;p&gt;From Simon Pitt &lt;a href="https://onezero.medium.com/the-death-of-the-computer-file-doc-43cb028c0506"&gt;over at OneZero&lt;/a&gt;, emphasis mine:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;The other day, I came across a website I&#38;#8217;d written over two decades ago. I double-clicked the file, and it opened and ran perfectly. Then I tried to run a website I&#38;#8217;d written 18 months ago and found I couldn&#38;#8217;t run it without firing up a web server, and when I ran NPM install, one or two of those 65,000 files had issues that meant node failed to install them and the website didn&#38;#8217;t run. When I did get it working, it needed a database. And then it relied on some third-party APIs and there was an issue with CORS because I hadn&#38;#8217;t whitelisted localhost. My website made of files carried on, chugging along. &lt;strong&gt;This isn&#38;#8217;t me saying that things were better in the old days. I&#38;#8217;m just saying that years ago websites were made of files; now they are made of dependencies.&lt;/strong&gt;&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Call me old-fashioned, but I do think things were better in the old days, &lt;a href="https://zacs.site//projects.html#firstCrack"&gt;so I&#38;#8217;ll stick to static files and vanilla Python for my projects&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/computer-files-are-going-extinct.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Writing is Thinking</title>
             <link>https://blog.stephsmith.io/learning-to-write-with-confidence/</link>
