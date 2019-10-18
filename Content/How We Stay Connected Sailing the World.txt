@@ -1,0 +1,7 @@
+Type: linkpost
+Title: How We Stay Connected Sailing the World.txt
+Link: https://www.gonewiththewynns.com/sailboat-wifi-phone-satellite
+Pubdate: 2019/10/18 07:34:06
+Author: Zac J. Szewczyk
+
+Jason and Nikki Wynn wrote a fantastic article that explains how they get Internet access on their sailboat. I spend a lot of time thinking about this, as I prepare to one day build and live in [my own RV](/projects.html#lmtvRV). I have an article in the works that outlines a few different approaches, as well as my own plan. In brief, though, I plan to use a dedicated LTE modem for my primary connection, with a satellite link as a fallback. This will give me a stronger connection than a cellphone, hotspot, or even the oft-cited WeBoost in most of the Americas. On the off-chance I have no signal but need one, satellite data prices have come down enough to make that a viable way to ensure I always have some sort of connectivity.
