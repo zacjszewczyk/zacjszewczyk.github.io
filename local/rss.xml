@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 18 Oct 2019 11:34:46 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 21 Oct 2019 12:07:01 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>More bash tricks</title>
+            <link>https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash</link>
+            <guid isPermaLink='true'>https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash</guid>
+
+            <pubDate>Mon, 21 Oct 2019 12:06:49 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Jude Robinson &lt;a href="https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash"&gt;over at Coderwall&lt;/a&gt; posted quick fixes for two long-time annoyances with bash, one for tab completion&#38;#160;&#38;#8212;&#38;#160;case insensitivity and having to double-tap the Tab key to view partial matches&#38;#160;&#38;#8212;&#38;#160;along with what I will call contextual command history: the ability to type &lt;code&gt;cd&lt;/code&gt; and then use the arrow keys to work through all previous entries that started with &lt;code&gt;cd&lt;/code&gt;. Finally.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/more-bash-tricks.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>How We Stay Connected Sailing the World.txt</title>
             <link>https://www.gonewiththewynns.com/sailboat-wifi-phone-satellite</link>
