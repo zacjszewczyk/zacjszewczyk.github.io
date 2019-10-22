@@ -169,4 +169,7 @@ code {
   img {
     filter: grayscale(30%);
   }
+  code {
+    background-color: #666 !important;
+  }
 }
