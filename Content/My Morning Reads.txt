@@ -64,7 +64,7 @@ These sites don't belong to any one of the categories above, but I have found th
 
 #### News Aggregators
 
-I use one news aggregator. [Popurls](http://popurls.com/) draws from many of the sites above, so I seldom find new things here, but it does a good job of showing me articles I might have missed or glossed over. If I see a post here that I saw on another site, that I chose not to read earlier, I will give it a second look. It must have gotten popular for a good reason, after all. Popurls also draws from a few sources I do not follow, strips out all but the hottest pieces, and presents them in a tidy package. I find value in this, too. As I refine the list of sites I visit every morning, I will get to the point where I no longer need this one.
+I use one news aggregator. [Popurls](http://popurls.com/) draws from many of the sites above, so I seldom find new things here, but it does a good job of showing me articles I might have missed or glossed over. If I see a post here that I saw on another site, that I chose not to read earlier, I will give it a second look. It must have gotten popular for a good reason, after all. Popurls also draws from a few sources I do not ofpoop follow, strips out all but the hottest pieces, and presents them in a tidy package. I find value in this, too. As I refine the list of sites I visit every morning, I will get to the point where I no longer need this one.
 
 * [http://popurls.com/](http://popurls.com/)
 
@@ -91,8 +91,12 @@ To make your life a little easier, I list the fifteen sites I read to keep up wi
 
 ### Newsletters
 
-I take great care in choosing the last piece in my current events collection strategy. Newsletters command much more time and attention than a simple website, and I do not believe in wasting either. The one newsletter that makes that cut, the [Defense News](https://www.defensenews.com/) [Early Bird Brief](https://www.defensenews.com/ebb/), covers news on the military-industrial complex and the surveillance apparatus. If you work in one of these spaces, I suggest you check it out.
+I take great care in choosing the last piece in my current events collection strategy. Newsletters command much more time and attention than a simple website, and I do not believe in wasting either. The first newsletter that makes that cut, the [Defense News](https://www.defensenews.com/) [Early Bird Brief](https://www.defensenews.com/ebb/), covers news on the military-industrial complex and the surveillance apparatus. If you work in one of these spaces, I suggest you check it out.
+
+The second, [BIG by Mathew Stoller](https://mattstoller.substack.com/), tackles "the politics of monopoly". Mat’s historical insight and shrewd analysis makes these newsletters interesting reads, every time. As for the third, [Wall Street Breakfast](https://seekingalpha.com/article/4297773-wall-street-breakfast-brexit-hangs-balance), this one helps me stay up to date with not only financial news, but--to my surprise--many other sectors as well. The writers over at Seeking Alpha do great work.
 
 * [https://www.defensenews.com/ebb/](https://www.defensenews.com/ebb/) - The Early Bird Brief.
+* [https://mattstoller.substack.com/](https://mattstoller.substack.com/) - BIG by Matt Stoller.
+* [https://seekingalpha.com/article/4297773-wall-street-breakfast-brexit-hangs-balance](https://seekingalpha.com/article/4297773-wall-street-breakfast-brexit-hangs-balance) - Seeking Alpha Wall Street Breakfast.
 
 These sites help me educate myself, and help me keep up with current events--but the onus remains on you to work through this list every day and with intent to learn. If not, you might as well go back to Facebook.
