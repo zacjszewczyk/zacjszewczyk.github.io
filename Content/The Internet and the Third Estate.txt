@@ -1,0 +1,13 @@
+Type: linkpost
+Title: The Internet and the Third Estate
+Link: https://stratechery.com/2019/the-internet-and-the-third-estate/
+Pubdate: 2019/10/23 06:57:31
+Author: Zac J. Szewczyk
+
+Ben Thompson, likening Facebook to the printing press:
+
+> “... the printing press effectively overthrew the First Estate, leading to the establishment of nation-states and the creation and empowerment of a new nobility[, the Second Estate]. The implication of overthrowing the Second Estate, via the empowerment of commoners[, the Third Estate], is almost too radical to imagine.”
+
+[A fascinating perspective](https://stratechery.com/2019/the-internet-and-the-third-estate/). The First Estate did not lose control without a fight--and a great deal of complaining--and it seems the Second Estate will follow suit. Ben made this point back in 2016 in [*The Voters Decide*](https://stratechery.com/2016/the-voters-decide/), but did a much better job in here.
+
+Since this has become a politics-adjacent post, I have found Mathew Stoller's [BIG newsletter](https://mattstoller.substack.com/) quite interesting over the last few weeks, too. As promised, I continue to update [*Keeping Up with Current Events*](My Morning Reads.txt) to reflect the list of websites and newsletters I use to stay well-informed; Mat and Ben have both made the list.
