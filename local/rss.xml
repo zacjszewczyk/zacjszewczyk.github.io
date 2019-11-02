@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 24 Oct 2019 09:34:40 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 02 Nov 2019 08:05:26 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>First Crack Release Notes, October 2019</title>
+            <link>https://zacs.site//blog/first-crack-release-notes-1019.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/first-crack-release-notes-1019.html</guid>
+
+            <pubDate>Sat, 02 Nov 2019 20:05:01 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Again in October, like &lt;a href="https://zacs.site/blog/first-crack-release-notes-0919.html"&gt;in September&lt;/a&gt;, I spent most of my dev time on an Instapaper-like read later service. I use it every day, and plan to release it sometime soon. I did get a couple things done, though; once again, I did not neglect &lt;a href="https://zacs.site//projects.html#firstCrack"&gt;First Crack&lt;/a&gt; entirely.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/first-crack-release-notes-1019.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Bollinger's electric trucks will cost $125,000</title>
             <link>https://www.theverge.com/2019/10/24/20930252/bollinger-motors-electric-trucks-b1-b2-trucks-price-specs</link>
