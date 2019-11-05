@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 02 Nov 2019 08:05:26 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 05 Nov 2019 11:49:54 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Should You Write a Paid Newsletter?</title>
+            <link>https://zacs.site//blog/should-you-write-a-paid-newsletter.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/should-you-write-a-paid-newsletter.html</guid>
+
+            <pubDate>Tue, 05 Nov 2019 11:49:22 GMT</pubDate>
+            <description>
+
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Betteridge%27s_law_of_headlines"&gt;Of course&lt;/a&gt;, I think no&#38;#160;&#38;#8212;&#38;#160;but a few people think yes: &lt;a href="https://www.theatlantic.com/technology/archive/2019/10/substack-revue-email-newsletter-startups-tinyletter/599557/"&gt;investors see big money in the space&lt;/a&gt;, and &lt;a href="https://indiemailer.com/read/why-you-should-start-a-paid-newsletter/"&gt;it works out for some&lt;/a&gt;. I think no, though&#38;#160;&#38;#8212;&#38;#160;for most aspiring writers, anyway&#38;#160;&#38;#8212;&#38;#160;and this is why: as I said in &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;&lt;em&gt;Keeping Up with Current Events&lt;/em&gt;&lt;/a&gt;, a different dynamic exists in this space:&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/should-you-write-a-paid-newsletter.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>First Crack Release Notes, October 2019</title>
             <link>https://zacs.site//blog/first-crack-release-notes-1019.html</link>
