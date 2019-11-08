@@ -7,9 +7,35 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 05 Nov 2019 12:20:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 08 Nov 2019 08:34:15 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Inside the Microsoft team tracking the world's most dangerous hackers</title>
+            <link>https://www.technologyreview.com/s/614646/inside-the-microsoft-team-tracking-the-worlds-most-dangerous-hackers/</link>
+            <guid isPermaLink='true'>https://www.technologyreview.com/s/614646/inside-the-microsoft-team-tracking-the-worlds-most-dangerous-hackers/</guid>
+
+            <pubDate>Fri, 08 Nov 2019 20:34:08 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Patrick O&#38;#8217;Neill did &lt;a href="https://www.technologyreview.com/s/614646/inside-the-microsoft-team-tracking-the-worlds-most-dangerous-hackers/"&gt;a nice job&lt;/a&gt; explaining why Microsoft, as an organization, does threat intelligence so well. Yes, it has piles of money and legions of smart people to throw at this problem, but Microsoft&#38;#8217;s biggest leg up over everyone else is the massive data flow its ubiquity enables. This means its Threat Intelligence Center sees things no one else does, and has the context to identify malicious activity that&#38;#160;&#38;#8212;&#38;#160;even given the same raw data&#38;#160;&#38;#8212;&#38;#160;no one else would know to flag. Those looking to step into the cybersecurity realm, even if just to beef up their home network, should take note. &lt;/p&gt;
+
+&lt;p&gt;You may also find these resources useful: &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://threatconnect.com/wp-content/uploads/19-TC-Maturing-a-Threat-Intelligence-Program-Whitepaper-Web.pdf"&gt;Maturing A Threat Intelligence Program&lt;/a&gt; - ThreatConnect explains the five maturity levels of cybersecurity programs, and offers helpful advice for getting better at each stage.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.sans.org/cyber-security-summit/archives/file/summit-archive-1492183475.pdf"&gt;You&#38;#8217;ve Got 99 Problems And A Budget&#38;#8217;s One&lt;/a&gt; - I hate the presentation, but Rebekah Brown&#38;#8217;s advice is sound. &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://privacy-pc.com/articles/no-budget-threat-intelligence-tracking-malware-campaigns-on-the-cheap.html"&gt;No Budget Threat Intelligence&lt;/a&gt; - Andrew Morris turned a good talk into a great writeup on no-budget threat intelligence, that everyone should read. &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.splunk.com/blog/2019/04/16/threat-intel-and-splunk-enterprise-security-part-1-what-s-the-point-of-threat-intel-in-es.html"&gt;What&#38;#8217;s The Point of Threat Intel in ES?&lt;/a&gt; - For those with a large budget to burn, Splunk does a lot of work to streamline this process. Even for those without Splunk, this post and its second part, &lt;a href="https://www.splunk.com/blog/2019/04/29/threat-intel-and-splunk-enterprise-security-part-2-adding-local-intel-to-enterprise-security.html"&gt;Adding Local Intel to Enterprise Security&lt;/a&gt;, outline some good techniques for getting started.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/inside-the-microsoft-team.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Should You Write a Paid Newsletter?</title>
             <link>https://zacs.site//blog/should-you-write-a-paid-newsletter.html</link>
