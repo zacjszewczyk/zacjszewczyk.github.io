@@ -66,6 +66,9 @@ h6 {
 #home #rss_link, #home #archives_link,
 #projects #rss_link, #projects #archives_link {
     display: none; }
+#home nav {
+    ;grid-template-columns:repeat(5,1fr)
+}
 hr {
     margin:50px auto;
     width:50%;
