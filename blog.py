@@ -9,6 +9,8 @@ from sys import exit, argv, stdout, stdin # Command line interface
 from tty import setraw, setcbreak # Raw input
 from termios import tcgetattr, tcsetattr, TCSAFLUSH # Backup/resume shell
 from os.path import exists # Reading input files
+from os import popen # Detect terminal size
+from re import sub # Change menu to try to avoid text wrapping
 
 # Class: c(olors)
 # Purpose: provide easy access to ANSI escape codes for styling output
@@ -64,6 +66,10 @@ def DisplayInterface(params,search_query="",end_action="continue"):
     * To exit this mode and build the site:          %sexit%s
     * To exit this mode and quit the program:        %s!exit%s
     """ % (c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
+
+    rows, columns = popen('stty size', 'r').read().split()
+    if (int(columns) < 59):
+        menu = sub(":\s+", ":\n        ", menu)
 
     # Continue prompting the user for input until they enter a valid argument
     while (True):
