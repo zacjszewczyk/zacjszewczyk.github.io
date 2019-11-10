@@ -32,10 +32,6 @@ h5 {
     font-size: 14pt; }
 h6 {
     font-size: 12pt; }
-.headers span {
-    display: none; }
-.headers:hover span{
-    display: inline; }
 #home section:first-of-type img {
     float: left;
     margin: 0em 1em 0em 0;
@@ -129,18 +125,12 @@ code {
     font-size: 200%;
     line-height: 150%;
 }
-#years_index {
-
-}
 
 /* Media Queries */
 @media screen and (max-width: 500px) {
     article {
         font-size: 90%;
         overflow: scroll;
-    }
-    body {
-        margin: 0 1em;
     }
     #home section:first-of-type img {
         float: initial;
