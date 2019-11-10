@@ -450,14 +450,16 @@ def HandleYear(year):
     # Write the opening HTML tags
     year_fd.write(content[2].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1))
     # Insert a 'big table' into the document, to better display the months listed.
-    year_fd.write("""<table style="width:100%;padding:20pt 0;" id="big_table">""")
-    year_fd.write("    <tr>\n        <td>%s</td>\n    </tr>\n" % (year))
+    # year_fd.write("""<table style="width:100%;padding:20pt 0;" id="big_table">""")
+    # year_fd.write("    <tr>\n        <td>%s</td>\n    </tr>\n" % (year))
+    year_fd.write("<div id=\"years_index\">\n<div>%s</div>\n" % (year))
     # Sort the sub-dictionaries by keys, months, then iterate over it. For each
     # month in which a post was made, generate a 'month' file that contains all
     # posts made during that month.
     for month in sorted(files[year], reverse=True):
         # Add a link to the month, to the year file it belongs to.
-        year_fd.write("    <tr>\n        <td><a href=\"%s\">%s</a></td>\n    </tr>\n" % (year+"-"+month+".html", months[month]))
+        # year_fd.write("    <tr>\n        <td><a href=\"%s\">%s</a></td>\n    </tr>\n" % (year+"-"+month+".html", months[month]))
+        year_fd.write("<div><a href=\"%s\">%s</a></div>" % (year+"-"+month+".html", months[month]))
         # Clear the 'month' file
         month_fd = open("./local/blog/"+year+"-"+month+".html", "w", encoding=ENCODING).close()
         month_fd = open("./local/blog/"+year+"-"+month+".html", "a", encoding=ENCODING)
@@ -489,7 +491,7 @@ def HandleYear(year):
         month_fd.close()
 
     # Write closing HTML tags to the year file.
-    year_fd.write("</table>\n"+content[1].replace("assets/", "../assets/"))
+    year_fd.write("</div>\n"+content[1].replace("assets/", "../assets/"))
     year_fd.close()
 
     # Cleanup
@@ -526,7 +528,7 @@ def GenBlog():
             # the row, and then puts three more year entries in the second row.
             # This code is stored in 'buff', and then added to the archives
             # page.
-            buff = """\n<article id="years">\n<div>"""
+            buff = """\n<article id="years_list">\n<div>"""
             for x in sorted(files, reverse=True):
                 buff += "\n<a href=\"/blog/%s\">%s</a></div>\n<div>" % (x.lower()+".html", x)
             buff += "\n</div>\n</article>"
