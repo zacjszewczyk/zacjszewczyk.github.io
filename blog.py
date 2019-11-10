@@ -526,17 +526,14 @@ def GenBlog():
             # the row, and then puts three more year entries in the second row.
             # This code is stored in 'buff', and then added to the archives
             # page.
-            buff = """\n<article>\n<table style="width:100%;padding:2% 0;" id="big_table">\n    <tr>\n"""
-            for each in sorted(files, reverse=True)[:3]:
-                buff += """\n        <td>\n            <a href=\"blog/%s\">%s</a>\n        </td>""" % (each.lower()+".html", each)
-            buff += """\n    </tr>\n    <tr>\n"""
-            for each in sorted(files, reverse=True)[3:]:
-                buff += """\n        <td>\n            <a href=\"blog/%s\">%s</a>\n        </td>""" % (each.lower()+".html", each)
-            buff += """\n    </tr>\n</table>\n</article>\n"""
+            buff = """\n<article id="years">\n<div>"""
+            for x in sorted(files, reverse=True):
+                buff += "\n<a href=\"/blog/%s\">%s</a></div>\n<div>" % (x.lower()+".html", x)
+            buff += "\n</div>\n</article>"
             archives_fd = open("./local/archives.html", "a", encoding=ENCODING)
             archives_fd.write(buff)
             del buff
-            archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s.html'>%s</a></article>" % (year, year))
+            # archives_fd.write("<article style='text-align:center;padding:20pt;font-size:200%%;'><a href='/blog/%s.html'>%s</a></article>" % (year, year))
             archives_fd.close()
             temp = year
 
