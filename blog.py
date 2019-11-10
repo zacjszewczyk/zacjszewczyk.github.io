@@ -67,6 +67,8 @@ def DisplayInterface(params,search_query="",end_action="continue"):
     * To exit this mode and quit the program:        %s!exit%s
     """ % (c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
 
+    # If the terminal window is less than 59 characters wide, resize the menu
+    # to better fit.
     rows, columns = popen('stty size', 'r').read().split()
     if (int(columns) < 59):
         menu = sub(":\s+", ":\n        ", menu)
