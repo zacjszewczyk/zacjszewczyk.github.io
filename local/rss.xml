@@ -7,9 +7,36 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 10 Nov 2019 09:37:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2019 01:12:40 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>You really can fool some of the people, all of the time</title>
+            <link>https://www.economist.com/international/2019/10/31/you-really-can-fool-some-of-the-people-all-of-the-time</link>
+            <guid isPermaLink='true'>https://www.economist.com/international/2019/10/31/you-really-can-fool-some-of-the-people-all-of-the-time</guid>
+
+            <pubDate>Tue, 12 Nov 2019 13:12:26 GMT</pubDate>
+            <description>
+
+&lt;p&gt;The Economist took an interesting look at how citizens view politicians when they lie, and their conclusion warrants concern: &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;You might expect (or hope) that thoughtful people would be more amenable to the force of fact-based evidence than most. Alas, no. According to David Perkins of Harvard University, the brighter people are, the more deftly they can conjure up post-hoc justifications for arguments that back their own side.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This leads well into a point Ryan Holiday made back in March, in &lt;a href="https://forge.medium.com/its-not-enough-to-be-right-you-also-have-to-be-kind-b8814111fe1"&gt;&lt;em&gt;It&#38;#8217;s Not Enough to Be Right&#38;#160;&#38;#8212;&#38;#160;You Also Have to Be Kind&lt;/em&gt;&lt;/a&gt;: &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;There is this unshakeable assumption that if they can just present the right fact[, ...] that people will change their minds. ... After spending years and millions of words and hours of video on this, we&#38;#8217;ve had almost zero success. Why? Because you can&#38;#8217;t reason people out of positions they didn&#38;#8217;t reason themselves into. No one responds well to having their identity attacked. No argument made in bad faith&#38;#160;&#38;#8212;&#38;#160;that the person on the other side is a moron or a dupe or a racist or a snowflake&#38;#160;&#38;#8212;&#38;#160;is ever going to be received in good faith.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The sooner this becomes not just common knowledge, but also common practice, the sooner we can move beyond petty divisions and focus on &lt;a href="https://dchhaddendum.libsyn.com/ep7-hardcore-history-on-fire"&gt;steering the empire from total collapse&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/some-of-the-people-all-of-the-time.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Inside the Microsoft team tracking the world's most dangerous hackers</title>
             <link>https://www.technologyreview.com/s/614646/inside-the-microsoft-team-tracking-the-worlds-most-dangerous-hackers/</link>
