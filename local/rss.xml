@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 15 Nov 2019 11:30:54 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 18 Nov 2019 04:59:14 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Pipe to/from the clipboard in Bash script</title>
+            <link>https://stackoverflow.com/questions/749544/pipe-to-from-the-clipboard-in-bash-script</link>
+            <guid isPermaLink='true'>https://stackoverflow.com/questions/749544/pipe-to-from-the-clipboard-in-bash-script</guid>
+
+            <pubDate>Mon, 18 Nov 2019 16:58:50 GMT</pubDate>
+            <description>
+
+&lt;p&gt;At home, I can send a link from any device to a local web server that saves it for later. Then, when I have time to read, I can see all my saved articles, move them into folders, and refer back to them as needed. At work, though, those links go into a text file. When I get home, I find the text file, open it, copy the list, clear the file, close it, and then send the list to the server. &lt;code&gt;pbcopy&lt;/code&gt; makes that process just a little easier. Now, &lt;code&gt;cat ingest.txt &#38;gt; pbcophy &#38;#38; echo "" &#38;gt; ingest.txt&lt;/code&gt; puts the contents of &lt;code&gt;ingest.txt&lt;/code&gt; on my clipboard and then clears the file, so I can add the links through the web interface with just a bit less hassle.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/pbcopy.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Start before you think you're ready</title>
             <link>https://austinkleon.com/2019/11/05/start-before-you-think-youre-ready/</link>
