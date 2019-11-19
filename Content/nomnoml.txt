@@ -1,0 +1,41 @@
+Type: original
+Title: Building a Simple Network Map with nomnoml
+Link: nomnoml.html
+Pubdate: 2019/11/19 06:42:51
+Author: Zac J. Szewczyk
+
+Avdi Grimm wrote an interesting post back in June, about [using text to create simple diagrams](https://avdi.codes/tools-for-turning-descriptions-into-diagrams/). He highlighted a few different tools, but one stood out: [nomnoml](http://www.nomnoml.com/). I used [UMLet](https://www.umlet.com/) a lot back in college, to create some mediocre user stories, which soured me on UML in general. I gave nomnoml a shot, though, and created this simple network diagram:
+
+![Example network diagram created with nomnoml](/assets/Images/example_network.png "Example network diagram created with nomnoml")
+
+Check out the code that generated it, below:
+
+```
+#.adversary: visual=rhomb fill=red
+#.cloud: visual=database
+#.router: visual=ellipse
+
+[<adversary>ENY]->[<cloud>Gray;space]
+[<cloud>Gray;space]<->firewall[\|\|\|\|]
+[\|\|\|\|]<->100.200.0.0/16[<router>✥]
+
+[<router>✥]<->100.200.1.0/24[Subnet 1;↔]
+[Subnet 1;↔]<->[M1_1]
+[Subnet 1;↔]<->[M2_1]
+[Subnet 1;↔]<->[M3_1]
+[Subnet 1;↔]<->[M4_1]
+
+[<router>✥]<->100.200.2.0/24[Subnet 2;↔]
+[Subnet 2;↔]<->[M1_2]
+[Subnet 2;↔]<->[M2_2]
+[Subnet 2;↔]<->[M3_2]
+[Subnet 2;↔]<->[M4_2]
+
+[<router>✥]<->100.200.3.0/24[DMZ;↔]
+[DMZ;↔]<->[Server]
+[DMZ;↔]<->[Plex]
+[DMZ;↔]<->[Pi]
+[DMZ;↔]<->[Pi2]
+```
+
+Most people use PowerPoint for simple network diagrams, and Visio Studio for more complex ones, but I liked using nomnoml more than either of those. Next time I need to mock up something simple, I'll go there first.
