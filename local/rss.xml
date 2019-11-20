@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 19 Nov 2019 01:26:28 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 20 Nov 2019 12:54:27 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>The Wothahellizat</title>
+            <link>https://www.autoblog.com/amp/2006/07/23/the-wothahellizat-winnegabos-weep-in-its-presence/</link>
+            <guid isPermaLink='true'>https://www.autoblog.com/amp/2006/07/23/the-wothahellizat-winnegabos-weep-in-its-presence/</guid>
+
+            <pubDate>Wed, 20 Nov 2019 12:54:19 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I found this incredible rig on Pinterest, of all places. Inspiration for the next version of &lt;a href="https://zacs.site//projects.html/lmtvRV"&gt;mine&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/the-wot.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Building a Simple Network Map with nomnoml</title>
             <link>https://zacs.site//blog/nomnoml.html</link>
