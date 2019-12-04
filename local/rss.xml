@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 04 Dec 2019 12:01:17 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Dec 2019 01:20:00 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>First Crack Release Notes, November 2019</title>
+            <link>https://zacs.site//blog/first-crack-release-notes-1119.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/first-crack-release-notes-1119.html</guid>
+
+            <pubDate>Wed, 04 Dec 2019 13:19:51 GMT</pubDate>
+            <description>
+
+&lt;p&gt;A few days late, again, but here it is: First Crack&#38;#8217;s release notes for November, 2019. Again in October, like &lt;a href="https://zacs.site/blog/first-crack-release-notes-0919.html"&gt;in September&lt;/a&gt;, I spent most of my dev time on an Instapaper-like read later service. I use it every day, and plan to release it. I did get a couple things done, though; once again, I did not neglect &lt;a href="https://zacs.site//projects.html#firstCrack"&gt;First Crack&lt;/a&gt; entirely.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/first-crack-release-notes-1119.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Thoughts on Tesla's Cybertruck</title>
             <link>https://zacs.site//blog/tesla-cybertruck.html</link>
