@@ -717,7 +717,6 @@ def Init():
     del fd
 
 class Orchestrator:
-    from Markdown2 import Markdown
     def __init__(self, o):
         self.md = self.Markdown(conf.base_url)
         # For each year in which a post was made, generate a 'year' file, that
