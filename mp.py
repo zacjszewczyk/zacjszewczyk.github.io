@@ -584,7 +584,6 @@ class Orchestrator:
         target_fd = open(dst, "w", encoding=ENCODING).close()
         target_fd = open(dst, "a", encoding=ENCODING)
 
-        # Insert Javascript code for device detection.
         local_content = content[2].replace("{{ BODYID }}", "post",1).replace("assets/", "/assets/")
 
         # Initialize idx to track line numbers, and title to hold the title block of each article.
