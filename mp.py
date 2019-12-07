@@ -718,7 +718,7 @@ def Init():
 
 class Orchestrator:
     def __init__(self, o):
-        self.md = self.Markdown(conf.base_url)
+        self.md = Markdown(conf.base_url)
         # For each year in which a post was made, generate a 'year' file, that
         # contains links to each month in which a post was published.
 
