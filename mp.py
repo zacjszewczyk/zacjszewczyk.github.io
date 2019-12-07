@@ -232,7 +232,6 @@ from locale import getpreferredencoding # Speed up file opens
 ##          of the posts made in that month as the elements. (Dictionary)
 ## - content: A string with the opening and closing HTML tags. (String)
 ## - months: A map of month numbers to names (Dictionary)
-## - md: Placeholder for instance of Markdown parser. (Class)
 files = {}
 content = ""
 months = {"01":"January","02":"February","03":"March","04":"April","05":"May","06":"June","07":"July","08":"August","09":"September","10":"October","11":"November","12":"December"}
@@ -780,6 +779,8 @@ class Orchestrator:
     # - source: Filename of the source content file. (String)
     # - timestamp: Timestamp for reverting update time, format %Y/%m/%d %H:%M:%S. (String)
     def GenPage(self, source, timestamp):
+        self.md.clear()
+
         global content
 
         src = "Content/"+source
@@ -895,7 +896,7 @@ def Terminate():
 # If run as an individual file, generate the site and report runtime.
 # If imported, only make methods available to imported program.
 if __name__ == '__main__':
-    # ActivateInterface()
+    ActivateInterface()
     
     t1 = datetime.now()
 
