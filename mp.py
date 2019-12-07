@@ -8,6 +8,12 @@ from os import listdir, stat
 from time import strftime, localtime
 from datetime import datetime
 
+# file operations
+from locale import getpreferredencoding
+
+# Global variables
+ENCODING = getpreferredencoding()
+
 class Orchestrator:
     from Markdown2 import Markdown
 
@@ -20,7 +26,7 @@ class Orchestrator:
             for day in o[1][month]:
                 print("    "+o[0]+"-"+month+"-"+day)
 
-    
+
 
     def __del__(self):
         del self.md
