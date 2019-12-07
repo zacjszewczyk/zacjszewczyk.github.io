@@ -751,7 +751,7 @@ class Orchestrator:
                         article_title = self.GenPage(files[o[0]][month][day][timestamp], "%s/%s/%s %s" % (o[0], month, day, timestamp))
                     else:
                         if (CompareMtimes("./Content/"+files[o[0]][month][day][timestamp], "./local/blog/"+files[o[0]][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
-                            article_title = GetTitle(files[o[0]][month][day][timestamp], "%s/%s/%s %s" % (o[0], month, day, timestamp))
+                            article_title = self.GetTitle(files[o[0]][month][day][timestamp], "%s/%s/%s %s" % (o[0], month, day, timestamp))
                         else:
                             # Generate each content file. "year", "month", "day", "timestamp"
                             # identify the file in the dictionary, and the passed time values
