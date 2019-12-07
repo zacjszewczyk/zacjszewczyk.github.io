@@ -14,10 +14,157 @@ from locale import getpreferredencoding
 # Global variables
 ENCODING = getpreferredencoding()
 
-class Orchestrator:
-    from Markdown2 import Markdown
+# Method: Init
+# Purpose: Instantiate the global variable 'content', to reduce duplicate I/O
+#          operations. Then clear the blog and archive structure files, and
+#          the RSS feed, and write the opening tags. Generate file dictionary.
+#          Make sure ./local exists.
+# Parameters: none
+def Init():
+    # Check for the existence of a ".config" file, which contains config info.
+    # On error, notify the user, create the file, and prompt the user to fill it out.
+    if (not isfile("./.config")):
+        stdout.write(c.FAIL+"The FirstCrack config file, './.config', does not exist. Would you like to create it now?\n"+c.ENDC)
+        res = GetUserInput("(y/n) # ")
 
+        while (res != "y" and res != "n"):
+            stdout.write(c.FAIL+"Invalid input. Please try again.\n"+c.ENDC)
+            res = GetUserInput("(y/n) # ")
+
+        if (res == "y"):
+            print(c.UNDERLINE+"Base URL"+c.ENDC+": The base domain for your website, i.e. https://zacs.site")
+            print(c.UNDERLINE+"Byline"+c.ENDC+": The name of the author, as you want it to display on all blog posts.")
+            print(c.UNDERLINE+"Full name"+c.ENDC+": The full, legal name of the content owner, for the copyright notice.")
+            print(c.UNDERLINE+"Keywords"+c.ENDC+": Key words that describe your website.")
+            print(c.UNDERLINE+"App name"+c.ENDC+": The name users will see if they put your site on their home screen.")
+            print(c.UNDERLINE+"Twitter URL"+c.ENDC+": The URL to your Twtitter profile.")
+            print(c.UNDERLINE+"Instagram URL"+c.ENDC+": The URL to your Instagram profile.")
+            print()
+
+            conf.base_url = GetUserInput("Base URL: ").rstrip("/")
+            conf.byline = GetUserInput("Byline: ")
+            conf.full_name = GetUserInput("Full name: ")
+            conf.meta_keywords = GetUserInput("Keywords: ")
+            conf.meta_appname = GetUserInput("App name: ")
+            conf.twitter_url = GetUserInput("Twitter URL: ")
+            conf.insta_url = GetUserInput("Instagram URL: ")
+            fd = open("./.config", "w", encoding=ENCODING)
+            fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = %s\nbyline = %s\nfull_name = %s\nmeta_keywords = %s\nmeta_appname = %s\ntwitter = %s\ninstagram = %s" % (conf.base_url, conf.byline, conf.full_name, conf.meta_keywords, conf.meta_appname, conf.twitter_url, conf.insta_url))
+            fd.close()
+        else:
+            print(c.FAIL+"Configuration file not created."+c.ENDC)
+            print(c.WARNING+"Please run again."+c.ENDC)
+            exit(0)
+
+        # Cleanup
+        del res
+
+        # Remove the migration script.
+        if (isfile("./.sys.sh")):
+            remove("./.sys.sh")
+
+    # On success, extract values and store them for use when building the site.
+    else:
+        # Open the './.config' file
+        fd = open("./.config", "r", encoding=ENCODING)
+        for i, line in enumerate(fd):
+            if (i == 9): # Extract base URL for site
+                conf.base_url = line.split(" = ")[1].strip()
+            elif (i == 10): # Extract author byline
+                conf.byline = line.split(" = ")[1].strip()
+            elif (i == 11): # Extract author full (legal) name
+                conf.full_name = line.split(" = ")[1].strip()
+            elif (i == 12): # Extract additional site keywords
+                conf.meta_keywords = line.split(" = ")[1].strip()
+            elif (i == 13): # Extract app name
+                conf.meta_appname = line.split(" = ")[1].strip()
+            elif (i == 14): # Extract Twitter profile URL
+                conf.twitter_url = line.split(" = ")[1].strip()
+            elif (i == 15): # Extract Instagram profile URL
+                conf.insta_url = line.split(" = ")[1].strip()
+        fd.close()
+
+        # Cleanup
+        del fd
+
+    # If any of these values were blank, notify the user and throw an error.
+    if (conf.base_url == "" or conf.byline == "" or conf.full_name == ""):
+        print(c.FAIL+"Error reading settings from './.config'. Please check file configuration and try again."+c.ENDC)
+        exit(0)
+    elif (conf.meta_keywords == "" or conf.meta_appname == "" or conf.twitter_url == "" or conf.insta_url == ""):
+        print(c.WARNING+"You have not finished initializing the configuration file. Please finish setting up './.config'.")
+
+    # Check for existence of system files and Content directory.
+    # These are requirements for First Crack; it will fail if they do not exist.
+    ## Check for the existence of the "./system" directory first...
+    if (not isdir("./system")):
+        print(c.FAIL+"\"./system\" directory does not exist. Exiting."+c.ENDC)
+        exit(0)
+    ## ...then for the existence of the Content directory
+    if (not isdir("./Content")):
+        print(c.FAIL+"\"./Content\" directory does not exist. Exiting."+c.ENDC)
+        exit(0)
+
+    ## Now ensure crucial system files exist
+    for f in ["template.htm", "index.html", "projects.html", "disclaimers.html"]:
+        if (not isfile("./system/"+f)):
+            print(c.FAIL+"\"./system/"+f+"\" does not exist. Exiting."+c.ENDC)
+            exit(1)
+
+    # Make sure ./local exists with its subfolders
+    if (not isdir("./local")):
+        mkdir("./local")
+    if (not isdir("./local/blog")):
+        mkdir("./local/blog")
+    if (not isdir("./local/assets")):
+        mkdir("./local/assets")
+
+    # Make global variables accessible in the method, and initialize method variables.
+    global files, content, md
+    files = {}
+
+    # Open the template file, split it, modify portions as necessary, and store each half in a list.
+    fd = open("system/template.htm", "r", encoding=ENCODING)
+    content = fd.read()
+    content = content.split("<!--Divider-->")
+    # This line replaces all generics in the template file with values in config file
+    content[0] = content[0].replace("{{META_KEYWORDS}}", conf.meta_keywords).replace("{{META_APPNAME}}", conf.meta_appname).replace("{{META_BYLINE}}", conf.byline).replace("{{META_BASEURL}}", conf.base_url)
+    # This line replaces placeholders with social media URLs in the config file
+    content[1] = content[1].replace("{{META_BYLINE}}", conf.full_name).replace("{{TWITTER_URL}}", conf.twitter_url).replace("{{INSTA_URL}}", conf.insta_url)
+    content.append(content[0].replace("index.html", "../index.html", 1).replace("blog.html", "../blog.html", 1).replace("explore.html", "../explore.html", 1).replace("archives.html", "../archives.html", 1).replace("projects.html", "../projects.html", 1))
+    fd.close()
+
+    # Clear and initialize the archives.html and blog.html files.
+    BuildFromTemplate(target="./local/archives.html", title="Post Archives - ", bodyid="postarchives", description="Every article Zac Szewczyk has ever posted, in chronological order, split up by year and divided by month.", sheets="", passed_content="")
+    BuildFromTemplate(target="./local/blog.html", title="Blog - ", bodyid="blog", description="Zac Szewczyk's main blog page, where you will find topics ranging from adventuring and writing to weightlifting and leadership, among other things.", sheets="", passed_content="")
+
+    # Clear and initialize the RSS feed
+    fd = open("./local/rss.xml", "w", encoding=ENCODING)
+    fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>%s</title>\n    <link>%s</link>\n    <description>RSS feed for %s's website, found at %s/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, %s. All rights reserved.</copyright>\n    <atom:link href="%s/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (conf.byline, conf.base_url, conf.byline, conf.base_url, conf.byline, conf.base_url, datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
+    fd.close()
+
+    # Generate a dictionary with years as the keys, and sub-dictinaries as the elements.
+    # These elements have months as the keys, and a list of the posts made in that month
+    # as the elements.
+    for each in listdir("Content"):
+        if (".txt" in each):
+            mtime = strftime("%Y/%m/%d/%H:%M:%S", localtime(stat("Content/"+each).st_mtime)).split("/")
+            if (mtime[0] not in files):
+                files[mtime[0]] = {}
+            if (mtime[1] not in files[mtime[0]]):
+                files[mtime[0]][mtime[1]] = {}
+            if (mtime[2] not in files[mtime[0]][mtime[1]]):
+                files[mtime[0]][mtime[1]][mtime[2]] = {}
+            if (mtime[3] not in files[mtime[0]][mtime[1]][mtime[2]]):
+                files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = {}
+            files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = each
+
+    # Cleanup
+    del fd
+
+class Orchestrator:
     def __init__(self, o):
+        from Markdown2 import Markdown
         self.md = self.Markdown("https://zacs.site")
         # # Year
         # print(o[0])
@@ -85,7 +232,97 @@ class Orchestrator:
         # Cleanup
         del year_fd, month_fd
 
+        # Method: GenPage
+        # Purpose: Given a source content file, generate a corresponding HTML structure file.
+        # Parameters:
+        # - source: Filename of the source content file. (String)
+        # - timestamp: Timestamp for reverting update time, format %Y/%m/%d %H:%M:%S. (String)
+        def GenPage(self, source, timestamp):
+            global content
 
+            src = "Content/"+source
+            dst = "./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html"
+
+            # Ensure source file contains header. If not, use the Migrate() method to generate it.
+            source_fd = open(src, "r", encoding=ENCODING)
+            line = source_fd.readline()
+            if (line[0:5] != "Type:"):
+                Migrate(source, timestamp)
+            source_fd.close()
+
+            # Open the source file in read mode.
+            source_fd = open(src, "r", encoding=ENCODING)
+
+            # Use the source file's name to calculate, clear, and re-open the structure file.
+            target_fd = open(dst, "w", encoding=ENCODING).close()
+            target_fd = open(dst, "a", encoding=ENCODING)
+
+            # Insert Javascript code for device detection.
+            local_content = content[2].replace("{{ BODYID }}", "post",1).replace("assets/", "/assets/")
+
+            # Initialize idx to track line numbers, and title to hold the title block of each article.
+            idx = 0
+            title = ""
+
+            # Iterate over each line in the source content file.
+            for i, line in enumerate(source_fd):
+                # In the first line, classify the article as a linkpost or an original piece.
+                if (idx == 0):
+                    ptype = line[6:].strip()
+                    if (ptype == "original"):
+                        title += "<article>\n                    <h2 style=\"text-align:center;\">\n                        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+                    else:
+                        title += "<article>\n                    <h2 style=\"text-align:center;\">\n                        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+                # In the second line of the file, add the article title.
+                elif (idx == 1):
+                    title = title.replace("{{URL_TITLE}}", line[7:].strip())
+                    local_content = local_content.replace("{{ title }}", line[7:].strip()+" - ")
+                # In the third line of the file, add the article URL to the title/link.
+                elif (idx == 2):
+                    line = line[6:].strip()
+                    if (line[0:4] != "http" and ("htm" == line[-3:])):
+                        line = line.replace(".htm", ".html").replace(" ", "-").lower()
+                    title = title.replace("{{URL}}", line)+"\n                    </h2>"
+                # In the fourth line of the file, read the pubdate, and add it to the article.
+                elif (idx == 3):
+                    # print(line)
+                    line = line[9:].strip().replace(" ", "/").split("/")
+                    title += """\n                    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">%s</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], conf.byline, line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
+                # In the fifth line of the file, we're reading the author line. Since we don't do anything
+                # with this, pass.
+                elif (idx == 4):
+                    pass
+                # Blank line between header and content
+                elif (idx == 5):
+                    pass
+                # First paragraph. Write the opening tags to the target, then the file's content as
+                # generated up to this point. Then write the first paragraph, parsed.
+                elif (idx == 6):
+                    target_fd.write(local_content.replace("{{META_DESC}}", line.replace('"', "&#34;").strip()).strip())
+                    target_fd.write("\n"+title.strip())
+                    target_fd.write("\n"+self.md.html(line).strip())
+                # For successive lines of the file, parse them as Markdown and write them to the file.
+                elif (idx > 5):
+                    # print(src)
+                    target_fd.write("\n"+self.md.html(line).rstrip('\n'))
+
+                # Increase the line number
+                idx += 1
+            else:
+                # At the end of the file, write closing HTML tags.
+                target_fd.write("\n"+self.md.html("{EOF}"))
+                target_fd.write("\n</div>\n                </article>")
+                target_fd.write(content[1].replace("assets/", "../assets/").replace("<!-- SCRIPTS BLOCK -->", """""",1))
+
+            # Close file descriptors.
+            target_fd.close()
+            source_fd.close()
+
+            mtime = stat("./Content/"+source).st_mtime
+            utime(dst, (mtime, mtime))
+
+            # Cleanup
+            del src, dst, source_fd, idx, title, target_fd, mtime, local_content, ptype
 
     def __del__(self):
         del self.md
@@ -93,19 +330,7 @@ class Orchestrator:
 t1 = datetime.now()
 
 files = {}
-
-for each in listdir("Content"):
-    if (".txt" in each):
-        mtime = strftime("%Y/%m/%d/%H:%M:%S", localtime(stat("Content/"+each).st_mtime)).split("/")
-        if (mtime[0] not in files):
-            files[mtime[0]] = {}
-        if (mtime[1] not in files[mtime[0]]):
-            files[mtime[0]][mtime[1]] = {}
-        if (mtime[2] not in files[mtime[0]][mtime[1]]):
-            files[mtime[0]][mtime[1]][mtime[2]] = {}
-        if (mtime[3] not in files[mtime[0]][mtime[1]][mtime[2]]):
-            files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = {}
-        files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = each
+Init()
 
 # for year in files:
 #     print(year)
