@@ -15,6 +15,48 @@ from os.path import isdir, isfile # File/folder existence operations
 # Global variables
 ENCODING = getpreferredencoding()
 
+# Method: BuildFromTemplate
+# Purpose: Build a target file, with a specified title and body id, and
+# optional fields for inserted stylesheets and content
+# Parameters:
+# - target: Target file name, including extension. (String)
+# - title: Value used in meta title field, and <title> element. (String)
+# - bodyid: ID for body element. (String)
+# - description: Value used in meta description field. (String)
+# - sheets: Any stylesheets to be inserted into the <head> element. (String)
+# - passed_content: Body content to insert into the <body> element. (String)
+def BuildFromTemplate(target, title, bodyid, description="", sheets="", passed_content=""):
+    # Make global variable accessible within the method
+    global content
+
+    # Clear the target file, then write the opening HTML code and any passed content.
+    open(target, "w", encoding=ENCODING).close()
+    fd = open(target, "a", encoding=ENCODING)
+    fd.write(content[0].replace("{{META_DESC}}", description).replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
+    fd.write(passed_content)
+    fd.close()
+
+    # Cleanup
+    del fd
+
+# Method: CloseTemplateBuild
+# Purpose: Open the target file and write the closing HTML to it, with an
+#          optional field for inserted scripts.
+# Parameters:
+# - target: Target file name, including extension. (String)
+# - scripts: Any Javascript to be inserted below the <body> element. (String)
+def CloseTemplateBuild(target, scripts=""):
+    # Make global variable accessible within the method
+    global content
+
+    # Write the trailing HTML tags from the template to the target file.
+    fd = open(target, "a", encoding=ENCODING)
+    fd.write(content[1].replace("<!-- SCRIPTS BLOCK -->", scripts))
+    fd.close()
+
+    # Cleanup
+    del fd
+
 # Config variables, read in from './.config'
 ## - base_url: The base domain name for your website, i.e. https://zacs.site"). (String)
 ## - byline: The name of the author, as you want it to display on all blog posts. (String)
