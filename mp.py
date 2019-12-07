@@ -174,7 +174,7 @@ def Init():
         mkdir("./local/assets")
 
     # Make global variables accessible in the method, and initialize method variables.
-    global files, content, md
+    global files, content
     files = {}
 
     # Open the template file, split it, modify portions as necessary, and store each half in a list.
