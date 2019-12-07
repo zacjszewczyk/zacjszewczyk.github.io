@@ -199,7 +199,9 @@ def BuildFromTemplate(target, title, bodyid, description="", sheets="", passed_c
     global content
 
     # Clear the target file, then write the opening HTML code and any passed content.
+    print("Clearing ",target)
     open(target, "w", encoding=ENCODING).close()
+    print("Cleared.")
     fd = open(target, "a", encoding=ENCODING)
     fd.write(content[0].replace("{{META_DESC}}", description).replace("{{ title }}", title).replace("{{ BODYID }}", bodyid, 1).replace("<!-- SHEETS -->", sheets, 1))
     fd.write(passed_content)
@@ -685,7 +687,7 @@ if __name__ == '__main__':
     t1 = datetime.now()
 
     Init()
-    
+    GenStatic()
     with Pool() as pool:
         pool.map(Orchestrator, files.items())
 
