@@ -717,8 +717,8 @@ def Init():
     del fd
 
 class Orchestrator:
+    md = ""
     def __init__(self, o):
-        self.md = Markdown(conf.base_url)
         # For each year in which a post was made, generate a 'year' file, that
         # contains links to each month in which a post was published.
 
@@ -743,6 +743,7 @@ class Orchestrator:
 
             # Sort the sub-dictionaries by keys, days, then iterate over it.
             for day in sorted(files[o[0]][month], reverse=True):
+                self.md = Markdown(conf.base_url)
                 # Sort the sub-dictionaries by keys, timestamps, then iterate over it
                 for timestamp in sorted(files[o[0]][month][day], reverse=True):
                     # If a structure file already exists, don't rebuild the HTML file for individual articles
@@ -775,98 +776,98 @@ class Orchestrator:
     # Method: GenPage
     # Purpose: Given a source content file, generate a corresponding HTML structure file.
     # Parameters:
-    # - source: Filename of the source content file. (String)
-    # - timestamp: Timestamp for reverting update time, format %Y/%m/%d %H:%M:%S. (String)
-    def GenPage(self, source, timestamp):
+    # - __source: Filename of the source content file. (String)
+    # - __timestamp: Timestamp for reverting update time, format %Y/%m/%d %H:%M:%S. (String)
+    def GenPage(self, __source, __timestamp):
         self.md.clear()
 
         global content
 
-        src = "Content/"+source
-        dst = "./local/blog/"+source.lower().replace(" ", "-")[0:-3]+"html"
+        __src = "Content/"+__source
+        __dst = "./local/blog/"+__source.lower().replace(" ", "-")[0:-3]+"html"
 
-        # Ensure source file contains header. If not, use the Migrate() method to generate it.
-        source_fd = open(src, "r", encoding=ENCODING)
-        line = source_fd.readline()
-        if (line[0:5] != "Type:"):
-            Migrate(source, timestamp)
-        source_fd.close()
+        # Ensure __source file contains header. If not, use the Migrate() method to generate it.
+        __source_fd = open(__src, "r", encoding=ENCODING)
+        __line = __source_fd.readline()
+        if (__line[0:5] != "Type:"):
+            Migrate(__source, __timestamp)
+        __source_fd.close()
 
-        # Open the source file in read mode.
-        source_fd = open(src, "r", encoding=ENCODING)
+        # Open the __source file in read mode.
+        __source_fd = open(__src, "r", encoding=ENCODING)
 
-        # Use the source file's name to calculate, clear, and re-open the structure file.
-        target_fd = open(dst, "w", encoding=ENCODING).close()
-        target_fd = open(dst, "a", encoding=ENCODING)
+        # Use the __source file's name to calculate, clear, and re-open the structure file.
+        __target_fd = open(__dst, "w", encoding=ENCODING).close()
+        __target_fd = open(__dst, "a", encoding=ENCODING)
 
-        local_content = content[2].replace("{{ BODYID }}", "post",1).replace("assets/", "/assets/")
+        __local_content = content[2].replace("{{ BODYID }}", "post",1).replace("assets/", "/assets/")
 
-        # Initialize idx to track line numbers, and title to hold the title block of each article.
-        idx = 0
-        title = ""
+        # Initialize __idx to track __line numbers, and title to hold the title block of each article.
+        __idx = 0
+        __title = ""
 
-        # Iterate over each line in the source content file.
-        for i, line in enumerate(source_fd):
-            # In the first line, classify the article as a linkpost or an original piece.
-            if (idx == 0):
-                ptype = line[6:].strip()
-                if (ptype == "original"):
-                    title += "<article>\n                    <h2 style=\"text-align:center;\">\n                        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+        # Iterate over each __line in the __source content file.
+        for i, __line in enumerate(__source_fd):
+            # In the first __line, classify the article as a linkpost or an original piece.
+            if (__idx == 0):
+                __ptype = __line[6:].strip()
+                if (__ptype == "original"):
+                    __title += "<article>\n                    <h2 style=\"text-align:center;\">\n                        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (__ptype)
                 else:
-                    title += "<article>\n                    <h2 style=\"text-align:center;\">\n                        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
-            # In the second line of the file, add the article title.
-            elif (idx == 1):
-                article_title = line[7:].strip()
-                title = title.replace("{{URL_TITLE}}", article_title)
-                local_content = local_content.replace("{{ title }}", line[7:].strip()+" - ")
-            # In the third line of the file, add the article URL to the title/link.
-            elif (idx == 2):
-                line = line[6:].strip()
-                if (line[0:4] != "http" and ("htm" == line[-3:])):
-                    line = line.replace(".htm", ".html").replace(" ", "-").lower()
-                title = title.replace("{{URL}}", line)+"\n                    </h2>"
-            # In the fourth line of the file, read the pubdate, and add it to the article.
-            elif (idx == 3):
-                # print(line)
-                line = line[9:].strip().replace(" ", "/").split("/")
-                title += """\n                    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">%s</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], conf.byline, line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
-            # In the fifth line of the file, we're reading the author line. Since we don't do anything
+                    __title += "<article>\n                    <h2 style=\"text-align:center;\">\n                        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (__ptype)
+            # In the second __line of the file, add the article title.
+            elif (__idx == 1):
+                __article_title = __line[7:].strip()
+                __title = __title.replace("{{URL_TITLE}}", __article_title)
+                __local_content = __local_content.replace("{{ title }}", __line[7:].strip()+" - ")
+            # In the third __line of the file, add the article URL to the title/link.
+            elif (__idx == 2):
+                __line = __line[6:].strip()
+                if (__line[0:4] != "http" and ("htm" == __line[-3:])):
+                    __line = __line.replace(".htm", ".html").replace(" ", "-").lower()
+                __title = __title.replace("{{URL}}", __line)+"\n                    </h2>"
+            # In the fourth __line of the file, read the pubdate, and add it to the article.
+            elif (__idx == 3):
+                # print(__line)
+                __line = __line[9:].strip().replace(" ", "/").split("/")
+                __title += """\n                    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">%s</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (__line[0], __line[1], __line[2], conf.byline, __line[0]+".html", __line[0], __line[0]+"-"+__line[1]+".html", __line[1], __line[2], __line[3])
+            # In the fifth __line of the file, we're reading the author __line. Since we don't do anything
             # with this, pass.
-            elif (idx == 4):
+            elif (__idx == 4):
                 pass
-            # Blank line between header and content
-            elif (idx == 5):
+            # Blank __line between header and content
+            elif (__idx == 5):
                 pass
             # First paragraph. Write the opening tags to the target, then the file's content as
             # generated up to this point. Then write the first paragraph, parsed.
-            elif (idx == 6):
-                target_fd.write(local_content.replace("{{META_DESC}}", line.replace('"', "&#34;").strip()).strip())
-                target_fd.write("\n"+title.strip())
-                target_fd.write("\n"+self.md.html(line).strip())
+            elif (__idx == 6):
+                __target_fd.write(__local_content.replace("{{META_DESC}}", __line.replace('"', "&#34;").strip()).strip())
+                __target_fd.write("\n"+__title.strip())
+                __target_fd.write("\n"+self.md.html(__line).strip())
             # For successive lines of the file, parse them as Markdown and write them to the file.
-            elif (idx > 5):
-                # print(src)
-                target_fd.write("\n"+self.md.html(line).rstrip('\n'))
+            elif (__idx > 5):
+                # print(__src)
+                __target_fd.write("\n"+self.md.html(__line).rstrip('\n'))
 
-            # Increase the line number
-            idx += 1
+            # Increase the __line number
+            __idx += 1
         else:
             # At the end of the file, write closing HTML tags.
-            target_fd.write("\n"+self.md.html("{EOF}"))
-            target_fd.write("\n</div>\n                </article>")
-            target_fd.write(content[1].replace("assets/", "../assets/").replace("<!-- SCRIPTS BLOCK -->", """""",1))
+            __target_fd.write("\n"+self.md.html("{EOF}"))
+            __target_fd.write("\n</div>\n                </article>")
+            __target_fd.write(content[1].replace("assets/", "../assets/").replace("<!-- SCRIPTS BLOCK -->", """""",1))
 
         # Close file descriptors.
-        target_fd.close()
-        source_fd.close()
+        __target_fd.close()
+        __source_fd.close()
 
-        mtime = stat("./Content/"+source).st_mtime
-        utime(dst, (mtime, mtime))
+        __mtime = stat("./Content/"+__source).st_mtime
+        utime(__dst, (__mtime, __mtime))
 
         # Cleanup
-        del src, dst, source_fd, idx, title, target_fd, mtime, local_content, ptype
+        del __src, __dst, __source_fd, __idx, __title, __target_fd, __mtime, __local_content, __ptype
 
-        return article_title
+        return __article_title
 
     def __del__(self):
         del self.md
