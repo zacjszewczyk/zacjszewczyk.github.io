@@ -514,7 +514,6 @@ def GenBlog():
                         # Increase the file index.
                         file_idx += 1
 
-
     # GenExplore(choices(file_buffer, k=3))
 
     # Cleanup
@@ -717,7 +716,6 @@ def Init():
     del fd
 
 class Orchestrator:
-    md = ""
     def __init__(self, o):
         # For each year in which a post was made, generate a 'year' file, that
         # contains links to each month in which a post was published.
@@ -743,9 +741,9 @@ class Orchestrator:
 
             # Sort the sub-dictionaries by keys, days, then iterate over it.
             for day in sorted(files[o[0]][month], reverse=True):
-                self.md = Markdown(conf.base_url)
                 # Sort the sub-dictionaries by keys, timestamps, then iterate over it
                 for timestamp in sorted(files[o[0]][month][day], reverse=True):
+                    self.md = Markdown(conf.base_url)
                     # If a structure file already exists, don't rebuild the HTML file for individual articles
                     if (not isfile("./local/blog/"+files[o[0]][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
                         article_title = self.GenPage(files[o[0]][month][day][timestamp], "%s/%s/%s %s" % (o[0], month, day, timestamp))
@@ -779,8 +777,6 @@ class Orchestrator:
     # - __source: Filename of the source content file. (String)
     # - __timestamp: Timestamp for reverting update time, format %Y/%m/%d %H:%M:%S. (String)
     def GenPage(self, __source, __timestamp):
-        self.md.clear()
-
         global content
 
         __src = "Content/"+__source
@@ -901,13 +897,13 @@ if __name__ == '__main__':
     t1 = datetime.now()
 
     Init()
-    # GenStatic()
+    GenStatic()
     with Pool() as pool:
         pool.imap_unordered(Orchestrator, files.items())
         pool.close()
         pool.join()
-    # GenBlog()
-    # Terminate()
+    GenBlog()
+    Terminate()
 
     t2 = datetime.now()
     print("Execution time: "+str(t2-t1)+"s")
