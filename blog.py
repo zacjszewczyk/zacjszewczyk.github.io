@@ -962,9 +962,7 @@ if __name__ == '__main__':
     
     # Use multithreading to speed up processing each year's posts
     with Pool() as pool:
-        pool.imap_unordered(HandleYear, files)
-        pool.close()
-        pool.join()
+        pool.map(HandleYear, files, 1)
 
     # Build the blog and archives pages, and the feed
     GenBlog()

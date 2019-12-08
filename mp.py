@@ -218,7 +218,7 @@ def GetLine(prompt):
 # Imports
 from os import listdir, stat, remove, utime, mkdir # File/folder operations
 from os.path import isdir, isfile # File/folder existence operations
-from time import strptime, strftime, mktime, localtime, gmtime # mod time ops
+from time import strptime, strftime, mktime, localtime, gmtime, sleep # mod time ops
 from datetime import datetime # Recording runtime
 from Markdown2 import Markdown # Markdown parser
 from ModTimes import CompareMtimes # Compare file mod times
@@ -899,10 +899,8 @@ if __name__ == '__main__':
     Init()
     GenStatic()
     with Pool() as pool:
-        pool.imap_unordered(Orchestrator, files.items())
-        pool.close()
-        pool.join()
-    GenBlog()
+        result = pool.apply_async(Orchestrator, files.items(), GenBlog)
+    # GenBlog()
     Terminate()
 
     t2 = datetime.now()
