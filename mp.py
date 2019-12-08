@@ -900,13 +900,13 @@ if __name__ == '__main__':
     t1 = datetime.now()
 
     Init()
-    GenStatic()
+    # GenStatic()
     with Pool() as pool:
         pool.imap_unordered(Orchestrator, files.items())
         pool.close()
         pool.join()
-    GenBlog()
-    Terminate()
+    # GenBlog()
+    # Terminate()
 
     t2 = datetime.now()
     print("Execution time: "+str(t2-t1)+"s")
