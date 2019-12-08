@@ -562,12 +562,10 @@ def GenBlog():
         month = choice(list(files[year]))
         day = choice(list(files[year][month]))
         timestamp = choice(list(files[year][month][day]))
-        post = files[year][month][day][timestamp]
-        # print(post)
-        AppendContentOfXToY("./local/explore", post, timestamp)
+        AppendContentOfXToY("./local/explore", files[year][month][day][timestamp], timestamp)
 
     # Cleanup
-    del file_idx, fd
+    del file_idx, fd, month, day, timestamp
 
 # Method: GenPage
 # Purpose: Given a source content file, generate a corresponding HTML structure file.
@@ -950,11 +948,11 @@ if __name__ == '__main__':
     ## Build the 404.html file.
     BuildFromTemplate(target="./local/404.html", title="Error - ", bodyid="error", description="", sheets="", passed_content="")
     ## Explore file
-    BuildFromTemplate("./local/explore.html", "Explore", "explore", description="Explore page", sheets="", passed_content="")
+    BuildFromTemplate("./local/explore.html", "Explore -", "explore", description="Explore page", sheets="", passed_content="")
     
     # Use multithreading to speed up processing each year's posts
     pool = Pool()
-    pool.imap_unordered(HandleYear, sorted(files, reverse=True))
+    pool.imap_unordered(HandleYear, files)
     pool.close()
     pool.join()
 
