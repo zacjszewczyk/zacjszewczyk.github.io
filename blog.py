@@ -223,7 +223,7 @@ from datetime import datetime # Recording runtime
 from Markdown2 import Markdown # Markdown parser
 from ModTimes import CompareMtimes # Compare file mod times
 from multiprocessing import Pool # Multiprocessing
-from random import choices # Building Explore page
+from random import choice, choices # Building Explore page
 from locale import getpreferredencoding # Speed up file opens
 
 # Global variables
@@ -510,89 +510,64 @@ def GenBlog():
     global files
 
     # file_idx: Current file number. (Int)
-    # buff: [File names, timestamps] for all posts. (List)\
-    # temp: Year placeholder
     file_idx = 0
-    file_buffer = []
-    temp = ""
 
     for year in sorted(files, reverse=True):
         for month in sorted(files[year], reverse=True):
                 for day in sorted(files[year][month], reverse=True):
                     for timestamp in sorted(files[year][month][day], reverse=True):
-                        file_buffer.append([files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp)])
+                        fname = files[year][month][day][timestamp]
+                        ts = "%s/%s/%s %s" % (year, month, day, timestamp)
 
-    for fname, timestamp in file_buffer:
-        # Add the first twenty-five articles to the main blog page.
-        if (file_idx < 25):
-            AppendContentOfXToY("./local/blog", fname, timestamp)
-        # Write the years in which a post was made to the header element, in a
-        # big table to facilitate easy reading.
-        elif (file_idx == 25):
-            # This block just puts three year entries in the first row, ends
-            # the row, and then puts three more year entries in the second row.
-            # This code is stored in 'buff', and then added to the archives
-            # page.
-            buff = """\n<article id="years_list">\n<div>"""
-            for x in sorted(files, reverse=True):
-                buff += "\n<a href=\"/blog/%s\">%s</a></div>\n<div>" % (x.lower()+".html", x)
-            buff += "\n</div>\n</article>"
-            archives_fd = open("./local/archives.html", "a", encoding=ENCODING)
-            archives_fd.write(buff)
-            archives_fd.close()
-            del buff
+                        # Add the first twenty-five articles to the main blog page.
+                        if (file_idx < 25):
+                            AppendContentOfXToY("./local/blog", fname, ts)
+                        # Write the years in which a post was made to the header element, in a
+                        # big table to facilitate easy reading.
+                        elif (file_idx == 25):
+                            # This block just puts three year entries in the first row, ends
+                            # the row, and then puts three more year entries in the second row.
+                            # This code is stored in 'buff', and then added to the archives
+                            # page.
+                            buff = """\n<article id="years_list">\n<div>"""
+                            for x in sorted(files, reverse=True):
+                                buff += "\n<a href=\"/blog/%s\">%s</a></div>\n<div>" % (x.lower()+".html", x)
+                            buff += "\n</div>\n</article>"
+                            archives_fd = open("./local/archives.html", "a", encoding=ENCODING)
+                            archives_fd.write(buff)
+                            archives_fd.close()
+                            del buff
 
-            # Add the twenty-sixth article to the archives page.
-            AppendContentOfXToY("./local/archives", fname, timestamp)
+                            # Add the twenty-sixth article to the archives page.
+                            AppendContentOfXToY("./local/archives", fname, ts)
 
-        # Add all other articles to the archives page.
-        else:
-            AppendContentOfXToY("./local/archives", fname, timestamp)
+                        # Add all other articles to the archives page.
+                        else:
+                            AppendContentOfXToY("./local/archives", fname, ts)
 
-        # Add all articles to the RSS feed.
-        AppendToFeed(fname)
+                        # Add all articles to the RSS feed.
+                        AppendToFeed(fname)
 
-        # Increase the file index.
-        file_idx += 1
+                        # Increase the file index.
+                        file_idx += 1
 
-    GenExplore(choices(file_buffer, k=3))
 
-    # Cleanup
-    del file_idx, file_buffer, temp
-
-# Method: GenExplore
-# Purpose: Generate the Explore page
-# Parameters: Random articles to include
-def GenExplore(files):
-    # Add intro paragraph
+    # Add intro paragraph to explore page
     fd = open("./local/explore.html", "a", encoding=ENCODING)
     fd.write("<article>\n<p>\nEvery time I update this site, new articles appear here. This helps unearth old, unpopular posts that&#160;&#8212;&#160;left alone&#160;&#8212;&#160;no one would ever read again.\n</p>\n</article>")
     fd.close()
-    # Append contents of random files
-    for each in files:
-        AppendContentOfXToY("./local/explore", each[0], each[1])
+
+    # Select three random articles for explore page
+    for year in choices(list(files.keys()), k=3):
+        month = choice(list(files[year]))
+        day = choice(list(files[year][month]))
+        timestamp = choice(list(files[year][month][day]))
+        post = files[year][month][day][timestamp]
+        # print(post)
+        AppendContentOfXToY("./local/explore", post, timestamp)
 
     # Cleanup
-    del fd
-
-# Method: GenSite
-# Purpose: Generate the blog.
-# Parameters: none
-def GenSite():
-    # Use multithreading to speed up processing each year's posts
-    with Pool() as pool:
-        pool.imap_unordered(HandleYear, sorted(files, reverse=True))
-        pool.close()
-        pool.join()
-
-    # Build the blog and archives pages, and the feed
-    GenBlog()
-
-    # Write closing HTML Tags to archives.html and blog.html, using Terminate()
-    Terminate()
-
-    # Cleanup
-    del pool
+    del file_idx, fd
 
 # Method: GenPage
 # Purpose: Given a source content file, generate a corresponding HTML structure file.
@@ -691,40 +666,6 @@ def GenPage(source, timestamp):
     del src, dst, source_fd, idx, title, target_fd, mtime, local_content, ptype, md
 
     return article_title
-
-# Method: GenStatic
-# Purpose: Create home, projects, and error static structure files.
-# Parameters: none
-def GenStatic():
-    # Reference the index.html source file to generate the front-end structure file.
-    fd = open("system/index.html", "r", encoding=ENCODING)
-    home = fd.read().split("<!-- DIVIDER -->")
-    fd.close()
-    BuildFromTemplate(target="./local/index.html", title="", bodyid="home", description="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things.", sheets=home[0], passed_content=home[1])
-    del home
-
-    # Reference the projects.html source file to generate the front-end structure file.
-    fd = open("system/projects.html", "r", encoding=ENCODING)
-    projects = fd.read().split("<!-- DIVIDER -->")
-    fd.close()
-    BuildFromTemplate(target="./local/projects.html", title="Projects - ", bodyid="projects", description="The writing, coding, and Computer Aided Drafting and Design (CADD) side projects Zac Szewczyk bulds in his spare time.", sheets="", passed_content=projects[1])
-    del projects
-
-    # Reference the disclaimers.html source file to generate the front-end structure file.
-    fd = open("system/disclaimers.html", "r", encoding=ENCODING)
-    disclaimers = fd.read().split("<!-- DIVIDER -->")
-    fd.close()
-    BuildFromTemplate(target="./local/disclaimers.html", title="Disclaimers - ", bodyid="disclaimers", description="Copyright and content disclaimers for Zac Szewczyk's blog.", sheets="", passed_content=disclaimers[1].replace("{{NAME}}", conf.full_name))
-    del disclaimers
-
-    # Build the 404.html file.
-    BuildFromTemplate(target="./local/404.html", title="Error - ", bodyid="error", description="", sheets="", passed_content="")
-
-    # Explore file
-    BuildFromTemplate("./local/explore.html", "Explore", "explore", description="Explore page", sheets="", passed_content="")
-
-    # Cleanup
-    del fd
 
 # Method: GetTitle
 # Purpose: Return the article title of a source file.
@@ -979,27 +920,6 @@ def SearchFile(tgt, q):
         return False
     return ret
 
-# Method: Terminate
-# Purpose: Write closing tags to blog and archives structure files.
-# Parameters: none
-def Terminate():
-    # Write closing tags to all template files
-    CloseTemplateBuild("./local/archives.html")
-    CloseTemplateBuild("./local/blog.html")
-    CloseTemplateBuild("./local/projects.html")
-    CloseTemplateBuild("./local/index.html")
-    CloseTemplateBuild("./local/disclaimers.html")
-    CloseTemplateBuild("./local/404.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style='text-align:center;'>Error: 404 Not Found</h2><p>The requested resource at <span style='text-decoration:underline;'>"+window.location.href+"</span> could not be found.</p></article>"</script>""")
-    CloseTemplateBuild("./local/explore.html")
-
-    # Write closing tags to the RSS feed.
-    fd = open("./local/rss.xml", "a", encoding=ENCODING)
-    fd.write("""\n</channel>\n</rss>""")
-    fd.close()
-
-    # Cleanup
-    del fd
-
 # If run as an individual file, generate the site and report runtime.
 # If imported, only make methods available to imported program.
 if __name__ == '__main__':
@@ -1007,8 +927,53 @@ if __name__ == '__main__':
 
     t1 = datetime.now()
     Init()
-    GenStatic()
-    GenSite()
+    
+    # Purpose: Create static structure files.
+    ## Reference the index.html source file to generate the front-end structure file.
+    fd = open("system/index.html", "r", encoding=ENCODING)
+    home = fd.read().split("<!-- DIVIDER -->")
+    fd.close()
+    BuildFromTemplate(target="./local/index.html", title="", bodyid="home", description="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things.", sheets=home[0], passed_content=home[1])
+    del home
+    ## Reference the projects.html source file to generate the front-end structure file.
+    fd = open("system/projects.html", "r", encoding=ENCODING)
+    projects = fd.read().split("<!-- DIVIDER -->")
+    fd.close()
+    BuildFromTemplate(target="./local/projects.html", title="Projects - ", bodyid="projects", description="The writing, coding, and Computer Aided Drafting and Design (CADD) side projects Zac Szewczyk bulds in his spare time.", sheets="", passed_content=projects[1])
+    del projects
+    ## Reference the disclaimers.html source file to generate the front-end structure file.
+    fd = open("system/disclaimers.html", "r", encoding=ENCODING)
+    disclaimers = fd.read().split("<!-- DIVIDER -->")
+    fd.close()
+    BuildFromTemplate(target="./local/disclaimers.html", title="Disclaimers - ", bodyid="disclaimers", description="Copyright and content disclaimers for Zac Szewczyk's blog.", sheets="", passed_content=disclaimers[1].replace("{{NAME}}", conf.full_name))
+    del disclaimers
+    ## Build the 404.html file.
+    BuildFromTemplate(target="./local/404.html", title="Error - ", bodyid="error", description="", sheets="", passed_content="")
+    ## Explore file
+    BuildFromTemplate("./local/explore.html", "Explore", "explore", description="Explore page", sheets="", passed_content="")
+    
+    # Use multithreading to speed up processing each year's posts
+    pool = Pool()
+    pool.imap_unordered(HandleYear, sorted(files, reverse=True))
+    pool.close()
+    pool.join()
+
+    # Build the blog and archives pages, and the feed
+    GenBlog()
+
+    # Write closing tags to all template files
+    CloseTemplateBuild("./local/index.html")
+    CloseTemplateBuild("./local/projects.html")
+    CloseTemplateBuild("./local/disclaimers.html")
+    CloseTemplateBuild("./local/404.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style='text-align:center;'>Error: 404 Not Found</h2><p>The requested resource at <span style='text-decoration:underline;'>"+window.location.href+"</span> could not be found.</p></article>"</script>""")
+    CloseTemplateBuild("./local/explore.html")
+    CloseTemplateBuild("./local/archives.html")
+    CloseTemplateBuild("./local/blog.html")
+
+    # Write closing tags to the RSS feed.
+    fd = open("./local/rss.xml", "a", encoding=ENCODING)
+    fd.write("""\n</channel>\n</rss>""")
+    fd.close()
 
     # import cProfile
     # cProfile.run("Init()", "./init.cprof")
@@ -1020,4 +985,4 @@ if __name__ == '__main__':
     print(("Execution time: "+c.OKGREEN+str(t2-t1)+"s"+c.ENDC))
 
     # Cleanup
-    del t1, t2
+    del t1, t2, pool, fd
