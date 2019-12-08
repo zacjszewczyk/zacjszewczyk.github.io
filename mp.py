@@ -902,7 +902,9 @@ if __name__ == '__main__':
     Init()
     GenStatic()
     with Pool() as pool:
-        pool.map(Orchestrator, files.items())
+        pool.imap_unordered(Orchestrator, files.items())
+        pool.close()
+        pool.join()
     GenBlog()
     Terminate()
 
