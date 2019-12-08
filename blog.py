@@ -564,8 +564,6 @@ def GenBlog():
 # Purpose: Generate the Explore page
 # Parameters: Random articles to include
 def GenExplore(files):
-    # Start the template build
-    BuildFromTemplate("./local/explore.html", "Explore", "explore", description="Explore page", sheets="", passed_content="")
     # Add intro paragraph
     fd = open("./local/explore.html", "a", encoding=ENCODING)
     fd.write("<article>\n<p>\nEvery time I update this site, new articles appear here. This helps unearth old, unpopular posts that&#160;&#8212;&#160;left alone&#160;&#8212;&#160;no one would ever read again.\n</p>\n</article>")
@@ -573,8 +571,6 @@ def GenExplore(files):
     # Append contents of random files
     for each in files:
         AppendContentOfXToY("./local/explore", each[0], each[1])
-    # Close the template build
-    CloseTemplateBuild("./local/explore.html")
 
     # Cleanup
     del fd
@@ -714,7 +710,7 @@ def GenStatic():
     BuildFromTemplate(target="./local/projects.html", title="Projects - ", bodyid="projects", description="The writing, coding, and Computer Aided Drafting and Design (CADD) side projects Zac Szewczyk bulds in his spare time.", sheets="", passed_content=projects[1])
     del projects
 
-    # Reference the disclaimers.html source file to generate the front-end structure fule.
+    # Reference the disclaimers.html source file to generate the front-end structure file.
     fd = open("system/disclaimers.html", "r", encoding=ENCODING)
     disclaimers = fd.read().split("<!-- DIVIDER -->")
     fd.close()
@@ -723,6 +719,9 @@ def GenStatic():
 
     # Build the 404.html file.
     BuildFromTemplate(target="./local/404.html", title="Error - ", bodyid="error", description="", sheets="", passed_content="")
+
+    # Explore file
+    BuildFromTemplate("./local/explore.html", "Explore", "explore", description="Explore page", sheets="", passed_content="")
 
     # Cleanup
     del fd
@@ -984,13 +983,14 @@ def SearchFile(tgt, q):
 # Purpose: Write closing tags to blog and archives structure files.
 # Parameters: none
 def Terminate():
-    # Write closing tags to archives.html and blog.html.
+    # Write closing tags to all template files
     CloseTemplateBuild("./local/archives.html")
     CloseTemplateBuild("./local/blog.html")
     CloseTemplateBuild("./local/projects.html")
     CloseTemplateBuild("./local/index.html")
     CloseTemplateBuild("./local/disclaimers.html")
     CloseTemplateBuild("./local/404.html", """<script type="text/javascript">document.getElementById("content_section").innerHTML = "<article><h2 style='text-align:center;'>Error: 404 Not Found</h2><p>The requested resource at <span style='text-decoration:underline;'>"+window.location.href+"</span> could not be found.</p></article>"</script>""")
+    CloseTemplateBuild("./local/explore.html")
 
     # Write closing tags to the RSS feed.
     fd = open("./local/rss.xml", "a", encoding=ENCODING)
