@@ -585,7 +585,9 @@ def GenExplore(files):
 def GenSite():
     # Use multithreading to speed up processing each year's posts
     with Pool() as pool:
-        pool.map(HandleYear, sorted(files, reverse=True))
+        pool.imap_unordered(HandleYear, sorted(files, reverse=True))
+        pool.close()
+        pool.join()
 
     # Build the blog and archives pages, and the feed
     GenBlog()
