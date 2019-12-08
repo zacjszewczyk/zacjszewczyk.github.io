@@ -900,16 +900,11 @@ if __name__ == '__main__':
     t1 = datetime.now()
 
     Init()
-    # GenStatic()
-    
-    for each in files.items():
-        print(each)
-        print()
-
-    # with Pool() as pool:
-    #     pool.map(Orchestrator, files.items())
-    # GenBlog()
-    # Terminate()
+    GenStatic()
+    with Pool() as pool:
+        pool.map(Orchestrator, files.items())
+    GenBlog()
+    Terminate()
 
     t2 = datetime.now()
     print("Execution time: "+str(t2-t1)+"s")
