@@ -256,61 +256,62 @@ class conf():
 # Parameters:
 # - target: Target file name, including extension. (String)
 # - source: Source file name, including extension. (String)
-def AppendContentOfXToY(target, source, timestamp):
-    # Store the name of the corresponding HTML file in a variable
-    html_filename = source.lower().replace(" ", "-")[0:-3]+"html"
-
-    # Instantiate a boolean flag variable, "flag". This indicates
-    # whether to include the entire article (True) or truncate it
-    # at the first paragraph (False)
-    flag = True
-
-    # Now that we know there is a structure file built, pull the data
-    # from there.
-
-    ## Open the source and the target files
+def AppendContentOfXToY(target, sources):
     target_fd = open(target+".html", "a", encoding=ENCODING)
-    source_fd = open("./local/blog/"+html_filename, "r", encoding=ENCODING)
+    for source,timestamp in sources:
+        # Store the name of the corresponding HTML file in a variable
+        html_filename = source.lower().replace(" ", "-")[0:-3]+"html"
 
-    # Skip to the <article tag, then write the opening <article>
-    # tag to the output file.
-    for i, line in enumerate(source_fd):
-        if ("<article" in line): target_fd.write("<article>"); break
+        # Instantiate a boolean flag variable, "flag". This indicates
+        # whether to include the entire article (True) or truncate it
+        # at the first paragraph (False)
+        flag = True
 
-    # Iterate over each line of the source structure file.
-    for i, line in enumerate(source_fd):
-        # Check the first two lines of the structure file for a
-        # class tag denoting the type of article. If viewing an
-        # original article, truncate it at the first paragraph by
-        # setting the flag, "flag", to False
-        if (i <= 1):
-            if ('class="original"' in line):
-                flag = False
+        # Now that we know there is a structure file built, pull the data
+        # from there.
+
+        ## Open the source file
+        source_fd = open("./local/blog/"+html_filename, "r", encoding=ENCODING)
+
+        # Skip to the <article tag, then write the opening <article>
+        # tag to the output file.
+        for i, line in enumerate(source_fd):
+            if ("<article" in line): target_fd.write("<article>"); break
+
+        # Iterate over each line of the source structure file.
+        for i, line in enumerate(source_fd):
+            # Check the first two lines of the structure file for a
+            # class tag denoting the type of article. If viewing an
+            # original article, truncate it at the first paragraph by
+            # setting the flag, "flag", to False
+            if (i <= 1):
+                if ('class="original"' in line):
+                    flag = False
+                    line = line.replace("href=\"", "href=\"blog/")
+            elif (i == 3):
                 line = line.replace("href=\"", "href=\"blog/")
-        elif (i == 3):
-            line = line.replace("href=\"", "href=\"blog/")
-        # Write subsequent lines to the file. If we are truncating
-        # the file and we encouter the first paragraph, write it to
-        # the output file and then quit.
-        elif (flag == False and line[0:2] == "<p"):
+            # Write subsequent lines to the file. If we are truncating
+            # the file and we encouter the first paragraph, write it to
+            # the output file and then quit.
+            elif (flag == False and line[0:2] == "<p"):
+                target_fd.write(line)
+                break
+
+            # Stop copying content at the end of the article.
+            if ("</article>" in line):
+                break
+
+            # Write all lines from the structure file to the output file
+            # by default.
             target_fd.write(line)
-            break
 
-        # Stop copying content at the end of the article.
-        if ("</article>" in line):
-            break
+        source_fd.close()
 
-        # Write all lines from the structure file to the output file
-        # by default.
-        target_fd.write(line)
-
-    source_fd.close()
-
-    # Once we have reached the end of the content in the case of a linkpost,
-    # or read the first paragraph in the case of an original article, add a
-    # "read more" link and close the article.
-    target_fd.write("\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='blog/%s'>&#x24E9;</a>\n    </p>" % (html_filename))
-    target_fd.write("</article>")
+        # Once we have reached the end of the content in the case of a linkpost,
+        # or read the first paragraph in the case of an original article, add a
+        # "read more" link and close the article.
+        target_fd.write("\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='blog/%s'>&#x24E9;</a>\n    </p>" % (html_filename))
+        target_fd.write("</article>")
     target_fd.close()
 
     # Cleanup
@@ -320,81 +321,83 @@ def AppendContentOfXToY(target, source, timestamp):
 # Purpose: Append the content of a source file to the RSS feed.
 # Parameters:
 # - source: Source file name, including extension. (String)
-def AppendToFeed(source):
-    # Store the name of the corresponding HTML file in a variable
-    html_filename = source.lower().replace(" ", "-")[0:-3]+"html"
-
-    # Instantiate a boolean flag variable, "flag". This indicates
-    # whether to include the entire article (True) or truncate it
-    # at the first paragraph (False)
-    flag = True
-
-    # Now that we know there is a structure file built, pull the data
-    # from there.
-
+def AppendToFeed(sources):
     ## Open the feed and source file
     feed_fd = open("./local/rss.xml", "a", encoding=ENCODING)
+    for source in sources:
+        if (type(source) == list):
+            source = source[0]
+        # Store the name of the corresponding HTML file in a variable
+        html_filename = source.lower().replace(" ", "-")[0:-3]+"html"
 
-    ## Write the opening <item> tag
-    feed_fd.write("        <item>\n")
+        # Instantiate a boolean flag variable, "flag". This indicates
+        # whether to include the entire article (True) or truncate it
+        # at the first paragraph (False)
+        flag = True
 
-    source_fd = open("./local/blog/"+html_filename, "r", encoding=ENCODING)
-    # Skip to the <article tag, then write the opening <article>
-    # tag to the output file.
-    for i, line in enumerate(source_fd):
-        if ("<h2" in line): break
+        # Now that we know there is a structure file built, pull the data
+        # from there.
 
-    # Iterate over each line of the source structure file.
-    for i, line in enumerate(source_fd):
-        # Strip whitespace
-        line = line.strip()
-        line = line.replace("&", "&#38;")
+        ## Write the opening <item> tag
+        feed_fd.write("        <item>\n")
 
-        # Check the first two lines of the structure file for a
-        # class tag denoting the type of article. If viewing an
-        # original article, truncate it at the first paragraph by
-        # setting the flag, "flag", to False
-        # print(i,":",line)
-        if (i == 0):
-            if ("class=\"original\"" in line):
-                flag = False
-                link = conf.base_url+"/blog/"+line.split("href=\"")[1].split(" ")[0][:-1]
+        source_fd = open("./local/blog/"+html_filename, "r", encoding=ENCODING)
+        # Skip to the <article tag, then write the opening <article>
+        # tag to the output file.
+        for i, line in enumerate(source_fd):
+            if ("<h2" in line): break
+
+        # Iterate over each line of the source structure file.
+        for i, line in enumerate(source_fd):
+            # Strip whitespace
+            line = line.strip()
+            line = line.replace("&", "&#38;")
+
+            # Check the first two lines of the structure file for a
+            # class tag denoting the type of article. If viewing an
+            # original article, truncate it at the first paragraph by
+            # setting the flag, "flag", to False
+            # print(i,":",line)
+            if (i == 0):
+                if ("class=\"original\"" in line):
+                    flag = False
+                    link = conf.base_url+"/blog/"+line.split("href=\"")[1].split(" ")[0][:-1]
+                else:
+                    link = line.split("href=\"")[1].split(" ")[0][:-1]
+                if (link[0:4] != "http"):
+                    link = "http://"+link
+                line = "            <title>"+line.split("\">")[1][:-4]+"</title>\n"
+                line += "            <link>"+link+"</link>\n"
+                line += "            <guid isPermaLink='true'>"+link+"</guid>\n"
+            elif (i == 1):
+                continue
+            elif (i == 2):
+                pubdate = gmtime(mktime(strptime(line[16:26]+" "+line.split("</a>")[-1][4:-11], "%Y-%m-%d %H:%M:%S")))
+                line = "            <pubDate>"+strftime("%a, %d %b %Y %H:%M:%S", pubdate)+" GMT</pubDate>\n"
+                line += "            <description>\n"
+            # Write subsequent lines to the file. If we are truncating
+            # the file and we encouter the first paragraph, write it to
+            # the output file and then quit.
+            elif (flag == False and line[0:2] == "<p"):
+                feed_fd.write(""+line.replace('href="/', 'href="'+conf.base_url+'/').replace('"#fn', '"'+conf.base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;"))
+                break
             else:
-                link = line.split("href=\"")[1].split(" ")[0][:-1]
-            if (link[0:4] != "http"):
-                link = "http://"+link
-            line = "            <title>"+line.split("\">")[1][:-4]+"</title>\n"
-            line += "            <link>"+link+"</link>\n"
-            line += "            <guid isPermaLink='true'>"+link+"</guid>\n"
-        elif (i == 1):
-            continue
-        elif (i == 2):
-            pubdate = gmtime(mktime(strptime(line[16:26]+" "+line.split("</a>")[-1][4:-11], "%Y-%m-%d %H:%M:%S")))
-            line = "            <pubDate>"+strftime("%a, %d %b %Y %H:%M:%S", pubdate)+" GMT</pubDate>\n"
-            line += "            <description>\n"
-        # Write subsequent lines to the file. If we are truncating
-        # the file and we encouter the first paragraph, write it to
-        # the output file and then quit.
-        elif (flag == False and line[0:2] == "<p"):
-            feed_fd.write(""+line.replace('href="/', 'href="'+conf.base_url+'/').replace('"#fn', '"'+conf.base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;"))
-            break
-        else:
-            line = ""+line.replace('href="/', 'href="'+conf.base_url+'/').replace('"#fn', '"'+conf.base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;")
+                line = ""+line.replace('href="/', 'href="'+conf.base_url+'/').replace('"#fn', '"'+conf.base_url+'/blog/'+html_filename+"#fn").replace("<", "&lt;").replace(">", "&gt;")
 
-        # Stop copying content at the end of the article.
-        if ("&lt;/article&gt;" in line):
-            break
+            # Stop copying content at the end of the article.
+            if ("&lt;/article&gt;" in line):
+                break
 
-        # Write all lines from the structure file to the output file
-        # by default.
-        feed_fd.write(line+'\n')
-    source_fd.close()
+            # Write all lines from the structure file to the output file
+            # by default.
+            feed_fd.write(line+'\n')
+        source_fd.close()
 
-    # Once we have reached the end of the content in the case of a linkpost,
-    # or read the first paragraph in the case of an original article, add a
-    # "read more" link and close the article.
-    feed_fd.write("\n<p class='read_more_paragraph'>\n<a style='text-decoration:none;' href='%s/blog/%s'>Read more...</a>\n</p>\n".replace("<", "&lt;").replace(">", "&gt;") % (conf.base_url, html_filename))
-    feed_fd.write("            </description>\n        </item>\n")
+        # Once we have reached the end of the content in the case of a linkpost,
+        # or read the first paragraph in the case of an original article, add a
+        # "read more" link and close the article.
+        feed_fd.write("\n<p class='read_more_paragraph'>\n<a style='text-decoration:none;' href='%s/blog/%s'>Read more...</a>\n</p>\n".replace("<", "&lt;").replace(">", "&gt;") % (conf.base_url, html_filename))
+        feed_fd.write("            </description>\n        </item>\n")
     feed_fd.close()
 
     # Cleanup
@@ -509,19 +512,27 @@ def GenBlog():
     # Make global variables accessible in the method, and initialize method variables.
     global files
 
-    # file_idx: Current file number. (Int)
-    file_idx = 0
+    def order_dict(dictionary):
+        return {k: order_dict(v) if isinstance(v, dict) else v
+                for k, v in sorted(dictionary.items(), reverse=True)}
+    files = order_dict(files)
 
-    for year in sorted(files, reverse=True):
-        for month in sorted(files[year], reverse=True):
-                for day in sorted(files[year][month], reverse=True):
-                    for timestamp in sorted(files[year][month][day], reverse=True):
+    # file_idx: Current file number. (Int)
+    # rest: Files to append (List)
+    file_idx = 0
+    rest = []
+
+    for year in files:
+        for month in files[year]:
+                for day in files[year][month]:
+                    for timestamp in files[year][month][day]:
                         fname = files[year][month][day][timestamp]
                         ts = "%s/%s/%s %s" % (year, month, day, timestamp)
 
                         # Add the first twenty-five articles to the main blog page.
                         if (file_idx < 25):
-                            AppendContentOfXToY("./local/blog", fname, ts)
+                            AppendContentOfXToY("./local/blog", [[fname, ts]])
+                            AppendToFeed([fname])
                         # Write the years in which a post was made to the header element, in a
                         # big table to facilitate easy reading.
                         elif (file_idx == 25):
@@ -539,33 +550,28 @@ def GenBlog():
                             del buff
 
                             # Add the twenty-sixth article to the archives page.
-                            AppendContentOfXToY("./local/archives", fname, ts)
+                            AppendContentOfXToY("./local/archives", [[fname, ts]])
+                            AppendToFeed([fname])
 
-                        # Add all other articles to the archives page.
+                        # Add all other articles to the list of files to append.
                         else:
-                            AppendContentOfXToY("./local/archives", fname, ts)
-
-                        # Add all articles to the RSS feed.
-                        AppendToFeed(fname)
+                            rest.append([fname, ts])
 
                         # Increase the file index.
                         file_idx += 1
-
-
-    # Add intro paragraph to explore page
-    fd = open("./local/explore.html", "a", encoding=ENCODING)
-    fd.write("<article>\n<p>\nEvery time I update this site, new articles appear here. This helps unearth old, unpopular posts that&#160;&#8212;&#160;left alone&#160;&#8212;&#160;no one would ever read again.\n</p>\n</article>")
-    fd.close()
+    # Append the list of files.
+    AppendContentOfXToY("./local/archives", rest)
+    AppendToFeed(rest)
 
     # Select three random articles for explore page
     for year in choices(list(files.keys()), k=3):
         month = choice(list(files[year]))
         day = choice(list(files[year][month]))
         timestamp = choice(list(files[year][month][day]))
-        AppendContentOfXToY("./local/explore", files[year][month][day][timestamp], timestamp)
+        AppendContentOfXToY("./local/explore", [[files[year][month][day][timestamp], timestamp]])
 
     # Cleanup
-    del file_idx, fd, month, day, timestamp
+    del file_idx, month, day, timestamp
 
 # Method: GenPage
 # Purpose: Given a source content file, generate a corresponding HTML structure file.
@@ -949,12 +955,16 @@ if __name__ == '__main__':
     BuildFromTemplate(target="./local/404.html", title="Error - ", bodyid="error", description="", sheets="", passed_content="")
     ## Explore file
     BuildFromTemplate("./local/explore.html", "Explore -", "explore", description="Explore page", sheets="", passed_content="")
+    # Add intro paragraph to explore page
+    fd = open("./local/explore.html", "a", encoding=ENCODING)
+    fd.write("<article>\n<p>\nEvery time I update this site, new articles appear here. This helps unearth old, unpopular posts that&#160;&#8212;&#160;left alone&#160;&#8212;&#160;no one would ever read again.\n</p>\n</article>")
+    fd.close()
     
     # Use multithreading to speed up processing each year's posts
-    pool = Pool()
-    pool.imap_unordered(HandleYear, files)
-    pool.close()
-    pool.join()
+    with Pool() as pool:
+        pool.imap_unordered(HandleYear, files)
+        pool.close()
+        pool.join()
 
     # Build the blog and archives pages, and the feed
     GenBlog()
