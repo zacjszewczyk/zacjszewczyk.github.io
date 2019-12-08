@@ -614,9 +614,9 @@ def GenPage(source, timestamp):
         if (idx == 0):
             ptype = line[6:].strip()
             if (ptype == "original"):
-                title += "<article>\n                    <h2 style=\"text-align:center;\">\n                        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+                title += "<article>\n<h2 style=\"text-align:center;\">\n<a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
             else:
-                title += "<article>\n                    <h2 style=\"text-align:center;\">\n                        <a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+                title += "<article>\n<h2 style=\"text-align:center;\">\n<a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
         # In the second line of the file, add the article title.
         elif (idx == 1):
             article_title = line[7:].strip()
@@ -632,7 +632,7 @@ def GenPage(source, timestamp):
         elif (idx == 3):
             # print(line)
             line = line[9:].strip().replace(" ", "/").split("/")
-            title += """\n                    <time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">%s</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], conf.byline, line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
+            title += """\n<time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">%s</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], conf.byline, line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
         # In the fifth line of the file, we're reading the author line. Since we don't do anything
         # with this, pass.
         elif (idx == 4):
