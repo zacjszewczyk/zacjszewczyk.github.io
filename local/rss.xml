@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 09 Dec 2019 05:12:50 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Dec 2019 04:49:58 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Lightning Round</title>
+            <link>https://zacs.site//blog/lightning-round-04dec19.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/lightning-round-04dec19.html</guid>
+
+            <pubDate>Tue, 10 Dec 2019 16:49:51 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I often &lt;a href="https://zacs.site/blog/my-mornings-reads.html"&gt;see articles&lt;/a&gt; that I would like to talk about, but that I do not feel warrant a whole post here. Twitter is the obvious choice for quips like these, but I have little love for the service, &lt;a href="https://zacs.site/blog/own-your-platform.html"&gt;prefer&lt;/a&gt; to keep all my work &lt;a href="https://zacs.site/blog/how-to-own-your-platform.html"&gt;on my own platform&lt;/a&gt;, and feel that nuanced opinions should not come in 280 character bursts. Occasional &#38;#8220;lightning rounds&#38;#8221; will fill that gap. Together, a handful of these micro posts will make a full one, giving me somewhere to share things that used to just slip through the cracks.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/lightning-round-04dec19.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>How to Make Remote a Success</title>
             <link>https://www.bearer.sh/blog/how-to-make-remote-a-success</link>
