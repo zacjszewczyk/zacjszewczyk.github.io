@@ -7,7 +7,7 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 11 Dec 2019 01:01:35 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Dec 2019 01:02:32 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -15,12 +15,12 @@
             <link>https://www.youtube.com/watch?v=S4W-P5aCWJs</link>
             <guid isPermaLink='true'>https://www.youtube.com/watch?v=S4W-P5aCWJs</guid>
 
-            <pubDate>Wed, 11 Dec 2019 13:01:32 GMT</pubDate>
+            <pubDate>Wed, 11 Dec 2019 13:02:29 GMT</pubDate>
             <description>
 
 &lt;p&gt;Jason Fenske does a nice job explaining why the Cybertruck will not tow well: high efficiency gives electric vehicles competitive ranges despite their batteries&#38;#8217; low energy capacity, but also means that even a light, 5,000 pound trailer will slash that figure. In &lt;code&gt;distance = energy / force&lt;/code&gt;, a small numerator (low capacity) causes range to drop off much faster as the denominator (towed weight) increases. See the blue graph below, which depicts range (the y-axis) as a function of towed weight (the x-axis). Traditional vehicles, although less efficient, have vast energy stores; in their case, a high numerator means the denominator has much less of an impact as it increases. See this in the green graph.&lt;/p&gt;
 
-&lt;div class='image'&gt;&lt;img src='/assets/Images/force_graph.jpg' alt='Force graph with a high versus low numerator' title='Force graph with a high versus low numerator' loading='lazy' /&gt;&lt;/div&gt;
+&lt;div class='image'&gt;&lt;img src='/assets/Images/force_graph.png' alt='Force graph with a high versus low numerator' title='Force graph with a high versus low numerator' loading='lazy' /&gt;&lt;/div&gt;
 
 &lt;p&gt;As I said about the Cybertruck &lt;a href="https://zacs.site/blog/tesla-cybertruck.html"&gt;last week&lt;/a&gt;, &#38;#8220;it&#38;#8217;s not a very good sportscar, and it&#38;#8217;s not a very good truck.&#38;#8221; I &lt;a href="https://zacs.site//blog/expedition-rigs.html#Electric"&gt;still think electric vehicles will revolutionize the overland space&lt;/a&gt;, but it will take years for the batteries to get there.&lt;/p&gt;
 
