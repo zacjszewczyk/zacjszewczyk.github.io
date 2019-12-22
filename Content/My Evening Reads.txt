@@ -4,7 +4,7 @@ Link: my-evening-reads.html
 Pubdate: 2019/05/15 07:44:09
 Author: Zac Szewczyk
 
-I follow a lot of websites. In [*Keeping Up with Current Events*](My Morning Reads.txt), I list the seventeen I use to start my day. These get regular updates and help me keep up on current events. I also follow a lot of websites run by independent writers and small shops. These cover many of the same topics, but due to their size, they do not get updated as often. The unique perspective they bring to the table, though, makes for some of the most interesting reading I do. To round out [my earlier post](My Morning Reads.txt), I want to share this list with you today.
+I follow a lot of websites. In [*Keeping Up with Current Events*](My Morning Reads.txt), I list the sixteen I use to start my day. These get regular updates and help me keep up on current events. I also follow a lot of websites run by independent writers and small shops. These cover many of the same topics, but due to their size, they do not get updated as often. The unique perspective they bring to the table, though, makes for some of the most interesting reading I do. To round out [my earlier post](My Morning Reads.txt), I want to share this list with you today.
 
 Out of the forty sites on this list, I can expect to see new content on just six per day, a handful of others in a week, and the rest on an inconsistent basis. Rather than check each one, I keep up with them using their RSS feeds. In brief, think of an RSS feed as a single file containing a list of all the articles on a website. On April 9th, for example, the feed for my blog would have looked like this:
 
@@ -77,9 +77,8 @@ I also follow a few YouTube channels in the adventure space. I choose to do this
 
 ### DIY
 
-I love building things. When I faced buying a storage system for my 4Runner, [I chose to build my own](/projects.html#sleepingPlatform). [I have grand plans](/projects.html#caddProjects) for future projects, and these two give me even more ideas. Even more important, though, seeing experts practice their craft teaches me to improve mine. I have learned a lot from both Ana and Joe, and that will not change any time soon.
+I love building things. When I faced buying a storage system for my 4Runner, [I chose to build my own](/projects.html#sleepingPlatform). [I have grand plans](/projects.html#caddProjects) for future projects, and these give me even more ideas. Even more important, though, seeing experts practice their craft teaches me to improve mine.
 
-* [http://www.ana-white.com/](http://www.ana-white.com/) - Any carpenter can post cool pictures, but [Ana White](http://www.ana-white.com/) does that along with helpful instructions and even 3D models. Her and Jason have built some awesome things, and thanks to this site, anyone can follow suit or use these projects as the basis for their own.
 * [Homesteadonomics on YouTube](https://www.youtube.com/channel/UCMiTb1EJ5nhn_NbUyNu003w) - I came to Homesteadonomics on YouTube by way of [a nine part series in which Joe built a camper from scratch](https://www.youtube.com/playlist?list=PLJEhXwOJ_CGahuF3NEXfECUAgeHs3rSES). He had me impressed. I follow his channel to learn as much as I can about building before it comes time to begin my next project.
 
 ### Finances
@@ -118,45 +117,57 @@ This last group of websites does not fit into of the genres above, but over the 
 
 Like [last time](My Morning Reads.txt), to make your life a little easier, I list every site below in order of appearance.
 
-1. [http://twoifoverland.com/](http://twoifoverland.com/)
-2. [https://blissordie.com](https://blissordie.com)
-3. [https://www.overlandpeanut.com/blog/](https://www.overlandpeanut.com/blog/)
-4. [https://liveworkwander.com](https://liveworkwander.com)
-5. [https://expeditionportal.com/](https://expeditionportal.com/)
-6. [http://www.drivingline.com/](http://www.drivingline.com/)
-7. [https://gearpatrol.com](https://gearpatrol.com)
-8. [https://www.gearhungry.com](https://www.gearhungry.com)
-9. [https://gearjunkie.com](https://gearjunkie.com)
-10. [https://uncrate.com/](https://uncrate.com/)
-11. [http://www.everydaycommentary.com/](http://www.everydaycommentary.com/)
-12. [https://www.carryology.com](https://www.carryology.com)
-13. [https://packconfig.com](https://packconfig.com)
-14. [http://www.exploringoverland.com/](http://www.exploringoverland.com/overland-tech-travel/)
-15. [https://www.itstactical.com](https://www.itstactical.com)
-16. [https://sticksblog.com](https://sticksblog.com)
-17. [https://misadventuresmag.com/category/read/](https://misadventuresmag.com/category/read/)
-18. [https://huckberry.com/journal](https://huckberry.com/journal)
-19. [https://cabinporn.com/](https://cabinporn.com/)
-20. [https://www.outsideonline.com/](https://www.outsideonline.com/)
-21. [http://dereklow.co/](http://dereklow.co/)
-22. [Expedition Overland on YouTube](https://www.youtube.com/channel/UCiyiTqpss-ihtLHz-juFxIQ)
-23. [Mountain State Overland on YouTube](https://www.youtube.com/channel/UCFf8PTHJTZwtMWLfFkAkS4w)
-24. [nutnfancy on YouTube](https://www.youtube.com/channel/UCbT5ssxEDZHNyz28N4Ov7Wg)
-25. [The Tactical Defender on YouTube](https://www.youtube.com/channel/UCH9D1Alq8n7Dd3mM99O9G9A)
-26. [Triple Aught Design on YouTube](https://www.youtube.com/channel/UCoBFcQPFNNhUzjsJFPDm2gw)
-27. [http://www.ana-white.com/](http://www.ana-white.com/)
-28. [Homesteadonomics on YouTube](https://www.youtube.com/channel/UCMiTb1EJ5nhn_NbUyNu003w)
-29. [https://www.financialsamurai.com](https://www.financialsamurai.com)
-30. [http://www.genyfinanceguy.com](http://www.genyfinanceguy.com)
-31. [http://coyoteblog.com](http://coyoteblog.com)
-32. [https://www.hanselman.com/blog/](https://www.hanselman.com/blog/)
-33. [https://bitsofco.de/](https://bitsofco.de/)
-34. [https://davidwalsh.name](https://davidwalsh.name)
-35. [https://medium.com/@addyosmani](https://medium.com/@addyosmani)
-36. [http://nonullpointers.com](http://nonullpointers.com)
-37. [https://waitbutwhy.com](https://waitbutwhy.com)
-38. [https://zenhabits.net](https://zenhabits.net)
-39. [http://blairreeves.me](http://blairreeves.me)
-40. [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/)
+1. [http://twoifoverland.com/](http://twoifoverland.com/) ★
+2. [https://blissordie.com](https://blissordie.com) ★
+3. [https://www.overlandpeanut.com/blog/](https://www.overlandpeanut.com/blog/) ★
+4. [https://liveworkwander.com](https://liveworkwander.com) ★
+5. [https://expeditionportal.com/](https://expeditionportal.com/) ★
+6. [http://www.drivingline.com/](http://www.drivingline.com/) ★
+7. [https://gearpatrol.com](https://gearpatrol.com) ★
+8. [https://www.gearhungry.com](https://www.gearhungry.com) ★
+9. [https://gearjunkie.com](https://gearjunkie.com) ★
+10. [https://uncrate.com/](https://uncrate.com/) ★
+11. [http://www.everydaycommentary.com/](http://www.everydaycommentary.com/) ★
+12. [https://www.carryology.com](https://www.carryology.com) ★
+13. [https://packconfig.com](https://packconfig.com) ★
+14. [http://www.exploringoverland.com/](http://www.exploringoverland.com/overland-tech-travel/) ★
+15. [https://www.itstactical.com](https://www.itstactical.com) ★
+16. [https://sticksblog.com](https://sticksblog.com) ★
+17. [https://misadventuresmag.com/category/read/](https://misadventuresmag.com/category/read/) ★
+18. [https://huckberry.com/journal](https://huckberry.com/journal) ★
+19. [https://cabinporn.com/](https://cabinporn.com/) ★
+20. [https://www.outsideonline.com/](https://www.outsideonline.com/) ★
+21. [http://dereklow.co/](http://dereklow.co/) ★
+22. [Expedition Overland on YouTube](https://www.youtube.com/channel/UCiyiTqpss-ihtLHz-juFxIQ) ★
+23. [Mountain State Overland on YouTube](https://www.youtube.com/channel/UCFf8PTHJTZwtMWLfFkAkS4w) ★
+24. [nutnfancy on YouTube](https://www.youtube.com/channel/UCbT5ssxEDZHNyz28N4Ov7Wg) ★
+25. [The Tactical Defender on YouTube](https://www.youtube.com/channel/UCH9D1Alq8n7Dd3mM99O9G9A) ★
+26. [Triple Aught Design on YouTube](https://www.youtube.com/channel/UCoBFcQPFNNhUzjsJFPDm2gw) ★
+27. [Homesteadonomics on YouTube](https://www.youtube.com/channel/UCMiTb1EJ5nhn_NbUyNu003w) ★
+28. [https://www.financialsamurai.com](https://www.financialsamurai.com) ★
+29. [http://www.genyfinanceguy.com](http://www.genyfinanceguy.com) ★
+30. [http://coyoteblog.com](http://coyoteblog.com) ★
+31. [https://www.hanselman.com/blog/](https://www.hanselman.com/blog/) ★
+32. [https://bitsofco.de/](https://bitsofco.de/) ★
+33. [https://davidwalsh.name](https://davidwalsh.name) ★
+34. [https://medium.com/@addyosmani](https://medium.com/@addyosmani) ★
+35. [http://nonullpointers.com](http://nonullpointers.com) ★
+36. [https://waitbutwhy.com](https://waitbutwhy.com) ★
+37. [https://zenhabits.net](https://zenhabits.net) ★
+38. [http://blairreeves.me](http://blairreeves.me) ★
+39. [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/) ★
+
+41. [https://80000hours.org/](https://80000hours.org/)
+42. [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/)
+43. [https://snikt.net/](https://snikt.net/)
+44. [https://apenwarr.ca/log](https://apenwarr.ca/log)
+45. [https://www.backblaze.com/blog](https://www.backblaze.com/blog)
+46. [https://codefol.io/](https://codefol.io/)
+47. [https://www.yompnotes.com/](https://www.yompnotes.com/)
+48. [https://www.jefftk.com/p](https://www.jefftk.com/p)
+49. [https://www.justinobeirne.com/](https://www.justinobeirne.com/)
+50. [https://nrempel.com/](https://nrempel.com/)
+51. [https://www.nicoledieker.com](https://www.nicoledieker.com)
+52. [https://subt0x11.blogspot.com/](https://subt0x11.blogspot.com/)
 
 I like big-name websites for keeping up on current events, but I tend to find the best content on sites like these. The advice to "follow people, not places" has served me well, and I encourage you to start doing the same.
