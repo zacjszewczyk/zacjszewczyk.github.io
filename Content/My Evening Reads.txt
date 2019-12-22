@@ -104,14 +104,14 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [https://davidwalsh.name](https://davidwalsh.name) - I have some strong feelings about the design of [David Walsh's blog](https://davidwalsh.name), and much more positive ones about the great articles he posts there. David writes focuses on front-end development, but also covers languages and technologies on the back end as well.
 * [https://medium.com/@addyosmani](https://medium.com/@addyosmani) - A Google engineer working on Chrome, [Addy Osmani](https://medium.com/@addyosmani) writes a lot about ways to optimize the web. You may have noticed a pattern here.
 * [http://nonullpointers.com](http://nonullpointers.com) - Although a new site without much of a back catalog, Chris D'Aloisio has written some interesting pieces on the less technical side of becoming a better developer. I look forward to seeing what else he has to say.
-42. [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/)
-43. [https://snikt.net/](https://snikt.net/)
-44. [https://apenwarr.ca/log](https://apenwarr.ca/log)
-49. [https://www.justinobeirne.com/](https://www.justinobeirne.com/)
-50. [https://nrempel.com/](https://nrempel.com/)
-52. [https://subt0x11.blogspot.com/](https://subt0x11.blogspot.com/)
-45. [https://www.backblaze.com/blog](https://www.backblaze.com/blog)
-46. [https://codefol.io/](https://codefol.io/)
+* [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/) - Mathew Green covers cryptography some, hence the name, but in more broad strokes writes great stuff on privacy.
+* [https://snikt.net/](https://snikt.net/) - Anreas Happe's work on building an LTE modem got my attention, but I stayed for his eclectic writings on interesting, tech-related topics. 
+* [https://apenwarr.ca/log](https://apenwarr.ca/log) - __ dives deep on all sorts of developer- and tech-related topics, and does a great job of explaining even the most complex ones.
+* [https://www.justinobeirne.com/](https://www.justinobeirne.com/) - Justin Obeirne tracks Apple Maps' progress as the company works to map the entire country. The level of detail in his side-by-side comparisons of each version is exquisite. 
+* [https://nrempel.com/](https://nrempel.com/) - Nicholar Rempel also all sorts of developer- and tech-related topics, and does so well.
+* [https://subt0x11.blogspot.com/](https://subt0x11.blogspot.com/) - This site has not seen a new post in over a year, but I keep it around in this hopes that it will. The three posts in its RSS feed, all from 2018, dive deep on some interesting exploits. 
+* [https://www.backblaze.com/blog](https://www.backblaze.com/blog) - I have used Backblaze for years, and have followed their website off and on for years. I re-subscribed as I grow more interesting in standing up my own homelab, which will involve some sort of network attached storage system. Backblaze's detailed hard drive performance reports have helped guide that planning process. 
+* [https://codefol.io/](https://codefol.io/) - Noah Gibbs writes about tech, leadership, and culture, all of which interest me. 
 
 ### Miscellaneous
 
