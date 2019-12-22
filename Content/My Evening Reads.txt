@@ -6,7 +6,7 @@ Author: Zac Szewczyk
 
 I follow a lot of websites. In [*Keeping Up with Current Events*](My Morning Reads.txt), I list the sixteen I use to start my day. These get regular updates and help me keep up on current events. I also follow a lot of websites run by independent writers and small shops. These cover many of the same topics, but due to their size, they do not get updated as often. The unique perspective they bring to the table, though, makes for some of the most interesting reading I do. To round out [my earlier post](My Morning Reads.txt), I want to share this list with you today.
 
-Out of the forty sites on this list, I can expect to see new content on just six per day, a handful of others in a week, and the rest on an inconsistent basis. Rather than check each one, I keep up with them using their RSS feeds. In brief, think of an RSS feed as a single file containing a list of all the articles on a website. On April 9th, for example, the feed for my blog would have looked like this:
+Out of the fifty-two sites on this list, I can expect to see new content on less than a quarter per day, a handful of others in a week, and the rest on an inconsistent basis. Rather than check each one, I keep up with them using their RSS feeds. In brief, think of an RSS feed as a single file containing a list of all the articles on a website. On April 9th, 2019, for example, the feed for my blog would have looked like this:
 
 * 2019/04/09 14:26:08: Secure, Private File Sharing ([https://zacs.site/blog/secure-private-file-sharing.html](https://zacs.site/blog/secure-private-file-sharing.html))
 * 2019/04/09 14:13:33: Before, Now, and in the Future ([https://zacs.site/blog/before-now-and-future.html](https://zacs.site/blog/before-now-and-future.html))
@@ -54,6 +54,7 @@ These next sites focus on things like backpacks and knives--items an individual 
 * [https://packconfig.com](https://packconfig.com) - The folks over at [Pack Config](https://packconfig.com) bring an interesting mix of gear reviews, recommendations, and in-depth testing to the table, alongside curated "pocket dumps" that showcase the cool gear their readers carry. These posts in particular have lead to some interesting finds for me.
 * [http://www.exploringoverland.com/](http://www.exploringoverland.com/overland-tech-travel/) - Exploring Overland's [Overland Tech & Travel](http://www.exploringoverland.com/overland-tech-travel/) blog focuses more on the types of gear overlanders use. Look here for a mix of gear an individual would use on a day trip, and things like portable fridges.
 * [https://www.itstactical.com](https://www.itstactical.com) - I have mixed feelings on [ITS Tactical](https://www.itstactical.com). The blog came about as a way to promote the store, so I understand why it highlights giveaways and serial posts with little lasting value. That sort of content drives pageviews, which turn into revenue. That comes at the cost of burying valuable content, though. I have found some phenomenal information on this site. [The recent two-part series on overland communications](https://www.itstactical.com/series/overland-communications/) comes to mind, where Derek Gill explained the challenges of staying in touch in extreme environments and how he overcame them. If you feel up to sifting through a lot of junk to get to some real gems, I cannot recommend the site enough. See also [ITS Tactical on YouTube](https://www.youtube.com/channel/UCk2SqzpY5c-eGScFMuqAitA).
+* [https://www.yompnotes.com/](https://www.yompnotes.com/) - This site seldom sees new posts, but Neil Stevens writes good reviews and does some great work customizing his loadouts. I have great affinity for the DIY gear maker.
 * [https://sticksblog.com](https://sticksblog.com) - If I ever do hike the Appalachian Trail, I will hike it with the gear recommended on [Stick's Blog](https://sticksblog.com).
 
 #### ...to the places you want to go.
@@ -94,15 +95,23 @@ I read [a handful of political websites](My Morning Reads.txt), but just one pol
 
 * [http://coyoteblog.com](http://coyoteblog.com) - Coyote Blog
 
-### Programming
+### Technology
 
-I would not call myself a good programmer. I know enough [to do some damage](/projects.html), but the better I get, the more room for growth I see. These writers seldom talk about the basics, but rather the interesting edge cases, tricks, and lessons they have encountered or learned in their careers as developers. They teach me new things all the time.
+I would not call myself a good programmer. I know enough [to do some damage](/projects.html), but the better I get, the more room for growth I see. These writers seldom talk about the basics, but rather the interesting edge cases, tricks, and lessons they have encountered or learned in their careers as developers. They teach me new things all the time, or just cover interesting tech-related topics.
 
 * [https://www.hanselman.com/blog/](https://www.hanselman.com/blog/) - Scott Hanselman covers writing and development at a high level, for the most part, but gets down into the weeds on occasion. He has a wealth of knowledge to share on all fronts.
 * [https://bitsofco.de/](https://bitsofco.de/) - At [bitsofcode](https://bitsofco.de/), Ire Aderinokun writes about front-end development. I have seen a lot of people brush HTML, CSS, and JavaScript off as solved problems, in an age where lazy browser rendering and fast internet connections have masked the importance of smart design. That tide [has started to change](A JavaScript Free Frontend.txt), though, and Ire's tips have helped me stay in front of this trend.
 * [https://davidwalsh.name](https://davidwalsh.name) - I have some strong feelings about the design of [David Walsh's blog](https://davidwalsh.name), and much more positive ones about the great articles he posts there. David writes focuses on front-end development, but also covers languages and technologies on the back end as well.
 * [https://medium.com/@addyosmani](https://medium.com/@addyosmani) - A Google engineer working on Chrome, [Addy Osmani](https://medium.com/@addyosmani) writes a lot about ways to optimize the web. You may have noticed a pattern here.
 * [http://nonullpointers.com](http://nonullpointers.com) - Although a new site without much of a back catalog, Chris D'Aloisio has written some interesting pieces on the less technical side of becoming a better developer. I look forward to seeing what else he has to say.
+42. [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/)
+43. [https://snikt.net/](https://snikt.net/)
+44. [https://apenwarr.ca/log](https://apenwarr.ca/log)
+49. [https://www.justinobeirne.com/](https://www.justinobeirne.com/)
+50. [https://nrempel.com/](https://nrempel.com/)
+52. [https://subt0x11.blogspot.com/](https://subt0x11.blogspot.com/)
+45. [https://www.backblaze.com/blog](https://www.backblaze.com/blog)
+46. [https://codefol.io/](https://codefol.io/)
 
 ### Miscellaneous
 
@@ -112,6 +121,9 @@ This last group of websites does not fit into of the genres above, but over the 
 * [https://zenhabits.net](https://zenhabits.net) - I took a deep dive on mindfulness a few years ago, and only Leo Babauta's [zen habits](https://zenhabits.net) lasted more than a few weeks. He reminds me to slow down when I get too wrapped up in life.
 * [http://blairreeves.me](http://blairreeves.me) - One of my favorite new writers, [Blair Reeves](http://blairreeves.me) talks about tech, life, and writing a blog.
 * [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/) - A former Navy SEAL, [Eric Davis](http://www.ericdavis215.com/blog/) has some interesting thoughts on life, adventure, and philosophy.
+41. [https://80000hours.org/](https://80000hours.org/)
+48. [https://www.jefftk.com/p](https://www.jefftk.com/p)
+51. [https://www.nicoledieker.com](https://www.nicoledieker.com)
 
 #### The Full List
 
@@ -131,6 +143,7 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 12. [https://www.carryology.com](https://www.carryology.com) ★
 13. [https://packconfig.com](https://packconfig.com) ★
 14. [http://www.exploringoverland.com/](http://www.exploringoverland.com/overland-tech-travel/) ★
+47. [https://www.yompnotes.com/](https://www.yompnotes.com/)
 15. [https://www.itstactical.com](https://www.itstactical.com) ★
 16. [https://sticksblog.com](https://sticksblog.com) ★
 17. [https://misadventuresmag.com/category/read/](https://misadventuresmag.com/category/read/) ★
@@ -152,22 +165,20 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 33. [https://davidwalsh.name](https://davidwalsh.name) ★
 34. [https://medium.com/@addyosmani](https://medium.com/@addyosmani) ★
 35. [http://nonullpointers.com](http://nonullpointers.com) ★
+42. [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/)
+43. [https://snikt.net/](https://snikt.net/)
+44. [https://apenwarr.ca/log](https://apenwarr.ca/log)
+49. [https://www.justinobeirne.com/](https://www.justinobeirne.com/)
+50. [https://nrempel.com/](https://nrempel.com/)
+52. [https://subt0x11.blogspot.com/](https://subt0x11.blogspot.com/)
+45. [https://www.backblaze.com/blog](https://www.backblaze.com/blog)
+46. [https://codefol.io/](https://codefol.io/)
 36. [https://waitbutwhy.com](https://waitbutwhy.com) ★
 37. [https://zenhabits.net](https://zenhabits.net) ★
 38. [http://blairreeves.me](http://blairreeves.me) ★
 39. [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/) ★
-
 41. [https://80000hours.org/](https://80000hours.org/)
-42. [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/)
-43. [https://snikt.net/](https://snikt.net/)
-44. [https://apenwarr.ca/log](https://apenwarr.ca/log)
-45. [https://www.backblaze.com/blog](https://www.backblaze.com/blog)
-46. [https://codefol.io/](https://codefol.io/)
-47. [https://www.yompnotes.com/](https://www.yompnotes.com/)
 48. [https://www.jefftk.com/p](https://www.jefftk.com/p)
-49. [https://www.justinobeirne.com/](https://www.justinobeirne.com/)
-50. [https://nrempel.com/](https://nrempel.com/)
 51. [https://www.nicoledieker.com](https://www.nicoledieker.com)
-52. [https://subt0x11.blogspot.com/](https://subt0x11.blogspot.com/)
 
 I like big-name websites for keeping up on current events, but I tend to find the best content on sites like these. The advice to "follow people, not places" has served me well, and I encourage you to start doing the same.
