@@ -166,6 +166,6 @@ code {
     background-color: #666 !important;
   }
   pre {
-    background-color: none;
+    background-color: #444 !important;
   }
 }
