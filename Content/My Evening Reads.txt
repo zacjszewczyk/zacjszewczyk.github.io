@@ -108,7 +108,7 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [https://snikt.net/](https://snikt.net/) - Anreas Happe's work on building an LTE modem got my attention, but I stayed for his eclectic writings on interesting, tech-related topics. 
 * [https://apenwarr.ca/log](https://apenwarr.ca/log) - __ dives deep on all sorts of developer- and tech-related topics, and does a great job of explaining even the most complex ones.
 * [https://www.justinobeirne.com/](https://www.justinobeirne.com/) - Justin Obeirne tracks Apple Maps' progress as the company works to map the entire country. The level of detail in his side-by-side comparisons of each version is exquisite. 
-* [https://nrempel.com/](https://nrempel.com/) - Nicholar Rempel also all sorts of developer- and tech-related topics, and does so well.
+* [https://nrempel.com/](https://nrempel.com/) - Nicholas Rempel also all sorts of developer- and tech-related topics, and does so well.
 * [https://subt0x11.blogspot.com/](https://subt0x11.blogspot.com/) - This site has not seen a new post in over a year, but I keep it around in this hopes that it will. The three posts in its RSS feed, all from 2018, dive deep on some interesting exploits. 
 * [https://www.backblaze.com/blog](https://www.backblaze.com/blog) - I have used Backblaze for years, and have followed their website off and on for years. I re-subscribed as I grow more interesting in standing up my own homelab, which will involve some sort of network attached storage system. Backblaze's detailed hard drive performance reports have helped guide that planning process. 
 * [https://codefol.io/](https://codefol.io/) - Noah Gibbs writes about tech, leadership, and culture, all of which interest me. 
@@ -129,42 +129,42 @@ This last group of websites does not fit into of the genres above, but over the 
 
 Like [last time](My Morning Reads.txt), to make your life a little easier, I list every site below in order of appearance.
 
-1. [http://twoifoverland.com/](http://twoifoverland.com/) ★
-2. [https://blissordie.com](https://blissordie.com) ★
-3. [https://www.overlandpeanut.com/blog/](https://www.overlandpeanut.com/blog/) ★
-4. [https://liveworkwander.com](https://liveworkwander.com) ★
-5. [https://expeditionportal.com/](https://expeditionportal.com/) ★
-6. [http://www.drivingline.com/](http://www.drivingline.com/) ★
-7. [https://gearpatrol.com](https://gearpatrol.com) ★
-8. [https://www.gearhungry.com](https://www.gearhungry.com) ★
-9. [https://gearjunkie.com](https://gearjunkie.com) ★
-10. [https://uncrate.com/](https://uncrate.com/) ★
-11. [http://www.everydaycommentary.com/](http://www.everydaycommentary.com/) ★
-12. [https://www.carryology.com](https://www.carryology.com) ★
-13. [https://packconfig.com](https://packconfig.com) ★
-14. [http://www.exploringoverland.com/](http://www.exploringoverland.com/overland-tech-travel/) ★
+1. [http://twoifoverland.com/](http://twoifoverland.com/)
+2. [https://blissordie.com](https://blissordie.com)
+3. [https://www.overlandpeanut.com/blog/](https://www.overlandpeanut.com/blog/)
+4. [https://liveworkwander.com](https://liveworkwander.com)
+5. [https://expeditionportal.com/](https://expeditionportal.com/)
+6. [http://www.drivingline.com/](http://www.drivingline.com/)
+7. [https://gearpatrol.com](https://gearpatrol.com)
+8. [https://www.gearhungry.com](https://www.gearhungry.com)
+9. [https://gearjunkie.com](https://gearjunkie.com)
+10. [https://uncrate.com/](https://uncrate.com/)
+11. [http://www.everydaycommentary.com/](http://www.everydaycommentary.com/)
+12. [https://www.carryology.com](https://www.carryology.com)
+13. [https://packconfig.com](https://packconfig.com)
+14. [http://www.exploringoverland.com/](http://www.exploringoverland.com/overland-tech-travel/)
 15. [https://www.yompnotes.com/](https://www.yompnotes.com/)
-16. [https://www.itstactical.com](https://www.itstactical.com) ★
-17. [https://sticksblog.com](https://sticksblog.com) ★
-18. [https://misadventuresmag.com/category/read/](https://misadventuresmag.com/category/read/) ★
-19. [https://huckberry.com/journal](https://huckberry.com/journal) ★
-20. [https://cabinporn.com/](https://cabinporn.com/) ★
-21. [https://www.outsideonline.com/](https://www.outsideonline.com/) ★
-22. [http://dereklow.co/](http://dereklow.co/) ★
-23. [Expedition Overland on YouTube](https://www.youtube.com/channel/UCiyiTqpss-ihtLHz-juFxIQ) ★
-24. [Mountain State Overland on YouTube](https://www.youtube.com/channel/UCFf8PTHJTZwtMWLfFkAkS4w) ★
-25. [nutnfancy on YouTube](https://www.youtube.com/channel/UCbT5ssxEDZHNyz28N4Ov7Wg) ★
-26. [The Tactical Defender on YouTube](https://www.youtube.com/channel/UCH9D1Alq8n7Dd3mM99O9G9A) ★
-27. [Triple Aught Design on YouTube](https://www.youtube.com/channel/UCoBFcQPFNNhUzjsJFPDm2gw) ★
-28. [Homesteadonomics on YouTube](https://www.youtube.com/channel/UCMiTb1EJ5nhn_NbUyNu003w) ★
-29. [https://www.financialsamurai.com](https://www.financialsamurai.com) ★
-30. [http://www.genyfinanceguy.com](http://www.genyfinanceguy.com) ★
-31. [http://coyoteblog.com](http://coyoteblog.com) ★
-32. [https://www.hanselman.com/blog/](https://www.hanselman.com/blog/) ★
-33. [https://bitsofco.de/](https://bitsofco.de/) ★
-34. [https://davidwalsh.name](https://davidwalsh.name) ★
-35. [https://medium.com/@addyosmani](https://medium.com/@addyosmani) ★
-36. [http://nonullpointers.com](http://nonullpointers.com) ★
+16. [https://www.itstactical.com](https://www.itstactical.com)
+17. [https://sticksblog.com](https://sticksblog.com)
+18. [https://misadventuresmag.com/category/read/](https://misadventuresmag.com/category/read/)
+19. [https://huckberry.com/journal](https://huckberry.com/journal)
+20. [https://cabinporn.com/](https://cabinporn.com/)
+21. [https://www.outsideonline.com/](https://www.outsideonline.com/)
+22. [http://dereklow.co/](http://dereklow.co/)
+23. [Expedition Overland on YouTube](https://www.youtube.com/channel/UCiyiTqpss-ihtLHz-juFxIQ)
+24. [Mountain State Overland on YouTube](https://www.youtube.com/channel/UCFf8PTHJTZwtMWLfFkAkS4w)
+25. [nutnfancy on YouTube](https://www.youtube.com/channel/UCbT5ssxEDZHNyz28N4Ov7Wg)
+26. [The Tactical Defender on YouTube](https://www.youtube.com/channel/UCH9D1Alq8n7Dd3mM99O9G9A)
+27. [Triple Aught Design on YouTube](https://www.youtube.com/channel/UCoBFcQPFNNhUzjsJFPDm2gw)
+28. [Homesteadonomics on YouTube](https://www.youtube.com/channel/UCMiTb1EJ5nhn_NbUyNu003w)
+29. [https://www.financialsamurai.com](https://www.financialsamurai.com)
+30. [http://www.genyfinanceguy.com](http://www.genyfinanceguy.com)
+31. [http://coyoteblog.com](http://coyoteblog.com)
+32. [https://www.hanselman.com/blog/](https://www.hanselman.com/blog/)
+33. [https://bitsofco.de/](https://bitsofco.de/)
+34. [https://davidwalsh.name](https://davidwalsh.name)
+35. [https://medium.com/@addyosmani](https://medium.com/@addyosmani)
+36. [http://nonullpointers.com](http://nonullpointers.com)
 37. [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/)
 38. [https://snikt.net/](https://snikt.net/)
 39. [https://apenwarr.ca/log](https://apenwarr.ca/log)
@@ -173,10 +173,10 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 42. [https://subt0x11.blogspot.com/](https://subt0x11.blogspot.com/)
 43. [https://www.backblaze.com/blog](https://www.backblaze.com/blog)
 44. [https://codefol.io/](https://codefol.io/)
-45. [https://waitbutwhy.com](https://waitbutwhy.com) ★
-46. [https://zenhabits.net](https://zenhabits.net) ★
-47. [http://blairreeves.me](http://blairreeves.me) ★
-48. [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/) ★
+45. [https://waitbutwhy.com](https://waitbutwhy.com)
+46. [https://zenhabits.net](https://zenhabits.net)
+47. [http://blairreeves.me](http://blairreeves.me)
+48. [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/)
 49. [https://80000hours.org/](https://80000hours.org/)
 50. [https://www.jefftk.com/p](https://www.jefftk.com/p)
 51. [https://www.nicoledieker.com](https://www.nicoledieker.com)
