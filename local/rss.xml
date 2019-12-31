@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 31 Dec 2019 12:02:08 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 11:41:42 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>First Crack Release Notes, December 2019</title>
+            <link>https://zacs.site//blog/first-crack-release-notes-1219.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/first-crack-release-notes-1219.html</guid>
+
+            <pubDate>Tue, 31 Dec 2019 11:41:36 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I spent a lot of time on &lt;a href="https://zacs.site//projects.html#firstCrack"&gt;First Crack&lt;/a&gt; this month. Writing &lt;a href="https://zacs.site/blog/first-crack-release-notes-1119.html"&gt;last month&#38;#8217;s&lt;/a&gt; release notes pushed me to stop dragging my feet, and I made some great progress. &lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/first-crack-release-notes-1219.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>This Page is Designed to Last</title>
             <link>https://jeffhuang.com/designed_to_last/</link>
