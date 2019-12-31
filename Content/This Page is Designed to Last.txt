@@ -1,0 +1,15 @@
+Type: linkpost
+Title: This Page is Designed to Last
+Link: https://jeffhuang.com/designed_to_last/
+Pubdate: 2019/12/30 19:01:33
+Author: Zac J. Szewczyk
+
+Jeff Huang, echoing a point I made in [*Own Your Platform*](Own Your Platform.txt), in his piece on the importance of building websites that stand the test of time:
+
+> "I've recommended my students to push websites to Heroku, and publish portfolios on Wix. Yet every platform with irreplaceable content dies off some day. Geocities, LiveJournal, what.cd, now Yahoo Groups. One day, Medium, Twitter, and even hosting services like GitHub Pages will be plundered then discarded when they can no longer grow or cannot find a working business model."
+
+And then, later, he echoes a point I made in [*How to Own Your Platform*](How to Own Your Platform.txt), about the vulnerable position relying on trendy third-party frameworks puts you in: 
+
+> "... a growing set of libraries and frameworks are making the web more sophisticated but also more complex. First came jquery, then bootstrap, npm, angular, grunt, webpack, and more. If you are a web developer who is keeping up with the latest, then that's not a problem. But if not, maybe you are an embedded systems programmer or startup CTO or enterprise Java developer or chemistry PhD student, sure you could probably figure out how to set up some web server and toolchain, but will you keep this up year after year, decade after decade? Probably not, and when the next year when you encounter a package dependency problem or figure out how to regenerate your html files, you might just throw your hands up and zip up the files to deal with 'later'. Even simple technology stacks like static site generators (e.g., Jekyll) require a workflow and will stop working at some point. You fall into npm dependency hell, and forget the command to package a release."
+
+Run your website, and [own the production stack](/projects.html#firstCrack). Jeff has some some good ideas, but do not paper over poor back-end design with good front-end work. [Own your platform](Own Your Platform.txt), so that you can ensure both will stand the test of time.

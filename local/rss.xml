@@ -7,34 +7,33 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 29 Dec 2019 01:03:02 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 12:02:08 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
-            <title>My Evening Reads</title>
-            <link>https://zacs.site//blog/my-evening-reads.html</link>
-            <guid isPermaLink='true'>https://zacs.site//blog/my-evening-reads.html</guid>
+            <title>This Page is Designed to Last</title>
+            <link>https://jeffhuang.com/designed_to_last/</link>
+            <guid isPermaLink='true'>https://jeffhuang.com/designed_to_last/</guid>
 
-            <pubDate>Wed, 15 May 2019 11:44:09 GMT</pubDate>
+            <pubDate>Tue, 31 Dec 2019 00:01:33 GMT</pubDate>
             <description>
 
-&lt;p&gt;I follow a lot of websites. In &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;&lt;em&gt;Keeping Up with Current Events&lt;/em&gt;&lt;/a&gt;, I list the sixteen I use to start my day. These get regular updates and help me keep up on current events. I also follow a lot of websites run by independent writers and small shops. These cover many of the same topics, but due to their size, they do not get updated as often. The unique perspective they bring to the table, though, makes for some of the most interesting reading I do. To round out &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;my earlier post&lt;/a&gt;, I want to share this list with you today.&lt;/p&gt;
-&lt;p class='read_more_paragraph'&gt;
-&lt;a style='text-decoration:none;' href='https://zacs.site//blog/my-evening-reads.html'&gt;Read more...&lt;/a&gt;
-&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>Keeping Up with Current Events</title>
-            <link>https://zacs.site//blog/my-morning-reads.html</link>
-            <guid isPermaLink='true'>https://zacs.site//blog/my-morning-reads.html</guid>
+&lt;p&gt;Jeff Huang, echoing a point I made in &lt;a href="https://zacs.site/blog/own-your-platform.html"&gt;&lt;em&gt;Own Your Platform&lt;/em&gt;&lt;/a&gt;, in his piece on the importance of building websites that stand the test of time:&lt;/p&gt;
 
-            <pubDate>Tue, 14 May 2019 12:46:04 GMT</pubDate>
-            <description>
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;I&#38;#8217;ve recommended my students to push websites to Heroku, and publish portfolios on Wix. Yet every platform with irreplaceable content dies off some day. Geocities, LiveJournal, what.cd, now Yahoo Groups. One day, Medium, Twitter, and even hosting services like GitHub Pages will be plundered then discarded when they can no longer grow or cannot find a working business model.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And then, later, he echoes a point I made in &lt;a href="https://zacs.site/blog/how-to-own-your-platform.html"&gt;&lt;em&gt;How to Own Your Platform&lt;/em&gt;&lt;/a&gt;, about the vulnerable position relying on trendy third-party frameworks puts you in: &lt;/p&gt;
 
-&lt;p&gt;I have always admired the well-informed. Their ability to speak on complex topics, to make thought-provoking points about things of which I know little, impresses me. This happened again a few months ago, with a retired Army Colonel whose knowledge of the American Revolution, the geopolitical landscape, and war floored me. I absorbed all I could from him. He also made me realize that I needed to do a much better job of educating myself and keeping up with current events. I have worked hard to do that over the last three months. Today I want to talk about my strategy for keeping up with world affairs. The self-education side of this coin warrants its own article, so I will save that for later.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;... a growing set of libraries and frameworks are making the web more sophisticated but also more complex. First came jquery, then bootstrap, npm, angular, grunt, webpack, and more. If you are a web developer who is keeping up with the latest, then that&#38;#8217;s not a problem. But if not, maybe you are an embedded systems programmer or startup CTO or enterprise Java developer or chemistry PhD student, sure you could probably figure out how to set up some web server and toolchain, but will you keep this up year after year, decade after decade? Probably not, and when the next year when you encounter a package dependency problem or figure out how to regenerate your html files, you might just throw your hands up and zip up the files to deal with &#38;#8216;later&#38;#8217;. Even simple technology stacks like static site generators (e.g., Jekyll) require a workflow and will stop working at some point. You fall into npm dependency hell, and forget the command to package a release.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Run your website, and &lt;a href="https://zacs.site//projects.html#firstCrack"&gt;own the production stack&lt;/a&gt;. Jeff has some some good ideas, but do not paper over poor back-end design with good front-end work. &lt;a href="https://zacs.site/blog/own-your-platform.html"&gt;Own your platform&lt;/a&gt;, so that you can ensure both will stand the test of time.&lt;/p&gt;
+
+&lt;/div&gt;
+
 &lt;p class='read_more_paragraph'&gt;
-&lt;a style='text-decoration:none;' href='https://zacs.site//blog/my-morning-reads.html'&gt;Read more...&lt;/a&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/this-page-is-designed-to-last.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
             </description>
         </item>
@@ -173,26 +172,6 @@
             </description>
         </item>
         <item>
-            <title>Start before you think you're ready</title>
-            <link>https://austinkleon.com/2019/11/05/start-before-you-think-youre-ready/</link>
-            <guid isPermaLink='true'>https://austinkleon.com/2019/11/05/start-before-you-think-youre-ready/</guid>
-
-            <pubDate>Fri, 15 Nov 2019 11:30:46 GMT</pubDate>
-            <description>
-
-&lt;blockquote&gt;
-&lt;p&gt;&#38;#8220;Me, personally, I became a professional writer so I could be a professional reader.&#38;#8221;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I love that line. The rest of Austin Kleon&#38;#8217;s post is good, but that line is great.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;p class='read_more_paragraph'&gt;
-&lt;a style='text-decoration:none;' href='https://zacs.site//blog/start-before-you-think-youre-ready.html'&gt;Read more...&lt;/a&gt;
-&lt;/p&gt;
-            </description>
-        </item>
-        <item>
             <title>Hot Takes on Tesla's Cybertruck</title>
             <link>https://zacs.site//blog/hot-takes-on-teslas-cybertruck.html</link>
             <guid isPermaLink='true'>https://zacs.site//blog/hot-takes-on-teslas-cybertruck.html</guid>
@@ -265,6 +244,26 @@
 
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/pbcopy.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Start before you think you're ready</title>
+            <link>https://austinkleon.com/2019/11/05/start-before-you-think-youre-ready/</link>
+            <guid isPermaLink='true'>https://austinkleon.com/2019/11/05/start-before-you-think-youre-ready/</guid>
+
+            <pubDate>Fri, 15 Nov 2019 11:30:46 GMT</pubDate>
+            <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;Me, personally, I became a professional writer so I could be a professional reader.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I love that line. The rest of Austin Kleon&#38;#8217;s post is good, but that line is great.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/start-before-you-think-youre-ready.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
             </description>
         </item>
@@ -411,23 +410,6 @@
             </description>
         </item>
         <item>
-            <title>How We Stay Connected Sailing the World</title>
-            <link>https://www.gonewiththewynns.com/sailboat-wifi-phone-satellite</link>
-            <guid isPermaLink='true'>https://www.gonewiththewynns.com/sailboat-wifi-phone-satellite</guid>
-
-            <pubDate>Fri, 18 Oct 2019 11:34:06 GMT</pubDate>
-            <description>
-
-&lt;p&gt;Jason and Nikki Wynn wrote a fantastic article that explains how they get Internet access on their sailboat. I spend a lot of time thinking about this, as I prepare to one day build and live in &lt;a href="https://zacs.site//projects.html#lmtvRV"&gt;my own RV&lt;/a&gt;. I have an article in the works that outlines a few different approaches, as well as my own plan. In brief, though, I plan to use a dedicated LTE modem for my primary connection, with a satellite link as a fallback. This will give me a stronger connection than a cellphone, hotspot, or even the oft-cited WeBoost in most of the Americas. On the off-chance I have no signal but need one, satellite data prices have come down enough to make that a viable way to ensure I always have some sort of connectivity.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;p class='read_more_paragraph'&gt;
-&lt;a style='text-decoration:none;' href='https://zacs.site//blog/how-we-stay-connected-sailing-the-world.html'&gt;Read more...&lt;/a&gt;
-&lt;/p&gt;
-            </description>
-        </item>
-        <item>
             <title>More bash tricks</title>
             <link>https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash</link>
             <guid isPermaLink='true'>https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash</guid>
@@ -441,6 +423,23 @@
 
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/more-bash-tricks.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>How We Stay Connected Sailing the World</title>
+            <link>https://www.gonewiththewynns.com/sailboat-wifi-phone-satellite</link>
+            <guid isPermaLink='true'>https://www.gonewiththewynns.com/sailboat-wifi-phone-satellite</guid>
+
+            <pubDate>Fri, 18 Oct 2019 11:34:06 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Jason and Nikki Wynn wrote a fantastic article that explains how they get Internet access on their sailboat. I spend a lot of time thinking about this, as I prepare to one day build and live in &lt;a href="https://zacs.site//projects.html#lmtvRV"&gt;my own RV&lt;/a&gt;. I have an article in the works that outlines a few different approaches, as well as my own plan. In brief, though, I plan to use a dedicated LTE modem for my primary connection, with a satellite link as a fallback. This will give me a stronger connection than a cellphone, hotspot, or even the oft-cited WeBoost in most of the Americas. On the off-chance I have no signal but need one, satellite data prices have come down enough to make that a viable way to ensure I always have some sort of connectivity.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/how-we-stay-connected-sailing-the-world.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
             </description>
         </item>
@@ -949,20 +948,6 @@ git add .; git commit -m "Initial commit."; git push
             </description>
         </item>
         <item>
-            <title>Writing Turn-Offs</title>
-            <link>https://zacs.site//blog/writing-turn-offs.html</link>
-            <guid isPermaLink='true'>https://zacs.site//blog/writing-turn-offs.html</guid>
-
-            <pubDate>Sat, 22 Jun 2019 20:48:17 GMT</pubDate>
-            <description>
-
-&lt;p&gt;I read &lt;a href="http://detect-respond.blogspot.com/2015/10/a-simple-hunting-maturity-model.html"&gt;a rundown of a cyber security threat hunting model&lt;/a&gt; the other day. Right at the start, the author&#38;#8217;s definition of &#38;#8220;hunting&#38;#8221; jumped out at me. It jumped out at me because he defined it well&#38;#160;&#38;#8212;&#38;#160;which reminded me of all the times I have seen others fail at this&#38;#160;&#38;#8212;&#38;#160;and prompted this post.&lt;/p&gt;
-&lt;p class='read_more_paragraph'&gt;
-&lt;a style='text-decoration:none;' href='https://zacs.site//blog/writing-turn-offs.html'&gt;Read more...&lt;/a&gt;
-&lt;/p&gt;
-            </description>
-        </item>
-        <item>
             <title>How to Manage Stress as a Developer: Practical Tips</title>
             <link>https://thevaluable.dev/developer-stress-management/</link>
             <guid isPermaLink='true'>https://thevaluable.dev/developer-stress-management/</guid>
@@ -1101,20 +1086,6 @@ git add .; git commit -m "Initial commit."; git push
 
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/build-your-own-cli.html'&gt;Read more...&lt;/a&gt;
-&lt;/p&gt;
-            </description>
-        </item>
-        <item>
-            <title>My Setup</title>
-            <link>https://zacs.site//blog/my-setup-2019.html</link>
-            <guid isPermaLink='true'>https://zacs.site//blog/my-setup-2019.html</guid>
-
-            <pubDate>Fri, 10 May 2019 14:02:59 GMT</pubDate>
-            <description>
-
-&lt;p&gt;Over the years I have dialed in my writing process. I started typing posts in a textbox on Zoomshare; nowadays, I write in a powerful text editor, track changes with version control software, keep redundant backups, and serve this site with a back-end I wrote myself. I have set myself up well with a pretty neat workflow, and today I want to share it with you.&lt;/p&gt;
-&lt;p class='read_more_paragraph'&gt;
-&lt;a style='text-decoration:none;' href='https://zacs.site//blog/my-setup-2019.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
             </description>
         </item>
@@ -1708,6 +1679,20 @@ git add .; git commit -m "Initial commit."; git push
             </description>
         </item>
         <item>
+            <title>Writing Turn-Offs</title>
+            <link>https://zacs.site//blog/writing-turn-offs.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/writing-turn-offs.html</guid>
+
+            <pubDate>Sat, 22 Jun 2019 20:48:17 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I read &lt;a href="http://detect-respond.blogspot.com/2015/10/a-simple-hunting-maturity-model.html"&gt;a rundown of a cyber security threat hunting model&lt;/a&gt; the other day. Right at the start, the author&#38;#8217;s definition of &#38;#8220;hunting&#38;#8221; jumped out at me. It jumped out at me because he defined it well&#38;#160;&#38;#8212;&#38;#160;which reminded me of all the times I have seen others fail at this&#38;#160;&#38;#8212;&#38;#160;and prompted this post.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/writing-turn-offs.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
+        <item>
             <title>Setting Up a Development Environment with Git</title>
             <link>https://martinovic.blog/post/home_git/</link>
             <guid isPermaLink='true'>https://martinovic.blog/post/home_git/</guid>
@@ -1897,6 +1882,20 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
             </description>
         </item>
         <item>
+            <title>My Evening Reads</title>
+            <link>https://zacs.site//blog/my-evening-reads.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/my-evening-reads.html</guid>
+
+            <pubDate>Wed, 15 May 2019 11:44:09 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I follow a lot of websites. In &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;&lt;em&gt;Keeping Up with Current Events&lt;/em&gt;&lt;/a&gt;, I list the sixteen I use to start my day. These get regular updates and help me keep up on current events. I also follow a lot of websites run by independent writers and small shops. These cover many of the same topics, but due to their size, they do not get updated as often. The unique perspective they bring to the table, though, makes for some of the most interesting reading I do. To round out &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;my earlier post&lt;/a&gt;, I want to share this list with you today.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/my-evening-reads.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
+        <item>
             <title>A Cisco Router Bug Has Massive Global Implications</title>
             <link>https://www.wired.com/story/cisco-router-bug-secure-boot-trust-anchor/</link>
             <guid isPermaLink='true'>https://www.wired.com/story/cisco-router-bug-secure-boot-trust-anchor/</guid>
@@ -1910,6 +1909,20 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/cisco-router-bug.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Keeping Up with Current Events</title>
+            <link>https://zacs.site//blog/my-morning-reads.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/my-morning-reads.html</guid>
+
+            <pubDate>Tue, 14 May 2019 12:46:04 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I have always admired the well-informed. Their ability to speak on complex topics, to make thought-provoking points about things of which I know little, impresses me. This happened again a few months ago, with a retired Army Colonel whose knowledge of the American Revolution, the geopolitical landscape, and war floored me. I absorbed all I could from him. He also made me realize that I needed to do a much better job of educating myself and keeping up with current events. I have worked hard to do that over the last three months. Today I want to talk about my strategy for keeping up with world affairs. The self-education side of this coin warrants its own article, so I will save that for later.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/my-morning-reads.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
             </description>
         </item>
@@ -1951,6 +1964,20 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 &lt;p&gt;In an article I will post soon, I mention the difference between smart and intelligent people. I have seen this explained in more ways than I can count, but none the way I define it. Rather than burying this in an already long piece, I want to talk about it here so that I can flesh it out and then cite it later.&lt;/p&gt;
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/smart-versus-intelligent.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>My Setup</title>
+            <link>https://zacs.site//blog/my-setup-2019.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/my-setup-2019.html</guid>
+
+            <pubDate>Fri, 10 May 2019 14:02:59 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Over the years I have dialed in my writing process. I started typing posts in a textbox on Zoomshare; nowadays, I write in a powerful text editor, track changes with version control software, keep redundant backups, and serve this site with a back-end I wrote myself. I have set myself up well with a pretty neat workflow, and today I want to share it with you.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/my-setup-2019.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
             </description>
         </item>
