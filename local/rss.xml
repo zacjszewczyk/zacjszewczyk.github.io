@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 31 Dec 2019 11:41:42 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2020 02:17:17 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Updates to My Morning and Evening Reads</title>
+            <link>https://zacs.site//blog/updates-to-my-morning-and-evening-reads.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/updates-to-my-morning-and-evening-reads.html</guid>
+
+            <pubDate>Wed, 01 Jan 2020 14:17:12 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I spent enough time Internet-less this holiday season that I had a chance to catch up on a few administrative tasks. One of those involved updating &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;&lt;em&gt;Keeping Up with Current Events&lt;/em&gt;&lt;/a&gt; and &lt;a href="https://zacs.site/blog/my-evening-reads.html"&gt;&lt;em&gt;My Evening Reads&lt;/em&gt;&lt;/a&gt; to reflect new sites, feeds, and newsletters I now follow, as well as those I no longer read. I work hard to educate myself and stay informed, and I encourage you to check those posts out as a great starting point to doing the same for yourself.&lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/updates-to-my-morning-and-evening-reads.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>First Crack Release Notes, December 2019</title>
             <link>https://zacs.site//blog/first-crack-release-notes-1219.html</link>
