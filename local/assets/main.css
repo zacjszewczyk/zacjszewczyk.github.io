@@ -168,4 +168,7 @@ code {
   pre {
     background-color: #444 !important;
   }
+  footer p{
+    color: #e4e4e4;
+  }
 }
