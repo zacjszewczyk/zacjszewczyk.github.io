@@ -7,9 +7,38 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 06 Jan 2020 01:00:43 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 12:04:55 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Good times create weak men</title>
+            <link>https://tonsky.me/blog/good-times-weak-men/</link>
+            <guid isPermaLink='true'>https://tonsky.me/blog/good-times-weak-men/</guid>
+
+            <pubDate>Tue, 07 Jan 2020 12:04:48 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Nikita Prokopov, on the growing complexity of software and the shrinking number of people who understand it:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;In programming, we are developing abstractions at an alarming rate. When enough of those are stacked, it becomes impossible to figure out or control what&#38;#8217;s going on down the stack. ... Docker and Electron are the most hyped new technologies of the last five years. Both are not about improving things, figuring out complexity or reducing it. Both are just compromised attempts to hide accumulated complexity from developers because it became impossible to deal with.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I saw this in college, when even Computer Science students favored complex and bloated frameworks over their own code. I make a concerted effort to counter it in my own projects: &lt;a href="https://zacs.site//projects.html#firstCrack"&gt;First Crack&lt;/a&gt;, the custom blog engine behind this site, uses vanilla Python 2 or 3 and has no dependencies. &lt;a href="https://blog.codinghorror.com/please-dont-learn-to-code/"&gt;If you&lt;/a&gt; decide &lt;a href="https://johnkurkowski.com/posts/dont-learn-to-code-learn-to-program-but-come-back-in-10-years/"&gt;to code&lt;/a&gt;, &lt;a href="http://codefol.io/posts/no-such-thing-as-knowing-coding-all-the-way-to-the-bottom/"&gt;you don&#38;#8217;t have to start with C&lt;/a&gt;&#38;#160;&#38;#8212;&#38;#160;but you should learn it. I resisted this during college, but two years into my career, I have come around: the lower you go, the better you will understand things higher in the stack. With greater understanding comes an increased ability to influence those things, which, in turn, will make you better at your job.&lt;/p&gt;
+
+&lt;p&gt;Michal Charemza brought up another good point in &lt;a href="https://charemza.name/blog/posts/abstractions/http/http-guide-for-developers/"&gt;&lt;em&gt;Mini HTTP guide for developers&lt;/em&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;Frameworks often hide/abstract parts of HTTP away. I think this is often a bit of a shame: it hides what&#38;#8217;s possible with HTTP, and so can lead to effects on engineering decisions.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;By learning to use frameworks instead of the tools and protocols they implement, developers not only miss out on foundational knowledge that will help them become better at their job, but also hamstring themselves to the subset of features the frameworks’ creators’ felt important enough to enable. Expanding a project beyond that expected use case will require diving into those low-level tools and protocol—-which, again, you do not have to start with, but you should learn at some point.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/good-times-create-weak-men.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Trump's Surprising Embrace of Industrial Policy to Fight China</title>
             <link>https://mattstoller.substack.com/p/trumps-surprising-embrace-of-industrial</link>

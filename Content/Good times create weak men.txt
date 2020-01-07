@@ -1,0 +1,17 @@
+Type: linkpost
+Title: Good times create weak men
+Link: https://tonsky.me/blog/good-times-weak-men/
+Pubdate: 2020/01/07 07:04:48
+Author: Zac J. Szewczyk
+
+Nikita Prokopov, on the growing complexity of software and the shrinking number of people who understand it:
+
+> "In programming, we are developing abstractions at an alarming rate. When enough of those are stacked, it becomes impossible to figure out or control what's going on down the stack. ... Docker and Electron are the most hyped new technologies of the last five years. Both are not about improving things, figuring out complexity or reducing it. Both are just compromised attempts to hide accumulated complexity from developers because it became impossible to deal with."
+
+I saw this in college, when even Computer Science students favored complex and bloated frameworks over their own code. I make a concerted effort to counter it in my own projects: [First Crack](/projects.html#firstCrack), the custom blog engine behind this site, uses vanilla Python 2 or 3 and has no dependencies. [If you](https://blog.codinghorror.com/please-dont-learn-to-code/) decide [to code](https://johnkurkowski.com/posts/dont-learn-to-code-learn-to-program-but-come-back-in-10-years/), [you don't have to start with C](http://codefol.io/posts/no-such-thing-as-knowing-coding-all-the-way-to-the-bottom/)--but you should learn it. I resisted this during college, but two years into my career, I have come around: the lower you go, the better you will understand things higher in the stack. With greater understanding comes an increased ability to influence those things, which, in turn, will make you better at your job.
+
+Michal Charemza brought up another good point in [*Mini HTTP guide for developers*](https://charemza.name/blog/posts/abstractions/http/http-guide-for-developers/):
+
+> "Frameworks often hide/abstract parts of HTTP away. I think this is often a bit of a shame: it hides what's possible with HTTP, and so can lead to effects on engineering decisions."
+
+By learning to use frameworks instead of the tools and protocols they implement, developers not only miss out on foundational knowledge that will help them become better at their job, but also hamstring themselves to the subset of features the frameworks’ creators’ felt important enough to enable. Expanding a project beyond that expected use case will require diving into those low-level tools and protocol—-which, again, you do not have to start with, but you should learn at some point.
