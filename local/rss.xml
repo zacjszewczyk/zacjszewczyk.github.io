@@ -7,9 +7,23 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 07 Jan 2020 12:04:55 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2020 12:41:52 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Rivian's Real Edge</title>
+            <link>https://zacs.site//blog/rivians-real-edge.html</link>
+            <guid isPermaLink='true'>https://zacs.site//blog/rivians-real-edge.html</guid>
+
+            <pubDate>Wed, 08 Jan 2020 12:41:46 GMT</pubDate>
+            <description>
+
+&lt;p&gt;James Temple, writing for MIT Technology Review in &lt;a href="https://www.technologyreview.com/s/614995/the-rivian-pickups-real-edge-over-teslas-cybertruck-isnt-its-battery/"&gt;&lt;em&gt;The Rivian pickup&#38;#8217;s real edge over Tesla&#38;#8217;s Cybertruck isn&#38;#8217;t its battery&lt;/em&gt;&lt;/a&gt;, emphasis mine: &lt;/p&gt;
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/rivians-real-edge.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Good times create weak men</title>
             <link>https://tonsky.me/blog/good-times-weak-men/</link>
