@@ -7,7 +7,7 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 08 Jan 2020 12:41:52 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2020 09:56:45 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -1051,10 +1051,11 @@
             <pubDate>Fri, 06 Sep 2019 11:11:37 GMT</pubDate>
             <description>
 
-&lt;p&gt;Full credit to Alex Armstrong and &lt;a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos"&gt;his helpful article&lt;/a&gt; for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these four lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.&lt;/p&gt;
+&lt;p&gt;Full credit to Alex Armstrong and &lt;a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos"&gt;his helpful article&lt;/a&gt; for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these five lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.&lt;/p&gt;
 
 &lt;pre class='shell'&gt;
 git init
+git remote add origin {GitHub repo URL} # Get GitHub repo URL
 git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL
 git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL
 git add .; git commit -m "Initial commit."; git push
