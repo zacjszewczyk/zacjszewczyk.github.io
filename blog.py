@@ -79,7 +79,7 @@ def DisplayInterface(params,search_query="",end_action="continue"):
             print(menu)
             params = GetUserInput("#: ")
         if ("-h" in params or "help" in params): # Print help menu
-            print('Entering "-h" at any time will display the menu below.\n%s' % (menu))
+            print(f'Entering "-h" at any time will display the menu below.\n{menu}')
         elif ("-S" in params): # Search all articles
             # If one has not been provided, get a string to search all files for
             if (search_query == ""):
@@ -97,7 +97,7 @@ def DisplayInterface(params,search_query="",end_action="continue"):
                 if (res):
                     print("\nFile: "+c.UNDERLINE+file+c.ENDC)
                     for match in res:
-                        print("    %sLine %d:%s %s" % (c.BOLD, match[0], c.ENDC, match[1]))
+                        print(f"    {c.BOLD}Line {match[0]}:{c.ENDC} {match[1]}")
             # Cleanup
             del res
         elif ("-r" in params): # Revert post timestamps
@@ -310,7 +310,7 @@ def AppendContentOfXToY(target, sources):
         # Once we have reached the end of the content in the case of a linkpost,
         # or read the first paragraph in the case of an original article, add a
         # "read more" link and close the article.
-        target_fd.write("\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='blog/%s'>&#x24E9;</a>\n    </p>" % (html_filename))
+        target_fd.write(f"\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='blog/{html_filename}'>&#x24E9;</a>\n    </p>")
         target_fd.write("</article>")
     target_fd.close()
 
@@ -396,7 +396,7 @@ def AppendToFeed(sources):
         # Once we have reached the end of the content in the case of a linkpost,
         # or read the first paragraph in the case of an original article, add a
         # "read more" link and close the article.
-        feed_fd.write("\n<p class='read_more_paragraph'>\n<a style='text-decoration:none;' href='%s/blog/%s'>Read more...</a>\n</p>\n".replace("<", "&lt;").replace(">", "&gt;") % (conf.base_url, html_filename))
+        feed_fd.write(f"\n<p class='read_more_paragraph'>\n<a style='text-decoration:none;' href='{conf.base_url}/blog/{html_filename}'>Read more...</a>\n</p>\n".replace("<", "&lt;").replace(">", "&gt;"))
         feed_fd.write("            </description>\n        </item>\n")
     feed_fd.close()
 
@@ -461,13 +461,13 @@ def HandleYear(year):
     # Write the opening HTML tags
     year_fd.write(content[2].replace("{{ title }}", "Post Archives - ").replace("{{ BODYID }}", "archives", 1))
     # Display the months listed.
-    year_fd.write("<div id=\"years_index\">\n<div>%s</div>\n" % (year))
+    year_fd.write(f"<div id=\"years_index\">\n<div>{year}</div>\n")
     # Sort the sub-dictionaries by keys, months, then iterate over it. For each
     # month in which a post was made, generate a 'month' file that contains all
     # posts made during that month.
     for month in sorted(files[year], reverse=True):
         # Add a link to the month, to the year file it belongs to.
-        year_fd.write("<div><a href=\"%s\">%s</a></div>" % (year+"-"+month+".html", months[month]))
+        year_fd.write(f"<div><a href=\"{year}"+"-"+month+f".html\">{months[month]}</a></div>")
         # Clear the 'month' file
         open("./local/blog/"+year+"-"+month+".html", "w", encoding=ENCODING).close()
         month_fd = open("./local/blog/"+year+"-"+month+".html", "a", encoding=ENCODING)
@@ -480,19 +480,19 @@ def HandleYear(year):
             for timestamp in sorted(files[year][month][day], reverse=True):
                 # If a structure file already exists, don't rebuild the HTML file for individual articles
                 if (not isfile("./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
-                    article_title = GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                    article_title = GenPage(files[year][month][day][timestamp], f"{year}/{month}/{day} {timestamp}")
                 else:
                     if (CompareMtimes("./Content/"+files[year][month][day][timestamp], "./local/blog/"+files[year][month][day][timestamp].lower().replace(" ","-")[0:-3]+"html")):
-                        article_title = GetTitle(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                        article_title = GetTitle(files[year][month][day][timestamp], f"{year}/{month}/{day} {timestamp}")
                     else:
                         # Generate each content file. "year", "month", "day", "timestamp"
                         # identify the file in the dictionary, and the passed time values
                         # designate the desired update time to set the content file.
-                        article_title = GenPage(files[year][month][day][timestamp], "%s/%s/%s %s" % (year, month, day, timestamp))
+                        article_title = GenPage(files[year][month][day][timestamp], f"{year}/{month}/{day} {timestamp}")
 
                 # For each article made in the month, add an entry on the appropriate
                 # 'month' structure file.
-                month_fd.write("<article>\n    %s<a href=\"%s\">%s</a>\n</article>\n" % (year+"/"+month+"/"+day+" "+timestamp+": ", files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+"html", article_title.strip()))
+                month_fd.write(f"<article>\n    {year}/{month}/{day} {timestamp}: <a href=\""+files[year][month][day][timestamp].lower().replace(" ", "-")[0:-3]+f"html\">{article_title.strip()}</a>\n</article>\n")
 
         # Write closing HTML tags to the month file.
         month_fd.write(content[1].replace("assets/", "../assets/"))
@@ -527,7 +527,7 @@ def GenBlog():
                 for day in files[year][month]:
                     for timestamp in files[year][month][day]:
                         fname = files[year][month][day][timestamp]
-                        ts = "%s/%s/%s %s" % (year, month, day, timestamp)
+                        ts = f"{year}/{month}/{day} {timestamp}"
 
                         # Add the first twenty-five articles to the main blog page.
                         if (file_idx < 25):
@@ -542,7 +542,7 @@ def GenBlog():
                             # page.
                             buff = """\n<article id="years_list">\n<div>"""
                             for x in sorted(files, reverse=True):
-                                buff += "\n<a href=\"/blog/%s\">%s</a></div>\n<div>" % (x.lower()+".html", x)
+                                buff += f"\n<a href=\"/blog/{x.lower()}.html\">{x}</a></div>\n<div>"
                             buff += "\n</div>\n</article>"
                             archives_fd = open("./local/archives.html", "a", encoding=ENCODING)
                             archives_fd.write(buff)
@@ -614,9 +614,9 @@ def GenPage(source, timestamp):
         if (idx == 0):
             ptype = line[6:].strip()
             if (ptype == "original"):
-                title += "<article>\n<h2 style=\"text-align:center;\">\n<a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+                title += "<article>\n<h2 style=\"text-align:center;\">\n<a href=\"{{URL}}\" class=\""+f"{ptype}"+"\">{{URL_TITLE}}</a>"
             else:
-                title += "<article>\n<h2 style=\"text-align:center;\">\n<a href=\"{{URL}}\" class=\"%s\">{{URL_TITLE}}</a>" % (ptype)
+                title += "<article>\n<h2 style=\"text-align:center;\">\n<a href=\"{{URL}}\" class=\""+f"{ptype}"+"\">{{URL_TITLE}}</a>"
         # In the second line of the file, add the article title.
         elif (idx == 1):
             article_title = line[7:].strip()
@@ -632,7 +632,7 @@ def GenPage(source, timestamp):
         elif (idx == 3):
             # print(line)
             line = line[9:].strip().replace(" ", "/").split("/")
-            title += """\n<time datetime="%s-%s-%s" pubdate="pubdate">By <link rel="author">%s</link> on <a href="%s">%s</a>/<a href="%s">%s</a>/%s %s EST</time>""" % (line[0], line[1], line[2], conf.byline, line[0]+".html", line[0], line[0]+"-"+line[1]+".html", line[1], line[2], line[3])
+            title += f"""\n<time datetime="{line[0]}-{line[1]}-{line[2]}" pubdate="pubdate">By <link rel="author">{conf.byline}</link> on <a href="{line[0]}.html">{line[0]}</a>/<a href="{line[0]}-{line[1]}.html">{line[1]}</a>/{line[2]} {line[3]} EST</time>"""
         # In the fifth line of the file, we're reading the author line. Since we don't do anything
         # with this, pass.
         elif (idx == 4):
@@ -731,7 +731,7 @@ def Init():
             conf.twitter_url = GetUserInput("Twitter URL: ")
             conf.insta_url = GetUserInput("Instagram URL: ")
             fd = open("./.config", "w", encoding=ENCODING)
-            fd.write("# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = %s\nbyline = %s\nfull_name = %s\nmeta_keywords = %s\nmeta_appname = %s\ntwitter = %s\ninstagram = %s" % (conf.base_url, conf.byline, conf.full_name, conf.meta_keywords, conf.meta_appname, conf.twitter_url, conf.insta_url))
+            fd.write(f"# FirstCrack configuration document\n# The following variables are required:\n## base_url - The base URL for your website, i.e. https://zacs.site\n## byline - The name of the author, as it will display on all posts\n## full_name - The full, legal name of the content owner.\n## meta_keywords - Any additional keywords you would like to include in the META keywords tag\n## meta_appname - The desired app name, stored in a META tag\n## twitter - URL to your Twtitter profile\n## instagram - URL to your Instagram profile\nbase_url = {conf.base_url}\nbyline = {conf.byline}\nfull_name = {conf.full_name}\nmeta_keywords = {conf.meta_keywords}\nmeta_appname = {conf.meta_appname}\ntwitter = {conf.twitter_url}\ninstagram = {conf.insta_url}")
             fd.close()
         else:
             print(c.FAIL+"Configuration file not created."+c.ENDC)
