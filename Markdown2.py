@@ -386,7 +386,7 @@ class Markdown:
             else:
                 url = __line[1][1:-1]
                 alt = ""
-            return "<div class='image'><img src='%s' alt='%s' title='%s' loading='lazy' /></div>" % (url, alt, desc)
+            return f"<div class='image'><img src='{url}' alt='{alt}' title='{desc}' loading='lazy' /></div>"
         # Handle series index. This is a non-standard Markdown convention that
         # lets the writer reference an external file that contains a list of
         # links to other articles in a related series, and include them
@@ -406,7 +406,7 @@ class Markdown:
         elif (self.__line_type_tracker[-1] == "fn"):
             # line = line.replace("div ", "div id=\"fn"+str(mark)+"\" ")+"""<a class="fn" title="return to article" href="#fnref"""+str(mark)+"""\">&#x21a9;</a>"""
             mark = __line.split("]", 1)[0][5:]
-            __line = "<p id='fn%s'><a class='fn' title='return to article' href='#fnref%s'>&#x21a9;</a>&nbsp;%s</p>" % (mark, mark, self.__parseInlineMD(__line[8:]))
+            __line = f"<p id='fn{mark}'><a class='fn' title='return to article' href='#fnref{mark}'>&#x21a9;</a>&nbsp;{self.__parseInlineMD(__line[8:])}</p>"
         # Default to treating the line as a paragraph
         else:
             if (__line[-3:] == "   "):

@@ -822,7 +822,7 @@ def Init():
 
     # Clear and initialize the RSS feed
     fd = open("./local/rss.xml", "w", encoding=ENCODING)
-    fd.write("""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>%s</title>\n    <link>%s</link>\n    <description>RSS feed for %s's website, found at %s/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, %s. All rights reserved.</copyright>\n    <atom:link href="%s/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>%s GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""" % (conf.byline, conf.base_url, conf.byline, conf.base_url, conf.byline, conf.base_url, datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")))
+    fd.write(f"""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>{conf.byline}</title>\n    <link>{conf.base_url}</link>\n    <description>RSS feed for {conf.byline}'s website, found at {conf.base_url}/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012, {conf.byline}. All rights reserved.</copyright>\n    <atom:link href="{conf.base_url}/rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>{datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")} GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""")
     fd.close()
 
     # Generate a dictionary with years as the keys, and sub-dictinaries as the elements.
@@ -874,7 +874,7 @@ def Migrate(target, mod_time):
 
     # Clear the target file, then write it's contents into it after the header information.
     fd = open("Content/"+target, "w", encoding=ENCODING)
-    fd.write("""Type: %s\nTitle: %s\nLink: %s\nPubdate: %s\nAuthor: %s\n\n%s""" % (article_type, article_title.strip(), article_url.strip(), mod_time, conf.byline, article_content.strip()))
+    fd.write(f"Type: {article_type}\nTitle: {article_title.strip()}\nLink: {article_url.strip()}\nPubdate: {mod_time}\nAuthor: {conf.byline}\n\n{article_content.strip()}")
     fd.close()
 
     # Cleanup
