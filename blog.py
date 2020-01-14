@@ -58,14 +58,14 @@ def DisplayInterface(params,search_query="",end_action="continue"):
         end_action = "quit"
 
     # Store the menu in a variable so as to provide easy access at any point in time.
-    menu = """
-    * To search all articles:                        %s-S%s
-    * To revert post timestamps:                     %s-r%s
-    * To clear all structure files:                  %s-R%s
-    * To display this menu:                          %s-h%s
-    * To exit this mode and build the site:          %sexit%s
-    * To exit this mode and quit the program:        %s!exit%s
-    """ % (c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.OKGREEN, c.ENDC, c.WARNING, c.ENDC, c.FAIL, c.ENDC, c.FAIL, c.ENDC)
+    menu = f"""
+    * To search all articles:                        {c.OKGREEN}-S{c.ENDC}
+    * To revert post timestamps:                     {c.OKGREEN}-r{c.ENDC}
+    * To clear all structure files:                  {c.OKGREEN}-R{c.ENDC}
+    * To display this menu:                          {c.WARNING}-h{c.ENDC}
+    * To exit this mode and build the site:          {c.FAIL}exit{c.ENDC}
+    * To exit this mode and quit the program:        {c.FAIL}!exit{c.ENDC}
+    """
 
     # If the terminal window is less than 59 characters wide, resize the menu
     # to better fit.
