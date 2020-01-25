@@ -7,11 +7,11 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 25 Jan 2020 10:20:39 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jan 2020 10:22:15 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
-            <title>Linear Exeuction, Multiprocessing, and Multithreading IO-Bound Tasks in Python</title>
+            <title>Sequential Exeuction, Multiprocessing, and Multithreading IO-Bound Tasks in Python</title>
             <link>https://zacs.site//blog/linear-python.html</link>
             <guid isPermaLink='true'>https://zacs.site//blog/linear-python.html</guid>
 
@@ -28,7 +28,7 @@ table{display:inline-block;max-width: 90%;overflow:scroll}
 }
 &lt;/style&gt;
 
-&lt;p&gt;Python &lt;a href="https://realpython.com/python-concurrency/"&gt;makes concurrency easy&lt;/a&gt;. It took less than an hour to &lt;a href="https://zacs.site/blog/first-crack-release-notes-0819.html"&gt;add multiprocessing to my blog engine&lt;/a&gt;, &lt;a href="https://zacs.site//projects.html/firstCrack"&gt;First Crack&lt;/a&gt;, and I have used it often since. Everyone likes to call premature optimization the root of all evil, but architecting programs for concurrent execution from the start has saved me hundreds of hours in large data capture and processing projects. Color me a Knuth skeptic. This article compares linear execution, multiprocessing, and multithreading for IO-Bound tasks in Python, with simple code samples along the way.&lt;/p&gt;
+&lt;p&gt;Python &lt;a href="https://realpython.com/python-concurrency/"&gt;makes concurrency easy&lt;/a&gt;. It took less than an hour to &lt;a href="https://zacs.site/blog/first-crack-release-notes-0819.html"&gt;add multiprocessing to my blog engine&lt;/a&gt;, &lt;a href="https://zacs.site//projects.html/firstCrack"&gt;First Crack&lt;/a&gt;, and I have used it often since. Everyone likes to call premature optimization the root of all evil, but architecting programs for concurrent execution from the start has saved me hundreds of hours in large data capture and processing projects. Color me a Knuth skeptic. This article compares sequential execution, multiprocessing, and multithreading for IO-Bound tasks in Python, with simple code samples along the way.&lt;/p&gt;
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/linear-python.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
