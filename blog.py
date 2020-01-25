@@ -310,7 +310,7 @@ def AppendContentOfXToY(target, sources):
         # Once we have reached the end of the content in the case of a linkpost,
         # or read the first paragraph in the case of an original article, add a
         # "read more" link and close the article.
-        target_fd.write(f"\n    <p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='blog/{html_filename}'>&#x24E9;</a>\n    </p>")
+        target_fd.write(f"<p class='read_more_paragraph'>\n        <a style='text-decoration:none;' href='blog/{html_filename}'>&#x24E9;</a>\n</p>")
         target_fd.write("</article>")
     target_fd.close()
 
@@ -937,7 +937,7 @@ if __name__ == '__main__':
     fd = open("system/index.html", "r", encoding=ENCODING)
     home = fd.read().split("<!-- DIVIDER -->")
     fd.close()
-    BuildFromTemplate(target="./local/index.html", title="", bodyid="home", description="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things.", sheets=home[0], passed_content=home[1])
+    BuildFromTemplate(target="./local/index.html", title="", bodyid="home", description="Zac J. Szewczyk's personal lifestyle blog on adventuring, writing, weightlifting, and leadership, among other things.", sheets="", passed_content=home[1])
     del home
     ## Reference the projects.html source file to generate the front-end structure file.
     fd = open("system/projects.html", "r", encoding=ENCODING)
@@ -957,7 +957,7 @@ if __name__ == '__main__':
     BuildFromTemplate("./local/explore.html", "Explore -", "explore", description="Explore page", sheets="", passed_content="")
     # Add intro paragraph to explore page
     fd = open("./local/explore.html", "a", encoding=ENCODING)
-    fd.write("<article>\n<p>\nEvery time I update this site, new articles appear here. This helps unearth old, unpopular posts that&#160;&#8212;&#160;left alone&#160;&#8212;&#160;no one would ever read again.\n</p>\n</article>")
+    fd.write("<article>\n<p>\nEvery time I update this site, new articles appear here. This helps unearth old, unpopular posts that&#160;&#8212;&#160;left alone&#160;&#8212;&#160;no one would ever read again.\n</p>\n</article>\n")
     fd.close()
     
     # Use multithreading to speed up processing each year's posts
