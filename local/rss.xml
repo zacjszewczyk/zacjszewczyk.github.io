@@ -7,7 +7,7 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac J. Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 25 Jan 2020 10:22:15 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2020 02:06:25 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -1767,6 +1767,23 @@ git add .; git commit -m "Initial commit."; git push
 
 &lt;p class='read_more_paragraph'&gt;
 &lt;a style='text-decoration:none;' href='https://zacs.site//blog/google-ads.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Final Choices</title>
+            <link>http://patrickrhone.com/2010/11/05/final-choices/</link>
+            <guid isPermaLink='true'>http://patrickrhone.com/2010/11/05/final-choices/</guid>
+
+            <pubDate>Mon, 08 Jul 2019 23:39:27 GMT</pubDate>
+            <description>
+
+&lt;p&gt;A third gem I &lt;a href="https://zacs.site/blog/tbt-writing-vs-writing.html"&gt;re&lt;/a&gt;-&lt;a href="https://zacs.site/blog/dont-call-yourself-a-programmer.html"&gt;discovered&lt;/a&gt;, this time from &lt;a href="http://patrickrhone.com/"&gt;Patrick Rhone&lt;/a&gt;. In this post from 2010, he gets at something I did not understand until college. I look forward to explaining it soon in &lt;em&gt;Starting Over: The Gear I Would Buy if I Had to Do it All Over Again&lt;/em&gt;, but in brief: you can either buy a nice thing once, or a cheap thing forever. Price does not necessairily indicate quality, but you will never find quality without paying for it.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/final-choices.html'&gt;Read more...&lt;/a&gt;
 &lt;/p&gt;
             </description>
         </item>
