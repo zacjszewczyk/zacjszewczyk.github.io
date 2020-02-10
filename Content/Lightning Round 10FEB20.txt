@@ -1,0 +1,10 @@
+Type: original
+Title: Lightning Round
+Link: lightning-round-10feb20.html
+Pubdate: 2020/02/10 11:42:26
+Author: Zac Szewczyk
+
+In [the last lightning round](Lightning Round 04DEC19.txt), I promised that these posts would give me somewhere to share things that used to slip through the cracks. Today I have two.
+
+* [There Is No Swing Voter](https://www.politico.com/news/magazine/2020/02/06/rachel-bitecofer-profile-election-forecasting-new-theory-108944). I would submit a hybrid theory: voter turnout chooses the party, and voter opinion chooses the candidate. 
+* [The Billion-Dollar Disinformation Campaign to Reelect the President](https://www.theatlantic.com/magazine/archive/2020/03/the-2020-disinformation-war/605530/). This writeup on some of the infrastructure and tactics behind the reelection campaign was fascinating.
