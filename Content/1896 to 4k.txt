@@ -1,0 +1,9 @@
+Type: linkpost
+Title: Denis Shiryaev used neural networks to upscale a famous 1896 video to 4k quality
+Link: https://arstechnica.com/science/2020/02/someone-used-neural-networks-to-upscale-a-famous-1896-video-to-4k-quality/
+Pubdate: 2020/02/12 17:05:13
+Author: Zac Szewczyk
+
+This is such a cool idea: Denis Shiryaev used Gigapixel AI's neural network to upscale a classif video from 1896 into 4k; as Timothy Bee [points out](https://arstechnica.com/science/2020/02/someone-used-neural-networks-to-upscale-a-famous-1896-video-to-4k-quality/), a similar approach could then add color.  
+
+One of my long-term projects involves making the small part of the internet I use every day available offline. As I [lean](/projects.html#lmtvRV) toward a more nomadic lifestyle, I may not always have ready access to the familiar shows I stream on Netflix, for example, or that one news article from a few weeks ago. A single hard drive could store everything I have ever watched, read, and listened to, though, and so I want to make that happen. This goes well with one of my other long-term projects, which involves curating evergreen digital media for posterity's sake. Think of the former as every movie I have ever watched, and the latter as the classics I want to save for my kids. There are many [subltle challenges](https://ukiahsmith.com/blog/which-compression-format-to-use-for-archiving/) to this, but none so obvious as the fact that even video from a few years ago looks bad on modern displays. [Denis's demonstration](https://arstechnica.com/science/2020/02/someone-used-neural-networks-to-upscale-a-famous-1896-video-to-4k-quality/) gives me hope that this may not always be the case.
