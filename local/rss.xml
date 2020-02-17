@@ -7,7 +7,7 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 17 Feb 2020 12:49:08 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2020 06:28:37 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -5627,13 +5627,13 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
         </item>
         <item>
             <title>Should I Continue Working As A Contractor Or Go Full-time?</title>
-            <link>http://www.financialsamurai.com/should-i-continue-working-as-a-contractor-or-go-full-time/</link>
-            <guid isPermaLink='true'>http://www.financialsamurai.com/should-i-continue-working-as-a-contractor-or-go-full-time/</guid>
+            <link>https://www.financialsamurai.com/should-i-continue-working-as-a-contractor-or-go-full-time/</link>
+            <guid isPermaLink='true'>https://www.financialsamurai.com/should-i-continue-working-as-a-contractor-or-go-full-time/</guid>
 
             <pubDate>Sun, 06 Apr 2014 14:02:10 GMT</pubDate>
             <description>
 
-&lt;p&gt;As usual, an interesting article from Sam Dogen at Finaicial Samurai. Especially within this microcosm of independent app developers and writers, it has become so common to hear the story of a full-time employee striking out on his own that this piece nearly took me by surprise: rather than leaving his large company and setting up a one-man shop, Sam is considering returning to the corporate nine-to-five lifestyle he left in 2012. Even more interestingly, his reasons make a lot of sense. I would love to go independent at some point in my life, but there is certainly some appeal to being a corporate stooge.&lt;/p&gt;
+&lt;p&gt;As usual, an interesting article from Sam Dogen at Financial Samurai. Especially within this microcosm of independent app developers and writers, it has become so common to hear the story of a full-time employee striking out on his own that this piece nearly took me by surprise: rather than leaving his large company and setting up a one-man shop, Sam is considering returning to the corporate nine-to-five lifestyle he left in 2012. Even more interestingly, his reasons make a lot of sense. I would love to go independent at some point in my life, but there is certainly some appeal to being a corporate stooge.&lt;/p&gt;
 
 &lt;/div&gt;
 
@@ -15186,8 +15186,8 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
         </item>
         <item>
             <title>Life in Full Color</title>
-            <link>http://shawnblanc.net/category/full-color/</link>
-            <guid isPermaLink='true'>http://shawnblanc.net/category/full-color/</guid>
+            <link>https://shawnblanc.net/category/full-color/</link>
+            <guid isPermaLink='true'>https://shawnblanc.net/category/full-color/</guid>
 
             <pubDate>Mon, 21 Jan 2013 05:31:22 GMT</pubDate>
             <description>

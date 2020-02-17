@@ -1,6 +1,6 @@
 Type: linkpost
 Title: Life in Full Color
-Link: shawnblanc.net/category/full-color/
+Link: https://shawnblanc.net/category/full-color/
 Pubdate: 2013/01/21 00:31:22
 Author: Zac Szewczyk
 
