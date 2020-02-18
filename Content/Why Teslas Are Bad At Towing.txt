@@ -9,3 +9,5 @@ Jason Fenske does a nice job explaining why the Cybertruck will not tow well: hi
 ![Force graph with a high versus low numerator](/assets/Images/force_graph.png "Force graph with a high versus low numerator")
 
 As I said about the Cybertruck [last week](Tesla Cybertruck.txt), "it's not a very good sportscar, and it's not a very good truck." I [still think electric vehicles will revolutionize the overland space](/blog/expedition-rigs.html#Electric), but it will take years for the batteries to get there.
+
+Update on February 18, 2020: Jalopnik posted a quick writeup on an Audi E-Tron's range with and without a large trailer. The trailer cut range in half. See the post here: [*An Audi E-Tron Towed A GM EV1 From Tulsa To Austin, Range Was Affected*](https://jalopnik.com/an-audi-e-tron-towed-a-gm-ev1-from-tulsa-to-austin-ran-1841707034)
