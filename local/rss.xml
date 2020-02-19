@@ -7,9 +7,31 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 18 Feb 2020 12:52:40 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 19 Feb 2020 12:26:52 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Facebook asks for a moat of regulations it already meets</title>
+            <link>https://techcrunch.com/2020/02/17/regulate-facebook/</link>
+            <guid isPermaLink='true'>https://techcrunch.com/2020/02/17/regulate-facebook/</guid>
+
+            <pubDate>Wed, 19 Feb 2020 12:26:25 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Josh Constine, writing for TechCrunch:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;It&#38;#8217;s suspiciously convenient that Facebook already fulfills most of the regulatory requirements it&#38;#8217;s asking governments to lay on the rest of the tech industry. ... We already saw this happen with GDPR. The idea was to strengthen privacy and weaken exploitative data collection that tech giants like Facebook and Google depend on for their business models. The result was that Facebook and Google actually gained or only slightly lost EU market share while all other adtech vendors got wrecked by the regulation, according to WhoTracksMe.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Suspicious, no; convenient, yes; par for the course&#38;#160;&#38;#8212;&#38;#160;also yes. What a surprise.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/facebook-moat.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Holiday Fitness</title>
             <link>https://zacs.site//blog/holiday-fitness.html</link>

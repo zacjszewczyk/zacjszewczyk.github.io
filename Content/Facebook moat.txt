@@ -1,0 +1,11 @@
+Type: linkpost
+Title: Facebook asks for a moat of regulations it already meets
+Link: https://techcrunch.com/2020/02/17/regulate-facebook/
+Pubdate: 2020/02/19 07:26:25
+Author: Zac Szewczyk
+
+Josh Constine, writing for TechCrunch:
+
+> "It's suspiciously convenient that Facebook already fulfills most of the regulatory requirements it's asking governments to lay on the rest of the tech industry. ... We already saw this happen with GDPR. The idea was to strengthen privacy and weaken exploitative data collection that tech giants like Facebook and Google depend on for their business models. The result was that Facebook and Google actually gained or only slightly lost EU market share while all other adtech vendors got wrecked by the regulation, according to WhoTracksMe."
+
+Suspicious, no; convenient, yes; par for the course--also yes. What a surprise.
