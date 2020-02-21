@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 20 Feb 2020 01:02:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 09:45:16 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>1,000 True Fans? Try 100</title>
+            <link>https://a16z.com/2020/02/06/100-true-fans/</link>
+            <guid isPermaLink='true'>https://a16z.com/2020/02/06/100-true-fans/</guid>
+
+            <pubDate>Fri, 21 Feb 2020 21:45:08 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Over a decade ago, &lt;a href="https://kk.org/thetechnium/1000-true-fans/"&gt;Keven Kelly put forward the idea that creators could earn a living from 1,000 fans&lt;/a&gt;. In &lt;a href="https://a16z.com/2020/02/06/100-true-fans/"&gt;this piece&lt;/a&gt;, Li Jin proposes that they can do the same from 100 super fans. Crucially, though, as the number of patrons goes down, the value that creator provides must go up. Many seem to forget this last point, and see headlines like these as evidence that they can somehow make it with 1,000 subscribers or 100 readers. It just doesn&#38;#8217;t work. Understand the tradeoffs, make a realistic plan, and never &lt;a href="https://zacs.site/blog/simple-not-easy.html"&gt;quit&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/100-true-fans.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>You should publish your older works</title>
             <link>https://utf9k.net/blog/publish-old-works/</link>
