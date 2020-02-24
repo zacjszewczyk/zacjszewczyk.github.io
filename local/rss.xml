@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 21 Feb 2020 09:45:16 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2020 12:29:09 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>&#38;#91;Don't build&#38;#93; a static serverless website using S3 and CloudFront</title>
+            <link>https://sanderknape.com/2020/02/building-a-static-serverless-website-using-s3-cloudfront/</link>
+            <guid isPermaLink='true'>https://sanderknape.com/2020/02/building-a-static-serverless-website-using-s3-cloudfront/</guid>
+
+            <pubDate>Mon, 24 Feb 2020 12:29:06 GMT</pubDate>
+            <description>
+
+&lt;p&gt;Sander will get you up and running, probably, but &lt;a href="https://zacs.site/blog/dont-use-amazon-web-services.html"&gt;don&#38;#8217;t use Amazon Web Services&lt;/a&gt;. &lt;a href="https://zacs.site/blog/own-your-platform.html"&gt;Have a website&lt;/a&gt;, but &lt;a href="https://zacs.site/blog/how-to-own-your-platform.html"&gt;use the much more user friendly Google Firebase to host it for free&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/dont-build-using-aws.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>1,000 True Fans? Try 100</title>
             <link>https://a16z.com/2020/02/06/100-true-fans/</link>
