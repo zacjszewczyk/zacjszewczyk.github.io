@@ -7,9 +7,31 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 24 Feb 2020 12:29:09 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 25 Feb 2020 12:14:40 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Amish Ingenuity</title>
+            <link>https://kk.org/thetechnium/amish-hackers-a/</link>
+            <guid isPermaLink='true'>https://kk.org/thetechnium/amish-hackers-a/</guid>
+
+            <pubDate>Tue, 25 Feb 2020 12:14:34 GMT</pubDate>
+            <description>
+
+&lt;p&gt;&lt;a href="https://zacs.site/blog/100-true-fans.html"&gt;Speaking of Kevin Kelly&lt;/a&gt;, he wrote an interesting article examining the Amish&#38;#8217;s relationship with technology.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&#38;#8220;They don&#38;#8217;t adopt everything new but what new technology they do embrace, they take up about half a century after everyone else does. By that time, the benefits and costs are clear, the technology stable, and it is cheap.&#38;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now that just seems like good sense.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/amish-hackers.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>&#38;#91;Don't build&#38;#93; a static serverless website using S3 and CloudFront</title>
             <link>https://sanderknape.com/2020/02/building-a-static-serverless-website-using-s3-cloudfront/</link>
