@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 25 Feb 2020 11:53:30 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2020 11:55:09 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Let's be Real About Dependencies</title>
+            <link>https://wiki.alopex.li/LetsBeRealAboutDependencies</link>
+            <guid isPermaLink='true'>https://wiki.alopex.li/LetsBeRealAboutDependencies</guid>
+
+            <pubDate>Wed, 26 Feb 2020 11:54:42 GMT</pubDate>
+            <description>
+
+&lt;p&gt;I &lt;a href="https://zacs.site//projects.html#firstCrack"&gt;don&#38;#8217;t like&lt;/a&gt; &lt;a href="https://zacs.site/blog/linear-python.html"&gt;dependencies&lt;/a&gt;, but excusing one language&#38;#8217;s reliance on bucketloads of them because others use built-in libraries misses the point. I care about the number of dependencies I have to install just for your project. On a system full of libraries that could have met most of those requirements, as evidenced by other, similar projects that do not need hundreds of extra packages, the fact that yours does gives me pause. The fact that this language seems to cause this leads me to believe some fundamental shortcoming must exist. Let&#38;#8217;s not excuse that.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/lets-be-real-about-dependencies.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Amish Ingenuity</title>
             <link>https://kk.org/thetechnium/amish-hackers-a/</link>
