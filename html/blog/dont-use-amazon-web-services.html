@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="I fancy myself a technical guy. I got into web development at a young age, learned to write Python, Perl, C, and a handful of other languages in high school, and got a degree in Computer Science in college. Although I work in an organization not known for its technical prowess, it has worked hard to change that: today, Army Cyber matches industry on the defensive side, and--by law--has far more experience on the offense. I bring all this [back up](The Last Four Years.txt) so that you have some context when I say this: don't use Amazon Web Services to host your static website; it's far too complex. I spent twenty days struggling to work through that process. Today I will share my cautionary tale.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="Don't Use Amazon Web Services - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>Don't Use Amazon Web Services - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/dont-use-amazon-web-services.html">Don't Use Amazon Web Services</a>
+</h2>
+<time id='article_time' datetime="2019-5-16 11:23:46-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2019.html">2019</a>/<a href="/blog/2019-05.html">5</a>/16 11:23:46 EST</time>
+<p>I fancy myself a technical guy. I got into web development at a young age, learned to write Python, Perl, C, and a handful of other languages in high school, and got a degree in Computer Science in college. Although I work in an organization not known for its technical prowess, it has worked hard to change that: today, Army Cyber matches industry on the defensive side, and&#160;&#8212;&#160;by law&#160;&#8212;&#160;has far more experience on the offense. I bring all this <a href="https://zacs.site/blog/the-last-four-years.html">back up</a> so that you have some context when I say this: don&#8217;t use Amazon Web Services to host your static website; it&#8217;s far too complex. I spent twenty days struggling to work through that process. Today I will share my cautionary tale.</p>
+
+<h3 class="headers" id="AmazonWebServices">Amazon Web Services: The Internet's Backbone<span>&nbsp;<a href="#AmazonWebServices">#</a></span></h3>
+
+<p>Around 2003, Amazon began using back-end infrastructure designed, created, and maintained in-house. The team that build that back-end grew along with the company. Three years later, it became a public-facing service. Amazon Web Services has since grown to become the strongest player in this space.</p>
+
+<p>Most people know Amazon as the has-anything online store that delivers in two days or less. Developers also know it as the 800-pound gorilla in the web services room. Although <a href="https://www.quora.com/How-essential-is-AWS-to-the-internet">just a small part of the Internet runs on Amazon Web Services</a>, or AWS, <a href="https://www.theverge.com/2018/7/28/17622792/plugin-use-the-internet-without-the-amazon-cloud">it captures almost 40% of the sector&#8217;s revenue</a>. From this we may deduce that the platform hosts most of the popular revenue-producing sites in use today. From <a href="https://nymag.com/intelligencer/2018/03/when-amazon-web-services-goes-down-so-does-a-lot-of-the-web.html">Airbnb to Slack and Adobe Connect to Netflix</a>, many people go entire days without leaving AWS infrastructure.</p>
+
+<p>The market loves AWS, and the handful of civilian developers I know do, too. To help keep that love alive, Amazon attracts new people to its platform with <a href="https://aws.amazon.com/free/">a free tier</a>. This allows those with small projects to use the company&#8217;s cloud resources at no cost, as long as they stay within some broad limits. Many people host static websites for free on Simple Storage Service, or <a href="https://aws.amazon.com/s3/">S3</a>. Amazon <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">even</a> <a href="https://aws.amazon.com/getting-started/projects/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-1/">supports</a> <a href="https://aws.amazon.com/getting-started/projects/host-static-website/">that</a>. Due to the ever-increasing popularity of the platform, the good things I had heard about it, and its great price tag, I decided to use AWS to bring this site back online.</p>
+
+<h3 class="headers" id="AmazonS3">Amazon S3: A Fairytale Beginning<span>&nbsp;<a href="#AmazonS3">#</a></span></h3>
+
+<p>I <a href="https://aws.amazon.com/free/">opened an AWS account</a> on March 29th, 2019. <a href="/projects.html#firstCrack">First Crack</a> relied on a Node.js front-end at the time, so I spent an hour porting it to a static site builder. I then dove into <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/HostingWebsiteOnS3Setup.html">setting up the server</a>. That process, although not hard, did prove tricky. I started by creating three Buckets: one for <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/HostingWebsiteOnS3Setup.html#step1-create-bucket-config-as-website">static hosting</a> of <code>zacs.site</code>, the second to <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html#root-domain-walkthrough-s3-tasks">send requests</a> for <code>www.zacs.site</code> to <code>zacs.site</code>, and the third for <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html">server-side logging</a>. I then made the first two public with <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/HostingWebsiteOnS3Setup.html#step2-add-bucket-policy-make-content-public">a baffling block of JSON</a>, and pointed my domain to the AWS <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteEndpoints.html">Website Endpoint</a>. Around five hours after I opened my account, I could visit <code>http://zacs.site</code>. I called it a win and went to bed around 2:00 AM on March 30th.</p>
+
+<h3 class="headers" id="AmazonCertificateManager">Amazon Certificate Manager: Seeds of Disillusionment<span>&nbsp;<a href="#AmazonCertificateManager">#</a></span></h3>
+
+<p>On the morning of March 30th, I felt good. All had gone well so far. I had just two small items left on my to-do list. First, I wanted to set up HTTPS for better <a href="https://www.wired.com/story/google-chrome-https-not-secure-label/">security</a> and <a href="https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html">search engine ranking</a>. I also wanted to fix my service worker, which would help with caching, make my site work offline, and round out a perfect score in <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a>. Since using <a href="https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features">HTTP kept my service worker from loading</a>, tackling the first would solve both problems. After last night&#8217;s success, I dove right in.</p>
+
+<p>On the AWS support site, I found <a href="https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-https-requests-s3/">a helpful post on setting up HTTPS with Amazon CloudFront</a>. I did not yet have an SSL certificate, but found a link there to <a href="https://aws.amazon.com/premiumsupport/knowledge-center/install-ssl-cloudfront/">a page</a> that sent me to <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html">a third post that explained the process for getting one</a>. I had to request a free SSL certificate through <a href="https://aws.amazon.com/certificate-manager/">Amazon Certificate Manager</a>, or ACM. Given these can cost as little as $5 or over $500 per year, I had no problem with this.</p>
+
+<p>I started the request, but found that I could not finish it. An error message told me new accounts had to contact support to raise the default request limit, which <a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_acm">should have started at 1,000</a>. Through a note tucked into <a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html">yet another support page</a>, I later learned that &#8220;new AWS accounts might start with a lower limit&#8221;. In practice, they start with 0. I sent <a href="https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/">a ticket</a> in on the morning of March 30th, and got the cap raised to 1,000&#160;&#8212;&#160;the supposed default&#160;&#8212;&#160;three days later on Tuesday, April 2nd.</p>
+
+<p>Once I could request an SSL certificate, <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html">the process</a> took a few seconds. Then came the next hurdle: proving I owned my domain. I tried using <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html">DNS records</a> first, then exposed my <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html">email</a> address to the public WHOIS database when that failed. Neither worked. Over the next ten days, and almost as many support emails, a well-meaning support rep tried to get me through this opaque process. On April 12th, while waiting for a reply, I changed a setting on some menu that caused AWS to issue the certificate. I do not believe AWS wants its users to earn these through trial and error, but well done if they did.</p>
+
+<p>I did not know how long this process would take, or how involved it would get when I started. Given the ease with which I set up my site, I did not expect it to take ten days of support emails, web searches, and trial and error. That surprised me. For all I knew, though, everyone went through this drawn-out and complex process. I had my doubts, but I pressed on.</p>
+
+<h3 class="headers" id="AmazonCloudFront">Amazon CloudFront: A Fairytale Unraveled<span>&nbsp;<a href="#AmazonCloudFront">#</a></span></h3>
+
+<p>On April 12th, with an SSL certificate &#8220;in-hand&#8221;, I went back to <a href="https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-https-requests-s3/">the post on setting up HTTPS with CloudFront</a>. Since the Distribution limit <a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_cloudfront">defaults to 200</a>, I should not have had a problem creating my first. Once again, though, in practice it starts at 0. While I waited for that limit increase, I learned some things about <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">AWS Regions</a>.</p>
+
+<p>All websites live on actual devices called servers. The greater the distance between them and their users, the slower those websites become. Someone in New York could access a server down the street <a href="https://www.keycdn.com/support/what-is-latency">0.14 seconds</a> faster than one in the United Kingdom, for example. These delays matter when sending a lot of people a lot of data. Content delivery networks, or CDNs, solve this problem by cloning content all around the world. Traffic from Japan might go to devices near Asia, and traffic from the western United States might go to California. Users can still access data in other parts of the world, but keeping copies on nearby servers yields much lower response times.</p>
+
+<p>Amazon takes this approach to its web services with Regions. Rather than run S3 out of a single area and use a CDN to spread that data worldwide, Amazon has data centers <a href="https://aws.amazon.com/about-aws/global-infrastructure/">across the globe</a>. Each runs <a href="https://blog.rackspace.com/aws-101-regions-availability-zones">an instance</a> of the AWS stack. As I waited for my CloudFront limit increase, I learned that CloudFront lived in Virginia. To my dismay, I also learned that it would not work with certificates from other regions. The SSL certificate I had labored over for ten days came from ACM in Ohio.</p>
+
+<p>With no other choice, I started back at square one. I had raised my certificate limit in the Ohio region, but not Virginia, so I sent a new ticket in on April 12th. Four days later, on April 16th, the AWS support staff complied. By then they had also raised my CloudFront Distribution cap. Eighteen days after I opened my AWS account, I had the resources to use HTTPS. The process of setting it up proved both hard and complex. Trial and error got me through once again, and then the weird edge cases started popping up.</p>
+
+<p>First, my blog would not update. I could alter any other file in my S3 bucket, or upload a new one, and see that change a few minutes later. This delay made sense, because CDNs need time to propagate these changes. <code>blog.html</code> failing to update did not. It turns out CDNs can hold onto old versions of the files they serve, though, so I ended up taking <code>blog.html</code> off the network. This fixed my first edge case, but then the real problems started.</p>
+
+<p>When I refreshed the page, it showed me a long string of special characters. I had seen this before, when my browser tried to read a compressed file as plain text. Some digging lead to <a href="https://forums.aws.amazon.com/thread.jspa?messageID=381831">an AWS forum post from 2012</a>, from a user with the same problem. It looked like some server-side logic made either CloudFront or S3 serve the compressed <code>blog.html</code> without the flag that told my browser to decompress it. I confirmed this with a few shell commands:</p>
+
+<pre class='shell'>
+curl https://zacs.site/blog.html
+# "curl URL" sends a GET request to the server at URL. It then prints the server's response to the shell. When I ran the command above, it showed me a long string of question marks. I had a hunch that gzip compression caused this.
+</pre>
+
+<pre class='shell'>
+curl https://zacs.site/blog.html | gunzip
+# This time, "curl" sent that response to "gunzip" before printing it to the shell. "gunzip" decompresses files compressed with gzip. When I ran the command above, it printed raw HTML. This told me the server replied with the compressed "blog.html" file. By default, though, "curl" requests uncompressed files.
+</pre>
+
+<p>If I got a compressed file without asking for it, what would I get if I asked for a compressed file? This command let me find out:</p>
+
+<pre class='shell'>
+curl https://zacs.site/blog.html -H "Accept-Encoding: gzip"
+# This sent a GET request to my server, and told it to respond with compressed gzip files. Because "curl" does not unzip compressed files, this command should have printed a bunch of question marks to my shell. I got raw HTML.
+</pre>
+
+<p>Let me say this all again. When asked for a compressed file, my server replied with a plain text, unzipped one. When asked for a plain text, unzipped file, it replied with a compressed one.</p>
+
+<p>I checked my S3 bucket first. The <code>blog.html</code> file there had gzip compression, and tags that told AWS that. Somewhere between the S3 bucket and my device, then, CloudFront toggled the compression without toggling that flag. I confirmed this by storing a plain text, unzipped <code>blog.html</code> on the server and running those three commands again.</p>
+
+<p>I tried all sorts of hacks to fix this. Adding <code>Accept-Encoding: gzip</code> to every header. Taking <code>blog.html</code> off CloudFront&#8217;s CDN. Re-uploading zipped and unzipped versions of the file. Nothing worked. As part of that process, I turned the CDN off and on a few times. After the third half-hour cycle, the problem vanished. Not happy to take my win and call it a day, though, I started poking around the rest of my site. Did this problem affect any other pages? Every page I tested worked except one: <a href="/assets/MTV.html">my LMTV RV builder</a>. I threw in the towel.</p>
+
+<p>Closing in on two thousand words, I will leave my answer for a later post. Go into this with eyes wide open and you may fare better, but I have my doubts. Having a staff on-hand&#160;&#8212;&#160;and a budget for premium support&#160;&#8212;&#160;might make AWS a great choice. For a small shop looking for an easy way to host a static site, though, find something else.</p>
+
+
+</article>
+<p>
+<a href="/blog/dont-use-amazon-web-services.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2020 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>

@@ -1,254 +1,443 @@
 #!/usr/local/bin/python3
 
-from re import findall, search, sub, match, search # Import re functions
-from os import chdir # Import chdir to locate content files
+# Import methods
+from re import findall, sub # for links and ampersands
+from os.path import isfile
 
-# Global variables for pasring Markdown
-# - types: Keeps track of current and previous two line types
-# - active: The corresponding closing tag for the active block-level element
-types = ["", "", ""]
-active = ""
-pre = False
+class Markdown:
+    # Method: __init__
+    # Purpose: Accept base URL for relative links
+    # Parameters:
+    # - self: Class namespace
+    # - __base_url: Base URL for relative links. (String)
+    # Return: none
+    def __init__(self, base_url=""):
+        # Initialize variables
+        self.__base_url = base_url # Base URL, given for relative links
+        self.__line_tracker = ["", "", ""] # Last three lines, raw.
+        self.__line_type_tracker = ["", "", ""] # Type of last three lines.
+        self.__line_indent_tracker = [0, 0, 0] # Indent level of last three lines.
+        self.__close_out = [] # List of block-level elements that still need closed out.
+        self.__pre = False # Yes/no, is the parser in a <pre> tag?
+        self.__html = False # Yes/no, is this an HTML file?
 
-# Tell Proofer where it can find the content files
-path_to_content_files = "/Users/zjszewczyk/Dropbox/Code/Standalone/"
+    # Method: __parseInlineMD
+    # Purpose: Turn all inline Markdown tags into HTML.
+    # Parameters:
+    # - self: Class namespace
+    # - __line: Input line to process, mangled (String)
+    # Return:
+    # - Parsed line. (String)
+    def __parseInlineMD(self, __line):
+        # Add a <br /> if three or more trailing spaces.
+        if ((len(__line) - len(__line.rstrip(' '))) > 2):
+            __line = __line.strip() + "<br />"
 
-# Method: Markdown
-# Purpose: Take a raw string from a file, formatted in Markdown, and parse it into HTML.
-# Parameters:
-# - Line: Line to be parsed. (String)
-def Markdown(line, base_url):
-    # Make global variables accessible in the method, and initialize method variables.
-    # Must be global to persist between method calls.
-    global types, active, pre
-    start = 1
+        # Parser tracks leading whitespace, so remove it.
+        __line = __line.strip()
 
-    # Use {} to enclose an article series reference. Enclosed text identifies the article series, in the form of a file that the parser
-    # opens, reads, and inserts into the actual article.
-    # If line starts with {}, open target file, and return the contents with a return statement. Skip the rest w/ a return statement.
+        # If the remaining line length is 0, return blank line.
+        if (len(__line) == 0):
+            return ""
 
-    if (pre == True):
-        types.append("RAW HTML")
-    # Part of a series
-    elif (line[0] == "{"):
-        line = line.strip()
-        chdir(path_to_content_files)
-        fd = open("Content/System/"+line[1:-1], "r")
-        line = "<ul style=\"border:1px dashed gray\" id=\"series_index\">\n"
-        for each in fd.read().split("\n"):
-            line += "    <li>"+Markdown(each)+"</li>\n"
-        line += "</ul>"
-        types.append("RAW HTML")
-        fd.close()
-    # Header elements, <h1>-<h6>
-    elif (line[0] == "#"):
-        line = line.split("[")[0].strip()
-        header_id = sub('\W+','', line.title()).strip()
-        line = ("<h%d class=~headers~ id=~%s~>"+line.replace("#", "").strip()+"<span>&nbsp;<a href=~#%s~>#</a></span></h%d>") % (line.split(" ")[0].count("#"), header_id, header_id, line.split(" ")[0].count("#"))+"\n"
-        types.append("<h>,,</h>")
-    # Images
-    elif (line[0:1] == "!["):
-        types.append("<img>,,</img>")
-    # Footnote
-    elif (match("(\[>[0-9]+\])", line) != None):
-        types.append("<div class=\"footnote\">,,</div>")
-    # Blockquotes
-    elif (match(">|\s{4}", line) != None):
-        if ((types[-1] == "<blockquote>,,</blockquote>") or (types[-1] == "<bqt>,,</bqt>")):
-            types.append("<bqt>,,</bqt>")
-        else:
-            types.append("<blockquote>,,</blockquote>")
-    # Unordered lists
-    elif (match("\*\s", line) != None):
-        line = line.replace("* ", "")
-        if ((types[-1] == "<ul>,,</ul>") or (types[-2] == "<ul>,,</ul>") or (types[-3] == "<ul>,,</ul>") or (types[-1] == "<li>,,</li>") or (types[-2] == "<li>,,</li>") or (types[-3] == "<li>,,</li>")):
-            types.append("<li>,,</li>")
-        else:
-            types.append("<ul>,,</ul>")
-    # Ordered lists
-    elif (match("[0-9]+", line) != None):
-        start = line.split(".")[0]
-        line = sub("[0-9]+\.\s", "", line)
-        if ((types[-1] == "<ol>,,</ol>") or (types[-2] == "<ol>,,</ol>") or (types[-3] == "<ol>,,</ol>")):
-            types.append("<li>,,</li>")
-        else:
-            types.append("<ol>,,</ol>")
-    # Paragraphs
-    elif (match("[a-zA-Z_\[\*\"]", line) != None):
-        types.append("<p>,,</p>")
-    # Raw HTML code.
-    elif (line[0] == "<" or line[0] == "#"):
-        types.append("RAW HTML")
-    # A blank line. Two blank lines in a row is a linebreak.
-    else:
-        if (line.strip() == "" and types[-1] == "<blank>,,</blank>"):
-            types.append("<br />")
-        else:
-            types.append("<blank>,,</blank>")
+        # Parse  emdashes
+        __line = __line.replace("--", "&#160;&#8212;&#160;")
 
-    # Managerial code to keep the 'types' tuple to 3 elements.
-    if (len(types) == 4):
-        types.pop(0)
+        ## Prase **, or <strong>, tags first, to keep them from being
+        ## interpreted as <em> tags...
+        while ("**" in __line):
+            __line = __line.replace("**", "<strong>", 1).replace("**", "</strong>", 1)
 
-    # Admin variables, for clarity's sake.
-    current = types[-1]
-    second = types[-2]
-    third = types[-3]
-    if (current != "RAW HTML"):
-        # If I've already escaped a ascii code, pass; otherwise escape it.
-        if (search("&[a-z]{4}\;", line) != None):
-            pass
-        elif ("&" in line):
-            line = line.replace("&", "&#38;")
+        # Performance test to this point
 
-        # Horizontal rules
-        if (line[0:3] == "---"):
-            line = line.replace("---", "<hr style='margin:50px auto;width:50%;border:0;border-bottom:1px dashed #ccc;background:#999;' />")
-        # Emdashes
-        if ("--" in line):
-            line = line.replace("--", "&#160;&#8212;&#160;")
-        # Parse double-quote quotations
-        for each in findall("([\s\<\>\\\*\/\[\-\(]+\"[\[\w\%\#\\*<\>]+)", line):
-            ftxt = each.replace("\"", "&#8220;", 1)
-            line = line.replace(each, ftxt)
-        for each in findall("([\)\w+\.]+\"[\s\)\]\<\>\.\*\-\,])", line):
-            ftxt = each.replace("\"", "&#8221;", 1)
-            line = line.replace(each, ftxt)
-        # Parse single-quote quotations
-        for each in findall("(\w+'[\w+|\s+])", line):
-            ftxt = each.replace("\'", "&#8217;")
-            line = line.replace(each, ftxt)
-        for each in findall("([\s\(]'\w+)", line):
-            ftxt = each.replace("\'", "&#8216;", 1)
-            line = line.replace(each, ftxt)
-        # Interpret inline code
-        for each in findall(r"\%[\(\)\w:\/\"\.\+'\s\.|#\\&=,\$\!\?\;\-\[\]\/<>]+\%", line):
-            line = line.strip().replace("&#8217;", "'").replace("&#8216;", "'").replace("&#8221;", '"').replace("&#8220;", '"')
-            each = each.replace("&#8217;", "'").replace("&#8216;", "'").replace("&#8221;", '"').replace("&#8220;", '"')
-            if (len(each.split(" ")) > 7):
-                continue
-            ftxt = each
-            line = line.replace(each, "&&TK&&")
-            ftxt = ftxt.replace("%", "<span class='command'>", 1)
-            ftxt = ftxt.replace("%", "</span> ", 1).strip()
-            line = line.replace("&&TK&&", ftxt)
-        # Interpret <strong> tags
-        for each in findall("\*\*{1}[\w:\"\.\+'\s\.|\(\)#/\\\>\<&=,\$\!\?\;\-\[\]]+\*\*{1}", line):
-            ftxt = each
-            line = line.replace(each, "&&TK&&")
-            ftxt = each.replace("**", "<strong>", 1)
-            ftxt = ftxt.replace("**", "</strong> ", 1).strip()
-            line = line.replace("&&TK&&", ftxt)            
-        # Interpret <em> tags
-        for each in findall("\*{1}[\w:\"\.\+'\s\.|\(\)#/\\\>\<&=,\$\!\?\;\-\[\]]+\*{1}", line):
-            ftxt = each
-            line = line.replace(each, "&&TK&&")
-            ftxt = each.replace("*", "<em>", 1)
-            ftxt = ftxt.replace("*", "</em> ", 1).strip()
-            line = line.replace("&&TK&&", ftxt)
-        # Parse images, both local and remote
-        for each in findall("(\!\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]+\]\(['\(\)\#\;?\@\%\w\&:\,\./\~\s\"\!\#\=\+-]+\))", line):
-            desc = each.split("]")[0][2:]
-            url = each.split("]")[1].split(" ")[0][1:]
-            if (url.startswith(base_url)):
-                # print url.split("/")[-1]
-                url = """/assets/Images/%s""" % (url.split("/")[-1])
-            alt = each.split("]")[1].split(" &#8220;")[1].rstrip("&#8221;)")
-            line = line.replace(each, "<div class=\"image\"><img src=\""+url+"\" alt=\""+alt+"\" title=\""+desc+"\"></div>")
-        # This needs some attention to work with the new URL scheme
-        # Parse links, both local and remote
-        for each in findall("""(\[[\w\@\s\"'\|\<\>\.\#?\*\;\%\+\=!\,-:$&]*\])(\(\s*(<.*?>|((?:(?:\(.*?\))|[^\(\)]))*?)\s*((['"])(.*?)\12\s*)?\))""", line):
-            desc = each[0][1:-1]
-            url = each[1][1:-1].replace("&", "&amp;").strip()
-            
-            if ("http://" != url[0:7] and "https://" != url[0:8]):
-                if (".txt" != url[-4:]):
-                    if (".htm" == url[-4:]):
-                        url = ""+url.replace(" ", "-").lower()
-                else:
-                    url = base_url+"blog/"+url.replace(" ", "-").replace(".txt", ".html").lower()
+        ## ... then parse the remaining <em> tags. Make sure there is an even
+        # number of * to parse as <em> ... </em>.
+        if (__line.count("*") != 1):
+            while ("*" in __line):
+                __line = __line.replace("*", "<em>", 1).replace("*", "</em>", 1)
 
-            if (".txt" == url[-4:]):
-                url = url.replace(".txt", "").replace(" ", "-").replace("&#8220;", "").replace("&#8221;", "").replace("&#8217;", "").replace("&#8216;", "").replace("&#8217;", "")
-                line = line.replace(each[0]+each[1], "<a class=\"local\" href=\""+url.replace(" ", "-")+"\">"+desc+"</a>")
-            elif (url == ""):
-                line = line.replace(each[0]+each[1], "<a class=\"local\" href=\""+desc.replace("<em>", "").replace("</em>", "").replace(" ", "-")+"\">"+desc+"</a>")
-            else:
-                line = line.replace(each[0]+each[1], "<a href=\""+url+"\">"+desc+"</a>")
+        ## Parse inline code with <code> ... </code> tags.
+        while ("`" in __line):
+            __line = __line.replace("`", "<code>", 1).replace("`", "</code>", 1)
+
+        ## Parse aposrophes.
+        for each in findall("\w'\w", __line):
+            __line = __line.replace(each, each.replace("'", "&#8217;"))
+
+        ## Parse single quotatin marks.
+        for each in findall("\'[^\']+\'", __line):
+            __line = __line.replace(each, each.replace("'", "&#8216;", 1).replace("'", "&#8217;", 1))
+
+        ## Catch apostrophes without the trailing conjugation
+        __line = __line.replace("'", "&#8217;")
+
+        ## Parse double quotation marks.
+        for each in findall("\"[^\"]+\"", __line):
+            __line = __line.replace(each, each.replace('"', "&#8220;", 1).replace('"', "&#8221;", 1))
+        if (__line[0] == '"'):
+            __line = __line.replace('"', "&#8220;", 1)
+        if (__line[-1] == '"'):
+            __line = __line[0:-1]+"&#8221;"
+
+        ## Parse links.
+        for each in findall("\[([^\]]+)\]\(([^\)]*)\)", __line):
+            title = each[0]
+            url = each[1]
+
+            if (len(url) == 0):
+                url = title.replace("<em>", "").replace("</em>", "")+".txt"
+            if (url[-4:] == ".txt"):
+                url = self.__base_url+"blog/"+url.lower().replace("&#8217;", "").replace(" ", "-").replace(".txt", ".html")
+
+            __line = __line.replace("["+each[0]+"]("+each[1]+")", "<a href=\""+url+"\">"+title+"</a>")
+
         # Parse footnotes
-        for each in findall("(\[\^[0-9]+\])", line):
+        for each in findall("(\[\^[0-9]+\])", __line):
             mark = each[2:-1]
             url = """<sup id="fnref"""+mark+""""><a href="#fn"""+mark+"""" rel="footnote">"""+mark+"""</a></sup>"""
-            line = line.replace(each, url)
-        # Parse single-line comments
-        if (line[0:2] == "//"):
-            line = line.replace("//","<!--")+" -->"
-    else:
-        # Account for iframes
-        if ("<iframe" == line[0:7]):
-            line = "<div style='text-align:center;'>"+line+"</div>"
-        elif ("<ul" == line[0:2]):
-            pass
-        elif (line[0:4] == "<pre"):
-            if (line.find("</pre>") == -1):
-                pre = True
-        elif (pre == True):
-            if (line.find("</pre>") != -1):
-                pre = False
-            return line.strip()
-        # Anything else should be a blockquote
-        else:
-            line = "<blockquote>"+line+"</blockquote>"
-    # If a paragraph
-    if (current == "<p>,,</p>"):
-        line = active+"\n"+current.replace(",,", line.strip())
-        active = ""
-    # If an unordered list
-    elif (current == "<ul>,,</ul>"):
-        active = "</ul>"
-        line = current.split(",,")[0].replace(">", " start='"+str(start)+"'>")+"\n<li>"+line.strip()+"</li>"
-    # If an ordered list
-    elif (current == "<ol>,,</ol>"):
-        active = "</ol>"
-        line = current.split(",,")[0]+"\n<li>"+line.strip()+"</li>"
-    # If a list item
-    elif (current == "<li>,,</li>"):
-        line = current.replace(",,", line.strip())
-    # If an element following a list item
-    elif ((current != "<li>,,</li>") and ((second == "<li>,,</li>") or (second == "<ul>,,</ul>") or (second == "<ol>,,</ol>"))):
-        line = line.strip()+active+"\n"
-        active = ""
-    # If a blockquote
-    elif (current == "<blockquote>,,</blockquote>"):
-        active = "</blockquote>"
-        line = current.split(",,")[0]+"\n<p>"+line[2:].strip()+"</p>"
-    # If the continuation of a blockquote
-    elif (current == "<bqt>,,</bqt>"):
-        line = "<p>"+line.strip().replace("> ", "", 1)+"</p>"
-    # If an element following a blockquote
-    elif ((current != "<bqt>,,</bqt>") and ((second == "<bqt>,,</bqt>") or (second == "<blockquote>,,</blockquote>"))):
-        line = line.strip().replace("> ", "")+"</blockquote>\n"
-        active = ""
-    # If a footnote
-    elif ((current == "<div class=\"footnote\">,,</div>")):
-        active = "</div>"
-        mark = int(line.split("]")[0][2:])
-        line = line.split("]")[1]
-        # If the first footnote
-        if (mark == 1): 
-            line = current.split(",,")[0].replace("div ", "div id=\"fn"+str(mark)+"\" ")+"\n<p>"+line.strip()+"""</p><a class="fn" title="return to article" href="#fnref"""+str(mark)+"""">&#x21a9;</a>"""
-        # If a later footnote
-        else: 
-            line = "</div>"+current.split(",,")[0]+"<p>"+line.strip()+"</p>"
-            line = line.replace("div ", "div id=\"fn"+str(mark)+"\" ")+"""<a class="fn" title="return to article" href="#fnref"""+str(mark)+"""\">&#x21a9;</a>"""
-    # Blank line
-    else: 
-        if (current == "<br />"):
-            line = "<br />"
-        else:
-            line = line.strip()
+            __line = __line.replace(each, url)
 
-    line = line.replace("~", "'")
+        return __line
 
-    # Return the parsed line, now formatted with HTML.
-    return line
+    # Method: __updateLineTracker
+    # Purpose: Keep track of raw lines.
+    # Parameters:
+    # - self: Class namespace
+    # - __line: Raw Markdown line, mangled.
+    # Return: None.
+    def __updateLineTracker(self, __line):
+        self.__line_tracker.append(__line)
+        if (len(self.__line_tracker) > 3):
+            self.__line_tracker.pop(0)
+
+    # Method: __updateLineTypeTracker
+    # Purpose: Determine type of line, and whether it is part of a larger
+    # block-level element, and annotate that in the line type tracker.
+    # Parameters:
+    # - self: Class namespace
+    # - __line: Input line to process, mangled. (String)
+    # Return: None.
+    def __updateLineTypeTracker(self, __line):
+        # Parser tracks leading whitespace, so remove it.
+        __line = __line.lstrip(' ')
+
+        if (__line == "<html>"):
+            if (self.__line_type_tracker[-2] == "" and self.__line_type_tracker[-3] == ""):
+                self.__html = True
+
+        if (len(__line.strip()) == 0): # Blank line.
+            self.__line_type_tracker.append("blank")
+        elif (__line == "{EOF}"): # End of file
+            self.__line_type_tracker.append("EOF")
+        elif (__line[0] == "<" and (__line[0:4] != "<pre" and __line[0:5] != "</pre")): # Raw HTML
+            self.__line_type_tracker.append("raw")
+        elif (__line[0] == "#"): # Header.
+            self.__line_type_tracker.append("header")
+        elif (__line[0:4] == "---" or __line[0:7] == "* * *"): # Horizontal rule.
+            self.__line_type_tracker.append("hr")
+        elif (__line[0:2] == "!["): # Image.
+            self.__line_type_tracker.append("img")
+        elif (__line[0] == "{" and self.__pre == False): # Post index, with remote content.
+            self.__line_type_tracker.append("idx")
+        # Unordered list, as evidenced by a line starting with *, +, or -
+        elif (__line[0] in ['*', '+', '-'] and __line[1] == ' '):
+            # If the line is indented from the previous one, start a new list
+            if (self.__line_indent_tracker[-1] > self.__line_indent_tracker[-2]):
+                self.__line_type_tracker.append("ul")
+            # If a line is un-indented from the previous one, close out a list.
+            elif (self.__line_indent_tracker[-1] < self.__line_indent_tracker[-2]):
+                self.__line_type_tracker.append("/ul")
+            # If the parser finds a list element preceeded by another list
+            # element or an opening list tag, treat this line as a list element
+            elif (self.__line_type_tracker[-1] == "ul" or self.__line_type_tracker[-1] == "li"):
+                self.__line_type_tracker.append("li")
+            # If the line is for an unordered list and there is still an active
+            # list, treat it as a list element.
+            elif (len(self.__close_out) != 0):
+                self.__line_type_tracker.append("li")
+            # Otherwise, treat the line as the first in a new list.
+            else:
+                self.__line_type_tracker.append("ul")
+        # Ordered list, as evidenced by [0-9]\. or [0-9]{2}\.
+        elif (__line[0].isdigit() and __line[1] == ".") or (__line[0:1].isdigit() and __line[2] == "."):
+            # If the line is indented from the previous one, start a new list
+            if (self.__line_indent_tracker[-1] > self.__line_indent_tracker[-2]):
+                self.__line_type_tracker.append("ol")
+            # If a line is un-indented from the previous one, close out a list.
+            elif (self.__line_indent_tracker[-1] < self.__line_indent_tracker[-2]):
+                self.__line_type_tracker.append("/ol")
+            # If the parser finds a list element preceeded by another list
+            # element or an opening list tag, treat this line as a list element
+            elif (self.__line_type_tracker[-1] == "ol" or self.__line_type_tracker[-1] == "li"):
+                self.__line_type_tracker.append("li")
+            # If the line is for an unordered list and there is still an active
+            # list, treat it as a list element.
+            elif (self.__line_type_tracker[-1] == "/ol" and len(self.__close_out) != 0):
+                self.__line_type_tracker.append("li")
+            # Otherwise, treat the line as the first in a new list.
+            else:
+                self.__line_type_tracker.append("ol")
+        elif (__line[0] == "+" and __line[1] == "-"): # Table
+            if (self.__line_type_tracker[-1] != "tr"):
+                self.__line_type_tracker.append("table")
+            else:
+                self.__line_type_tracker.append("tr")
+        elif  (__line[0] == "|"): # Table rows
+            self.__line_type_tracker.append("tr")
+        elif (__line[0] == ">"): # Blockquote
+            # If the line is preceeded by a blockquote tag or the parser
+            # is already in a blockquote, continue parsing the existing
+            # blockquote
+            if (self.__line_type_tracker[-1] == "blockquote" or self.__line_type_tracker[-1] == "bqt"):
+                self.__line_type_tracker.append("bqt")
+            # Otherwise, treat this line as the opening of a new blockquote
+            else:
+                self.__line_type_tracker.append("blockquote")
+        elif (__line[0:3] == "```" or __line[0:4] == "<pre" or __line[0:5] == "</pre"): # Preformatted code block
+            self.__line_type_tracker.append("pre")
+            # Toggle the boolean for tracking if the parser is in a code block
+            self.__pre = not self.__pre
+        elif (__line[0:2] == "[>"): # Footnote
+            self.__line_type_tracker.append("fn")
+        else: # Default to handling the line as a paragraph
+            self.__line_type_tracker.append("p")
+
+        # Trim the tracker to a max of 3 elements.
+        if (len(self.__line_type_tracker) > 3):
+            self.__line_type_tracker.pop(0)
+
+    # Method: __updateIndentTracker
+    # Purpose: Keep track of the indentation level.
+    # Parameters:
+    # - self: Class namespace
+    # - __line: Input line to process, mangled. (String)
+    # Return: None
+    def __updateIndentTracker(self, __line):
+        if (__line.strip() == ""):
+            self.__line_indent_tracker.append(0)
+        # Count leading spaces, and append to the line tracker list
+        else:
+            self.__line_indent_tracker.append(len(__line) - len(__line.lstrip(' ')))
+        if (len(self.__line_indent_tracker) > 3):
+            self.__line_indent_tracker.pop(0)
+
+    # Method: __closeOut
+    # Purpose: Write closing HTML tags for any open block-level elements.
+    # Parameters:
+    # - self: Class namespace
+    # Return:
+    # - String with each closing HTML tag on its own line. (String)
+    def __closeOut(self):
+        return '\n'.join(self.__close_out)
+
+    # Method: __escapeCharacters
+    # Purpose: Escape &, *, <, and > characters in the text before they are
+    # processed as Markdown tags.
+    # Parameters:
+    # - self: Class namespace
+    # - __line: Input line, mangled. (String)
+    # Return:
+    # - Line with &, *, <, and > escaped using their HTML entities. (String)
+    def __escapeCharacters(self, __line):
+        # Escape ampersands. Replace them with the appropriate HTML entity.
+        __line = sub(r"(&)(\w*[\s\.\,])", r"&#38;\2", __line)
+        # for each in findall("(&\w*\s)", __line):
+        #     __line = __line.replace(each, each.replace("&", "&#38;"))
+
+        # Escape escaped asteriscs, to keep them from being read as bold or
+        # italic text.
+        __line = __line.replace("\*", "&#42;")
+
+        ## Escape < and > signs
+        __line = __line.replace("<", "&lt;").replace(">", "&gt;")
+
+        return __line
+
+    # Method: html
+    # Purpose:
+    # - 1. Update the trackers with new lines to continue building the HTML
+    #      document, and
+    # - 2. Ingest raw Markdown line, process it, and return valid HTML.
+    # Parameters:
+    # - self: Class namespace
+    # - __line: Input line, mangled. (String)
+    # Return:
+    # - Line formatted with HTML. (String)
+    def html(self, __line):
+        if (self.__html == True):
+            if ("{EOF}" in __line):
+                return ""
+            return __line
+
+        # Remove trailing newline
+        __line = __line.rstrip('\n')
+
+        # Update trackers
+        self.__updateIndentTracker(__line)
+        self.__updateLineTracker(__line)
+        self.__updateLineTypeTracker(__line)
+
+        # Print statements, for debugging.
+        # print(self.__line_tracker)
+        # print(self.__line_type_tracker)
+        # print(self.__line_indent_tracker)
+        # print()
+
+        # Handle preformatted code blocks. First write the opening <pre> tag,
+        # then return the unprocessed line.
+        if (self.__line_type_tracker[-1] == "pre"):
+            if (self.__pre == True):
+                if ("shell" in __line):
+                    return "<pre class='shell'>"
+                elif ("python" in __line):
+                    return "<pre class='python'>"
+                elif ("cmd" in __line):
+                    return "<pre class='cmd'>"
+                return "<pre>"
+            return "</pre>"
+
+        if (self.__pre == True):
+            return __line
+
+        if (self.__line_type_tracker[-1] == "raw"):
+            return __line
+
+        # Parser tracks leading whitespace, so remove it.
+        __line = __line.lstrip(' ')
+
+        # Escape &, *, <, and > characters. Also escape inline code blocks.
+        __line = self.__escapeCharacters(__line)
+
+        # If the parser finds a blank line, close open block-level elements,
+        # reset the block-level element tracker, and return the blank line.
+        if (len(__line) == 0 or self.__line_type_tracker[-1] == "EOF"):
+            __line = self.__closeOut()
+            self.__close_out = []
+            return __line
+
+        # Handle unorered lists
+        ## Write opening tag and append the closing tag to the block-level
+        ## element tracker.
+        if (self.__line_type_tracker[-1] == "ul"):
+            __line = "<ul>"+'\n'+"    <li>"+__line[2:]+"</li>"
+            self.__close_out.append("</ul>\n")
+        ## Write closing tag and remove a closing tag from the block-level
+        ## element tracker.
+        elif (self.__line_type_tracker[-1] == "/ul"):
+            __line = "</ul>\n<li>"+__line[2:]+"</li>"
+            self.__close_out.remove("</ul>\n")
+        # Handle ordered lists
+        ## Write opening tag and append the closing tag to the block-level
+        ## element tracker.
+        elif (self.__line_type_tracker[-1] == "ol"):
+            __line = "<ol>"+'\n'+"    <li>"+". ".join(__line.split(". ")[1:])+"</li>"
+            self.__close_out.append("</ol>\n")
+        ## Write closing tag and remove a closing tag from the block-level
+        ## element tracker.
+        elif (self.__line_type_tracker[-1] == "/ol"):
+            __line = "</ol>\n<li>"+__line[2:]+"</li>"
+            self.__close_out.remove("</ol>\n")
+        # Handle list elements for both unordered and ordered lists.
+        elif (self.__line_type_tracker[-1] == "li"):
+            __line = "    <li>"+__line.split(" ", 1)[1]+"</li>"
+        # Handle tables
+        elif (self.__line_type_tracker[-1] == "table"):
+            __line = "<table>\n"
+            self.__close_out.append("</table>\n")
+        # Handle table rows
+        elif (self.__line_type_tracker[-1] == "tr"):
+            if (__line[0] == "+"):
+                __line = ""
+            else:
+                __line = "<tr>\n    <td>"+__line.lstrip("|").rstrip("|").replace("|", "</td><td>")+"</td>\n</tr>"
+        # Handle blockquotes, new and a continuation of an existing one.
+        elif (self.__line_type_tracker[-1] == "blockquote"):
+            __line = "<blockquote>\n    <p>"+self.__parseInlineMD(__line[5:])+"</p>"
+            self.__close_out.append("</blockquote>\n")
+        elif (self.__line_type_tracker[-1] == "bqt"):
+            if (__line[5:] == ''):
+                __line = ''
+            else:
+                __line = "    <p>"+self.__parseInlineMD(__line[5:])+"</p>"
+        # Handle header elements
+        elif (self.__line_type_tracker[-1] == "header"):
+            # Count the number of # at the beginning of the line.
+            l = len(__line) - len(__line.lstrip("#"))
+            anchor = ''.join(ch for ch in __line.split(":")[0] if ch.isalnum())
+            # Write the header with the appropriate level, based on number of #
+            __line = "<h"+str(l)+" class=\"headers\" id=\""+anchor+"\">"+__line.strip("#").strip()+"<span>&nbsp;<a href=\"#"+anchor+"\">#</a></span></h"+str(l)+">"
+            return __line
+        # Handle horizontal rules
+        elif (self.__line_type_tracker[-1] == "hr"):
+            return "<hr style='margin:50px auto;width:50%;border:0;border-bottom:1px dashed #ccc;background:#999;' />"
+        # Handle images
+        elif (self.__line_type_tracker[-1] == "img"):
+            # This feels a bit clunky, but seems like the best alternative to
+            # regex capture groups, which seem unreliable.
+            __line = __line.split("]")
+            desc = __line[0][2:]
+            if (" " in __line[1]):
+                url = __line[1].split(" ")[0][1:]
+                if ("zacjszewczyk" in url):
+                    url = "/assets/"+url.split(".com/")[1]
+                alt = __line[1].split(" ", 1)[1][1:-2]
+            else:
+                url = __line[1][1:-1]
+                alt = ""
+            return f"<div class='image'><img src='{url}' alt='{alt}' title='{desc}' loading='lazy' /></div>"
+        # Handle series index. This is a non-standard Markdown convention that
+        # lets the writer reference an external file that contains a list of
+        # links to other articles in a related series, and include them
+        # automatically.
+        elif (self.__line_type_tracker[-1] == "idx"):
+            # Open the target file, write the opening <ul> tag, and add each
+            # link in the file to the new index.
+            if (not isfile("./Content/System/"+__line[1:-1])):
+                return "<blink>ERROR: Index file does not exist.</blink>"
+            with open("./Content/System/"+__line[1:-1], "r") as fd:
+                __line = "<ul style=\"border:1px dashed gray\" id=\"series_index\">\n"
+                for each in fd:
+                    __line += "    <li>"+each.strip()+"</li>\n"
+                __line += "</ul>"
+            return __line
+        # Handle footnotes
+        elif (self.__line_type_tracker[-1] == "fn"):
+            # line = line.replace("div ", "div id=\"fn"+str(mark)+"\" ")+"""<a class="fn" title="return to article" href="#fnref"""+str(mark)+"""\">&#x21a9;</a>"""
+            mark = __line.split("]", 1)[0][5:]
+            __line = f"<p id='fn{mark}'><a class='fn' title='return to article' href='#fnref{mark}'>&#x21a9;</a>&nbsp;{self.__parseInlineMD(__line[8:])}</p>"
+        # Default to treating the line as a paragraph
+        else:
+            if (__line[-3:] == "   "):
+                __line = "<p>"+__line.rstrip(' ')+"</p>\n\n<br />"
+            else:
+                __line = "<p>"+__line+"</p>"
+
+        # Once all the block-level parsing is done, parse the inline Markdown
+        # tags.
+        if (self.__line_type_tracker[-1] not in ["blockquote", "bqt", "fn"]):
+            __line = self.__parseInlineMD(__line)
+
+        return __line
+
+    # Method: clear
+    # Purpose: Clear all trackers, so original class instance can be used for
+    # multiple files.
+    # Parameters:
+    # - self: Class namespace
+    # Return: none
+    def clear(self):
+        self.__line_tracker = ["", "", ""] # Last three lines, raw.
+        self.__line_type_tracker = ["", "", ""] # Type of last three lines.
+        self.__line_indent_tracker = [0, 0, 0] # Indent level of last three lines.
+        self.__close_out = [] # List of block-level elements that still need closed out.
+        self.__pre = False # Yes/no, is the parser in a <pre> tag?
+
+    # Method: raw
+    # Purpose: Return raw line at specified position.
+    # Parameters:
+    # - self: Class namespace
+    # - __pos: Desired position, mangled. (Int)
+    # Return:
+    # - Raw, unprocessed Markdown line (String)
+    def raw(self, __pos):
+        return self.__line_tracker(__pos)

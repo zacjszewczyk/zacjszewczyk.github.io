@@ -1,0 +1,8 @@
+127.0.0.1 - - [27/Feb/2020 18:04:26] GET / HTTP/1.1 200 -
+127.0.0.1 - - [27/Feb/2020 18:04:26] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [27/Feb/2020 18:04:26] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [27/Feb/2020 18:04:26] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+127.0.0.1 - - [27/Feb/2020 18:04:28] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [27/Feb/2020 18:04:28] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [27/Feb/2020 18:04:28] GET /assets/Images/force_graph.png HTTP/1.1 200 -
+- - - [27/2/2020 18:5:25] Graceful shutdown - -
