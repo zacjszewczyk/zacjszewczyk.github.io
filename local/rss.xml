@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site//rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 26 Feb 2020 11:55:09 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 12:11:37 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>plausibly deniable encryption</title>
+            <link>https://spacetime.dev/plausibly-deniable-encryption</link>
+            <guid isPermaLink='true'>https://spacetime.dev/plausibly-deniable-encryption</guid>
+
+            <pubDate>Thu, 27 Feb 2020 12:11:30 GMT</pubDate>
+            <description>
+
+&lt;p&gt;A fascinating read, especially as someone who investigates and architects secure systems for a living. See also, &lt;a href="https://spacetime.dev/encrypting-secrets-in-memory"&gt;&lt;em&gt;encrypting secrets in memory&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p class='read_more_paragraph'&gt;
+&lt;a style='text-decoration:none;' href='https://zacs.site//blog/plausibly-deniable-encryption.html'&gt;Read more...&lt;/a&gt;
+&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Let's be Real About Dependencies</title>
             <link>https://wiki.alopex.li/LetsBeRealAboutDependencies</link>
