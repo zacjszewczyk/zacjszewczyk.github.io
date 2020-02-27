@@ -16,7 +16,7 @@ from random import choices # Explore page
 ## MAX_PROCESSES: Process limit (Int)
 ## ENCODING: File system encoding (String)
 ## MONTHS: A map of month numbers to names (Dictionary)
-BASE_DIR = "/Users/zjszewczyk/Dropbox/Code/Standalone/"
+BASE_DIR = "./"
 MAX_PROCESSES = 16
 ENCODING = getpreferredencoding()
 MONTHS = {"01":"January","02":"February","03":"March","04":"April","05":"May","06":"June","07":"July","08":"August","09":"September","10":"October","11":"November","12":"December"}
@@ -54,7 +54,7 @@ def BuildByYear(year):
         for day in sorted(files[year][month], reverse=True):
             # Sort the sub-dictionaries by keys, timestamps, then iterate over it
             for timestamp in sorted(files[year][month][day], reverse=True):
-                fd = open(BASE_DIR+"Content/"+files[year][month][day][timestamp], "r", encoding=ENCODING)
+                fd = open(BASE_DIR+"content/"+files[year][month][day][timestamp], "r", encoding=ENCODING)
                 article_title = fd.readlines()[1][7:]
                 fd.close()
                 # For each article made in the month, add an entry on the appropriate
@@ -213,7 +213,7 @@ def TestAndBuild(content_file,mtime):
     if ((isfile(f"./html/blog/{structure_file}")) and (mtime == stat(f"./html/blog/{structure_file}").st_mtime)): return True
 
     # Open input (content_fd), then open and clear output (structure_fd) file.
-    content_fd = open(f"{BASE_DIR}Content/{content_file}", "r", encoding=ENCODING)
+    content_fd = open(f"{BASE_DIR}content/{content_file}", "r", encoding=ENCODING)
     open(f"./html/blog/{structure_file}", "w", encoding=ENCODING).close()
     structure_fd = open(f"./html/blog/{structure_file}", "a", encoding=ENCODING)
 
@@ -223,7 +223,7 @@ def TestAndBuild(content_file,mtime):
     if ("Type: " not in line):
         content_fd.close()
         Migrate(content_file)
-        content_fd = open(f"{BASE_DIR}Content/{content_file}", "r", encoding=ENCODING)
+        content_fd = open(f"{BASE_DIR}content/{content_file}", "r", encoding=ENCODING)
     else:
         line = line.split(":", 1)
         header[line[0].lower()] = line[1].strip()
@@ -321,14 +321,14 @@ if (__name__ == "__main__"):
     # Instantiate the multiprocessing orchestrator to use at most MAX_PROCESSES
     orchestrator = ProcessPoolExecutor(max_workers=MAX_PROCESSES)
     
-    # Enumerate the "Content" directory
-    for file in listdir(BASE_DIR+"Content"):
+    # Enumerate the "content" directory
+    for file in listdir(BASE_DIR+"content"):
         if (file[-4:] != ".txt"): continue # Exclude non-text files
         stats["total_count"] += 1 # Increment total count
         
         # Get mod time, then test for existence and equivalence of structure
         # file with TestAndBuild. Multiprocessed.
-        mtime = stat(f"{BASE_DIR}Content/{file}").st_mtime
+        mtime = stat(f"{BASE_DIR}content/{file}").st_mtime
         # TestAndBuild(file,mtime)
         results.append(orchestrator.submit(TestAndBuild,file,mtime))
 
