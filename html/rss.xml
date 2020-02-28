@@ -7,9 +7,18 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 27 Feb 2020 11:14:49 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 28 Feb 2020 01:09:33 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>First Crack Release Notes, February 2020</title>
+            <link>https://zacs.site/blog/first-crack-release-notes-0220.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/first-crack-release-notes-0220.html</guid>
+            <pubDate>Fri, 28 Feb 2020 13:05:41 GMT</pubDate>
+            <description>
+                &lt;p&gt;I had a busy start to the year. Between &lt;a href="https://zacs.site/blog/holiday-fitness.html"&gt;traveling&lt;/a&gt; and work, I did not have enough time to finish the titanic task I had given myself: rewriting First Crack. When it came time to post the January release notes, then, I did not have anything ready; today I do.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>plausibly deniable encryption</title>
             <link>https://spacetime.dev/plausibly-deniable-encryption</link>

@@ -160,7 +160,7 @@ def Migrate(content_file):
     else:
         article_type = "original"
         article_title = article_content
-        article_url = content_file.replace(".txt", ".html").replace(" ", "-").replace("'","").lower()
+        article_url = content_file.rsplit("/",1)[-1].replace(".txt", ".html").replace(" ", "-").replace("'","").lower()
         article_content = fd.readline()
 
     # Read the rest of the article's content from the file.
@@ -169,7 +169,7 @@ def Migrate(content_file):
 
     # Clear the target file, then write it's contents into it after the header information.
     fd = open(content_file, "w", encoding=ENCODING)
-    fd.write(f"Type: {article_type}\nTitle: {article_title.strip()}\nLink: {article_url.strip()}\nPubdate: {mod_time}\nAuthor: {config['byline']}\n\n{article_content.strip()}")
+    fd.write(f"Type: {article_type}\nTitle: {article_title.strip()}\nLink: {article_url.strip()}\nPubdate: {strftime('%Y/%m/%d %H:%M:%S', localtime(mtime))}\nAuthor: {config['byline']}\n\n{article_content.strip()}")
     fd.close()
 
     # Cleanup and revert the update time for the content file
@@ -222,7 +222,7 @@ def TestAndBuild(content_file,mtime):
     line = content_fd.readline()
     if ("Type: " not in line):
         content_fd.close()
-        Migrate(content_file)
+        Migrate(f"{BASE_DIR}content/{content_file}")
         content_fd = open(f"{BASE_DIR}content/{content_file}", "r", encoding=ENCODING)
     else:
         line = line.split(":", 1)
@@ -247,7 +247,7 @@ def TestAndBuild(content_file,mtime):
                 structure_fd.write(f"""<article>\n<h2 id='article_title'>\n<a class=\"original\" href=\"/blog/{structure_file}\">{header["title"]}</a>\n</h2>\n""")
             else:
                 structure_fd.write("<article>\n<h2 id='article_title'>\n<a class=\"linkpost\" href=\""+header["link"]+"\">"+header["title"]+"</a>\n</h2>\n")
-            structure_fd.write(f"""<time id='article_time' datetime="{mtime.tm_year}-{mtime.tm_mon}-{mtime.tm_mday} {mtime.tm_hour}:{mtime.tm_min}:{mtime.tm_sec}-0400" pubdate="pubdate">By <link rel="author">{header["author"]}</link> on <a href="/blog/{mtime.tm_year}.html">{mtime.tm_year}</a>/<a href="/blog/{mtime.tm_year}-{mtime.tm_mon if mtime.tm_mon > 9 else "0"+str(mtime.tm_mon)}.html">{mtime.tm_mon}</a>/{mtime.tm_mday} {mtime.tm_hour}:{mtime.tm_min}:{mtime.tm_sec} EST</time>\n""")
+            structure_fd.write(f"""<time id='article_time' datetime="{mtime.tm_year}-{mtime.tm_mon:02}-{mtime.tm_mday:02} {mtime.tm_hour:02}:{mtime.tm_min:02}:{mtime.tm_sec:02}-0400" pubdate="pubdate">By <link rel="author">{header["author"]}</link> on <a href="/blog/{mtime.tm_year}.html">{mtime.tm_year}</a>/<a href="/blog/{mtime.tm_year}-{mtime.tm_mon:02}.html">{mtime.tm_mon:02}</a>/{mtime.tm_mday:02} {mtime.tm_hour:02}:{mtime.tm_min:02}:{mtime.tm_sec:02} EST</time>\n""")
             structure_fd.write(md.html(line)+"\n")
         else:
             structure_fd.write(md.html(line)+"\n")
