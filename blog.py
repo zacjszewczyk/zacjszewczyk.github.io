@@ -2,6 +2,7 @@
 
 # Imports
 from concurrent.futures import ProcessPoolExecutor # Multiprocessing
+from multiprocessing import Pool
 from os import listdir, stat, mkdir, utime # File/folder operations
 from os.path import isfile, isdir # File/folder operations
 from time import localtime, strftime, strptime, mktime, gmtime # Mod time operations
@@ -26,7 +27,8 @@ MONTHS = {"01":"January","02":"February","03":"March","04":"April","05":"May","0
 # Parameters:
 # - year: Year index to build (String)
 # Return: True (Operation completes), False (Operation fails)
-def BuildByYear(year):
+def BuildByYear(year,stats,files):
+    # print(year)
     # For each year in which a post was made, generate a 'year' file, that
     # contains links to each month in which a post was published.
 
@@ -320,6 +322,7 @@ if (__name__ == "__main__"):
 
     # Instantiate the multiprocessing orchestrator to use at most MAX_PROCESSES
     orchestrator = ProcessPoolExecutor(max_workers=MAX_PROCESSES)
+    pool = Pool(processes=MAX_PROCESSES)
     
     # Enumerate the "content" directory
     for file in listdir(BASE_DIR+"content"):
@@ -330,7 +333,8 @@ if (__name__ == "__main__"):
         # file with TestAndBuild. Multiprocessed.
         mtime = stat(f"{BASE_DIR}content/{file}").st_mtime
         # TestAndBuild(file,mtime)
-        results.append(orchestrator.submit(TestAndBuild,file,mtime))
+        # results.append(orchestrator.submit(TestAndBuild,file,mtime))
+        results.append(pool.apply_async(TestAndBuild,(file,mtime)))
 
         # Convert mtime to YYYY/MM/DD/HH:MM:SS format for dictionary indexing 
         mtime = strftime("%Y/%m/%d/%H:%M:%S", localtime(mtime)).split("/")
@@ -353,22 +357,33 @@ if (__name__ == "__main__"):
         files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = file
     
     # Wait for all article and static pages to build before proceeding
-    orchestrator.shutdown(wait=True)
+    [x.wait() for x in results]
+    # orchestrator.shutdown(wait=True)
 
     # Don't rebuild if nothing has changed
-    if (not all([x.result() for x in results])):
-        orchestrator = ProcessPoolExecutor(max_workers=MAX_PROCESSES)
+    # if (not all([x.result() for x in results])):
+    if (not all([x.get() for x in results])):
+        # orchestrator = ProcessPoolExecutor(max_workers=MAX_PROCESSES)
 
         # # Build index, projects, and disclaimers pages based on template files
         # for file in listdir("./templates/"):
         #     if (file != "main.html"): # Exclude main template file
         #         results.append(orchestrator.submit(BuildFromTemplate,file,file.split(".")[0].title()))
-        orchestrator.map(BuildFromTemplate,[[file,file.split(".")[0].title()] for file in listdir("./templates/") if file != "main.html" ])
+        
+        # orchestrator.map(BuildFromTemplate,[[file,file.split(".")[0].title()] for file in listdir("./templates/") if file != "main.html" ])
+        for file in listdir("./templates/"):
+            if (file != "main.html"): # Exclude main template file
+                results.append(pool.apply_async(BuildFromTemplate,(file,file.split(".")[0].title())))
 
         # # Build all year and month indexes
         # for year in files:
         #     results.append(orchestrator.submit(BuildByYear,year))
-        orchestrator.map(BuildByYear, [year for year in files])
+        
+        # orchestrator.map(BuildByYear, [year for year in files])
+        for year in files:
+            results.append(pool.apply_async(BuildByYear,(year,stats,files)))
+        [x.wait() for x in results]
+        print([x.get() for x in results])
 
         # Build blog and archives pages, and RSS feed
         paragraphs = []
@@ -376,8 +391,10 @@ if (__name__ == "__main__"):
             for month in sorted(files[year], reverse=True):
                 for day in sorted(files[year][month], reverse=True):
                     for time in sorted(files[year][month][day], reverse=True):
-                        paragraphs.append(orchestrator.submit(GetContent, files[year][month][day][time]))
-        orchestrator.shutdown(wait=True)
+                        # paragraphs.append(orchestrator.submit(GetContent, files[year][month][day][time]))
+                        # paragraphs.append(pool.apply_async(GetContent, args=(str(files[year][month][day][time]))))
+                        paragraphs.append(GetContent(files[year][month][day][time]))
+        # orchestrator.shutdown(wait=True)
 
         # Clear blog, archives, and feed files, then write opening tags
         open("./html/blog.html", "w", encoding=ENCODING).close()
@@ -393,7 +410,7 @@ if (__name__ == "__main__"):
         
         # Add the first 32 posts to the home page, and the rest to the archive
         for i,each in enumerate(paragraphs):
-            each = each.result()
+            # each = each.result()
             if (i < 32):
                 blog_fd.write(each[-1].replace("</article>", f"<p><a class='read_more_link' href='/blog/{each[3]}'>Read more</a><span class='logo'>&#x24E9;</span></p>\n</article>"))
             else:
@@ -419,7 +436,8 @@ if (__name__ == "__main__"):
         fd = open("./html/explore.html", "a", encoding=ENCODING)
         fd.write(template[0].replace("{{META_DESC}}", f"{config['byline']}'s Explore Page").replace("{{TITLE}}", "Explore", 2).replace("{{BODYID}}","explore",1))
         for each in choices(paragraphs, k=3):
-            fd.write(each.result()[-1])
+            # fd.write(each.result()[-1])
+            fd.write(each[-1])
         fd.write(template[1])
         fd.close()
 
