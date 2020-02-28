@@ -359,14 +359,16 @@ if (__name__ == "__main__"):
     if (not all([x.result() for x in results])):
         orchestrator = ProcessPoolExecutor(max_workers=MAX_PROCESSES)
 
-        # Build index, projects, and disclaimers pages based on template files
-        for file in listdir("./templates/"):
-            if (file != "main.html"): # Exclude main template file
-                results.append(orchestrator.submit(BuildFromTemplate,file,file.split(".")[0].title()))
+        # # Build index, projects, and disclaimers pages based on template files
+        # for file in listdir("./templates/"):
+        #     if (file != "main.html"): # Exclude main template file
+        #         results.append(orchestrator.submit(BuildFromTemplate,file,file.split(".")[0].title()))
+        orchestrator.map(BuildFromTemplate,[[file,file.split(".")[0].title()] for file in listdir("./templates/") if file != "main.html" ])
 
-        # Build all year and month indexes
-        for year in files:
-            results.append(orchestrator.submit(BuildByYear,year))
+        # # Build all year and month indexes
+        # for year in files:
+        #     results.append(orchestrator.submit(BuildByYear,year))
+        orchestrator.map(BuildByYear, [year for year in files])
 
         # Build blog and archives pages, and RSS feed
         paragraphs = []
