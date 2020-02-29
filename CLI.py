@@ -8,9 +8,9 @@ from termios import tcgetattr, tcsetattr, TCSAFLUSH # Backup/resume shell
 from os.path import exists # Reading input files
 from os import popen, remove # Detect terminal size
 from re import sub # Change menu to try to avoid text wrapping
-from os import listdir # Directory traversal
+from os import listdir, stat, utime # Directory traversal
 from os.path import isfile # Web server
-from time import localtime # Timestamping logs
+from time import localtime, mktime, strptime # Timestamping logs
 
 # Class: c(olors)
 # Purpose: provide access to ANSI escape codes for styling output
@@ -279,3 +279,23 @@ def GetLine(prompt):
 
     # Return the string the user's input.
     return input
+
+# Method: Revert
+# Purpose: Check file timestamp against article timestamp. Correct if necessary.
+# Parameters:
+# - content_file: Path to content file (String)
+def Revert(content_file):
+    fd = open(content_file, "r")
+    fd.readline()
+    fd.readline()
+    fd.readline()
+    mtime = mktime(strptime(fd.readline()[9:].strip(), "%Y/%m/%d %H:%M:%S"))
+    fd.close()
+
+    if (mtime != stat(content_file).st_mtime):
+        print("Does not match for",content_file)
+        print("Reverting to",mtime)
+        utime(content_file, (mtime, mtime))
+
+    # Cleanup
+    del fd, mtime

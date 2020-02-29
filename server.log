@@ -1,7 +1,10 @@
-127.0.0.1 - - [28/Feb/2020 12:42:23] GET /blog/2019.html HTTP/1.1 200 -
-127.0.0.1 - - [28/Feb/2020 12:42:23] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [28/Feb/2020 12:42:24] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [28/Feb/2020 12:42:25] GET /blog/2019-12.html HTTP/1.1 200 -
-127.0.0.1 - - [28/Feb/2020 12:42:25] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [28/Feb/2020 12:42:25] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-- - - [28/2/2020 12:42:30] Graceful shutdown - -
+127.0.0.1 - - [29/Feb/2020 10:33:22] GET / HTTP/1.1 200 -
+127.0.0.1 - - [29/Feb/2020 10:33:22] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [29/Feb/2020 10:33:22] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+127.0.0.1 - - [29/Feb/2020 10:33:23] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [29/Feb/2020 10:33:23] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [29/Feb/2020 10:33:24] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+127.0.0.1 - - [29/Feb/2020 10:33:26] GET /blog/first-crack-release-notes-0220.html HTTP/1.1 200 -
+127.0.0.1 - - [29/Feb/2020 10:33:26] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [29/Feb/2020 10:33:26] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+- - - [29/2/2020 10:33:50] Graceful shutdown - -

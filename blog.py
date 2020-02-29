@@ -179,26 +179,6 @@ def Migrate(content_file):
     del fd, article_content, article_title, article_url
     utime(content_file, (mtime,mtime))
 
-# Method: Revert
-# Purpose: Check file timestamp against article timestamp. Correct if necessary.
-# Parameters:
-# - content_file: Path to content file (String)
-def Revert(content_file):
-    fd = open(content_file, "r", encoding=ENCODING)
-    fd.readline()
-    fd.readline()
-    fd.readline()
-    mtime = mktime(strptime(fd.readline()[9:].strip(), "%Y/%m/%d %H:%M:%S"))
-    fd.close()
-
-    if (mod_time != stat(content_file).st_mtime):
-        print("Does not match for",content_file)
-        print("Reverting to",mtime)
-        utime(content_file, (mtime, mtime))
-
-    # Cleanup
-    del fd, mtime
-
 # Method: TestAndBuild
 # Purpose: Test for existence and equivalence of content and structure files,
 # and (re)build the structure file if necessary.
@@ -375,7 +355,6 @@ if (__name__ == "__main__"):
                 for day in sorted(files[year][month], reverse=True):
                     for time in sorted(files[year][month][day], reverse=True):
                         paragraphs.append(pool.apply_async(GetContent, args=(files[year][month][day][time])))
-        [x.wait() for x in paragraphs]
 
         # Clear blog, archives, and feed files, then write opening tags
         open("./html/blog.html", "w", encoding=ENCODING).close()
@@ -389,6 +368,9 @@ if (__name__ == "__main__"):
         feed_fd = open("./html/rss.xml", "a", encoding=ENCODING)
         feed_fd.write(f"""<?xml version='1.0' encoding='ISO-8859-1' ?>\n<rss version="2.0" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n    <title>{config['byline']}</title>\n    <link>{config['meta_baseurl']}</link>\n    <description>RSS feed for {config['byline']}'s website, found at {config['meta_baseurl']}/</description>\n    <language>en-us</language>\n    <copyright>Copyright 2012-2020, {config['byline']}. All rights reserved.</copyright>\n    <atom:link href="{config['meta_baseurl']}rss.xml" rel="self" type="application/rss+xml" />\n    <lastBuildDate>{datetime.utcnow().strftime("%a, %d %b %Y %I:%M:%S")} GMT</lastBuildDate>\n    <ttl>5</ttl>\n    <generator>First Crack</generator>\n""")
         
+        # Ensure conditions are set to build blog and archives pages, and feed
+        [x.wait() for x in paragraphs]
+
         # Add the first 32 posts to the home page, and the rest to the archive
         for i,each in enumerate(paragraphs):
             each = each.get()
@@ -422,7 +404,7 @@ if (__name__ == "__main__"):
         fd.write(template[1])
         fd.close()
 
-        # Ensure year and month indexes finished building before proceeding.
+        # Ensure year and month indexes finished building before finishing.
         [x.wait() for x in results]
 
     # Record end time
@@ -435,5 +417,5 @@ if (__name__ == "__main__"):
         print(f"-- Months: {sum([len(files[x]) for x in files])}")
         print(f"-- Days: {sum([sum(z) for z in [[len(files[x][y]) for y in files[x]] for x in files]])}")
         print(f"-- Posts: {stats['total_count']}")
-        if (all([x.result() for x in results])): print(f"{c.OKGREEN}No update necessary.{c.ENDC}")
+        if (all([x.get() for x in results])): print(f"{c.OKGREEN}No update necessary.{c.ENDC}")
         else: print(f"{c.WARNING}Site updated and rebuilt.{c.ENDC}")
