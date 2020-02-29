@@ -19,62 +19,62 @@ dst = "/Users/zjszewczyk/Dropbox/Code/Public/FirstCrack/"
 # - v: Boolean that determines whether to print output or not. (Bool)
 def CopyToDeploy(v=False):
     # Copy "README.md" to the deployment folder
-    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"README.md'"+c.OKGREEN+" ... "+c.ENDC)
+    if (v): print(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"README.md'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
     copy("./README.md", dst+"README.md")
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Copy "makefile" to the deployment folder
-    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"makefile'"+c.OKGREEN+" ... "+c.ENDC)
+    if (v): print(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"makefile'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
     copy("./makefile", dst+"makefile")
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Copy the blog.py to the deployment folder
-    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"blog.py'"+c.OKGREEN+" ... "+c.ENDC)
+    if (v): print(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"blog.py'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
     copy("./blog.py", dst+"blog.py")
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Copy the CLI.py to the deployment folder
-    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"CLI.py'"+c.OKGREEN+" ... "+c.ENDC)
+    if (v): print(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"CLI.py'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
     copy("./CLI.py", dst+"CLI.py")
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Copy the Markdown.py to the deployment folder
-    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"Markdown.py'"+c.OKGREEN+" ... "+c.ENDC)
+    if (v): print(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"Markdown.py'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
     copy("./Markdown.py", dst+"Markdown.py")
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Copy ".setup.sh" to the deployment folder
-    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+".setup.sh'"+c.OKGREEN+" ... "+c.ENDC)
+    if (v): print(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+".setup.sh'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
     copy("./.setup.sh", dst+".setup.sh")
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Copy the "./templates" tree to the deployment folder
-    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"templates'"+c.OKGREEN+" ... "+c.ENDC)
+    if (v): print(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"templates'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
     copytree("./templates", dst+"templates")
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Create the "content" directory in the deployment folder
     if (not isdir(dst+"content")):
-        if (v): stdout.write(c.OKGREEN+"Creating "+c.ENDC+"'"+dst+"Content'"+c.OKGREEN+" ... "+c.ENDC)
+        if (v): print(c.OKGREEN+"Creating "+c.ENDC+"'"+dst+"Content'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
         mkdir(dst+"content")
-        if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+        if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Create the "html" directory in the deployment folder
     if (not isdir(dst+"html")):
-        if (v): stdout.write(c.OKGREEN+"Creating "+c.ENDC+"'"+dst+"html'"+c.OKGREEN+" ... "+c.ENDC)
+        if (v): print(c.OKGREEN+"Creating "+c.ENDC+"'"+dst+"html'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
         mkdir(dst+"html")
-        if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+        if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Create the "html/assets" directory in the deployment folder
     if (not isdir(dst+"/html/assets")):
-        if (v): stdout.write(c.OKGREEN+"Creating "+c.ENDC+"'"+dst+"html/assets'"+c.OKGREEN+" ... "+c.ENDC)
+        if (v): print(c.OKGREEN+"Creating "+c.ENDC+"'"+dst+"html/assets'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
         mkdir(dst+"html/assets")
-        if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+        if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Copy the CSS file to the deployment folder
-    if (v): stdout.write(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"html/assets/main.css'"+c.OKGREEN+" ... "+c.ENDC)
+    if (v): print(c.OKGREEN+"Copying "+c.ENDC+"'"+dst+"html/assets/main.css'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
     copy("./html/assets/main.css", dst+"html/assets/main.css")
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
 # Method: SanitizeDeploy
 # Purpose: Sanitize FirstCrack files before deploying them publcily.
@@ -82,31 +82,31 @@ def CopyToDeploy(v=False):
 # - v: Boolean that determines whether to print output or not. (Bool)
 def SanitizeDeploy(v=False):
     # Sanitize templates/index.html
-    if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"templates/index.html'"+c.OKGREEN+" ... "+c.ENDC)
+    if (v): print(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"templates/index.html'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
     open(dst+"templates/index.html", "w").close()
     with open(dst+"templates/index.html", "a") as dst_fd:
         dst_fd.write("\n")
         dst_fd.write("<!-- DIVIDER -->\n")
         dst_fd.write("<p>\n    Example home page content.\n</p>")
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Sanitize templates/projects.html
-    if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"templates/projects.html'"+c.OKGREEN+" ... "+c.ENDC)
+    if (v): print(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"templates/projects.html'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
     open(dst+"templates/projects.html", "w").close()
     with open(dst+"templates/projects.html", "a") as dst_fd:
         dst_fd.write('<!-- DIVIDER -->\n')
         dst_fd.write('<table style="width:100%;padding:20pt 0;" id="big_table">\n    <tbody>\n        <tr>\n            <td><a href="#academicWork">Academic Work</a></td>\n            <td><a href="#writingProjects">Writing Projects</a></td>\n            <td><a href="#codingProjects">Coding Projects</a></td>\n        </tr>\n    </tbody>\n</table>\n')
         dst_fd.write('<h1 class="headers" id="academicWork"><span><a href="#academicWork">#</a>&nbsp;</span>Academic Work</h1>\n<p>\n    This is an example section heading.\n</p>\n<h2 class="headers" id="capstone">Capstone<span>&nbsp;<a href="#capstone">#</a></span></h2>\n<p>\n    This is example section content.\n</p>\n')
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Sanitize templates/disclaimers.html
-    if (v): stdout.write(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"templates/disclaimers.html'"+c.OKGREEN+" ... "+c.ENDC)
+    if (v): print(c.OKGREEN+"Writing "+c.ENDC+"'"+dst+"templates/disclaimers.html'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
     open(dst+"templates/disclaimers.html", "w").close()
     with open("./templates/disclaimers.html", "r") as source_fd, open(dst+"templates/disclaimers.html", "a") as dst_fd:
         for line in source_fd:
             line = line.replace("Zachary Szewczyk", "{{full_name}}")
             dst_fd.write(line)
-    if (v): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    if (v): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
 # Method: GenExFiles
 # Purpose: Create example files in the deployment directory
@@ -128,14 +128,14 @@ if (__name__ == "__main__"):
         verbose = False
 
     # Clear deployment folder
-    if (verbose): stdout.write(c.OKGREEN+"Clearing "+c.ENDC+"'"+dst+"'"+c.OKGREEN+" ... "+c.ENDC)
+    if (verbose): print(c.OKGREEN+"Clearing "+c.ENDC+"'"+dst+"'"+c.OKGREEN+" ... "+c.ENDC, end="", flush=True)
     for each in listdir(dst):
         if (each != ".git"): # Ignore git directory
             try:
                 remove(dst+each)
             except:
                 rmtree(dst+each)
-    if (verbose): stdout.write(c.OKGREEN+"done.\n"+c.ENDC)
+    if (verbose): print(c.OKGREEN+"done.\n"+c.ENDC, end="", flush=True)
 
     # Copy files to the deployment directory
     CopyToDeploy(verbose)
