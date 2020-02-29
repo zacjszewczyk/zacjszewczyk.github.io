@@ -25,6 +25,8 @@ MONTHS = {"01":"January","02":"February","03":"March","04":"April","05":"May","0
 # Purpose: Facilitate multiprocessing of year indexes
 # Parameters:
 # - year: Year index to build (String)
+# - stats: Content file stats by year/month/day/time (Dict)
+# - files: Content file names by year/month/day/time (Dict)
 # Return: True (Operation completes), False (Operation fails)
 def BuildByYear(year,stats,files):
     # For each year in which a post was made, generate a 'year' file, that
@@ -352,21 +354,19 @@ if (__name__ == "__main__"):
         stats[mtime[0]][mtime[1]][mtime[2]]["count"] += 1 # Add one to day count
         files[mtime[0]][mtime[1]][mtime[2]][mtime[3]] = file
     
-    # Wait for all article and static pages to build before proceeding
+    # Wait for all article pages to build before proceeding
     [x.wait() for x in results]
 
     # Don't rebuild if nothing has changed
     if (not all([x.get() for x in results])):
-
         # Build index, projects, and disclaimers pages based on template files
         for file in listdir("./templates/"):
             if (file != "main.html"): # Exclude main template file
                 results.append(pool.apply_async(BuildFromTemplate,(file,file.split(".")[0].title())))
 
-        # # Build all year and month indexes
+        # Build all year and month indexes
         for year in files:
             results.append(pool.apply_async(BuildByYear,(year,stats,files)))
-        [x.wait() for x in results]
 
         # Build blog and archives pages, and RSS feed
         paragraphs = []
@@ -421,6 +421,9 @@ if (__name__ == "__main__"):
             fd.write(each[-1])
         fd.write(template[1])
         fd.close()
+
+        # Ensure year and month indexes finished building before proceeding.
+        [x.wait() for x in results]
 
     # Record end time
     t2 = datetime.now()
