@@ -104,8 +104,8 @@ def BuildFromTemplate(content_file,title):
 # Purpose: Get title, link, mod time, structure file, and first paragraph of
 # original post or entire linkpost.
 # Parameters:
-# - content_file: Target content file (String)
-# Return: [title, link, mtime, structure_file, content]
+# - content_file: Target content file (Character array)
+# Return: [title, link, mtime, structure_file, content] (List)
 def GetContent(*content_file):
     content_file = "".join(content_file)
     structure_file = content_file.lower().replace(' ', '-')[0:-3]+'html'
@@ -385,7 +385,7 @@ if (__name__ == "__main__"):
             if ("<html>" in each[-1]): feed_fd.write(f"{' '*16}&lt;p&gt;This post must be viewed online.&lt;/p&gt;\n")
             else: feed_fd.write(f"{' '*16}"+'\n'.join(each[-1].split('\n')[5:-2]).replace('href=\"/','href=\"'+config["meta_baseurl"]).replace('src=\'/','src=\''+config["meta_baseurl"]).replace('<', '&lt;').replace('>', '&gt;')+"\n")
             feed_fd.write(f"{' '*12}</description>\n{' '*8}</item>\n")
-        
+
         # Write closing HTML/XML and close the files
         blog_fd.write(template[1])
         blog_fd.close()
