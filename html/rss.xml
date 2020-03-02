@@ -7,9 +7,22 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 29 Feb 2020 03:38:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2020 12:37:32 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>The Mechanical Transmission of Power</title>
+            <link>https://www.lowtechmagazine.com/2013/01/mechanical-transmission-of-power-stangenkunst.html</link>
+            <guid isPermaLink='true'>https://www.lowtechmagazine.com/2013/01/mechanical-transmission-of-power-stangenkunst.html</guid>
+            <pubDate>Mon, 02 Mar 2020 12:37:21 GMT</pubDate>
+            <description>
+                &lt;p&gt;As I read through &lt;a href="https://www.lowtechmagazine.com/2013/01/mechanical-transmission-of-power-stangenkunst.html"&gt;part one&lt;/a&gt; and then, later, parts &lt;a href="https://www.lowtechmagazine.com/2013/02/the-mechanical-transmission-of-power-jerker-line-systems.html"&gt;two&lt;/a&gt; and &lt;a href="https://www.lowtechmagazine.com/2013/03/the-mechanical-transmission-of-power-3-wire-ropes.html"&gt;three&lt;/a&gt; of Kris De Decker&amp;#8217;s interesting series on mechanical power transmission, I knew I had read other articles from the Low-Tech Magazine before. A quick check through my archive proved me right: for those looking for other interesting reads on low-tech solutions to hard problems, check out &lt;a href="https://www.lowtechmagazine.com/2020/01/how-sustainable-is-a-solar-powered-website.html"&gt;How Sustainable is a Solar Powered Website?&lt;/a&gt; and &lt;a href="https://solar.lowtechmagazine.com/2015/10/how-to-build-a-low-tech-internet/"&gt;How to Build a Low-tech Internet&lt;/a&gt;, too, or any of &lt;a href="https://www.lowtechmagazine.com/"&gt;The Low-Tech Magazine&amp;#8217;s other fascinating work&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;In a similar vein, check out &lt;a href="http://507movements.com/"&gt;507 Movements&lt;/a&gt; for&amp;#160;&amp;#8212;&amp;#160;get this&amp;#160;&amp;#8212;&amp;#160;507 different mechanical mechanisms. When I run into &lt;a href="https://zacs.site/projects.html#caddProjects"&gt;a novel engineering challenge&lt;/a&gt;, I always try to solve it in a simple mechanical way first. Computers are great, but there is a certain elegance to simple machinery for which I have great appreciation.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>First Crack Release Notes, February 2020</title>
             <link>https://zacs.site/blog/first-crack-release-notes-0220.html</link>
