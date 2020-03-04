@@ -7,9 +7,22 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 03 Mar 2020 12:59:29 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2020 10:53:38 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Simple Systems Have Less Downtime</title>
+            <link>https://www.gkogan.co/blog/simple-systems/</link>
+            <guid isPermaLink='true'>https://www.gkogan.co/blog/simple-systems/</guid>
+            <pubDate>Wed, 04 Mar 2020 22:53:30 GMT</pubDate>
+            <description>
+                &lt;p&gt;Simple systems deploy faster than complex ones, and fail less often; sometimes they take less time to build, too, but the pursuit of simplicity often entails a long process to prioritize some features while justifying the exclusion of others. Ironically, that process tends to take much longer than just building in all the features, so most choose the latter approach. The end result is complex software that does many things, but few things well.&lt;/p&gt;
+
+&lt;p&gt;As a &lt;a href="https://zacs.site/blog/linear-python.html"&gt;fan of premature optimization&lt;/a&gt;, I like to take the opposite approach, and to take it to the extreme. &lt;a href="https://zacs.site/projects.html#codingProjects"&gt;My software&lt;/a&gt;&amp;#160;&amp;#8212;&amp;#160;and even my devices&amp;#160;&amp;#8212;&amp;#160;tend to do one thing well. This makes the upfront cost higher in terms of time spent planning projects, writing code, and purchasing hardware, but also&amp;#160;&amp;#8212;&amp;#160;since &lt;a href="https://zacs.site/blog/good-times-create-weak-men.html"&gt;I understand and control the entire stack&lt;/a&gt;&amp;#160;&amp;#8212;&amp;#160;lowers the number of opaque systems that can fail as well as the knock-on effects of such an event. I consider this a worthwhile tradeoff, and I bet &lt;a href="https://www.gkogan.co/blog/simple-systems/"&gt;Greg would, too&lt;/a&gt;.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>The Mechanical Transmission of Power</title>
             <link>https://www.lowtechmagazine.com/2013/01/mechanical-transmission-of-power-stangenkunst.html</link>

@@ -1,10 +1,7 @@
-127.0.0.1 - - [02/Mar/2020 07:37:38] GET / HTTP/1.1 200 -
-127.0.0.1 - - [02/Mar/2020 07:37:38] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [02/Mar/2020 07:37:38] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [02/Mar/2020 07:37:40] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [02/Mar/2020 07:37:40] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [02/Mar/2020 07:37:40] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [02/Mar/2020 07:37:51] GET /projects.html HTTP/1.1 200 -
-127.0.0.1 - - [02/Mar/2020 07:37:51] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [02/Mar/2020 07:37:51] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-- - - [2/3/2020 7:37:55] Graceful shutdown - -
+127.0.0.1 - - [04/Mar/2020 17:53:43] GET / HTTP/1.1 200 -
+127.0.0.1 - - [04/Mar/2020 17:53:43] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [04/Mar/2020 17:53:43] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+127.0.0.1 - - [04/Mar/2020 17:53:45] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [04/Mar/2020 17:53:45] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [04/Mar/2020 17:53:46] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+- - - [4/3/2020 17:53:54] Graceful shutdown - -
