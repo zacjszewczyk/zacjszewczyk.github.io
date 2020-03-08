@@ -31,7 +31,7 @@ def ActivateInterface():
     # If the user just runs the file, or only includes "-v" verbose flag, notify
     # them that "-a" enters command line interface, then build the site.
     if (len(argv) == 1 or len(argv) == 2 and "-v" in argv):
-        print(c.UNDERLINE+"Note"+c.ENDC+": You can use '-a' to enter 'Authoring Mode'")
+        print(c.UNDERLINE+"Note"+c.ENDC+": You can use '-a' to enter the command line interface.")
     # If they have run the program with up to 2 parameters other than "-v",
     # open the command line interface.
     elif (len(argv) < 4):
@@ -135,25 +135,17 @@ def DisplayInterface(params):
                             self.wfile.write(line)
                         fd.close()
 
-                # Send no response if client uses one of these valid but 
-                # unsupported HTTP methods.
-                def do_HEAD(self):
-                    return False
-                def do_POST(self):
-                    return False
-                def do_PUT(self):
-                    return False
-                def do_DELETE(self):
-                    return False
-                def do_CONNECT(self):
-                    return False
-                def do_OPTIONS(self):
-                    return False
-                def do_TRACE(self):
-                    return False
-                def do_PATCH(self):
-                    return False
+                # Send nothing if client uses a valid but unsupported HTTP methods.
+                def do_HEAD(self): return False
+                def do_POST(self): return False
+                def do_PUT(self): return False
+                def do_DELETE(self): return False
+                def do_CONNECT(self): return False
+                def do_OPTIONS(self): return False
+                def do_TRACE(self): return False
+                def do_PATCH(self): return False
 
+                # Custom log handler that prints log message and writes to log file.
                 def log_request(self, code):
                     server_fd = open("./server.log", "a")
                     server_fd.write(f"{self.client_address[0]} - - [{self.log_date_time_string()}] {self.requestline} {code} -\n")
@@ -161,16 +153,17 @@ def DisplayInterface(params):
                     print(f"{self.client_address[0]} - - [{self.log_date_time_string()}] {self.requestline} {code} -")
 
             # Make web server public or private, and notify user
-            if ("-p" in params):
-                server_address = ("127.0.0.1", 8000)
-                print(f"Serving {c.OKGREEN}private{c.ENDC} web server at port {c.OKGREEN}8000{c.ENDC}. Use {c.BOLD}CTRL-C{c.ENDC} to exit.")
-            else:
+            if ("-P" in argv):
                 server_address = ("0.0.0.0", 8000)
                 print(f"Serving {c.WARNING}public{c.ENDC} web server at port {c.OKGREEN}8000{c.ENDC}. Use {c.BOLD}CTRL-C{c.ENDC} to exit.")
-            # Serve web server forever
+            else:
+                server_address = ("127.0.0.1", 8000)
+                print(f"Serving {c.OKGREEN}private{c.ENDC} web server at port {c.OKGREEN}8000{c.ENDC}. Use {c.BOLD}CTRL-C{c.ENDC} to exit.")
+            # Create the server, and serve it until the user issues an interrupt.
             httpd = ThreadingHTTPServer(server_address, GetHandler)
             try:
                 httpd.serve_forever()
+            # On interrupt, close the log file and gracefully shutdown web server.
             except KeyboardInterrupt:
                 print(f"\r{c.OKGREEN}Exiting.{c.ENDC}")
                 server_fd = open("./server.log", "a")
@@ -178,7 +171,6 @@ def DisplayInterface(params):
                 server_fd.close()
                 httpd.shutdown()
                 exit(0)
-
         elif ("!exit" in params): # Exit without building site
             exit(0)
         else: # Exit then build site
