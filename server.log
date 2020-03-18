@@ -1,10 +1,7 @@
-127.0.0.1 - - [11/Mar/2020 07:29:52] GET / HTTP/1.1 200 -
-127.0.0.1 - - [11/Mar/2020 07:29:52] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [11/Mar/2020 07:29:52] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [11/Mar/2020 07:29:54] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [11/Mar/2020 07:29:54] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [11/Mar/2020 07:29:54] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [11/Mar/2020 07:30:00] GET /blog/most-unequal.html HTTP/1.1 200 -
-127.0.0.1 - - [11/Mar/2020 07:30:00] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [11/Mar/2020 07:30:01] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-- - - [11/3/2020 7:30:3] Graceful shutdown - -
+10.0.0.235 - - [18/Mar/2020 14:49:06] GET / HTTP/1.1 200 -
+10.0.0.235 - - [18/Mar/2020 14:49:06] GET /assets/main.css HTTP/1.1 200 -
+10.0.0.235 - - [18/Mar/2020 14:49:06] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+10.0.0.235 - - [18/Mar/2020 14:49:06] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+10.0.0.235 - - [18/Mar/2020 14:49:12] GET /blog/git-home.html HTTP/1.1 200 -
+10.0.0.235 - - [18/Mar/2020 14:49:12] GET /assets/main.css HTTP/1.1 200 -
+- - - [18/3/2020 14:49:19] Graceful shutdown - -
