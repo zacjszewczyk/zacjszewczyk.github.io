@@ -1,7 +1,7 @@
-10.0.0.235 - - [18/Mar/2020 14:49:06] GET / HTTP/1.1 200 -
-10.0.0.235 - - [18/Mar/2020 14:49:06] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.235 - - [18/Mar/2020 14:49:06] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-10.0.0.235 - - [18/Mar/2020 14:49:06] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-10.0.0.235 - - [18/Mar/2020 14:49:12] GET /blog/git-home.html HTTP/1.1 200 -
-10.0.0.235 - - [18/Mar/2020 14:49:12] GET /assets/main.css HTTP/1.1 200 -
-- - - [18/3/2020 14:49:19] Graceful shutdown - -
+127.0.0.1 - - [19/Mar/2020 07:24:30] GET / HTTP/1.1 200 -
+127.0.0.1 - - [19/Mar/2020 07:24:30] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [19/Mar/2020 07:24:30] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [19/Mar/2020 07:24:32] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [19/Mar/2020 07:24:32] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [19/Mar/2020 07:24:32] GET /assets/Images/force_graph.png HTTP/1.1 200 -
+- - - [19/3/2020 7:24:45] Graceful shutdown - -
