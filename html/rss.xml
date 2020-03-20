@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 19 Mar 2020 11:24:24 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2020 12:43:31 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Containers are Not the Future</title>
+            <link>https://rap.mirror.cyberbits.eu/fosdem/2020/K.1.105/kernel_address_space_isolation.webm</link>
+            <guid isPermaLink='true'>https://rap.mirror.cyberbits.eu/fosdem/2020/K.1.105/kernel_address_space_isolation.webm</guid>
+            <pubDate>Fri, 20 Mar 2020 12:43:18 GMT</pubDate>
+            <description>
+                &lt;p&gt;Ian Eyberg in &lt;a href="https://rap.mirror.cyberbits.eu/fosdem/2020/K.1.105/kernel_address_space_isolation.webm"&gt;&lt;em&gt;Containers are Not the Future&lt;/em&gt;&lt;/a&gt;, quoting a line from &lt;a href="https://rap.mirror.cyberbits.eu/fosdem/2020/K.1.105/kernel_address_space_isolation.webm"&gt;Mike Rapoport and James Bottomley&amp;#8217;s talk at this year&amp;#8217;s Free and Open source Software Developers&amp;#8217; European Meeting&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;The kernel developers view of the docker community is that in the rare case they can actually formulate the question correctly they usually don&amp;#8217;t understand the answer.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Hilarious. Ian also got at a critical point about the state of modern software engineers, something I touched on a few weeks ago when I linked to &lt;a href="https://zacs.site/blog/good-times-create-weak-men.html"&gt;&lt;em&gt;Good TImes Create Weak Men&lt;/em&gt;&lt;/a&gt;. Short-term, push-button fixes attempt to get around the long, hard, and expensive problem of developing and deploying expertise. Like outsourcing, while the former approach has &lt;a href="http://berthub.eu/articles/posts/national-outsourcing/"&gt;short-term benefits&lt;/a&gt;, its &lt;a href="https://pdfs.semanticscholar.org/e9da/f5cc1c94c6e34e29095ca168e8fa2d750df9.pdf"&gt;long-term effects are debilitating&lt;/a&gt;.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>You Earn Your Pay When Things Go Wrong</title>
             <link>https://zacs.site/blog/when-things-go-wrong.html</link>
