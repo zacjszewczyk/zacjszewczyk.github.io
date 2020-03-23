@@ -1,7 +1,5 @@
-10.0.0.235 - - [20/Mar/2020 08:43:40] GET / HTTP/1.1 200 -
-10.0.0.235 - - [20/Mar/2020 08:43:40] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-10.0.0.235 - - [20/Mar/2020 08:43:40] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.235 - - [20/Mar/2020 08:43:52] GET /blog.html HTTP/1.1 200 -
-10.0.0.235 - - [20/Mar/2020 08:43:52] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.235 - - [20/Mar/2020 08:43:52] GET /assets/Images/force_graph.png HTTP/1.1 200 -
-- - - [20/3/2020 8:44:8] Graceful shutdown - -
+10.0.0.235 - - [23/Mar/2020 06:20:33] GET /blog.html HTTP/1.1 200 -
+10.0.0.235 - - [23/Mar/2020 06:20:33] GET /assets/main.css HTTP/1.1 200 -
+10.0.0.235 - - [23/Mar/2020 06:20:35] GET /blog/building-a-better-bob.html HTTP/1.1 200 -
+10.0.0.235 - - [23/Mar/2020 06:20:35] GET /assets/main.css HTTP/1.1 200 -
+- - - [23/3/2020 6:21:11] Graceful shutdown - -
