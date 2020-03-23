@@ -1,0 +1,7 @@
+Type: linkpost
+Title: "Premature optimization is the root of all evil" is the root of evil
+Link: https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b
+Pubdate: 2020/03/23 05:30:48
+Author: Zac Szewczyk
+
+[As I have said before](Linear Python.txt), I believe in premature optimization. It leads to better products in the long run, and if optimized along the proper vectors, more secure ones, too. It's nice to see that [Oleksandr Kaleniuk agrees](https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b).
