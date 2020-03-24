@@ -7,9 +7,30 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 23 Mar 2020 10:21:25 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 05:22:30 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>ARM Macs</title>
+            <link>https://mondaynote.com/arm-ed-mac-we-have-an-answer-545a20419a46</link>
+            <guid isPermaLink='true'>https://mondaynote.com/arm-ed-mac-we-have-an-answer-545a20419a46</guid>
+            <pubDate>Tue, 24 Mar 2020 17:22:21 GMT</pubDate>
+            <description>
+                &lt;p&gt;Jean-Louis Gassee, in &lt;a href="https://mondaynote.com/arm-ed-mac-we-have-an-answer-545a20419a46"&gt;yesterday&amp;#8217;s Monday Note&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;An answer to the now age-old ARM-ed Mac question now emerges: With the emphasis on the iPad Pro as a real computer, there&amp;#8217;s no reason for Apple to move the Mac off of trusty if perhaps less glamorous Intel processors.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If I may finish his sentence, &amp;#8220;... there&amp;#8217;s no reason for Apple to move the Mac off of trusty if perhaps less glamorous Intel processors, &lt;em&gt;because the iPad will soon replace the Mac&lt;/em&gt;.&amp;#8221; As for when this will happen, I don&amp;#8217;t know&amp;#160;&amp;#8212;&amp;#160;and if Jean-Louis does, he&amp;#8217;s not saying. With each passing year it becomes more feasible from a technical standpoint, but it will take a sea change in Apple&amp;#8217;s strategic thinking for this to actually happen.&lt;/p&gt;
+
+&lt;p&gt;This reminds me of the electric car situation: they have gotten pretty good, but &lt;a href="https://zacs.site/blog/expediton-vehicles.html"&gt;at least for my use case&lt;/a&gt;, &lt;a href="https://zacs.site/blog/my-electric-vehicle-wish-list.html"&gt;they aren&amp;#8217;t quite good enough&lt;/a&gt;. I can see that this will change soon, but&amp;#160;&amp;#8212;&amp;#160;again&amp;#160;&amp;#8212;&amp;#160;it will take a sea change in strategic thinking to make this happen. In this case, that means automakers stop trying to turn a truck into an electric truck, and start designing vehicles to take full advantage of all this new technology enables.&lt;/p&gt;
+
+&lt;p&gt;As I start shopping around to replace my trusty 2013 MacBook Pro, I hope Apple will make its decision soon.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>"Premature optimization is the root of all evil" is the root of evil</title>
             <link>https://medium.com/@okaleniuk/premature-optimization-is-the-root-of-all-evil-is-the-root-of-evil-a8ab8056c6b</link>

@@ -1,5 +1,8 @@
-10.0.0.235 - - [23/Mar/2020 06:20:33] GET /blog.html HTTP/1.1 200 -
-10.0.0.235 - - [23/Mar/2020 06:20:33] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.235 - - [23/Mar/2020 06:20:35] GET /blog/building-a-better-bob.html HTTP/1.1 200 -
-10.0.0.235 - - [23/Mar/2020 06:20:35] GET /assets/main.css HTTP/1.1 200 -
-- - - [23/3/2020 6:21:11] Graceful shutdown - -
+10.0.0.235 - - [24/Mar/2020 13:22:36] GET / HTTP/1.1 200 -
+10.0.0.235 - - [24/Mar/2020 13:22:37] GET /assets/main.css HTTP/1.1 200 -
+10.0.0.235 - - [24/Mar/2020 13:22:37] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+10.0.0.235 - - [24/Mar/2020 13:22:38] GET /blog.html HTTP/1.1 200 -
+10.0.0.235 - - [24/Mar/2020 13:22:38] GET /assets/main.css HTTP/1.1 200 -
+10.0.0.235 - - [24/Mar/2020 13:23:01] GET /explore.html HTTP/1.1 200 -
+10.0.0.235 - - [24/Mar/2020 13:23:01] GET /assets/main.css HTTP/1.1 200 -
+- - - [24/3/2020 13:23:4] Graceful shutdown - -
