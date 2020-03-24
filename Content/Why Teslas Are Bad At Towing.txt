@@ -6,7 +6,7 @@ Author: Zac J. Szewczyk
 
 Jason Fenske does a nice job explaining why the Cybertruck will not tow well: high efficiency gives electric vehicles competitive ranges despite their batteries' low energy capacity, but also means that even a light, 5,000 pound trailer will slash that figure. In `distance = energy / force`, a small numerator (low capacity) causes range to drop off much faster as the denominator (towed weight) increases. See the blue graph below, which depicts range (the y-axis) as a function of towed weight (the x-axis). Traditional vehicles, although less efficient, have vast energy stores; in their case, a high numerator means the denominator has much less of an impact as it increases. See this in the green graph.
 
-![Force graph with a high versus low numerator](/assets/Images/force_graph.png "Force graph with a high versus low numerator")
+![Force graph with a high versus low numerator](/assets/images/force_graph.png "Force graph with a high versus low numerator")
 
 As I said about the Cybertruck [last week](Tesla Cybertruck.txt), "it's not a very good sportscar, and it's not a very good truck." I [still think electric vehicles will revolutionize the overland space](/blog/expedition-rigs.html#Electric), but it will take years for the batteries to get there.
 

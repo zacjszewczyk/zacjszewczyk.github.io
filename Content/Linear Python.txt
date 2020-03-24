@@ -361,11 +361,11 @@ table{display:inline-block;max-width: 90%;overflow:scroll}
 
 <p>The graph below visualizes execution time as a function of tasks, from 100 to 900. After 900, the system refused to spawn new threads; the dotted lines predict execution time beyond that point. <code>y = 0.0237x2 - 0.0655x + 2.4838</code> models the multithreading method with a R&sup2; value of 0.83, and <code>y = 0.0038x2 + 0.1019x + 2.4676</code> models the blended method with a R&sup2; value of 0.99.</p>
 
-<div class='image'><img src='https://zacs.site/assets/Images/Execution_time_as_a_function_of_tasks.png' alt='Execution time as a function of tasks' title='Execution time as a function of tasks' loading='lazy' /></div>
+<div class='image'><img src='https://zacs.site/assets/images/Execution_time_as_a_function_of_tasks.png' alt='Execution time as a function of tasks' title='Execution time as a function of tasks' loading='lazy' /></div>
 
 <p>The multithreaded method&#8217;s runtime consistently spikes with 800 tasks. Interestingly, normalizing the average runtime for 800 tasks to fall between 700&#8217;s and 900&#8217;s changes the trendline function from <code>y = 0.0237x2 - 0.0655x + 2.4838</code> to <code>y = 0.0185x2 - 0.0481x + 2.4838</code>, and causes the R&sup2; value to jump from 0.83 to 0.96. Check out that graph below.</p>
 
-<div class='image'><img src='https://zacs.site/assets/Images/Normalized_execution_time_as_a_function_of_tasks.png' alt='Normalized execution time as a function of tasks' title='Normalized execution time as a function of tasks' loading='lazy' /></div>
+<div class='image'><img src='https://zacs.site/assets/images/Normalized_execution_time_as_a_function_of_tasks.png' alt='Normalized execution time as a function of tasks' title='Normalized execution time as a function of tasks' loading='lazy' /></div>
 
 <h3 class="headers" id="ConclusionsandTakeaways">Conclusions and Takeaways<span>&nbsp;<a href="#ConclusionsandTakeaways">#</a></span></h3>
 

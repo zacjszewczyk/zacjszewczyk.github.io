@@ -52,7 +52,7 @@
 
 <p>I did find a few ways to improve performance during the course of that rewrite, though, which ended up cutting runtime by up to <em>half</em>. Check out the GIF below, via <a href="https://github.com/faressoft/terminalizer/blob/master/README.md">Terminalizer</a>, which shows the latest version of First Crack clearing and then building my entire site ten times:</p>
 
-<div class='image'><img src='/assets/Images/system/runtime.gif' alt='First Crack runtime, 10 runs' title='First Crack runtime, 10 runs' loading='lazy' /></div>
+<div class='image'><img src='/assets/images/system/runtime.gif' alt='First Crack runtime, 10 runs' title='First Crack runtime, 10 runs' loading='lazy' /></div>
 
 <p>First Crack rebuilds the entire site in as much as 0.81 seconds, and as little as 0.64&#160;&#8212;&#160;its best yet. De-duplicating work across a few methods helped, but for the most part that massive speed boost came from slashing I/O operations. To build the <a href="/archives.html">Post Archives</a> page and <a href="/rss.xml">RSS feed</a>, the engine used to sort every file, read a certain number of paragraphs based on article type, open the target, append that content, close both, and then repeat until it got through every post. It now does this in batches, which got rid of almost 1,000 file operations on <code>archives.html</code> and <code>rss.xml</code> each. This had the greatest impact on First Crack&#8217;s runtime in December, by far.</p>
 

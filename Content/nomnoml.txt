@@ -6,7 +6,7 @@ Author: Zac J. Szewczyk
 
 Avdi Grimm wrote an interesting post back in June, about [using text to create simple diagrams](https://avdi.codes/tools-for-turning-descriptions-into-diagrams/). He highlighted a few different tools, but one stood out: [nomnoml](http://www.nomnoml.com/). I used [UMLet](https://www.umlet.com/) a lot back in college, to create some mediocre user stories, which soured me on UML in general. I gave nomnoml a shot, though, and created this simple network diagram:
 
-![Example network diagram created with nomnoml](/assets/Images/example_network.png "Example network diagram created with nomnoml")
+![Example network diagram created with nomnoml](/assets/images/example_network.png "Example network diagram created with nomnoml")
 
 Check out the code that generated it, below:
 

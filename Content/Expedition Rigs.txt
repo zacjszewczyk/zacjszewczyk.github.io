@@ -61,7 +61,7 @@ I listed as many chassis as I could think of below, with pictures and links wher
 
 ### Cars
 
-![Car silhouette](/assets/Images/ExpeditionRigs/Car.png)
+![Car silhouette](/assets/images/ExpeditionRigs/Car.png)
 
 [Many have done amazing trips in vehicles like these](https://landcruisingadventure.com/4wd-a-must-2wd-overland-vehicles/), so for those who just want to get to parks and trail heads and down a few dirt roads, a car will do just fine. You could go with a more capable platform, but all the money you save in car payments and at the pump will leave more for the fun stuff.  
 
@@ -78,7 +78,7 @@ Certain people should choose a car. I wrote out a rough guide below. To those wh
 
 ### SUVs
 
-![SUV silhouette](/assets/Images/ExpeditionRigs/SUV.png)
+![SUV silhouette](/assets/images/ExpeditionRigs/SUV.png)
 
 The sweet spot for most people, SUVs carry more and do better off-road than cars. This means they can take you to far-flung places for medium amounts of time, but know that you cannot take much, and that you will camp while there. The folks over at Expedition Overland [love this](https://www.youtube.com/playlist?list=PLEacEr4cZy-5c3N7NUHb2dE1ffGv53H73); others, not so much. Again, certain people should choose an SUV. See my rough guide below.
 
@@ -92,7 +92,7 @@ The sweet spot for most people, SUVs carry more and do better off-road than cars
 
 ### Trucks
 
-![Truck silhouette](/assets/Images/ExpeditionRigs/Truck.png)
+![Truck silhouette](/assets/images/ExpeditionRigs/Truck.png)
 
 Trucks tend to have more power than SUVs, but that may come at the cost of size, weight, and off-road ability. These vehicles can also take you to far-flung places for medium amounts of time and you will still camp while there, but you can bring more with you. 
 
@@ -107,7 +107,7 @@ Trucks tend to have more power than SUVs, but that may come at the cost of size,
 
 ### Vans
 
-![Van silhouette](/assets/Images/ExpeditionRigs/Van.png)
+![Van silhouette](/assets/images/ExpeditionRigs/Van.png)
 
 With so many people living in vans these days, they have proven their viability as both homes on wheels and adventure platforms. Few vehicles will beat them for one or two people a few days at a time. A second row of seats will take up a lot of that living space, though, vans eek by off-road, and they lack the weight capacity to hold food, water, and fuel for long adventures off-grid.
 
@@ -122,7 +122,7 @@ With so many people living in vans these days, they have proven their viability 
 
 ### Side-by-sides
 
-![Side-by-side silhouette](/assets/Images/ExpeditionRigs/UTV.png)
+![Side-by-side silhouette](/assets/images/ExpeditionRigs/UTV.png)
 
 I almost left these out. Side-by-sides do not have the weight or fuel capacity to support long trips, but a lot of people out west love them. For fun day trips, one might work for you.  
 
@@ -141,7 +141,7 @@ The classic "adventure vehicle", RVs come in many shapes and sizes. Each suits a
 
 #### Class A
 
-![Class A silhouette](/assets/Images/ExpeditionRigs/ClassA.png)
+![Class A silhouette](/assets/images/ExpeditionRigs/ClassA.png)
 
 These bus-like monsters have the space and amenities to support large groups on multi-week trips, as long as they stay on the pavement and camp in RV parks. I like these because they can replace a house, but their size, inability to go off-road, and dependence on water, electrical, and sewage hookups limits their utility outside a narrow use case.
 
@@ -156,7 +156,7 @@ These bus-like monsters have the space and amenities to support large groups on 
 
 #### Class C
 
-![Class C silhouette](/assets/Images/ExpeditionRigs/ClassC.png)
+![Class C silhouette](/assets/images/ExpeditionRigs/ClassC.png)
 
 Although Class Cs can rival Class As in size, few will. Built on large truck chassis like the Ford F350, these smaller RVs can handle rougher roads. They also have enough space and amenities to support mid-size groups on multi-week trips. These RVs still depend on water, electrical, and sewage hookups, so do not expect to stay off-grid for long. 
 
@@ -171,7 +171,7 @@ Although Class Cs can rival Class As in size, few will. Built on large truck cha
 
 #### Fifth wheels
 
-![Fifth wheel silhouette](/assets/Images/ExpeditionRigs/FifthWheel.png)
+![Fifth wheel silhouette](/assets/images/ExpeditionRigs/FifthWheel.png)
 
 These massive trailers have the space and amenities to support large groups on multi-week trips. Pulled by large trucks, and close to Class A RVs in size, they have similar capabilities and limitations. You can unhitch your truck and leave the trailer, though, which makes this route a bit more flexible. Park a side-by-side in the attached garage, and you get a capable base camp from which to launch some serious adventures. 
 
@@ -186,7 +186,7 @@ These massive trailers have the space and amenities to support large groups on m
 
 #### Travel trailers
 
-![Travel trailer silhouette](/assets/Images/ExpeditionRigs/TravelTrailer.png)
+![Travel trailer silhouette](/assets/images/ExpeditionRigs/TravelTrailer.png)
 
 Think of travel trailers as Class Cs you tow. They have the same amenities as large RVs in a smaller package, to support mid-size groups for multi-week trips. This means you can tow them with smaller, more off-road capable vehicles, which gives you the base camp setup of the larger RVs and an overland-capable rig.
 
@@ -201,7 +201,7 @@ Think of travel trailers as Class Cs you tow. They have the same amenities as la
 
 #### Pop-up trailers
 
-![Pop-up trailer silhouette](/assets/Images/ExpeditionRigs/PopTrailer.png)
+![Pop-up trailer silhouette](/assets/images/ExpeditionRigs/PopTrailer.png)
 
 Pop-up trailers have few amenities but come in the smallest package. Almost any vehicle can tow one, so although their size makes them ill-suited to large groups, a capable overland rig could tow one to make long-term camping possible with extra supplies, and more comfortable with basic amenities.
 
@@ -216,7 +216,7 @@ Pop-up trailers have few amenities but come in the smallest package. Almost any 
 
 #### Truck campers
 
-![Truck camper silhouette](/assets/Images/ExpeditionRigs/TruckCamper.png)
+![Truck camper silhouette](/assets/images/ExpeditionRigs/TruckCamper.png)
 
 The smallest of all the campers here, these sacrifice size and all but the most basic amenities to fit in the back of a truck. This truck, in turn, can go almost anywhere. Think of these campers as SUVs with interior living space, so you do not have to camp while on the trail.
 
@@ -231,7 +231,7 @@ The smallest of all the campers here, these sacrifice size and all but the most 
 
 ### Medium-Duty Utility Vehicles
 
-![Medium-duty utility vehicle silhouette](/assets/Images/ExpeditionRigs/MediumDuty.png)
+![Medium-duty utility vehicle silhouette](/assets/images/ExpeditionRigs/MediumDuty.png)
 
 Most adventure vehicles fall into one of those six groups. As you search for the perfect fit, though, consider these two types as well. Although unusual, medium- and heavy-duty utility vehicles have a great deal to offer as expedition rigs. Built to withstand hard use in austere environments, and with the size and weight capacity to support mid to large groups on long trips, they can do things and go places unlike any other platform on this list. Equipping one will take some time and money, but go into this with an open mind--you might just like the idea.
 
@@ -248,7 +248,7 @@ Medium-duty utility vehicles, like the Mitsubishi Fuso and Isuzu N-series, have 
 
 ### Heavy-Duty Utility Vehicles
 
-![Heavy-duty utility vehicle silhouette](/assets/Images/ExpeditionRigs/HeavyDuty.png)
+![Heavy-duty utility vehicle silhouette](/assets/images/ExpeditionRigs/HeavyDuty.png)
 
 A step up from their smaller cousins, heavy-duty utility vehicles offer even more space and carrying capacity. This comes at the cost of size and a couple miles per gallon, but opens up a world of extreme expedition rigs built to excel in harsh environments. Take the U.S. Army's Family of Light Medium Tactical Vehicles, for example, which even in great condition sell for around $10,000. The base model, the M1078, can carry 5,000 pounds, run on almost any combustible fluid, and go anywhere its large frame will fit. Many companies and millitaries around the world have similar offerings, such as the storied UNIMOG or the MAN KAT. Building these out, too, will take some extra time and money as compared to other options here, but this gives you the chance to create the perfect expedition rig. 
 
