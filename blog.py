@@ -114,7 +114,7 @@ def GetContent(*content_file):
 
     # Skip to <article>
     for i,line in enumerate(fd):
-        if (line.strip() == "<article>"):
+        if ("<article " in line):
             break
 
     # Start recording content (content), and keep track of article type (t)
@@ -227,10 +227,10 @@ def TestAndBuild(content_file,mtime):
         if (i == 0): # First paragraph in file.
             structure_fd.write(template[0].replace("{{META_DESC}}", line.strip().replace("\"", "&#8243;")).replace("{{TITLE}}", header["title"], 2))
             if (header["type"] == "original"):
-                structure_fd.write(f"""<article>\n<h2 id='article_title'>\n<a class=\"original\" href=\"/blog/{structure_file}\">{header["title"]}</a>\n</h2>\n""")
+                structure_fd.write(f"""<article class='h-entry'>\n<h2 id='article_title' class='p-name'>\n<a class=\"original u-url\" href=\"/blog/{structure_file}\">{header["title"]}</a>\n</h2>\n""")
             else:
-                structure_fd.write("<article>\n<h2 id='article_title'>\n<a class=\"linkpost\" href=\""+header["link"]+"\">"+header["title"]+"</a>\n</h2>\n")
-            structure_fd.write(f"""<time id='article_time' datetime="{mtime.tm_year}-{mtime.tm_mon:02}-{mtime.tm_mday:02} {mtime.tm_hour:02}:{mtime.tm_min:02}:{mtime.tm_sec:02}-0400" pubdate="pubdate">By <link rel="author">{header["author"]}</link> on <a href="/blog/{mtime.tm_year}.html">{mtime.tm_year}</a>/<a href="/blog/{mtime.tm_year}-{mtime.tm_mon:02}.html">{mtime.tm_mon:02}</a>/{mtime.tm_mday:02} {mtime.tm_hour:02}:{mtime.tm_min:02}:{mtime.tm_sec:02} EST</time>\n""")
+                structure_fd.write("<article class='h-entry'>\n<h2 id='article_title' class='p-name'>\n<a class=\"linkpost u-url\" href=\""+header["link"]+"\">"+header["title"]+"</a>\n</h2>\n")
+            structure_fd.write(f"""<time class='dt-published' id='article_time' datetime="{mtime.tm_year}-{mtime.tm_mon:02}-{mtime.tm_mday:02} {mtime.tm_hour:02}:{mtime.tm_min:02}:{mtime.tm_sec:02}-0400" pubdate="pubdate">By <link rel="author" class="p-author h-card">{header["author"]}</link> on <a href="/blog/{mtime.tm_year}.html">{mtime.tm_year}</a>/<a href="/blog/{mtime.tm_year}-{mtime.tm_mon:02}.html">{mtime.tm_mon:02}</a>/{mtime.tm_mday:02} {mtime.tm_hour:02}:{mtime.tm_min:02}:{mtime.tm_sec:02} EST</time>\n""")
             structure_fd.write(md.html(line)+"\n")
         else:
             structure_fd.write(md.html(line)+"\n")

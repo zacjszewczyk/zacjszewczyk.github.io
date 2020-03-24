@@ -1,15 +1,7 @@
-10.0.0.235 - - [24/Mar/2020 13:52:44] GET / HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:52:44] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:52:44] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:52:47] GET /blog.html HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:52:47] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:52:54] GET /archives.html HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:52:54] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:52:55] GET /assets/images/force_graph.png HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:53:01] GET /blog/why-teslas-are-bad-at-towing.html HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:53:01] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:53:01] GET /assets/images/force_graph.png HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:53:13] GET /blog/tesla-cybertruck.html HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:53:13] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.235 - - [24/Mar/2020 13:53:13] GET /assets/images/Cybertruck_empty.jpg HTTP/1.1 200 -
-- - - [24/3/2020 13:53:23] Graceful shutdown - -
+10.0.0.235 - - [24/Mar/2020 14:43:46] GET / HTTP/1.1 200 -
+10.0.0.235 - - [24/Mar/2020 14:43:46] GET /assets/main.css HTTP/1.1 200 -
+10.0.0.235 - - [24/Mar/2020 14:43:46] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+10.0.0.235 - - [24/Mar/2020 14:43:48] GET /blog.html HTTP/1.1 200 -
+10.0.0.235 - - [24/Mar/2020 14:43:48] GET /assets/main.css HTTP/1.1 200 -
+10.0.0.235 - - [24/Mar/2020 14:43:48] GET /assets/images/system/runtime.gif HTTP/1.1 404 -
+- - - [24/3/2020 14:44:0] Graceful shutdown - -

@@ -37,11 +37,11 @@
             <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
         </nav>
         <main>
-<article>
-<h2 id='article_title'>
-<a class="original" href="/blog/complete-overhaul.html">First Crack's Complete Overhaul</a>
+<article class='h-entry'>
+<h2 id='article_title' class='p-name'>
+<a class="original u-url" href="/blog/complete-overhaul.html">First Crack's Complete Overhaul</a>
 </h2>
-<time id='article_time' datetime="2013-01-27 16:01:31-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2013.html">2013</a>/<a href="/blog/2013-01.html">01</a>/27 16:01:31 EST</time>
+<time class='dt-published' id='article_time' datetime="2013-01-27 16:01:31-0400" pubdate="pubdate">By <link rel="author" class="p-author h-card">Zac Szewczyk</link> on <a href="/blog/2013.html">2013</a>/<a href="/blog/2013-01.html">01</a>/27 16:01:31 EST</time>
 <p>Early Friday morning I started redesigning this site&#8217;s layout. I wanted to create a better reading experience and place more emphasis on my content, with particular attention paid to the latest articles. Two days later, in the wee hours of Sunday morning, I closed my computer having not only accomplished my initial goals, but also after successfully completing a long-overdue complete overhaul of the content mangement system I drive this site with, First Crack. For those unfamiliar with my work on this Markdown-based content management system, check out <a href="https://zacs.site/blog/introducing-first-crack.html"><em>Introducing First Crack</em></a> and <a href="https://zacs.site/blog/first-crack-in-practice.html"><em>First Crack in Practice</em></a>.</p>
 
 <p>In addition to eliminating nearly 100 lines of code, I have also greatly optimized the latest iteration of First Crack. For example, whereas the previous version opened and parsed each content file multiple times to build the home page, RSS feed, and article page, First Crack now reads and parses each line of each file only once. I did not only make performance improvements server-side in the Python script though, but also client-side with the removal of my dependancy on jQuery and an accompanying Javascript file to correctly display my site, along with a simplification of my site&#8217;s structure as well as CSS. All in all this is a huge step forward not only for First Crack, but for this site as well.</p>
