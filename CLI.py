@@ -11,6 +11,7 @@ from re import sub # Change menu to try to avoid text wrapping
 from os import listdir, stat, utime # Directory traversal
 from os.path import isfile # Web server
 from time import localtime, mktime, strptime # Timestamping logs
+from webbrowser import open_new_tab # Preview
 
 # Class: c(olors)
 # Purpose: provide access to ANSI escape codes for styling output
@@ -162,6 +163,7 @@ def DisplayInterface(params):
             # Create the server, and serve it until the user issues an interrupt.
             httpd = ThreadingHTTPServer(server_address, GetHandler)
             try:
+                open_new_tab("http://localhost:8000")
                 httpd.serve_forever()
             # On interrupt, close the log file and gracefully shutdown web server.
             except KeyboardInterrupt:
