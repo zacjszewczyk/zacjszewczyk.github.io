@@ -1,3 +1,4 @@
-127.0.0.1 - - [26/Mar/2020 10:43:05] GET / HTTP/1.1 200 -
-127.0.0.1 - - [26/Mar/2020 10:43:05] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [26/Mar/2020 10:43:05] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [26/Mar/2020 10:46:07] GET / HTTP/1.1 200 -
+127.0.0.1 - - [26/Mar/2020 10:46:07] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [26/Mar/2020 10:46:07] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+- - - [26/3/2020 10:46:11] Graceful shutdown - -
