@@ -7,9 +7,18 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 25 Mar 2020 02:32:38 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2020 01:19:37 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Ban Targeted Advertising</title>
+            <link>https://zacs.site/blog/ban-targeted-advertising.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/ban-targeted-advertising.html</guid>
+            <pubDate>Thu, 26 Mar 2020 13:19:26 GMT</pubDate>
+            <description>
+                &lt;p&gt;While I do not feel as strongly about online advertising &lt;a href="https://www.jefftk.com/p/effect-of-advertising"&gt;as&lt;/a&gt; &lt;a href="https://www.devever.net/~hl/total-advertising-denial"&gt;some&lt;/a&gt;, the more I read about &lt;a href="https://slate.com/technology/2019/11/twitter-political-ad-ban-online-advertising.html"&gt;sensible solutions to the plethora of problems it causes&lt;/a&gt;, the more I come around: &lt;a href="https://www.wired.com/story/why-dont-we-just-ban-targeted-advertising/"&gt;ban targeted advertising&lt;/a&gt;&amp;#160;&amp;#8212;&amp;#160;if not wholesale, then perhaps to groups below a certain threshold. One article suggested a ban on targeting groups of less than 1,000 people, and that sounds like a good start to me.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Britain's food supply system doesn't work</title>
             <link>https://www.theguardian.com/environment/2020/mar/22/tim-lang-interview-professor-of-food-policy-city-university-supply-chain-crisis</link>
