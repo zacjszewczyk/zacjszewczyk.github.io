@@ -1,4 +1,8 @@
-127.0.0.1 - - [26/Mar/2020 10:46:07] GET / HTTP/1.1 200 -
-127.0.0.1 - - [26/Mar/2020 10:46:07] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [26/Mar/2020 10:46:07] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-- - - [26/3/2020 10:46:11] Graceful shutdown - -
+127.0.0.1 - - [30/Mar/2020 06:20:49] GET / HTTP/1.1 200 -
+127.0.0.1 - - [30/Mar/2020 06:20:49] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [30/Mar/2020 06:20:49] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [30/Mar/2020 06:20:53] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [30/Mar/2020 06:20:53] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [30/Mar/2020 06:20:54] GET /blog/revisiting-preparedness.html HTTP/1.1 200 -
+127.0.0.1 - - [30/Mar/2020 06:20:54] GET /assets/main.css HTTP/1.1 200 -
+- - - [30/3/2020 6:21:6] Graceful shutdown - -

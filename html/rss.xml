@@ -7,9 +7,18 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 26 Mar 2020 02:39:14 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 10:20:48 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Revisiting Preparedness</title>
+            <link>https://zacs.site/blog/revisiting-preparedness.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/revisiting-preparedness.html</guid>
+            <pubDate>Mon, 30 Mar 2020 10:20:39 GMT</pubDate>
+            <description>
+                &lt;p&gt;I brought up preparedness for the first time last year, in &lt;a href="https://zacs.site/blog/building-a-better-bob.html"&gt;&lt;em&gt;Building a Better Bug-Out Bag&lt;/em&gt;&lt;/a&gt;. As I said there, though, my history with this mindset goes back much further than 2019:&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Ban Targeted Advertising</title>
             <link>https://zacs.site/blog/ban-targeted-advertising.html</link>
