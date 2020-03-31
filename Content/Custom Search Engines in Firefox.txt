@@ -1,9 +1,0 @@
-Type: original
-Title: Custom Search Engines in Firefox
-Link: custom-search-engines-in-firefox.html
-Pubdate: 2020/03/31 10:49:31
-Author: Zac Szewczyk
-
-Mozilla's [mistakes](https://drewdevault.com/2017/12/16/Firefox-is-on-a-slippery-slope.html)--although concerning--worry me less than Google's methodical Internet takeover. Indulge me while I bring the uninformed up to speed: after eviscerating its competitors, over half the Internet now uses Chrome. This dominance gives its creator the power to force sweeping change across this decentralized system: although superficially optional, failure to comply means longer load times, lower search ranking, and lost revenue--if users can access your website at all. Over the last few years in particular, the company has shown an increased willingness to wield that power with more and more aggressive mandates. Publishers who do not expose their content through Accelerated Mobile Pages [lose viewers and income](https://medium.com/the-set-list/google-amp-a-70-drop-in-our-conversion-rate-35fe3cb69c59). Users who prefer other browsers, [perhaps because they value their privacy](https://blog.cryptographyengineering.com/2018/09/23/why-im-leaving-chrome/), either [cannot access many of Google's popular services, or have to live with a degraded user experience](https://www.theverge.com/2018/1/4/16805216/google-chrome-only-sites-internet-explorer-6-web-standards). It all leaves a bad taste in my mouth. So while I find Mozilla's mistakes concerning, I like the thought of supporting Chrome even less, so I decided to give [Firefox](https://www.mozilla.org/en-US/firefox/) another try.
-
-Back in the Bad Old Days, under Internet Explorer's malevolent rule, I used Firefox. It did not take long for me to switch to Chrome, though, thanks to much better performance and all the screen real estate it saved with that snazzy new tab bar.
