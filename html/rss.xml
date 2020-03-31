@@ -7,9 +7,18 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 30 Mar 2020 10:20:48 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2020 02:49:37 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Custom Search Engines in Firefox</title>
+            <link>https://zacs.site/blog/custom-search-engines-in-firefox.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/custom-search-engines-in-firefox.html</guid>
+            <pubDate>Tue, 31 Mar 2020 14:49:31 GMT</pubDate>
+            <description>
+                &lt;p&gt;Mozilla&amp;#8217;s &lt;a href="https://drewdevault.com/2017/12/16/Firefox-is-on-a-slippery-slope.html"&gt;mistakes&lt;/a&gt;&amp;#160;&amp;#8212;&amp;#160;although concerning&amp;#160;&amp;#8212;&amp;#160;worry me less than Google&amp;#8217;s methodical Internet takeover. Indulge me while I bring the uninformed up to speed: after eviscerating its competitors, over half the Internet now uses Chrome. This dominance gives its creator the power to force sweeping change across this decentralized system: although superficially optional, failure to comply means longer load times, lower search ranking, and lost revenue&amp;#160;&amp;#8212;&amp;#160;if users can access your website at all. Over the last few years in particular, the company has shown an increased willingness to wield that power with more and more aggressive mandates. Publishers who do not expose their content through Accelerated Mobile Pages &lt;a href="https://medium.com/the-set-list/google-amp-a-70-drop-in-our-conversion-rate-35fe3cb69c59"&gt;lose viewers and income&lt;/a&gt;. Users who prefer other browsers, &lt;a href="https://blog.cryptographyengineering.com/2018/09/23/why-im-leaving-chrome/"&gt;perhaps because they value their privacy&lt;/a&gt;, either &lt;a href="https://www.theverge.com/2018/1/4/16805216/google-chrome-only-sites-internet-explorer-6-web-standards"&gt;cannot access many of Google&amp;#8217;s popular services, or have to live with a degraded user experience&lt;/a&gt;. It all leaves a bad taste in my mouth. So while I find Mozilla&amp;#8217;s mistakes concerning, I like the thought of supporting Chrome even less, so I decided to give &lt;a href="https://www.mozilla.org/en-US/firefox/"&gt;Firefox&lt;/a&gt; another try.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Revisiting Preparedness</title>
             <link>https://zacs.site/blog/revisiting-preparedness.html</link>
