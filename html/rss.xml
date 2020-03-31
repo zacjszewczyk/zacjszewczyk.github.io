@@ -7,19 +7,18 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 31 Mar 2020 10:24:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2020 10:25:43 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
             <title>Speeding up Linux disk encryption</title>
             <link>https://blog.cloudflare.com/speeding-up-linux-disk-encryption/</link>
             <guid isPermaLink='true'>https://blog.cloudflare.com/speeding-up-linux-disk-encryption/</guid>
-            <pubDate>Tue, 31 Mar 2020 14:48:47 GMT</pubDate>
+            <pubDate>Tue, 31 Mar 2020 22:25:23 GMT</pubDate>
             <description>
                 &lt;p&gt;Ignat Korchagin posted a fantastic writeup on &lt;a href="https://blog.cloudflare.com/speeding-up-linux-disk-encryption/"&gt;speeding up Linux disk encryption&lt;/a&gt; to Cloudflare&amp;#8217;s blog. The lengths that team went to in order to solve this problem are fascinating. Dan Luu hit the nail on the head &lt;a href="https://danluu.com/corp-eng-blogs/"&gt;when he highlighted Cloudflare&amp;#8217;s as an example of a great corporate blog&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;For those looking for more interesting reads, Dan highlighted a few other corporate engineering blogs in &lt;a href="https://danluu.com/corp-eng-blogs/"&gt;his post&lt;/a&gt;; start there. I have read &lt;a href="https://labs.ripe.net/Members/emileaben/the-debogonisation-of-2a10-12"&gt;several&lt;/a&gt; [interesting](https://labs.ripe.net/Members/philip_homburg/whats-the-deal-with-ipv6-link-local-addresses&lt;/p&gt;
-&lt;p&gt;) &lt;a href="https://labs.ripe.net/Members/samaneh_tajalizadehkhoob_1/the-tale-of-website-popularity-rankings"&gt;posts&lt;/a&gt; from &lt;a href="https://labs.ripe.net/"&gt;RIPE Labs&lt;/a&gt; over the last few weeks as well. Although not a corporation, few organizations operate at that level and scale. You may also find some interesting sources in &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;the list of websites I use to keep up with current events&lt;/a&gt;, or &lt;a href="https://zacs.site/blog/my-evening-reads.html"&gt;the list of (mostly) independent shops whose RSS feeds I subscribe to&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For those looking for more interesting reads, Dan highlighted a few other corporate engineering blogs in &lt;a href="https://danluu.com/corp-eng-blogs/"&gt;his post&lt;/a&gt;; start there. I have read &lt;a href="https://labs.ripe.net/Members/emileaben/the-debogonisation-of-2a10-12"&gt;several&lt;/a&gt; &lt;a href="https://labs.ripe.net/Members/philip_homburg/whats-the-deal-with-ipv6-link-local-addresses"&gt;interesting&lt;/a&gt; &lt;a href="https://labs.ripe.net/Members/samaneh_tajalizadehkhoob_1/the-tale-of-website-popularity-rankings"&gt;posts&lt;/a&gt; from &lt;a href="https://labs.ripe.net/"&gt;RIPE Labs&lt;/a&gt; over the last few weeks as well. Although not a corporation, few organizations operate at that level and scale. You may also find some interesting sources in &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;the list of websites I use to keep up with current events&lt;/a&gt;, or &lt;a href="https://zacs.site/blog/my-evening-reads.html"&gt;the list of (mostly) independent shops whose RSS feeds I subscribe to&lt;/a&gt;.&lt;/p&gt;
 
 
             </description>

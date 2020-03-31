@@ -1,10 +1,9 @@
 Type: linkpost
 Title: Speeding up Linux disk encryption
 Link: https://blog.cloudflare.com/speeding-up-linux-disk-encryption/
-Pubdate: 2020/03/31 10:48:47
+Pubdate: 2020/03/31 18:25:23
 Author: Zac Szewczyk
 
 Ignat Korchagin posted a fantastic writeup on [speeding up Linux disk encryption](https://blog.cloudflare.com/speeding-up-linux-disk-encryption/) to Cloudflare's blog. The lengths that team went to in order to solve this problem are fascinating. Dan Luu hit the nail on the head [when he highlighted Cloudflare's as an example of a great corporate blog](https://danluu.com/corp-eng-blogs/).
 
-For those looking for more interesting reads, Dan highlighted a few other corporate engineering blogs in [his post](https://danluu.com/corp-eng-blogs/); start there. I have read [several](https://labs.ripe.net/Members/emileaben/the-debogonisation-of-2a10-12) [interesting](https://labs.ripe.net/Members/philip_homburg/whats-the-deal-with-ipv6-link-local-addresses
-) [posts](https://labs.ripe.net/Members/samaneh_tajalizadehkhoob_1/the-tale-of-website-popularity-rankings) from [RIPE Labs](https://labs.ripe.net/) over the last few weeks as well. Although not a corporation, few organizations operate at that level and scale. You may also find some interesting sources in [the list of websites I use to keep up with current events](My Morning Reads.txt), or [the list of (mostly) independent shops whose RSS feeds I subscribe to](My Evening Reads.txt).
+For those looking for more interesting reads, Dan highlighted a few other corporate engineering blogs in [his post](https://danluu.com/corp-eng-blogs/); start there. I have read [several](https://labs.ripe.net/Members/emileaben/the-debogonisation-of-2a10-12) [interesting](https://labs.ripe.net/Members/philip_homburg/whats-the-deal-with-ipv6-link-local-addresses) [posts](https://labs.ripe.net/Members/samaneh_tajalizadehkhoob_1/the-tale-of-website-popularity-rankings) from [RIPE Labs](https://labs.ripe.net/) over the last few weeks as well. Although not a corporation, few organizations operate at that level and scale. You may also find some interesting sources in [the list of websites I use to keep up with current events](My Morning Reads.txt), or [the list of (mostly) independent shops whose RSS feeds I subscribe to](My Evening Reads.txt).
