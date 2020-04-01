@@ -7,9 +7,18 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 31 Mar 2020 10:25:43 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 11:39:13 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>First Crack Release Notes, March 2020</title>
+            <link>https://zacs.site/blog/first-crack-release-notes-0320.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/first-crack-release-notes-0320.html</guid>
+            <pubDate>Wed, 01 Apr 2020 11:39:06 GMT</pubDate>
+            <description>
+                &lt;p&gt;In &lt;a href="https://zacs.site/blog/first-crack-release-notes-0220.html"&gt;last month&amp;#8217;s release notes&lt;/a&gt;, I talked about First Crack&amp;#8217;s rewrite: the things I set out to accomplish, the changes I made, and their performance costs. Although a simple fix later slashed First Crack&amp;#8217;s runtime, I waited to post the code until I could talk about a few things here.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Speeding up Linux disk encryption</title>
             <link>https://blog.cloudflare.com/speeding-up-linux-disk-encryption/</link>

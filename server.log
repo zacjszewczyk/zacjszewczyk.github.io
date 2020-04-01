@@ -1,8 +1,6 @@
-127.0.0.1 - - [30/Mar/2020 06:20:49] GET / HTTP/1.1 200 -
-127.0.0.1 - - [30/Mar/2020 06:20:49] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [30/Mar/2020 06:20:49] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [30/Mar/2020 06:20:53] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [30/Mar/2020 06:20:53] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [30/Mar/2020 06:20:54] GET /blog/revisiting-preparedness.html HTTP/1.1 200 -
-127.0.0.1 - - [30/Mar/2020 06:20:54] GET /assets/main.css HTTP/1.1 200 -
-- - - [30/3/2020 6:21:6] Graceful shutdown - -
+127.0.0.1 - - [01/Apr/2020 07:39:15] GET / HTTP/1.1 200 -
+127.0.0.1 - - [01/Apr/2020 07:39:15] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [01/Apr/2020 07:39:15] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [01/Apr/2020 07:39:18] GET /blog/first-crack-release-notes-0320.html HTTP/1.1 200 -
+127.0.0.1 - - [01/Apr/2020 07:39:19] GET /assets/main.css HTTP/1.1 200 -
+- - - [1/4/2020 7:39:43] Graceful shutdown - -
