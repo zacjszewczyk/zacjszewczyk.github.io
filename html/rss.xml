@@ -7,9 +7,18 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 01 Apr 2020 11:39:13 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 01:12:08 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Zero Trust</title>
+            <link>https://zacs.site/blog/zero-trust.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/zero-trust.html</guid>
+            <pubDate>Thu, 02 Apr 2020 13:12:01 GMT</pubDate>
+            <description>
+                &lt;p&gt;Most articles focus on the negative side of giving anyone the power to publish: in recent years, it has enabled massive disinformation campaigns so effective that even its own citizens now question Democratic underpinnings of the world&amp;#8217;s premiere superpower. In &lt;a href="https://stratechery.com/2020/zero-trust-information/"&gt;&lt;em&gt;Zero Trust Information&lt;/em&gt;&lt;/a&gt;, though, Ben Thompson argues that while this power did lead to an increase in misinformation, it also lead to the proliferation of much more valuable information, too. For proof, one need only look to the Seattle doctors who defied a government gag order to share their findings on COVID-19.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>First Crack Release Notes, March 2020</title>
             <link>https://zacs.site/blog/first-crack-release-notes-0320.html</link>
