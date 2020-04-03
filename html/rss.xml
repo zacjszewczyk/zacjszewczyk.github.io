@@ -7,9 +7,32 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 02 Apr 2020 01:12:08 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2020 12:37:49 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Move Fast &amp; Roll Your Own Crypto</title>
+            <link>https://theintercept.com/2020/04/03/zooms-encryption-is-not-suited-for-secrets-and-has-surprising-links-to-china-researchers-discover/)</link>
+            <guid isPermaLink='true'>https://theintercept.com/2020/04/03/zooms-encryption-is-not-suited-for-secrets-and-has-surprising-links-to-china-researchers-discover/)</guid>
+            <pubDate>Fri, 03 Apr 2020 12:37:38 GMT</pubDate>
+            <description>
+                &lt;p&gt;Micah Lee, writing for The Intercept, in &lt;a href="https://theintercept.com/2020/04/03/zooms-encryption-is-not-suited-for-secrets-and-has-surprising-links-to-china-researchers-discover/"&gt;&lt;em&gt;Zoom’s Encryption Is &amp;#8220;Not Suited for Secrets&amp;#8221; and Has Surprising Links To China, Researchers Discover&lt;/em&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;Some of the key management systems — 5 out of 73, in a Citizen Lab scan — seem to be located in China, with the rest in the United States. Interestingly, the Chinese servers are at least sometimes used for Zoom chats that have no nexus in China. ... The report points out that Zoom may be legally obligated to share encryption keys with Chinese authorities if the keys are generated on a key management server hosted in China.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This just makes an adversary&amp;#8217;s easy job even easier, though, thanks to the weak encryption scheme those keys facilitate:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;A security white paper from the company claims that Zoom meetings are protected using 256-bit AES keys, but the Citizen Lab researchers confirmed the keys in use are actually only 128-bit ... Furthermore, Zoom encrypts and decrypts with AES using an algorithm called Electronic Codebook (ECB) mode, &amp;#8216;which is well-understood to be a bad idea, because this mode of encryption preserves patterns in the input,&amp;#8217; according to the Citizen Lab researchers. In fact, ECB is considered the worst of AES&amp;#8217;s available modes.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Bill Marczak and John Scott-Railton&amp;#8217;s study, &lt;a href="https://citizenlab.ca/2020/04/move-fast-roll-your-own-crypto-a-quick-look-at-the-confidentiality-of-zoom-meetings/"&gt;&lt;em&gt;Move Fast &amp;#38; Roll Your Own Crypto&lt;/em&gt;&lt;/a&gt;, goes into more detail, and concludes with this key takeaway: &amp;#8220;As a result of these troubling security issues, we discourage the use of Zoom at this time for use cases that require strong privacy and confidentiality&amp;#8221;. Unfortunately, though, most of Zoom&amp;#8217;s competitors don&amp;#8217;t do much better.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>Zero Trust</title>
             <link>https://zacs.site/blog/zero-trust.html</link>
