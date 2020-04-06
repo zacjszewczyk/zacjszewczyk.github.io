@@ -7,9 +7,30 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 06 Apr 2020 11:14:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2020 05:00:49 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Pushing to Multiple Repos</title>
+            <link>https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos</link>
+            <guid isPermaLink='true'>https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos</guid>
+            <pubDate>Mon, 06 Apr 2020 17:00:25 GMT</pubDate>
+            <description>
+                &lt;p&gt;Full credit to Alex Armstrong and &lt;a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos"&gt;his helpful article&lt;/a&gt; for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these five lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.&lt;/p&gt;
+
+&lt;pre class='shell'&gt;
+git init
+git remote add origin {GitHub repo URL} # Get GitHub repo URL
+git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL
+git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL
+git add .; git commit -m "Initial commit."; git push -u origin master
+&lt;/pre&gt;
+
+&lt;p&gt;These simple commands make sure that for all my projects, I have a local copy, a local backup, a cloud backup, and two more off-site copies of all my work&amp;#160;&amp;#8212;&amp;#160;just in case.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>A Square Peg</title>
             <link>https://zacs.site/blog/a-square-peg.html</link>
@@ -1091,27 +1112,6 @@
             <pubDate>Sat, 07 Sep 2019 17:45:41 GMT</pubDate>
             <description>
                 &lt;p&gt;A very cool video on a very cool subject: importing one of the awesome adventure rigs available in other parts of the world, to the United States. Bryan Rogala does a nice job breaking this process down, and shows off Brett Wilhelm&amp;#8217;s neat Toyota Townace, too.&lt;/p&gt;
-
-
-            </description>
-        </item>
-        <item>
-            <title>Pushing to Multiple Repos</title>
-            <link>https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos</link>
-            <guid isPermaLink='true'>https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos</guid>
-            <pubDate>Fri, 06 Sep 2019 11:11:37 GMT</pubDate>
-            <description>
-                &lt;p&gt;Full credit to Alex Armstrong and &lt;a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos"&gt;his helpful article&lt;/a&gt; for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these five lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.&lt;/p&gt;
-
-&lt;pre class='shell'&gt;
-git init
-git remote add origin {GitHub repo URL} # Get GitHub repo URL
-git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL
-git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL
-git add .; git commit -m "Initial commit."; git push
-&lt;/pre&gt;
-
-&lt;p&gt;These simple commands make sure that for all my projects, I have a local copy, a local backup, a cloud backup, and two more off-site copies of all my work&amp;#160;&amp;#8212;&amp;#160;just in case.&lt;/p&gt;
 
 
             </description>

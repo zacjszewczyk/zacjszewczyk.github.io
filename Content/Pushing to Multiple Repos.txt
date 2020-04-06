@@ -11,7 +11,7 @@ git init
 git remote add origin {GitHub repo URL} # Get GitHub repo URL
 git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL
 git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL
-git add .; git commit -m "Initial commit."; git push
+git add .; git commit -m "Initial commit."; git push -u origin master
 ```
 
 These simple commands make sure that for all my projects, I have a local copy, a local backup, a cloud backup, and two more off-site copies of all my work--just in case.
