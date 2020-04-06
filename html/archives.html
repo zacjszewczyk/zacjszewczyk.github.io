@@ -39,14 +39,6 @@
         <main>
 <article>
 <h2 id='article_title'>
-<a class="original" href="/blog/rivians-real-edge.html">Rivian's Real Edge</a>
-</h2>
-<time id='article_time' datetime="2020-01-08 07:41:46-0400" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-01.html">01</a>/08 07:41:46 EST</time>
-<p>James Temple, writing for MIT Technology Review in <a href="https://www.technologyreview.com/s/614995/the-rivian-pickups-real-edge-over-teslas-cybertruck-isnt-its-battery/"><em>The Rivian pickup&#8217;s real edge over Tesla&#8217;s Cybertruck isn&#8217;t its battery</em></a>, emphasis mine: </p>
-<p><a class='read_more_link' href='/blog/rivians-real-edge.html'>Read more</a><span class='logo'>&#x24E9;</span></p>
-</article>
-<article>
-<h2 id='article_title'>
 <a class="linkpost" href="https://tonsky.me/blog/good-times-weak-men/">Good times create weak men</a>
 </h2>
 <time id='article_time' datetime="2020-01-07 07:04:48-0400" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-01.html">01</a>/07 07:04:48 EST</time>
@@ -681,6 +673,26 @@
 
 
 <p><a class='read_more_link' href='/blog/how-to-buy-and-import-a-rig.html'>Read more</a><span class='logo'>&#x24E9;</span></p>
+</article>
+<article>
+<h2 id='article_title'>
+<a class="linkpost" href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos">Pushing to Multiple Repos</a>
+</h2>
+<time id='article_time' datetime="2019-09-06 07:11:37-0400" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2019.html">2019</a>/<a href="/blog/2019-09.html">09</a>/06 07:11:37 EST</time>
+<p>Full credit to Alex Armstrong and <a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos">his helpful article</a> for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these five lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.</p>
+
+<pre class='shell'>
+git init
+git remote add origin {GitHub repo URL} # Get GitHub repo URL
+git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL
+git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL
+git add .; git commit -m "Initial commit."; git push -u origin master
+</pre>
+
+<p>These simple commands make sure that for all my projects, I have a local copy, a local backup, a cloud backup, and two more off-site copies of all my work&#160;&#8212;&#160;just in case.</p>
+
+
+<p><a class='read_more_link' href='/blog/pushing-to-multiple-repos.html'>Read more</a><span class='logo'>&#x24E9;</span></p>
 </article>
 <article>
 <h2 id='article_title'>
