@@ -7,9 +7,20 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 06 Apr 2020 05:01:30 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2020 02:02:08 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>How (some) good corporate engineering blogs are written</title>
+            <link>https://danluu.com/corp-eng-blogs/</link>
+            <guid isPermaLink='true'>https://danluu.com/corp-eng-blogs/</guid>
+            <pubDate>Wed, 08 Apr 2020 14:01:58 GMT</pubDate>
+            <description>
+                &lt;p&gt;Back in November of last year, &lt;a href="https://zacs.site/blog/how-to-encourage-a-blogging-culture.html"&gt;I linked to&lt;/a&gt; an interesting article by Noah Gibbs on &lt;a href="http://codefol.io/posts/encourage-a-blogging-culture-at-your-company/"&gt;how to encourage a blogging culture at your company&lt;/a&gt;. Where Noah focused more on the individual, Dan Luu&amp;#160;&amp;#8212;&amp;#160;in &lt;a href="https://danluu.com/corp-eng-blogs/"&gt;&lt;em&gt;How (some) good corporate engineering blogs are written&lt;/em&gt;&lt;/a&gt;&amp;#160;&amp;#8212;&amp;#160;looks at organizational factors that lead to successful corporate blogs. I encourage giving both a read. As I begin working toward a version of this at work, I found referring to both helpful.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>A Square Peg</title>
             <link>https://zacs.site/blog/a-square-peg.html</link>
