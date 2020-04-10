@@ -7,9 +7,31 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 08 Apr 2020 02:02:08 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 02:45:51 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>We're in for 2 months</title>
+            <link>https://foobuzz.github.io/covid19/</link>
+            <guid isPermaLink='true'>https://foobuzz.github.io/covid19/</guid>
+            <pubDate>Fri, 10 Apr 2020 14:45:05 GMT</pubDate>
+            <description>
+                &lt;p&gt;As the number of states with shelter-in-place orders nears 50, if you haven&amp;#8217;t &lt;a href="https://zacs.site/blog/revisiting-preparedness.html"&gt;run out of time yet&lt;/a&gt;, you will soon. Valentin &lt;a href="https://foobuzz.github.io/covid19/"&gt;makes the case that these orders will stand for at least two months&lt;/a&gt;, so prepare now&amp;#160;&amp;#8212;&amp;#160;if you still can.&lt;/p&gt;
+
+
+            </description>
+        </item>
+        <item>
+            <title>Soviets Lost in Space</title>
+            <link>https://www.vice.com/en_in/article/qjd5dm/judica-cordiglia-brothers-were-eavesdropping-soviet-space-radio-transmissions-cries-for-help-mystery</link>
+            <guid isPermaLink='true'>https://www.vice.com/en_in/article/qjd5dm/judica-cordiglia-brothers-were-eavesdropping-soviet-space-radio-transmissions-cries-for-help-mystery</guid>
+            <pubDate>Thu, 09 Apr 2020 13:15:26 GMT</pubDate>
+            <description>
+                &lt;p&gt;The only part of this story I find unbelievable is that anyone considers this outside the realm of possibility. Chilling.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>How (some) good corporate engineering blogs are written</title>
             <link>https://danluu.com/corp-eng-blogs/</link>
