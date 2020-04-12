@@ -1,21 +1,6 @@
-127.0.0.1 - - [12/Apr/2020 08:42:47] GET / HTTP/1.1 200 -
-127.0.0.1 - - [12/Apr/2020 08:42:47] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [12/Apr/2020 08:42:47] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:42:56] GET /assets/favicon.ico HTTP/1.1 404 -
-10.0.0.34 - - [12/Apr/2020 08:42:56] GET /assets/images/favicon.ico HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:42:56] GET /assets/favicon.ico HTTP/1.1 404 -
-10.0.0.34 - - [12/Apr/2020 08:42:59] GET /assets/favicon.ico HTTP/1.1 404 -
-10.0.0.34 - - [12/Apr/2020 08:42:59] GET /favicon.ico HTTP/1.1 404 -
-10.0.0.34 - - [12/Apr/2020 08:42:59] GET / HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:42:59] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:42:59] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:43:00] GET /blog.html HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:43:00] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:43:02] GET /archives.html HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:43:02] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:43:02] GET /assets/images/force_graph.png HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:43:26] GET /blog/dont-use-amazon-web-services.html HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:43:26] GET /assets/main.css HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:44:50] GET /blog/dont-use-amazon-web-services.html HTTP/1.1 200 -
-10.0.0.34 - - [12/Apr/2020 08:44:50] GET /assets/main.css HTTP/1.1 200 -
-- - - [12/4/2020 8:45:8] Graceful shutdown - -
+127.0.0.1 - - [12/Apr/2020 08:47:42] GET / HTTP/1.1 200 -
+127.0.0.1 - - [12/Apr/2020 08:47:42] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [12/Apr/2020 08:47:42] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [12/Apr/2020 08:47:49] GET /blog/git-home.html HTTP/1.1 200 -
+127.0.0.1 - - [12/Apr/2020 08:47:49] GET /assets/main.css HTTP/1.1 200 -
+- - - [12/4/2020 8:48:2] Graceful shutdown - -
