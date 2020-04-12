@@ -5,7 +5,7 @@
 
 body { /** Create grid layout **/
 	display: grid;
-	grid-template-columns: minmax(1%,1fr) minmax(auto, 55em) minmax(1%,1fr);
+	grid-template-columns: minmax(2%,1fr) minmax(auto, 55em) minmax(2%,1fr);
 	grid-template-rows: min-content 1fr auto;
 	grid-template-areas:
 		"nav nav nav"
