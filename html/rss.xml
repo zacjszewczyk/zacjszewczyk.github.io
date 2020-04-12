@@ -7,7 +7,7 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 10 Apr 2020 02:45:51 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 12:41:28 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -1136,13 +1136,13 @@
             <description>
                 &lt;p&gt;Full credit to Alex Armstrong and &lt;a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos"&gt;his helpful article&lt;/a&gt; for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these five lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.&lt;/p&gt;
 
-&lt;pre class='shell'&gt;
-git init
-git remote add origin {GitHub repo URL} # Get GitHub repo URL
-git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL
-git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL
-git add .; git commit -m "Initial commit."; git push -u origin master
-&lt;/pre&gt;
+&lt;div class='pre shell'&gt;
+&lt;span class='pre_line_wrap'&gt;git init&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;git remote add origin {GitHub repo URL} # Get GitHub repo URL&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;git add .; git commit -m "Initial commit."; git push -u origin master&lt;/span&gt;
+&lt;/div&gt;
 
 &lt;p&gt;These simple commands make sure that for all my projects, I have a local copy, a local backup, a cloud backup, and two more off-site copies of all my work&amp;#160;&amp;#8212;&amp;#160;just in case.&lt;/p&gt;
 
@@ -1678,35 +1678,35 @@ git add .; git commit -m "Initial commit."; git push -u origin master
             <description>
                 &lt;p&gt;I like Antonio&amp;#8217;s idea, a lot. As much as &lt;a href="https://zacs.site/blog/my-setup-2019.html"&gt;I try to keep my system stock&lt;/a&gt;, this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:&lt;/p&gt;
 
-&lt;pre&gt;
-$ alias gs="git status"
-$ alias gac="git add . &amp;&amp; git commit -m"
-$ alias gp="git push"
-&lt;/pre&gt;
+&lt;div class='pre'&gt;
+&lt;span class='pre_line_wrap'&gt;$ alias gs="git status"&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;$ alias gac="git add . &amp;&amp; git commit -m"&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;$ alias gp="git push"&lt;/span&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;a href="https://zacs.site/blog/my-setup-2019.html"&gt;I have talked about these aliases before&lt;/a&gt;; they make interacting with Git just a little bit easier. &lt;a href="https://bitsofco.de/git-aliases-for-lazy-developers/"&gt;Hat-tip to Ire Aderinokun for the idea&lt;/a&gt;.&lt;/p&gt;
 
-&lt;pre class='shell'&gt;
-alias gits="find ./ -name '.git' 2&gt; /dev/null | grep -v '.Trash'"
-&lt;/pre&gt;
+&lt;div class='pre shell'&gt;
+&lt;span class='pre_line_wrap'&gt;alias gits="find ./ -name '.git' 2&amp;gt; /dev/null | grep -v '.Trash'"&lt;/span&gt;
+&lt;/div&gt;
 
 &lt;p&gt;This neat snippet searches the current directory, and all sub directories, for Git repos. I have a lot of coding projects &lt;a href="https://zacs.site/projects.html"&gt;in the works&lt;/a&gt;, and this helps me keep track of them.&lt;/p&gt;
 
-&lt;pre class='shell'&gt;
-alias r="source ~/.bash_profile"
-&lt;/pre&gt;
+&lt;div class='pre shell'&gt;
+&lt;span class='pre_line_wrap'&gt;alias r="source ~/.bash_profile"&lt;/span&gt;
+&lt;/div&gt;
 
 &lt;p&gt;This lets me refresh my bash profile whenever I make a change&amp;#160;&amp;#8212;&amp;#160;for example, adding a new alias or script. Simple, and handy.&lt;/p&gt;
 
-&lt;pre class='shell'&gt;
-alias search="grep -rnw './' -e "
-&lt;/pre&gt;
+&lt;div class='pre shell'&gt;
+&lt;span class='pre_line_wrap'&gt;alias search="grep -rnw './' -e "&lt;/span&gt;
+&lt;/div&gt;
 
 &lt;p&gt;This alias gives me search functionality in the terminal, so I can avoid opening up Finder for most simple queries.&lt;/p&gt;
 
-&lt;pre class='shell'&gt;
-alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-&lt;/pre&gt;
+&lt;div class='pre shell'&gt;
+&lt;span class='pre_line_wrap'&gt;alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"&lt;/span&gt;
+&lt;/div&gt;
 
 &lt;p&gt;This neat little command displays the current directory contents, and all its sub-directories, as a tree. I used this to create the tree in &lt;a href="https://zacs.site/projects.html#firstCrack"&gt;the First Crack readme file&lt;/a&gt;. &lt;a href="http://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/"&gt;Hat-tip to OS X Daily for this one&lt;/a&gt;.&lt;/p&gt;
 

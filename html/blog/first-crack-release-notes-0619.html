@@ -82,16 +82,16 @@
 
 <p>Speaking of the new Markdown parser, I would also like to release it as its own project in July. Usage would look like this:</p>
 
-<pre>
-$ python3
->>> import Markdown
->>> md = Markdown()
->>>
->>> raw_markdown = "Hi, **this** is a sentence with a [link](https://google.com) to *Google*."
->>>
->>> print(md.html(raw_markdown))
-Hi, <strong>this</strong> is a sentence with a <a href="https://google.com">link</a> to <em>Google</em>.
-</pre>
+<div class='pre'>
+<span class='pre_line_wrap'>$ python3</span>
+<span class='pre_line_wrap'>&gt;&gt;&gt; import Markdown</span>
+<span class='pre_line_wrap'>&gt;&gt;&gt; md = Markdown()</span>
+<span class='pre_line_wrap'>&gt;&gt;&gt;</span>
+<span class='pre_line_wrap'>&gt;&gt;&gt; raw_markdown = "Hi, **this** is a sentence with a [link](https://google.com) to *Google*."</span>
+<span class='pre_line_wrap'>&gt;&gt;&gt;</span>
+<span class='pre_line_wrap'>&gt;&gt;&gt; print(md.html(raw_markdown))</span>
+<span class='pre_line_wrap'>Hi, &lt;strong&gt;this&lt;/strong&gt; is a sentence with a &lt;a href="https://google.com"&gt;link&lt;/a&gt; to &lt;em&gt;Google&lt;/em&gt;.</span>
+</div>
 
 <p>Before I can do that, though, I have a few bugs to work out with the Markdown implementation, and I would like to enable parsing multi-line strings and entire files at once. </p>
 

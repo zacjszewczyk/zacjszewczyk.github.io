@@ -38,13 +38,13 @@ Bad actors use many websites for their sleazy purposes, but many people have gon
 
 If you want to download Steven's code, run the scripts, and set your system up on your own, go for it. On a Mac, though, you can just open Terminal, copy and paste the snippet below, hit Enter, and input your password. The snippet backs up your `hosts` file to `hosts.bak`, downloads Steven's list, and tells your computer to read this new `hosts` file from then on.
 
-```
+``` shell
 sudo cp /etc/hosts /etc/hosts.bak; sudo curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts -o /etc/hosts; dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 ```
 
 On Windows, open Notepad, open or create the file at `C:\Windows\System32\Drivers\etc\hosts`, copy and paste everything on [this page](https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts) into Notepad, and save it. Next, click the Start button, type `cmd`, right-click Command Prompt and choose "Run as Administrator", then run the command below to tell your computer to read this new hosts file from now on.
 
-```
+``` cmd
 ipconfig /flushdns
 ```
 
@@ -68,13 +68,13 @@ All traffic from the home network out to the internet, and from the internet int
 
 You must login to your router to change its settings. If you have never done this before, you need to find it on your network. On a Mac, use `netstat`. The `grep`, `head`, and `awk` commands after it strip out the things you do not need for this step.
 
-```
+``` shell
 netstat -nr | grep default | head -1 | awk -F " " '{print "Router IP: ",$2}'
 ```
 
 On a Windows machine, use `ipconfig`. `findstr` pulls out the line with the IP address for the default gateway.
 
-```
+``` cmd
 ipconfig /all | findstr "Default Gateway"
 ```
 
@@ -112,11 +112,11 @@ Every Internet-connected device has a unique identifier burned into its hardware
 
 On a Unix machine, use the first snippet to find your MAC address; on a Windows computer, use the second. Once found, enter the MAC address on your router, make sure you will **allow** this machine rather than **deny** it, and save the change.
 
-```
+``` shell
 ifconfig | grep ether | head -1 | awk -F " " '{print "MAC address: ",$2}'
 ```
 
-```
+``` cmd
 ipconfig /all | findstr "Physical"
 ```
 

@@ -48,33 +48,33 @@
 
 <p>Check out the code that generated it, below:</p>
 
-<pre>
-#.adversary: visual=rhomb fill=red
-#.cloud: visual=database
-#.router: visual=ellipse
-
-[<adversary>ENY]->[<cloud>Gray;space]
-[<cloud>Gray;space]<->firewall[\|\|\|\|]
-[\|\|\|\|]<->100.200.0.0/16[<router>✥]
-
-[<router>✥]<->100.200.1.0/24[Subnet 1;↔]
-[Subnet 1;↔]<->[M1_1]
-[Subnet 1;↔]<->[M2_1]
-[Subnet 1;↔]<->[M3_1]
-[Subnet 1;↔]<->[M4_1]
-
-[<router>✥]<->100.200.2.0/24[Subnet 2;↔]
-[Subnet 2;↔]<->[M1_2]
-[Subnet 2;↔]<->[M2_2]
-[Subnet 2;↔]<->[M3_2]
-[Subnet 2;↔]<->[M4_2]
-
-[<router>✥]<->100.200.3.0/24[DMZ;↔]
-[DMZ;↔]<->[Server]
-[DMZ;↔]<->[Plex]
-[DMZ;↔]<->[Pi]
-[DMZ;↔]<->[Pi2]
-</pre>
+<div class='pre'>
+<span class='pre_line_wrap'>#.adversary: visual=rhomb fill=red</span>
+<span class='pre_line_wrap'>#.cloud: visual=database</span>
+<span class='pre_line_wrap'>#.router: visual=ellipse</span>
+<span class='pre_line_wrap'></span>
+<span class='pre_line_wrap'>[&lt;adversary&gt;ENY]-&gt;[&lt;cloud&gt;Gray;space]</span>
+<span class='pre_line_wrap'>[&lt;cloud&gt;Gray;space]&lt;-&gt;firewall[\|\|\|\|]</span>
+<span class='pre_line_wrap'>[\|\|\|\|]&lt;-&gt;100.200.0.0/16[&lt;router&gt;✥]</span>
+<span class='pre_line_wrap'></span>
+<span class='pre_line_wrap'>[&lt;router&gt;✥]&lt;-&gt;100.200.1.0/24[Subnet 1;↔]</span>
+<span class='pre_line_wrap'>[Subnet 1;↔]&lt;-&gt;[M1_1]</span>
+<span class='pre_line_wrap'>[Subnet 1;↔]&lt;-&gt;[M2_1]</span>
+<span class='pre_line_wrap'>[Subnet 1;↔]&lt;-&gt;[M3_1]</span>
+<span class='pre_line_wrap'>[Subnet 1;↔]&lt;-&gt;[M4_1]</span>
+<span class='pre_line_wrap'></span>
+<span class='pre_line_wrap'>[&lt;router&gt;✥]&lt;-&gt;100.200.2.0/24[Subnet 2;↔]</span>
+<span class='pre_line_wrap'>[Subnet 2;↔]&lt;-&gt;[M1_2]</span>
+<span class='pre_line_wrap'>[Subnet 2;↔]&lt;-&gt;[M2_2]</span>
+<span class='pre_line_wrap'>[Subnet 2;↔]&lt;-&gt;[M3_2]</span>
+<span class='pre_line_wrap'>[Subnet 2;↔]&lt;-&gt;[M4_2]</span>
+<span class='pre_line_wrap'></span>
+<span class='pre_line_wrap'>[&lt;router&gt;✥]&lt;-&gt;100.200.3.0/24[DMZ;↔]</span>
+<span class='pre_line_wrap'>[DMZ;↔]&lt;-&gt;[Server]</span>
+<span class='pre_line_wrap'>[DMZ;↔]&lt;-&gt;[Plex]</span>
+<span class='pre_line_wrap'>[DMZ;↔]&lt;-&gt;[Pi]</span>
+<span class='pre_line_wrap'>[DMZ;↔]&lt;-&gt;[Pi2]</span>
+</div>
 
 <p>Most people use PowerPoint for simple network diagrams, and Visio Studio for more complex ones, but I liked using nomnoml more than either of those. Next time I need to mock up something simple, I&#8217;ll go there first.</p>
 

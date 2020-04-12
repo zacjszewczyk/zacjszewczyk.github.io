@@ -44,11 +44,11 @@
 <time id='article_time' datetime="2019-05-03 12:24:59-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2019.html">2019</a>/<a href="/blog/2019-05.html">05</a>/03 12:24:59 EST</time>
 <p>I had a hard time getting Sublime Text to work with <a href="http://marked2app.com/">Marked 2</a>, back when I used Brett&#8217;s app to proof my writing. Dan Sturm posted <a href="https://doingthatwrong.com/home/2012/5/21/launching-marked-from-sublime-text-2.html">a simple snippet</a> that launched it using a build system, that failed if Marked came from the App Store. Here&#8217;s the fix:</p>
 
-<pre>
-{
-> "shell_cmd": "open -a \"/Applications/Marked 2.app\" \"$file\""
-}
-</pre>
+<div class='pre'>
+<span class='pre_line_wrap'>{</span>
+<span class='pre_line_wrap'>&gt; "shell_cmd": "open -a \"/Applications/Marked 2.app\" \"$file\""</span>
+<span class='pre_line_wrap'>}</span>
+</div>
 
 <p>Click the &#8220;Tools&#8221; toolbar menu, scroll down to &#8220;Build System&#8221;, and click &#8220;New Build System...&#8221;. Copy and paste the snippet above, then save the file. If you have &#8220;Build System&#8221; set to &#8220;Automatic&#8221;, Sublime Text will now open any file without a specific build system in Marked.</p>
 

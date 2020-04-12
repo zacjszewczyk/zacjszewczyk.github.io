@@ -90,9 +90,9 @@
 
 <p>I also use <a href="https://github.com/tmux/tmux">tmux</a>. I have three Terminal windows open on a normal day: one to commit changes to First Crack, a second for managing version control as I write, and a third for miscellaneous tasks while I work. tmux adds panes to a single Terminal window, all with their own bash process. In practice, this lets me take three windows and condense them into a single one. Crafting the command to create that environment took <a href="https://stackoverflow.com/a/40009032">a bit of work</a>, but I figured it out. Now I store it in my <code>.bash_profile</code> file, which creates this environment every time I type in the letter <code>t</code>. The snippet below shows a more complex, five pane interface I used for an old development and writing environment:</p>
 
-<pre>
-$ alias t="tmux new-session \; split-window -v \; select-pane -t 0 \; split-window -h \; select-pane -t 2 \; send-keys 'cd /Website' C-m \; send-keys './start_server' C-m \; split-window -h \; send-keys 'cd /Proofer' C-m \; send-keys 'gs ' C-m \; split-window -h \; send-keys 'cd /GitBackup' C-m \; send-keys 'gs' C-m \; select-pane -t 0 \; send-keys 'cd /Standalone; gs' C-m \; select-pane -t 1 \; send-keys 'cd /Website/Articles; gs' C-m \;"
-</pre>
+<div class='pre'>
+<span class='pre_line_wrap'>$ alias t="tmux new-session \; split-window -v \; select-pane -t 0 \; split-window -h \; select-pane -t 2 \; send-keys 'cd /Website' C-m \; send-keys './start_server' C-m \; split-window -h \; send-keys 'cd /Proofer' C-m \; send-keys 'gs ' C-m \; split-window -h \; send-keys 'cd /GitBackup' C-m \; send-keys 'gs' C-m \; select-pane -t 0 \; send-keys 'cd /Standalone; gs' C-m \; select-pane -t 1 \; send-keys 'cd /Website/Articles; gs' C-m \;"</span>
+</div>
 
 <p>This gave me a five pane Terminal window, started the Node.js server, and checked the git repositories for changes to First Crack, the site&#8217;s content, and the Proofer and GitBackup code bases. From there I can start working. It also helped <a href="https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/">to turn on tmux&#8217;s mouse mode</a>, and create a second alias to turn everything off: <code>alias kt=&#8220;tmux kill-server&#8221;</code>. I also find it helpful to have <a href="http://teamviewer.com/">TeamViewer</a> Host installed, just in case I need GUI access to my server.</p>
 
