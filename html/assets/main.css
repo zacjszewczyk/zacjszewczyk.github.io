@@ -151,12 +151,36 @@ p {
 	margin: 1em 0;
 	line-height: 200%;
 }
-pre, code {
+.pre, code {
 	background-color: #F1F1F1;
 	font-family: "Courier New";
 	overflow: scroll;
+	white-space: nowrap;
 	border-radius: 0.5em;
 	padding: 1em;
+}
+.pre {
+    counter-reset: line;
+}
+.pre + .pre {
+	margin-top: 1em;
+}
+.pre_line_wrap {
+	display: block;
+	counter-increment: line;
+}
+.pre_line_wrap:before {
+    content: counter(line) "| ";
+    -webkit-user-select: none;
+}
+.shell .pre_line_wrap:before {
+	content: counter(line) "| $ ";
+}
+.python .pre_line_wrap:before {
+	content: counter(line) "| >>> ";
+}
+.cmd .pre_line_wrap:before {
+	content: counter(line) "| > ";
 }
 code {
 	padding: 0 .1em;
@@ -193,7 +217,7 @@ footer p {
 	body, nav, nav a, main, #lg, #rg, footer { /* Brown background for everything */
 		background-color: #2A1A0F;
 	}
-	pre, code { /* Light brown background for pre and code elements */
+	.pre, code { /* Light brown background for pre and code elements */
 		background-color: #422918;
 	}
 	a { /* Invert link / link highlight color and style */
