@@ -7,7 +7,7 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 12 Apr 2020 12:41:28 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 12:47:11 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -1678,10 +1678,10 @@
             <description>
                 &lt;p&gt;I like Antonio&amp;#8217;s idea, a lot. As much as &lt;a href="https://zacs.site/blog/my-setup-2019.html"&gt;I try to keep my system stock&lt;/a&gt;, this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:&lt;/p&gt;
 
-&lt;div class='pre'&gt;
-&lt;span class='pre_line_wrap'&gt;$ alias gs="git status"&lt;/span&gt;
-&lt;span class='pre_line_wrap'&gt;$ alias gac="git add . &amp;&amp; git commit -m"&lt;/span&gt;
-&lt;span class='pre_line_wrap'&gt;$ alias gp="git push"&lt;/span&gt;
+&lt;div class='pre shell'&gt;
+&lt;span class='pre_line_wrap'&gt;alias gs="git status"&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;alias gac="git add . &amp;&amp; git commit -m"&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;alias gp="git push"&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;p&gt;&lt;a href="https://zacs.site/blog/my-setup-2019.html"&gt;I have talked about these aliases before&lt;/a&gt;; they make interacting with Git just a little bit easier. &lt;a href="https://bitsofco.de/git-aliases-for-lazy-developers/"&gt;Hat-tip to Ire Aderinokun for the idea&lt;/a&gt;.&lt;/p&gt;
