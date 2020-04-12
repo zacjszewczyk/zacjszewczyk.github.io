@@ -46,6 +46,7 @@ footer { /** Assign footer to third row **/
 	}
 	nav a { /* Space nav elements */
 		padding: 0.1em;
+		margin: 0 .5em;
 	}
 	footer p { /* Increase footer line spacing */
 		line-height: 200% !important;
