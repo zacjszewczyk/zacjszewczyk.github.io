@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="Mozilla's [mistakes](https://drewdevault.com/2017/12/16/Firefox-is-on-a-slippery-slope.html)--although [concerning](https://unixsheikh.com/articles/mozilla-is-becoming-evil-be-careful-with-firefox.html)--worry me less than Google's methodical Internet takeover. Indulge me while I bring the uninformed up to speed: after eviscerating its competitors, over half the Internet now uses Chrome. This dominance gives its creator the power to force sweeping change across this decentralized system: although superficially optional, failure to comply means longer load times, lower search ranking, and lost revenue. Over the last few years in particular, the company has shown an increased willingness to wield that power with more and more aggressive mandates. Publishers who do not expose their content through Accelerated Mobile Pages [lose viewers and income](https://medium.com/the-set-list/google-amp-a-70-drop-in-our-conversion-rate-35fe3cb69c59). Users who prefer other browsers, [perhaps](https://unixsheikh.com/articles/is-google-evil.html) [because they value their privacy](https://blog.cryptographyengineering.com/2018/09/23/why-im-leaving-chrome/), either [cannot access many of Google's popular services, or have to live with a degraded user experience](https://www.theverge.com/2018/1/4/16805216/google-chrome-only-sites-internet-explorer-6-web-standards). It all leaves a bad taste in my mouth. So while I find Mozilla's mistakes concerning, I like the thought of supporting Chrome even less, so I decided to give [Firefox](https://www.mozilla.org/en-US/firefox/) another try.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="Custom Search Engines in Firefox - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>Custom Search Engines in Firefox - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/custom-search-engines-in-firefox.html">Custom Search Engines in Firefox</a>
+</h2>
+<time id='article_time' datetime="2020-04-13 08:18:17-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-04.html">04</a>/13 08:18:17 EST</time>
+<p>Mozilla&#8217;s <a href="https://drewdevault.com/2017/12/16/Firefox-is-on-a-slippery-slope.html">mistakes</a>&#160;&#8212;&#160;although <a href="https://unixsheikh.com/articles/mozilla-is-becoming-evil-be-careful-with-firefox.html">concerning</a>&#160;&#8212;&#160;worry me less than Google&#8217;s methodical Internet takeover. Indulge me while I bring the uninformed up to speed: after eviscerating its competitors, over half the Internet now uses Chrome. This dominance gives its creator the power to force sweeping change across this decentralized system: although superficially optional, failure to comply means longer load times, lower search ranking, and lost revenue. Over the last few years in particular, the company has shown an increased willingness to wield that power with more and more aggressive mandates. Publishers who do not expose their content through Accelerated Mobile Pages <a href="https://medium.com/the-set-list/google-amp-a-70-drop-in-our-conversion-rate-35fe3cb69c59">lose viewers and income</a>. Users who prefer other browsers, <a href="https://unixsheikh.com/articles/is-google-evil.html">perhaps</a> <a href="https://blog.cryptographyengineering.com/2018/09/23/why-im-leaving-chrome/">because they value their privacy</a>, either <a href="https://www.theverge.com/2018/1/4/16805216/google-chrome-only-sites-internet-explorer-6-web-standards">cannot access many of Google&#8217;s popular services, or have to live with a degraded user experience</a>. It all leaves a bad taste in my mouth. So while I find Mozilla&#8217;s mistakes concerning, I like the thought of supporting Chrome even less, so I decided to give <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a> another try.</p>
+
+<p>Back in the Bad Old Days, <a href="https://eev.ee/blog/2020/02/01/old-css-new-css/">under Internet Explorer&#8217;s malevolent rule</a>, I used Firefox. It did not take long for me to switch to Chrome, though, thanks to much better performance and all the screen real estate it saved with that snazzy new tab bar. I spent the next decade using Chrome until Google&#8217;s strategy became too blatant to ignore, at which point I switched. Aside from a lack of custom search engines, the switch has gone well; this shortcoming, though, has proven a far greater obstacle to adopting Firefox than I expected.</p>
+
+<p>In Chrome, my custom &#8220;search engines&#8221; make the mundane, boring parts of my work just a little bit faster. I can type &#8220;cal&#8221; in the address bar, for example, and know that hitting enter will always take me to my Google calendar. Check out the full list, below:</p>
+
+<ul>
+    <li><strong>cal</strong>: takes me to my Google calendar.</li>
+<li><strong>sheets</strong>: takes me to Google Sheets.</li>
+<li><strong>slides</strong>: takes me to Google Slides.</li>
+<li><strong>docs</strong>: takes me to Google Docs.</li>
+<li><strong>drive</strong>: takes me to Google Drive.</li>
+<li><strong>m</strong>: takes me to Gmail.</li>
+<li><strong>def</strong> <em>word</em>: searches Google for the definition of <em>word</em>.</li>
+<li><strong>thes</strong> <em>word</em>: searches Thesaurus.com for synonyms and antonyms for <em>word</em>.</li>
+<li><strong>proofer</strong>: takes me to <a href="/projects.html#proofer">Proofer&#8217;s</a> output file.</li>
+<li><strong>cfb</strong>: takes me to the browser settings page.</li>
+<li><strong>cfg</strong>: takes me to the custom search engines settings page.</li>
+</ul>
+
+<p>I tried to recreate a similar workflow in Firefox, but its <a href="https://addons.mozilla.org/en-US/firefox/search/?category=search-tools&sort=recommended%2Cusers&type=extension">one-click search engines</a> seemed to support this on a site-by-site basis. Last week, though, I stumbled across <a href="https://stackoverflow.com/a/30309618">an old Stack Overflow post</a> that had the answer. Check out <a href="https://stackoverflow.com/a/30309618">lilnfeng&#8217;s post</a> for directions, or follow the steps below.</p>
+
+<p>If you want to create a shortcut <strong>cal</strong> to Google Calendar, open the page and create a new bookmark for it. I like to keep these &#8220;search engines&#8221; in a folder of their own. Next, open the Library window via the &#8220;Bookmarks&#8221; and &#8220;Show All Bookmarks&#8221; menu items. Find the entry you just created, highlight it, and add <code>cal</code> to the keyword field. Now, whenever you enter this keyword in the address bar, just hit enter to get to <a href="https://calendar.google.com/calendar/r">https://calendar.google.com/calendar/r</a>.</p>
+
+<p>If you want to use a keyword like <strong>thes</strong> <em>word</em> to search for synonyms and antonyms of <em>word</em> at <a href="https://www.thesaurus.com/">Thesaurus.com</a>, start by going to the site and searching for &#8220;hi&#8221;. Create a new bookmark for the results page and assign it a keyword as in the guide above, but swap &#8220;hi&#8221; in the Location field with <code>%s</code>. Firefox will now replace <code>%s</code> with whatever you type after <strong>thes</strong> in the address bar.</p>
+
+<br />
+
+<p>This may seem like a minor thing, but I believe in automating the boring parts of my work so that I can spend more time doing the interesting ones. These simple shortcuts help me achieve this.</p>
+
+
+</article>
+<p>
+<a href="/blog/custom-search-engines-in-firefox.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2020 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>
