@@ -7,9 +7,22 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 13 Apr 2020 12:18:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2020 12:59:32 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Why Having a Full Post RSS Feed is a Good Idea</title>
+            <link>https://kevq.uk/why-having-a-full-post-rss-feed-is-a-good-idea/</link>
+            <guid isPermaLink='true'>https://kevq.uk/why-having-a-full-post-rss-feed-is-a-good-idea/</guid>
+            <pubDate>Wed, 15 Apr 2020 12:59:09 GMT</pubDate>
+            <description>
+                &lt;p&gt;I agree with Kev, that readers should have the ability to view my work in whatever format they please, but I still truncate the posts in my RSS feed. Here&amp;#8217;s why:&lt;/p&gt;
+
+&lt;p&gt;Whenever I find a new &lt;a href="https://zacs.site/blog/my-evening-reads.html"&gt;writer&lt;/a&gt;, I go through everything they have ever written&amp;#160;&amp;#8212;&amp;#160;turns out, good writers write good things often; this helps me find great works from their past. RSS feeds with, say, the site&amp;#8217;s ten most recent posts make this much harder than ones with every article in them, so when &lt;a href="https://zacs.site/blog/before-now-and-future.html"&gt;I restarted this site&lt;/a&gt;, I took the latter route. Over a thousand posts would make my feed a hefty __ MB, though, so truncating the individual posts allowed me to strike a nice balance between the two.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>Custom Search Engines in Firefox</title>
             <link>https://zacs.site/blog/custom-search-engines-in-firefox.html</link>
