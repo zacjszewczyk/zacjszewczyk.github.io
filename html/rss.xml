@@ -7,9 +7,20 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 15 Apr 2020 12:59:32 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 12:05:45 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>How to Edit Your Own Writing</title>
+            <link>https://www.nytimes.com/2020/04/07/smarter-living/how-to-edit-your-own-writing.html</link>
+            <guid isPermaLink='true'>https://www.nytimes.com/2020/04/07/smarter-living/how-to-edit-your-own-writing.html</guid>
+            <pubDate>Thu, 16 Apr 2020 12:05:35 GMT</pubDate>
+            <description>
+                &lt;p&gt;I have an innate distrust of all writing advice that seem to come from a large organization. I blame academia, for all those years I spent years reading and writing the most rigid, boring prose known to man. I &lt;a href="https://zacs.site/blog/good-writing.html"&gt;prefer&lt;/a&gt; advice &lt;a href="https://zacs.site/blog/writing-turn-offs.html"&gt;from&lt;/a&gt; actual &lt;a href="https://zacs.site/blog/tbt-writing-vs-writing.html"&gt;writers&lt;/a&gt;&amp;#160;&amp;#8212;&amp;#160;and that&amp;#8217;s what I found in Harry Guinness&amp;#8217;s recent article for The New York Times, &lt;a href="https://www.nytimes.com/2020/04/07/smarter-living/how-to-edit-your-own-writing.html"&gt;&lt;em&gt;How to Edit Your own Writing&lt;/em&gt;&lt;/a&gt;. He offers some great advice, and makes some excellent book recommendations. To add to that list, I also recommend William Zinsser&amp;#8217;s &lt;em&gt;On Writing Well&lt;/em&gt;, and Stephen King&amp;#8217;s &lt;em&gt;On Writing&lt;/em&gt;: Harry&amp;#8217;s books focus on the mechanics, while these concern themselves with the craft.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>Why Having a Full Post RSS Feed is a Good Idea</title>
             <link>https://kevq.uk/why-having-a-full-post-rss-feed-is-a-good-idea/</link>

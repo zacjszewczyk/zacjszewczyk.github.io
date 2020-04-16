@@ -1,11 +1,10 @@
-127.0.0.1 - - [15/Apr/2020 08:59:33] GET / HTTP/1.1 200 -
-127.0.0.1 - - [15/Apr/2020 08:59:33] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [15/Apr/2020 08:59:33] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [15/Apr/2020 08:59:34] GET /assets/images/favicon.ico HTTP/1.1 200 -
-127.0.0.1 - - [15/Apr/2020 08:59:34] GET /assets/images/favicon_192.ico HTTP/1.1 200 -
-127.0.0.1 - - [15/Apr/2020 08:59:34] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [15/Apr/2020 08:59:35] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [15/Apr/2020 08:59:35] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [15/Apr/2020 08:59:36] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [15/Apr/2020 08:59:36] GET /assets/images/favicon.ico HTTP/1.1 200 -
-- - - [15/4/2020 8:59:41] Graceful shutdown - -
+127.0.0.1 - - [16/Apr/2020 08:05:49] GET / HTTP/1.1 200 -
+127.0.0.1 - - [16/Apr/2020 08:05:49] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [16/Apr/2020 08:05:49] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [16/Apr/2020 08:05:52] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [16/Apr/2020 08:05:52] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [16/Apr/2020 08:05:54] GET /blog/how-to-edit-your-own-writing.html HTTP/1.1 200 -
+127.0.0.1 - - [16/Apr/2020 08:05:54] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [16/Apr/2020 08:05:54] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+127.0.0.1 - - [16/Apr/2020 08:05:54] GET /assets/images/favicon.ico HTTP/1.1 200 -
+- - - [16/4/2020 8:6:7] Graceful shutdown - -
