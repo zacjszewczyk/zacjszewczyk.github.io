@@ -7,9 +7,18 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 16 Apr 2020 12:05:45 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2020 10:49:48 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Learn C, but Don't Use It</title>
+            <link>https://zacs.site/blog/learn-c.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/learn-c.html</guid>
+            <pubDate>Fri, 17 Apr 2020 10:49:32 GMT</pubDate>
+            <description>
+                &lt;p&gt;Steve and I came up hearing the same refrain: &amp;#8220;Learn C, it&amp;#8217;ll make you a good programmer&amp;#160;&amp;#8212;&amp;#160;it&amp;#8217;s how the computer works behind the scenes.&amp;#8221; As he points out in his &lt;a href="https://words.steveklabnik.com/should-you-learn-c-to-learn-how-the-computer-works"&gt;three&lt;/a&gt; &lt;a href="https://words.steveklabnik.com/c-is-not-how-the-computer-works-can-lead-to-inefficient-code"&gt;part&lt;/a&gt; &lt;a href="https://words.steveklabnik.com/c-is-how-the-computer-works-is-a-dangerous-mindset-for-c-programmers"&gt;series&lt;/a&gt;, though, using C just means having a thinner abstraction layer between your code and the hardware on which it runs. That layer still exists. &lt;a href="https://zacs.site/blog/good-times-create-weak-men.html"&gt;I do believe new developers should learn to work in this environment&lt;/a&gt;: understanding the code that underlies usable, high-level languages like Python will help you write better Python for the same reason that understanding assembly will help you write better C; I do not believe they should use it, though, and here&amp;#8217;s why:&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>How to Edit Your Own Writing</title>
             <link>https://www.nytimes.com/2020/04/07/smarter-living/how-to-edit-your-own-writing.html</link>

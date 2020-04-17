@@ -1,0 +1,15 @@
+Type: original
+Title: Learn C, but Don't Use It
+Link: learn-c.html
+Pubdate: 2020/04/17 06:49:32
+Author: Zac Szewczyk
+
+Steve and I came up hearing the same refrain: "Learn C, it'll make you a good programmer--it's how the computer works behind the scenes." As he points out in his [three](https://words.steveklabnik.com/should-you-learn-c-to-learn-how-the-computer-works) [part](https://words.steveklabnik.com/c-is-not-how-the-computer-works-can-lead-to-inefficient-code) [series](https://words.steveklabnik.com/c-is-how-the-computer-works-is-a-dangerous-mindset-for-c-programmers), though, using C just means having a thinner abstraction layer between your code and the hardware on which it runs. That layer still exists. [I do believe new developers should learn to work in this environment](Good Times Create Weak Men.txt): understanding the code that underlies usable, high-level languages like Python will help you write better Python for the same reason that understanding assembly will help you write better C; I do not believe they should use it, though, and here's why:
+
+Choosing between languages like C and Python should come down to the granularity of control the project demands. C's manual memory management will just take away from time spent building real headline features; if you have to do it, and tools like [`struct`](https://docs.python.org/3/library/struct.html) and `del` can't get the job done, explore your options--but most people don't, and the few that must seldom take full advantage of even these tools, let alone Python's lesser-known low-level libraries, before jumping ship. Even in high-level languages, [you can do a lot](Linear Python.txt) to [optimize your code](First Crack Release Notes 0320.txt). **Do that first**.
+
+Frederick Brooks Jr shared a similar opinion in [*No Silver Bullet*](http://worrydream.com/refs/Brooks-NoSilverBullet.pdf):
+
+> "What does a high-level language accomplish? It frees a program from much of its accidental complexity. An abstract program consists of conceptual constructs: operations, data types, sequences, and communication. The concrete machine program is concerned with bits, registers, conditions, branches, channels, disks, and such. To the extent that the high-level language embodies the constructs wanted in the abstract program and avoids all lower ones, it eliminates a whole level of complexity that was never inherent in the program at all."
+
+I'll close with a one-liner for those in search of succinct advice: write Python until you can't anymore, then get better at Python; if you still can't solve your problem, write C for as narrow a use case as possible, then call the method from your Python script.
