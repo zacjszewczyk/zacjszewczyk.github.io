@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="As I read Tomas Petricek's [*On architecture, urban planning and software construction*](http://tomasp.net/blog/2020/cities-and-programming/), it reminded me of an interesting point Dan Luu made in [*How (some) good corporate engineering blogs are written*](https://danluu.com/corp-eng-blogs/): &#8243;There's a dearth of real, in-depth, technical writing, which makes any half decent, honest, public writing about technical work interesting.&#8243; Tomas' piece reminded me of this not because it lacks substance, but rather for the opposite reason: his work stands out as a prime example of substantial technical writing. I recommend reading [the entire piece](http://tomasp.net/blog/2020/cities-and-programming/), but I will highlight a few interesting points here.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="On architecture, urban planning and software construction - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>On architecture, urban planning and software construction - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="linkpost" href="http://tomasp.net/blog/2020/cities-and-programming/">On architecture, urban planning and software construction</a>
+</h2>
+<time id='article_time' datetime="2020-04-20 07:07:20-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-04.html">04</a>/20 07:07:20 EST</time>
+<p>As I read Tomas Petricek&#8217;s <a href="http://tomasp.net/blog/2020/cities-and-programming/"><em>On architecture, urban planning and software construction</em></a>, it reminded me of an interesting point Dan Luu made in <a href="https://danluu.com/corp-eng-blogs/"><em>How (some) good corporate engineering blogs are written</em></a>: &#8220;There&#8217;s a dearth of real, in-depth, technical writing, which makes any half decent, honest, public writing about technical work interesting.&#8221; Tomas&#8217; piece reminded me of this not because it lacks substance, but rather for the opposite reason: his work stands out as a prime example of substantial technical writing. I recommend reading <a href="http://tomasp.net/blog/2020/cities-and-programming/">the entire piece</a>, but I will highlight a few interesting points here.</p>
+
+<p>First, on good software design:</p>
+
+<blockquote>
+    <p>&#8220;In Notes on the Synthesis of Form, Christopher Alexander points out that design always speaks of form and its context. A good design is not just a property of the form, but it is a matter of fit between the form and the context. The reason why we cannot evaluate an isolated form is not because we are unable to precisely describe the form itself, but because we are unable to precisely describe the context with which it will interact. ... Exactly the same limitations exist in the world of programming. No matter how precisely we can talk about programs, we also need to exactly understand the environment with which they interact. This is the hard part.&#8221;</p>
+</blockquote>
+
+<p>The idea that suitability determination involves a multi-dimensional performance assessment on a scenario-by-scenario basis, rather than a simple checklist, is a departure from the process I often see. This approach represents a more complex process, and even a more fraught one, too&#160;&#8212;&#160;but, perhaps, also one that might deliver something usable.</p>
+
+<p>And then on the unintended consequences of avoiding maintenance, later:</p>
+
+<blockquote>
+    <p>&#8220;When discussing maintenance, [Stewart] Brand mentions the cautionary tale of vinyl siding, which is used to avoid problems with peeling paint. Rather than repainting a wooden wall, you cover it with a layer of vinyl siding, which is durable and weather resistant. The problem is that vinyl siding blocks moisture and the humidity behind it can cause structural damage to the building. Many traditional materials have the attractive property that they look bad before they act bad and, furthermore, the problems with traditional materials are well understood. ... The lesson about using traditional materials has a relatively easy parallel. If you build software using tools whose problems you understand, you will be able to expect and resolve those problems. If you are using a new material, you will not anticipate where problems might occur.&#8221;</p>
+</blockquote>
+
+<p>To once again pound the drum I just haven&#8217;t stopped beating since <a href="https://zacs.site/blog/good-times-create-weak-men.html"><em>Good Times Create Weak Men</em></a>: </p>
+
+<blockquote>
+    <p>&#8220;By learning to use frameworks instead of the tools and protocols they implement, developers not only miss out on foundational knowledge that will help them become better at their job, but also hamstring themselves to the subset of features the frameworks’ creators’ felt important enough to enable. Expanding a project beyond that expected use case will require diving into those low-level tools and protocols.&#8221;</p>
+</blockquote>
+
+<p>Mehul Mohan had a similar take in <a href="https://www.freecodecamp.org/news/learn-frontend-web-development/"><em>The Best Way to Learn Front End Web Development</em></a>. I tend to have low expectations for articles that purport to have <strong>the</strong> answer, but Mehul delivered some sound advice:</p>
+
+<blockquote>
+    <p>&#8220;You see, frameworks exist to offload repetitive work from you. They do not exist so that you can not care at all what&#8217;s going on under the hood and rely on the fact that it&#8217;s all magic. The first time you choose a framework like React or Angular for your projects should be <strong>when you&#8217;re confident that you can create that project without React or Angular</strong> too.&#8221;</p>
+</blockquote>
+
+<p>You should <a href="https://zacs.site/blog/learn-c.html">learn C</a> not to use it, but because it will make you a better programmer. Learning C will help you understand the code that underlies your usable high-level language. node.js vinyl siding is cool, but do not ignore the old-fashioned tools it &#8220;replaced&#8221;: we used&#160;&#8212;&#160;and still use&#160;&#8212;&#160;them for a reason.</p>
+
+<p>Again, I recommend reading <a href="http://tomasp.net/blog/2020/cities-and-programming/">the entire piece</a>.</p>
+
+
+</article>
+<p>
+<a href="/blog/architecture-and-urban-planning.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2020 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>
