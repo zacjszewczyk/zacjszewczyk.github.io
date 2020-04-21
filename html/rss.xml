@@ -7,9 +7,26 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 20 Apr 2020 11:07:26 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2020 11:13:12 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Fingerprint cloning</title>
+            <link>https://blog.talosintelligence.com/2020/04/fingerprint-research.html)</link>
+            <guid isPermaLink='true'>https://blog.talosintelligence.com/2020/04/fingerprint-research.html)</guid>
+            <pubDate>Tue, 21 Apr 2020 11:12:45 GMT</pubDate>
+            <description>
+                &lt;p&gt;From Paul Rascagneres and Vitor Ventura at Cisco Talos Intelligence:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;Our tests showed that&amp;#160;&amp;#8212;&amp;#160;on average&amp;#160;&amp;#8212;&amp;#160;we achieved an ~80 percent success rate while using the fake fingerprints, where the sensors were bypassed at least once. ... The results show fingerprints are good enough to protect the average person&amp;#8217;s privacy if they lose their phone. However, a person that is likely to be targeted by a well-funded and motivated actor should not use fingerprint authentication.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We all like to get wrapped up in the minutiae of &lt;a href="https://zacs.site/blog/plausibly-deniable-encryption.html"&gt;architecting overly secure systems&lt;/a&gt;, when in reality a determined adversary &lt;a href="https://xkcd.com/538/"&gt;will succeed in spite of even our best efforts&lt;/a&gt;. Most of us are not facing such a sophisticated or determined adversary, though: most of us just need to latch the screen door.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>On architecture, urban planning and software construction</title>
             <link>http://tomasp.net/blog/2020/cities-and-programming/</link>
