@@ -7,9 +7,24 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 21 Apr 2020 11:13:12 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2020 11:02:47 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>We're All Monastics Now</title>
+            <link>https://zenhabits.net/monastics/</link>
+            <guid isPermaLink='true'>https://zenhabits.net/monastics/</guid>
+            <pubDate>Wed, 22 Apr 2020 11:02:40 GMT</pubDate>
+            <description>
+                &lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;We&amp;#8217;re all monastics now&amp;#160;&amp;#8212;&amp;#160;how will we use this time?&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href="https://zacs.site/blog/2-months.html"&gt;When we get to the other side of all this&lt;/a&gt;, what will you have done with &lt;a href="https://zacs.site/blog/all-that-time.html"&gt;all that time&lt;/a&gt;?&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>Fingerprint cloning</title>
             <link>https://blog.talosintelligence.com/2020/04/fingerprint-research.html)</link>
