@@ -37,7 +37,7 @@ footer { /** Assign footer to third row **/
 }
 
 /** Mobile device adjustments **/
-@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 3) {
+@media screen and (max-width: 1024px) {
 	nav { /* Compress nav to 2 columns, and shrink spacing */
 		grid-template-columns: repeat(2,1fr);
 		grid-row-gap: 1em;
