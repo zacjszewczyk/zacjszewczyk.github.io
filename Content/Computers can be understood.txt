@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Computers can be understood
+Link: https://blog.nelhage.com/post/computers-can-be-understood/
+Pubdate: 2020/04/23 08:36:28
+Author: Zac Szewczyk
+
+Modern computers have gotten so complex that the prospect of trying to understand them intimidates a lot of people. Unfortunately, many use that fear as an excuse not to even try. Nelson Elhage has some great advice for tackling this gargantuan task.

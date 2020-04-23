@@ -1,10 +1,9 @@
-127.0.0.1 - - [21/Apr/2020 07:12:53] GET / HTTP/1.1 200 -
-127.0.0.1 - - [21/Apr/2020 07:12:53] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [21/Apr/2020 07:12:53] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [21/Apr/2020 07:12:55] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [21/Apr/2020 07:12:55] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [21/Apr/2020 07:13:03] GET /blog/fingerprint-cloning.html HTTP/1.1 200 -
-127.0.0.1 - - [21/Apr/2020 07:13:03] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [21/Apr/2020 07:13:03] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [21/Apr/2020 07:13:03] GET /assets/images/favicon.ico HTTP/1.1 200 -
-- - - [21/4/2020 7:13:9] Graceful shutdown - -
+127.0.0.1 - - [23/Apr/2020 08:36:41] GET / HTTP/1.1 200 -
+127.0.0.1 - - [23/Apr/2020 08:36:41] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [23/Apr/2020 08:36:41] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [23/Apr/2020 08:36:41] GET /assets/images/favicon_192.ico HTTP/1.1 200 -
+127.0.0.1 - - [23/Apr/2020 08:36:41] GET /assets/images/favicon.ico HTTP/1.1 200 -
+127.0.0.1 - - [23/Apr/2020 08:36:41] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+127.0.0.1 - - [23/Apr/2020 08:36:43] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [23/Apr/2020 08:36:43] GET /assets/main.css HTTP/1.1 200 -
+- - - [23/4/2020 8:36:49] Graceful shutdown - -
