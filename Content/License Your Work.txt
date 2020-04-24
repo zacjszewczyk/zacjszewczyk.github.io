@@ -1,0 +1,23 @@
+Type: original
+Title: Licensing Your Work
+Link: license-your-work.html
+Pubdate: 2020/04/24 17:00:06
+Author: Zac Szewczyk
+
+The Internet succeeded in no small part thanks to the humble hyperlink. The link enabled it to flourish as a network rather than languish as a series of closed silos, which led to its widespread adoption and the prevalence it enjoys today. Although a disturbing trend of centralization has emerged in recent years, many people have made great efforts to combat it; they may yet succeed. Their efforts have relied on the link to bring users together, re-focusing the spotlight on this unassuming yet important tool and highlighting the importance of attribution as both the currency and the lifeblood of the Internet.
+
+COVID-19 has given me plenty of time to revisit many of [my projects](/projects.html) over the last few weeks, which prompted me to revisit my license as well. As the sole means through which creators can attempt to enforce attribution--and through it, the continued growth of the decentralized Internet--I consider a strong yet permissive license critical. 
+
+Although by default creators retain all the rights to their work, specifying a license defines explicit terms under which others may use it--or, perhaps even more importantly, the ways others *cannot*. Consider the GPLv3 license, for example, which gives anyone the right to do anything with a developer's code as long as both it and its derivatives stay open-source. GitHub hosts the fantastic [Choose a License](https://choosealicense.com/) website with other, similar licenses for those in the open-source community. As more of a writer than a coder, though, most of those suggestions do not quite fit my needs. 
+
+I wanted to find a license that permitted sharing under the condition that the original author receive credit for the work, that also prevented that work from becoming a cog in a commercial enterprise; I found just this in the [Creative Commons](https://creativecommons.org/) family. I [now license](https://www.dmlp.org/legal-guide/how-effectively-transfer-or-license-your-work) all of my work under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. As you can read on [my disclaimers page](/disclaimers.html), this license:
+
+* Allows readers to share (copy and redistribute this material in any medium or format) my work.
+* Allows readers to adapt (remix, transform, and build upon the material for any purpose) my work.
+* Requires that anyone who uses my work gives me appropriate credit, provides a link to this license, and indicates if changes were made. Appropriate credit is defined as, at a minimu, my name, the name of this site, and either a link back to this site or its URL.
+* Requires those who remix, transform, or build upon my material to distribute their contributions under the same license as the original.
+* Prevents anyone from applying legal terms or technological measures that legally restrict others from doing anything this license permits.
+* Prevents that credit from in any way suggesting that I endorse those who use my work or the purposes for which they use it. 
+* Prevents anyone from using my work for commercial purposes.
+
+For those with different needs, the [Creative Commons](https://creativecommons.org/) website has a handy tool to help you find the license that suits your needs the best. I believe everyone should [own their platform](Own Your Platform.txt), and thanks to modern cloud services, anyone can [for free](How to Own Your Platform.txt). Do not forget to license your work, though, to both foster the growth of the decentralized Internet and receive credit for your hard work, too.

@@ -1,9 +1,10 @@
-127.0.0.1 - - [23/Apr/2020 08:36:41] GET / HTTP/1.1 200 -
-127.0.0.1 - - [23/Apr/2020 08:36:41] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [23/Apr/2020 08:36:41] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [23/Apr/2020 08:36:41] GET /assets/images/favicon_192.ico HTTP/1.1 200 -
-127.0.0.1 - - [23/Apr/2020 08:36:41] GET /assets/images/favicon.ico HTTP/1.1 200 -
-127.0.0.1 - - [23/Apr/2020 08:36:41] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [23/Apr/2020 08:36:43] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [23/Apr/2020 08:36:43] GET /assets/main.css HTTP/1.1 200 -
-- - - [23/4/2020 8:36:49] Graceful shutdown - -
+127.0.0.1 - - [24/Apr/2020 17:00:54] GET / HTTP/1.1 200 -
+127.0.0.1 - - [24/Apr/2020 17:00:54] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [24/Apr/2020 17:00:54] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [24/Apr/2020 17:00:55] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [24/Apr/2020 17:00:55] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [24/Apr/2020 17:00:58] GET /blog/license-your-work.html HTTP/1.1 200 -
+127.0.0.1 - - [24/Apr/2020 17:00:58] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [24/Apr/2020 17:00:58] GET /assets/images/favicon.ico HTTP/1.1 200 -
+127.0.0.1 - - [24/Apr/2020 17:00:58] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+- - - [24/4/2020 17:1:10] Graceful shutdown - -

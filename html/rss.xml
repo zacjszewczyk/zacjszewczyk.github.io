@@ -7,9 +7,18 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 23 Apr 2020 12:36:40 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2020 09:00:50 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Licensing Your Work</title>
+            <link>https://zacs.site/blog/license-your-work.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/license-your-work.html</guid>
+            <pubDate>Fri, 24 Apr 2020 21:00:06 GMT</pubDate>
+            <description>
+                &lt;p&gt;The Internet succeeded in no small part thanks to the humble hyperlink. The link enabled it to flourish as a network rather than languish as a series of closed silos, which led to its widespread adoption and the prevalence it enjoys today. Although a disturbing trend of centralization has emerged in recent years, many people have made great efforts to combat it; they may yet succeed. Their efforts have relied on the link to bring users together, re-focusing the spotlight on this unassuming yet important tool and highlighting the importance of attribution as both the currency and the lifeblood of the Internet.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Computers can be understood</title>
             <link>https://blog.nelhage.com/post/computers-can-be-understood/</link>
