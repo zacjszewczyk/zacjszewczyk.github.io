@@ -1,0 +1,15 @@
+Type: linkpost
+Title: Test-Driven Development is Fundamentally Wrong
+Link: https://hackernoon.com/test-driven-development-is-fundamentally-wrong-hor3z4d
+Pubdate: 2020/04/27 09:08:33
+Author: Zac Szewczyk
+
+Chris Fox [makes some good points](https://hackernoon.com/test-driven-development-is-fundamentally-wrong-hor3z4d): 
+
+> "With over 20 years experience at the time I recognized the first obvious flaw [with test-driven design]; writing tests prior to coding is mindful of the old adage about no battle plan surviving contact with the enemy. ... The second problem here is that TDD presumes that developers should write their own tests. This is supremely ridiculous. I’ve seen this many, many times; the project appears solid to me, I can't break it, but someone else can break it in less than a minute. Why? Because the same blind spots that I had in design will appear in my tests."
+
+John Vester made some similar points in [*I Am Not Thinking About Unit Tests ... Right Now*](https://dzone.com/articles/i-am-not-thinking-about-unit-tests-right-now). 
+
+I have avoided test-driven design for similar reasons. For [my projects](/projects.html#codingProjects), I like to start by defining performance goals; I write [a few test cases](https://smartbear.com/learn/automated-testing/negative-testing/) for each feature I finish *as I finish it*, then move on. This has all the benefits of test-driven design--defining requirements up-front, clear success criteria, objective verifiability throughout the development process and at its conclusion--without the downsides Chris highlights: wasted effort and lack of actual code coverage. 
+
+I cannot stress the importance of unit tests enough: when I wrote a socket web server in Python, they gave me an easy way to make sure each change did not unintentionally break a key performance objective I had already checked off. This saved me *hours* of periodic, manual, boring checks. I have no such affinity for test-driven design, and I would encourage you to reevaluate your loyalty if you do.

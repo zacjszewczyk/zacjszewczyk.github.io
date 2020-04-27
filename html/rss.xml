@@ -7,9 +7,30 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 24 Apr 2020 09:00:50 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 01:08:48 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Test-Driven Development is Fundamentally Wrong</title>
+            <link>https://hackernoon.com/test-driven-development-is-fundamentally-wrong-hor3z4d</link>
+            <guid isPermaLink='true'>https://hackernoon.com/test-driven-development-is-fundamentally-wrong-hor3z4d</guid>
+            <pubDate>Mon, 27 Apr 2020 13:08:33 GMT</pubDate>
+            <description>
+                &lt;p&gt;Chris Fox &lt;a href="https://hackernoon.com/test-driven-development-is-fundamentally-wrong-hor3z4d"&gt;makes some good points&lt;/a&gt;: &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;With over 20 years experience at the time I recognized the first obvious flaw [with test-driven design]; writing tests prior to coding is mindful of the old adage about no battle plan surviving contact with the enemy. ... The second problem here is that TDD presumes that developers should write their own tests. This is supremely ridiculous. I’ve seen this many, many times; the project appears solid to me, I can&amp;#8217;t break it, but someone else can break it in less than a minute. Why? Because the same blind spots that I had in design will appear in my tests.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;John Vester made some similar points in &lt;a href="https://dzone.com/articles/i-am-not-thinking-about-unit-tests-right-now"&gt;&lt;em&gt;I Am Not Thinking About Unit Tests ... Right Now&lt;/em&gt;&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;I have avoided test-driven design for similar reasons. For &lt;a href="https://zacs.site/projects.html#codingProjects"&gt;my projects&lt;/a&gt;, I like to start by defining performance goals; I write &lt;a href="https://smartbear.com/learn/automated-testing/negative-testing/"&gt;a few test cases&lt;/a&gt; for each feature I finish &lt;em&gt;as I finish it&lt;/em&gt;, then move on. This has all the benefits of test-driven design&amp;#160;&amp;#8212;&amp;#160;defining requirements up-front, clear success criteria, objective verifiability throughout the development process and at its conclusion&amp;#160;&amp;#8212;&amp;#160;without the downsides Chris highlights: wasted effort and lack of actual code coverage. &lt;/p&gt;
+
+&lt;p&gt;I cannot stress the importance of unit tests enough: when I wrote a socket web server in Python, they gave me an easy way to make sure each change did not unintentionally break a key performance objective I had already checked off. This saved me &lt;em&gt;hours&lt;/em&gt; of periodic, manual, boring checks. I have no such affinity for test-driven design, and I would encourage you to reevaluate your loyalty if you do.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>Licensing Your Work</title>
             <link>https://zacs.site/blog/license-your-work.html</link>

@@ -1,10 +1,6 @@
-127.0.0.1 - - [24/Apr/2020 17:00:54] GET / HTTP/1.1 200 -
-127.0.0.1 - - [24/Apr/2020 17:00:54] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [24/Apr/2020 17:00:54] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [24/Apr/2020 17:00:55] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [24/Apr/2020 17:00:55] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [24/Apr/2020 17:00:58] GET /blog/license-your-work.html HTTP/1.1 200 -
-127.0.0.1 - - [24/Apr/2020 17:00:58] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [24/Apr/2020 17:00:58] GET /assets/images/favicon.ico HTTP/1.1 200 -
-127.0.0.1 - - [24/Apr/2020 17:00:58] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-- - - [24/4/2020 17:1:10] Graceful shutdown - -
+127.0.0.1 - - [27/Apr/2020 09:08:48] GET / HTTP/1.1 200 -
+127.0.0.1 - - [27/Apr/2020 09:08:49] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [27/Apr/2020 09:08:49] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [27/Apr/2020 09:08:51] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [27/Apr/2020 09:08:51] GET /assets/main.css HTTP/1.1 200 -
+- - - [27/4/2020 9:9:2] Graceful shutdown - -
