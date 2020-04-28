@@ -7,9 +7,20 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 27 Apr 2020 01:08:48 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 04:03:53 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>'Expert Twitter' Only Goes So Far. Bring Back Blogs</title>
+            <link>https://www.wired.com/story/opinion-expert-twitter-only-goes-so-far-bring-back-blogs/</link>
+            <guid isPermaLink='true'>https://www.wired.com/story/opinion-expert-twitter-only-goes-so-far-bring-back-blogs/</guid>
+            <pubDate>Tue, 28 Apr 2020 16:03:45 GMT</pubDate>
+            <description>
+                &lt;p&gt;Cal &lt;a href="https://www.wired.com/story/opinion-expert-twitter-only-goes-so-far-bring-back-blogs/"&gt;started strong&lt;/a&gt;: his recommendation that experts improve the decentralized distribution of critical information by moving beyond Twitter, the original microblog, to their own blogs hits the nail on the head. I cannot agree more. I wish I could say he finished strong as well, but he just completely missed the mark. In closing, he played up the importance of institutional backing for these sites as a way to lend them credibility. As Ben Thompson explained in &lt;a href="https://stratechery.com/2020/zero-trust-information/"&gt;&lt;em&gt;Zero Trust Information&lt;/em&gt;&lt;/a&gt;, though, not only have most of the institutional players put forth bad information throughout this crisis, they actively sought to suppress critical (factual) information as well. Although not all did so knowingly (some just sought to suppress dissenting voices), some did; the idea that we can improve the shortcomings of Twitter with greater institutional oversight is unbelievable. Read the first half of Cal&amp;#8217;s piece and then close your tab; the rest is just ridiculous.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>Test-Driven Development is Fundamentally Wrong</title>
             <link>https://hackernoon.com/test-driven-development-is-fundamentally-wrong-hor3z4d</link>
