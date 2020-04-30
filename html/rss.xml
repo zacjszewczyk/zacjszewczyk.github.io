@@ -7,9 +7,20 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 29 Apr 2020 11:37:01 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2020 02:37:48 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Teleforking a process onto a different computer</title>
+            <link>https://thume.ca/2020/04/18/telefork-forking-a-process-onto-a-different-computer/</link>
+            <guid isPermaLink='true'>https://thume.ca/2020/04/18/telefork-forking-a-process-onto-a-different-computer/</guid>
+            <pubDate>Thu, 30 Apr 2020 14:37:23 GMT</pubDate>
+            <description>
+                &lt;p&gt;I &lt;a href="https://zacs.site/blog/linear-python.html"&gt;love&lt;/a&gt; multiprocessing, and in &lt;a href="https://thume.ca/2020/04/18/telefork-forking-a-process-onto-a-different-computer/"&gt;this interesting piece&lt;/a&gt; by Tristan Hume, he takes parallel execution to another level. What a neat idea.&lt;/p&gt;
+
+
+            </description>
+        </item>
         <item>
             <title>'Expert Twitter' Only Goes So Far. Bring Back Blogs</title>
             <link>https://www.wired.com/story/opinion-expert-twitter-only-goes-so-far-bring-back-blogs/</link>

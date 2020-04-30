@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Teleforking a process onto a different computer
+Link: https://thume.ca/2020/04/18/telefork-forking-a-process-onto-a-different-computer/
+Pubdate: 2020/04/30 10:37:23
+Author: Zac Szewczyk
+
+I [love](Linear Python.txt) multiprocessing, and in [this interesting piece](https://thume.ca/2020/04/18/telefork-forking-a-process-onto-a-different-computer/) by Tristan Hume, he takes parallel execution to another level. What a neat idea.
