@@ -44,22 +44,22 @@ First, my blog would not update. I could alter any other file in my S3 bucket, o
 
 When I refreshed the page, it showed me a long string of special characters. I had seen this before, when my browser tried to read a compressed file as plain text. Some digging lead to [an AWS forum post from 2012](https://forums.aws.amazon.com/thread.jspa?messageID=381831), from a user with the same problem. It looked like some server-side logic made either CloudFront or S3 serve the compressed `blog.html` without the flag that told my browser to decompress it. I confirmed this with a few shell commands:
 
-<pre class="shell">
+``` shell
 curl https://zacs.site/blog.html
 # "curl URL" sends a GET request to the server at URL. It then prints the server's response to the shell. When I ran the command above, it showed me a long string of question marks. I had a hunch that gzip compression caused this.
-</pre>
+```
 
-<pre class="shell">
+``` shell
 curl https://zacs.site/blog.html | gunzip
 # This time, "curl" sent that response to "gunzip" before printing it to the shell. "gunzip" decompresses files compressed with gzip. When I ran the command above, it printed raw HTML. This told me the server replied with the compressed "blog.html" file. By default, though, "curl" requests uncompressed files.
-</pre>
+```
 
 If I got a compressed file without asking for it, what would I get if I asked for a compressed file? This command let me find out:
 
-<pre class="shell">
+``` shell
 curl https://zacs.site/blog.html -H "Accept-Encoding: gzip"
 # This sent a GET request to my server, and told it to respond with compressed gzip files. Because "curl" does not unzip compressed files, this command should have printed a bunch of question marks to my shell. I got raw HTML.
-</pre>
+```
 
 Let me say this all again. When asked for a compressed file, my server replied with a plain text, unzipped one. When asked for a plain text, unzipped file, it replied with a compressed one.
 
