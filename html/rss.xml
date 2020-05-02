@@ -7,9 +7,18 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 02 May 2020 12:32:52 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2020 11:53:49 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>First Crack Release Notes, April 2020</title>
+            <link>https://zacs.site/blog/first-crack-release-notes-0420.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/first-crack-release-notes-0420.html</guid>
+            <pubDate>Sat, 02 May 2020 23:53:45 GMT</pubDate>
+            <description>
+                &lt;p&gt;I spent most of my development time in April working on a project that I can, at best, call tangentially related to First Crack. After fighting with &lt;a href="https://flask.palletsprojects.com/en/1.1.x/"&gt;Flask&lt;/a&gt;, &lt;a href="http://bottlepy.org/docs/dev/"&gt;Bottle&lt;/a&gt;, and then Python’s own &lt;a href="https://docs.python.org/3/library/http.server.html"&gt;http.server&lt;/a&gt; library, I decided to write my own web framework. I won’t spend much time on this now, since I plan to deploy it in an Intranet soon and then release it after some real use, but I will say this: I liked Flask, but it has far too many dependencies to work in my target environment. I liked Bottle even more, since it mirrors most of Flask’s functionality without any dependencies, but it lacks the ability to handle concurrent connections. The surprisingly capable &lt;code&gt;http.server&lt;/code&gt; library has zero dependencies and supports concurrent execution, but is ill-suited for building out an entire web application. My project, &lt;em&gt;Swig&lt;/em&gt;&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;, solves all of these problems. For now, though, let’s talk about First Crack&amp;#160;&amp;#8212;&amp;#160;a day late, yes, but I hope not a dollar short. &lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Teleforking a process onto a different computer</title>
             <link>https://thume.ca/2020/04/18/telefork-forking-a-process-onto-a-different-computer/</link>
