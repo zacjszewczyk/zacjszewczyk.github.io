@@ -7,7 +7,7 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 02 May 2020 11:00:59 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2020 12:32:52 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -17,6 +17,17 @@
             <pubDate>Thu, 30 Apr 2020 14:37:23 GMT</pubDate>
             <description>
                 &lt;p&gt;I &lt;a href="https://zacs.site/blog/linear-python.html"&gt;love&lt;/a&gt; multiprocessing, and in &lt;a href="https://thume.ca/2020/04/18/telefork-forking-a-process-onto-a-different-computer/"&gt;this interesting piece&lt;/a&gt; by Tristan Hume, he takes parallel execution to another level. What a neat idea.&lt;/p&gt;
+
+
+            </description>
+        </item>
+        <item>
+            <title>Best Practices for Working with Configuration in Python Applications</title>
+            <link>https://tech.preferred.jp/en/blog/working-with-configuration-in-python/</link>
+            <guid isPermaLink='true'>https://tech.preferred.jp/en/blog/working-with-configuration-in-python/</guid>
+            <pubDate>Wed, 29 Apr 2020 11:36:26 GMT</pubDate>
+            <description>
+                &lt;p&gt;I opened &lt;a href="https://tech.preferred.jp/en/blog/working-with-configuration-in-python/"&gt;Tobias Pfeiffer&amp;#8217;s article&lt;/a&gt; expecting something along the lines of &lt;a href="https://beepb00p.xyz/configs-suck.html"&gt;&lt;em&gt;Your configs suck? Try a real programming language.&lt;/em&gt;&lt;/a&gt; Tobias focused not on configuring the environment, though, but rather best practices for configuring the control flow in the program itself. &amp;#8220;Early Validation&amp;#8221; was a particularly good point. Tobias has some sound advice, most of which I incorporated into the dev projects I started during the shelter-in-place period. I hope to talk about them more soon.&lt;/p&gt;
 
 
             </description>
