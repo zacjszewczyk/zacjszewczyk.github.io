@@ -83,14 +83,14 @@
 <p>Speaking of the new Markdown parser, I would also like to release it as its own project in July. Usage would look like this:</p>
 
 <div class='pre'>
-<span class='pre_line_wrap'>$ python3</span>
-<span class='pre_line_wrap'>&gt;&gt;&gt; import Markdown</span>
-<span class='pre_line_wrap'>&gt;&gt;&gt; md = Markdown()</span>
+<span class='pre_line_wrap'>$&nbsp;python3</span>
+<span class='pre_line_wrap'>&gt;&gt;&gt;&nbsp;import&nbsp;Markdown</span>
+<span class='pre_line_wrap'>&gt;&gt;&gt;&nbsp;md&nbsp;=&nbsp;Markdown()</span>
 <span class='pre_line_wrap'>&gt;&gt;&gt;</span>
-<span class='pre_line_wrap'>&gt;&gt;&gt; raw_markdown = "Hi, **this** is a sentence with a [link](https://google.com) to *Google*."</span>
+<span class='pre_line_wrap'>&gt;&gt;&gt;&nbsp;raw_markdown&nbsp;=&nbsp;"Hi,&nbsp;**this**&nbsp;is&nbsp;a&nbsp;sentence&nbsp;with&nbsp;a&nbsp;[link](https://google.com)&nbsp;to&nbsp;*Google*."</span>
 <span class='pre_line_wrap'>&gt;&gt;&gt;</span>
-<span class='pre_line_wrap'>&gt;&gt;&gt; print(md.html(raw_markdown))</span>
-<span class='pre_line_wrap'>Hi, &lt;strong&gt;this&lt;/strong&gt; is a sentence with a &lt;a href="https://google.com"&gt;link&lt;/a&gt; to &lt;em&gt;Google&lt;/em&gt;.</span>
+<span class='pre_line_wrap'>&gt;&gt;&gt;&nbsp;print(md.html(raw_markdown))</span>
+<span class='pre_line_wrap'>Hi,&nbsp;&lt;strong&gt;this&lt;/strong&gt;&nbsp;is&nbsp;a&nbsp;sentence&nbsp;with&nbsp;a&nbsp;&lt;a&nbsp;href="https://google.com"&gt;link&lt;/a&gt;&nbsp;to&nbsp;&lt;em&gt;Google&lt;/em&gt;.</span>
 </div>
 
 <p>Before I can do that, though, I have a few bugs to work out with the Markdown implementation, and I would like to enable parsing multi-line strings and entire files at once. </p>

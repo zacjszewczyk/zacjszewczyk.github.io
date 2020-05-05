@@ -39,6 +39,18 @@
         <main>
 <article>
 <h2 id='article_title'>
+<a class="linkpost" href="https://www.lowtechmagazine.com/2013/01/mechanical-transmission-of-power-stangenkunst.html">The Mechanical Transmission of Power</a>
+</h2>
+<time id='article_time' datetime="2020-03-02 07:37:21-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-03.html">03</a>/02 07:37:21 EST</time>
+<p>As I read through <a href="https://www.lowtechmagazine.com/2013/01/mechanical-transmission-of-power-stangenkunst.html">part one</a> and then, later, parts <a href="https://www.lowtechmagazine.com/2013/02/the-mechanical-transmission-of-power-jerker-line-systems.html">two</a> and <a href="https://www.lowtechmagazine.com/2013/03/the-mechanical-transmission-of-power-3-wire-ropes.html">three</a> of Kris De Decker&#8217;s interesting series on mechanical power transmission, I knew I had read other articles from the Low-Tech Magazine before. A quick check through my archive proved me right: for those looking for other interesting reads on low-tech solutions to hard problems, check out <a href="https://www.lowtechmagazine.com/2020/01/how-sustainable-is-a-solar-powered-website.html">How Sustainable is a Solar Powered Website?</a> and <a href="https://solar.lowtechmagazine.com/2015/10/how-to-build-a-low-tech-internet/">How to Build a Low-tech Internet</a>, too, or any of <a href="https://www.lowtechmagazine.com/">The Low-Tech Magazine&#8217;s other fascinating work</a>. </p>
+
+<p>In a similar vein, check out <a href="http://507movements.com/">507 Movements</a> for&#160;&#8212;&#160;get this&#160;&#8212;&#160;507 different mechanical mechanisms. When I run into <a href="/projects.html#caddProjects">a novel engineering challenge</a>, I always try to solve it in a simple mechanical way first. Computers are great, but there is a certain elegance to simple machinery for which I have great appreciation.</p>
+
+
+<p><a class='read_more_link' href='/blog/the-mechanical-transmission-of-power.html'>Read more</a><span class='logo'>&#x24E9;</span></p>
+</article>
+<article>
+<h2 id='article_title'>
 <a class="original" href="/blog/first-crack-release-notes-0220.html">First Crack Release Notes, February 2020</a>
 </h2>
 <time id='article_time' datetime="2020-02-28 08:05:41-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-02.html">02</a>/28 08:05:41 EST</time>
@@ -856,11 +868,11 @@
 <p>Full credit to Alex Armstrong and <a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos">his helpful article</a> for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these five lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.</p>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>git init</span>
-<span class='pre_line_wrap'>git remote add origin {GitHub repo URL} # Get GitHub repo URL</span>
-<span class='pre_line_wrap'>git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL</span>
-<span class='pre_line_wrap'>git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL</span>
-<span class='pre_line_wrap'>git add .; git commit -m "Initial commit."; git push -u origin master</span>
+<span class='pre_line_wrap'>git&nbsp;init</span>
+<span class='pre_line_wrap'>git&nbsp;remote&nbsp;add&nbsp;origin&nbsp;{GitHub&nbsp;repo&nbsp;URL}&nbsp;#&nbsp;Get&nbsp;GitHub&nbsp;repo&nbsp;URL</span>
+<span class='pre_line_wrap'>git&nbsp;remote&nbsp;set-url&nbsp;--add&nbsp;--push&nbsp;origin&nbsp;{GitHub&nbsp;repo&nbsp;URL}&nbsp;#&nbsp;Get&nbsp;GitHub&nbsp;repo&nbsp;URL</span>
+<span class='pre_line_wrap'>git&nbsp;remote&nbsp;set-url&nbsp;--add&nbsp;--push&nbsp;origin&nbsp;{Bitbucket&nbsp;repo&nbsp;URL}&nbsp;#&nbsp;Get&nbsp;Bitbucket&nbsp;repo&nbsp;URL</span>
+<span class='pre_line_wrap'>git&nbsp;add&nbsp;.;&nbsp;git&nbsp;commit&nbsp;-m&nbsp;"Initial&nbsp;commit.";&nbsp;git&nbsp;push&nbsp;-u&nbsp;origin&nbsp;master</span>
 </div>
 
 <p>These simple commands make sure that for all my projects, I have a local copy, a local backup, a cloud backup, and two more off-site copies of all my work&#160;&#8212;&#160;just in case.</p>
@@ -1354,33 +1366,33 @@
 <p>I like Antonio&#8217;s idea, a lot. As much as <a href="https://zacs.site/blog/my-setup-2019.html">I try to keep my system stock</a>, this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:</p>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>alias gs="git status"</span>
-<span class='pre_line_wrap'>alias gac="git add . && git commit -m"</span>
-<span class='pre_line_wrap'>alias gp="git push"</span>
+<span class='pre_line_wrap'>alias&nbsp;gs="git&nbsp;status"</span>
+<span class='pre_line_wrap'>alias&nbsp;gac="git&nbsp;add&nbsp;.&nbsp;&&&nbsp;git&nbsp;commit&nbsp;-m"</span>
+<span class='pre_line_wrap'>alias&nbsp;gp="git&nbsp;push"</span>
 </div>
 
 <p><a href="https://zacs.site/blog/my-setup-2019.html">I have talked about these aliases before</a>; they make interacting with Git just a little bit easier. <a href="https://bitsofco.de/git-aliases-for-lazy-developers/">Hat-tip to Ire Aderinokun for the idea</a>.</p>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>alias gits="find ./ -name '.git' 2&gt; /dev/null | grep -v '.Trash'"</span>
+<span class='pre_line_wrap'>alias&nbsp;gits="find&nbsp;./&nbsp;-name&nbsp;'.git'&nbsp;2&gt;&nbsp;/dev/null&nbsp;|&nbsp;grep&nbsp;-v&nbsp;'.Trash'"</span>
 </div>
 
 <p>This neat snippet searches the current directory, and all sub directories, for Git repos. I have a lot of coding projects <a href="/projects.html">in the works</a>, and this helps me keep track of them.</p>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>alias r="source ~/.bash_profile"</span>
+<span class='pre_line_wrap'>alias&nbsp;r="source&nbsp;~/.bash_profile"</span>
 </div>
 
 <p>This lets me refresh my bash profile whenever I make a change&#160;&#8212;&#160;for example, adding a new alias or script. Simple, and handy.</p>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>alias search="grep -rnw './' -e "</span>
+<span class='pre_line_wrap'>alias&nbsp;search="grep&nbsp;-rnw&nbsp;'./'&nbsp;-e&nbsp;"</span>
 </div>
 
 <p>This alias gives me search functionality in the terminal, so I can avoid opening up Finder for most simple queries.</p>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"</span>
+<span class='pre_line_wrap'>alias&nbsp;tree="find&nbsp;.&nbsp;-print&nbsp;|&nbsp;sed&nbsp;-e&nbsp;'s;[^/]*/;|____;g;s;____|;&nbsp;|;g'"</span>
 </div>
 
 <p>This neat little command displays the current directory contents, and all its sub-directories, as a tree. I used this to create the tree in <a href="/projects.html#firstCrack">the First Crack readme file</a>. <a href="http://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/">Hat-tip to OS X Daily for this one</a>.</p>

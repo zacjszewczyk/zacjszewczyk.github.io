@@ -7,9 +7,18 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 02 May 2020 11:53:49 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2020 12:57:49 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Fail by Default</title>
+            <link>https://zacs.site/blog/fail-by-default.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/fail-by-default.html</guid>
+            <pubDate>Mon, 04 May 2020 12:54:21 GMT</pubDate>
+            <description>
+                &lt;p&gt;I happened across &lt;a href="http://pespmc1.vub.ac.be/REQVAR.html"&gt;&lt;em&gt;The Law of Requisite Variety&lt;/em&gt;&lt;/a&gt; the other day, which states that a system for which &lt;strong&gt;D&lt;/strong&gt; possible disruptions exist requires &lt;strong&gt;R&lt;/strong&gt; countermeasures to keep itself stable, where &lt;strong&gt;R&lt;/strong&gt; &amp;gt;= &lt;strong&gt;D&lt;/strong&gt;. Having spent some time on &lt;a href="https://zacs.site/projects.html"&gt;my projects&amp;#8217;&lt;/a&gt; more &lt;a href="https://www.hillelwayne.com/post/hyperproperties/"&gt;theoretical side&lt;/a&gt; lately, I found this idea at once interesting and then familiar. Today, I want to talk about the simple way I apply this concept to my code, as a way to architect more reliable programs.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>First Crack Release Notes, April 2020</title>
             <link>https://zacs.site/blog/first-crack-release-notes-0420.html</link>
@@ -1335,11 +1344,11 @@
                 &lt;p&gt;Full credit to Alex Armstrong and &lt;a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos"&gt;his helpful article&lt;/a&gt; for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these five lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.&lt;/p&gt;
 
 &lt;div class='pre shell'&gt;
-&lt;span class='pre_line_wrap'&gt;git init&lt;/span&gt;
-&lt;span class='pre_line_wrap'&gt;git remote add origin {GitHub repo URL} # Get GitHub repo URL&lt;/span&gt;
-&lt;span class='pre_line_wrap'&gt;git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL&lt;/span&gt;
-&lt;span class='pre_line_wrap'&gt;git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL&lt;/span&gt;
-&lt;span class='pre_line_wrap'&gt;git add .; git commit -m "Initial commit."; git push -u origin master&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;git&amp;nbsp;init&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;git&amp;nbsp;remote&amp;nbsp;add&amp;nbsp;origin&amp;nbsp;{GitHub&amp;nbsp;repo&amp;nbsp;URL}&amp;nbsp;#&amp;nbsp;Get&amp;nbsp;GitHub&amp;nbsp;repo&amp;nbsp;URL&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;git&amp;nbsp;remote&amp;nbsp;set-url&amp;nbsp;--add&amp;nbsp;--push&amp;nbsp;origin&amp;nbsp;{GitHub&amp;nbsp;repo&amp;nbsp;URL}&amp;nbsp;#&amp;nbsp;Get&amp;nbsp;GitHub&amp;nbsp;repo&amp;nbsp;URL&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;git&amp;nbsp;remote&amp;nbsp;set-url&amp;nbsp;--add&amp;nbsp;--push&amp;nbsp;origin&amp;nbsp;{Bitbucket&amp;nbsp;repo&amp;nbsp;URL}&amp;nbsp;#&amp;nbsp;Get&amp;nbsp;Bitbucket&amp;nbsp;repo&amp;nbsp;URL&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;git&amp;nbsp;add&amp;nbsp;.;&amp;nbsp;git&amp;nbsp;commit&amp;nbsp;-m&amp;nbsp;"Initial&amp;nbsp;commit.";&amp;nbsp;git&amp;nbsp;push&amp;nbsp;-u&amp;nbsp;origin&amp;nbsp;master&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;p&gt;These simple commands make sure that for all my projects, I have a local copy, a local backup, a cloud backup, and two more off-site copies of all my work&amp;#160;&amp;#8212;&amp;#160;just in case.&lt;/p&gt;
@@ -1877,33 +1886,33 @@
                 &lt;p&gt;I like Antonio&amp;#8217;s idea, a lot. As much as &lt;a href="https://zacs.site/blog/my-setup-2019.html"&gt;I try to keep my system stock&lt;/a&gt;, this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:&lt;/p&gt;
 
 &lt;div class='pre shell'&gt;
-&lt;span class='pre_line_wrap'&gt;alias gs="git status"&lt;/span&gt;
-&lt;span class='pre_line_wrap'&gt;alias gac="git add . &amp;&amp; git commit -m"&lt;/span&gt;
-&lt;span class='pre_line_wrap'&gt;alias gp="git push"&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;alias&amp;nbsp;gs="git&amp;nbsp;status"&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;alias&amp;nbsp;gac="git&amp;nbsp;add&amp;nbsp;.&amp;nbsp;&amp;&amp;&amp;nbsp;git&amp;nbsp;commit&amp;nbsp;-m"&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;alias&amp;nbsp;gp="git&amp;nbsp;push"&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;p&gt;&lt;a href="https://zacs.site/blog/my-setup-2019.html"&gt;I have talked about these aliases before&lt;/a&gt;; they make interacting with Git just a little bit easier. &lt;a href="https://bitsofco.de/git-aliases-for-lazy-developers/"&gt;Hat-tip to Ire Aderinokun for the idea&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class='pre shell'&gt;
-&lt;span class='pre_line_wrap'&gt;alias gits="find ./ -name '.git' 2&amp;gt; /dev/null | grep -v '.Trash'"&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;alias&amp;nbsp;gits="find&amp;nbsp;./&amp;nbsp;-name&amp;nbsp;'.git'&amp;nbsp;2&amp;gt;&amp;nbsp;/dev/null&amp;nbsp;|&amp;nbsp;grep&amp;nbsp;-v&amp;nbsp;'.Trash'"&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;p&gt;This neat snippet searches the current directory, and all sub directories, for Git repos. I have a lot of coding projects &lt;a href="https://zacs.site/projects.html"&gt;in the works&lt;/a&gt;, and this helps me keep track of them.&lt;/p&gt;
 
 &lt;div class='pre shell'&gt;
-&lt;span class='pre_line_wrap'&gt;alias r="source ~/.bash_profile"&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;alias&amp;nbsp;r="source&amp;nbsp;~/.bash_profile"&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;p&gt;This lets me refresh my bash profile whenever I make a change&amp;#160;&amp;#8212;&amp;#160;for example, adding a new alias or script. Simple, and handy.&lt;/p&gt;
 
 &lt;div class='pre shell'&gt;
-&lt;span class='pre_line_wrap'&gt;alias search="grep -rnw './' -e "&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;alias&amp;nbsp;search="grep&amp;nbsp;-rnw&amp;nbsp;'./'&amp;nbsp;-e&amp;nbsp;"&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;p&gt;This alias gives me search functionality in the terminal, so I can avoid opening up Finder for most simple queries.&lt;/p&gt;
 
 &lt;div class='pre shell'&gt;
-&lt;span class='pre_line_wrap'&gt;alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"&lt;/span&gt;
+&lt;span class='pre_line_wrap'&gt;alias&amp;nbsp;tree="find&amp;nbsp;.&amp;nbsp;-print&amp;nbsp;|&amp;nbsp;sed&amp;nbsp;-e&amp;nbsp;'s;[^/]*/;|____;g;s;____|;&amp;nbsp;|;g'"&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;p&gt;This neat little command displays the current directory contents, and all its sub-directories, as a tree. I used this to create the tree in &lt;a href="https://zacs.site/projects.html#firstCrack"&gt;the First Crack readme file&lt;/a&gt;. &lt;a href="http://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/"&gt;Hat-tip to OS X Daily for this one&lt;/a&gt;.&lt;/p&gt;

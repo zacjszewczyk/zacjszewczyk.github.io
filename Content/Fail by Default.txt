@@ -1,0 +1,43 @@
+Type: original
+Title: Fail by Default
+Link: fail-by-default.html
+Pubdate: 2020/05/04 08:54:21
+Author: Zac Szewczyk
+
+I happened across [*The Law of Requisite Variety*](http://pespmc1.vub.ac.be/REQVAR.html) the other day, which states that a system for which **D** possible disruptions exist requires **R** countermeasures to keep itself stable, where **R** >= **D**. Having spent some time on [my projects'](/projects.html) more [theoretical side](https://www.hillelwayne.com/post/hyperproperties/) lately, I found this idea at once interesting and then familiar. Today, I want to talk about the simple way I apply this concept to my code, as a way to architect more reliable programs.
+
+First, consider this script. It prompts the user to enter 0 or 1, then spells out "zero" or "one" depending on which the user chose.
+
+``` python
+number = input("Enter 0 or 1: ")
+
+if (number == “0”):
+    message = "zero"
+elif (number == “1”):
+    message = "one"
+
+print(message)
+```
+
+Although straightforward, even this simple example violates the Law of Requisite Variety: the number of possible inputs **D** contains more than just two numbers, 0 and 1: it actually contains every single combination of every possible input sequence in existence. As a result, an **R** of two is insufficient because it is infinitely smaller than the infinitely larger **D**.[^1] If a user enters "a", for example, the program will fail. We can fix this by changing our perspective: rather than expecting a certain subset (0 or 1) of an infinite number of possible strings, we can expect improper input and handle appropriate input by exception. Check out the revised example, below:
+
+``` python
+number = input("Enter 0 or 1: ")
+
+if (number == “0”):
+    message = "zero"
+elif (number == “1”):
+    message = "one"
+else:
+    message = "error"
+
+print(message)
+```
+
+The user can now enter any possible string, but the script will not spell out "zero" or "one" unless he or she enters 0 or 1, respectively. Whereas the user could have caused the old script to enter an unstable state by entering "a", that is now impossible because **R** equals **D**+2: for every possible input the script will print "error" (**D**), but there also exists two additional cases to account for the input equaling 0 or 1 (+2). We have satisfied the Law of Requisite Variety; it has now become impossible for the user to cause the script to enter an unstable state.   
+
+This short example illustrates the simple concept I use to apply Law of Requisite Variety to my code, as a way to architect more reliable programs: failing by default. Any time your program could possibly have more than one state, first fail for all of them (start with **R**=**D**), then add exceptions for acceptable cases (**R** += 1, **R** += 1, ...). This ensures your code will only proceed in a safe, known state, rather than in an unsafe one that might work on occasion. Such inconsistent bugs are the hardest to fix, but This One Simple Trick&trade; will help you avoid many of them. 
+
+[I linked to](Working with Configuration in Python.txt) an excellent article by Tobias Pfeiffer the other day, [*Best Practices for Working with Configuration in Python Applications*](https://tech.preferred.jp/en/blog/working-with-configuration-in-python/), where he presented some good advice for writing more stable programs. I would submit this article, and the notion of failing by default, as an addendum.
+
+[>1] Heh.

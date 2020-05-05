@@ -45,11 +45,11 @@
 <p>Full credit to Alex Armstrong and <a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos">his helpful article</a> for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these five lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.</p>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>git init</span>
-<span class='pre_line_wrap'>git remote add origin {GitHub repo URL} # Get GitHub repo URL</span>
-<span class='pre_line_wrap'>git remote set-url --add --push origin {GitHub repo URL} # Get GitHub repo URL</span>
-<span class='pre_line_wrap'>git remote set-url --add --push origin {Bitbucket repo URL} # Get Bitbucket repo URL</span>
-<span class='pre_line_wrap'>git add .; git commit -m "Initial commit."; git push -u origin master</span>
+<span class='pre_line_wrap'>git&nbsp;init</span>
+<span class='pre_line_wrap'>git&nbsp;remote&nbsp;add&nbsp;origin&nbsp;{GitHub&nbsp;repo&nbsp;URL}&nbsp;#&nbsp;Get&nbsp;GitHub&nbsp;repo&nbsp;URL</span>
+<span class='pre_line_wrap'>git&nbsp;remote&nbsp;set-url&nbsp;--add&nbsp;--push&nbsp;origin&nbsp;{GitHub&nbsp;repo&nbsp;URL}&nbsp;#&nbsp;Get&nbsp;GitHub&nbsp;repo&nbsp;URL</span>
+<span class='pre_line_wrap'>git&nbsp;remote&nbsp;set-url&nbsp;--add&nbsp;--push&nbsp;origin&nbsp;{Bitbucket&nbsp;repo&nbsp;URL}&nbsp;#&nbsp;Get&nbsp;Bitbucket&nbsp;repo&nbsp;URL</span>
+<span class='pre_line_wrap'>git&nbsp;add&nbsp;.;&nbsp;git&nbsp;commit&nbsp;-m&nbsp;"Initial&nbsp;commit.";&nbsp;git&nbsp;push&nbsp;-u&nbsp;origin&nbsp;master</span>
 </div>
 
 <p>These simple commands make sure that for all my projects, I have a local copy, a local backup, a cloud backup, and two more off-site copies of all my work&#160;&#8212;&#160;just in case.</p>

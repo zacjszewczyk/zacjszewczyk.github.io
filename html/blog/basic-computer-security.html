@@ -77,13 +77,13 @@
 <p>If you want to download Steven&#8217;s code, run the scripts, and set your system up on your own, go for it. On a Mac, though, you can just open Terminal, copy and paste the snippet below, hit Enter, and input your password. The snippet backs up your <code>hosts</code> file to <code>hosts.bak</code>, downloads Steven&#8217;s list, and tells your computer to read this new <code>hosts</code> file from then on.</p>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>sudo cp /etc/hosts /etc/hosts.bak; sudo curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts -o /etc/hosts; dscacheutil -flushcache; sudo killall -HUP mDNSResponder</span>
+<span class='pre_line_wrap'>sudo&nbsp;cp&nbsp;/etc/hosts&nbsp;/etc/hosts.bak;&nbsp;sudo&nbsp;curl&nbsp;https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts&nbsp;-o&nbsp;/etc/hosts;&nbsp;dscacheutil&nbsp;-flushcache;&nbsp;sudo&nbsp;killall&nbsp;-HUP&nbsp;mDNSResponder</span>
 </div>
 
 <p>On Windows, open Notepad, open or create the file at <code>C:\Windows\System32\Drivers\etc\hosts</code>, copy and paste everything on <a href="https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts">this page</a> into Notepad, and save it. Next, click the Start button, type <code>cmd</code>, right-click Command Prompt and choose &#8220;Run as Administrator&#8221;, then run the command below to tell your computer to read this new hosts file from now on.</p>
 
 <div class='pre cmd'>
-<span class='pre_line_wrap'>ipconfig /flushdns</span>
+<span class='pre_line_wrap'>ipconfig&nbsp;/flushdns</span>
 </div>
 
 <p>Any time a website tries to connect to a known bad domain, it will fail. This alone will remove a lot of ads, trackers, and even some known sources of viruses and spyware. Although Adblock Plus, Ghostery, and uBlock Origin also do this, blocking those websites at the system level with your <code>hosts</code> file means those extensions won&#8217;t have to work as hard. Because they do less, your browser does less, which can improve browsing speeds. A win all around.</p>
@@ -107,13 +107,13 @@
 <p>You must login to your router to change its settings. If you have never done this before, you need to find it on your network. On a Mac, use <code>netstat</code>. The <code>grep</code>, <code>head</code>, and <code>awk</code> commands after it strip out the things you do not need for this step.</p>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>netstat -nr | grep default | head -1 | awk -F " " '{print "Router IP: ",$2}'</span>
+<span class='pre_line_wrap'>netstat&nbsp;-nr&nbsp;|&nbsp;grep&nbsp;default&nbsp;|&nbsp;head&nbsp;-1&nbsp;|&nbsp;awk&nbsp;-F&nbsp;"&nbsp;"&nbsp;'{print&nbsp;"Router&nbsp;IP:&nbsp;",$2}'</span>
 </div>
 
 <p>On a Windows machine, use <code>ipconfig</code>. <code>findstr</code> pulls out the line with the IP address for the default gateway.</p>
 
 <div class='pre cmd'>
-<span class='pre_line_wrap'>ipconfig /all | findstr "Default Gateway"</span>
+<span class='pre_line_wrap'>ipconfig&nbsp;/all&nbsp;|&nbsp;findstr&nbsp;"Default&nbsp;Gateway"</span>
 </div>
 
 <p>Once you have the router&#8217;s IP address, copy and paste it into your browser. A login window will open. If you have seen this page before, enter your credentials; if not, try the defaults for your cable company. Using &#8220;admin&#8221; as your username and &#8220;admin&#8221;, &#8220;password&#8221;, or leaving the password field blank works most times. You could also try searching for the defaults for your router. Once you have logged in, move on to the next step.</p>
@@ -151,11 +151,11 @@
 <p>On a Unix machine, use the first snippet to find your MAC address; on a Windows computer, use the second. Once found, enter the MAC address on your router, make sure you will <strong>allow</strong> this machine rather than <strong>deny</strong> it, and save the change.</p>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>ifconfig | grep ether | head -1 | awk -F " " '{print "MAC address: ",$2}'</span>
+<span class='pre_line_wrap'>ifconfig&nbsp;|&nbsp;grep&nbsp;ether&nbsp;|&nbsp;head&nbsp;-1&nbsp;|&nbsp;awk&nbsp;-F&nbsp;"&nbsp;"&nbsp;'{print&nbsp;"MAC&nbsp;address:&nbsp;",$2}'</span>
 </div>
 
 <div class='pre cmd'>
-<span class='pre_line_wrap'>ipconfig /all | findstr "Physical"</span>
+<span class='pre_line_wrap'>ipconfig&nbsp;/all&nbsp;|&nbsp;findstr&nbsp;"Physical"</span>
 </div>
 
 <p>Repeat this process for each device you wish to allow on your network. Although not a 100% guarantee that a bad actor cannot get onto your network, they will at least have one more barrier in their way.</p>

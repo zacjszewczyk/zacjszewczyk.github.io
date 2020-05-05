@@ -83,20 +83,20 @@
 <p>When I refreshed the page, it showed me a long string of special characters. I had seen this before, when my browser tried to read a compressed file as plain text. Some digging lead to <a href="https://forums.aws.amazon.com/thread.jspa?messageID=381831">an AWS forum post from 2012</a>, from a user with the same problem. It looked like some server-side logic made either CloudFront or S3 serve the compressed <code>blog.html</code> without the flag that told my browser to decompress it. I confirmed this with a few shell commands:</p>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>curl https://zacs.site/blog.html</span>
-<span class='pre_line_wrap'># "curl URL" sends a GET request to the server at URL. It then prints the server's response to the shell. When I ran the command above, it showed me a long string of question marks. I had a hunch that gzip compression caused this.</span>
+<span class='pre_line_wrap'>curl&nbsp;https://zacs.site/blog.html</span>
+<span class='pre_line_wrap'>#&nbsp;"curl&nbsp;URL"&nbsp;sends&nbsp;a&nbsp;GET&nbsp;request&nbsp;to&nbsp;the&nbsp;server&nbsp;at&nbsp;URL.&nbsp;It&nbsp;then&nbsp;prints&nbsp;the&nbsp;server's&nbsp;response&nbsp;to&nbsp;the&nbsp;shell.&nbsp;When&nbsp;I&nbsp;ran&nbsp;the&nbsp;command&nbsp;above,&nbsp;it&nbsp;showed&nbsp;me&nbsp;a&nbsp;long&nbsp;string&nbsp;of&nbsp;question&nbsp;marks.&nbsp;I&nbsp;had&nbsp;a&nbsp;hunch&nbsp;that&nbsp;gzip&nbsp;compression&nbsp;caused&nbsp;this.</span>
 </div>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>curl https://zacs.site/blog.html | gunzip</span>
-<span class='pre_line_wrap'># This time, "curl" sent that response to "gunzip" before printing it to the shell. "gunzip" decompresses files compressed with gzip. When I ran the command above, it printed raw HTML. This told me the server replied with the compressed "blog.html" file. By default, though, "curl" requests uncompressed files.</span>
+<span class='pre_line_wrap'>curl&nbsp;https://zacs.site/blog.html&nbsp;|&nbsp;gunzip</span>
+<span class='pre_line_wrap'>#&nbsp;This&nbsp;time,&nbsp;"curl"&nbsp;sent&nbsp;that&nbsp;response&nbsp;to&nbsp;"gunzip"&nbsp;before&nbsp;printing&nbsp;it&nbsp;to&nbsp;the&nbsp;shell.&nbsp;"gunzip"&nbsp;decompresses&nbsp;files&nbsp;compressed&nbsp;with&nbsp;gzip.&nbsp;When&nbsp;I&nbsp;ran&nbsp;the&nbsp;command&nbsp;above,&nbsp;it&nbsp;printed&nbsp;raw&nbsp;HTML.&nbsp;This&nbsp;told&nbsp;me&nbsp;the&nbsp;server&nbsp;replied&nbsp;with&nbsp;the&nbsp;compressed&nbsp;"blog.html"&nbsp;file.&nbsp;By&nbsp;default,&nbsp;though,&nbsp;"curl"&nbsp;requests&nbsp;uncompressed&nbsp;files.</span>
 </div>
 
 <p>If I got a compressed file without asking for it, what would I get if I asked for a compressed file? This command let me find out:</p>
 
 <div class='pre shell'>
-<span class='pre_line_wrap'>curl https://zacs.site/blog.html -H "Accept-Encoding: gzip"</span>
-<span class='pre_line_wrap'># This sent a GET request to my server, and told it to respond with compressed gzip files. Because "curl" does not unzip compressed files, this command should have printed a bunch of question marks to my shell. I got raw HTML.</span>
+<span class='pre_line_wrap'>curl&nbsp;https://zacs.site/blog.html&nbsp;-H&nbsp;"Accept-Encoding:&nbsp;gzip"</span>
+<span class='pre_line_wrap'>#&nbsp;This&nbsp;sent&nbsp;a&nbsp;GET&nbsp;request&nbsp;to&nbsp;my&nbsp;server,&nbsp;and&nbsp;told&nbsp;it&nbsp;to&nbsp;respond&nbsp;with&nbsp;compressed&nbsp;gzip&nbsp;files.&nbsp;Because&nbsp;"curl"&nbsp;does&nbsp;not&nbsp;unzip&nbsp;compressed&nbsp;files,&nbsp;this&nbsp;command&nbsp;should&nbsp;have&nbsp;printed&nbsp;a&nbsp;bunch&nbsp;of&nbsp;question&nbsp;marks&nbsp;to&nbsp;my&nbsp;shell.&nbsp;I&nbsp;got&nbsp;raw&nbsp;HTML.</span>
 </div>
 
 <p>Let me say this all again. When asked for a compressed file, my server replied with a plain text, unzipped one. When asked for a plain text, unzipped file, it replied with a compressed one.</p>

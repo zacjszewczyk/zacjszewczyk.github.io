@@ -302,7 +302,7 @@ class Markdown:
             return "</div>"
 
         if (self.__pre == True):
-            return "<span class='pre_line_wrap'>"+__line.replace("<", "&lt;").replace(">", "&gt;")+"</span>"
+            return "<span class='pre_line_wrap'>"+__line.replace("<", "&lt;").replace(">", "&gt;").replace(" ", "&nbsp;")+"</span>"
 
         if (self.__line_type_tracker[-1] == "raw"):
             return __line
