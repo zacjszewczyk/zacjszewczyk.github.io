@@ -384,7 +384,7 @@ if (__name__ == "__main__"):
             feed_fd.write(f"{' '*8}<item>\n{' '*12}<title>{each[0]}</title>\n{' '*12}<link>{each[1] if each[1][0] != '/' else config['meta_baseurl']+each[1][1:]}</link>\n{' '*12}<guid isPermaLink='true'>{each[1] if each[1][0] != '/' else config['meta_baseurl']+each[1][1:]}</guid>\n{' '*12}<pubDate>{strftime('%a, %d %b %Y %H:%M:%S',gmtime(mktime(strptime(each[2], '%Y-%m-%d %H:%M:%S-0400'))))} GMT</pubDate>\n{' '*12}<description>\n")
             if ("<html>" in each[-1]): feed_fd.write(f"{' '*16}&lt;p&gt;This post must be viewed online.&lt;/p&gt;\n")
             else:
-                feed_fd.write(f"{' '*16}"+'\n'.join(each[-1].split('\n')[5:-2]).replace('href=\"/','href=\"'+config["meta_baseurl"]).replace('src=\'/','src=\''+config["meta_baseurl"]).replace('<', '&lt;').replace('>', '&gt;')+f"\n{' '*16}<a href=\"{config['meta_baseurl']}/{each[3]}\">Permalink.</a>\n")
+                feed_fd.write(f"{' '*16}"+'\n'.join(each[-1].split('\n')[5:-2]).replace('href=\"/','href=\"'+config["meta_baseurl"]).replace('src=\'/','src=\''+config["meta_baseurl"]).replace('<', '&lt;').replace('>', '&gt;')+f"\n{' '*16}<a href=\"{config['meta_baseurl']}/{each[3]}\">Permalink.</a>\n".replace('<', '&lt;').replace('>', '&gt;'))
             feed_fd.write(f"{' '*12}</description>\n{' '*8}</item>\n")
 
         # Write closing HTML/XML and close the files
