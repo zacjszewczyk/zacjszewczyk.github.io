@@ -7,9 +7,18 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 06 May 2020 01:07:11 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2020 11:36:42 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Why I Chose a Monthly Release Schedule</title>
+            <link>https://zacs.site/blog/monthly-release.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/monthly-release.html</guid>
+            <pubDate>Fri, 08 May 2020 11:36:36 GMT</pubDate>
+            <description>
+                &lt;p&gt;If you looked at &lt;a href="https://zacs.site/projects.html#firstCrack"&gt;First Crack&amp;#8217;s&lt;/a&gt; internal commit history, you would see that most features take at most a few days to write. Even the entirety of &lt;a href="https://zacs.site/blog/first-crack-release-notes-0220.html"&gt;First Crack&amp;#8217;s rewrite&lt;/a&gt; happened over the course of a couple weeks, in the mornings before work and on the weekends. I have stuck with monthly releases since &lt;a href="https://zacs.site/blog/first-crack-release-notes-0619.html"&gt;June of last year&lt;/a&gt;, though, and today I want to explain why.&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>68 Bits of Unsolicited Advice</title>
             <link>https://kk.org/thetechnium/68-bits-of-unsolicited-advice/</link>
