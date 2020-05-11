@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 08 May 2020 12:30:03 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2020 12:36:12 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Announcing Swig, a Truly Micro Python Framework</title>
+            <link>https://zacs.site/blog/announcing-swig.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/announcing-swig.html</guid>
+            <pubDate>Mon, 11 May 2020 12:35:11 GMT</pubDate>
+            <description>
+                &lt;p&gt;Today I announce a new project: &lt;a href="https://github.com/zacjszewczyk/swig"&gt;Swig&lt;/a&gt;. Swig is a monolithic, multithreaded, micro web framework designed for an air-gapped intranet environment. Aside from Python 3, it has zero dependencies; just download and deploy. Out of the box, Swig supports IPv4 and IPv6, HTTP and HTTPS, block and chunked responses, and gzip compression. I encourage you to go through &lt;a href="https://github.com/zacjszewczyk/swig/blob/master/README.md"&gt;the README&lt;/a&gt; for more information, and to check out the code &lt;a href="https://github.com/zacjszewczyk/swig"&gt;on GitHub repo&lt;/a&gt;.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/announcing-swig.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Why I Chose a Monthly Release Schedule</title>
             <link>https://zacs.site/blog/monthly-release.html</link>

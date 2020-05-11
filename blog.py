@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/python3
 
 # Imports 
 from multiprocessing import Pool # Multiprocessing

@@ -1,0 +1,7 @@
+Type: original
+Title: Announcing Swig, a Truly Micro Python Framework
+Link: announcing-swig.html
+Pubdate: 2020/05/11 08:35:11
+Author: Zac Szewczyk
+
+Today I announce a new project: [Swig](https://github.com/zacjszewczyk/swig). Swig is a monolithic, multithreaded, micro web framework designed for an air-gapped intranet environment. Aside from Python 3, it has zero dependencies; just download and deploy. Out of the box, Swig supports IPv4 and IPv6, HTTP and HTTPS, block and chunked responses, and gzip compression. I encourage you to go through [the README](https://github.com/zacjszewczyk/swig/blob/master/README.md) for more information, and to check out the code [on GitHub repo](https://github.com/zacjszewczyk/swig).
