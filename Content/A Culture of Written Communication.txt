@@ -1,0 +1,7 @@
+Type: linkpost
+Title: Encouraging a Culture of Written Communication
+Link: https://www.mcls.io/blog/encouraging-a-culture-of-written-communication
+Pubdate: 2020/05/15 09:46:41
+Author: Zac Szewczyk
+
+Another interesting piece, among [several others](Engineering Blogs.txt), on encouraging writing within an organization. As I prepare to move on to a new role, I'm happy to report that my team's efforts to publish an internal written product on a regular schedule has gone well so far. I hope it continues in my absence, and I look forward to starting a similar project with my next team.

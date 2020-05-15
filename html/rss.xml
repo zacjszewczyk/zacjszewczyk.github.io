@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 13 May 2020 09:17:45 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 01:46:47 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Encouraging a Culture of Written Communication</title>
+            <link>https://www.mcls.io/blog/encouraging-a-culture-of-written-communication</link>
+            <guid isPermaLink='true'>https://www.mcls.io/blog/encouraging-a-culture-of-written-communication</guid>
+            <pubDate>Fri, 15 May 2020 13:46:41 GMT</pubDate>
+            <description>
+                &lt;p&gt;Another interesting piece, among &lt;a href="https://zacs.site/blog/engineering-blogs.html"&gt;several others&lt;/a&gt;, on encouraging writing within an organization. As I prepare to move on to a new role, I&amp;#8217;m happy to report that my team&amp;#8217;s efforts to publish an internal written product on a regular schedule has gone well so far. I hope it continues in my absence, and I look forward to starting a similar project with my next team.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/a-culture-of-written-communication.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>The Cost of Javascript Frameworks</title>
             <link>https://timkadlec.com/remembers/2020-04-21-the-cost-of-javascript-frameworks/</link>

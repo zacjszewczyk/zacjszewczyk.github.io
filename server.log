@@ -1,10 +1,6 @@
-127.0.0.1 - - [13/May/2020 05:16:27] GET / HTTP/1.1 200 -
-127.0.0.1 - - [13/May/2020 05:16:27] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [13/May/2020 05:16:27] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [13/May/2020 05:16:29] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [13/May/2020 05:16:29] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [13/May/2020 05:16:34] GET /blog/the-cost-of-javascript-frameworks.html HTTP/1.1 200 -
-127.0.0.1 - - [13/May/2020 05:16:34] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [13/May/2020 05:16:34] GET /assets/images/favicon.ico HTTP/1.1 200 -
-127.0.0.1 - - [13/May/2020 05:16:34] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-- - - [13/5/2020 5:16:36] Graceful shutdown - -
+127.0.0.1 - - [15/May/2020 09:46:48] GET / HTTP/1.1 200 -
+127.0.0.1 - - [15/May/2020 09:46:48] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [15/May/2020 09:46:48] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [15/May/2020 09:46:50] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [15/May/2020 09:46:50] GET /assets/main.css HTTP/1.1 200 -
+- - - [15/5/2020 9:47:0] Graceful shutdown - -
