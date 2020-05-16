@@ -2,6 +2,7 @@ Type: linkpost
 Title: How to Pick a Career (That Actually Fits You)
 Link: https://waitbutwhy.com/2018/04/picking-career.html
 Pubdate: 2019/09/13 07:40:24
+Category: Personal Development
 Author: Zac J. Szewczyk
 
 At over 16,000 words, Tim Urban has [some good advice for choosing a career](https://waitbutwhy.com/2018/04/picking-career.html). Back in college, I used to shake my head at all the lost students around me. One of my friends said it was unrealistic to expect kids, fresh out of high school, to know what they wanted to do for the rest of their lives. I argued that eighteen years was *plenty* of time to figure that out, because it's not that hard:

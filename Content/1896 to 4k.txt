@@ -2,6 +2,7 @@ Type: linkpost
 Title: Denis Shiryaev used neural networks to upscale a famous 1896 video to 4k quality
 Link: https://arstechnica.com/science/2020/02/someone-used-neural-networks-to-upscale-a-famous-1896-video-to-4k-quality/
 Pubdate: 2020/02/12 17:05:13
+Category: Tech
 Author: Zac Szewczyk
 
 This is such a cool idea: Denis Shiryaev used Gigapixel AI's neural network to upscale a classif video from 1896 into 4k; as Timothy Bee [points out](https://arstechnica.com/science/2020/02/someone-used-neural-networks-to-upscale-a-famous-1896-video-to-4k-quality/), a similar approach could then add color.  

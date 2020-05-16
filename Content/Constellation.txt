@@ -2,6 +2,7 @@ Type: original
 Title: Constellation
 Link: Constellation.htm
 Pubdate: 2014/04/22 14:53:08
+Category: Podcasts
 Author: Zac Szewczyk
 
 On April 21st, 2014, a tremor shook the podcasting world. Not a large one, but like an avalanche feeding on itself and growing ever-larger, this quake's onset marked the beginning of a significant change. Or at least, that's how I think we will look back on the otherwise unremarkable Monday afternoon Ben Alexander, Jamie Ryan, Lorenzo Guddemi, and Sid O'Neill launched [Constellation](http://constellation.fm).

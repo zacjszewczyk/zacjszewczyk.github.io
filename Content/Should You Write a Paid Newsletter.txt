@@ -2,6 +2,7 @@ Type: original
 Title: Should You Write a Paid Newsletter?
 Link: should-you-write-a-paid-newsletter.html
 Pubdate: 2019/11/05 06:49:22
+Category: Writing
 Author: Zac J. Szewczyk
 
 [Of course](https://en.wikipedia.org/wiki/Betteridge%27s_law_of_headlines), I think no--but a few people think yes: [investors see big money in the space](https://www.theatlantic.com/technology/archive/2019/10/substack-revue-email-newsletter-startups-tinyletter/599557/), and [it works out for some](https://indiemailer.com/read/why-you-should-start-a-paid-newsletter/). I think no, though--for most aspiring writers, anyway--and this is why: as I said in [*Keeping Up with Current Events*](My Morning Reads.txt), a different dynamic exists in this space:

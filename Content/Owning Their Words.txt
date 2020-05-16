@@ -2,6 +2,7 @@ Type: original
 Title: Owning Their Words
 Link: Owning Their Words.htm
 Pubdate: 2014/04/02 08:09:02
+Category: Writing
 Author: Zac Szewczyk
 
 When I started this website, I did so with the same intentions many decide to set up a blog these days: post often and about topics that interest me, and link to the work of others in between. In short, I set out to model my website after the likes of John Gruber, Shawn Blanc, and Marco Arment, back when the latter two published with much more regularity. By any measure, I succeeded: I wrote regularly, posted often, and occasionally made something interesting enough to spawn some intelligent discussions. I succeeded by adopting a proven format, even though I did little to improve upon it. Towards the end of last year, I began the difficult process of rectifying that.

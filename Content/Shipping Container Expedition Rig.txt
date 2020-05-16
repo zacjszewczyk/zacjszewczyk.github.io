@@ -2,6 +2,7 @@ Type: original
 Title: Dimensions for an Expedition Rig that Fits in a Shipping Container
 Link: shipping-container-expedition-rig.html
 Pubdate: 2019/08/15 06:46:46
+Category: Overlanding
 Author: Zac J. Szewczyk
 
 <style>table{margin:0 auto;margin-bottom:2em;border-collapse:collapse;table-layout:fixed}table,td,th,tr{border:.1em solid #000;padding:.5em}td{color: black}td:hover{background-color:#cfcfcf}.highlight{background-color:#f4f186}</style>

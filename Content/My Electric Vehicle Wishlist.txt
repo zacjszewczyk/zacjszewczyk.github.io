@@ -2,6 +2,7 @@ Type: original
 Title: My Electric Vehicle Wishlist
 Link: my-electric-vehicle-wishlist.html
 Pubdate: 2020/01/22 08:03:35
+Category: Overlanding
 Author: Zac J. Szewczyk
 
 I spent a fair bit of time [knocking](Tesla Cybertruck.txt) electric vehicles [last month](Why Teslas Are Bad at Towing.txt), so I thought I would spend some time talking about the things I want to see in one.

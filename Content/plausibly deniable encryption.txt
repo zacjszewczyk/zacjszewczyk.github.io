@@ -2,6 +2,7 @@ Type: linkpost
 Title: plausibly deniable encryption
 Link: https://spacetime.dev/plausibly-deniable-encryption
 Pubdate: 2020/02/27 07:11:30
+Category: Cybersecurity
 Author: Zac Szewczyk
 
 A fascinating read, especially as someone who investigates and architects secure systems for a living. See also, [*encrypting secrets in memory*](https://spacetime.dev/encrypting-secrets-in-memory).

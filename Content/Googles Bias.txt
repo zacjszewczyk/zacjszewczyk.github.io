@@ -2,6 +2,7 @@ Type: linkpost
 Title: An Examination of Google's Bias
 Link: https://www.cjr.org/tow_center/google-news-algorithm.php
 Pubdate: 2019/05/13 17:42:55
+Category: Politics
 Author: Zac Szewczyk
 
 Nicholas Diakopoulos, at the Columbia Journalism Review, wrote a fascinating piece on Google's growing influence over the news and its bias for left-leaning sources:

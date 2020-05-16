@@ -2,6 +2,7 @@ Type: original
 Title: First Crack Release Notes, February 2020
 Link: first-crack-release-notes-0220.html
 Pubdate: 2020/02/28 08:05:41
+Category: Programming
 Author: Zac Szewczyk
 
 I had a busy start to the year. Between [traveling](Holiday Fitness.txt) and work, I did not have enough time to finish the titanic task I had given myself: rewriting First Crack. When it came time to post the January release notes, then, I did not have anything ready; today I do.

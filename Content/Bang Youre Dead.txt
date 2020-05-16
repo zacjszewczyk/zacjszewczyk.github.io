@@ -2,6 +2,7 @@ Type: original
 Title: Bang, You're Dead. Signed, Tim Cook.
 Link: Bang Youre Dead.htm
 Pubdate: 2013/06/12 21:12:27
+Category: Tech
 Author: Zac Szewczyk
 
 Almost every time Apple releases a new version of iOS, someone has the [Marco Arment "Well, shit" moment](https://twitter.com/search?q=shit%20from%3Amarcoarment&src=typd). The time, most prominently, it was [1Password's](https://agilebits.com/onepassword) turn, although other small, one-off app developers likely had similar reactions throughout the keynote.

@@ -2,6 +2,7 @@ Type: linkpost
 Title: Move Fast & Roll Your Own Crypto
 Link: https://theintercept.com/2020/04/03/zooms-encryption-is-not-suited-for-secrets-and-has-surprising-links-to-china-researchers-discover/)
 Pubdate: 2020/04/03 08:37:38
+Category: Programming
 Author: Zac Szewczyk
 
 Micah Lee, writing for The Intercept, in [*Zoom’s Encryption Is "Not Suited for Secrets" and Has Surprising Links To China, Researchers Discover*](https://theintercept.com/2020/04/03/zooms-encryption-is-not-suited-for-secrets-and-has-surprising-links-to-china-researchers-discover/):

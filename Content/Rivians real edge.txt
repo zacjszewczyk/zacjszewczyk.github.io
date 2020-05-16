@@ -2,6 +2,7 @@ Type: original
 Title: Rivian's Real Edge
 Link: rivians-real-edge.html
 Pubdate: 2020/01/08 07:41:46
+Category: Overlanding
 Author: Zac J. Szewczyk
 
 James Temple, writing for MIT Technology Review in [*The Rivian pickup's real edge over Tesla's Cybertruck isn't its battery*](https://www.technologyreview.com/s/614995/the-rivian-pickups-real-edge-over-teslas-cybertruck-isnt-its-battery/), emphasis mine: 

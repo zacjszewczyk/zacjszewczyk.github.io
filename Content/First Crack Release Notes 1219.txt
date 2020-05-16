@@ -2,6 +2,7 @@ Type: original
 Title: First Crack Release Notes, December 2019
 Link: first-crack-release-notes-1219.html
 Pubdate: 2019/12/31 06:41:36
+Category: Programming
 Author: Zac J. Szewczyk
 
 I spent a lot of time on [First Crack](/projects.html#firstCrack) this month. Writing [last month's](First Crack Release Notes 1119.txt) release notes pushed me to stop dragging my feet, and I made some great progress. 

@@ -2,6 +2,7 @@ Type: original
 Title: Go Ahead, Write About that Again
 Link: Write About that Again.htm
 Pubdate: 2013/05/31 14:22:09
+Category: Writing
 Author: Zac Szewczyk
 
 For the past week or so, I've been on a bit of a writing binge. With school finally done for the summer, I suddenly found myself with a lot of free time I quickly filled with writing at every possible moment. I started and finished [*Nickelodeon's Experiment*](Nickelodeon's Experiment.txt) over the first six days, and wrote a number of much smaller articles and link posts since then. All in all, it's been a great few days.

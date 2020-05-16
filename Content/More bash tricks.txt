@@ -2,6 +2,7 @@ Type: linkpost
 Title: More bash tricks
 Link: https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash
 Pubdate: 2019/10/21 08:06:49
+Category: Programming
 Author: Zac J. Szewczyk
 
 Jude Robinson [over at Coderwall](https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash) posted quick fixes for two long-time annoyances with bash, one for tab completion--case insensitivity and having to double-tap the Tab key to view partial matches--along with what I will call contextual command history: the ability to type `cd` and then use the arrow keys to work through all previous entries that started with `cd`. Finally.

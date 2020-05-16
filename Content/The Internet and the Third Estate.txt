@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Internet and the Third Estate
 Link: https://stratechery.com/2019/the-internet-and-the-third-estate/
 Pubdate: 2019/10/23 06:57:31
+Category: Politics
 Author: Zac J. Szewczyk
 
 Ben Thompson, likening Facebook to the printing press:

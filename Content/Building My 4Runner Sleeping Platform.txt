@@ -2,6 +2,7 @@ Type: original
 Title: Building My 4Runner Sleeping Platform
 Link: building-my-4runner-sleeping-platform.html
 Pubdate: 2019/09/20 08:19:49
+Category: Overlanding
 Author: Zac J. Szewczyk
 
 I chose the 4Runner for [many reasons](Choosing an Adventure Rig.txt), and in part because I could take it off-road without expensive upgrades. I needed it to do more than just take me to cool places, though: I needed it to support me once I got out there, too. Because I had set my sights on the East Coast, I focused on [gear to make that trip safer and more fun](Outfitting My 4Runner for Adventure.txt) first, rather than new tires, bumpers, and recovery tools. As part of that process, I built a storage system and sleeping platform in my trunk. Today I want to talk about its conception, design, and construction.  

@@ -2,6 +2,7 @@ Type: original
 Title: Defining an Industry
 Link: Defining an Industry.htm
 Pubdate: 2013/01/14 13:12:49
+Category: Tech
 Author: Zac Szewczyk
 
 Lately, I have been spending a lot of time thinking about disruption theory. I'm writing articles about podcasting, technology, and education, in which 5by5, Apple, and the likes of The Khan Academy are disrupting the incumbents in their respective industries to superb results. 5by5 proved the viability of business based on podcasts, and explosive growth in this space ensued as the medium gained increasingly widespread recognition outside of geek circles. This growth and Dan's business model set into motion a renaissance of sorts and provided the foundation for the advent of companies like 70 Decibels and The Mule Radio Syndicate, and many more to come.

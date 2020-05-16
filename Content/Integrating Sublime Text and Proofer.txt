@@ -2,6 +2,7 @@ Type: original
 Title: Integrating Sublime Text and Proofer
 Link: integrating-sublime-text-and-proofer.html
 Pubdate: 2019/05/08 13:36:27
+Category: Programming
 Author: Zac Szewczyk
 
 I wrote about [using Marked with Sublime Text](Integrating Sublime Text and Marked 2.txt) before I switched to [Proofer](/projects.html#proofer), so I wanted to take a minute to share the snippet that lets me use Sublime Text with Proofer now.

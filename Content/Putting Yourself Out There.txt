@@ -2,6 +2,7 @@ Type: original
 Title: Putting Yourself Out There
 Link: Putting Yourself Out There.htm
 Pubdate: 2012/11/28 15:04:27
+Category: Blogging
 Author: Zac Szewczyk
 
 When Marco Arment released [The Magazine](http://the-magazine.org) in early October, [the announcement](http://www.marco.org/2012/10/11/the-magazine) attracted the attention of [many](http://daringfireball.net/linked/2012/10/11/the-magazine) [prominent](http://www.loopinsight.com/2012/10/11/the-magazine/) [internet](http://shawnblanc.net/2012/10/the-magazine/) [writers](http://brooksreview.net/2012/10/the-magazine/), all of which spoke very enthusiastically about Marco's magazine initiative. A biweekly publication released through iOS's Newsstand, The Magazine featured articles from Guy English, Jason Snell, Alex Payne, and Michael Lopp in just [the first issue](http://the-magazine.org/1). [The second issue](http://the-magazine.org/2) attracted work from John Siracusa, Lex Friedman, and Gina Trapani, setting a precedent I believe Marco will be able to meet with each edition as many other excellent writers contribute their time and efforts to this publication.

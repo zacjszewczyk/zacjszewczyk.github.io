@@ -2,6 +2,7 @@ Type: original
 Title: The case for 3x
 Link: The Case for 3x.htm
 Pubdate: 2013/12/31 17:58:31
+Category: Podcasts
 Author: Zac Szewczyk
 
 The only thing I love more than listening to podcasts is writing about them. During [the last curfuffle](http://curiousrat.com/the-state-of-podcasting-2013) I wrote [*Podcasting State of the Union*](Podcasting State of the Union.txt) where I did my best to provide counterpoints for the flaws Harry Marks pointed out in the podcasting industry. To my delight, [many](https://twitter.com/imyke/status/387840995465105408) [agreed](https://twitter.com/caseyliss/status/387879318774620160) [with](https://twitter.com/mattalexand/status/387917466325622784) me. After a few days the heat died down though, and I did not expect to have another opportunity to discuss this topic for a while. Then Ben Brooks decided to stir the pot once more with [*Why Tech Podcasts Bother Me*](http://brooksreview.net/2013/12/podcasts-worries/), and [many](http://buildingtwenty.net/posts/podcasts) [responded](http://crateofpenguins.com/blog/2013-12-that-podcast-bombshell) with wildly different opinions. Perhaps most notably, Andrew Clark and Zac Cichy of [The Menu Bar](http://themenubar.net) surprised me in [episode thirty-four](http://themenubar.net/podcastfeed/tmb-ep034) by agreeing with the majority of Ben's points.

@@ -2,6 +2,7 @@ Type: original
 Title: Run Your Own Website
 Link: own-your-platform.html
 Pubdate: 2019/07/05 09:24:09
+Category: Blogging
 Author: Zac J. Szewczyk
 
 I go back and forth on running my own website. I love [working](Re Introducing First Crack.txt) [on](First Crack Release Notes 0619.txt) [First Crack](/projects.html#firstCrack), but that work can become trying. I have little time for [projects](/projects.html), and the more I spend coding, the less I [read](My Morning Reads.txt) and write. On net, though, I consider this [a worthy pursuit](http://blairreeves.me/2019/01/10/yes-you-should-blog/), and so I do not plan to move away from my setup any time soon. Many feel the same, and over the last few months in particular, I have seen a lot [more people](http://blairreeves.me/2019/03/08/taking-control-of-your-internet/) express this on [websites of their own](http://john.ankarstrom.se/html/). I would like to add my voice to theirs today.

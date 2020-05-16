@@ -2,6 +2,7 @@ Type: linkpost
 Title: Unsplash
 Link: http://www.unsplash.com
 Pubdate: 2013/05/31 14:39:51
+Category: Uncategorized
 Author: Zac Szewczyk
 
 Up until now, I have, with but [one exception](Smart & Funny.txt), abstained from writing a single article containing anything but simple text. That exception, a video from Merlin Mann, Scott Simpson, and Adam Lisagor titled [Smart and Funny](http://vimeo.com/1212142), was just too good to resist: I couldn't bear the thought of not posting it, of not sharing this hilarious video with everyone that happened to visit my site.

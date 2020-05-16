@@ -2,6 +2,7 @@ Type: original
 Title: The Podcast Network Glory Days
 Link: The Podcast Network Glory Days.htm
 Pubdate: 2014/06/20 08:29:53
+Category: Podcasts
 Author: Zac Szewczyk
 
 Following Mike Monteiro's recent announcement that he would effectively shutter Mule Radio Syndicate due to its untenable demand on his time, many wrote short farewells to what they considered a great podcast network. Marco Arment, however, [had something very interesting to say](http://www.marco.org/2014/05/29/mule-radio-pretty-much-dying) regarding the future of this now-popular business model:

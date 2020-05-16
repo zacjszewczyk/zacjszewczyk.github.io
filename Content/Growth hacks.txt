@@ -2,6 +2,7 @@ Type: linkpost
 Title: Growth hacks: coffee with an experienced engineer you don't know
 Link: https://blog.pragmaticengineer.com/growth-hacks-coffee-with-an-engineer/
 Pubdate: 2019/09/19 07:05:28
+Category: Professional Development
 Author: Zac J. Szewczyk
 
 Gergely Orosz has some great advice for professional networking, for people who don't do networking well.

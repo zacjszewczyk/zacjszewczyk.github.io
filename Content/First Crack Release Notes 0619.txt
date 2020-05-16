@@ -2,6 +2,7 @@ Type: original
 Title: First Crack Release Notes, June 2019
 Link: first-crack-release-notes-0619.html
 Pubdate: 2019/06/30 06:36:10
+Category: Programming
 Author: Zac J. Szewczyk
 
 Since [re-releasing First Crack](Re Introducing First Crack.txt), I have made some great progress on the project. Not enough for version 2.0, though, so I spent the last few days thinking about how I wanted to post new versions. In short, I decided not to.  

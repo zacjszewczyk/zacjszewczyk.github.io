@@ -2,6 +2,7 @@ Type: original
 Title: First Crack Release Notes, March 2020
 Link: first-crack-release-notes-0320.html
 Pubdate: 2020/04/01 07:39:06
+Category: Programming
 Author: Zac Szewczyk
 
 In [last month's release notes](First Crack Release Notes 0220.txt), I talked about First Crack's rewrite: the things I set out to accomplish, the changes I made, and their performance costs. Although a simple fix later slashed First Crack's runtime, I waited to post the code until I could talk about a few things here.

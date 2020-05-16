@@ -2,6 +2,7 @@ Type: linkpost
 Title: Huawei and Managing 5G Risk
 Link: https://www.lawfareblog.com/huawei-and-managing-5g-risk
 Pubdate: 2019/04/10 12:29:11
+Category: Tech
 Author: Zac Szewczyk
 
 I planned to include a link to this piece in [*Proxy Innovation*](Proxy Innovation.txt). As that article grew from a brief comment into a more in-depth rundown of the U.S.-Huawei situation, though, I pulled Herb Lin's [*Huawei and Managing 5G Risk*](https://www.lawfareblog.com/huawei-and-managing-5g-risk) out for its own post.

@@ -2,6 +2,7 @@ Type: linkpost
 Title: Free works
 Link: http://www.marco.org/#fn:1
 Pubdate: 2013/03/19 16:15:03
+Category: Tech
 Author: Zac Szewczyk
 
 An interesting article by Marco Arment on the causes and effects of free apps and services.

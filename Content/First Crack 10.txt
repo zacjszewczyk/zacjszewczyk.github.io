@@ -2,6 +2,7 @@ Type: original
 Title: First Crack 1.0
 Link: First Crack 10.htm
 Pubdate: 2014/07/15 16:32:37
+Category: Programming
 Author: Zac Szewczyk
 
 Since starting this website nearly two years ago, I have written specifically about the engine that runs it exactly four times: in [Introducing First Crack](Introducing First Crack.txt), I detailed my long journey to the realization that I needed to build something completely my own, from the ground up; later, I talked about some of my creation's niceties in [First Crack in Practice](First Crack in Practice.txt), before outlining the changes an innocuous redesign brought about in [First Crack's Complete Overhaul](Complete Overhaul.txt). Finally, some eleven months later, I returned to once again briefly run down my latest updates in [Changes to First Crack](Changes to First Crack.txt). Since then, however, for the last six months, I have not said a peep. Today, that changes with the release of First Crack 1.0 to the public.

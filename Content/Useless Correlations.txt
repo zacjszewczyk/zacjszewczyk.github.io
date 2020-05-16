@@ -2,6 +2,7 @@ Type: original
 Title: Useless Correlations
 Link: Useless Correlations.htm
 Pubdate: 2013/03/20 09:57:02
+Category: Tech
 Author: Zac Szewczyk
 
 Every time I hear someone predicting the future of a company--more often than not Apple--I can't help but think of a passage I came across a while back, probably in [Basic Economics by Thomas Sowell](http://www.amazon.com/Basic-Economics-Common-Sense-Economy/dp/B0058M6SAG/ref=sr_1_2). The passage read something like this:

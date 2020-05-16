@@ -2,6 +2,7 @@ Type: linkpost
 Title: Inside the Microsoft team tracking the world's most dangerous hackers
 Link: https://www.technologyreview.com/s/614646/inside-the-microsoft-team-tracking-the-worlds-most-dangerous-hackers/
 Pubdate: 2019/11/08 15:34:08
+Category: Cybersecurity
 Author: Zac J. Szewczyk
 
 Patrick O'Neill did [a nice job](https://www.technologyreview.com/s/614646/inside-the-microsoft-team-tracking-the-worlds-most-dangerous-hackers/) explaining why Microsoft, as an organization, does threat intelligence so well. Yes, it has piles of money and legions of smart people to throw at this problem, but Microsoft's biggest leg up over everyone else is the massive data flow its ubiquity enables. This means its Threat Intelligence Center sees things no one else does, and has the context to identify malicious activity that--even given the same raw data--no one else would know to flag. Those looking to step into the cybersecurity realm, even if just to beef up their home network, should take note. 

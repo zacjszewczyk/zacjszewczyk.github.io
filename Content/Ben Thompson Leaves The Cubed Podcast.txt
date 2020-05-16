@@ -2,6 +2,7 @@ Type: linkpost
 Title: Ben Thompson Leaves The Cubed Podcast
 Link: http://stratechery.com/2013/site-announcement-im-leaving-cubed-podcast/
 Pubdate: 2013/10/14 16:00:31
+Category: Podcasts
 Author: Zac Szewczyk
 
 This is how one should leave a podcast, respectful of both his listeners and co-hosts alike. [Not that I'm pointing any fingers](Regarding The Talk Show.txt).

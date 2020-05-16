@@ -2,6 +2,7 @@ Type: original
 Title: A Square Peg
 Link: a-square-peg.html
 Pubdate: 2020/04/06 07:14:21
+Category: Programming
 Author: Zac Szewczyk
 
 [*Please don't write your documentation in Markdown*](https://buttondown.email/hillelwayne/archive/please-dont-write-your-documentation-in-markdown/) got a lot of [attention](https://news.ycombinator.com/item?id=22675165) last month, when Hillel Wayne said something both reasonable and familiar: Markdown's simple syntax does not lend itself to complex technical documents. [Antonio Zolotukhin made a similar point back in 2018](https://mister-gold.pro/posts/en/asciidoc-vs-markdown/), as others have before him, and more will in the future. Their argument makes sense; the idea that this is 1) a problem, and 2) needs addressing, however, does not.

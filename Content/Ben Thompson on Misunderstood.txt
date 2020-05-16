@@ -2,6 +2,7 @@ Type: original
 Title: Ben Thompson on Apple's New *Misunderstood* Commercial
 Link: Ben Thompson on Misunderstood.htm
 Pubdate: 2013/12/17 14:32:31
+Category: Tech
 Author: Zac Szewczyk
 
 Having updated [his article on Apple's latest ad](http://stratechery.com/2013/misunderstood/), Ben Thompson finally delved in to the reason so many fell in love with this commercial in the first place, and [the reason](https://twitter.com/drewcosten/status/412928515395158017) so many have talked about it. As I said [earlier](Misunderstood.txt) this video hits so close to home because it does not focus on feature comparisons or implausible situations necessitating eighteen processors, but instead on the experiences Apple's devices enable:

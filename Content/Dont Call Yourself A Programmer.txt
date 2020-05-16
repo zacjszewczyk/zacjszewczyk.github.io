@@ -2,6 +2,7 @@ Type: linkpost
 Title: Don't Call Yourself A Programmer, And Other Career Advice
 Link: https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/
 Pubdate: 2019/07/07 08:52:12
+Category: Programming
 Author: Zac J. Szewczyk
 
 Another gem I [re-discoved](TBT Writing vs writing.txt) putting together my personal development initiative, Patrick McKenzie has some phenomenal advice for those just starting their careers. Out of all of his great work, if you read just one article, read this one. My favorite point: "You radically overestimate the average skill of the competition because of the crowd you hang around with." This hit me like a freight train the first time I read it, and I did well to remember it during college and my first year as an Officer. 

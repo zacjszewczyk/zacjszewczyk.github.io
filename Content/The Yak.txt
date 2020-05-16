@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Ubiquitous Yak for the Discerning Obsessive
 Link: http://joe-steel.tumblr.com/post/73795711747/the-ubiquitous-yak-for-the-discerning-obsessive
 Pubdate: 2014/01/20 22:27:40
+Category: Writing
 Author: Zac Szewczyk
 
 When Sid O'Neill posted [*Farewell to Text Files*](http://crateofpenguins.com/blog/farewell-to-text-files), I read his article but really had nothing to say on the topic. One person left the world of plain text files--"so what?", as Dan and Merlin love saying. But Joe Steele's response, cited above, made me reconsider Sid's predicament: the low barrier to entry plain text afforded him made testing new writing apps too easy to resist, and so Sid spent more time experimenting than working. At some point in our lives, we have all gone through something similar: I did last month when I [disavowed gaming](Disavow Gaming.txt) and pledged myself to the constant betterment of this site. Abandoning text files was Sid's equivalent to my denunciation of gaming. Framed this way, I applaud Sid's decision: if leaving this format is what it takes for you to write more, then by all means, carry on. You could do much worse than "trading" versatility for productivity.

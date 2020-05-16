@@ -2,6 +2,7 @@ Type: original
 Title: Fail by Default
 Link: fail-by-default.html
 Pubdate: 2020/05/04 08:54:21
+Category: Programming
 Author: Zac Szewczyk
 
 I happened across [*The Law of Requisite Variety*](http://pespmc1.vub.ac.be/REQVAR.html) the other day, which states that a system for which **D** possible disruptions exist requires **R** countermeasures to keep itself stable, where **R** >= **D**. Having spent some time on [my projects'](/projects.html) more [theoretical side](https://www.hillelwayne.com/post/hyperproperties/) lately, I found this idea at once interesting and then familiar. Today, I want to talk about the simple way I apply this concept to my code, as a way to architect more reliable programs.

@@ -2,6 +2,7 @@ Type: original
 Title: Sequential Exeuction, Multiprocessing, and Multithreading IO-Bound Tasks in Python
 Link: linear-python.html
 Pubdate: 2020/01/25 12:40:21
+Category: Programming
 Author: Zac J. Szewczyk
 
 <html>

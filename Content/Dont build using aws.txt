@@ -2,6 +2,7 @@ Type: linkpost
 Title: &#91;Don't build&#93; a static serverless website using S3 and CloudFront
 Link: https://sanderknape.com/2020/02/building-a-static-serverless-website-using-s3-cloudfront/
 Pubdate: 2020/02/24 07:29:06
+Category: Programming
 Author: Zac Szewczyk
 
 Sander will get you up and running, probably, but [don't use Amazon Web Services](Dont Use Amazon Web Services.txt). [Have a website](Own Your Platform.txt), but [use the much more user friendly Google Firebase to host it for free](How to Own Your Platform.txt).

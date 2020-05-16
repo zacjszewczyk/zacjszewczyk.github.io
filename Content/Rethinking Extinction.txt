@@ -2,6 +2,7 @@ Type: linkpost
 Title: Rethinking Extinction
 Link: https://aeon.co/essays/we-are-not-edging-up-to-a-mass-extinction
 Pubdate: 2019/09/16 07:07:51
+Category: Uncategorized
 Author: Zac J. Szewczyk
 
 Stewart Brand, with a fascinating look at the results of conservation efforts amidst cries that the sky is falling:
