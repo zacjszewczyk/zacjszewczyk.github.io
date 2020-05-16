@@ -2,6 +2,7 @@ Type: original
 Title: Bring it in, Betaworks
 Link: Digg Reader.htm
 Pubdate: 2013/07/01 21:45:58
+Category: Tech
 Author: Zac Szewczyk
 
 Two days ago Betaworks--creator of the popular iOS game Dots, the company behind Digg's rise back to fame, and proud owner of Instapaper--opened Digg Reader to the public after greatly accelerating its development following the announcement of Google Reader's impending demise. Especially for a product upon which work was not schedule to begin until the end of this year, Digg Reader is a very impressive entrant into the RSS reader market.

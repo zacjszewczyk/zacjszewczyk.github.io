@@ -2,6 +2,7 @@ Type: original
 Title: Instapaper 5.2
 Link: Instapaper 52.htm
 Pubdate: 2014/05/09 17:43:49
+Category: Tech
 Author: Zac Szewczyk
 
 When Apple released iOS 7.1 to the public in early March, many heralded it as the version of iOS 7 that should have shipped last September in 2013; iOS 7.1 is what iOS 7 should have been. Faced with severe time constraints, however, the popular narrative paints a picture of Apple having no choice but to release what many would come to call a half-baked product or slip on their intended release date. Unsurprisingly, the desire to stick with the latter made the former a necessity, and thus we found ourselves with the oft-criticized iOS 7.

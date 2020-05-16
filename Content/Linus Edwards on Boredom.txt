@@ -2,6 +2,7 @@ Type: linkpost
 Title: Linus Edwards on Boredom
 Link: http://vintagezen.com/zen/2014/2/7/im-bored
 Pubdate: 2014/02/09 09:59:19
+Category: Motivation
 Author: Zac Szewczyk
 
 "Don't just complain that tech podcasts are boring, create your own tech podcast that you don't find boring. Don't just complain that most blogs are posting such boring echo chamber posts, post more interesting posts that explore new topics. That is what the great visionaries in history have done, fought the boredom and let it push them into areas that they didn't find boring. That's creativity, pushing the boundaries of what came before and creating new and interesting things."

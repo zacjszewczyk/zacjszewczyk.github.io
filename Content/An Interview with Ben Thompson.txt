@@ -2,6 +2,7 @@ Type: linkpost
 Title: An Interview with Ben Thompson
 Link: http://www.techinasia.com/stratechery-solo-ben-thompson-asia-apple-shifting-tides-online-media/
 Pubdate: 2014/04/18 07:14:11
+Category: Tech
 Author: Zac Szewczyk
 
 Josh Horwitz, writing for Tech in Asia, conducted a great interview with Ben Thompson about his decision to go solo, and his background as a writer in the tech sector. If you're still on the fence as to whether you should become a member of Stratechery or not, both this interview and [another article from The Next Web by Jon Russell](http://thenextweb.com/media/2014/04/16/tech-blog-stratechery-goes-freemium-ben-thompson-strikes-indie-writer/) on Ben's transition to independent writer ought to convince you. Ben knows what he's talking about: he has an impressive background that gives him fantastic insight into modern-day events within nearly every industry technology touches. And even at $30 a month--disregarding the existence of the two lower membership tiers at $5 and $10 a month--access to those insights is a steal.

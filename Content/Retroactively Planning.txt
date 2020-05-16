@@ -2,6 +2,7 @@ Type: original
 Title: Retroactively planning
 Link: Retroactively Planning.htm
 Pubdate: 2014/02/03 10:20:53
+Category: Tech
 Author: Zac Szewczyk
 
 Upon reaching a goal you cannot look back on the journey in search of the process that led you to success; you will invariably romanticize the past, shedding mediocre choices in a complimentary light, discounting difficult challenges, and misremembering strokes of genius in situations where there was none. In short, this exercise will ultimately only ensure that you never replicate any form of that success again. Rather than flying by the seat of your pants and relying on a postmortem to delineate good steps from bad, a much better approach would advocate starting with a solid and detailed plan, a well thought-out course of action, for you cannot go from the other way around and reasonably hope to make even mediocre achievements.

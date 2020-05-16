@@ -2,6 +2,7 @@ Type: linkpost
 Title: Invaluable
 Link: http://www.asymco.com/2014/03/18/invaluable/
 Pubdate: 2014/03/22 10:45:36
+Category: Tech
 Author: Zac Szewczyk
 
 A bit of a forgone conclusion at this point, but still worthwhile to have someone so skilled as Horace Dediu put the phone market into perspective, especially with regards to that upstart Apple. Come for the insight, but stay for his conclusion; that is, indeed, a mystery, and one that Apple has obviously solved.

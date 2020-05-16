@@ -2,6 +2,7 @@ Type: linkpost
 Title: Aaron Swartz on Blogs
 Link: http://www.aaronsw.com/weblog/stepback
 Pubdate: 2013/01/20 20:36:34
+Category: Uncategorized
 Author: Zac Szewczyk
 
 A few days ago in preparation for posting [*We Have Lost One of Our Own*](Aaron Swartz.txt), a short article I wrote eulogizing Aaron Swartz in response to the news that he had committed suicide, I spent some time perusing his work. This article, Take a Step Back, is one of the many I saved to Instapaper, and the one in which I found this interesting tidbit:

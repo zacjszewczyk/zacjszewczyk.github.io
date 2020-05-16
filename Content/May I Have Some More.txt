@@ -2,6 +2,7 @@ Type: original
 Title: Please, Sir, May I Have Some More?
 Link: May I Have Some More.htm
 Pubdate: 2014/01/07 21:51:18
+Category: Writing
 Author: Zac Szewczyk
 
 In my early days as a fledgling internet writer, back when I posted at blog-that-shall-not-be-named-dot-provider-dot-com, I worked hard to increase my readership. Taking lessons from anyone willing to give them, I delved into WordPress.com's fantastic blogging community and networked with other like-minded individuals. We read each others' articles, commented, and even planned to start a number of joint ventures together. Although in its infancy, even back in 2007 I also looked to drive traffic towards my work with podcast advertisements. As the years wore on I unfortunately moved away from these venues and on to Hacker News and Twitter, where I have remained to date with little to show for my efforts.

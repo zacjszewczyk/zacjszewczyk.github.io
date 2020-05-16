@@ -2,6 +2,7 @@ Type: original
 Title: Betaworks
 Link: Betaworks.htm
 Pubdate: 2013/05/10 11:42:14
+Category: Tech
 Author: Zac Szewczyk
 
 In 2012, Betaworks purchased Digg; a year later in 2013, the company [announced a revamped list of priorities](http://blog.digg.com/post/45355701332/were-building-a-reader) placing a [successor to Google Reader at the top](http://blog.digg.com/post/46251309499/whats-next), and acquired Instapaper a few months later. As Brian Bishop pointed out in [*Instapaper acquired by Betaworks, owner of Digg*](http://www.theverge.com/2013/4/25/4266980/instapaper-acquired-by-betaworks-owner-of-digg), the Instapaper-RSS reader combination uniquely positions Betaworks to emerge as a major player on the internet in the combing years. As an [extremely innovation-friendly company](http://blog.betaworks.com/post/48066217383/betas-work), I am very excited to see what Betaworks releases in the coming weeks and months. I have high hopes for the company, as I am sure many others do as well. And apparently, rightly so.

@@ -2,6 +2,7 @@ Type: original
 Title: Computer Programming as a Foreign Language
 Link: Kentucky Senate.htm
 Pubdate: 2014/02/03 16:41:47
+Category: Politics
 Author: Zac Szewczyk
 
 Just last week the Kentucky Senate passed a bill by which computer programming classes would count towards a student's foreign language requirement in high school. Although at first I wanted to see this as a boon for teenagers who would now have the ability to enter college or the workforce better technologically prepared, just as the bill's proponents and Jim Dalrymple, [who originally linked to this piece](http://www.loopinsight.com/2014/02/03/kentucky-senate-passes-bill-to-let-computer-programming-satisfy-foreign-language-requirement/) do, I'm not entirely sure this is a good thing after all.

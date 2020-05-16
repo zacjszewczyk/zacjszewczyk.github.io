@@ -2,6 +2,7 @@ Type: original
 Title: App Segmentation
 Link: App Segmentation.htm
 Pubdate: 2012/12/10 13:36:00
+Category: Tech
 Author: Zac Szewczyk
 
 In my previous article I talked about how I have begun to use my iPad increasingly often as a device to not only consume content, but also to generate it. I mentioned that I read almost every article in Instapaper and that I use Simplenote to write, but I did not delve any deeper into my iPad setup, nor did I go into too much detail in explaining the toolset I employ increasingly infrequently on my computer in the colophon. Taking after [John Gruber](http://daringfireball.net/colophon/) and [Shawn Blanc](http://shawnblanc.net/colophon/), these are the tools I use. First, on my iOS devices, as these are the computers I use most often these days. Not necessarily in any particular order,

@@ -2,6 +2,7 @@ Type: original
 Title: Reader's Waves
 Link: Readers Waves.htm
 Pubdate: 2013/03/15 14:41:05
+Category: Tech
 Author: Zac Szewczyk
 
 Quite a bit of discussion has taken place over the past forty-eight hours following the news that Google Reader will fade away on June 1st. Some have focused on the implications the announcement will have on the RSS spec, but a great deal--possibly even a majority--of the discussion has taken place around blog readerships. David Sparks's article [*The RSS Apocalypse*](http://macsparky.com/blog/2013/3/the-rss-apocalypse) and Aldo Cortesi's piece [*Google, destroyer of ecosystems*](http://corte.si/posts/socialmedia/rip-google-reader.html) stuck out in particular, where the two bloggers conveyed a similar concern: the potential loss of a huge swath of readers either unable or unwilling--or both--to find an alternative method for subscribing to their websites. But as Shawn Blanc said at the end of [*Goodbye Google Reader*](http://www.shawnblanc.net/2013/03/goodbye-google-reader/), "Only time will tell, and, in truth, those subscribers who don't port their feed to another service likely weren't all that engaged of readers anyway."

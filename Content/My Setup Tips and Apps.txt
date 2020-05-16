@@ -2,6 +2,7 @@ Type: linkpost
 Title: Mac OS X: My Setup Tips & App Recommendations
 Link: http://thetypist.com/338/mac-os-x-setup-tips-app-recommendations/
 Pubdate: 2014/01/11 11:45:54
+Category: Tech
 Author: Zac Szewczyk
 
 On the topic of writers I have only just recently discovered, [The Typist](http://twitter.com/typistX) wrote a great article about his conversion to a Mac: the motivations that preluded it and the software that facilitated his switch. I learned a few new tricks and found some cool new software here, so [while I may disagree](Testing the Apple Tax.txt) with his statements that one could purchase a PC approximately 150% faster than a MacBook Pro for slightly less, I enjoyed his article and look forward to seeing more from him in the future.

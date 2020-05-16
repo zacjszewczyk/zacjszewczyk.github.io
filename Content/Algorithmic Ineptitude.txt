@@ -2,6 +2,7 @@ Type: original
 Title: Algorithmic Ineptitude
 Link: Algorithmic Ineptitude.htm
 Pubdate: 2014/02/05 10:06:05
+Category: Writing
 Author: Zac Szewczyk
 
 When I sat down to write this yesterday afternoon, two of the top five articles on Hacker News were not actually articles at all: the first pointed to a Microsoft page extolling the virtues of their new CEO Satya Nadella, below which the fifth "story" linked to Firefox 27's release notes. In no universe would any person categorize either of these pages as something that "gratifies one's intellectual curiosity." In fact, I would say we can look forward to watching the former appear "on TV news" ad nauseam in the coming days and, perhaps, weeks as well. Nevertheless, both climbed out of obscurity and to the front page of this popular site despite violating the [Hacker News submission guidelines](http://ycombinator.com/newsguidelines.html) not because someone decided Satya needed more publicity, or that Mozilla releasing the twenty-seventh iteration of the new Internet Explorer was in any way noteworthy, but because an algorithm put them there.

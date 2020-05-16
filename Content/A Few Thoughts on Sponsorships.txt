@@ -2,6 +2,7 @@ Type: original
 Title: A Few Thoughts on Sponsorships
 Link: A Few Thoughts on Sponsorships.htm
 Pubdate: 2014/03/18 11:02:15
+Category: Writing
 Author: Zac Szewczyk
 
 Within the last week there has been a great deal of talk about sponsorships: [Marco Arment ended sponsored blog posts](http://www.marco.org/2014/03/14/ending-sponsorships), citing waning interest and falling click-through rates. [Sam Hutchings chimed in on the debate regarding bias](http://blog.samhutchings.co/2014/03/15/lets-talk-about-sponsorship/) and how it could, theoretically, adversely affect credibility. Josh Ginter, [writing in response to Marco's aforementioned post](http://www.thenewsprint.co/blog/marco-ending-sponsorships-has-lasting-implications), posited that Marco's decision might not be an anomaly, but indicative of a disturbing trend in the blogging space. I don't see this topic elevating any further from here, so I might as well chime in now.

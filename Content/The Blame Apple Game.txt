@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Blame Apple Game
 Link: http://brooksreview.net/2013/11/the-blame-apple-game/
 Pubdate: 2013/12/06 13:47:02
+Category: Tech
 Author: Zac Szewczyk
 
 Another unsurprisingly great article from Ben Brooks, and my favorite piece of his for quite some time. I absolutely love how he describes PandoDaily's post: in a day and age where everyone pulls their punches for fear of offending someone by implying one thing while unconsciously omitting something else and finally ending the sentence with a period, Ben's candid characterization is a breath of fresh air. Made all the more worthwhile by his ultimate point, I could not recommend that you go read Ben's article and subscribe to his site more strongly. I have been [critical](An Annoyance Driven Blog Post.txt) of his [views](Goodbye Dropbox.txt) in the past, but at the end of the day his site is consistently one of my favorites.

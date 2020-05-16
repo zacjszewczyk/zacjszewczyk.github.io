@@ -2,6 +2,7 @@ Type: original
 Title: Community
 Link: Community.htm
 Pubdate: 2014/01/16 07:49:09
+Category: Writing
 Author: Zac Szewczyk
 
 Many have called the blogging racket an echo chamber, wherein one popular writer says something mildly interesting and everyone else immediately links to that article with trite, nuanced comments tacked on after a paragraph or two taken in excerpt. Anyone following [Joshua Ginter](https://twitter.com/joshuaginter) and I over the last few days would have seen us epitomize the circular nature of that stereotype in our recent exchanges, albeit sans popularity: first, I wrote [*Doing Monetization Well*](Doing Monetization Well.txt), and Josh replied with a thoughtful piece titled [*Cashing In A Blog*](http://www.thenewsprint.co/blog/cashing-in-the-blog). Continuing the cycle, I then published [*Tangible Goals*](Cashing In A Blog.txt), to which Josh wrote in response with [*Zac Szewczyk's Tangible Goals*](http://www.thenewsprint.co/blog/zac-szewczyks-tangible-goals). However, we did much more than frivolously compliment each other.

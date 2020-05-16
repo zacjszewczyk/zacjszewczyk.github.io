@@ -2,6 +2,7 @@ Type: linkpost
 Title: A Tale of Two Markdowns
 Link: http://crateofpenguins.com/blog/tale-of-two-markdowns
 Pubdate: 2014/09/09 11:55:59
+Category: Tech
 Author: Zac Szewczyk
 
 Possible the only impartial take on the recent Markdown flareup you will find anywhere, Sid O'Neill took this opportunity to make a great work of prose rather than a declaration of support in favor of one side or the other. Take this opportunity to enjoy an article for the excellent craft it contains, rather than the point it attempts to make.

@@ -2,6 +2,7 @@ Type: original
 Title: Changing my Workflow with Drafts and Reeder
 Link: Drafts and Reeder.htm
 Pubdate: 2013/03/14 23:33:45
+Category: Tech
 Author: Zac Szewczyk
 
 I have wanted to overhaul my workflow for a long while now. Feedler Pro, my go-to RSS reader, has gone quite some time without a significant update and is beginning to show its age. Just last night, for example, I spent nearly ten minutes wrestling with it in an attempt at reading a batch of articles curiously marked as read for no apparent reason. Simplenote's syncing idiosyncrasies have also become harder and harder to ignore as well, an issue that came to a head this morning when nearly a hundred deleted notes reappeared in the desktop client. Neither a new occurrence nor an especially irregular one, curious hiccups such as this one are one of the few things I can actually depend on Simplenote's wholly inconsistent syncing platform for. These two mishaps joined forces with [Google's recent announcement putting a finite lifespan on the industry's most popular feed reader](http://googleblog.blogspot.com/2013/03/a-second-spring-of-cleaning.html) to create the perfect storm, finally prompting me to look in to some alternatives.

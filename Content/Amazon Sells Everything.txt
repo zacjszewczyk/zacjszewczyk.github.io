@@ -2,6 +2,7 @@ Type: linkpost
 Title: Amazon Sells Everything
 Link: http://www.amazon.com/Images-SI-Uranium-Ore/dp/B000796XXM/ref=sr_1_9?ie=UTF8&qid=1403704779&sr=8-9&keywords=uranium+ore
 Pubdate: 2014/06/30 06:52:51
+Category: Tech
 Author: Zac Szewczyk
 
 Hat-tip to Hayes Brown for [tweeting](https://twitter.com/HayesBrown/status/481643519161823232) this link, apparently Amazon does, indeed, sell everything--including, it seems, radioactive uranium ore. This surprisingly unsurprising development is not the best part though, but rather the "Customer Questions and Answers" section as well as the top reviews; in a word, hilarious.

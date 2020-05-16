@@ -2,6 +2,7 @@ Type: original
 Title: Reconciling Microsoft
 Link: Reconciling Microsoft.htm
 Pubdate: 2014/04/15 08:05:43
+Category: Tech
 Author: Zac Szewczyk
 
 Following the BUILD conference, there has been a great deal of uncharacteristically positive talk within the Apple sphere with regards to the products and services Microsoft recently unveiled there, as well as the new direction these announcements seem to indicate. In particular, Myke Hurley, Stephen Hacket, and Federico Viticci of The Prompt had an interesting discussions on these topics in the forty-second episode of their podcast, [Beautiful Flower](http://5by5.tv/prompt/42), as did John Gruber and Ed Bott in episode [seventy-eight of The Talk Show](http://muleradio.net/thetalkshow/78/), recorded live at BUILD. These two shows forced me to rethink the class of writers I follow, for I can no longer confidently state that Apple is the only company making anything interesting. So I set out to find some writers from the other side of the fence--onces not wholly focused on the iOS ecosystem, that could provide valuable insight into a company quickly regaining its relevance in today's tech scene. Or at least, I decided to; I have yet to succeed.

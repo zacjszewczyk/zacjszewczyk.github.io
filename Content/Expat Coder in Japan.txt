@@ -2,6 +2,7 @@ Type: linkpost
 Title: Two years of life as an expat coder in middle-of-no-where Japan
 Link: http://www.bemmu.com/two-years-of-candy
 Pubdate: 2013/05/01 16:37:47
+Category: Programming
 Author: Zac Szewczyk
 
 After reading this article, I went back and forth trying to decide whether or not I should link to it. The piece was not particularly remarkable in any way, after all. Regardless of how I justified not writing about it though, I kept coming back to this story until I eventually gave in. It's a touching story tinged with the melancholy undertone of existential ennui. Having spent months away from home multiple times in the past, I can empathize with the the author's sentiment.

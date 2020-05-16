@@ -2,6 +2,7 @@ Type: original
 Title: Receipt Paper
 Link: Receipt Paper.htm
 Pubdate: 2013/01/15 18:32:50
+Category: Tech
 Author: Zac Szewczyk
 
 Interesting, all the things people are starting to do with receipt paper. Sean Hollister tells of a [DC restaurant that provides a collection of the latest news items printed on receipt paper](http://mobile.theverge.com/2013/1/13/3873950/dc-restaurant-hands-out-miniature-newspaper-when-you-ask-for-the-check) when you ask for the check. Also mentioned in this article is [BERG's Little Printer](http://uk-shop.bergcloud.com/), [a neat thermal printer with a bunch of cool features](http://mobile.theverge.com/2012/8/14/3238974/little-printer-berg-matt-webb).

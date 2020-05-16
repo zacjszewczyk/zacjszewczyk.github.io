@@ -2,6 +2,7 @@ Type: linkpost
 Title: 50 Things I've Learned About Publishing a Weblog
 Link: http://shawnblanc.net/2012/07/50-things/
 Pubdate: 2014/01/09 07:43:29
+Category: Writing
 Author: Zac Szewczyk
 
 Although published back in 2012, every day I come to realize the truth in Shawn Blanc's words just a little bit more. Even if he does discount the vast majority of his own counsel as general life advice more applicable there than on one's website, I believe he makes an unnecessary distinction in doing so: when you begin to take writing seriously and it ceases to be something you have to do and instead becomes something you not only want to do but *need* to do, it has transformed from a hobby to a way of life inextricably linked to the person you are today. At that point, both have become one and the same.

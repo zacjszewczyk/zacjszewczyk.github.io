@@ -2,6 +2,7 @@ Type: original
 Title: Disingenuous Marketing
 Link: Disingenuous.htm
 Pubdate: 2014/03/20 15:12:13
+Category: Tech
 Author: Zac Szewczyk
 
 Besides the cursory test shortly after iTunes Radio launched, yesterday marked the first time I had used the service for any extended period of time. In my past experiences, the recommendations had proved mediocre at best, and the process not compelling enough to prompt me to switch away from the songs I already knew and loved. Yesterday, though, I gave it another shot; and I *loved* it.

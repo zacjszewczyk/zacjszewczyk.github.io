@@ -2,6 +2,7 @@ Type: original
 Title: Bees and Flowers and Reader--Oh My!
 Link: Bees and Flowers and Reader.htm
 Pubdate: 2013/03/27 11:25:47
+Category: Tech
 Author: Zac Szewczyk
 
 A few days ago [I linked to](What If The Google Reader Readers Just Don't Come Back.txt) [Marco Arment's response](http://www.marco.org/2013/03/26/google-reader-readers) to MG Siegler's post [*What If The Google Reader Readers Just Don't Come Back?*](http://techcrunch.com/2013/03/24/bees/) without actually reading MG's article. I got around to reading it this morning though, and he made a few interesting--albeit tired--points that merit some discussion.

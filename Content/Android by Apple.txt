@@ -2,6 +2,7 @@ Type: original
 Title: Android by Apple
 Link: Android by Apple.htm
 Pubdate: 2014/06/09 16:14:53
+Category: Tech
 Author: Zac Szewczyk
 
 A few days ago, shortly after watching the WWDC keynote, I made a short quip [on Twitter](https://twitter.com/zacjszewczyk/status/474021292484866048) that went completely unnoticed at the time: "Posit: Apple doesn't need to build low-end phones: it has Android." I expected to get some pushback on that statement, and so partly because I did not and partly because I believe it an observation worth exploring, I have decided to expand upon it today.

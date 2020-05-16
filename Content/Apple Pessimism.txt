@@ -2,6 +2,7 @@ Type: linkpost
 Title: Apple Pessimism
 Link: http://www.marco.org/2013/04/09/iphone-6
 Pubdate: 2013/04/15 14:50:29
+Category: Tech
 Author: Zac Szewczyk
 
 "Now, Apple pessimism is even stronger. No matter what they release and no matter how well it sells, they won't win over the press, the pundits, the stock market, or the rhetoric. Not this year. They could release a revolutionary 60-inch 4K TV for $99 with built-in nanobots to assemble and dispense free smartwatches, and people would complain that it should cost $49 and the nanobots aren't open enough."

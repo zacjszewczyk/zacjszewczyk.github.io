@@ -2,6 +2,7 @@ Type: linkpost
 Title: A Foray Into Simplenote Alternatives
 Link: http://shawnblanc.net/2013/01/simplenote-alternatives/
 Pubdate: 2013/01/16 22:36:04
+Category: Tech
 Author: Zac Szewczyk
 
 Speaking of talking about other writers' tools and processes, here's Shawn Blanc searching for a replacement to an integral part of his workflow as a writer, Simplenote. Not a day goes by that I don't use Simplenote, and unfortunately I've noticed some of the synching problems he has. Nevertheless Simplenote remains the best on the market, and for that single reason I will continue to keep all my notes, to write all my articles, and to store nearly every bit of textual information I come in contact with in this app.

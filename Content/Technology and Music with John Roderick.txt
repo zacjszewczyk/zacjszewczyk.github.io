@@ -2,6 +2,7 @@ Type: linkpost
 Title: Technology and Music, with John Roderick
 Link: http://thebroshow.libsyn.com/028-technology-and-music-with-john-roderick
 Pubdate: 2013/02/09 00:11:01
+Category: Podcasts
 Author: Zac Szewczyk
 
 "If computers are analogous to powered flight, we are four and a half years after the Wright Brothers flew at Kittyhawk; we are still flying airplanes made out of bicycle parts."

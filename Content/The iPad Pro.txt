@@ -2,6 +2,7 @@ Type: original
 Title: The iPad Pro
 Link: The iPad Pro.htm
 Pubdate: 2013/10/26 09:47:08
+Category: Tech
 Author: Zac Szewczyk
 
 Shortly after Apple's keynote earlier this week, [Zac Hall made an interesting and thought-provoking quip](https://twitter.com/apollozac/status/392726531560443904) on Twitter:

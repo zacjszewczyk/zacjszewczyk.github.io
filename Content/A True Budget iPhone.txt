@@ -2,6 +2,7 @@ Type: original
 Title: A True Budget iPhone
 Link: A True Budget iPhone.htm
 Pubdate: 2014/01/05 18:18:18
+Category: Tech
 Author: Zac Szewczyk
 
 To paraphrase Benedict Evans in [episode twelve](http://cubed.fm/2013/12/cubed-episode-12-mobile-musings-for-2014/) of Cubed, around 12:20, Samsung has the talent, resources, and funds to mass produce any type of hardware, and so they substitute taste and design sense with covering all possible bases in order to determine successful product lines. Apple only recently accrued the former, so up until a few years ago they operated solely on taste and design sense. Now that they have the scale to adopt a similar strategy as Samsung though, they see no point in implementing a lesser process having already perfected the greater one Samsung developed a methodology to emulate. This is the fundamental difference between the ways Samsung and Apple build products: one carefully selects its targets, while the other uses a blunderbuss to obliterate the target, its stand, and anything within a close range. Ultimately both accomplish the requisite goal, only one does so more elegantly and with much fewer casualties.

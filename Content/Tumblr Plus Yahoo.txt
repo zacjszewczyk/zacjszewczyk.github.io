@@ -2,6 +2,7 @@ Type: linkpost
 Title: Tumblr. + Yahoo! = !!
 Link: http://brooksreview.net/2013/05/tumblr-yahoo/
 Pubdate: 2013/05/29 18:15:16
+Category: Tech
 Author: Zac Szewczyk
 
 "But most importantly, what the hell does Yahoo do with all the porn?"

@@ -2,6 +2,7 @@ Type: original
 Title: General Inequality
 Link: General Inequality.htm
 Pubdate: 2014/05/10 09:37:56
+Category: Politics
 Author: Zac Szewczyk
 
 On [last week's episode of the Accidental Tech Podcast](http://atp.fm/episodes/63), John Siracusa spent a great deal of time explaining his disappointment in Apple for sticking to its long-held policy whereby it takes a 30% cut of all digital transactions, regardless of volume. He theorized that Apple's strict adherence to this rule had led Amazon to remove comiXology's ability to sell comics within the app, thus leading to a detrimental user experience for this segment of Apple users who now had to use a clunky web-based workaround. Then, in [this week's](http://atp.fm/episodes/64) follow-up segment, John revisited this subject in response to a number of listener comments questioning how his suggester solution--a discounted cut for high-volume retailers driving huge traffic through Apple's platform, such as Amazon would with in-app purchases of comics and books, for example--did not clash with his stated support of net neutrality. Rather than weigh in with my feedback in an email though, I would rather it appear in a public forum if for no other reason than so that, if I am completely off-base, someone can tell me so; because as I listened to John justify his position in response to his listeners' opinions, I couldn't help but feel he completely missed the point.

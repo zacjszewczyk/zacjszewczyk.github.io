@@ -2,6 +2,7 @@ Type: linkpost
 Title: Disrupting Disruption Theory
 Link: http://techpinions.com/disrupting-disruption-theory-2/31752
 Pubdate: 2014/07/15 06:59:18
+Category: Uncategorized
 Author: Zac Szewczyk
 
 Very interesting take on the recent flare up around Disruption Theory, and how Lepore was not necessarily wrong to criticize Christenson and his theory, but that she did point to the wrong permutation of it: it is not necessarily the base theory that is flawed, but rather the watered-down version we find in use so often today. John Kirk then proceeded to delve further into the theory in a great follow up to Ben Thompson's [recent piece](Critiquing Disruption Theory.txt), [Critiquing Disruption Theory](http://stratechery.com/2014/critiquing-disruption-theory/).

@@ -2,6 +2,7 @@ Type: original
 Title: Unsatisfiable
 Link: Unsatisfiable.htm
 Pubdate: 2014/02/18 10:31:13
+Category: Tech
 Author: Zac Szewczyk
 
 Last night I read [Federico Viticci's post](http://www.macstories.net/linked/flappy-bird-clone-made-with-pythonista-on-ios/) about Jumpy Octopus, a Flappy Bird clone made in Python. I had the article open on my computer, so rather than navigate to the source code on my iPad, copy more than three hundred lines, and then paste them into Pythonista, I opened Command-C on both devices and sent my Mac's clipboard contents to my iPad. Less than a minute later I had tried, grown frustrated with, and ultimately abandoned the game. This article is not about the object of my distaste though, but about the mechanics that got it there in the first place.

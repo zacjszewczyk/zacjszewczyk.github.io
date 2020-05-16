@@ -2,6 +2,7 @@ Type: original
 Title: Lost Trust
 Link: Lost Trust.htm
 Pubdate: 2013/12/07 11:59:17
+Category: Tech
 Author: Zac Szewczyk
 
 Every time I save an article to Instapaper I immediately open the app to make sure it actually went there. Although quite some time has passed since this proved a worthwhile exercise, my unfortunate habit stems from a fear derived of Instapaper's past inability to parse [Cabin Porn](http://freecabinporn.com) URLs. Because I once had faith in the system I happily sent every post I planned to write about over to Instapaper, intending to come back to those articles at a later date. However, this practice came back to bite me when Instapaper failed to accurately record the correct article URLs, much less successfully parse their contents, and I lost several weeks' worth of effort spent in aggregation. I seem to remember something similar happening with other sites around this time, but Cabin Porn is the sole site that Instapaper consistently failed to handle appropriately.

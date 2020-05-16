@@ -2,6 +2,7 @@ Type: original
 Title: Write a Good Title, Please
 Link: Write a Good Title.htm
 Pubdate: 2013/02/04 12:03:43
+Category: Writing
 Author: Zac Szewczyk
 
 On Saturday, Jim Dalrymple posted an article to his blog [The Loop](http://loopinsight.com/) called "[Scientists create near living crystal](http://www.loopinsight.com/2013/02/02/scientists-create-near-living-crystal/)". When the article scrolled into view, I mused as to why a scientist creating something near a living crystal would be of any interest. After all, creating things is part of the scientist's job, is it not? Then yesterday afternoon I saw an article titled "[We should only work 25 hours a week, argues professor](http://sciencenordic.com/we-should-only-work-25-hours-week-argues-professor)" from Science Nordic. Although the first time around I opted not to open it, curiosity got the better of me the second time I scrolled through Hacker News. I opened the page expecting to find a misguided, self-righteous professor of some degree (pun intended) pontificating as to why he felt academics should only work 25 hours a week. What I found, however, was an interesting piece proposing that rather than whiling away our youth working at the expense of spending time with family and friends only to find ourselves with an inordinate amount of free time in our latter years, we should instead work for greater portions of our lifespan in exchange for shorter work weeks.

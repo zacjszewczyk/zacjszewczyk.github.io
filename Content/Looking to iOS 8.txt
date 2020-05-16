@@ -2,6 +2,7 @@ Type: original
 Title: Looking to iOS 8
 Link: Looking to iOS 8.htm
 Pubdate: 2014/05/14 19:14:21
+Category: Tech
 Author: Zac Szewczyk
 
 Late last month, Federico Viticci wrote a great article about his iOS 8 wishes. I agreed with some of his suggestions, disagreed with the necessity a few, and consider still others a bit too niche for Apple to have focused much time and energy, if any, on over the last twelve months. By the end of his piece, I had decided to write out my own list in preparation for WWDC, as we all begin to turn our attention towards the impending unveiling of iOS 8 alongside the possibility of wearable devices and [CarPlay demos in a Ferrari](https://twitter.com/apollozac/status/453320478804152320). Unlike Federico, I have no spectacular introduction to kick us off; in lieu of that, then, I suppose we ought to just get straight to the point.

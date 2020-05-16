@@ -2,6 +2,7 @@ Type: original
 Title: Writer Pro
 Link: Writer Pro.htm
 Pubdate: 2013/12/29 14:30:27
+Category: Tech
 Author: Zac Szewczyk
 
 As soon as Information Architects released Writer Pro shortly before Christmas, I began collecting "[first look](http://shawnblanc.net/2013/12/first-thoughts-writer-pro-ios/)" pieces after [their phenomenal introductory video](http://writer.pro) nearly caused me to shell out a hefty $40 to have the app on both my Mac and iOS devices sight on seen. Much more cautions after my [poor](Bad Coin.txt) [experience](More Coin.txt) with Coin though, I exercised a bit of restraint in choosing to wait until after Christmas to make my final decision. Nine days and one debacle later, I am very thankful I did.

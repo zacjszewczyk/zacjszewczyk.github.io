@@ -2,6 +2,7 @@ Type: original
 Title: Unfair Platform Advantage
 Link: Unfair Platform Advantage.htm
 Pubdate: 2013/08/11 19:19:43
+Category: Tech
 Author: Zac Szewczyk
 
 I devoted [my last post](The September iPhone Launch.txt) to discussing Ina Fried's prediction of a September 10th iPhone launch date, forgoing my thoughts on the article itself and its rise to popularity over the last twenty-four hours. From my opening paragraph:

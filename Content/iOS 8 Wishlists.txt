@@ -2,6 +2,7 @@ Type: linkpost
 Title: iOS 8 Wishlists
 Link: http://harshilshah1910.wordpress.com/2014/06/01/ios-8-wishlist/
 Pubdate: 2014/06/02 06:28:58
+Category: Tech
 Author: Zac Szewczyk
 
 In preparation for Apple's WWDC keynote today, be sure to give Harshil Shah's article wherein he lays out his wishes for iOS 8 a try: although I'm only about halfway through, in the interest of time I have decided to post it here anyway. He makes a lot of great points, and has some very interesting ideas for the future of Apple's mobile operating system. It just might take you until the beginning of the keynote to finish, but I highly recommend you check this piece out. And if you want to read even more about some iOS 8 expectations, I posted my own list a few weeks ago: [Looking to iOS 8]().

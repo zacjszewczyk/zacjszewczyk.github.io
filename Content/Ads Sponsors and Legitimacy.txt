@@ -2,6 +2,7 @@ Type: linkpost
 Title: Ads, Sponsors and Legitimacy
 Link: http://crateofpenguins.com/blog/ads-sponsors-and-legitimacy
 Pubdate: 2014/03/25 08:30:16
+Category: Writing
 Author: Zac Szewczyk
 
 I absolutely agree with Sid here: basically, he wrote the article I did in [*A Few Thoughts on Sponsorships*]() the day before I published mine. You know what they say: great minds think alike.

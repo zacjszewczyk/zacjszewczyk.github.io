@@ -2,6 +2,7 @@ Type: linkpost
 Title: We're Boring, They're Sexting
 Link: http://one37.net/blog/15/1/2013/were-boring-theyre-sexting
 Pubdate: 2013/01/15 22:58:00
+Category: Tech
 Author: Zac Szewczyk
 
 Matt Alexander of One Thirty Seven made so many interesting points I had a hard time choosing an excerpt of acceptable length for this post. I ended up settling on this one though, reflective of the tone throughout his exceptionally well-written article *We're Boring, They're Sexting*:

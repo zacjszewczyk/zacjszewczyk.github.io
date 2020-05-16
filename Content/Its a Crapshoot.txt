@@ -2,6 +2,7 @@ Type: original
 Title: The March Towards Uniformity
 Link: Its a Crapshoot.htm
 Pubdate: 2014/01/28 19:02:47
+Category: Tech
 Author: Zac Szewczyk
 
 A few days ago Lorraine Luk, Eva Dou, and Daisuke Wakabayashi wrote an article for The Wall Street Journal conservatively titled--the hallmark of this upstanding publication--[*Apple iPhones to Come Out With Bigger Screens*](http://online.wsj.com/news/article_email/SB10001424052702304856504579338611620927036-lMyQjAxMTA0MDIwMzEyNDMyWj). It sparked a great deal of primarily confirmatory discussion over the next few days, during which [Ben Thompson](http://stratechery.com/2014/wsj-apple-iphones-come-bigger-screens/) spoke out in favor of this rumor. Citing the Asian market's desire for large devices, Ben made a compelling case for larger phones as Apple seeks to capitalize on the massive Chinese mobile phone industry. [John Gruber](http://daringfireball.net/linked/2014/01/24/wsj-big-iphones), on the other hand, did not feel similarly inclined, and made a few valid points discounting The Wall Street Journal's piece.

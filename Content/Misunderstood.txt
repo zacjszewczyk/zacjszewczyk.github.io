@@ -2,6 +2,7 @@ Type: original
 Title: Misunderstood
 Link: Misunderstood.htm
 Pubdate: 2013/12/17 12:14:45
+Category: Tech
 Author: Zac Szewczyk
 
 > "The iPhone shown in the first half of the commercial wasn't being used as an escape device to kill boredom--it's advertised as a creation device used to create memories, edit videos, and share a touching moment with family members that you don't see much often anymore. From the iPhone's camera point of view, now mirrored via AirPlay onto the big screen for others to see, everything makes more sense: seeing relatives and watching them talk, play, and share personal moments. The iPhone was used to record life rather than escape from it. The home video ends, notably, with a selfie; people are happy, the kid is happy. Cut to family house seen from outside. Happy holidays from Apple."

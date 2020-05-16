@@ -2,6 +2,7 @@ Type: original
 Title: The Battle Against Linkbait
 Link: The Battle Against Linkbait.htm
 Pubdate: 2013/04/19 18:57:57
+Category: Writing
 Author: Zac Szewczyk
 
 Every time I post an article, I shamelessly submit it to Hacker News in the hopes that it will get picked up and generate a significant amount of attention and traffic to my site. Somewhere in the back of my mind, every time I submit something I wrote to Hacker News I think, "Maybe this is the one, the article that will go viral, and tomorrow I'll see John Gruber post about it and hear Dan and Haddie talk about it on The Frequency. Maybe..." But that never happens.

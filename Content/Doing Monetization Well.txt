@@ -2,6 +2,7 @@ Type: original
 Title: Doing Monetization Well
 Link: Doing Monetization Well.htm
 Pubdate: 2014/01/06 22:49:55
+Category: Writing
 Author: Zac Szewczyk
 
 Recently, I have started thinking seriously about monetizing this site. Although I could not command the same rate [John Gruber](http://daringfireball.net/feeds/sponsors/), [Marco Arment](http://www.marco.org/sponsorship), or even [Federico Viticci](http://www.macstories.net/sponsorships) does, [nearly 3,500](Who to Follow in 2014.txt) unique visitors in 2013 has to count for something. Moreover, I plan to grow that number significantly throughout the coming year. The question remains, however, how I ought to go about doing that or, perhaps more saliently, how I should *not*.

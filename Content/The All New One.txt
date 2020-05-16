@@ -2,6 +2,7 @@ Type: linkpost
 Title: "The All New One"
 Link: https://twitter.com/evleaks/status/435916582569517056
 Pubdate: 2014/02/22 17:14:39
+Category: Tech
 Author: Zac Szewczyk
 
 I can see it now: "I just bought the 5S, but I'm going to go get the all new one when it comes out later this year." Talk about a cumbersome naming convention: in this case the speaker is clearly talking about purchasing the latest iPhone, *or is he?* Point is, no one really knows. What a curious and poorly-executed mimicry of Apple's admittedly clumsy naming convention by which they eschew model numbers on their iPads in favor of prepending the device's name with "the new". And that's to say nothing of Apple's inexplicable aversion to articles before product names--"iPad Mini now has a Retina display", for example, rather than "*The* iPad Mini now has a Retina display"--or the initialism debacle with the 5S whereby all of Apple's marketing materials had it listed as the "5s" in stark contrast to all previous "S" models which sported the properly-capitalized "S". It would be so much easier if everyone could just pick a sensible and unique naming convention, and then stick to it. Hat-tip to [*February 19: 46 tabs*](http://tabdump.com/blog/2014/2/19/february-19-46-tabs) from Stefan Constantinescu for the link.

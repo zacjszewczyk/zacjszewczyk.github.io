@@ -2,6 +2,7 @@ Type: original
 Title: !Sexism
 Link: Youth Problem.htm
 Pubdate: 2014/04/03 07:57:15
+Category: Politics
 Author: Zac Szewczyk
 
 Spoiler alert: [sexism](Hedge Yourself.txt) isn't the only social issue holding up progress within the tech industry at large. A few weeks ago, I read a great article by Yiren Lu titled [*Silicon Valley's Youth Problem*](http://www.nytimes.com/2014/03/16/magazine/silicon-valleys-youth-problem.html), where she explained how a preference for young entrepreneurs combined with the type of projects they tend to work on has created an unsustainable culture of front-end innovation built atop outmoded technology. She later went on to detail how that unfortunate amalgamation will put us in a poor position in the near future as the march of progress falls victim to increasingly restrictive constraints when the underlying technologies powering that advancement become unable to sustain further progress. Then, just yesterday, I cam across another, similar article--this time from New Republic--by Noam Scheiber titled [*Silicon Valley's Brutal Ageism*](http://www.newrepublic.com/article/117088/silicons-valleys-brutal-ageism).

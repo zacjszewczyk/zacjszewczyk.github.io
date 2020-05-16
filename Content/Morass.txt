@@ -2,6 +2,7 @@ Type: linkpost
 Title: iOS 7 and the rejection of the unfamiliar
 Link: http://www.imore.com/ios-7-and-rejection-unfamiliar
 Pubdate: 2013/06/16 18:08:16
+Category: Tech
 Author: Zac Szewczyk
 
 In this morass of terribly-written prose, Rene Ritchie did manage to make an interesting point:

@@ -2,6 +2,7 @@ Type: linkpost
 Title: Yahoo to Acquire Tumblr
 Link: http://finance.yahoo.com/news/yahoo-acquire-tumblr-120000116.html
 Pubdate: 2013/05/20 08:46:47
+Category: Tech
 Author: Zac Szewczyk
 
 "Per the agreement and our promise not to screw it up, Tumblr will be independently operated as a separate business. David Karp will remain CEO. The product, service and brand will continue to be defined and developed separately with the same Tumblr irreverence, wit, and commitment to empower creators."

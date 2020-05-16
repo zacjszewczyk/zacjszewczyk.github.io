@@ -2,6 +2,7 @@ Type: linkpost
 Title: Writing For The Web
 Link: http://crateofpenguins.com/blog/writing-for-the-web
 Pubdate: 2014/02/04 11:31:05
+Category: Writing
 Author: Zac Szewczyk
 
 I completely agree with Sid here: the growth of the internet as a widely-accepted medium through which to publish one's thoughts and opinions as was once handled exclusively through corporate newspaporial publications with batteries of editors at their disposal has led to a net decline in literary quality over the last few years. The popularity of the link blog certainly did not help, perhaps it even compounded the already steady march, but to lay all the blame at John Gruber et al.'s feet would be to erroneously attribute them with an inevitable decline facilitated by lowering a barrier to entry much higher in the internet's earlier years than it is today. So spend just a bit more time editing: your readers will appreciate it, you will take greater pride in your work, and you just might make Sid's day.

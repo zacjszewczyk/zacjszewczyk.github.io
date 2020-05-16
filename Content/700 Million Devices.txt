@@ -2,6 +2,7 @@ Type: linkpost
 Title: 700 Million Devices
 Link: https://twitter.com/asymco/status/378421955411857409
 Pubdate: 2013/09/15 10:09:38
+Category: Tech
 Author: Zac Szewczyk
 
 Far be it from me to step on Horace Dedeiu or Benedict Evan's toes in my "analysis", if you could call it that, of this graph Horace posted yesterday, but I do believe it tells us something interesting about how successful Apple believes the iPhone 5C will be.

@@ -2,6 +2,7 @@ Type: original
 Title: Incredibly High-Level Discourse
 Link: Incredibly High Level Discourse.htm
 Pubdate: 2013/12/10 14:30:43
+Category: Tech
 Author: Zac Szewczyk
 
 Sunday evening shortly after I wrote [*The One Where I Disavow Gaming*](Disavow Gaming.txt), as I scrolled through Zite looking for something to read, I happened across a headline that immediately caught my attention: [*iPhone 6 Release Date And Recent Rumors*](http://www.valuewalk.com/2013/12/iphone-6-release-date-apple/). Given that the article came from a site I had never heard of before and because the Apple sphere has remained relatively quiet with regards to iPhone 6 rumors as of late, I opened the article with low expectations. What could Value Walk know that John Gruber didn't? Turns out, absolutely nothing. In fact, the extraordinary simplicity of these rumors and the fact that one would devote an entire section to speculating as to the iPhone 6's release date were so absurd that it made me realize something rather profound.

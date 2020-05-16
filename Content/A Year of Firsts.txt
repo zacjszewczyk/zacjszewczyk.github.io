@@ -2,6 +2,7 @@ Type: original
 Title: A Year of Firsts
 Link: A Year of Firsts.htm
 Pubdate: 2013/11/21 13:28:11
+Category: Tech
 Author: Zac Szewczyk
 
 This year marked the first time I have taken any interest in reading long-form hardware and software reviews of any kind. Previously, as I described in [*Diary of a Convert*](Diary of a Convert.txt), I rarely made it past the first few pages; this time around, however, I not only plowed through John Siracusa's twenty-four page epic, but many others' as well. I learned a great deal about Apple's latest hardware and software offerings through this process, something I look to repeat from here on out. In preparation for next year, then, I paid great attention to reviewers and their work so that rather than shopping around for yet another iOS 8 review next fall, I can instead read the thoughts of a select few writers and in doing so enable myself to devote much more time and energy to my own work, which trends would indicate will increase once more after Tim Cook closes his keynote address.

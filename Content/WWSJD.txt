@@ -2,6 +2,7 @@ Type: original
 Title: WWSJD?
 Link: WWSJD.htm
 Pubdate: 2014/03/17 08:16:01
+Category: Tech
 Author: Zac Szewczyk
 
 On my way to San Salvador last weekend I wrote a short article titled "The Changing Landscape of Innovation". Without any internet connection until arriving back home the following Thursday, I planned on publishing it Friday morning; however, I didn't count on Drafts losing the note to a botched sync operation. In lieu of that article, then, as I try to work with Greg Pierce to recover it, consider this:

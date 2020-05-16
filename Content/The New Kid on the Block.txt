@@ -2,6 +2,7 @@ Type: original
 Title: The New Kid on the Block
 Link: The New Kid on the Block.htm
 Pubdate: 2013/09/13 07:50:21
+Category: Tech
 Author: Zac Szewczyk
 
 Since its debut yesterday virtually everyone has lauded Apple for introducing the iPhone 5C. (I refuse to acknowledge Apple's ridiculous naming convention; 5c? Please. If I wanted to look like a five year old I could forget to proofread my articles on my own. And I'm not the only one miffed at Apple's new standard: Lex Friedman, in a tweet yesterday: "If Apple is lowercasing the S and C..., I'm going to start capitalizing the "i": IPhone 5s. That's better.") Hailed as the elusive midrange offering from a traditionally high-end company, Apple received great praise over a move many see as a way to increase device sales by capturing the low end. I have a number of issues with that sentiment.

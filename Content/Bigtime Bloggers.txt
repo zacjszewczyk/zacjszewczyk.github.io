@@ -2,6 +2,7 @@ Type: linkpost
 Title: Hey, Look At Me, Bigtime Bloggers
 Link: http://crateofpenguins.com/blog/hey-look-at-me-bigtime-bloggers
 Pubdate: 2014/01/26 06:40:54
+Category: Writing
 Author: Zac Szewczyk
 
 > "You can't just do good work, you have to cultivate relationships and promote what you've done. That is, if your goal is for more people to read and enjoy your stuff."

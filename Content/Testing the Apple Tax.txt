@@ -2,6 +2,7 @@ Type: original
 Title: Testing the Apple Tax
 Link: Testing the Apple Tax.htm
 Pubdate: 2013/12/30 22:08:32
+Category: Tech
 Author: Zac Szewczyk
 
 Prompted by an article Zach Epstein posted to BGR last Thursday titled [*Testing the 'Apple tax': What would it cost to build a Windows version of the new Mac Pro?*](http://bgr.com/2013/12/26/mac-pro-windows-diy-cost/) I planned to link his piece as a smug counterpoint to all the people I know who like saying that they can build a more powerful machine for "1/3 the cost"[^1] of my overpriced Apple computer. As I thought more about the notion of an Apple tax though, I realized I had more to say on this topic than a juvenile "ha ha".

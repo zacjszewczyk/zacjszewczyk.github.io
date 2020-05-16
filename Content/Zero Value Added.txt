@@ -2,6 +2,7 @@ Type: original
 Title: Zero Value Added
 Link: Zero Value Added.htm
 Pubdate: 2014/08/22 12:22:54
+Category: Writing
 Author: Zac Szewczyk
 
 Shortly after [Amplified](http://5by5.tv/amplified) started in 2012, I began following The Loop back when Jim Dalrymple served as the site's sole writer. With a great sense of humor and an attractive approach to journalism that made no bones about calling people, institutions, and companies out for their often ridiculous shortcomings, the fact that Jim wrote [great hardware reviews](An Amalgamation of Reviews.txt) after Apple events was more a cherry atop the sundae than a driving motivation behind my choice to follow him; before too long, he had become one of my favorite writers, and his site the one location I turned to for a more diverse set of news stories than we in the insular tech community often expose ourselves to.

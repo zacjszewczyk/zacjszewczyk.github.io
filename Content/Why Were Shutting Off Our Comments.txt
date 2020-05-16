@@ -2,6 +2,7 @@ Type: linkpost
 Title: Why We're Shutting Off Our Comments
 Link: http://www.popsci.com/science/article/2013-09/why-were-shutting-our-comments
 Pubdate: 2013/09/26 12:52:33
+Category: Politics
 Author: Zac Szewczyk
 
 An excerpt from the Popular Science article in which they laid out their reasoning behind turning comments off. As [John Gruber said](http://daringfireball.net/linked/2013/09/24/popsci-comments), it's hard to believe it took them this long.

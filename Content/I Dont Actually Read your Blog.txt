@@ -2,6 +2,7 @@ Type: original
 Title: I Don't Actually Read your Blog
 Link: I Dont Actually Read your Blog.htm
 Pubdate: 2013/02/26 14:38:20
+Category: Writing
 Author: Zac Szewczyk
 
 Ah the linkblog. Although [not the genesis of the format](https://twitter.com/hypercritical/status/294115979150098432), John Gruber is often credited with the advent of this extremely pervasive practice and its widespread adoption over the years, a propagation that has continued despite the resurgence of its detractors every few months. Nevertheless, in spite of those dissidents, many writers have built a business around this model. Today, I would like to focus on one in particular: Shawn Blanc.

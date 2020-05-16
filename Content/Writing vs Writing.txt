@@ -2,6 +2,7 @@ Type: linkpost
 Title: Writing vs. Writing
 Link: http://shawnblanc.net/2011/02/writing-vs-writing/
 Pubdate: 2013/06/03 17:00:24
+Category: Writing
 Author: Zac Szewczyk
 
 Shawn Blanc in an article published over two years ago, which he linked to earlier this afternoon in [a linked-list post](http://shawnblanc.net/2013/06/maierson-editing/):

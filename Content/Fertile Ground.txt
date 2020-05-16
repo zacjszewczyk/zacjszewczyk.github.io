@@ -2,6 +2,7 @@ Type: linkpost
 Title: Fertile Ground
 Link: http://www.marco.org/2013/06/11/fertile-ground
 Pubdate: 2013/06/12 21:24:24
+Category: Tech
 Author: Zac Szewczyk
 
 "Apple has set fire to iOS. Everything's in flux. Those with the least to lose have the most to gain, because this fall, hundreds of millions of people will start demanding apps for a platform with thousands of old, stale players and not many new, nimble alternatives. If you want to enter a category that's crowded on iOS 6, and you're one of the few that exclusively targets iOS 7, your app can look better, work better, and be faster and cheaper to develop than most competing apps."

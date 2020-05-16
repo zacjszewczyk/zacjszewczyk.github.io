@@ -2,6 +2,7 @@ Type: linkpost
 Title: FireChat
 Link: http://bgr.com/2014/03/20/firechat-messaging-app-internet/
 Pubdate: 2014/03/25 15:41:59
+Category: Tech
 Author: Zac Szewczyk
 
 FireChat is a new iOS app that purportedly allows its users to send text messages and pictures between devices without the use of both a cellular and wifi connection, at ranges up to thirty feet, using a new iOS 7 networking feature. Although these days I would rarely have any reason to use such an app, I would have loved to have this ability on an airplane, for instance, or out of the country where carriers can charge exorbitant rates. Regardless of whether I actually need it though, I can't wait to try this out.
