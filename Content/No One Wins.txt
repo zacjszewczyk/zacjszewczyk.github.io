@@ -2,6 +2,7 @@ Type: linkpost
 Title: 'No One Wins if War Extends Into Space'
 Link: https://foreignpolicy.com/2019/12/04/thomas-james-interview-space-force-commander-no-one-wins/
 Pubdate: 2019/12/12 07:41:09
+Category: Politics
 Author: Zac J. Szewczyk
 
 > "We're at an inflection point today in the idea of space being developed as its own domain. When you look at the threats that we have today, there's some similarity to what we had in the '80s. That waned in the '90s and that led us to the idea of space as an uncontested area, so we designed space architecture based off the fact that we wouldn't really be threatened in space. Today you've got a pretty much more aggressive threat. So that space area of operations is the area that we focus on for protecting and defending critical assets as we look at the growing threat from our adversaries."

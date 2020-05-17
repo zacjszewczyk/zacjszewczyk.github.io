@@ -2,6 +2,7 @@ Type: linkpost
 Title: Pushing to Multiple Repos
 Link: https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos
 Pubdate: 2019/09/06 07:11:37
+Category: Programming
 Author: Zac J. Szewczyk
 
 Full credit to Alex Armstrong and [his helpful article](https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos) for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these five lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.

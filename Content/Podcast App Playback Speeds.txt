@@ -2,6 +2,7 @@ Type: linkpost
 Title: Podcast App Playback Speeds
 Link: http://www.marco.org/2013/10/18/podcast-app-playback-speeds
 Pubdate: 2013/10/25 22:39:58
+Category: Podcasts
 Author: Zac Szewczyk
 
 "Overcast will use speed-accurate labels. I'll take the heat in reviews."

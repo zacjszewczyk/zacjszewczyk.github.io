@@ -2,6 +2,7 @@ Type: linkpost
 Title: Fear of a WebKit Planet
 Link: http://hypercritical.co/2013/03/04/fear-of-a-webkit-planet
 Pubdate: 2013/03/04 18:06:21
+Category: Tech
 Author: Zac Szewczyk
 
 John Siracusa in the opening paragraphs of his article *Fear of a WebKit Planet* with a few atypical sentences characterizing the traits so many came to love of the former Hypercritical co-host:

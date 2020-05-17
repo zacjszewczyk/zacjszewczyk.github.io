@@ -2,6 +2,7 @@ Type: linkpost
 Title: The revolution will be downloaded
 Link: http://www.theverge.com/2013/7/10/4507930/the-revolution-will-be-downloaded-the-app-store-turns-5
 Pubdate: 2013/07/15 17:29:00
+Category: Tech
 Author: Zac Szewczyk
 
 Great story from none other than The Verge about the App Store on it's fifth birthday.

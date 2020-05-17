@@ -2,6 +2,7 @@ Type: linkpost
 Title: Speeding up Linux disk encryption
 Link: https://blog.cloudflare.com/speeding-up-linux-disk-encryption/
 Pubdate: 2020/03/31 18:25:23
+Category: Tech
 Author: Zac Szewczyk
 
 Ignat Korchagin posted a fantastic writeup on [speeding up Linux disk encryption](https://blog.cloudflare.com/speeding-up-linux-disk-encryption/) to Cloudflare's blog. The lengths that team went to in order to solve this problem are fascinating. Dan Luu hit the nail on the head [when he highlighted Cloudflare's as an example of a great corporate blog](https://danluu.com/corp-eng-blogs/).

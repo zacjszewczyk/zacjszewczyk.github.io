@@ -2,6 +2,7 @@ Type: original
 Title: An Update on Soylent
 Link: an-update-on-soylent.html
 Pubdate: 2019/04/15 06:39:34
+Category: Uncategorized
 Author: Zac Szewczyk
 
 Back in 2013, I [posted](Soylent.txt) [a](A Few More Thoughts on Soylent.txt) [bunch](Two Months of Soylent.txt) [of](How I Survived A Week Without Food.txt) [articles](How I Stopped Eating for 30 Days.txt) [about](Could Soylent Replace Food.txt) Soylent. I liked the idea then, and I like it now, and so I wanted to take a minute to give you an update after I gave it a try.

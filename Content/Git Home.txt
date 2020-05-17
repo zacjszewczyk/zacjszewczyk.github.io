@@ -2,6 +2,7 @@ Type: linkpost
 Title: Setting Up a Development Environment with Git
 Link: https://martinovic.blog/post/home_git/
 Pubdate: 2019/06/10 11:50:12
+Category: Programming
 Author: Zac J. Szewczyk
 
 I like Antonio's idea, a lot. As much as [I try to keep my system stock](My Setup 2019.txt), this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:

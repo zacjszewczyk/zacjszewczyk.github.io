@@ -2,6 +2,7 @@ Type: linkpost
 Title: Apple Acquires TestFlight Owner Burstly
 Link: http://www.macstories.net/news/apple-acquires-testflight-owner-burstly/
 Pubdate: 2014/02/25 09:12:19
+Category: Tech
 Author: Zac Szewczyk
 
 Apple acquired another company--great, wonderful; the most interesting news I saw after this announcement, however, came from Federico Viticci when he highlighted a recent idea MG Siegler put forth before Christmas in suggesting a Beta App Store. From Federico's article:

@@ -2,6 +2,7 @@ Type: linkpost
 Title: Bitcoin Is Pointless as a Currency, But It Could Change the World Anyway
 Link: http://www.wired.com/2014/03/bitcoin-currency_martin/
 Pubdate: 2014/04/10 11:21:10
+Category: Tech
 Author: Zac Szewczyk
 
 Despite it's oxymoron of a title, this is a great piece by Felix Martin for Wired drawing some interesting parallels between Bitcoin and the monetary system of sixteenth-century Europe. Bitcoin has enjoyed a great deal of support up until now, but the jury is still out as to whether it will turn in to a viable, stable currency or go down in history as a somewhat lengthy flash in the pan. Hopefully, though, for the reasons Felix laid out in his conclusion, Bitcoin will.

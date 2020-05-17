@@ -2,6 +2,7 @@ Type: original
 Title: Bye Instacast
 Link: Bye Instacast.htm
 Pubdate: 2013/07/01 20:08:47
+Category: Podcasts
 Author: Zac Szewczyk
 
 A few days ago Instacast's created [tweeted some mockups of the app's next iteration](https://twitter.com/vemedio/status/349480265703358465). As a diehard Instacast fan, I was very excited to get a sneak peek at the next version of the popular podcasting app.

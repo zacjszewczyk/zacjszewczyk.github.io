@@ -2,6 +2,7 @@ Type: original
 Title: The Last App You Open Before Bed
 Link: The Last App You Open Before Bed.htm
 Pubdate: 2014/01/08 19:06:43
+Category: Tech
 Author: Zac Szewczyk
 
 [A few days ago](http://parislemon.com/post/72415950189/the-first-app-you-open-in-the-morning), MG Siegler posited that the app you open first every day signals a great deal about both the current state of apps and your present state of mind. After posting [my take](The First App You Open In The Morning.txt), I kept thinking. Eventually, I decided that even more telling than the app you launch first every day is the last app you open before bed every night.

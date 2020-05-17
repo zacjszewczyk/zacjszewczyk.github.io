@@ -2,6 +2,7 @@ Type: original
 Title: Sherlocking Everyone Else
 Link: Sherlocking Everyone Else.htm
 Pubdate: 2013/10/14 16:43:16
+Category: Tech
 Author: Zac Szewczyk
 
 The last few years have seen a great proliferation of linkblogs, by far and away the most popular topic of which is technology and, specifically, Apple. Nevertheless the likes of John Gruber--who did not, despite many erroneous beliefs, invent either the format or topic--and Shawn Blanc have made their mark as entrants to a space established long before their arrival. This not only happens in the blogging space, but the podcasting industry as well where interview shows like Daniel Jalkut's *Bitsplitting* came in and *sherlocked*--ugh--the existing space, which already had *plenty* of interview programs, with a really great show.

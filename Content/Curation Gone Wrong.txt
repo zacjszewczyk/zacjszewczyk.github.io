@@ -2,6 +2,7 @@ Type: original
 Title: Curation Gone Wrong
 Link: Curation Gone Wrong.htm
 Pubdate: 2014/08/29 08:10:27
+Category: Blogging
 Author: Zac Szewczyk
 
 Although I have never spent much time on Reddit, I once perused Digg with the same frequency that I opened Twitter and my RSS reader; sometimes, I even opted for the former in place of the latter. Similarly, I favored Hacker News over the more popular Techmeme for a time. In both cases though, despite all the enjoyment I found in these sites, I eventually abandoned each of them as the value they provided continued a disappointing slide towards zero. Today, Daring Fireball and The Loop are the closest things to a curation service that I continue visiting regularly, and one could certainly make an argument against their characterization as such.

@@ -2,6 +2,7 @@ Type: linkpost
 Title: Greatness is a lot of small things done well
 Link: https://blog.stephsmith.io/how-to-be-great/
 Pubdate: 2019/07/10 08:28:24
+Category: Motivation
 Author: Zac J. Szewczyk
 
 Steph Smith, on what it takes to become great. Emphasis mine:

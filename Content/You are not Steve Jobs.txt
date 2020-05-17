@@ -2,6 +2,7 @@ Type: linkpost
 Title: You are not Steve Jobs
 Link: https://medium.com/editors-picks/9ae1727d2479
 Pubdate: 2013/05/02 11:40:53
+Category: Tech
 Author: Zac Szewczyk
 
 Two interesting anecdotes showing a different, less praiseworthy side of Steve Jobs. The man was not perfect, as many purported him to be in the sad hours following his death, but a mere mortal not just like the rest of us, but human nonetheless.

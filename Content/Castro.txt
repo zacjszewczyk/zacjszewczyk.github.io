@@ -2,6 +2,7 @@ Type: original
 Title: Castro
 Link: Castro.htm
 Pubdate: 2013/12/11 19:30:21
+Category: Podcasts
 Author: Zac Szewczyk
 
 After all the talk of [Castro](http://castro.fm) in the last twenty-four hours since its release, and as an [avid podcast listener myself](Podcasting State of the Union.txt), I couldn't help but feel obligated to weigh in. With articles from [John Moltz](http://verynicewebsite.net/2013/12/castro/), [Cody Fink](http://www.macstories.net/reviews/castro-a-new-podcast-player-for-ios-does-two-things-well/), and [Shawn Blanc](http://thesweetsetup.com/whats-new-noteworthy-world-apps-week/) waiting unread in my Instapaper queue, I downloaded Castro earlier this evening expecting to burn the midnight oil to get this article out. It came as a great surprise, then, when I tried every one of Castro's features and saw every screen within about fifteen minutes.

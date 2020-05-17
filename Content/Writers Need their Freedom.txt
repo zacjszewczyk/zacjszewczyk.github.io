@@ -2,6 +2,7 @@ Type: original
 Title: Writers Need their Freedom
 Link: Writers Need their Freedom.htm
 Pubdate: 2013/02/21 18:10:49
+Category: Writing
 Author: Zac Szewczyk
 
 Quite some time ago I came across Jeffrey Way's article [*Publishers: Don't Restrict Writers*](http://net.tutsplus.com/articles/editorials/publishers-dont-restrict-writers/) and added it to my Instapaper queue more out of curiosity at an article posted on Nettuts+ not about programming than anything else. Nearly a month prior, I had read an article on Ben Brooks' website called [*Self-Publishing*](http://brooksreview.net/2012/11/self-publishing/) in which he said something I found very interesting:

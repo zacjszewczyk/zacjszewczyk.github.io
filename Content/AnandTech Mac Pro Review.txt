@@ -2,6 +2,7 @@ Type: linkpost
 Title: AnandTech's Mac Pro Review
 Link: http://www.anandtech.com/show/7603/mac-pro-review-late-2013/4
 Pubdate: 2014/01/03 09:01:02
+Category: Tech
 Author: Zac Szewczyk
 
 As Marco said in [his post](http://www.marco.org/2014/01/01/anandtech-2013-mac-pro-review) linking to AnandTech's new Mac Pro evaluation, "For Mac OS reviews, read John Siracusa. For Mac reviews, read Anand." This has become widely accepted over the last few years, and rightly so: these two writers epitomize every aspect of excellence within their respective fields. That's why I sat down with AnandTech's latest article, despite having no intention of buying a Mac Pro within the foreseeable future. After Marco's recommendation I originally intended to focus solely on page two, but before I knew it Anand had sucked me in and I ended up finishing the entire piece.

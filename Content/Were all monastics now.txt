@@ -2,6 +2,7 @@ Type: linkpost
 Title: We're All Monastics Now
 Link: https://zenhabits.net/monastics/
 Pubdate: 2020/04/22 07:02:40
+Category: Motivation
 Author: Zac Szewczyk
 
 > "We're all monastics now--how will we use this time?"

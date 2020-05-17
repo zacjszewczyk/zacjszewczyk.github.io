@@ -2,6 +2,7 @@ Type: original
 Title: Podcasting State of the Union
 Link: Podcasting State of the Union.htm
 Pubdate: 2013/10/08 19:26:10
+Category: Podcasts
 Author: Zac Szewczyk
 
 As a huge fan of the medium myself, over the last two weeks I have followed a burgeoning discussion on the podcasting industry with great interest. Across the board, the discourse has remained almost universally positive: [Stephen Hacket](http://512pixels.net/2013/09/because-podcasts-awesome/), [Chris Gonzales](http://unretrofied.com/blog/2013/9/26/ios-7-and-the-state-of-podcast-apps), [Federico Viticci](http://www.macstories.net/linked/ios-7-and-podcast-apps/), and [Myke Hurley](http://512pixels.net/2013/10/hurley-podcasting/) have all expressed considerable enthusiasm for the changes iOS 7 in particular signals for this space, and great hope for its future. Unsurprisingly, not all share these positive sentiments.

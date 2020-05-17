@@ -2,6 +2,7 @@ Type: linkpost
 Title: The new Instapaper web beta
 Link: http://blog.instapaper.com/post/57817543037
 Pubdate: 2013/08/12 22:02:55
+Category: Tech
 Author: Zac Szewczyk
 
 With the beta release of Instapaper's newly overhauled and undeniably much more attractive website, we are finally beginning to see some of the great new features Marco sold Instapaper to Betaworks for. As I said in [*What Happened to Instapaper?*](What Happened to Instapaper.txt), I'm very excited to see where the company takes Instapaper in the near future. A new website was a wonderful place to begin.

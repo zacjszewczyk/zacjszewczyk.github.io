@@ -2,6 +2,7 @@ Type: original
 Title: This Week in Podcasts
 Link: This Week in Podcasts 6714.htm
 Pubdate: 2014/07/13 07:56:42
+Category: Podcasts
 Author: Zac Szewczyk
 
 I am considering using a boilerplate for the introduction to this article, and keeping the actual noteworthy content the dynamic aspect going forward. So, let's give it a try with last week's opening: "Another week, another set of great podcasts for your listening pleasure. Enjoy."

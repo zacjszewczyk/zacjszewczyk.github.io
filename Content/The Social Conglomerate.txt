@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Social Conglomerate
 Link: http://stratechery.com/2014/social-conglomerate/
 Pubdate: 2014/02/24 07:57:02
+Category: Tech
 Author: Zac Szewczyk
 
 For the most part I stayed away from articles attempting to explain Facebook's reasoning in acquiring WhatsApp. That is, until Ben Thompson posted his take, where he continued the "company-as-conglomerate" [trend](http://ben-evans.com/benedictevans/2014/2/19/ways-of-thinking-about-google) in dubbing Facebook the Social Conglomerate. Although I found myself nodding in agreement to the majority of his post, I did take issue with one bit: towards the end, Ben called Apple a personal computing conglomerate; however, I believe a more apt designation would call Apple the quality conglomerate, pursuing excellence in not only hardware, but every aspect of the computing experience. One could certainly argue their effectiveness across the board--iCloud probably being the poster child against using "quality" as the operative word in that sentence--but you get points for trying in this game, not only for succeeding; case and point Facebook and WhatsApp.

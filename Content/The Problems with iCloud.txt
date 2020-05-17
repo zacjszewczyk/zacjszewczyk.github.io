@@ -2,6 +2,7 @@ Type: original
 Title: The Problems with iCloud
 Link: The Problems with iCloud.htm
 Pubdate: 2013/01/26 18:28:21
+Category: Tech
 Author: Zac Szewczyk
 
 As a born PC user I rarely interact with iCloud on my main computer. Even on my iOS devices I rarely use iCloud, where, given the choice, I will choose Dropbox or some other method to sync documents and settings across devices. The most recent episode of Back to Work, [*Lotta Little Knives*](http://5by5.tv/b2w/103), brought the issue to a head in my mind, and Ben Brooks's less recent article [*Archived Data, in the Cloud*](http://brooksreview.net/2013/01/archiving-cloud/), in which he proposed an interesting solution to the topic at hand, prompted me to write this piece.

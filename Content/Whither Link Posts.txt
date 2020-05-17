@@ -2,6 +2,7 @@ Type: linkpost
 Title: Whither Link Posts?
 Link: http://shawnblanc.net/2013/01/whither-link-posts/
 Pubdate: 2013/01/30 16:24:51
+Category: Writing
 Author: Zac Szewczyk
 
 Like Shawn Blanc, I too prefer to share interesting links I come across on my site rather than through Twitter or, dare I even say it, Facebook.

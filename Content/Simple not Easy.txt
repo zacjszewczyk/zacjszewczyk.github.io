@@ -2,6 +2,7 @@ Type: original
 Title: Simple, not Easy
 Link: simple-not-easy.html
 Pubdate: 2019/04/06 11:12:52
+Category: Motivation
 Author: Zac Szewczyk
 
 It's been awhile.

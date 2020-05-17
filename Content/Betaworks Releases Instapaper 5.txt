@@ -2,6 +2,7 @@ Type: original
 Title: Betaworks Releases Instapaper 5
 Link: Betaworks Releases Instapaper 5.htm
 Pubdate: 2013/09/19 14:01:13
+Category: Tech
 Author: Zac Szewczyk
 
 Last week I acquired access to the Instapaper beta prior to its launch alongside iOS 7. I chronicled that story in [*I Finally Understand Bias*](I Finally Understand Bias.txt). Since then, I have put off writing about the beta for a number of reasons: as a beta, the onus would have been on me to explain every single aspect of the new design or include numerous screenshots. Unlike the Federico Viticcis of the world, I did not find that prospect particularly appealing. More importantly though, I did not--do not--consider the app ready for widespread use, and at the very least not worthy of a version increment. iOS 7 or not, I am of the opinion that Betaworks should have forgone releasing Instapaper 5 quite so soon.

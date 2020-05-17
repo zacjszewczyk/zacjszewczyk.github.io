@@ -2,6 +2,7 @@ Type: linkpost
 Title: This is what Apple makes
 Link: http://peroty.com/blog/wrote-about/this-is-what-apple-makes/
 Pubdate: 2014/06/24 07:18:02
+Category: Tech
 Author: Zac Szewczyk
 
 It's often said, especially by those who profess to understand Apple on a fundamental level, that the company is not in the business of making strictly hardware or software, or even iPhones and Macs. However, although that realization comes readily enough, the gap it leaves explaining what, exactly, Apple does do if not build computers and operating systems, has proven elusive at best. After WWDC though, we have another great opportunity to inspect this underlying motivation, courtesy of Ben Alexander and Carl Holscher. Carl's article is short, but that is because the point he makes is uncomplicated, and rightly so.

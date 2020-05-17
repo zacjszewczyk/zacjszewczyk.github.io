@@ -2,6 +2,7 @@ Type: linkpost
 Title: Sidebar Transitions
 Link: http://tympanus.net/Development/SidebarTransitions/
 Pubdate: 2014/04/26 06:49:22
+Category: Programming
 Author: Zac Szewczyk
 
 These are so cool--and all done in CSS, no JavaScipt required. Manoela "Mary Lou" Ilic has to be one of the most talented web developers I have seen in a long while. If I ever decide to take this site in a more graphically-complex direction, I know exactly where I will look for inspiration.

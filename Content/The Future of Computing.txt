@@ -2,6 +2,7 @@ Type: original
 Title: The Future of Computing
 Link: The Future of Computing.htm
 Pubdate: 2014/07/17 07:13:08
+Category: Tech
 Author: Zac Szewczyk
 
 In a style made popular by Benedict Evans in his hallmark Twitter postulations, posit: computers were created for writers. As such, the next iteration of computing devices will cater to the needs of others: creators and designers will have Jarvis-like artificial intelligence systems to converse with and holographic interfaces to involve their entire bodies in the creation process. The current model involves the two tools of the writer's trade: their hands and their minds. Future implementations will go beyond those unnecessary restrictions that don't apply in other fields in order to provide a richer, more productive computing experience.

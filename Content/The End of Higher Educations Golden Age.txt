@@ -2,6 +2,7 @@ Type: linkpost
 Title: The End of Higher Education's Golden Age
 Link: http://www.shirky.com/weblog/2014/01/there-isnt-enough-money-to-keep-educating-adults-the-way-were-doing-it/
 Pubdate: 2014/01/30 08:25:51
+Category: Readme
 Author: Zac Szewczyk
 
 > "Our current difficulties are not the result of current problems. They are the bill coming due for 40 years of trying to preserve a set of practices that have outlived the economics that made them possible."

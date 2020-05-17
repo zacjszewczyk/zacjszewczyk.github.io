@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Second Test
 Link: http://www.randsinrepose.com/archives/2012/09/18/the_second_test.html
 Pubdate: 2013/05/30 14:53:16
+Category: Uncategorized
 Author: Zac Szewczyk
 
 Michael Lopp explaining why engineers, in his experience, appear to hate you:

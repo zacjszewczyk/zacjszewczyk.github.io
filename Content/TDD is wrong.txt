@@ -2,6 +2,7 @@ Type: linkpost
 Title: Test-Driven Development is Fundamentally Wrong
 Link: https://hackernoon.com/test-driven-development-is-fundamentally-wrong-hor3z4d
 Pubdate: 2020/04/27 09:08:33
+Category: Programming
 Author: Zac Szewczyk
 
 Chris Fox [makes some good points](https://hackernoon.com/test-driven-development-is-fundamentally-wrong-hor3z4d): 

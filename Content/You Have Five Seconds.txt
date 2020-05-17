@@ -2,6 +2,7 @@ Type: original
 Title: You Have Five Seconds. Go.
 Link: You Have Five Seconds.htm
 Pubdate: 2013/05/28 16:53:33
+Category: Blogging
 Author: Zac Szewczyk
 
 Nearly every day I see a new CSS module, jQuery boilerplate, or HTML5 template posted to Hacker News, or an article announcing the release of the latest version of Ember.js, whatever that is. Every so often, I follow the link out of curiosity; and every time, I close the page, disappointed.

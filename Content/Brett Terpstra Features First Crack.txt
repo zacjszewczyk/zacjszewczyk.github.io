@@ -2,6 +2,7 @@ Type: linkpost
 Title: Brett Terpstra Features First Crack
 Link: http://brettterpstra.com//2014/07/18/web-excursions-for-july-18-2014/
 Pubdate: 2014/07/19 10:56:18
+Category: Programming
 Author: Zac Szewczyk
 
 Roughly once a week, give or take a few days, Brett Terpstra publishes a new installment in his "[Web Excursions](http://brettterpstra.com/topic/bookmarks/)" series, where he talks about interesting bookmarks from around the internet. In yesterday's issue, [Web Excursions for July 18, 2014](http://brettterpstra.com//2014/07/18/web-excursions-for-july-18-2014/), he featured [First Crack 1.0](First Crack 10.txt) front and center. That's pretty cool.

@@ -2,6 +2,7 @@ Type: linkpost
 Title: Containers are Not the Future
 Link: https://rap.mirror.cyberbits.eu/fosdem/2020/K.1.105/kernel_address_space_isolation.webm
 Pubdate: 2020/03/20 08:43:18
+Category: Programming
 Author: Zac Szewczyk
 
 Ian Eyberg in [*Containers are Not the Future*](https://rap.mirror.cyberbits.eu/fosdem/2020/K.1.105/kernel_address_space_isolation.webm), quoting a line from [Mike Rapoport and James Bottomley's talk at this year's Free and Open source Software Developers' European Meeting](https://rap.mirror.cyberbits.eu/fosdem/2020/K.1.105/kernel_address_space_isolation.webm):

@@ -2,6 +2,7 @@ Type: original
 Title: Anti-iOS 7 Anger
 Link: Anti iOS 7 Anger.htm
 Pubdate: 2013/06/12 17:12:56
+Category: Tech
 Author: Zac Szewczyk
 
 I try to, for the most part, stay positive when I write on here. Instead of taking a page out of Jim Dalrymple's play book, not that there is anything wrong with his approach, and calling shenanigans and bullshit when I see shenanigans and bullshit, I try to "take the high road" and either ignore bad writing and poorly-formed opinions altogether, or criticize them generously. In the wake of the iOS 7 announcement though, many people have said things that I consider--quite frankly--stupid, especially concerning iOS 7's overhauled interface.

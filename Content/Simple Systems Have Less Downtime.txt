@@ -2,6 +2,7 @@ Type: linkpost
 Title: Simple Systems Have Less Downtime
 Link: https://www.gkogan.co/blog/simple-systems/
 Pubdate: 2020/03/04 17:53:30
+Category: Programming
 Author: Zac Szewczyk
 
 Simple systems deploy faster than complex ones, and fail less often; sometimes they take less time to build, too, but the pursuit of simplicity often entails a long process to prioritize some features while justifying the exclusion of others. Ironically, that process tends to take much longer than just building in all the features, so most choose the latter approach. The end result is complex software that does many things, but few things well.

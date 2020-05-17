@@ -2,6 +2,7 @@ Type: linkpost
 Title: A Fifth Major U.S. Carrier
 Link: http://www.theverge.com/2013/2/1/3940718/dish-interest-clearwire-sprint-deal
 Pubdate: 2013/02/01 14:59:52
+Category: Tech
 Author: Zac Szewczyk
 
 "Should things pan out in Dish's favor, we could very well see a fifth major carrier here in the US, something that would certainly shake things up in the wireless market. Whether or not Dish is able to accomplish that with Clearwire or by pursuing another deal will have to be seen, but we wouldn't count the satellite provider out just yet."

@@ -2,6 +2,7 @@ Type: linkpost
 Title: 'Finding Dory' Set for 2015
 Link: http://daringfireball.net/linked/2013/04/02/finding-dory
 Pubdate: 2013/04/02 20:18:27
+Category: Uncategorized
 Author: Zac Szewczyk
 
 "On the one hand, I worry that Pixar is making too many sequels. On the other, I'd love to see another Incredibles movie."

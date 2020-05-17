@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Amazon Rorschach blot
 Link: http://ben-evans.com/benedictevans/2014/2/11/the-amazon-rorschach-blot
 Pubdate: 2014/02/17 07:35:27
+Category: Tech
 Author: Zac Szewczyk
 
 I personally consider Amazon the former: "a brilliant company investing every penny of cash in building the future". Benedict's graph seems to support this theory: as revenue increases net income remains approximately zero; where did all that money go if not to infrastructure? Especially given the alternative that paints Amazon as "a Ponzi scheme doomed to collapse"--completely ridiculous and utterly juvenile--I find any argument discussing the future of technology and computing ignoring Amazon's place in that narrative lacking to the point of irrelevance. Rather than asking "what" Amazon is, we ought to ask "when" we will finally see Amazon realize the potential it has been building to all these years.

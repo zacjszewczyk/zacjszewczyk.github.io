@@ -2,6 +2,7 @@ Type: original
 Title: The Next Step
 Link: The Next Step.htm
 Pubdate: 2013/01/24 14:32:44
+Category: Tech
 Author: Zac Szewczyk
 
 "Now, Google's no stranger to crazy experiments, and not all of them will necessarily change the world: for every self-driving car and wearable display, there's an army of employees working on personal engineering projects. But it doesn't sound like that's what's happening here."  - Sean Hollister of The Verge in [Google building secret wireless network, says it involves 'highly competitive consumer electronics'](http://www.theverge.com/2013/1/23/3909700/google-secret-wireless-network-maybe-dish-partnership).

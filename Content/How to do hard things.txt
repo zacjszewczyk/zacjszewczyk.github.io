@@ -2,6 +2,7 @@ Type: linkpost
 Title: How to do hard things
 Link: https://www.drmaciver.com/2019/05/how-to-do-hard-things/
 Pubdate: 2019/05/28 08:32:35
+Category: Motivation
 Author: Zac Szewczyk
 
 I am immediately skeptical of any framework for getting something done. Individuals often use these elaborate processes to procrastinate, and in organizations they have a tendency to become bloated risk avoidance mechanisms. I see the former danger in [David Maciver's strategy for doing hard things](https://www.drmaciver.com/2019/05/how-to-do-hard-things/), but it did remind me of my own, so I want to take a minute to share my approach here.

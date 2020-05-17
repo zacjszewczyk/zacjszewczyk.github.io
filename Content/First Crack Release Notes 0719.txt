@@ -2,6 +2,7 @@ Type: original
 Title: First Crack Release Notes, July 2019
 Link: first-crack-release-notes-0719.html
 Pubdate: 2019/08/03 09:07:32
+Category: Programming
 Author: Zac J. Szewczyk
 
 I have done a bit of work on First Crack [since last month's update](First Crack Release Notes 0619.txt). It's time I shared it with you.  

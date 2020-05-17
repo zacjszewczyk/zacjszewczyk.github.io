@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Typist on H&FJ
 Link: http://thetypist.com/381/hfj-typography-review/
 Pubdate: 2014/02/10 08:32:41
+Category: Simple living
 Author: Zac Szewczyk
 
 Great look at the industry's leading font providers, Hoefler & Frere-Jones, Typekit, and Google Fonts, made all the more valuable because now I won't have to shell out $150 to ultimately go back to Google Fonts in the end. In a sense, as light bulbs are to Marco Arment, so too are fonts to The Typist in this article. Also worth noting with regards to Google's offering is that in addition to making an ever-expanding library of fonts available for the attractive price of free, the ubiquity of these fonts over the more expensive options from H&FJ and Typekit makes caching and, thus, decreased load times something to consider as well.

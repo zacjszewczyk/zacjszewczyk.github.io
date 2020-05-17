@@ -2,6 +2,7 @@ Type: original
 Title: iOS 7: Apple's Windows Vista
 Link: iOS 7 Apples Windows Vista.htm
 Pubdate: 2013/09/06 15:58:51
+Category: Tech
 Author: Zac Szewczyk
 
 After nearly six years of Windows XP, the tenth major version of Microsoft's computer operating system released to much hype and high expectations. With an overhauled visual aesthetic and a host of other headlining features, the Windows world heralded this release as the platform atop which the next generation of computers would build itself. An ambitious claim for sure, Microsoft's promise to not only overhaul the user interface but its very underpinnings as well seemed almost too good to be true. After XP's phenomenal success though, the claim seemed a believable one. Like a joke straight out of Family Guy, Vista exited the gate and promptly fell flat on its face.

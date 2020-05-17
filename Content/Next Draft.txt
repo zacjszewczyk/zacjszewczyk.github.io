@@ -2,6 +2,7 @@ Type: linkpost
 Title: NextDraft
 Link: http://nextdraft.com
 Pubdate: 2014/02/22 06:49:00
+Category: Tech
 Author: Zac Szewczyk
 
 If you're looking to fill the void left by my now-discontinued newsletter, you could do much worse than Dave Pell's NextDraft. I subscribed a few days ago upon a friend's recommendation, and have enjoyed every issue since. It's billed as "the day's most fascinating news" so while you won't see the more obscure type of links I tended to throw in my newsletter, Dave makes up for it with great curation. The byline does not lie: NextDraft really does feature the day's most fascinating news. Alternately, if a daily newsletter isn't your thing, Stefan Constantinescu publishes a daily blog post collecting interesting news articles from the past twenty-four hours in much the same way Dave Pell does with NextDraft. I wrote a short post linking to one such collection a few weeks ago, which you can find [here](57 tabs.txt). I subscribe to both, but I realize that not everyone will find both equally attractive. So pick whichever suits your needs; you can't go wrong either way.

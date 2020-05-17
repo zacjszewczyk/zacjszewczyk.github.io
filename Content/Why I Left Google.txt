@@ -2,6 +2,7 @@ Type: linkpost
 Title: Why I left Google
 Link: http://blogs.msdn.com/b/jw_on_tech/archive/2012/03/13/why-i-left-google.aspx
 Pubdate: 2013/03/22 11:30:16
+Category: Tech
 Author: Zac Szewczyk
 
 James Whittaker on Google's metamorphosis from a tech company to the machine that churned out Google+:

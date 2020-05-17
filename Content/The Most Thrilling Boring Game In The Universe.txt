@@ -2,6 +2,7 @@ Type: linkpost
 Title: Eve: The Most Thrilling Boring Game In The Universe
 Link: http://www.polygon.com/features/2014/2/24/5419788/eve-online-thrilling-boring
 Pubdate: 2014/03/25 11:16:35
+Category: Uncategorized
 Author: Zac Szewczyk
 
 In the past, I have linked to [tales of grandiose exploits](The Battle of Asakai.txt) [in the world of Eve Online](Eve Online wages largest war.txt). Outside of those short articles and a few videos though, the game has remained a black box, of sorts, whose inner-workings I failed to understand. With this great article from Polygon, however, Tracey Lien gives us an in-depth and fascinating look at the mechanics, politics, and strategy behind this truly massive multilayer online role playing game, and it sounds amazing; I can't wait to give it a try.

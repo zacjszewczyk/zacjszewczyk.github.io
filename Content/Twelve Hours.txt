@@ -2,6 +2,7 @@ Type: original
 Title: A Complete Redesign in Twelve Hours
 Link: Twelve Hours.htm
 Pubdate: 2014/01/10 18:59:04
+Category: Programming
 Author: Zac Szewczyk
 
 Over the last few days I have received a ton of great feedback on both a number of my articles and my site's design as well. While the former has remained consistently positive, the latter refrain almost invariably included the same two criticisms: that I had set the font too small, and that every line contained too many words spread much too far across the screen for a comfortable reading experience. Others recommended that I find a way to differentiate linked list items from my own posts, but by and large the most common suggestion advocated a larger font size and decreased content column width. Today, I have addressed those issues and many others with my latest redesign, live with this article.

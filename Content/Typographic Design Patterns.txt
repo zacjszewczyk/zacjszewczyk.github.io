@@ -2,6 +2,7 @@ Type: linkpost
 Title: Typographic Design Patterns and Best Practices
 Link: http://www.smashingmagazine.com/2009/08/20/typographic-design-survey-best-practices-from-the-best-blogs/
 Pubdate: 2014/10/03 10:42:32
+Category: Blogging
 Author: Zac Szewczyk
 
 A great companion to yesterday's post, [10 Typeface Pairs for Cash-Poor Designers](10 Typeface Pairs for Cash Poor Designers.txt), for those looking to improve the design of their site through the adoption of strong design principles. Despite its original publication date of 2009, the best practices Michael Martin puts forth here have retained their value over the years in an excellent resource for aspiring designers. I have applied some of these lessons, too, in the creation of my elusive latest project. Look for more on this soon.

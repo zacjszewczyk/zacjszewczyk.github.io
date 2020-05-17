@@ -2,6 +2,7 @@ Type: original
 Title: My Router Blacklisted Hacker News
 Link: Hacker News Blacklisted.htm
 Pubdate: 2013/01/05 17:59:31
+Category: Writing
 Author: Zac Szewczyk
 
 Over the course of the last few days I have begun developing a new app to replace [Hacker News Story Pickup Rate](http://hnpickup.appspot.com/), a site that aims to take the guesswork out of submitting stories to Hacker News by using various heuristics to determine the best time to submit a story in order to gain the most attention. Partway through last week Hacker News Story Pickup Rate went down, and as of January 1st it had not gone back online.

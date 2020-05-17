@@ -2,6 +2,7 @@ Type: linkpost
 Title: CSS 3D Solar System
 Link: http://codepen.io/juliangarnier/full/idhuG
 Pubdate: 2014/04/22 08:01:45
+Category: Programming
 Author: Zac Szewczyk
 
 This is absolutely incredible. Using only JavaScript to manage the toggles, [Julian Garnier](https://twitter.com/JulianGarnier) made this fantastic interactive solar system powered by nothing more than CSS and some HTML structure code. Even cooler, it's not just a pretty animation: it has a lot of interesting information to show as well. Awesome.

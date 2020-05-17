@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Sweet Setup
 Link: http://thesweetsetup.com/
 Pubdate: 2013/12/17 14:55:22
+Category: Uncategorized
 Author: Zac Szewczyk
 
 [Four weeks old today](https://twitter.com/thesweetsetup/status/412998256562405376) and I have yet to at least mention Shawn Blanc's [The Sweet Setup](http://thesweetsetup.com/). For the three people who still have not visited this site, The Sweet Setup collects and reviews best-in-class apps for iOS and OS X alike, with a special focus on interviewing "internet celebrities" to discuss their home and mobile computing setups. So far, Shawn Blanc and [his impressive staff](http://thesweetsetup.com/colophon/) have conducted [six of these interviews](http://thesweetsetup.com/category/sweet-setup-interview/). [As a recent Mac convert](Diary of a Convert.txt) I have found this site invaluable in picking great new desktop apps, so if you haven't yet, I strongly recommend you check this site out.

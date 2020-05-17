@@ -2,6 +2,7 @@ Type: linkpost
 Title: Unknowable
 Link: http://www.randsinrepose.com/archives/2013/05/19/unknowable.html
 Pubdate: 2013/05/30 11:52:32
+Category: Tech
 Author: Zac Szewczyk
 
 "The cap on WWDC tickets means it won't go the way of SXSW - a wildly successful conference that has grown consistently since its inception. I used to go every year until one late night we looked around a huge sea of strangers and decided that we no longer knew this conference. The experience had become diluted. It had become unfamiliar, full of strangers, and unknowable."

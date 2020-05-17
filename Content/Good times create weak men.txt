@@ -2,6 +2,7 @@ Type: linkpost
 Title: Good times create weak men
 Link: https://tonsky.me/blog/good-times-weak-men/
 Pubdate: 2020/01/07 07:04:48
+Category: Motivation
 Author: Zac J. Szewczyk
 
 Nikita Prokopov, on the growing complexity of software and the shrinking number of people who understand it:

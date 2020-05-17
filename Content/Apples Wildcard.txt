@@ -2,6 +2,7 @@ Type: original
 Title: Apple's Wildcard
 Link: Apples Wildcard.htm
 Pubdate: 2013/07/06 14:08:34
+Category: Tech
 Author: Zac Szewczyk
 
 For the most part I try to stay away from Apple speculation: quite simply, I neither know enough about the company's past and present situation nor do I pay close enough attention to pick up on the subtleties of this practice. Then I read an interesting article speculating about Apple's Fall hardware announcements, and I decided to give it a try.

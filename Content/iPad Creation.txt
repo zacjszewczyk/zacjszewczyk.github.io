@@ -2,6 +2,7 @@ Type: original
 Title: iPad Creation
 Link: iPad Creation.htm
 Pubdate: 2012/12/08 20:41:27
+Category: Tech
 Author: Zac Szewczyk
 
 Over the past two weeks my usage of the iPad as a device for both content consumption and creation has exploded: whereas before I had used the iPad primarily to read textbooks with the occasional deviation into other forms of reading, I now use the iPad as my primary computing device. Despite the occasional inconvenience this approach presents, forcing me to return to my computer for one thing or another from time to time, I have done so less often than I thought I would, and it happens increasingly infrequently as I spend more time perfecting a new workflow. And that's strange for me, as an avid programmer, writer, and occasional gamer, to discover.

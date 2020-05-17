@@ -2,6 +2,7 @@ Type: linkpost
 Title: Note on cheap iPhones
 Link: http://ben-evans.com/benedictevans/2014/8/6/note-on-cheap-iphones
 Pubdate: 2014/08/21 07:20:06
+Category: Tech
 Author: Zac Szewczyk
 
 Very interesting point from Benedict Evans at the tail end of this article, where he points out that Apple's *decision* not to build a larger phone, and the company's decision not to enter the mid- to low-end, place it in a very powerful position going forward as those decisions can be reversed at any time. Much more powerful a position than its competitors, because unlike Apple who possess the ability to ship phones with these capabilities but has thus far deigned not to, others have proven wholly incapable of creating the aspects that make Apple's products so valuable. Going forward, that ought to cause a great deal of concern amongst some, while a great deal of hope among others.

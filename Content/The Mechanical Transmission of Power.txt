@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Mechanical Transmission of Power
 Link: https://www.lowtechmagazine.com/2013/01/mechanical-transmission-of-power-stangenkunst.html
 Pubdate: 2020/03/02 07:37:21
+Category: Simple living
 Author: Zac Szewczyk
 
 As I read through [part one](https://www.lowtechmagazine.com/2013/01/mechanical-transmission-of-power-stangenkunst.html) and then, later, parts [two](https://www.lowtechmagazine.com/2013/02/the-mechanical-transmission-of-power-jerker-line-systems.html) and [three](https://www.lowtechmagazine.com/2013/03/the-mechanical-transmission-of-power-3-wire-ropes.html) of Kris De Decker's interesting series on mechanical power transmission, I knew I had read other articles from the Low-Tech Magazine before. A quick check through my archive proved me right: for those looking for other interesting reads on low-tech solutions to hard problems, check out [How Sustainable is a Solar Powered Website?](https://www.lowtechmagazine.com/2020/01/how-sustainable-is-a-solar-powered-website.html) and [How to Build a Low-tech Internet](https://solar.lowtechmagazine.com/2015/10/how-to-build-a-low-tech-internet/), too, or any of [The Low-Tech Magazine's other fascinating work](https://www.lowtechmagazine.com/). 

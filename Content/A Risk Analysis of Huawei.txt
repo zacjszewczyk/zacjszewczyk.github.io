@@ -2,6 +2,7 @@ Type: linkpost
 Title: A Risk Analysis of Huawei
 Link: https://www.lawfareblog.com/risk-analysis-huawei-5g
 Pubdate: 2019/04/17 17:16:04
+Category: Politics
 Author: Zac Szewczyk
 
 Nicholas Weaver on the technical challenges to calling Huawei "safe", and why that might not matter:

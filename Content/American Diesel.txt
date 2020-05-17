@@ -2,6 +2,7 @@ Type: original
 Title: American Diesel
 Link: american-diesel.html
 Pubdate: 2019/07/31 08:59:07
+Category: Overlanding
 Author: Zac J. Szewczyk
 
 I started with [a simple question](https://www.scientificamerican.com/article/why-european-diesel-cars/): Why does Europe have ultra efficient diesel vehicles, but America does not? I had heard the claims, that some European diesels get up to 80 miles per gallon--yet those in North America eek 50. I had a hunch, that [stringent EPA rules forced auto makers to sell second-rate vehicles in the United States](https://dougdemuro.kinja.com/here-s-why-we-can-t-buy-that-80-mpg-diesel-we-rented-in-1325972764), but I had to know for sure.  

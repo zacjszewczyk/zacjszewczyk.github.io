@@ -2,6 +2,7 @@ Type: original
 Title: nvNotes
 Link: nvNotes.htm
 Pubdate: 2014/01/05 15:08:50
+Category: Tech
 Author: Zac Szewczyk
 
 Thinking Brett Terpstra had expanded nvALT into an iOS counterpart, I opened Chris Gonzales's post on Tools & Toys reviewing [nvNotes for iPhone](http://toolsandtoys.net/nvnotes-for-iphone/) curious to see what he had made and his justifications for such a move. To my surprise, the only relation nvNotes has to either Notational Velocity or nvALT lies in inspiration: created by Nicholas Clapp, it takes cues from both aforementioned apps in its utilitarian aesthetic and strong feature set. Despite its many benefits though, nvNotes' infancy in relation to the likes of Drafts unfortunately shines through in many areas.

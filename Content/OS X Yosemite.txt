@@ -2,6 +2,7 @@ Type: linkpost
 Title: OS X Yosemite: If This Doesn't Make You An Apple Guy, Nothing Will
 Link: http://www.instash.com/os-x-yosemite-if-this-doesnt-make-you-an-apple-guy-nothing-will
 Pubdate: 2014/10/21 19:34:03
+Category: Tech
 Author: Zac Szewczyk
 
 I've been moving further and further from the tech space lately, but this article still caught my eye from Aric Mitchell over at inStash. Here, Aric takes a short minute to chronicle his journey with Apple's products, and then talk about the experiential side of the company's latest desktop operating system, OS X Yosemite. This is by far and away the best piece of tech-focused writing I have read in quite some time.

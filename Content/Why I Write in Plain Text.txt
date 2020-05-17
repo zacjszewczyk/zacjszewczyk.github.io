@@ -2,6 +2,7 @@ Type: original
 Title: Why I Write in Plain Text
 Link: why-i-write-in-plain-text.html
 Pubdate: 2019/05/02 17:56:12
+Category: Writing
 Author: Zac Szewczyk
 
 A few days ago, I decided to start an article about my writing setup. Over the years I have dialed it in, and today I have a pretty neat workflow. As I started on that piece, though, I realized that I had never talked about why I write in plain text. Most aspects of my workflow traces back to that choice, so today I want to explain some of the reasons I made it.

@@ -2,6 +2,7 @@ Type: original
 Title: My Setup
 Link: my-setup-2019.html
 Pubdate: 2019/05/10 10:02:59
+Category: Uncategorized
 Author: Zac Szewczyk
 
 Over the years I have dialed in my writing process. I started typing posts in a textbox on Zoomshare; nowadays, I write in a powerful text editor, track changes with version control software, keep redundant backups, and serve this site with a back-end I wrote myself. I have set myself up well with a pretty neat workflow, and today I want to share it with you.

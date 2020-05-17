@@ -2,6 +2,7 @@ Type: linkpost
 Title: How to Edit Your Own Writing
 Link: https://www.nytimes.com/2020/04/07/smarter-living/how-to-edit-your-own-writing.html
 Pubdate: 2020/04/16 08:05:35
+Category: Writing
 Author: Zac Szewczyk
 
 I have an innate distrust of all writing advice that seem to come from a large organization. I blame academia, for all those years I spent years reading and writing the most rigid, boring prose known to man. I [prefer](Good Writing.txt) advice [from](Writing Turn Offs.txt) actual [writers](TBT Writing vs Writing.txt)--and that's what I found in Harry Guinness's recent article for The New York Times, [*How to Edit Your own Writing*](https://www.nytimes.com/2020/04/07/smarter-living/how-to-edit-your-own-writing.html). He offers some great advice, and makes some excellent book recommendations. To add to that list, I also recommend William Zinsser's *On Writing Well*, and Stephen King's *On Writing*: Harry's books focus on the mechanics, while these concern themselves with the craft.

@@ -2,6 +2,7 @@ Type: original
 Title: Why I Chose a Monthly Release Schedule
 Link: monthly-release.html
 Pubdate: 2020/05/08 07:36:36
+Category: Programming
 Author: Zac Szewczyk
 
 If you looked at [First Crack's](/projects.html#firstCrack) internal commit history, you would see that most features take at most a few days to write. Even the entirety of [First Crack's rewrite](First Crack Release Notes 0220.txt) happened over the course of a couple weeks, in the mornings before work and on the weekends. I have stuck with monthly releases since [June of last year](First Crack Release Notes 0619.txt), though, and today I want to explain why.

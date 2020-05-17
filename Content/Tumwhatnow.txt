@@ -2,6 +2,7 @@ Type: linkpost
 Title: Tumwhatnow?
 Link: http://hypercritical.co/2010/02/07/meta-intro
 Pubdate: 2013/01/22 11:44:30
+Category: Blogging
 Author: Zac Szewczyk
 
 John Siracusa in an article from 2010, in which he briefly discusses the problem faced by those wishing to enter into blogging.

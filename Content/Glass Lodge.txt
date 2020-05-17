@@ -2,6 +2,7 @@ Type: linkpost
 Title: Glass Lodge
 Link: http://freecabinporn.com/post/28090808148/glass-lodge-in-farellones-chile-submitted-by
 Pubdate: 2013/01/28 13:47:33
+Category: Simple living
 Author: Zac Szewczyk
 
 To once again reference Ben Brooks's article [*Fatal Design Flaw of Workspaces*](http://brooksreview.net/2013/01/design-workspace/), he described his ideal workspace towards the end of the article:

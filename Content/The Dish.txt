@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Dish
 Link: http://dish.andrewsullivan.com
 Pubdate: 2013/02/04 13:17:17
+Category: Writing
 Author: Zac Szewczyk
 
 In the wee hours of this morning Andrew Sullivan and his team completed The Dish's migration from The Daily Beast, transitioning fully to a reader-supported model. In an article posted to The Verge a few hours later titled [*Andrew Sullivan's grand experiment in reader-supported online journalism is now live*](http://www.theverge.com/2013/2/4/3949834/andrew-sullivan-the-dish-experiment-goes-live), Jeff Blagdon describes the challenges facing The Dish as one of the first major websites to become reader-supported:

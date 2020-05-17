@@ -2,6 +2,7 @@ Type: linkpost
 Title: Everything Else
 Link: http://daringfireball.net/2013/03/everything_else
 Pubdate: 2013/03/20 09:55:37
+Category: Tech
 Author: Zac Szewczyk
 
 In a footnote to his interesting piece posted yesterday titled *Everything Else*, John Gruber made an astute observation regarding loyalty and Apple:

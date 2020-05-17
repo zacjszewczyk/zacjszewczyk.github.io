@@ -2,6 +2,7 @@ Type: original
 Title: Introducing First Crack
 Link: Introducing First Crack.htm
 Pubdate: 2012/11/21 21:34:26
+Category: Programming
 Author: Zac Szewczyk
 
 As I mentioned in [We're Live](We're Live.txt), I wrote a slick content management system designed to streamline the publication of my content to the web. Serving as a nod of acknowledgment to Marco Arment's efforts in developing his very own CMS dubbed Second Crack, I call my system First Crack. In this post I will talk about why I chose to write my own content management system instead of using an existing engine--a topic that will stretch to encompass a discussion of the advantages such an approach affords--before going through some of the specific aspects of First Crack I find particularly interesting.

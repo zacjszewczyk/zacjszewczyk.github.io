@@ -2,6 +2,7 @@ Type: original
 Title: First Crack Release Notes, September 2019
 Link: first-crack-release-notes-0919.html
 Pubdate: 2019/10/07 08:01:17
+Category: Programming
 Author: Zac J. Szewczyk
 
 As I rolled into the last week of September, I started thinking about this post and how I have done almost nothing for it. I put a lot of work into some major performance wins [last month](First Crack Release Notes 0819.txt), but lost almost all that momentum when I decided to write my own [Instapaper](https://www.instapaper.com)-like read later service in September. It needs some more work before I release it, but I will. I did get a couple things done, though, even if I did forget to post this until the first week of October had already passed; I did not neglect [First Crack](/projects.html#firstCrack) entirely.

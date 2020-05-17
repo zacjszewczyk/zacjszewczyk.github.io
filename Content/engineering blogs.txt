@@ -2,6 +2,7 @@ Type: linkpost
 Title: How (some) good corporate engineering blogs are written
 Link: https://danluu.com/corp-eng-blogs/
 Pubdate: 2020/04/08 10:01:58
+Category: Blogging
 Author: Zac Szewczyk
 
 Back in November of last year, [I linked to](How to Encourage A Blogging Culture.txt) an interesting article by Noah Gibbs on [how to encourage a blogging culture at your company](http://codefol.io/posts/encourage-a-blogging-culture-at-your-company/). Where Noah focused more on the individual, Dan Luu--in [*How (some) good corporate engineering blogs are written*](https://danluu.com/corp-eng-blogs/)--looks at organizational factors that lead to successful corporate blogs. I encourage giving both a read. As I begin working toward a version of this at work, I found referring to both helpful.

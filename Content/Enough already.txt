@@ -2,6 +2,7 @@ Type: linkpost
 Title: Enough, already
 Link: http://www.backupbrain.com/2013/02/enough-already/
 Pubdate: 2013/02/06 13:49:39
+Category: Uncategorized
 Author: Zac Szewczyk
 
 When the wagon lumbered up the street proclaiming the news of Aaron Swartz's suicide, I jumped right on. I had never even heard of him, but I nevertheless jumped right on the bandwagon, eager to bemoan the passing of an individual many hailed as nothing short of a prodigy. [I eulogized the man](Aaron Swartz.txt), [praised](Lean into the Pain.txt) [his](Be More Productive.txt) [work](Who Writes Wikipedia.txt), and condemned the system that supposedly drove him from this life. Tom Negrino of Backup Brain took a slightly different approach after spending nearly four weeks in embittered silence:

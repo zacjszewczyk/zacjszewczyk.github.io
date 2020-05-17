@@ -2,6 +2,7 @@ Type: original
 Title: Killing Twitter
 Link: Killing Twitter.htm
 Pubdate: 2014/04/29 08:32:32
+Category: Tech
 Author: Zac Szewczyk
 
 It may sound cute and sensational to write a headline like this, but for Linus Edwards' recent piece [Numbers](http://vintagezen.com/zen/2014/4/16/numbers), I don't consider it wholly inappropriate. In that article, he first painted a picture of a microblogging service devoid of quantified metrics: no one would have any idea how many followers a given individual had, nor would the person in question. No longer would the best jokes, most insightful comments, and noteworthy observations come from a select few with follower counts in the six, seven, or eight digits, but could instead come from those individuals as well as the everyday user. I won't lie: it sounded nice, and for a short while, I was completely on board with this suggestion. However, then he took it a step further.

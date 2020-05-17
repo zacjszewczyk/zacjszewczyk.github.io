@@ -2,6 +2,7 @@ Type: original
 Title: OkCupid Revisited
 Link: OkCupid Revisited.htm
 Pubdate: 2014/04/16 11:09:57
+Category: Politics
 Author: Zac Szewczyk
 
 In scene reminiscent of Steve Jobs' dismissal from Apple at the behest of John Sculley, Brendan Eich lost his job as CEO of the Mozilla Corporation a few weeks ago over a political donation made roughly six years prior in support of California's Proposition 8. A bill that sought to ban gay marriage in the state, it's easy to see why Eich took such flack for that move in today's hyper-sensitive political landscape permeated by the rantings of faux-political activists. Although a federal court ultimately struck it down as unconstitutional, the fact that his donation ultimately had no lasting effect mattered not to nearly everyone that weighed in on the controversy, and least of all to Sam Yagan. CEO of OkCupid, Sam Yagan played a key role in Eich's ultimate impeachment by acting as one of Eich's loudest opponents.

@@ -2,6 +2,7 @@ Type: original
 Title: Social Success
 Link: Social Success.htm
 Pubdate: 2014/05/02 06:53:19
+Category: Tech
 Author: Zac Szewczyk
 
 Earlier this month Linus Edwards wrote an article he titled [Numbers](http://vintagezen.com/zen/2014/4/16/numbers), a piece where he posited that metrics-based social networks such as Twitter have made interpersonal interaction a game in which attracting the most attention means winning, and have simultaneously chipped away at the majority's ability to maintain real relationships devoid of such concrete numbers and superficial endorsements in the form of likes, favorites, retweets, etcetera. In response to his essay, I countered by questioning the existence of this purportedly unfortunate shift in [Killing Twitter](Killing Twitter.txt), and an [interesting conversation](https://twitter.com/zacjszewczyk/status/461122192361926656) ensued. Ultimately, in evaluating the validity of Linus's proposed network devoid of all but the most basic of social mechanics, it came down a question of the aspects leading to such a service's success. Unsurprisingly, that effectively ended the conversation; but it also got me thinking.

@@ -2,6 +2,7 @@ Type: original
 Title: Revisiting Preparedness
 Link: revisiting-preparedness.html
 Pubdate: 2020/03/30 06:20:39
+Category: Preparedness
 Author: Zac Szewczyk
 
 I brought up preparedness for the first time last year, in [*Building a Better Bug-Out Bag*](Building a Better BoB.txt). As I said there, though, my history with this mindset goes back much further than 2019:

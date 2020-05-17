@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Elegant Email
 Link: http://www.randsinrepose.com/archives/2012/10/14/the_elegant_email.html
 Pubdate: 2013/05/30 14:53:58
+Category: Writing
 Author: Zac Szewczyk
 
 "With each paragraph you write, double the amount of time you spend editing. It's not just grammar and spelling errors that might be hurting your credibility. Is your point clear, literate, and concise? Have you pruned aggressively to find the core of what you're saying? With each additional paragraph, the higher the chance becomes that you've made an egregious mistake that might make your email confusing and forgettable."

@@ -2,6 +2,7 @@ Type: original
 Title: What Happened to Instapaper?
 Link: What Happened to Instapaper.htm
 Pubdate: 2013/07/04 15:45:51
+Category: Tech
 Author: Zac Szewczyk
 
 I ask this question every time I open the app: *What happened to Instapaper?* After its sale both [Marco](http://www.marco.org/2013/04/25/instapaper-next-generation) and Betaworks seemed so enthusiastic about the popular read later service's future. Since then two months have gone by without a peep from anyone--not even a point release.

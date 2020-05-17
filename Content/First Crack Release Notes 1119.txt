@@ -2,6 +2,7 @@ Type: original
 Title: First Crack Release Notes, November 2019
 Link: first-crack-release-notes-1119.html
 Pubdate: 2019/12/04 08:19:51
+Category: Programming
 Author: Zac J. Szewczyk
 
 A few days late, again, but here it is: First Crack's release notes for November, 2019. Again in October, like [in September](First Crack Release Notes 0919.txt), I spent most of my dev time on an Instapaper-like read later service. I use it every day, and plan to release it. I did get a couple things done, though; once again, I did not neglect [First Crack](/projects.html#firstCrack) entirely.

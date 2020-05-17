@@ -2,6 +2,7 @@ Type: original
 Title: The September iPhone Launch
 Link: The September iPhone Launch.htm
 Pubdate: 2013/08/11 19:19:12
+Category: Tech
 Author: Zac Szewczyk
 
 Earlier this morning, as I scrolled through my RSS reader, I came across a number of articles mentioning an unassuming and altogether unremarkable [AllThingsD piece by Ina Fried](http://allthingsd.com/20130810/circle-sept-10-on-your-calendar-for-apples-big-iphone-event/). Despite its lukewarm tone, the prediction of a September iPhone launch event ran the gamut of popular tech sites and garnered a great deal of attention even though it said nothing surprising or even particularly interesting at this point. Setting that aside for a future article though, I would like to focus on the rumor itself.

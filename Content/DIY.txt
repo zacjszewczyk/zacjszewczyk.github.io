@@ -2,6 +2,7 @@ Type: linkpost
 Title: DIY
 Link: http://diy.org
 Pubdate: 2013/01/29 17:07:09
+Category: Uncategorized
 Author: Zac Szewczyk
 
 I came across this site partway through Cabin Porn earlier this week, but haven't had a chance to take a look at it until now. Everything from cartography to programming to circuitry, to shelter building and winter survival tips is rewarded on DIY, an interesting initiative using badges to reward kids for learning important life skills.

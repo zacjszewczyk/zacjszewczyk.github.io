@@ -2,6 +2,7 @@ Type: linkpost
 Title: Marginal Gains
 Link: https://jackmott.github.io/programming/tools/editor/ide/visual/studio/2016/07/01/marginal-gains.html
 Pubdate: 2019/04/25 16:24:44
+Category: Programming
 Author: Zac Szewczyk
 
 I found this article after [*Making the obvious code fast*](https://jackmott.github.io/programming/2016/07/22/making-obvious-fast.html), where Jack Mott explained the impact of ignoring basic optimization. In his 2016 piece [*Marginal Gains*](https://jackmott.github.io/programming/tools/editor/ide/visual/studio/2016/07/01/marginal-gains.html), he went over some small tips to make developers' lives easier. He had some good suggestions, and I want to take a minute to emphasize one of his points.

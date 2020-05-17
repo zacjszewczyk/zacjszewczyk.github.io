@@ -2,6 +2,7 @@ Type: linkpost
 Title: On architecture, urban planning and software construction
 Link: http://tomasp.net/blog/2020/cities-and-programming/
 Pubdate: 2020/04/20 07:07:20
+Category: Programming
 Author: Zac Szewczyk
 
 As I read Tomas Petricek's [*On architecture, urban planning and software construction*](http://tomasp.net/blog/2020/cities-and-programming/), it reminded me of an interesting point Dan Luu made in [*How (some) good corporate engineering blogs are written*](https://danluu.com/corp-eng-blogs/): "There's a dearth of real, in-depth, technical writing, which makes any half decent, honest, public writing about technical work interesting." Tomas' piece reminded me of this not because it lacks substance, but rather for the opposite reason: his work stands out as a prime example of substantial technical writing. I recommend reading [the entire piece](http://tomasp.net/blog/2020/cities-and-programming/), but I will highlight a few interesting points here.

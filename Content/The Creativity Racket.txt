@@ -2,6 +2,7 @@ Type: original
 Title: The Creativity Racket
 Link: The Creativity Racket.htm
 Pubdate: 2014/06/15 19:36:23
+Category: Motivation
 Author: Zac Szewczyk
 
 I coded all morning in a determined effort to finish a long-standing project I intend to write about soon. Although I planned to spend only a short while on this before moving to other things, I ended up using the majority of my afternoon to finally, after months of work, just about make this script feature-complete. It was not something I had planned to do, nor was it particularly enjoyable--in fact, at times I grew quite frustrated with my lack of progress, and often thought of quitting. But I plugged away at it, and now I am one step closer to finishing this project as well.

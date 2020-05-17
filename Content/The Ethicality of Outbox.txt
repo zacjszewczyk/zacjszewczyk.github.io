@@ -2,6 +2,7 @@ Type: original
 Title: The Ethicality of Outbox
 Link: The Ethicality of Outbox.htm
 Pubdate: 2013/03/01 13:58:36
+Category: Tech
 Author: Zac Szewczyk
 
 In my last post simply titled [*Outbox*](Outbox.txt) I linked to an article by Laura June of The Verge in which she raised a number of doubts as to the practicality of Outbox, including the potential legal troubles the startup could run into given that opening its users's mail is an integral part of the startup's business model. I glossed over those concerns in my last post; however, I feel they do merit some discussion.

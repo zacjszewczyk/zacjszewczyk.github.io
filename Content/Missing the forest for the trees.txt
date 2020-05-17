@@ -2,6 +2,7 @@ Type: original
 Title: Missing the Forest for the Trees
 Link: Missing the forest for the trees.htm
 Pubdate: 2013/12/08 21:47:37
+Category: Tech
 Author: Zac Szewczyk
 
 With the release of Tweetbot 3 Tapbots brought a complete user interface overhaul to the beloved Twitter app alongside a whole slew of other improvements and changes. One such change saw the removal of both Tweetbot's double- and triple-tap functionality. Citing increased responsiveness as the app would no longer have to wait for iOS to discern whether the user intended multiple taps, Tapbots replaced this feature with a curious swipe gesture. Believing it would work similarly to Mailbox's finicky yet workable gestures where swiping different distances invoked different actions, I looked forward to this improvement; however, in this regard Tweetbot 3 fell far short of excellence.

@@ -2,6 +2,7 @@ Type: linkpost
 Title: How to increase your chances of finding a hidden camera
 Link: https://sixfortwelve.wordpress.com/2019/04/06/how-to-increase-your-chances-of-finding-a-hidden-camera/
 Pubdate: 2019/04/22 11:14:26
+Category: Tech
 Author: Zac Szewczyk
 
 Andrew and Nealie Barker write a travel blog, and in their latest post they talk about finding hidden cameras in the houses they stay in. Having the know-how to do things like this makes me glad I chose the cyber security field, even if no part of this process takes a great deal of technical expertise: you can do everything the Barkers talk about with simple apps found on the App Store. I do not make a habit of staying in others' homes, but if you do, check out this simple guide.

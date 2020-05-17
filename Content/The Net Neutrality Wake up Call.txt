@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Net Neutrality Wake-up Call
 Link: http://stratechery.com/2014/net-neutrality-wake-call/
 Pubdate: 2014/06/02 17:39:12
+Category: Tech
 Author: Zac Szewczyk
 
 Thought-provoking piece by Ben Thompson wherein he explains the importance of those within the technical professions getting involved  in the morass that is politics. In the past I have taken zero interest in this whatsoever: despite turning eighteen just before the last presidential election, I did not vote; I have yet to even register. But Ben makes a strong case for greater involvement, and one that I feel will, ultimately, prove not only the best course of action, but the only viable one for a bright future.

@@ -2,6 +2,7 @@ Type: original
 Title: Before You Continue, Let Me Tell You Something about Blogging
 Link: Before You Continue.htm
 Pubdate: 2013/04/09 08:53:24
+Category: Writing
 Author: Zac Szewczyk
 
 *Hi, can I axe you a question? Ever made a blog at WordPress, Blogger? How about Tumblr or Squarespace? Before you answer, Hi.*

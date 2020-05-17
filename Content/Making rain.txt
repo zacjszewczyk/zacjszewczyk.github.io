@@ -2,6 +2,7 @@ Type: linkpost
 Title: Making rain
 Link: http://www.asymco.com/2013/04/10/making-rain/
 Pubdate: 2013/04/18 11:33:33
+Category: Tech
 Author: Zac Szewczyk
 
 "Android and the Fiber business and even Facebook fit into this analogy rather well. In this context more rainfall means more people using the Internet. If you have more people you'll have more rivers and you'll have more water and hopefully more fish. Fiber means the water will flow more rapidly: you're essentially dredging the riverbed."

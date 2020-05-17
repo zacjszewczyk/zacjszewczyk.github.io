@@ -2,6 +2,7 @@ Type: original
 Title: Soylent
 Link: Soylent.htm
 Pubdate: 2013/03/13 23:35:21
+Category: Uncategorized
 Author: Zac Szewczyk
 
 "Hacking the body is high risk, high reward. I read a textbook on physiological chemistry and took to the internet to see if I could find every known essential nutrient. My kitchen soon looked like a chemistry lab and I had every unknown substance in a glass in front of me. I was a little worried it was going to kill me, but decided it was for science and quickly downed the whole thing. To my surprise, it was quite tasty and I felt very energetic. For 30 days I avoided food entirely and I monitored the contents of my blood and physical performance. Mental performance is harder to quantify, but I feel much sharper."

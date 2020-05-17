@@ -2,6 +2,7 @@ Type: original
 Title: Low-End Apple Bloggers
 Link: Low End Apple Bloggers.htm
 Pubdate: 2013/05/21 16:31:00
+Category: Blogging
 Author: Zac Szewczyk
 
 On January 18th Horace Dediu made two observations and posted them to Twitter. Shortly after those tweets went live, I began constructing a short article around them. Either unable or simply unwilling to finish the article though, the beginnings of this piece have remained in Simplenote since then. Now, with my Instapaper queue finally completely empty for the first time since I bought the app, I finally have the time and--more importantly-- available attention to begin working through my back catalog of half-baked articles, the first of which is this one about Apple bloggers.

@@ -2,6 +2,7 @@ Type: linkpost
 Title: How to Manage Stress as a Developer: Practical Tips
 Link: https://thevaluable.dev/developer-stress-management/
 Pubdate: 2019/09/05 07:09:55
+Category: Motivation
 Author: Zac J. Szewczyk
 
 The Valuable Dev [has some good tips for stress management](https://thevaluable.dev/developer-stress-management/). I will write an in-depth article about my own strategies at some point, but in brief:

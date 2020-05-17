@@ -2,6 +2,7 @@ Type: original
 Title: Framing the Entry Level iPhone
 Link: Framing the Entry Level iPhone.htm
 Pubdate: 2013/07/09 20:59:19
+Category: Tech
 Author: Zac Szewczyk
 
 "Part of me think that an entry level iPhone will be very much like an iPod touch with an antenna, with hardware that's capable enough to run all of iOS 7's features, is better than the any last generation iPhone, but won't compare to what's inside Apple's flagship offering."

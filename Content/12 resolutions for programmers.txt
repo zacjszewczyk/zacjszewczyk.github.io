@@ -2,6 +2,7 @@ Type: linkpost
 Title: 12 resolutions for programmers
 Link: http://matt.might.net/articles/programmers-resolutions/
 Pubdate: 2013/02/05 14:33:14
+Category: Programming
 Author: Zac Szewczyk
 
 "Since my early twenties, I've looked at my older peers and tried to figure out why some stagnate and how others stay vibrant."

@@ -2,6 +2,7 @@ Type: linkpost
 Title: This Page is Designed to Last
 Link: https://jeffhuang.com/designed_to_last/
 Pubdate: 2019/12/30 19:01:33
+Category: Programming
 Author: Zac J. Szewczyk
 
 Jeff Huang, echoing a point I made in [*Own Your Platform*](Own Your Platform.txt), in his piece on the importance of building websites that stand the test of time:

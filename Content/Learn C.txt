@@ -2,6 +2,7 @@ Type: original
 Title: Learn C, but Don't Use It
 Link: learn-c.html
 Pubdate: 2020/04/17 06:49:32
+Category: Programming
 Author: Zac Szewczyk
 
 Steve and I came up hearing the same refrain: "Learn C, it'll make you a good programmer--it's how the computer works behind the scenes." As he points out in his [three](https://words.steveklabnik.com/should-you-learn-c-to-learn-how-the-computer-works) [part](https://words.steveklabnik.com/c-is-not-how-the-computer-works-can-lead-to-inefficient-code) [series](https://words.steveklabnik.com/c-is-how-the-computer-works-is-a-dangerous-mindset-for-c-programmers), though, using C just means having a thinner abstraction layer between your code and the hardware on which it runs. That layer still exists. [I do believe new developers should learn to work in this environment](Good Times Create Weak Men.txt): understanding the code that underlies usable, high-level languages like Python will help you write better Python for the same reason that understanding assembly will help you write better C; I do not believe they should use it, though, and here's why:

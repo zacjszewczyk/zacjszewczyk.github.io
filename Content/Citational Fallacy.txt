@@ -2,6 +2,7 @@ Type: original
 Title: Citational Fallacy
 Link: Citational Fallacy.htm
 Pubdate: 2013/03/25 12:34:51
+Category: Uncategorized
 Author: Zac Szewczyk
 
 In the past few months I have written many essays necessitating the use of citations as a manner through which to lend credence to some datum or another. As you may have surmised from this article's title though, I believe the current model for determining credible citations to be broken. Take, for example, XKCD comic #976, [Citogenesis](http://xkcd.com/978/). In this comic, Randal Munroe once again displays brilliance by showing [where citations come from](http://www.forbes.com/sites/alexknapp/2011/11/16/xkcd-explains-where-internet-citations-come-from/).

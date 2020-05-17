@@ -2,6 +2,7 @@ Type: original
 Title: In Praise of Instapaper
 Link: In Praise of Instapaper.htm
 Pubdate: 2014/05/30 07:13:07
+Category: Tech
 Author: Zac Szewczyk
 
 Shortly after Marco Arment and Dan Benjamin started [Build & Analyze](http://5by5.tv/buildanalyze) in 2010, I bought Instapaper. I did not buy this app out of any particular need for it, though, but rather out of a desire to give Marco a little something in exchange for the hours upon hours of enjoyment he had provided me in the form of his podcast. Fast-forward just a few months, however, and--just as I do now--I had begun to use Instapaper daily. Even so, it took me nearly four years--until just a few weeks ago, in fact--to realize that the true value of this service did not lie in its ability to strip away ads and annoying sidebars nor even keep my saved articles available for reading offline, nor did its value stem from its intended use case as a way to time-shift the reading experience. Instead, I found Instapaper incredibly handy because of the psychological tricks it lets me play on myself.

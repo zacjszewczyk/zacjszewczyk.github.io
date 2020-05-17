@@ -2,6 +2,7 @@ Type: original
 Title: Fulfilling the Dream
 Link: Fulfilling the Dream.htm
 Pubdate: 2013/10/03 21:51:10
+Category: Tech
 Author: Zac Szewczyk
 
 Exactly a week ago today Chris Gonzales of Unretrofied wrote an article called [*iOS 7 and the State of Podcast Apps*](http://unretrofied.com/blog/2013/9/26/ios-7-and-the-state-of-podcast-apps), a rather presumptuous title given the article's actual contents, that I initially did not plan on linking to or writing anything about. At the very bottom of his article though, Chris tacked on a bracket-thetical that gave me pause:

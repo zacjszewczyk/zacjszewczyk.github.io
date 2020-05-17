@@ -2,6 +2,7 @@ Type: linkpost
 Title: "Calm down, Marco: micropublishing is about more than just The Magazine"
 Link: http://pandodaily.com/2013/03/02/calm-down-marco-micropublishing-is-about-more-than-just-the-magazine/
 Pubdate: 2013/03/12 14:28:20
+Category: Uncategorized
 Author: Zac Szewczyk
 
 "Sure the advent of Blogger, WordPress, and the likes also ushered in an era in which we have been bombarded with substandard writers filling up the Internet with pages of crap. But such software also allowed some great writers to emerge, and some of them have launched careers and created decent businesses because of it. People and publications like John Gruber's Daring Fireball, Jason Calacanis' Weblogs, TechCrunch, Daily Kos, and Glenn Greenwald all fall into this camp, and that's just to name a tiny few. All of them invested immense time, money, and energy into editorial - and they also happen to be compelling writers - but they couldn't have done it without the blogging software."

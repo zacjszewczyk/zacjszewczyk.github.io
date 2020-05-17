@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Cost of Javascript Frameworks
 Link: https://timkadlec.com/remembers/2020-04-21-the-cost-of-javascript-frameworks/
 Pubdate: 2020/05/13 05:15:57
+Category: Programming
 Author: Zac Szewczyk
 
 Turns out, dependencies are a drag. [Shocker](Lets Be Real About Dependencies.txt).

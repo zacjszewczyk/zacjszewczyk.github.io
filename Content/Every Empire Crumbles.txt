@@ -2,6 +2,7 @@ Type: linkpost
 Title: "Every empire crumbles"
 Link: http://verynicewebsite.net/2013/01/every-empire-crumbles/
 Pubdate: 2013/01/20 13:33:08
+Category: Tech
 Author: Zac Szewczyk
 
 I saw a similar post to this one a few days ago about Microsoft called [*Fail Fail Fail iPad*](http://gravitationalpull.net/wp/?p=2312) on Gravitational Pull, using preductions from years long past that coincidentally fit current events to predict the eventual demise of Microsoft. Both articles were wrong.

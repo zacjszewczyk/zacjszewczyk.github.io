@@ -2,6 +2,7 @@ Type: original
 Title: Peeping Tim
 Link: Peeping Tim.htm
 Pubdate: 2014/06/06 07:08:22
+Category: Tech
 Author: Zac Szewczyk
 
 Monday afternoon, at the tail end of a jam-packed and incredible keynote, Craig Federighi introduced yet another "kit"--HomeKit. Continuing an impressive trend present throughout the presentation, this framework makes your entire house an accessory to the iPhone in iOS 8 by allowing those with compatible systems to control everything from security cameras and door locks to lights and, although not explicitly stated, other devices such as thermostats too. Unsurprisingly, the feedback I have seen thus far has remained universally positive: if not the utility of such an advancement, everyone recognizes the implications of Apple tying so many once-disparate systems together into a single, usable, and--most importantly--enjoyable system. Completely absent from this commentary, however, is any discussion of privacy or even the notion that giving Apple so many hooks into one's personal life could, at some point, become a concern.

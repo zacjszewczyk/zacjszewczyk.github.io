@@ -2,6 +2,7 @@ Type: original
 Title: First Crack Release Notes, April 2020
 Link: first-crack-release-notes-0420.html
 Pubdate: 2020/05/02 19:53:45
+Category: Programming
 Author: Zac Szewczyk
 
 I spent most of my development time in April working on a project that I can, at best, call tangentially related to First Crack. After fighting with [Flask](https://flask.palletsprojects.com/en/1.1.x/), [Bottle](http://bottlepy.org/docs/dev/), and then Python’s own [http.server](https://docs.python.org/3/library/http.server.html) library, I decided to write my own web framework. I won’t spend much time on this now, since I plan to deploy it in an Intranet soon and then release it after some real use, but I will say this: I liked Flask, but it has far too many dependencies to work in my target environment. I liked Bottle even more, since it mirrors most of Flask’s functionality without any dependencies, but it lacks the ability to handle concurrent connections. The surprisingly capable `http.server` library has zero dependencies and supports concurrent execution, but is ill-suited for building out an entire web application. My project, *Swig*[^1], solves all of these problems. For now, though, let’s talk about First Crack--a day late, yes, but I hope not a dollar short. 

@@ -2,6 +2,7 @@ Type: linkpost
 Title: Self-Reliance
 Link: http://hypercritical.co/2013/03/19/self-reliance
 Pubdate: 2013/03/22 09:28:44
+Category: Tech
 Author: Zac Szewczyk
 
 John Siracusa explaining Apple's aversion to outsourcing:

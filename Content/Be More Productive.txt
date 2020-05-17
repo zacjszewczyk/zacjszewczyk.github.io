@@ -2,6 +2,7 @@ Type: linkpost
 Title: Be more productive
 Link: http://www.aaronsw.com/weblog/productivity
 Pubdate: 2013/01/31 11:10:16
+Category: Uncategorized
 Author: Zac Szewczyk
 
 Aaron Swartz made a number of interesting observations and suggestions throughout this piece. Of those, this is my favorite, found near the end of the article:

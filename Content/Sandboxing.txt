@@ -2,6 +2,7 @@ Type: original
 Title: Sandboxing
 Link: Sandboxing.htm
 Pubdate: 2014/07/02 06:54:04
+Category: Tech
 Author: Zac Szewczyk
 
 Since Apple began requiring that developers submitting applications to the Mac App Store sandbox their products, it has remained a somewhat controversial decision. Two years after the rule went in to effect, it continues to preclude a number of great apps from sharing in the spotlight Apple so generously--and to such great effect--sheds on its platform's developers by featuring their creations on the store's front page. Nevertheless, by allowing users to continue downloading and installing programs from outside locations, Apple has avoided any significant amount of criticism; in fact, by presenting it as the security boon that it inarguably is, many praise this decision as a boon for all. And in reality, that is exactly the case: everyone, from developer to consumer benefited from this stipulation, including Apple itself.

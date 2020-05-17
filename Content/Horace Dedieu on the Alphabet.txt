@@ -2,6 +2,7 @@ Type: original
 Title: Horace Dediu on the Alphabet
 Link: Horace Dedieu on the Alphabet.htm
 Pubdate: 2013/09/15 12:56:44
+Category: Tech
 Author: Zac Szewczyk
 
 In the first in a wonderful series of articles, [*C is for Cognitive Illusion*](http://www.asymco.com/2013/09/11/c-is-for-cognitive-illusion/), Horace discussed the positioning of the iPhone 5C, how it differed from past years' portrayal of the "n-1" product, and what this means for the iPhone line:

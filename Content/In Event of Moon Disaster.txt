@@ -2,6 +2,7 @@ Type: linkpost
 Title: In Event of Moon Disaster
 Link: http://www.lettersofnote.com/2010/11/in-event-of-moon-disaster.html?m=1
 Pubdate: 2013/03/27 17:10:33
+Category: Readme
 Author: Zac Szewczyk
 
 "Fate has ordained that the men who went to the moon to explore in peace will stay on the moon to rest in peace."

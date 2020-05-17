@@ -2,6 +2,7 @@ Type: linkpost
 Title: Goodbye Dropbox
 Link: http://brooksreview.net/2013/09/goodbye-dropbox/
 Pubdate: 2013/09/13 07:48:44
+Category: Tech
 Author: Zac Szewczyk
 
 "You hold the encryption keys, which means the NSA holds the keys too. I don't care for that. Thanks for all the great service along the way."

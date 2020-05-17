@@ -2,6 +2,7 @@ Type: original
 Title: Instacast 3 and Paid Upgrades
 Link: Instacast 3.htm
 Pubdate: 2012/12/13 15:55:41
+Category: Tech
 Author: Zac Szewczyk
 
 As I wrote [*BuzzFeed, Meet The Oatmeal*](Meet The Oatmeal.txt) Tuesday night, I came across [Shawn Blanc's short post](http://shawnblanc.net/2012/12/instacast-3/) regarding Vemedio's latest release in a bout of procrastination as I pursued Twitter. My excitement over a new major release of my favorite podcast client was tinged with confusion though as I attempted to update the app, and was instead presented with the option to purchase it once again. Curious, I began digging around until finally, after a strangely complicated search, I confirmed my suspicion that Instacast 3.0 is, in fact, a paid upgrade.

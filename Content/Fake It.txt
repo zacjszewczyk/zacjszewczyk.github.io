@@ -2,6 +2,7 @@ Type: linkpost
 Title: Fake It. Trash It. Build It.
 Link: http://42floors.com/blog/fake-it-trash-it-build-it/
 Pubdate: 2013/03/05 13:26:24
+Category: Writing
 Author: Zac Szewczyk
 
 "We didn't start with any wireframes. We didn't spend anytime in brainstorming meetings. I gathered an understanding of the general goals, and went to work throwing my initial thoughts into a fake product. The end result was a prototype that, in a lot of ways, was functional."

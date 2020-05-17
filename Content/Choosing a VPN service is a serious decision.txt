@@ -2,6 +2,7 @@ Type: linkpost
 Title: Choosing a VPN service is a serious decision
 Link: https://drewdevault.com/2019/04/19/Your-VPN-is-a-serious-choice.html
 Pubdate: 2019/04/19 12:28:01
+Category: Cybersecurity
 Author: Zac Szewczyk
 
 Drew DeVault on the dangers of using a virtual private network, or VPN:

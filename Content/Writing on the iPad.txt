@@ -2,6 +2,7 @@ Type: linkpost
 Title: Writing on the iPad
 Link: http://www.macworld.com/article/2018600/why-im-writing-on-the-ipad.html
 Pubdate: 2012/12/26 20:00:33
+Category: Tech
 Author: Zac Szewczyk
 
 As I was working through my seemingly immutable Instapaper queue this morning I came across Jason Snell's article from earlier this month titled [*Writing on the iPad*](http://www.macworld.com/article/2018600/why-im-writing-on-the-ipad.html); it was as if I had written the article myself.

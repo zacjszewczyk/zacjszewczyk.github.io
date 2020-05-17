@@ -2,6 +2,7 @@ Type: original
 Title: Instapaper for iPad Receives a Facelift
 Link: Instapaper Facelift.htm
 Pubdate: 2013/11/07 12:56:01
+Category: Tech
 Author: Zac Szewczyk
 
 This completely blindsided me. I had the lack of foresight to uninstall the betas after Instapaper 5 hit the market, so I had no idea a revamped iPad app was in the works until coming across the announcement in my Twitter feed late yesterday evening. Thanks iOS 7's automatic update feature, I got to experience Betaworks' latest revision firsthand as soon as I opened the app; and as I said [on Twitter](https://twitter.com/zacjszewczyk/statuses/398276792198238209), I really like the new design. The folks over at Betaworks also implemented the much-acclaimed sorting and filtering abilities Instapaper 5 for iPhone shipped with three months ago, along with some other, more minor tweaks and updates. For a full list, head on over to the blog post: [*Redesigned Instapaper for iPad*](http://blog.instapaper.com/post/66190518154).

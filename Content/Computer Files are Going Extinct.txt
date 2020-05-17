@@ -2,6 +2,7 @@ Type: linkpost
 Title: Computer Files are Going Extinct
 Link: https://onezero.medium.com/the-death-of-the-computer-file-doc-43cb028c0506
 Pubdate: 2019/10/16 08:30:15
+Category: Programming
 Author: Zac J. Szewczyk
 
 From Simon Pitt [over at OneZero](https://onezero.medium.com/the-death-of-the-computer-file-doc-43cb028c0506), emphasis mine:

@@ -2,6 +2,7 @@ Type: linkpost
 Title: A Fable of Science and Politics
 Link: http://lesswrong.com/lw/gt/a_fable_of_science_and_politics/
 Pubdate: 2013/04/08 14:54:41
+Category: Politics
 Author: Zac Szewczyk
 
 "Imagine a future society that flees into a vast underground network of caverns and seals the entrances.  We shall not specify whether they flee disease, war, or radiation; we shall suppose the first Undergrounders manage to grow food, find water, recycle air, make light, and survive, and that their descendants thrive and eventually form cities.  Of the world above, there are only legends written on scraps of paper; and one of these scraps of paper describes the sky, a vast open space of air above a great unbounded floor.  The sky is cerulean in color, and contains strange floating objects like enormous tufts of white cotton.  But the meaning of the word "cerulean" is controversial; some say that it refers to the color known as 'blue', and others that it refers to the color known as 'green'."

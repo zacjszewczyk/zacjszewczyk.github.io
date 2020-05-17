@@ -2,6 +2,7 @@ Type: original
 Title: More Coin
 Link: More Coin.htm
 Pubdate: 2013/12/12 21:33:52
+Category: Tech
 Author: Zac Szewczyk
 
 I feel a bit like a broken record at this point, what with having already talked about Coin [twice](Thoughts Regarding Coin.txt) [before](Bad Coin.txt), but the company's latest stunt bears once again picking up my banner and going back off to war: earlier this evening, via their Twitter account, Coin posted a "BREAKING NEWS!" announcement that--you guessed it--extended the $50 off early adopter deal into the new year. Surprised? You should't be.

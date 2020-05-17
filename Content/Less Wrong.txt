@@ -2,6 +2,7 @@ Type: linkpost
 Title: Less Wrong
 Link: http://wiki.lesswrong.com/wiki/FAQ
 Pubdate: 2013/03/27 17:24:47
+Category: Uncategorized
 Author: Zac Szewczyk
 
 "Less Wrong is an online community for discussion of rationality. Topics of interest include decision theory, philosophy, self-improvement, cognitive science, psychology, artificial intelligence, game theory, metamathematics, logic, evolutionary psychology, economics, and the far future."

@@ -2,6 +2,7 @@ Type: original
 Title: Powerful Bloggers
 Link: Powerful Bloggers.htm
 Pubdate: 2013/05/21 16:47:50
+Category: Writing
 Author: Zac Szewczyk
 
 Quite some time ago I came across a very interesting statement in the most unlikely of places, in a "tips and tricks" piece sensationally titled [*10 Rare But Simple Blog Tricks that Make You Look Like a Genius*](http://twohourblogger.com/genius/), where the author writes:

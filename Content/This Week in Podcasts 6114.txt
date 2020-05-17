@@ -2,6 +2,7 @@ Type: original
 Title: This Week in Podcasts
 Link: This Week in Podcasts 6114.htm
 Pubdate: 2014/06/08 09:01:55
+Category: Podcasts
 Author: Zac Szewczyk
 
 WWDC has come and gone, and in its wake Apple has left us a number of great analytical shows discussing the implications of its announcements. Podcasts on this subject are not the only ones you will find here, though: this week, as always, I have something for everyone.

@@ -2,6 +2,7 @@ Type: linkpost
 Title: Why the Web Still Matters for Writing
 Link: http://ma.tt/2014/04/the-web-matters/
 Pubdate: 2014/04/21 12:33:43
+Category: Writing
 Author: Zac Szewczyk
 
 Great counter-point to [The decline of the mobile web](The decline of the mobile web.txt) by Ben Thompson, guest posting on Matthew Mullenweg's site about the value of the web in a world dominated by apps. An infinite number of apps could be made for infinite number of use cases, but they will still only be designed for those specific use cases; beyond those, there must be something more flexible, able to handle every other possible need. That something is the web.

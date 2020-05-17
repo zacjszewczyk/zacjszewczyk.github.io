@@ -2,6 +2,7 @@ Type: linkpost
 Title: Facebook asks for a moat of regulations it already meets
 Link: https://techcrunch.com/2020/02/17/regulate-facebook/
 Pubdate: 2020/02/19 07:26:25
+Category: Politics
 Author: Zac Szewczyk
 
 Josh Constine, writing for TechCrunch:

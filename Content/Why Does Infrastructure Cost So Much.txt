@@ -2,6 +2,7 @@ Type: linkpost
 Title: Why Does Infrastructure Cost So Much?
 Link: https://www.strongtowns.org/journal/2019/7/31/why-does-infrastructure-cost-so-much
 Pubdate: 2019/08/14 07:53:28
+Category: Politics
 Author: Zac J. Szewczyk
 
 Stop me if you've heard this one before: the Government brought its best intentions and a bottomless bag of money, removed all incentive for fiscal responsibility, then left us all wondering why an entire industry got so expensive. No, I'm not talking about higher education--or health care, pharmaceuticals, or agriculture; I'm talking about infrastructure.

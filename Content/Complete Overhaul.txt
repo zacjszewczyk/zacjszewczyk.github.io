@@ -2,6 +2,7 @@ Type: original
 Title: First Crack's Complete Overhaul
 Link: Complete Overhaul.htm
 Pubdate: 2013/01/27 16:01:31
+Category: Programming
 Author: Zac Szewczyk
 
 Early Friday morning I started redesigning this site's layout. I wanted to create a better reading experience and place more emphasis on my content, with particular attention paid to the latest articles. Two days later, in the wee hours of Sunday morning, I closed my computer having not only accomplished my initial goals, but also after successfully completing a long-overdue complete overhaul of the content mangement system I drive this site with, First Crack. For those unfamiliar with my work on this Markdown-based content management system, check out [*Introducing First Crack*](Introducing First Crack.txt) and [*First Crack in Practice*](First Crack in Practice.txt).

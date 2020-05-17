@@ -2,6 +2,7 @@ Type: linkpost
 Title: Who cares about Office for iPad?
 Link: http://reverttosaved.com/2014/02/19/who-cares-about-office-for-ipad/
 Pubdate: 2014/02/23 09:04:48
+Category: Tech
 Author: Zac Szewczyk
 
 More of a problem than not having Microsoft Office available for iOS, I think, is the strict siloing Apple's mobile operating system enforces: I can fulfill all my Office-related needs with Pages, Numbers, and Keynote, but trying to find away around the cumbersome process of opening a document in Dropbox, sending it to Numbers for editing, and then finding a way to get it back into Dropbox so my seventy-five year old uncle can edit the spreadsheet on his computer is a massive barrier to entry for him buying an iPad; in the end, I had no choice but to recommend a Surface. Although the absence of cellular capabilities in the Surface is thankfully pushing him back towards the iPad, the mere fact that I had no choice but to recommend the former highlights a huge shortcoming in the latter.

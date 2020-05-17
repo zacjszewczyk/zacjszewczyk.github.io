@@ -2,6 +2,7 @@ Type: linkpost
 Title: Writing Tools - Matt Gemmell
 Link: http://mattgemmell.com/2013/01/15/writing-tools/
 Pubdate: 2013/01/16 12:06:03
+Category: Writing
 Author: Zac Szewczyk
 
 Always interesting to read about another writer's tools and setup, and Matt Gemmell's style makes this piece all the more pleasurable to read.

@@ -2,6 +2,7 @@ Type: linkpost
 Title: If Philosophers Were Programmers
 Link: http://developeronline.blogspot.com/2009/04/if-philosophers-were-programmers.html
 Pubdate: 2013/02/22 12:08:00
+Category: Programming
 Author: Zac Szewczyk
 
 With years of programming under my belt and currently taking a philosophy course, I found the parallels a blogger writing under the moniker "panefsky" drew between programming, philosophy, and specific philosophers interesting.

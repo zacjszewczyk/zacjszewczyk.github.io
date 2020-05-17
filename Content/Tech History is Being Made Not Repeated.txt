@@ -2,6 +2,7 @@ Type: original
 Title: Predicting the Future
 Link: Tech History is Being Made Not Repeated.htm
 Pubdate: 2014/04/25 11:23:31
+Category: Tech
 Author: Zac Szewczyk
 
 These days it has become quite common to frame both current events and predictions of the future in terms of the past. Within the technology space, and particularly when talking about Apple, this is especially true--even for me: every time I comment on a rumor, whether in regards to something so trivial as WWDC dates this year all the way up to the much more significant potential screen sizes at which the iPhone 6 could ship, I look to the past. In terms of WWDC, the past indicates it will take place some day in the month of June; turns out, it will run from June second through the sixth. Regarding the potential for the iPhone's screen size to increase, Apple's historical aversion to changing this aspect of their devices pitted against the fact that they did with the iPhone 5 and a growing desire for a larger device nevertheless makes a larger-screened iPhone a likely proposition. And so, were I a better man, thus would I place my bets.
