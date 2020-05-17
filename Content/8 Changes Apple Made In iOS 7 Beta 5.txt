@@ -2,6 +2,7 @@ Type: linkpost
 Title: 8 Changes Apple Made In iOS 7 Beta 5
 Link: http://www.cultofmac.com/238967/8-changes-apple-made-in-ios-7-beta-5/
 Pubdate: 2013/08/07 19:46:45
+Category: Tech
 Author: Zac Szewczyk
 
 "Ability to disable Control Center while using apps. The feature previously worked no matter where you were in iOS 7. Now you can select to have it turned off whenever an app is open. It can also be disabled on the lock screen."

@@ -2,6 +2,7 @@ Type: original
 Title: Podcasting's Blogger Moment
 Link: Podcastings Blogger Moment.htm
 Pubdate: 2014/05/19 16:54:49
+Category: Podcasts
 Author: Zac Szewczyk
 
 Over the past week especially, there has been a fair bit of discussion devoted to podcasting's so-called "Blogger moment". In particular, John Gruber and Mike Monteiro discussed this on [the latest episode of The Talk Show](http://muleradio.net/thetalkshow/80/), and Myke Hurley and Casey Liss spent some time talking about it on [CMD+SPACE 96: Not Many Original Thoughts, with Casey Liss](http://5by5.tv/cmdspace/96) as well. In a nutshell, the idea is that just as Blogger brought blogging to the masses in the early 2000s and consequently caused the medium to explode in popularity, so too will podcasting have a similar moment whereby it breaks through the nerd barrier and goes mainstream. Interestingly, many at the forefront of the podcast medium believe that time to be now. For what reasons they believe this, however, I cannot say.

@@ -2,6 +2,7 @@ Type: linkpost
 Title: You really can fool some of the people, all of the time
 Link: https://www.economist.com/international/2019/10/31/you-really-can-fool-some-of-the-people-all-of-the-time
 Pubdate: 2019/11/12 08:12:26
+Category: Politics
 Author: Zac J. Szewczyk
 
 The Economist took an interesting look at how citizens view politicians when they lie, and their conclusion warrants concern: 

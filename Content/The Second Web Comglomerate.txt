@@ -2,6 +2,7 @@ Type: original
 Title: The Second Web Conglomerate
 Link: The Second Web Comglomerate.htm
 Pubdate: 2014/01/26 12:03:30
+Category: Tech
 Author: Zac Szewczyk
 
 Rather than asking "[Is Yahoo Even Worth Trying To Save?](http://harshilshah1910.wordpress.com/2014/01/25/yahoo-marissa-mayer-techpinions/)", a more apropos question would ask not if Yahoo! was worth rescuing, but instead if Marissa Mayer--or anyone, for that matter--*could* actually keep the company afloat, for to operate under the assumptions imposed by the latter would be to approach this issue from the wrong direction entirely. As Harshil Shah points out in his aforecited article, Steve Jobs managed a drastic course correction of the caliber needed at Yahoo! when he made his triumphant return after the floundering Apple purchased NeXT. With that notable exception, no one else in recent history has successfully conducted such a significant change. To use that anomalous revival in support of the argument that Marissa Mayer could, if her company warranted salvation, save Yahoo!, however, does not take into account the very distinct differences between Apple of the late 1990s and the Yahoo! of today.

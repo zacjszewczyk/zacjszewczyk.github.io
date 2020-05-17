@@ -2,6 +2,7 @@ Type: original
 Title: Instapaper 5
 Link: Instapaper 5.htm
 Pubdate: 2013/09/09 12:38:26
+Category: Tech
 Author: Zac Szewczyk
 
 I could write an entire article proposing improvements to the new website alone, let alone the aging app. But this article isn't *just* about Instapaper's website, nor is it *just* about the app; this article is about Instapaper the read it later service and what Betaworks can do to revolutionize this beloved platform upon its next milestone release.

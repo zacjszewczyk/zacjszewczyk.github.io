@@ -2,6 +2,7 @@ Type: linkpost
 Title: Command-line Tools can be 235x Faster than your Hadoop Cluster
 Link: https://adamdrake.com/command-line-tools-can-be-235x-faster-than-your-hadoop-cluster.html
 Pubdate: 2020/02/04 18:45:52
+Category: Programming
 Author: Zac J. Szewczyk
 
 I love stories like [Adam's](https://adamdrake.com/command-line-tools-can-be-235x-faster-than-your-hadoop-cluster.html). Too many people propose complex solutions to simple problems because they get excited about building something cool, and lose sight of their actual purpose: building a useful tool. I see this all the time at work. In this case, another developer used a Big Data approach for a Small Data problem, and Adam shows how a much simpler--but less cool(?)--one would have got it done much, much faster. Had this other developer [understood the underlying technologies](Good Times Create Weak Men.txt), and taken some time for [premature optimization](Linear Python.txt), he might have gotten there himself.

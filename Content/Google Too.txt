@@ -2,6 +2,7 @@ Type: original
 Title: Apple's Not the Only Interesting Company
 Link: Google Too.htm
 Pubdate: 2013/01/24 14:32:54
+Category: Tech
 Author: Zac Szewczyk
 
 After writing my last post, [*The Next Step*](The Next Step.txt), and as I went back to perusing the steady stream of news and articles I proctor throughout the day, I started thinking about the prevalence of the Apple blog. I touched on this briefly in my last article. There's a strangely pervasive mentality in the blogosphere these days that in order to be successful, one must do some combination of three things: write about Apple, adopt the linkblog format, and post regularly, the argument being that few companies are as interesting to write about as Apple. For the most part, I agree with these requirements: nobody writes about Microsoft anymore, because Microsoft isn't doing anything revolutionary anymore; for the same reason, nobody writes about Samsung or Oracle or Adobe. But that doesn't mean Apple is the only interesting company on the market. As I said in my previous post, Google is doing many of the same things Apple does and receives so much attention for, although granted often to a lesser degree. In fact, Google does even more with their much broader research and development division, leading to the creation of driverless vehicles, augmented reality glasses, and, most recently, an experimental cell network. No other company in the world can claim the same.

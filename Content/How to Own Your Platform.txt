@@ -2,6 +2,7 @@ Type: original
 Title: How to Run Your Own Website
 Link: how-to-own-your-platform.html
 Pubdate: 2019/07/12 17:59:51
+Category: Programming
 Author: Zac J. Szewczyk
 
 I wanted to get into this [when I explained why you should manage your own website](Own Your Platform.txt), but that got a little long and this topic deserves its own post. I have talked before about [my setup](My Setup 2019.txt) and [my](Re Introducing First Crack.txt) [blog](First Crack Release Notes 0619.txt) [engine](/projects.html#firstCrack), First Crack, but today I want to explain how I run my site, so that you can run yours. [I agree](https://news.ycombinator.com/item?id=20362319#20363104) that most technical people underestimate the difficulty of setting up a website, and so today I will make that easy.

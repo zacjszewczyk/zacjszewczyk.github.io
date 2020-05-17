@@ -2,6 +2,7 @@ Type: original
 Title: Chained Destiny
 Link: Chained Destiny.htm
 Pubdate: 2013/09/08 14:05:47
+Category: Tech
 Author: Zac Szewczyk
 
 Wednesday evening, news broke that Apple had removed The Omni Group's iOS app *OmniKeyMaster* for facilitating upgrade pricing, a feature Apple has refused to build in to the App Store since its launch. Amidst the [vocal](http://512pixels.net/2013/09/omni-app-store/) [calls](http://www.macstories.net/stories/on-omnikeymasters-shutdown/) for change in Apple's long-standing policies, I remembered something Marco Arment said on an episode of *Build & Analyze*.

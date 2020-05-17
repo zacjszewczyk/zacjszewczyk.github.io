@@ -2,6 +2,7 @@ Type: linkpost
 Title: Will the iPhone's newest sensor change the world again?
 Link: http://www.theverge.com/2013/9/10/4716098/fingerprint-analysis-touch-id-sensor-iphone-5s
 Pubdate: 2013/09/10 21:07:30
+Category: Tech
 Author: Zac Szewczyk
 
 In an excellent article posted to The Verge earlier this afternoon Casey Newton made the point I intended to discuss this evening almost as an aside near the end of his article:

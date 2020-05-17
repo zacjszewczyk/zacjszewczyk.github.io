@@ -2,6 +2,7 @@ Type: linkpost
 Title: Yes, you should blog
 Link: http://blairreeves.me/2019/01/10/yes-you-should-blog/
 Pubdate: 2019/04/17 13:34:49
+Category: Blogging
 Author: Zac Szewczyk
 
 I have an article in the works on a similar topic, but I wanted to take a minute to highlight this piece by one of my favorite new writers, [Blair Reeves](http://blairreeves.me/), before I reference it there. He makes some great points about the value of blogging, even if you have no intention of ever turning it into a revenue stream.

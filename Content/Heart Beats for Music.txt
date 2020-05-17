@@ -2,6 +2,7 @@ Type: linkpost
 Title: Heart Beats for Music
 Link: http://youtu.be/9UWCQi5rmfM
 Pubdate: 2012/12/29 14:55:30
+Category: Uncategorized
 Author: Zac Szewczyk
 
 Speaking of music created in interesting and unconventional ways, Ryan Challinor used his heart rate to set the tempo for Call Me Maybe by Carly Rae Jepson in this video created for [MIT's Music Hack Day](http://boston.musichackday.org/2012/index.php?page=Main+page).

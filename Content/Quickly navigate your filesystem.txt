@@ -2,6 +2,7 @@ Type: linkpost
 Title: Quickly navigate your filesystem from the command-line
 Link: http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
 Pubdate: 2013/08/24 19:41:33
+Category: Programming
 Author: Zac Szewczyk
 
 Possessing the ability to write a CMS and code a website is great--don't get me wrong--but it's neat little scripts like this one that make me glad I learned to program.

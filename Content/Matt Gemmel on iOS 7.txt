@@ -2,6 +2,7 @@ Type: linkpost
 Title: Matt Gemmel on iOS 7
 Link: http://mattgemmell.com/2013/06/12/ios-7/
 Pubdate: 2013/06/12 17:56:19
+Category: Tech
 Author: Zac Szewczyk
 
 Wonderfully worded and impressively well thought-out, Matt Gemmel's article *iOS 7* is easily the best piece on the topic I have read since the WWDC keynote address. In explaining the motivation behind Apple's complete UI overhaul in iOS7, he began his one-two punch with this paragraph:
