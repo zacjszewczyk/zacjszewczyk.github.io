@@ -2,6 +2,7 @@ Type: original
 Title: An Untenable Goal
 Link: An Untenable Goal.htm
 Pubdate: 2013/08/19 16:00:06
+Category: Tech
 Author: Zac Szewczyk
 
 Although the first movie adaptation of Christopher Paolini's *Eragon* could have passed as a mildly successful yet unremarkable summer movie, it falls far short when compared to the original series from which it borrowed little besides character names and basic plotlines, only to discard the latter whenever the "director" deemed it convenient. Anyone who has ever seen a book-turned-movie undoubtedly read that without any surprise; the book invariable proves better than the movie, or so that adage goes, and there are countless examples supporting the phrase in just the last year alone.

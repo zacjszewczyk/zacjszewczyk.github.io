@@ -2,6 +2,7 @@ Type: original
 Title: Zero Trust
 Link: zero-trust.html
 Pubdate: 2020/04/02 09:12:01
+Category: Tech
 Author: Zac Szewczyk
 
 Most articles focus on the negative side of giving anyone the power to publish: in recent years, it has enabled massive disinformation campaigns so effective that even its own citizens now question Democratic underpinnings of the world's premiere superpower. In [*Zero Trust Information*](https://stratechery.com/2020/zero-trust-information/), though, Ben Thompson argues that while this power did lead to an increase in misinformation, it also lead to the proliferation of much more valuable information, too. For proof, one need only look to the Seattle doctors who defied a government gag order to share their findings on COVID-19.

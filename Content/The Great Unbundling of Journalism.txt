@@ -2,6 +2,7 @@ Type: linkpost
 Title: The Great Unbundling of Journalism
 Link: http://www.thenewsprint.co/blog/-the-great-unbundling-of-journalism
 Pubdate: 2014/03/29 08:36:46
+Category: Blogging
 Author: Zac Szewczyk
 
 Yes. Earlier this week, [I posted a link](Ben Thompson on the Future of News and Newspapers.txt) to Ben Thompson's three-part series on the future of newspapers and journalism. Riffing off of that theme, Josh Ginter shares some thoughts along those lines. He's very hopeful about the future of the blogging industry, and rightly so.

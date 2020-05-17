@@ -2,6 +2,7 @@ Type: original
 Title: On Design
 Link: On Design.htm
 Pubdate: 2012/11/19 19:50:20
+Category: Programming
 Author: Zac Szewczyk
 
 In my last post, [Getting Started on WordPress.com, Tumblr, or Squarespace](Hosts.txt), I briefly touched on an important design principle towards the end of the article, where I cautioned against choosing a theme that did not showcase your work to the fullest extent possible. I did not, however, explain my reasons for this caution. In the beginning I considered design to be of paramount importance. Even more so, in fact, than the content itself. As the years went by and my experience grew though, that opinion did an about-face, and quite some time passed during which I considered the design to be tertiary to the content in a system containing but two players. Today, however, I have finally come to a compromise, where I believe that a site's design and the content that fills it are equally important and thus should complement each other, not vie for the attention of the viewer.

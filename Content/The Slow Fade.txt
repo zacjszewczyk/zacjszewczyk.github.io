@@ -2,6 +2,7 @@ Type: original
 Title: The Slow Fade
 Link: The Slow Fade.htm
 Pubdate: 2013/10/20 20:25:51
+Category: Tech
 Author: Zac Szewczyk
 
 Last week Ben Thompson of Stratechery wrote [*Open Source Apps*](http://stratechery.com/2013/open-source-apps/), where he explained the "inevitable" shift from paid-up-front to free apps monetized through other means. From his article:

@@ -2,6 +2,7 @@ Type: original
 Title: The Great Facade
 Link: The Great Facade.htm
 Pubdate: 2014/09/08 08:30:26
+Category: Writing
 Author: Zac Szewczyk
 
 Every day like clockwork, I copy a small text file out of a staging directory. Shortly thereafter, a Python script pulls the contents of that file out, parses it, and then places each line into a webpage that then gets pushed up to a server managed by a good friend of mine. Within a few seconds of that page going live, the handy Bitly bookmarklet gives me a shortened URL that I then send out to the world thanks to the magic of Tweetbot.

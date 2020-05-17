@@ -2,6 +2,7 @@ Type: linkpost
 Title: You Might Not be The Smartest
 Link: https://carter.sande.duodecima.technology/javascript-page-navigation/
 Pubdate: 2019/08/12 16:42:10
+Category: Programming
 Author: Zac J. Szewczyk
 
 Many developers have a tendency to consider themselves smarter than everyone else--or at least, smarter than the person who wrote the platform they build on. Web developers have made a habit of this, but as Carter Sande [points out](https://carter.sande.duodecima.technology/javascript-page-navigation/), that just might not be the case.

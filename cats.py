@@ -123,17 +123,17 @@ for each in listdir("./content"):
     if ("Category" in {y[0].strip():y[1].strip() for y in [x.split(": ") for x in fd.readlines()[0:6] if x != '\n']}.keys()):
         continue
 
-    print(f"Choosting for {each}")
+    print(f"\nChoosting for {each}")
+    f = open(each, "r")
+    contents = f.readlines()
+    f.close()
+    print("\n".join(contents))
 
     cat = GetUserSelection(categories)
     if (cat == None):
         break
 
     print(f"Chose '{cat}' for '{each}'")
-
-    f = open(each, "r")
-    contents = f.readlines()
-    f.close()
 
     contents.insert(4, f"Category: {cat}\n")
 

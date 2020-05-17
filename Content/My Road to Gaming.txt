@@ -2,6 +2,7 @@ Type: original
 Title: My Road to Gaming
 Link: My Road to Gaming.htm
 Pubdate: 2014/01/24 07:32:39
+Category: Tech
 Author: Zac Szewczyk
 
 A few years ago when I decided to start exploring the world of PC gaming, I set out with three criteria: it could not, like major titles such as Call of Duty or Ghost Recon, require a significant amount of capital just for the the privilege of participating in this hobby. Whatever I ended up choosing had to have a low price tag or, preferably, cost nothing at all. Further, my distraction of choice had to run well on a mediocre machine: I refused to suffer through jittery gameplay on an overclocked processor. Finally, it must not require a great deal of time and effort just to attain a reasonable level of proficiency. I had precious little of either to spend gaming, and none if my unwillingness to eschew everything pursuing a skill of arguably practical application meant a thirteen year old who did nothing but tap himself closer to RSI every day would beat me repeatedly. These stringent criteria left me few candidates, primarily small Flash applets like [Helli Attack 3](http://www.miniclip.com/games/heli-attack-3/en/)[^1] and [Motherload](http://www.xgenstudios.com/play/motherload). As you might imagine, each of these gave back in accordance with the amount of effort I put in; in other words, very little. So I set off in search of something more fulfilling.

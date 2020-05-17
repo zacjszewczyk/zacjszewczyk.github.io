@@ -2,6 +2,7 @@ Type: original
 Title: Cracking my iPhone 4
 Link: Cracking my iPhone 4.htm
 Pubdate: 2013/11/12 15:42:09
+Category: Tech
 Author: Zac Szewczyk
 
 The whole debacle surrounding New York Times writer Catherine Rampell's article [*Cracking the Apple Trap*](http://www.nytimes.com/2013/11/03/magazine/why-apple-wants-to-bust-your-iphone.html) holds almost no interest to me. However, after [yesterday's The Talk Show](http://www.muleradio.net/thetalkshow/60/) during which John X. Gruber and very special guest Paul X. Kafasis devoted a fair amount of time to ridiculing the entire enterprise, I feel it at least merits some attention.

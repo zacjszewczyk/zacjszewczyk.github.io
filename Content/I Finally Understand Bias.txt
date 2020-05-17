@@ -2,6 +2,7 @@ Type: original
 Title: I Finally Understand Bias
 Link: I Finally Understand Bias.htm
 Pubdate: 2013/09/19 06:02:39
+Category: Uncategorized
 Author: Zac Szewczyk
 
 Last week, amidst the frenzy preluding Apple's impending iPhone event, I posted an article titled [*Instapaper 5*](Intapaper 5.txt). I did not have early access to a beta or any insight as to the direction Betaworks planned on taking the service; instead, I merely wished to put forth a possible launch strategy for the upcoming update and outline a number of improvements I had been considering. I posted the article with minor expectations, thinking it would attract the usual eight to twelve pageviews; what came next took me completely by surprise.

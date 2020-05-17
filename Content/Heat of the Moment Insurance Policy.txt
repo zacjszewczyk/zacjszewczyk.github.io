@@ -2,6 +2,7 @@ Type: original
 Title: Heat of the Moment Insurance Policy
 Link: Heat of the Moment Insurance Policy.htm
 Pubdate: 2013/12/10 17:00:34
+Category: Uncategorized
 Author: Zac Szewczyk
 
 I have spent the last two or three months occasionally hearing Aaron Mahnke and Dave Caolo talk about an app capable of completely cutting a computer off from a certain set of domains as a means to increase productivity. By making it impossible for one to get distracted, the creators of the aptly-named SelfControl reason, productivity must increase accordingly. I downloaded SelfControl Sunday night, and even in my brief experience with it so far I can attest to its effectiveness.
