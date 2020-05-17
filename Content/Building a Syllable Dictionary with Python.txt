@@ -2,6 +2,7 @@ Type: original
 Title: Building a Syllable Dictionary with Python
 Link: building-a-syllable-dictionary-with-python.html
 Pubdate: 2019/10/04 19:19:07
+Category: Programming
 Author: Zac J. Szewczyk
 
 <html>

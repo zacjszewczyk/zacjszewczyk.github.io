@@ -2,6 +2,7 @@ Type: original
 Title: An Edgy iPhone 6 Concept
 Link: An Edgy iPhone 6 Concept.htm
 Pubdate: 2013/07/21 12:42:32
+Category: Tech
 Author: Zac Szewczyk
 
 Last month, in [*Apple's Wildcard*](Apple's Wildcard.txt), I predicted Tim Cook announcing an iPhone 5S rather than an iPhone 6 this fall, pointing to the 3G and 3GS, 4 and 4S models as proof. I did, however, hedge my bets with Tim Cook's "Can't innovate, my ass" comment:

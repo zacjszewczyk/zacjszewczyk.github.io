@@ -2,6 +2,7 @@ Type: original
 Title: We Could All Be The Magazine
 Link: We Could All Be The Magazine.htm
 Pubdate: 2013/02/02 22:02:38
+Category: Blogging
 Author: Zac Szewczyk
 
 When I sat down to write earlier this evening there were a lot of things on my mind, my mind kept returning to the subject of design, still fresh in my mind after this site's redesign last weekend. As much as I like the clean and simple layout I have now, it is not very media-friendly. I made this choice early on in the design process partially because I very rarely desire to post any sort of content other than plain text, but also because I have not found an acceptable way to do so in a manner complementary to my site's design. Like [The Magazine](http://the-magazine.org) in its early days, therefore my site does not feature anything but simple text. Although for the most part I am fine with that, I would nevertheless prefer to have the ability to post a cool or interesting sound byte, image, or video should the need present itself.

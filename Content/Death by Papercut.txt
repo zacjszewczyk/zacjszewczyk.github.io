@@ -2,6 +2,7 @@ Type: original
 Title: Death by Papercut
 Link: Death by Papercut.htm
 Pubdate: 2014/01/31 09:40:20
+Category: Tech
 Author: Zac Szewczyk
 
 After buying my first Mac a [few](Diary of a Convert.txt) months [ago](Testing the Apple Tax.txt), I soon grew quite fond of it as the most powerful computer I have owned to date. It zips through every task I can think to throw at it, and I can spend an entire day working without needing an outlet. Even better, it takes up so little space and ads such insignificant weight to my backpack that I regularly reach behind me just to make sure I didn't forget it somewhere. My 15" Retina MacBook Pro not only outclasses every one of my previous computers in raw processing power, I can confidently say that this device is the best I have ever owned. And then to sweeten the deal, Mavericks puts my past operating systems to shame. Especially coming from the current Windows world undergoing a forced devolution to Windows 8, I did not realize how relieved I would feel back in the traditional desktop computing paradigm ironically only present in OS X these days.

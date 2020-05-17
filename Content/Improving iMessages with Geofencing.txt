@@ -2,6 +2,7 @@ Type: original
 Title: Improving iMessages with Geofencing
 Link: Improving iMessages with Geofencing.htm
 Pubdate: 2014/06/28 08:47:51
+Category: Tech
 Author: Zac Szewczyk
 
 The other day, as I drove home from work and practiced my dictation to the tune of Siri's inept transcription abilities, I deftly tapped iMessages' "Send as Text Message" tooltip for what--given the number of text messages I send each month--must quite literally fall somewhere in the neighborhood of the millionth time. I tapped this button two or three times until, finally, my phone realized I wanted every outgoing message sent without the use of Apple's clever and oh-so-convenient replacement. Then, as if to mock me, a few seconds later it switched back to sending everything as an iMessage. I just couldn't win.

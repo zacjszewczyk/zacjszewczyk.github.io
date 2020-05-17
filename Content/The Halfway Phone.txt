@@ -2,6 +2,7 @@ Type: original
 Title: The Halfway Phone
 Link: The Halfway Phone.htm
 Pubdate: 2013/07/09 19:47:33
+Category: Tech
 Author: Zac Szewczyk
 
 My second foray into the world of Apple speculation. In my first, which I titled [*Apple's Wildcard*](Apple's Wildcard.txt), I spoke to the possibility of Tim Cook announcing an iPone 6 and budget iPhone this fall: while I consider neither particularly likely, leaning more towards an iPhone 5S as the continuation of Apple's apparent tick-tock cycle and disappointment for those waiting on a budget iPhone, I hedged my bets with Tim Cook's "Can't innovate, my ass" comment. Since writing that piece though the budget iPhone has remained a surprisingly popular topic, and thus something I feel I should readdress.
