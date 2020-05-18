@@ -173,7 +173,7 @@ def Migrate(content_file):
 
     # Clear the target file, then write it's contents into it after the header information.
     fd = open(content_file, "w", encoding=ENCODING)
-    fd.write(f"Type: {article_type}\nTitle: {article_title.strip()}\nLink: {article_url.strip()}\nPubdate: {strftime('%Y/%m/%d %H:%M:%S', localtime(mtime))}\nAuthor: {config['byline']}\n\n{article_content.strip()}")
+    fd.write(f"Type: {article_type}\nTitle: {article_title.strip()}\nLink: {article_url.strip()}\nPubdate: {strftime('%Y/%m/%d %H:%M:%S', localtime(mtime))}\nCategory: Uncategorized\nAuthor: {config['byline']}\n\n{article_content.strip()}")
     fd.close()
 
     # Cleanup and revert the update time for the content file
@@ -380,7 +380,7 @@ if (__name__ == "__main__"):
             # Conver to struct_time to include timestamp
             mtime = strptime(each[2], '%Y-%m-%d %H:%M:%S-0400')
 
-            if (not isfile(f"./html/{each[3]}")):
+            if (f"./html/{each[3]}" not in closeout):
                 closeout.append(f"./html/{each[3]}")
                 fd = open(f"./html/{each[3]}", "w", encoding=ENCODING)
                 fd.write(template[0].replace("{{META_DESC}}", f"{each[3][:-5]} Posts").replace("{{TITLE}}", f"{each[3][:-5].replace('-', ' ').title()} Posts", 2).replace("{{BODYID}}", each[3][:-5], 1)+"\n"+f"<article>\n    <h2>{each[3][:-5].replace('-', ' ').title()} Posts</h2>\n</article>\n")

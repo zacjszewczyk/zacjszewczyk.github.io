@@ -1,29 +1,6 @@
-127.0.0.1 - - [17/May/2020 09:15:44] GET / HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:44] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:44] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:46] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:46] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:47] GET /professional-development.html HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:47] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:54] GET /blog/fake-it-til-you-make-it.html HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:54] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:54] GET /assets/images/favicon.ico HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:54] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:55] GET /professional-development.html HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:55] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:57] GET /blog/2020-03.html HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:57] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:58] GET /assets/images/favicon.ico HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:58] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:59] GET /blog/revisiting-preparedness.html HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:59] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:59] GET /assets/images/favicon.ico HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:15:59] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:16:00] GET /preparedness.html HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:16:00] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:16:00] GET /assets/images/favicon.ico HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:16:00] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:16:04] GET /index.html HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:16:04] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [17/May/2020 09:16:04] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-- - - [17/5/2020 9:16:6] Graceful shutdown - -
+127.0.0.1 - - [18/May/2020 07:33:57] GET / HTTP/1.1 200 -
+127.0.0.1 - - [18/May/2020 07:33:57] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [18/May/2020 07:33:57] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [18/May/2020 07:33:59] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [18/May/2020 07:33:59] GET /assets/main.css HTTP/1.1 200 -
+- - - [18/5/2020 7:34:7] Graceful shutdown - -

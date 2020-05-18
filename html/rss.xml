@@ -7,9 +7,27 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 17 May 2020 01:14:34 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2020 11:42:17 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Building 2Africa, a transformative subsea cable to better connect Africa</title>
+            <link>https://engineering.fb.com/connectivity/2africa/</link>
+            <guid isPermaLink='true'>https://engineering.fb.com/connectivity/2africa/</guid>
+            <pubDate>Mon, 18 May 2020 11:33:02 GMT</pubDate>
+            <description>
+                &lt;p&gt;Every time I see an article like this one, I think back to something Horace Dediu said in &lt;a href="http://www.asymco.com/2013/04/10/making-rain/"&gt;&lt;em&gt;Making rain&lt;/em&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“I propose a way to think about [the Facebook Home and the Google Fiber issue] as: Google tries to make a business succeed through having a huge amount of &lt;em&gt;flow&lt;/em&gt; in terms of data, traffic, queries and information that is indexed. So think about this idea of them tapping into a vast stream. The more volume that is flowing through the system the more revenue they generate.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Not quite so altruistic after all.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/uncategorized.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Encouraging a Culture of Written Communication</title>
             <link>https://www.mcls.io/blog/encouraging-a-culture-of-written-communication</link>
