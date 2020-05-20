@@ -7,9 +7,27 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 18 May 2020 11:42:17 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 07:48:46 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>How apocalyptic is now?</title>
+            <link>https://unherd.com/2020/05/are-we-living-through-an-apocalypse-now/</link>
+            <guid isPermaLink='true'>https://unherd.com/2020/05/are-we-living-through-an-apocalypse-now/</guid>
+            <pubDate>Wed, 20 May 2020 19:45:59 GMT</pubDate>
+            <description>
+                &lt;p&gt;John Gray, writing for UnHerd:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;As pre-Covid life fades into history, large sections of the professional classes face a version of the experience of those who became former persons in the abrupt historical shifts of the last century. The redundant bourgeoisie need not fear starvation or concentration camps, but the world they have inhabited is evanescing before their eyes. There is nothing novel in what they are experiencing. History is a succession of such apocalypses, and so far this one is milder than most.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As far as disaster&amp;#8217;s go, COVID-19&amp;#8217;s direct effects have been far less impactful than its indirect ones. Once we have some distance from the event, and can look back on it with less bias, it will become clear that the panic that led to a national shutdown and then economic stagnation &lt;a href="https://www.axios.com/navarro-coronavirus-lockdown-ef2a1335-661b-4f8b-a3a4-79af244f9bbf.html"&gt;caused far greater pain and suffering than the disease ever could have&lt;/a&gt;, even if we had taken no action. This should be the legacy of COVID-19: not that of a deadly physical disease, but rather a panic-inducing mental one.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/uncategorized.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Building 2Africa, a transformative subsea cable to better connect Africa</title>
             <link>https://engineering.fb.com/connectivity/2africa/</link>
