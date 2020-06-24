@@ -39,6 +39,28 @@
         <main>
 <article>
 <h2 id='article_title'>
+<a class="linkpost" href="https://theintercept.com/2020/04/03/zooms-encryption-is-not-suited-for-secrets-and-has-surprising-links-to-china-researchers-discover/)">Move Fast & Roll Your Own Crypto</a>
+</h2>
+<time id='article_time' datetime="2020-04-03 08:37:38-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-04.html">04</a>/03 08:37:38 EST in <a href='/programming.html'>Programming</a></time>
+<p>Micah Lee, writing for The Intercept, in <a href="https://theintercept.com/2020/04/03/zooms-encryption-is-not-suited-for-secrets-and-has-surprising-links-to-china-researchers-discover/"><em>Zoom’s Encryption Is &#8220;Not Suited for Secrets&#8221; and Has Surprising Links To China, Researchers Discover</em></a>:</p>
+
+<blockquote>
+<p>&#8220;Some of the key management systems — 5 out of 73, in a Citizen Lab scan — seem to be located in China, with the rest in the United States. Interestingly, the Chinese servers are at least sometimes used for Zoom chats that have no nexus in China. ... The report points out that Zoom may be legally obligated to share encryption keys with Chinese authorities if the keys are generated on a key management server hosted in China.&#8221;</p>
+</blockquote>
+
+<p>This just makes an adversary&#8217;s easy job even easier, though, thanks to the weak encryption scheme those keys facilitate:</p>
+
+<blockquote>
+<p>&#8220;A security white paper from the company claims that Zoom meetings are protected using 256-bit AES keys, but the Citizen Lab researchers confirmed the keys in use are actually only 128-bit ... Furthermore, Zoom encrypts and decrypts with AES using an algorithm called Electronic Codebook (ECB) mode, &#8216;which is well-understood to be a bad idea, because this mode of encryption preserves patterns in the input,&#8217; according to the Citizen Lab researchers. In fact, ECB is considered the worst of AES&#8217;s available modes.&#8221;</p>
+</blockquote>
+
+<p>Bill Marczak and John Scott-Railton&#8217;s study, <a href="https://citizenlab.ca/2020/04/move-fast-roll-your-own-crypto-a-quick-look-at-the-confidentiality-of-zoom-meetings/"><em>Move Fast &#38; Roll Your Own Crypto</em></a>, goes into more detail, and concludes with this key takeaway: &#8220;As a result of these troubling security issues, we discourage the use of Zoom at this time for use cases that require strong privacy and confidentiality&#8221;. Unfortunately, though, most of Zoom&#8217;s competitors don&#8217;t do much better.</p>
+
+
+<p><a class='read_more_link' href='/blog/move-fast-and-roll-your-own-crypto.html'>Read more</a><span class='logo'>&#x24E9;</span></p>
+</article>
+<article>
+<h2 id='article_title'>
 <a class="original" href="/blog/zero-trust.html">Zero Trust</a>
 </h2>
 <time id='article_time' datetime="2020-04-02 09:12:01-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-04.html">04</a>/02 09:12:01 EST in <a href='/tech.html'>Tech</a></time>
