@@ -7,9 +7,27 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 24 Jun 2020 10:17:17 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2020 04:36:35 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Software disenchantment</title>
+            <link>https://tonsky.me/blog/disenchantment/</link>
+            <guid isPermaLink='true'>https://tonsky.me/blog/disenchantment/</guid>
+            <pubDate>Tue, 30 Jun 2020 16:35:54 GMT</pubDate>
+            <description>
+                &lt;p&gt;Nikita Prokopov, in &lt;a href="https://tonsky.me/blog/disenchantment/"&gt;&lt;em&gt;Software disenchantment&lt;/em&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;You don’t have to be a genius to write fast programs. There’s no magic trick. The only thing required is not building on top of a huge pile of crap that modern toolchain is.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Nikita makes a lot of great points about the general decline of software quality, &lt;a href="https://zacs.site/blog/linear-python.html"&gt;many&lt;/a&gt; of which &lt;a href="https://zacs.site/blog/the-root-of-all-evil.html"&gt;I have&lt;/a&gt; made &lt;a href="https://zacs.site/blog/learn-c.html"&gt;before&lt;/a&gt;. It&amp;#8217;s nice to hear this coming from someone else.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/uncategorized.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Starting Over: The Gear I Would Buy if I Had to Do it All Over Again</title>
             <link>https://zacs.site/blog/starting-over.html</link>
