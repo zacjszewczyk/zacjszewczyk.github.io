@@ -49,10 +49,9 @@ Although you will find neither of these on any list of sites for great long form
 
 #### Politics
 
-I had the hardest time finding good political commentary. Fox News and CNN have a reputation for extreme bias, and most other major outlets pride themselves on falling just short of those extremes. These three sites let me see perspectives on both sides of the aisle, and give me in-depth analysis with as little bias as I have ever seen.
+I had the hardest time finding good political commentary. Fox News and CNN have a reputation for extreme bias, and most other major outlets pride themselves on falling just short of those extremes. This website gives me the facts, and lets me see perspectives on both sides of the aisle.
 
-* [https://www.lawfareblog.com/](https://www.lawfareblog.com/) - By far the best analysis of current events and the geopolitical landscape on the Internet. These writers post the most thoughtful, well-written, and well-researched work in this space, hands down. I cannot say enough good things about Lawfare. I read almost every article posted here.
-* [https://foreignpolicy.com/](https://foreignpolicy.com/) - Aside from some subtleties that make me think a few authors lean Left, Foreign Policy comes in a close second behind Lawfare for its in-depth analysis and thought-provoking writing. I read almost every article posted here, too.
+* [https://www.axios.com/](https://www.axios.com/) - Axios set out to "deliver the clearest, smartest, most efficient and trustworthy experience for audience and advertisers alike", and I think they have done a great job achieving that lofty goal. For concise, informative commentary on current events, you will have a tough time beating Axios. 
 
 #### Miscellaneous
 
@@ -62,6 +61,7 @@ These sites don't belong to any one of the categories above, but I have found th
 * [https://hackernoon.com/](https://hackernoon.com/) - A "community-driven tech blog", Hacker Noon publishes articles from its readers. This makes for an interesting range of topics, and the moderators do a good job of choosing quality content.
 * [https://jalopnik.com](https://jalopnik.com) - I like cars, and Jalopnik is a pretty good car blog. I'm on the lookout for a better one, but for now, this will suffice.
 * [https://seekingalpha.com](https://seekingalpha.com) - I have an aggressive plan to become debt-free--minus my mortgage--in less than two years. Once I get to that point, I will start invest all the money that used to service my debts. Seeking Alpha is helping me learn how to do that well now, so that when the time comes, I can make the most of my investments.
+* [https://survivalblog.com/](https://survivalblog.com/) - I took a [a step back from preparedness](Revisiting Preparedness.txt) after college, but the COVID-19 panic has reminded me of the importance of this philosophy. SurvivalBlog, one of the original preparedness web sites, helps keep this at the front of my mind with helpful and insightful articles on this topic. 
 
 #### News Aggregators
 
@@ -82,12 +82,12 @@ To make your life a little easier, I list the fifteen sites I read to keep up wi
 * [https://thehackernews.com/](https://thehackernews.com/)
 * [http://digg.com/](http://digg.com/)
 * [https://themorningnews.org/](https://themorningnews.org/)
-* [https://www.lawfareblog.com/](https://www.lawfareblog.com/)
-* [https://foreignpolicy.com/](https://foreignpolicy.com/)
+* [https://www.axios.com/](https://www.axios.com/)
 * [https://dzone.com/](https://dzone.com/)
 * [https://hackernoon.com/](https://hackernoon.com/)
 * [https://jalopnik.com](https://jalopnik.com)
 * [https://seekingalpha.com](https://seekingalpha.com)
+* [https://survivalblog.com/](https://survivalblog.com/)
 * [http://popurls.com/](http://popurls.com/)
 
 ### Newsletters
