@@ -5,7 +5,7 @@ Pubdate: 2019/05/15 07:44:09
 Category: Blogging
 Author: Zac Szewczyk
 
-I follow a lot of websites. In [*Keeping Up with Current Events*](My Morning Reads.txt), I list the sixteen I use to start my day. These get regular updates and help me keep up on current events. I also follow a lot of websites run by independent writers and small shops. These cover many of the same topics, but due to their size, they do not get updated as often. The unique perspective they bring to the table, though, makes for some of the most interesting reading I do. To round out [my earlier post](My Morning Reads.txt), I want to share this list with you today.
+I follow a lot of websites. In [*Keeping Up with Current Events*](My Morning Reads.txt), I list the handful I use to start my day. These get regular updates and help me stay up on current events. I also follow a lot of websites run by independent writers and small shops. These cover many of the same topics, but due to their size, they do not get updated as often. The unique perspective they bring to the table, though, makes for some of the most interesting reading I do. To round out [my earlier post](My Morning Reads.txt), I want to share this list with you today.
 
 Out of the many sites on this list, I can expect to see new content on less than a quarter per day, a handful of others in a week, and the rest on an inconsistent basis. Rather than check each one, I keep up with them using their RSS feeds. In brief, think of an RSS feed as a single file containing a list of all the articles on a website. On April 9th, 2019, for example, the feed for my blog would have looked like this:
 
@@ -22,9 +22,9 @@ Whenever a new post goes live, that list gets updated. After posting [*Proxy Inn
 * 2019/04/08 12:05:49: The Last Four Years ([https://zacs.site/blog/the-last-four-years.html](https://zacs.site/blog/the-last-four-years.html))
 * 2019/04/06 11:12:52: Simple, not Easy ([https://zacs.site/blog/simple-not-easy.html](https://zacs.site/blog/simple-not-easy.html))
 
-RSS readers watch RSS feeds for changes like that. On April 10th, my reader would have shown me a new article called [*Proxy Innovation*](Proxy Innovation.txt). My app of choice, [Reeder](http://reederapp.com/), keeps track of feeds for over forty sites. Any time one of those lists changes, when a new post goes live, Reeder delivers it to my phone. Just like [my morning reads](My Morning Reads.txt), most of the time this yields a handful of articles, one or two of which find their way here, and the rest of which I read for my own edification. Although drawing from many sources, their inconsistent posting schedule means I skim around 100 titles per day. I break these sites up by genre below, in no particular order, along with a brief note on each.
+RSS readers watch RSS feeds for changes like that. On April 10th, my reader would have shown me a new article called [*Proxy Innovation*](Proxy Innovation.txt). My app of choice, [News Explorer](https://betamagic.nl/products/newsexplorer.html), keeps track of feeds for over forty sites. Any time one of those lists changes, when a new post goes live, News Explorer delivers it to my phone. Just like [my morning reads](My Morning Reads.txt), most of the time this yields a handful of articles, one or two of which find their way here, and the rest of which I read for my own edification. Although drawing from many sources, their inconsistent posting schedule means I skim less than 200 titles per day. I break these sites up into groups below, in no particular order, along with a brief note on each.
 
-### Adventuring
+### Adventure
 
 Recall that [I defined](Before Now and Future.txt) "adventuring" as "the vehicles you use to get the gear you pack to the places you want to go." To break this section up, I divided the sites here into those three categories.
 
@@ -75,17 +75,17 @@ I also follow a few YouTube channels in the adventure space. I choose to do this
 * [The Tactical Defender on YouTube](https://www.youtube.com/channel/UCH9D1Alq8n7Dd3mM99O9G9A) - To his credit, Tim also does some nice gear reviews: he takes everything out, puts it through its paces in the woods, and gives his viewers an honest assessment. That said, I just enjoy hearing him talk. I watch the occasional gear review, but for the most part, I stick around for the rambling videos he records while hiking.
 * [Triple Aught Design on YouTube](https://www.youtube.com/channel/UCoBFcQPFNNhUzjsJFPDm2gw) - Triple Aught Design gets many things right, but even more pretty close. I have yet to go on an adventure without the phenomenal [Force 10 AC Cargo Pant](https://tripleaughtdesign.com/shop/force-10-ac-cargo-pant/), for example, but the also awesome [Triton AC Short](https://tripleaughtdesign.com/shop/triton-ac-short/) has fit me like spandex since I started deadlifting over 500 pounds. Their backpacks have some great features, but lack the capacity for more than a day trip. I follow the company's YouTube channel because it has demonstrated an ability to make cool things, and I believe it will make them better in time.
 * [Andrew Muse on YouTube](https://www.youtube.com/feeds/videos.xml?channel_id=UCxrtaro4GiqPIYmIwnlpIsQ) - Andrew and Ashley built an awesome expedition rig. I hope to someday do something similar.
+* [Homesteadonomics on YouTube](https://www.youtube.com/channel/UCMiTb1EJ5nhn_NbUyNu003w) - I came to Homesteadonomics on YouTube by way of [a nine part series in which Joe built a camper from scratch](https://www.youtube.com/playlist?list=PLJEhXwOJ_CGahuF3NEXfECUAgeHs3rSES). He had me impressed. I follow his channel to learn as much as I can about building before it comes time to begin my next project.
 
 ### DIY
 
-I love building things. When I faced buying a storage system for my 4Runner, [I chose to build my own](/projects.html#sleepingPlatform). [I have grand plans](/projects.html#caddProjects) for future projects, and these give me even more ideas. Even more important, though, seeing experts practice their craft teaches me to improve mine.
+I love building things. When I faced buying a storage system for my 4Runner, [I chose to build my own](/projects.html#sleepingPlatform). [I have grand plans](/projects.html#caddProjects) for future projects, and these websites give me even more ideas. Even more important, though, seeing experts practice their craft teaches me to improve mine.
 
-* [Homesteadonomics on YouTube](https://www.youtube.com/channel/UCMiTb1EJ5nhn_NbUyNu003w) - I came to Homesteadonomics on YouTube by way of [a nine part series in which Joe built a camper from scratch](https://www.youtube.com/playlist?list=PLJEhXwOJ_CGahuF3NEXfECUAgeHs3rSES). He had me impressed. I follow his channel to learn as much as I can about building before it comes time to begin my next project.
 * [Low-Tech Magazine](https://www.lowtechmagazine.com/) - I work with and build complex, technical tools all day every day, so I know just how fragile these systems can be; Low-Tech Magazine highlights proven, time-tested, and simple solutions to problems that remain challenging even today. I find these writeups at once fascinating and instructive.
 
-### Finances
+### Finance
 
-I have some bold fiscal goals. These two sites helped inform them, and they help keep me on track, too. Sam, who writes [Financial Samurai](https://www.financialsamurai.com/), and Dominic, who writes [Gen Y Finance Guy](https://www.genyfinanceguy.com/), both come from a background in finance. Sam's hard work and shrewd moves allowed him to achieve financial independence at a young age, and Dominic is well on his way to doing the same. I hope to follow in their footsteps soon.
+I have some bold financial goals. These two sites helped inform them, and they help keep me on track, too. Sam, who writes [Financial Samurai](https://www.financialsamurai.com/), and Dominic, who writes [Gen Y Finance Guy](https://www.genyfinanceguy.com/), both come from a background in finance. Sam's hard work and shrewd moves allowed him to achieve financial independence at a young age, and Dominic is well on his way to doing the same. I hope to follow in their footsteps.
 
 * [https://www.financialsamurai.com](https://www.financialsamurai.com) - Financial Samurai
 * [http://www.genyfinanceguy.com](http://www.genyfinanceguy.com) - Gen Y Finance Guy
@@ -98,7 +98,7 @@ Lawfare and Foreign Policy produce some of the best-written work I have read in 
 * [https://foreignpolicy.com/](https://foreignpolicy.com/) - Aside from some subtleties that make me think a few authors lean Left, Foreign Policy comes in a close second behind Lawfare for its in-depth analysis and thought-provoking writing. I read almost every article posted here, too.
 * [http://coyoteblog.com](http://coyoteblog.com) - Coyote Blog
 
-### Technology
+### Development
 
 I would not call myself a good programmer. I know enough [to do some damage](/projects.html), but the better I get, the more room for growth I see. These writers seldom talk about the basics, but rather the interesting edge cases, tricks, and lessons they have encountered or learned in their careers as developers. They teach me new things all the time, or just cover interesting tech-related topics.
 
@@ -107,30 +107,21 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [https://davidwalsh.name](https://davidwalsh.name) - I have some strong feelings about the design of [David Walsh's blog](https://davidwalsh.name), and much more positive ones about the great articles he posts there. David writes focuses on front-end development, but also covers languages and technologies on the back end as well.
 * [https://medium.com/@addyosmani](https://medium.com/@addyosmani) - A Google engineer working on Chrome, [Addy Osmani](https://medium.com/@addyosmani) writes a lot about ways to optimize the web. You may have noticed a pattern here.
 * [http://nonullpointers.com](http://nonullpointers.com) - Although a new site without much of a back catalog, Chris D'Aloisio has written some interesting pieces on the less technical side of becoming a better developer. I look forward to seeing what else he has to say.
-* [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/) - Mathew Green covers cryptography some, hence the name, but in more broad strokes writes great stuff on privacy.
-* [https://snikt.net/](https://snikt.net/) - Anreas Happe's work on building an LTE modem got my attention, but I stayed for his eclectic writings on interesting, tech-related topics. 
 * [https://apenwarr.ca/log](https://apenwarr.ca/log) - The author dives deep on all sorts of developer- and tech-related topics, and does a great job of explaining even the most complex ones.
-* [https://www.justinobeirne.com/](https://www.justinobeirne.com/) - Justin Obeirne tracks Apple Maps' progress as the company works to map the entire country. The level of detail in his side-by-side comparisons of each version is exquisite. 
-* [https://nrempel.com/](https://nrempel.com/) - Nicholas Rempel also all sorts of developer- and tech-related topics, and does so well.
-* [https://subt0x11.blogspot.com/](https://subt0x11.blogspot.com/) - This site has not seen a new post in over a year, but I keep it around in this hopes that it will. The three posts in its RSS feed, all from 2018, dive deep on some interesting exploits. 
-* [https://www.backblaze.com/blog](https://www.backblaze.com/blog) - I have used Backblaze for years, and have followed their website off and on for years. I re-subscribed as I grow more interesting in standing up my own homelab, which will involve some sort of network attached storage system. Backblaze's detailed hard drive performance reports have helped guide that planning process. 
-* [https://codefol.io/](https://codefol.io/) - Noah Gibbs writes about tech, leadership, and culture, all of which interest me. 
 * [https://martinheinz.dev/](https://martinheinz.dev/) - A developer for IBM, Martin Heinz talks about a lot of topics I find interesting, including Python development.
-* [https://blog.notryan.com/](https://blog.notryan.com/) - Ryan--or not--writes about some interesting things, but I follow him to keep up with his interesting [plaintext blog project](https://blog.notryan.com/001.txt). It's a cool idea, and I look forward to seeing it progress.
-* [https://duo.com/decipher](https://duo.com/decipher) - Decipher covers both tech and information security news. It fits the profile for the type of website covered in [*Keeping Up with Current Events*](My Morning Reads.txt), but due to its low volume I track updates via RSS instead of daily visists.
-* [https://blog.redteam.pl/feeds/posts/default](https://blog.redteam.pl/) - The folks at Red Team cybersecurity post great writeups and tutorials for network defenders.
-* [https://drewdevault.com/](https://drewdevault.com/) - Drew DeVault writes about tech and development.
-* [https://utf9k.net](https://utf9k.net) - Marcus Crane writes about tech.
-* [https://weberblog.net/](https://weberblog.net) - Johannes Weber covers interesting information security topics.
 * [https://kevq.uk](https://kevq.uk) - Kev Quirk writes about tech and development.
-* [http://madhadron.com/index.html](http://madhadron.com/index.html) - Frederick Ross writes about tech, development, and infrastructure.
-* [http://danluu.com](http://danluu.com) - Dan Luu thinks there's "a desperate shortage of understandable explanation of technical topics", and set out to fix it with his blog; he's doing a great job.
 * [http://jvns.ca/](http://jvns.ca/) - Julia Evans is a remarkably smart developer; I follow her to become a better one.
 * [https://www.rdegges.com](https://www.rdegges.com) - Randall Degges writes about primarily about development on this lifestyle blog.
-* [https://unixsheikh.com](https://unixsheikh.com) - The Unix Sheikh is just that: a Unix expert with a fascinating backlog of great articles on this ecosystem.
+* [https://blog.balthazar-rouberol.com](https://blog.balthazar-rouberol.com) - Balthazar Rouberol writes a lot about shell tips, tricks, and hacks.
+
+### Information Security
+
+* [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/) - Mathew Green covers cryptography some, hence the name, but in more broad strokes writes great stuff on privacy.
+* [https://duo.com/decipher](https://duo.com/decipher) - Decipher covers both tech and information security news. It fits the profile for the type of website covered in [*Keeping Up with Current Events*](My Morning Reads.txt), but due to its low volume I track updates via RSS instead of daily visists.
+* [https://blog.redteam.pl/feeds/posts/default](https://blog.redteam.pl/) - The folks at Red Team cybersecurity post great writeups and tutorials for network defenders.
+* [https://weberblog.net/](https://weberblog.net) - Johannes Weber covers interesting information security topics.
 * [https://spacetime.dev/](https://spacetime.dev/) - Awn Umar wrote [two](https://spacetime.dev/encrypting-secrets-in-memory) fascinating [posts](https://spacetime.dev/plausibly-deniable-encryption) on encryption; I stick around hoping for more.
 * [http://blogs.splunk.com/](http://blogs.splunk.com) - The Splunk blogs have several great articles for network defenders.
-* [https://blog.balthazar-rouberol.com](https://blog.balthazar-rouberol.com) - Balthazar Rouberol writes a lot about shell tips, tricks, and hacks.
 
 ### Miscellaneous
 
@@ -142,12 +133,22 @@ This last group of websites does not fit into of the genres above, but over the 
 * [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/) - A former Navy SEAL, [Eric Davis](http://www.ericdavis215.com/blog/) has some interesting thoughts on life, adventure, and philosophy.
 * [https://80000hours.org/](https://80000hours.org/) - The folks over at 80,000 Hours write about expertise and career development, which I find particularly interesting at this stage in my career.
 * [https://www.jefftk.com/p](https://www.jefftk.com/p) - A lifestyle blog if I have ever seen one, Jeff Kaufman works for Google and writes about a lot of things I don't care about, but about a few things that I do. In particular, I enjoy his writing on tech and his DIY projects around the house.
+* [https://www.justinobeirne.com/](https://www.justinobeirne.com/) - Justin Obeirne tracks Apple Maps' progress as the company works to map the entire country. The level of detail in his side-by-side comparisons of each version is exquisite. 
 * [https://secondbreakfast.co](https://secondbreakfast.co) - Another lifestyle blog, Will Schreiber writes about tech, current events, and whatever else strikesh is fancy.
 * [http://berthub.eu/articles/](http://berthub.eu/articles/) - Bert Hubert has written a lot about COVID-19 lately, but I stick around for his thoughts on economics and outsourcing that attracted me in the first place.
+* [https://snikt.net/](https://snikt.net/) - Andreas Happe's work on building an LTE modem got my attention, but I stayed for his eclectic writings on interesting, tech-related topics. 
+* [https://nrempel.com/](https://nrempel.com/) - Nicholas Rempel also all sorts of developer- and tech-related topics, and does so well.
+* [https://codefol.io/](https://codefol.io/) - Noah Gibbs writes about tech, leadership, and culture, all of which interest me. 
+* [https://blog.notryan.com/](https://blog.notryan.com/) - Ryan--or not--writes about some interesting things, but I follow him to keep up with his interesting [plaintext blog project](https://blog.notryan.com/001.txt). It's a cool idea, and I look forward to seeing it progress.
+* [https://drewdevault.com/](https://drewdevault.com/) - Drew DeVault writes about tech and development.
+* [https://utf9k.net](https://utf9k.net) - Marcus Crane writes about tech.
+* [http://madhadron.com/index.html](http://madhadron.com/index.html) - Frederick Ross writes about tech, development, and infrastructure.
+* [http://danluu.com](http://danluu.com) - Dan Luu thinks there's "a desperate shortage of understandable explanation of technical topics", and set out to fix it with his blog; he's doing a great job.
+* [https://unixsheikh.com](https://unixsheikh.com) - The Unix Sheikh is just that: a Unix expert with a fascinating backlog of great articles on this ecosystem.
 
 #### The Full List
 
-Like [last time](My Morning Reads.txt), to make your life a little easier, I list every site below in order of appearance.
+Like [last time](My Morning Reads.txt), to make your life a little easier, I list every site below in order of appearance above.
 
 * [http://twoifoverland.com/](http://twoifoverland.com/)
 * [https://blissordie.com](https://blissordie.com)
@@ -188,37 +189,35 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://davidwalsh.name](https://davidwalsh.name)
 * [https://medium.com/@addyosmani](https://medium.com/@addyosmani)
 * [http://nonullpointers.com](http://nonullpointers.com)
-* [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/)
-* [https://snikt.net/](https://snikt.net/)
 * [https://apenwarr.ca/log](https://apenwarr.ca/log)
-* [https://www.justinobeirne.com/](https://www.justinobeirne.com/)
-* [https://nrempel.com/](https://nrempel.com/)
-* [https://subt0x11.blogspot.com/](https://subt0x11.blogspot.com/)
-* [https://www.backblaze.com/blog](https://www.backblaze.com/blog)
-* [https://codefol.io/](https://codefol.io/)
 * [https://martinheinz.dev/](https://martinheinz.dev/)
-* [https://blog.notryan.com/](https://blog.notryan.com/)
-* [https://duo.com/decipher](https://duo.com/decipher)
-* [https://blog.redteam.pl/feeds/posts/default](https://blog.redteam.pl/)
-* [https://drewdevault.com/](https://drewdevault.com/)
-* [https://utf9k.net](https://utf9k.net)
-* [https://weberblog.net/](https://weberblog.net)
 * [https://kevq.uk](https://kevq.uk)
-* [http://madhadron.com/index.html](http://madhadron.com/index.html)
-* [http://danluu.com](http://danluu.com)
 * [http://jvns.ca/](http://jvns.ca/)
 * [https://www.rdegges.com](https://www.rdegges.com)
-* [https://unixsheikh.com](https://unixsheikh.com)
+* [https://blog.balthazar-rouberol.com](https://blog.balthazar-rouberol.com)
+* [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/)
+* [https://duo.com/decipher](https://duo.com/decipher)
+* [https://blog.redteam.pl/feeds/posts/default](https://blog.redteam.pl/)
+* [https://weberblog.net/](https://weberblog.net)
 * [https://spacetime.dev/](https://spacetime.dev/)
 * [http://blogs.splunk.com/](http://blogs.splunk.com)
-* [https://blog.balthazar-rouberol.com](https://blog.balthazar-rouberol.com)
 * [https://waitbutwhy.com](https://waitbutwhy.com)
 * [https://zenhabits.net](https://zenhabits.net)
 * [http://blairreeves.me](http://blairreeves.me)
 * [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/)
 * [https://80000hours.org/](https://80000hours.org/)
 * [https://www.jefftk.com/p](https://www.jefftk.com/p)
+* [https://www.justinobeirne.com/](https://www.justinobeirne.com/)
 * [https://secondbreakfast.co](https://secondbreakfast.co)
 * [http://berthub.eu/articles/](http://berthub.eu/articles/)
+* [https://snikt.net/](https://snikt.net/)
+* [https://nrempel.com/](https://nrempel.com/)
+* [https://codefol.io/](https://codefol.io/)
+* [https://blog.notryan.com/](https://blog.notryan.com/)
+* [https://drewdevault.com/](https://drewdevault.com/)
+* [https://utf9k.net](https://utf9k.net)
+* [http://madhadron.com/index.html](http://madhadron.com/index.html)
+* [http://danluu.com](http://danluu.com)
+* [https://unixsheikh.com](https://unixsheikh.com)
 
 I like big-name websites for keeping up on current events, but I tend to find the best content on sites like these. The advice to "follow people, not places" has served me well, and I encourage you to start doing the same.

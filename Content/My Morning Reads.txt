@@ -71,7 +71,7 @@ I use one news aggregator. [Popurls](http://popurls.com/) draws from many of the
 
 #### The Full List
 
-To make your life a little easier, I list the fifteen sites I read to keep up with current events below. On new machines, I copy this list into a folder I can open in the morning before work.
+To make your life a little easier, I list the sites I read to keep up with current events below. On new machines, I copy this list into a folder I can open in the morning before work.
 
 * [https://news.ycombinator.com/](https://news.ycombinator.com/)
 * [https://lobste.rs/](https://lobste.rs/)
