@@ -1,13 +1,15 @@
-127.0.0.1 - - [30/Jun/2020 12:36:36] GET / HTTP/1.1 200 -
-127.0.0.1 - - [30/Jun/2020 12:36:36] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [30/Jun/2020 12:36:36] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [30/Jun/2020 12:36:37] GET /apple-touch-icon-precomposed.png HTTP/1.1 404 -
-127.0.0.1 - - [30/Jun/2020 12:36:37] GET /assets/images/favicon.ico HTTP/1.1 200 -
-127.0.0.1 - - [30/Jun/2020 12:36:37] GET /assets/images/favicon_192.ico HTTP/1.1 200 -
-127.0.0.1 - - [30/Jun/2020 12:36:37] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [30/Jun/2020 12:36:37] GET /apple-touch-icon.png HTTP/1.1 404 -
-127.0.0.1 - - [30/Jun/2020 12:36:38] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [30/Jun/2020 12:36:38] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [30/Jun/2020 12:36:38] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [30/Jun/2020 12:36:38] GET /assets/images/favicon.ico HTTP/1.1 200 -
-- - - [30/6/2020 12:36:43] Graceful shutdown - -
+127.0.0.1 - - [10/Jul/2020 08:54:13] GET / HTTP/1.1 200 -
+127.0.0.1 - - [10/Jul/2020 08:54:13] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [10/Jul/2020 08:54:13] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [10/Jul/2020 08:54:13] GET /assets/images/favicon.ico HTTP/1.1 200 -
+127.0.0.1 - - [10/Jul/2020 08:54:13] GET /assets/images/favicon_192.ico HTTP/1.1 200 -
+127.0.0.1 - - [10/Jul/2020 08:54:13] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+127.0.0.1 - - [10/Jul/2020 08:54:13] GET /apple-touch-icon-precomposed.png HTTP/1.1 404 -
+127.0.0.1 - - [10/Jul/2020 08:54:13] GET /apple-touch-icon.png HTTP/1.1 404 -
+127.0.0.1 - - [10/Jul/2020 08:54:14] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [10/Jul/2020 08:54:14] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [10/Jul/2020 08:54:23] GET /blog/personal-development.html HTTP/1.1 200 -
+127.0.0.1 - - [10/Jul/2020 08:54:23] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [10/Jul/2020 08:54:23] GET /assets/images/favicon.ico HTTP/1.1 200 -
+127.0.0.1 - - [10/Jul/2020 08:54:23] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+- - - [10/7/2020 8:54:53] Graceful shutdown - -

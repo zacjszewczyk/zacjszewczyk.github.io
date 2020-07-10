@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 10 Jul 2020 12:49:40 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2020 12:54:11 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Personal Development</title>
+            <link>https://zacs.site/blog/personal-development.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/personal-development.html</guid>
+            <pubDate>Fri, 10 Jul 2020 12:54:06 GMT</pubDate>
+            <description>
+                &lt;p&gt;A smart person knows everything about a single topic. An intelligent person knows as much as possible about more than one topic. Both have great value, and depending on the industry, some organizations value &lt;a href="Smart versus intelligent.html"&gt;one more than the other&lt;/a&gt;. In general, though, smart people fill entry-level jobs, who then become intelligent people to move up the ladder&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;. A robust personal development strategy will help you go from the former to the latter.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/uncategorized.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Software disenchantment</title>
             <link>https://tonsky.me/blog/disenchantment/</link>
