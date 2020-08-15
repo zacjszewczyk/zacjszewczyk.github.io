@@ -1,3 +1,8 @@
-# [Attribution](https://blog.talosintelligence.com/2020/08/attribution-puzzle.html) #
+Type: linkpost
+Title: Attribution
+Link: https://blog.talosintelligence.com/2020/08/attribution-puzzle.html
+Pubdate: 2020/08/14 16:10:38
+Category: Uncategorized
+Author: Zac Szewczyk
 
 Not long after I found an old piece on attribution [from Thinkst Applied Research](https://blog.thinkst.com/2013/02/thinkstscapes-2013-ah1-on-china-report.html), Cisco's Talos Intelligence group posted [an article on the same topic](https://blog.talosintelligence.com/2020/08/attribution-puzzle.html). Attribution is fraught, as both pieces explain. IP geolocation is woefully inaccurate, many of the tactics, techniques, and procedures tied to specific actors are either so common that they apply to several groups or so general that they might as well, and the proliferation of viable tool sets has made even this metric unreliable. At best, we can attribute activity with a degree of certainty--but never complete confidence, and you should be circumspect of anyone who does.

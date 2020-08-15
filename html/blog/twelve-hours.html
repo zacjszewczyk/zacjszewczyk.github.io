@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="Over the last few days I have received a ton of great feedback on both a number of my articles and my site's design as well. While the former has remained consistently positive, the latter refrain almost invariably included the same two criticisms: that I had set the font too small, and that every line contained too many words spread much too far across the screen for a comfortable reading experience. Others recommended that I find a way to differentiate linked list items from my own posts, but by and large the most common suggestion advocated a larger font size and decreased content column width. Today, I have addressed those issues and many others with my latest redesign, live with this article.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="A Complete Redesign in Twelve Hours - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>A Complete Redesign in Twelve Hours - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/twelve-hours.html">A Complete Redesign in Twelve Hours</a>
+</h2>
+<time id='article_time' datetime="2014-01-10 18:59:04-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2014.html">2014</a>/<a href="/blog/2014-01.html">01</a>/10 18:59:04 EST in <a href='/programming.html'>Programming</a></time>
+<p>Over the last few days I have received a ton of great feedback on both a number of my articles and my site&#8217;s design as well. While the former has remained consistently positive, the latter refrain almost invariably included the same two criticisms: that I had set the font too small, and that every line contained too many words spread much too far across the screen for a comfortable reading experience. Others recommended that I find a way to differentiate linked list items from my own posts, but by and large the most common suggestion advocated a larger font size and decreased content column width. Today, I have addressed those issues and many others with my latest redesign, live with this article.</p>
+
+<p>Contrary to what I may have alluded to when responding to those offering feedback with regards to my site&#8217;s design, I had only thought about it in the abstract up to that point. I had created no wireframes, selected no color schemes, and had not even begun thinking about a particular font&#160;&#8212;&#160;besides knowing that I did, in fact, need to design a new website, I had not fleshed out any of the implementation details whatsoever. Busy with writing and working on First Crack, I just did not have the time.</p>
+
+<p>Thankfully, that did not keep me from trying.</p>
+
+<p>With the exception of some minor styling code for block quotes, links, and footnotes, I deleted every CSS definition until I had a blank, <a href="https://twitter.com/zacjszewczyk/status/420750176026763264">plain text</a>-esque layout. Then the fun began: I needed to decrease my main column&#8217;s width, so I pushed it down to 50<code> and centered it. Looking good so far. With my old code gone, the font already rendered at a much larger size than it had previously; both here and in the default color scheme of black text on a white background, the automatic browser styling would do. However, everything looked too squished: I needed more whitespace, so I upped the line height to 200</code> and added a generous margin around every article and the top and bottom of the screen. Mostly satisfied with the layout, I moved on to fonts.</p>
+
+<p>I follow a number of well-read writers who place great stock in good font choices, so I realized the significance of a great typeface early on as one of the most important aspects leading to an enjoyable experience. With this in mind, I turned to my trusty sidekick Google Web Fonts in search of an attractive option that would lend itself to both a visually pleasing design and an easy reading experience. With more than six hundred choices just for the Roman alphabet though, I quickly became overwhelmed. Unsure where to begin, I decided to see what everyone else used in the hopes of stumbling across something I really liked. I looked to <a href="http://marco.org">Marco Arment</a> first and then <a href="http://shawnblanc.net">Shawn Blanc</a>, where I thought to explore potential options on Typekit.</p>
+
+<p>Given the importance of a great font, I had prepared myself to pay handsomely for one; however, when I discovered that Typekit charged for variants I could find on Google Web Fonts for free, I turned my attention back to Google and eventually decided on the smooth sans serif <a href="http://typecast.com/preview/google/Roboto">Roboto</a>. Although I tried a number of others, everything paled in comparison to Roboto. With a font in place, then, I went back to tweaking layout and spacing. As the day wore on and it grew steadily darker outside, I became increasingly less satisfied with my chosen color scheme: it reminded me of a comment Tweetbot&#8217;s developers had retweeted of someone complaining that the bright white layout made their eyes bleed at night. Hoping to save my readers some pain, I began exploring a dark mode.</p>
+
+<p>Ever since starting my site, I had done constant battle with two warring factions within my mind: one advocated an incredibly minimalist design featuring nothing but the absolutely necessary HTML and CSS, while the other wanted to include jQuery pursuant of some really neat ideas I could not implement otherwise. Partway through December, the latter prevailed when I shipped an incremental update featuring <a href="https://twitter.com/pxldots">Chris Sauve&#8217;s</a> jQuery plugin <a href="http://www.bigfootjs.com">Bigfoot</a> after <a href="http://www.marco.org/2013/12/15/bigfoot">Marco began using it</a> on his site. Having crossed the proverbial Rubicon, I also included <a href="http://www.thecssninja.com/javascript/pointer-events-60fps">a slick trick</a> for enabling faster, smoother scrolling, which also necessitated a bit of scripting. Given that I already imported jQuery and ran some Javascript upon each page load without a significant performance hit, it made my decision to go with a scripting-based option much easier instead of the convoluted CSS workaround I would have otherwise attempted to implement.</p>
+
+<p>I could have easily added a &#8220;Display Preferences&#8221; page similar to <a href="http://daringfireball.net/preferences/">John Gruber&#8217;s</a>, but I wanted to do something much more elegant. Ideally, I wanted to toggle a light and dark mode with a single key press; thankfully, Javascript could not only do this, but I could do it with relatively few lines of code and without a plugin bringing along hundreds of extra lines and features I would never use. While this made for a great experience on my computer, iOS devices, famously, do not have keyboards. It seemed I would have to forfeit my goal of an elegant implementation not requiring that I add an entire page devoted to one tertiary feature. In fact, I had almost unzipped a past project that would let me use iOS-style toggle switches when I had a crazy idea: what if I could give my phone a good <em>shake</em> to trigger a dark mode? Twenty minutes and <a href="https://github.com/lhagan/jquery.ios-shake">one GitHub project</a> later, I had a rudimentary beta working.</p>
+
+<p>I spent the rest of the evening tweaking shake sensitivity until it worked well enough on my iPhone to detect intentional shakes and disregard most unintentional ones resultant of normal usage; however, that left me with the much larger iPad to contend with. To make a long and tedious story short, I ended up using different settings depending on the device, which I differentiated using <a href="http://stackoverflow.com/a/10364620">a wonderfully simple trick I found on Stack Overflow</a>. From those who have checked out the beta, it works like a charm on both devices.</p>
+
+<p>After finalizing this feature I made a few more small changes like centering headlines and prepending linked list items with a &#8220;&gt;&#8221; sign, but focused most of my efforts on optimizing performance. Leading up to my decision to finally bundle jQuery with every page, an unwillingness to increase load times served as my primary motivation behind eschewing Javascript of any kind: I wanted my site to respond quickly irregardless of device or internet speed. Bundling external scripts would increase latency, I reasoned, and I could not accept such a tradeoff. As I said though, I eventually overcame that aversion and started implementing some neat tricks here and there. In order to keep the associated performance hit at a minimum, I consolidated external files as much as possible, and minified everything. For example, using Javascript compressors like the <a href="http://jscompress.com/">Online Javascript Compression Tool</a>, I cut Bigfoot down to <a href="http://pastebin.com/yZ4xtwKe">1/3 its original file size</a>, and saw similar reductions in size&#160;&#8212;&#160;and, by extension, load times&#160;&#8212;&#160;in my other scripts and stylesheets as well. Now, with an empty cache and a fresh browser instance, it takes less than half a second to open my home page, and ~1 second to open my archives with more than four hundred entries. I can live with that.</p>
+
+<p>Incredibly&#160;&#8212;&#160;to me, at least&#160;&#8212;&#160;I did all this yesterday in around twelve hours from start to finish, and spent today writing this before and after work. I cannot, nor do I mean to, take all the credit for this great turnaround time though: I could not have done it without the feedback of my Twitter followers giving me direction as to what I needed to work on next. In particular, I would like to say a special &#8220;Thank you!&#8221; to <a href="http://twitter.com/typistX">@typistX</a> on Twitter for all his help: when asked he took our conversation out of Twitter and in to email, where we made a great deal of progress. I could not have done this so quickly and to such splendid results without him, nor without the input of my newfound friends on Twitter. To all of you: thank you; to everyone else, I hope you enjoy the new design.</p>
+
+
+</article>
+<p>
+<a href="/blog/twelve-hours.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2020 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>

@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="<html>">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="Sequential Exeuction, Multiprocessing, and Multithreading IO-Bound Tasks in Python - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>Sequential Exeuction, Multiprocessing, and Multithreading IO-Bound Tasks in Python - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/linear-python.html">Sequential Exeuction, Multiprocessing, and Multithreading IO-Bound Tasks in Python</a>
+</h2>
+<time id='article_time' datetime="2020-01-25 12:40:21-0400" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-01.html">01</a>/25 12:40:21 EST in <a href='/programming.html'>Programming</a></time>
+<html>
+<style type="text/css">
+
+.highlight .c{color:#408080;font-style:italic}.highlight .k{color:green;font-weight:700}.highlight .o{color:#666}.highlight .c1{color:#408080;font-style:italic}.highlight .go{color:#888}.highlight .gt{color:#04d}.highlight .kn{color:green;font-weight:700}.highlight .m{color:#666}.highlight .s{color:#ba2121}.highlight .nb{color:green}.highlight .no{color:#800}.highlight .ne{color:#d2413a;font-weight:700}.highlight .nf{color:#00f}.highlight .nn{color:#00f;font-weight:700}.highlight .nv{color:#19177c}.highlight .ow{color:#a2f;font-weight:700}.highlight .mi{color:#666}.highlight .s2{color:#ba2121}.highlight .s1{color:#ba2121}.highlight .bp{color:green}.highlight *{line-height:100%}
+
+table{margin:0 auto;margin-bottom:2em;border-collapse:collapse;border:none !important;}table,td,th,tr{border:.1em solid #000;padding:.5em}td:hover{background-color:#cfcfcf}
+
+/* Media Queries */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) { 
+
+table{display:inline-block;max-width: 90%;overflow:scroll}
+
+}
+
+</style>
+
+
+
+<p>Python <a href="https://realpython.com/python-concurrency/">makes concurrency easy</a>. It took less than an hour to <a href="https://zacs.site/blog/first-crack-release-notes-0819.html">add multiprocessing to my blog engine</a>, <a href="/projects.html/firstCrack">First Crack</a>, and I have used it often since. Everyone likes to call premature optimization the root of all evil, but architecting programs for concurrent execution from the start has saved me hundreds of hours in large data capture and processing projects. Color me a Knuth skeptic. This article compares sequential execution, multiprocessing, and multithreading for IO-Bound tasks in Python, with simple code samples along the way.</p>
+
+
+
+<h3 class="headers" id="Terms">Terms<span>&nbsp;<a href="#Terms">#</a></span></h3>
+
+
+
+<p>First, terms. Most programs work from top to bottom. The next line runs after the last one finishes. We call these <strong>sequential</strong>. Adding <strong>multiprocessing</strong> to First Crack let the script use multiple cores to run multiple lines at the same time. Where the engine used to open a file, read its contents, close it, and then repeat those steps a thousand more times, it could now handle eight at once. <strong>Multithreading</strong> lives somewhere in the middle. These programs use a single core, but the processor forces small blocks&#160;&#8212;&#160;threads&#160;&#8212;&#160;to take turns. By pausing a block waiting to read a file so that another can make a network connection before coming back to the first, multithreading boosts efficiency and lowers runtime. The latter approaches are examples of <strong>concurrency</strong>, which&#160;&#8212;&#160;to make things easy&#160;&#8212;&#160;you can just think of as anything <em>not</em> sequential.</p>
+
+
+
+<p>The rest of this article starts with a simple sequential script, after the section below, before moving on to much faster concurrent versions later. Each section also includes runtime analysis, so you can see just how big an impact concurrency can have.</p>
+
+
+
+<h3 class="headers" id="Imports">Imports<span>&nbsp;<a href="#Imports">#</a></span></h3>
+
+
+
+<p>I excluded the import statements from the code in the following sections, for brevity&#8217;s sake. For those who want to follow along at home, make sure your script starts with these lines:</p>
+
+
+
+<div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span> <span class="c1"># Capture command line parameters</span>
+
+<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span> <span class="k">as</span> <span class="n">CorePool</span> <span class="c1"># Multiprocessing</span>
+
+<span class="kn">from</span> <span class="nn">multiprocessing.pool</span> <span class="kn">import</span> <span class="n">ThreadPool</span> <span class="c1"># Multithreading</span>
+
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span> <span class="c1"># Sleep</span>
+
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">ceil</span> <span class="c1"># Rounding</span>
+
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="c1"># Execution time</span>
+
+</pre></div>
+
+
+
+<p>I will not use most of these functions for a while, but use all of them in time. If you do decide to follow along at home, you will need Python 3.7 or later.</p>
+
+
+
+<h3 class="headers" id="SequentialExecution">Sequential Execution<span>&nbsp;<a href="#SequentialExecution">#</a></span></h3>
+
+
+
+<p>The first&#160;&#8212;&#160;and most common&#160;&#8212;&#160;approach to concurrency is to avoid it. Consider this simple script:</p>
+
+
+
+<div class="highlight"><pre>
+
+<span class="c1"># Method: handle</span>
+
+<span class="c1"># Purpose: Handle item.</span>
+
+<span class="c1"># Parameters:</span>
+
+<span class="c1"># - item: Item to handle (X)</span>
+
+<span class="c1"># Return: 0 - Success, 1 - Fail (Int)</span>
+
+<span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="mi">1</span> <span class="c1"># Success</span>
+
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+
+   <span class="n">handle</span><span class="p">(</span><span class="n">each</span><span class="p">)</span>
+
+<span class="n">t2</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sequential time: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span><span class="o">-</span><span class="n">t1</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()))</span>
+
+</pre></div>
+
+
+
+<p>The generic method <code>handle</code> does nothing&#160;&#8212;&#160;but by sleeping for two seconds, it simulates a long IO-bound task. I chose to simulate this type of task&#160;&#8212;&#160;as opposed to a CPU-bound one&#160;&#8212;&#160;because most of my recent projects have involved downloading and reading massive files. These types of jobs spend most of their time waiting on data from the network or an external hard drive, which requires little from the processor. In a real project, I might replace <code>sleep(2)</code> with code to download a web page, parse the HTML, and write to a file. For consistency across runs, I just use <code>sleep</code> here. <code>x = range(100)</code> creates a list from 0 to 99, and the <code>for</code> loop then calls <code>handle</code> one hundred times, once for each number. </p>
+
+
+
+<p>We can model best-case runtime with the formula <code>T = h &#42; n + o</code>, with <code>T</code> as total execution time, <code>h</code> as the amount of time <code>handle</code> takes to run, <code>n</code> as the number of times the method runs, and <code>o</code> as the overhead to initialize, operate, and exit the script. The script above should take just over 200 seconds to finish: <code>T = 2 &#42; 100 + o = 200 + o</code></p>
+
+
+
+<p>The script ran for 200.17 seconds, which makes <code>o</code>&#160;&#8212;&#160;the overhead to initialize, operate, and exit the script, in seconds&#160;&#8212;&#160;equal to 0.17. Next, let&#8217;s add multiprocessing and see what changes.</p>
+
+
+
+<h3 class="headers" id="Multiprocessing">Multiprocessing<span>&nbsp;<a href="#Multiprocessing">#</a></span></h3>
+
+
+
+<p>Consider the script below. <code>handle</code> remains unchanged. <code>x = range(100)</code> creates the same one hundred-item list from 0 to 99, but then <code>Core_Orchestrator</code> calls <code>handle</code> for each number 0 to 99. </p>
+
+
+
+<div class="highlight"><pre>
+
+<span class="c1"># Method: handle</span>
+
+<span class="c1"># Purpose: Handle item.</span>
+
+<span class="c1"># Parameters:</span>
+
+<span class="c1"># - item: Item to handle (X)</span>
+
+<span class="c1"># Return: 0 - Success, 1 - Fail (Int)</span>
+
+<span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="mi">1</span> <span class="c1"># Success</span>
+
+
+
+<span class="c1"># Method: Core_Orchestrator</span>
+
+<span class="c1"># Purpose: Facilitate multiprocessing.</span>
+
+<span class="c1"># Parameters:</span>
+
+<span class="c1"># - input_list: List to farm out to cores (List)</span>
+
+<span class="c1"># Return: True, All successful; False, At least one fail (Bool)</span>
+
+<span class="k">def</span> <span class="nf">Core_Orchestrator</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
+
+    <span class="n">pool</span> <span class="o">=</span> <span class="n">CorePool</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="n">MAX_CORES</span><span class="p">)</span>
+
+    <span class="n">results</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">input_list</span><span class="p">)</span>
+
+    <span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="n">pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+    <span class="k">del</span> <span class="n">pool</span>
+
+    <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="n">Core_Orchestrator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">t2</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Multiprocessing time: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span><span class="o">-</span><span class="n">t1</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()))</span>
+
+</pre></div>
+
+
+
+<p>Recall that multiprocessing lets the script use multiple cores to run multiple lines at the same time. My computer has eight cores, so <code>Core_Orchestrator</code> runs eight instances of <code>handle</code> at once. We can now model execution time with <code>T = (h &#42; n)/c + n/c&#42;y + o</code>. </p>
+
+
+
+<p>Let me break this new formula down: we can represent the time to run <code>handle</code> <code>n</code> times with <code>(h &#42; n)</code>. <code>(h &#42; n)/c</code>, then, becomes the time to run <code>handle</code> <code>n</code> times on <code>c</code> cores. Multiple cores introduce some overhead, though, which we can account for with <code>n/c&#42;y</code>: the number of times the script will have to assign <code>handle</code> to a new core, <code>n/c</code>, times the unknown amount of time that takes, <code>y</code>. <code>o</code> is, again, the overhead to initialize, operate, and exit the script.</p>
+
+
+
+<p>Assuming <code>o</code> remains constant, our new formula says we can expect the code above to take at least 25 seconds: <code>T = (2 &#42; 100)/8 + 100/8&#42;y + 0.17 = 25.17 + 12.5y</code>. Since we don&#8217;t have a value for <code>y</code>, though, we cannot say how far over. Let&#8217;s find out.</p>
+
+
+
+<p>The script finishes in <strong>0:00:32.09</strong>, which gives us a value of 0.55 for <code>y</code>. At this point, we have two extremes by which to judge performance: the sequential approach took 200.17 seconds, while the multiprocessor approach took 32.09 seconds. Let&#8217;s see if we can beat it with multithreading, next.</p>
+
+
+
+<h3 class="headers" id="Multithreading">Multithreading<span>&nbsp;<a href="#Multithreading">#</a></span></h3>
+
+
+
+<p>In the script below, <code>handle</code> once again remains unchanged, <code>x = range(100)</code> creates the same one hundred-item list from 0 to 99, but then <code>Thread_Orchestrator</code> calls <code>handle</code> for each number 0 to 99. <code>Thread_Orchestrator</code> uses a max of eight threads. </p>
+
+
+
+<p>Will this script match the performance of the sequential one, with <code>T = h &#42; n + o</code>? It runs on a single core, after all. Or will it look more like the multiprocessed code, with execution time measured by <code>T = (h &#42; n)/c + n/c&#42;y + o</code>?</p>
+
+
+
+<div class="highlight"><pre>
+
+<span class="c1"># Method: Thread_Orchestrator</span>
+
+<span class="c1"># Purpose: Facilitate multithreading.</span>
+
+<span class="c1"># Parameters:</span>
+
+<span class="c1"># - input_list: List to farm out to threads (List)</span>
+
+<span class="c1"># Return: True, All successful; False, At least one fail (Bool)</span>
+
+<span class="k">def</span> <span class="nf">Thread_Orchestrator</span><span class="p">(</span><span class="n">in_list</span><span class="p">):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="n">thread_pool</span> <span class="o">=</span> <span class="n">ThreadPool</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="n">thread_pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">in_list</span><span class="p">)</span>
+
+        <span class="n">thread_pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="n">thread_pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+        <span class="k">del</span> <span class="n">thread_pool</span>
+
+        <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+        <span class="c1"># print(e)</span>
+
+        <span class="k">return</span> <span class="bp">False</span>
+
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="n">Thread_Orchestrator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">t2</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Multithreading time: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span><span class="o">-</span><span class="n">t1</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()))</span>
+
+</pre></div>
+
+
+
+<p>This script finished in <strong>32.08</strong> seconds. Whether eight cores sleep for two seconds or a single core waits for eight threads to sleep for two seconds apiece, the same amount of time passes. As a result, the non-parallel multithreaded approach managed to match the parallel multiprocessing one. In general, the execution time for these two approaches will match for IO-bound tasks; it will not for CPU-bound tasks, though. If I had used a complex math operation that required many CPU cycles, the multiprocessing method would have split the work across eight cores, while a single one would have had to do all the work for each thread in the multithreaded code. The table below explains when to use these strategies.</p>
+
+
+
+<table>
+
+    <tr>
+
+        <td>Bottleneck</td><td>Example</td><td>Optimize with</td>
+
+    </tr>
+
+    <tr>
+
+        <td>IO</td><td>Network connection, file operation</td><td>Multithreading</td>
+
+    </tr>
+
+    <tr>
+
+        <td>CPU</td><td> Complex math problem, search</td><td>Multiprocessing</td>
+
+    </tr>
+
+</table>
+
+
+
+<p>Given the simulated IO-bound task here, if the multiprocessing version ran just as fast as the multithreaded one, why bother with multithreading at all? Because the max number of cores a processor has is a hard physical limit, while the max number of threads is a logical one. I can never use more than eight cores, but I can use as many threads as my operating system will allow. In practice, I have found that limit hovers around 1,000 per process. </p>
+
+
+
+<p>To answer my question from earlier, we can model multithreaded performance like we did multiprocessing<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>, with <code>T = (h &#42; n)/t + n/t&#42;z + o</code>&#160;&#8212;&#160;except with <code>t</code> as the number of threads used, and <code>z</code> as the overhead of assigning <code>handle</code> to a new thread. Using the execution time <code>T</code> of the last run, 32.08 seconds, we now have a value for <code>z</code>: 0.55. This formula also tells us that we can minimize <code>T</code> by increasing <code>t</code> toward its limit around 1,000. Let&#8217;s test this theory.</p>
+
+
+
+<p>The script below uses 16 threads (<code>t=16</code>). According to our formula and assuming <code>o</code> and <code>z</code> remain constant, it should finish in about 16 seconds: <code>T = 200/16 + 100/16(0.55) + 0.17 = 16.11</code></p>
+
+
+
+<div class="highlight"><pre>
+
+<span class="c1"># Method: Thread_Orchestrator</span>
+
+<span class="c1"># Purpose: Facilitate multithreading.</span>
+
+<span class="c1"># Parameters:</span>
+
+<span class="c1"># - input_list: List to farm out to threads (List)</span>
+
+<span class="c1"># Return: True, All successful; False, At least one fail (Bool)</span>
+
+<span class="k">def</span> <span class="nf">Thread_Orchestrator</span><span class="p">(</span><span class="n">in_list</span><span class="p">):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="n">thread_pool</span> <span class="o">=</span> <span class="n">ThreadPool</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="n">thread_pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">in_list</span><span class="p">)</span>
+
+        <span class="n">thread_pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="n">thread_pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+        <span class="k">del</span> <span class="n">thread_pool</span>
+
+        <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+        <span class="c1"># print(e)</span>
+
+        <span class="k">return</span> <span class="bp">False</span>
+
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="n">Thread_Orchestrator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">t2</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Multithreading time: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span><span class="o">-</span><span class="n">t1</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()))</span>
+
+</pre></div>
+
+
+
+<p>The script finished in <strong>16.07</strong> seconds with 16 threads, and <strong>2.15</strong> seconds with 100. More threads over 100 could not make this faster, though, because the script only had 100 tasks to complete; more would just go unused. Is this the best we can do? No: if the multiprocessing code ran on a machine with 100 cores, each core would run <code>handle</code> once and all cores would run their instance at the same time; execution would take about 2 seconds, since <code>handle</code> takes 2 seconds. Are 2.15 seconds <em>realistically</em> the best we can do, though? Maybe; I don&#8217;t have a 100 core machine laying around&#160;&#8212;&#160;but perhaps we can get closer, by combining multiprocessing and multithreading.</p>
+
+
+
+<h3 class="headers" id="MultiprocessingMultithreading">Multiprocessing + Multithreading: The Blended Approach<span>&nbsp;<a href="#MultiprocessingMultithreading">#</a></span></h3>
+
+
+
+<p>Getting multithreading and multiprocessing to work together took some work. I&#8217;ll walk you through the code first, then delve into the results. </p>
+
+
+
+<div class="highlight"><pre>
+
+<span class="c1"># Global control variables</span>
+
+<span class="c1"># MAX_CORES: Maximum number of cores</span>
+
+<span class="n">MAX_CORES</span> <span class="o">=</span> <span class="mi">8</span>
+
+</pre></div>
+
+
+
+<p><code>multiprocessing.Pool()</code> creates a handle through which the script delegates tasks to individual cores. This command uses <code>multiprocessing.cpu_count()</code> to define the number of available cores in the pool. In the virtual environment I wrote most of this article in, though, that function gave me incorrect results. Creating a variable <code>MAX_PROCESSORS</code> and then overriding <code>multiprocessing.cpu_count()</code> with it when instantiating the pool fixed the problem. Your mileage may vary.</p>
+
+
+
+<div class="highlight"><pre>
+
+<span class="c1"># Method: Core_to_Thread_Orchestrator</span>
+
+<span class="c1"># Purpose: Facilitate multiprocessing and multithreading.</span>
+
+<span class="c1"># Parameters:</span>
+
+<span class="c1"># - input_list: List to farm out to threads by core (List)</span>
+
+<span class="c1"># Return: True, All successful; False, At least one fail (Bool)</span>
+
+<span class="k">def</span> <span class="nf">Core_to_Thread_Orchestrator</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="n">pool</span> <span class="o">=</span> <span class="n">CorePool</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="n">MAX_CORES</span><span class="p">)</span>
+
+        <span class="n">n</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">MAX_CORES</span><span class="p">)</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">Thread_Orchestrator</span><span class="p">,</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">input_list</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">n</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">),</span> <span class="n">n</span><span class="p">)])</span>
+
+        <span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="n">pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+        <span class="k">del</span> <span class="n">pool</span><span class="p">,</span> <span class="n">n</span>
+
+        <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+        <span class="c1"># print(e)</span>
+
+        <span class="k">return</span> <span class="bp">False</span>
+
+</pre></div>
+
+
+
+<p><code>Core_to_Thread_Orchestrator</code> accepts an input list, conveniently named <code>input_list</code>, then creates a pool of cores. The line, <code>results = pool.map(Thread_Orchestrator, [list(input_list[i:i+n]) for i in range(0, len(input_list), n)])</code>, needs some extra explaining.</p>
+
+
+
+<ol>
+
+    <li><strong>Divide <code>input_list</code> into even sub-lists for each core.</strong> <code>n = ceil(len(x)/MAX_CORES)</code> uses <code>ceil</code> to make sure a list of 100 elements on an 8 core machine does not get split into 8 sub-lists with 12 elements each (<code>int(100/8=12.5)=12</code>). This would only account for 96 elements and orphan the last 4. For cases like this, <code>ceil</code> ensures 8 sub-lists are created with 13 elements each, where the last one has just 9. <code>[list(input_list[i:i+n]) for i in range(0, len(input_list), n)]</code> then splits <code>input_list</code> into even sub_lists such that each core will have about the same amount of work to do.</li>
+
+<li> <strong>Multithread the processing of each sub-list.</strong> <code>pool.map</code> hands each sub-list off to a different core&#8217;s multithreading function. This has two major benefits. First, this allows each core to supervise the multithreading of a fraction of <code>input_list</code>, rather than the entire thing. The system then has to create fewer threads per core, which means each core can spend less time pausing and resuming threads. In theory, this approach also multiplies the max number of possible threads: where one core might have tapped out at 1,000, 8 cores should manage 8,000 without issue. In practice, though, most systems limit thread count by process rather than by core; on my system, that limit hovers around 1,000.</li>
+
+<li> <strong>Capture success or failure for all cores.</strong> <code>result</code> becomes a list with a return value for each core.</li>
+
+</ol>
+
+<p><code>return all(result)</code> returns True if all processes succeeded, but False if <em>any</em> failed. </p>
+
+
+
+<div class="highlight"><pre>
+
+<span class="c1"># Method: Thread_Orchestrator</span>
+
+<span class="c1"># Purpose: Facilitate multithreading.</span>
+
+<span class="c1"># Parameters:</span>
+
+<span class="c1"># - input_list: List to farm out to threads (List)</span>
+
+<span class="c1"># Return: True, All successful; False, At least one fail (Bool)</span>
+
+<span class="k">def</span> <span class="nf">Thread_Orchestrator</span><span class="p">(</span><span class="n">in_list</span><span class="p">):</span>
+
+    <span class="k">try</span><span class="p">:</span>
+
+        <span class="n">thread_pool</span> <span class="o">=</span> <span class="n">ThreadPool</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">in_list</span><span class="p">))</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="n">thread_pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">in_list</span><span class="p">)</span>
+
+        <span class="n">thread_pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="n">thread_pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+        <span class="k">del</span> <span class="n">thread_pool</span>
+
+        <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+        <span class="c1"># print(e)</span>
+
+        <span class="k">return</span> <span class="bp">False</span>
+
+</pre></div>
+
+
+
+<p>As we saw earlier, multithreading handles IO-bound tasks best with a thread for each task. Since <code>Thread_Orchestrator</code> now receives a variable number of tasks, it now calculates the appropriate number of threads to create with <code>len(in_list)</code>. Again, using more threads than tasks would not improve runtime. <code>results = thread_pool.map(handle, in_list)</code> then assigns <code>handle</code> to a thread for each element in the input list, captures the results in an array just like the previous method, and returns True of all threads succeed. If any fail, <code>Thread_Orchestrator</code> returns False. </p>
+
+
+
+<div class="highlight"><pre>
+
+<span class="c1"># Read number of items to generate test data set with from parameter.</span>
+
+<span class="c1"># Default to 100.</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+
+    <span class="n">seed</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="k">else</span><span class="p">:</span>
+
+    <span class="n">seed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+
+
+<span class="c1"># Expand the range to a list of values</span>
+
+<span class="c1"># seed = 100 -&gt; 100 element list</span>
+
+<span class="c1"># seed = 500 -&gt; 500 element list</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+
+
+
+<span class="c1"># Print seed and results</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Seed: {seed}&quot;</span><span class="p">)</span>
+
+
+
+<span class="c1"># # Multiprocess</span>
+
+<span class="c1"># t1 = datetime.now()</span>
+
+<span class="c1"># if (Core_Orchestrator(x) == False):</span>
+
+<span class="c1">#     print(&quot;-- Core orchestrator failed.&quot;)</span>
+
+<span class="c1"># else:</span>
+
+<span class="c1">#     t2 = datetime.now()</span>
+
+<span class="c1">#     print(&quot;Multiprocessing time: {}&quot;.format((t2-t1).total_seconds()))</span>
+
+
+
+<span class="c1"># Multithreading</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">Thread_Orchestrator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="bp">False</span><span class="p">):</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;-- Thread orchestrator failed.&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+
+    <span class="n">t2</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;-- Multithreading time: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span><span class="o">-</span><span class="n">t1</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()))</span>
+
+
+
+<span class="c1"># Multiprocessing + multithreading</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">Core_to_Thread_Orchestrator</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="o">==</span> <span class="bp">False</span><span class="p">):</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;-- Processor to thread orchestrator failed.&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+
+    <span class="n">t2</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;-- Multiprocessing and multithreading time: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span><span class="o">-</span><span class="n">t1</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()))</span>
+
+</pre></div>
+
+
+
+<p>The code above accepts a parameter for the number of times <code>handle</code> must run, and then records the runtime for the multithreaded method and the blended method. Even if one fails, the test continues. The snippet below tests the limits of both approaches by feeding the script values from 100 to 1,000 in increments of 100. It does this ten times, to lessen the impact of anomalous runs.</p>
+
+
+
+<div class="highlight"><pre><span></span><span class="k">for</span> k in <span class="o">{</span><span class="m">1</span>..10<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="k">for</span> i in <span class="o">{</span><span class="m">100</span>..1000..100<span class="o">}</span><span class="p">;</span> <span class="k">do</span> python3 main.py <span class="nv">$i</span> &gt;&gt; <span class="nv">$k</span><span class="s2">&quot;.txt&quot;</span><span class="p">;</span> <span class="nb">kill</span> <span class="k">$(</span>ps aux <span class="p">|</span> grep python <span class="p">|</span> awk <spanclass="s1">&#39;{print $2}&#39;</span><span class="k">)</span> <span class="m">2</span>&gt;/dev/null<span class="p">;</span> <span class="k">done</span><span class="p">; <span class="k">done</span><span class="p">
+
+</pre></div>
+
+
+
+<p>I could have done this all in Python, but this approach does a few things for me. For one, it forces the script to initialize, execute, and exit for each set of tasks from 100 to 1,000. This lessens the chance of cache or memory usage impacting successive runs. <code>kill $(ps aux | grep python | awk &#8216;{print $2}&#8217;) 2&gt; /dev/null</code> makes sure no Python processes stick around to interfere with those runs. Again, it also goes through this process ten times, to lessen the impact of anomalous runs. Together, these help give me as unbiased a picture of the script&#8217;s runtime as possible. Check out the results, tabled below:</p>
+
+
+
+<table>
+
+    <tr>
+
+        <td>Approach</td><td> Tasks </td><td>Run 1</td><td>Run 2</td><td>Run 3</td><td>Run 4</td><td>Run 5</td><td>Run 6</td><td>Run 7</td><td>Run 8</td><td>Run 9</td><td>Run 10</td><td>AVG</td>
+
+    </tr>
+
+    <tr>
+
+        <td>Blended</td><td>100</td><td> 3.567204 </td><td>2.48169 </td><td> 2.469574 </td><td> 2.571985 </td><td> 2.495898 </td><td> 2.509916 </td><td> 2.487354 </td><td> 2.551873 </td><td> 2.520211 </td><td> 2.494282 </td><td> 2.6149987 </td>
+
+    </tr>
+
+    <tr>
+
+        <td>Blended</td><td>200</td><td>2.62477 </td><td> 2.721776 </td><td> 2.623119 </td><td>2.62792 </td><td> 2.666248 </td><td>2.65166 </td><td> 2.656948 </td><td> 2.607229 </td><td> 2.581664 </td><td> 2.617885 </td><td> 2.6379219 </td>
+
+    </tr>
+
+    <tr>
+
+        <td>Blended</td><td>300</td><td> 3.084136 </td><td> 2.766728 </td><td> 2.820711 </td><td> 2.718879 </td><td>2.71363 </td><td> 2.730298 </td><td> 2.764282 </td><td> 2.694365 </td><td>2.71308 </td><td> 2.710206 </td><td> 2.7716315 </td>
+
+    </tr>
+
+    <tr>
+
+        <td>Blended</td><td>400</td><td> 3.834809 </td><td> 3.039956 </td><td> 3.025324 </td><td> 2.826441 </td><td> 2.831418 </td><td> 2.902106 </td><td> 2.811155 </td><td> 2.893164 </td><td> 2.824065 </td><td> 2.815037 </td><td> 2.9803475 </td>
+
+    </tr>
+
+    <tr>
+
+        <td>Blended</td><td>500</td><td> 3.412031 </td><td> 3.085576 </td><td> 3.107757 </td><td> 2.994405 </td><td> 2.970532 </td><td> 3.066721 </td><td> 2.962216 </td><td> 3.010268 </td><td> 2.919665 </td><td> 2.920715 </td><td> 3.0449886 </td>
+
+    </tr>
+
+    <tr>
+
+        <td>Blended</td><td>600</td><td> 3.920105 </td><td> 3.276128 </td><td>3.20756 </td><td> 3.191376 </td><td>3.24736 </td><td>3.18067 </td><td> 3.095356 </td><td> 3.182228 </td><td> 3.177074 </td><td>3.12045 </td><td> 3.2598307 </td>
+
+    </tr>
+
+    <tr>
+
+        <td>Blended</td><td>700</td><td> 3.893453 </td><td> 3.338353 </td><td>3.45412 </td><td> 3.307333 </td><td> 3.269286 </td><td> 3.375174 </td><td> 3.416062 </td><td> 3.189951 </td><td> 3.309285 </td><td> 3.223167 </td><td> 3.3776184 </td>
+
+    </tr>
+
+    <tr>
+
+        <td>Blended</td><td>800</td><td> 4.396074 </td><td> 3.409177 </td><td> 3.489747 </td><td> 3.441516 </td><td> 3.416976 </td><td>3.33599 </td><td> 3.333954 </td><td> 3.409126 </td><td> 3.298936 </td><td>3.52455 </td><td> 3.5056046 </td>
+
+    </tr>
+
+    <tr>
+
+        <td>Blended</td><td>900</td><td> 4.138501 </td><td> 3.736235 </td><td> 3.642134 </td><td> 3.608156 </td><td> 3.699388 </td><td> 3.624607 </td><td> 3.776716 </td><td> 3.607106 </td><td>3.60067 </td><td> 3.532703 </td><td> 3.6966216 </td>
+
+    </tr>
+
+    <tr>
+
+        <td> Multithreaded </td><td>100</td><td> 2.530468 </td><td> 2.678918 </td><td> 2.375514 </td><td> 2.669632 </td><td> 2.716273 </td><td> 2.433133 </td><td> 2.633597 </td><td> 2.528427 </td><td> 2.689116 </td><td> 2.529757 </td><td> 2.5784835 </td>
+
+    </tr>
+
+    <tr>
+
+        <td> Multithreaded </td><td>200</td><td> 2.646297 </td><td> 2.301428 </td><td> 2.220176 </td><td> 2.269561 </td><td>2.33174 </td><td> 2.266194 </td><td> 2.251354 </td><td> 2.290965 </td><td> 2.278389 </td><td> 2.307648 </td><td> 2.3163752 </td>
+
+    </tr>
+
+    <tr>
+
+        <td> Multithreaded </td><td>300</td><td> 2.516477 </td><td> 2.406957 </td><td> 2.401755 </td><td> 2.533726 </td><td> 2.390161 </td><td> 2.862111 </td><td>2.38876 </td><td> 2.384127 </td><td> 2.389991 </td><td> 2.398563 </td><td> 2.4672628 </td>
+
+    </tr>
+
+    <tr>
+
+        <td> Multithreaded </td><td>400</td><td> 2.482953 </td><td> 2.546255 </td><td> 2.676493 </td><td> 2.495154 </td><td>2.58571 </td><td> 2.522376 </td><td> 2.571323 </td><td> 2.506227 </td><td> 2.574394 </td><td> 2.468326 </td><td> 2.5429211 </td>
+
+    </tr>
+
+    <tr>
+
+        <td> Multithreaded </td><td>500</td><td> 3.363701 </td><td>2.85764 </td><td> 2.775013 </td><td> 2.604138 </td><td> 2.645682 </td><td> 2.601216 </td><td> 2.622577 </td><td> 2.702628 </td><td> 2.785129 </td><td> 2.667436 </td><td>2.762516 </td>
+
+    </tr>
+
+    <tr>
+
+        <td> Multithreaded </td><td>600</td><td> 2.987607 </td><td> 2.724781 </td><td> 2.882752 </td><td> 2.681507 </td><td> 2.788063 </td><td> 3.160047 </td><td> 2.780519 </td><td> 3.312241 </td><td> 3.519288 </td><td> 2.788334 </td><td> 2.9625139 </td>
+
+    </tr>
+
+    <tr>
+
+        <td> Multithreaded </td><td>700</td><td> 3.457589 </td><td> 3.197889 </td><td> 2.950593 </td><td>2.88573 </td><td> 2.986151 </td><td>2.9273</td><td> 2.890827 </td><td> 3.018946 </td><td> 2.894577 </td><td> 3.189955 </td><td> 3.0399557 </td>
+
+    </tr>
+
+    <tr>
+
+        <td> Multithreaded </td><td>800</td><td> 3.291344 </td><td> 3.208601 </td><td> 3.031519 </td><td> 2.981974 </td><td> 2.979717 </td><td> 6.996563 </td><td> 3.098343 </td><td> 3.908249 </td><td> 3.083194 </td><td> 7.007135 </td><td> 3.9586639 </td>
+
+    </tr>
+
+    <tr>
+
+        <td> Multithreaded </td><td>900</td><td> 3.532445 </td><td> 3.201465 </td><td> 3.164539 </td><td> 3.478344 </td><td> 5.107173 </td><td> 3.211502 </td><td> 3.120932 </td><td> 3.690724 </td><td> 3.577692 </td><td> 3.147345 </td><td> 3.5232161 </td>
+
+    </tr>
+
+</table>
+
+
+
+<p>The graph below visualizes execution time as a function of tasks, from 100 to 900. After 900, the system refused to spawn new threads; the dotted lines predict execution time beyond that point. <code>y = 0.0237x2 - 0.0655x + 2.4838</code> models the multithreading method with a R&sup2; value of 0.83, and <code>y = 0.0038x2 + 0.1019x + 2.4676</code> models the blended method with a R&sup2; value of 0.99.</p>
+
+
+
+<div class='image'><img src='https://zacs.site/assets/images/Execution_time_as_a_function_of_tasks.png' alt='Execution time as a function of tasks' title='Execution time as a function of tasks' loading='lazy' /></div>
+
+
+
+<p>The multithreaded method&#8217;s runtime consistently spikes with 800 tasks. Interestingly, normalizing the average runtime for 800 tasks to fall between 700&#8217;s and 900&#8217;s changes the trendline function from <code>y = 0.0237x2 - 0.0655x + 2.4838</code> to <code>y = 0.0185x2 - 0.0481x + 2.4838</code>, and causes the R&sup2; value to jump from 0.83 to 0.96. Check out that graph below.</p>
+
+
+
+<div class='image'><img src='https://zacs.site/assets/images/Normalized_execution_time_as_a_function_of_tasks.png' alt='Normalized execution time as a function of tasks' title='Normalized execution time as a function of tasks' loading='lazy' /></div>
+
+
+
+<h3 class="headers" id="ConclusionsandTakeaways">Conclusions and Takeaways<span>&nbsp;<a href="#ConclusionsandTakeaways">#</a></span></h3>
+
+
+
+<p>To return to my question from earlier, are 2.15 seconds the best we can do? Recall that <code>Thread_Orchestrator</code> blew through 100 simulated IO-bound tasks in 2.15 seconds, using 100 threads. Over ten runs, it averaged 2.16 seconds; the blended multiprocessed + multithreaded method, on the other hand, averaged 2.44 seconds over 10 runs. To answer my question from earlier, then, 2.15 seconds are the best we can do. Multithreading wins for IO-bound tasks.</p>
+
+
+
+<p>As the number of IO-bound tasks grows, that eventually changes. The multithreaded method&#8217;s execution time stays below the blended method&#8217;s from 100 to 900 tasks, but the former grows faster than the latter. On a system that permits a process to spawn more than 1,000 threads, the blended approach will begin to win out when processing over 1,000 IO-bound tasks. The table below summarizes when to use multithreading, multiprocessing, or a mix of both.</p>
+
+
+
+<table>
+
+    <tr>
+
+        <td>Bottleneck </td><td> Example</td><td> Tasks</td><td> Optimize with</td>
+
+    </tr>
+
+    <tr>
+
+        <td>CPU</td><td> Complex math problem, search</td><td> Any</td><td> Multiprocessing</td>
+
+    </tr>
+
+    <tr>
+
+        <td>IO</td><td> Network connection, file operation </td><td> &lt; 1,000 </td><td> Multithreading</td>
+
+    </tr>
+
+    <tr>
+
+        <td>IO</td><td> Network connection, file operation </td><td> &gt; 1,000 </td><td> Multiprocessing + multithreading </td>
+
+    </tr>
+
+</table>
+
+
+
+<p>Use this table to choose an approach, and the scripts above to make quick work of even large jobs. Multi-core, multithreaded architectures mean no one should have to suffer through painful sequential execution anymore. Python makes concurrency easy, so take advantage of it.</p>
+
+
+
+<p id='fn1'><a class='fn' title='return to article' href='#fnref1'>&#x21a9;</a>&nbsp;I understand that <code>T = (h &#42; n)/t + n/t&#42;z + o</code> implies simultaneous execution, which is correct when using multiprocessing but not when using multithreading. Multithreaded programs run on a single core. Although the processor pauses and resumes threads so fast that it gives the impression of parallel execution, they do not execute in parallel. In this scenario, though, this is effectively a meaningless distinction. Multithreaded IO-bound tasks are essentially indistinguishable from multiprocessed ones, given an equal number of threads and cores.</p>
+
+
+
+</article>
+<p>
+<a href="/blog/linear-python.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2020 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>
