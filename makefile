@@ -43,7 +43,7 @@ public:
 	@./blog.py -P --exit
 
 deploy:
-	-@git subtree push --prefix=html https://github.com/zacjszewczyk/zacjszewczyk.github.io.git master 2> /dev/null || echo `date`": Unable to push to GitHub Pages repo."
+	-@git add . && git subtree push --prefix=html https://github.com/zacjszewczyk/zacjszewczyk.github.io.git master 2> /dev/null || echo `date`": Unable to push to GitHub Pages repo."
 	-@(git add . 2> /dev/null && git commit -m "Deployment commit on `date`" && git push) || echo `date`": No local repo found."
 pull:
 	@git subtree pull --prefix=html https://github.com/zacjszewczyk/zacjszewczyk.github.io.git master
