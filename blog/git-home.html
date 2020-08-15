@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="I like Antonio's idea, a lot. As much as [I try to keep my system stock](My Setup 2019.txt), this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="Setting Up a Development Environment with Git - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>Setting Up a Development Environment with Git - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="linkpost" href="https://martinovic.blog/post/home_git/">Setting Up a Development Environment with Git</a>
+</h2>
+<time id='article_time' datetime="2019-06-10 11:50:12-0400" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2019.html">2019</a>/<a href="/blog/2019-06.html">06</a>/10 11:50:12 EST in <a href='/programming.html'>Programming</a></time>
+<p>I like Antonio&#8217;s idea, a lot. As much as <a href="https://zacs.site/blog/my-setup-2019.html">I try to keep my system stock</a>, this will make transferring the scripts and aliases I have accumulated to new machines super easy. A few of my favorite aliases:</p>
+
+<div class='pre shell'>
+<span class='pre_line_wrap'>alias&nbsp;gs="git&nbsp;status"</span>
+<span class='pre_line_wrap'>alias&nbsp;gac="git&nbsp;add&nbsp;.&nbsp;&&&nbsp;git&nbsp;commit&nbsp;-m"</span>
+<span class='pre_line_wrap'>alias&nbsp;gp="git&nbsp;push"</span>
+</div>
+
+<p><a href="https://zacs.site/blog/my-setup-2019.html">I have talked about these aliases before</a>; they make interacting with Git just a little bit easier. <a href="https://bitsofco.de/git-aliases-for-lazy-developers/">Hat-tip to Ire Aderinokun for the idea</a>.</p>
+
+<div class='pre shell'>
+<span class='pre_line_wrap'>alias&nbsp;gits="find&nbsp;./&nbsp;-name&nbsp;'.git'&nbsp;2&gt;&nbsp;/dev/null&nbsp;|&nbsp;grep&nbsp;-v&nbsp;'.Trash'"</span>
+</div>
+
+<p>This neat snippet searches the current directory, and all sub directories, for Git repos. I have a lot of coding projects <a href="/projects.html">in the works</a>, and this helps me keep track of them.</p>
+
+<div class='pre shell'>
+<span class='pre_line_wrap'>alias&nbsp;r="source&nbsp;~/.bash_profile"</span>
+</div>
+
+<p>This lets me refresh my bash profile whenever I make a change&#160;&#8212;&#160;for example, adding a new alias or script. Simple, and handy.</p>
+
+<div class='pre shell'>
+<span class='pre_line_wrap'>alias&nbsp;search="grep&nbsp;-rnw&nbsp;'./'&nbsp;-e&nbsp;"</span>
+</div>
+
+<p>This alias gives me search functionality in the terminal, so I can avoid opening up Finder for most simple queries.</p>
+
+<div class='pre shell'>
+<span class='pre_line_wrap'>alias&nbsp;tree="find&nbsp;.&nbsp;-print&nbsp;|&nbsp;sed&nbsp;-e&nbsp;'s;[^/]*/;|____;g;s;____|;&nbsp;|;g'"</span>
+</div>
+
+<p>This neat little command displays the current directory contents, and all its sub-directories, as a tree. I used this to create the tree in <a href="/projects.html#firstCrack">the First Crack readme file</a>. <a href="http://osxdaily.com/2016/09/09/view-folder-tree-terminal-mac-os-tree-equivalent/">Hat-tip to OS X Daily for this one</a>.</p>
+
+
+</article>
+<p>
+<a href="/blog/git-home.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2020 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>
