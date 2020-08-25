@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 21 Aug 2020 09:00:03 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2020 05:50:52 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Build Systems, and Habits</title>
+            <link>https://zacs.site/blog/build-systems-and-habits.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/build-systems-and-habits.html</guid>
+            <pubDate>Tue, 25 Aug 2020 17:50:25 GMT</pubDate>
+            <description>
+                &lt;p&gt;If I like an article, I look into its author. Most good writers write well and often. This helps me find &lt;a href="https://zacs.site/blog/my-evening-reads.html"&gt;independent websites&lt;/a&gt;, like &lt;a href="https://www.benkuhn.net/"&gt;Ben Kuhn&amp;#8217;s&lt;/a&gt; blog. In his 2018 piece, &lt;a href="https://www.benkuhn.net/zero"&gt;&lt;em&gt;Stop Trying&lt;/em&gt;&lt;/a&gt;, Ben talks about steps he took to better his life: tracking time with RescueTime, and waking up with automatic lights. His productivity went up, and he gets out of bed on time now&amp;#160;&amp;#8212;&amp;#160;because these changes required &amp;#8220;literally zero maintenance&amp;#8221;. He tried to make productivity and wakefulness a habit, but did not succeed until he built systems around those two goals. From &lt;a href="https://www.benkuhn.net/zero"&gt;&lt;em&gt;Stop Trying&lt;/em&gt;&lt;/a&gt;: &lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/uncategorized.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Staying Focused with a Simple Method</title>
             <link>https://zenhabits.net/simple-focus/</link>
