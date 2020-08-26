@@ -1,6 +1,9 @@
-127.0.0.1 - - [19/Aug/2020 16:21:01] GET / HTTP/1.1 200 -
-127.0.0.1 - - [19/Aug/2020 16:21:01] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [19/Aug/2020 16:21:01] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [19/Aug/2020 16:21:03] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [19/Aug/2020 16:21:03] GET /assets/main.css HTTP/1.1 200 -
-- - - [19/8/2020 16:21:9] Graceful shutdown - -
+127.0.0.1 - - [26/Aug/2020 13:05:44] GET / HTTP/1.1 200 -
+127.0.0.1 - - [26/Aug/2020 13:05:44] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [26/Aug/2020 13:05:44] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [26/Aug/2020 13:05:44] GET /assets/images/favicon_192.ico HTTP/1.1 200 -
+127.0.0.1 - - [26/Aug/2020 13:05:44] GET /assets/images/favicon.ico HTTP/1.1 200 -
+127.0.0.1 - - [26/Aug/2020 13:05:44] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+127.0.0.1 - - [26/Aug/2020 13:05:45] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [26/Aug/2020 13:05:45] GET /assets/main.css HTTP/1.1 200 -
+- - - [26/8/2020 13:5:50] Graceful shutdown - -
