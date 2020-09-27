@@ -1,13 +1,10 @@
-127.0.0.1 - - [04/Sep/2020 13:54:15] GET / HTTP/1.1 200 -
-127.0.0.1 - - [04/Sep/2020 13:54:15] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [04/Sep/2020 13:54:15] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [04/Sep/2020 13:54:15] GET /assets/images/favicon_192.ico HTTP/1.1 200 -
-127.0.0.1 - - [04/Sep/2020 13:54:15] GET /assets/images/favicon.ico HTTP/1.1 200 -
-127.0.0.1 - - [04/Sep/2020 13:54:15] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [04/Sep/2020 13:54:17] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [04/Sep/2020 13:54:17] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [04/Sep/2020 13:54:22] GET /blog/on-covid.html HTTP/1.1 200 -
-127.0.0.1 - - [04/Sep/2020 13:54:22] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [04/Sep/2020 13:54:22] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [04/Sep/2020 13:54:22] GET /assets/images/favicon.ico HTTP/1.1 200 -
-- - - [4/9/2020 13:54:34] Graceful shutdown - -
+127.0.0.1 - - [27/Sep/2020 15:26:23] GET / HTTP/1.1 200 -
+127.0.0.1 - - [27/Sep/2020 15:26:23] GET /en-US/config?autoload=1 HTTP/1.1 404 -
+127.0.0.1 - - [27/Sep/2020 15:26:23] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [27/Sep/2020 15:26:23] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [27/Sep/2020 15:26:24] GET /assets/images/favicon_192.ico HTTP/1.1 200 -
+127.0.0.1 - - [27/Sep/2020 15:26:24] GET /assets/images/favicon.ico HTTP/1.1 200 -
+127.0.0.1 - - [27/Sep/2020 15:26:24] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+127.0.0.1 - - [27/Sep/2020 15:26:25] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [27/Sep/2020 15:26:25] GET /assets/main.css HTTP/1.1 200 -
+- - - [27/9/2020 15:26:44] Graceful shutdown - -
