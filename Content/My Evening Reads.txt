@@ -206,6 +206,8 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://spacetime.dev/](https://spacetime.dev/)
 * [https://www.splunk.com/blog](https://www.splunk.com/blog)
 * [https://thedfirreport.com](https://thedfirreport.com)
+* [https://www.mbsecure.nl/blog/](https://www.mbsecure.nl/blog/)
+* [https://securityshenaningans.medium.com/](https://securityshenaningans.medium.com/)
 * [https://zenhabits.net](https://zenhabits.net)
 * [http://blairreeves.me](http://blairreeves.me)
 * [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/)
