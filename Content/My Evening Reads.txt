@@ -92,11 +92,12 @@ I have some bold financial goals. These two sites helped inform them, and they h
 
 ### Politics
 
-Lawfare and Foreign Policy produce some of the best-written work I have read in a long time, and Warren Meyer brings to the table an analytical perspective critical of both sides. I have struggled long and hard to find good writing on politics and current events, but that work paid off.
+Lawfare and Foreign Policy produce some of the best-written work I have read in a long time, and Warren Meyer brings to the table an analytical perspective critical of both sides. I have struggled long and hard to find good writing on politics and current events, but that work paid off. The American Affairs Journal is a quarterly publication with great, in-depth pieces on public policy.
 
 * [https://www.lawfareblog.com/](https://www.lawfareblog.com/) - By far the best analysis of current events and the geopolitical landscape on the Internet. These writers post the most thoughtful, well-written, and well-researched work in this space, hands down. I cannot say enough good things about Lawfare. I mant of the articles posted here. I also recommend [*The Lawfare Podcast*](http://www.lawfareblog.com/topic/lawfare-podcast) as well, for an audio program with the same exceptional quality as the organization's written work.
 * [https://foreignpolicy.com/](https://foreignpolicy.com/) - Aside from some subtleties that make me think a few authors lean Left, Foreign Policy comes in a close second behind Lawfare for its in-depth analysis and thought-provoking writing. I read many of the articles posted here, too.
 * [http://coyoteblog.com](http://coyoteblog.com) - Coyote Blog
+* [https://americanaffairsjournal.org/](https://americanaffairsjournal.org/) - American Affairs Journal
 
 ### Development
 
@@ -121,7 +122,9 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [https://blog.redteam.pl/feeds/posts/default](https://blog.redteam.pl/) - The folks at Red Team cybersecurity post great writeups and tutorials for network defenders.
 * [https://weberblog.net/](https://weberblog.net) - Johannes Weber covers interesting information security topics.
 * [https://spacetime.dev/](https://spacetime.dev/) - Awn Umar wrote [two](https://spacetime.dev/encrypting-secrets-in-memory) fascinating [posts](https://spacetime.dev/plausibly-deniable-encryption) on encryption; I stick around hoping for more.
-* [http://blogs.splunk.com/](http://blogs.splunk.com) - The Splunk blogs have several great articles for network defenders.
+* [https://www.splunk.com/blog](https://www.splunk.com/blog) - The Splunk blogs have several great articles for network defenders.
+* [https://thedfirreport.com](https://thedfirreport.com) - The DFIR Report posts great, in-depth writeups on current malware campaigns. 
+* [https://www.mbsecure.nl/blog/](https://www.mbsecure.nl/blog/) - Marcus Bakker posts of MB Secure does a lot of interesting work in the information security space, perhaps most impactful of which was his company's part in the development of the [TaHiTI Threat Hunting Methodology](https://www.mbsecure.nl/blog/2018/12/tahiti-threat-hunting-methodology).
 
 ### Miscellaneous
 
@@ -183,6 +186,7 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://www.lawfareblog.com/](https://www.lawfareblog.com/)
 * [https://foreignpolicy.com/](https://foreignpolicy.com/)
 * [http://coyoteblog.com](http://coyoteblog.com)
+* [https://americanaffairsjournal.org/](https://americanaffairsjournal.org/)
 * [https://www.hanselman.com/blog/](https://www.hanselman.com/blog/)
 * [https://bitsofco.de/](https://bitsofco.de/)
 * [https://davidwalsh.name](https://davidwalsh.name)
@@ -195,11 +199,12 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://www.rdegges.com](https://www.rdegges.com)
 * [https://blog.balthazar-rouberol.com](https://blog.balthazar-rouberol.com)
 * [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/)
-* [https://duo.com/decipher](https://duo.com/decipher)
+* [https://decipher.sc](https://decipher.sc)
 * [https://blog.redteam.pl/feeds/posts/default](https://blog.redteam.pl/)
 * [https://weberblog.net/](https://weberblog.net)
 * [https://spacetime.dev/](https://spacetime.dev/)
-* [http://blogs.splunk.com/](http://blogs.splunk.com)
+* [https://www.splunk.com/blog](https://www.splunk.com/blog)
+* [https://thedfirreport.com](https://thedfirreport.com)
 * [https://zenhabits.net](https://zenhabits.net)
 * [http://blairreeves.me](http://blairreeves.me)
 * [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/)
