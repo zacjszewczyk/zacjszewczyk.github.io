@@ -117,7 +117,7 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 ### Information Security
 
 * [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/) - Mathew Green covers cryptography some, hence the name, but in more broad strokes writes great stuff on privacy.
-* [https://duo.com/decipher](https://duo.com/decipher) - Decipher covers both tech and information security news. It fits the profile for the type of website covered in [*Keeping Up with Current Events*](My Morning Reads.txt), but due to its low volume I track updates via RSS instead of daily visists.
+* [https://decipher.sc](https://decipher.sc) - Decipher covers both tech and information security news. It fits the profile for the type of website covered in [*Keeping Up with Current Events*](My Morning Reads.txt), but due to its low volume I track updates via RSS instead of daily visists.
 * [https://blog.redteam.pl/feeds/posts/default](https://blog.redteam.pl/) - The folks at Red Team cybersecurity post great writeups and tutorials for network defenders.
 * [https://weberblog.net/](https://weberblog.net) - Johannes Weber covers interesting information security topics.
 * [https://spacetime.dev/](https://spacetime.dev/) - Awn Umar wrote [two](https://spacetime.dev/encrypting-secrets-in-memory) fascinating [posts](https://spacetime.dev/plausibly-deniable-encryption) on encryption; I stick around hoping for more.
@@ -127,9 +127,8 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 
 This last group of websites does not fit into of the genres above, but over the years I have found some great content here. I like the authors, and I like to keep up with their work.
 
-* [https://waitbutwhy.com](https://waitbutwhy.com) - Tim Urban brings a unique perspective to some complex topics, which he explains and examines at an impressive level of detail. He does not post often anymore, but I always pay attention when he does.
 * [https://zenhabits.net](https://zenhabits.net) - I took a deep dive on mindfulness a few years ago, and only Leo Babauta's [zen habits](https://zenhabits.net) lasted more than a few weeks. He reminds me to slow down when I get too wrapped up in life.
-* [http://blairreeves.me](http://blairreeves.me) - One of my favorite new writers, [Blair Reeves](http://blairreeves.me) talks about tech, life, and writing a blog.
+* [http://blairreeves.me](http://blairreeves.me) - Blair Reeves talks about tech, life, and writing a blog.
 * [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/) - A former Navy SEAL, [Eric Davis](http://www.ericdavis215.com/blog/) has some interesting thoughts on life, adventure, and philosophy.
 * [https://80000hours.org/](https://80000hours.org/) - The folks over at 80,000 Hours write about expertise and career development, which I find particularly interesting at this stage in my career.
 * [https://www.jefftk.com/p](https://www.jefftk.com/p) - A lifestyle blog if I have ever seen one, Jeff Kaufman works for Google and writes about a lot of things I don't care about, but about a few things that I do. In particular, I enjoy his writing on tech and his DIY projects around the house.
@@ -201,7 +200,6 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://weberblog.net/](https://weberblog.net)
 * [https://spacetime.dev/](https://spacetime.dev/)
 * [http://blogs.splunk.com/](http://blogs.splunk.com)
-* [https://waitbutwhy.com](https://waitbutwhy.com)
 * [https://zenhabits.net](https://zenhabits.net)
 * [http://blairreeves.me](http://blairreeves.me)
 * [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/)
