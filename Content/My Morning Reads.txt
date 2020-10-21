@@ -42,10 +42,9 @@ I have to keep up with emerging cyber threats for my job. Although I would like 
 
 #### Long form writing
 
-Although you will find neither of these on any list of sites for great long form writing, I have found that the best of those pieces tend to appear here. Most of the good long form articles I ended up reading, that I could also find on sites like [Longform](https://longform.org/) and [Longreads](https://longreads.com/), also showed up on [Digg](http://digg.com/) and [The Morning News](https://themorningnews.org/).
+Although you will not find it on any list of sites for great long form writing, I have found that the best of those pieces tend to appear here. Most of the good long form articles I ended up reading, that I could also find on sites like [Longform](https://longform.org/) and [Longreads](https://longreads.com/), also showed up on [Digg](http://digg.com/).
 
 * [http://digg.com/](http://digg.com/) - Although full of clickbait, a few times a week I find something great on Digg. The ratio of gems to garbage makes me want to throw this site out, but the quality of the gems keeps it around.
-* [https://themorningnews.org/](https://themorningnews.org/) - Think of The Morning News as Digg without the extremes: it does a much better job of filtering out the garbage, but lacks the hits that keep Digg around. Still, the higher overall quality here keeps me coming back.
 
 #### Politics
 
@@ -79,7 +78,6 @@ To make your life a little easier, I list the sites I read to keep up with curre
 * [https://thehackernews.com/](https://thehackernews.com/)
 * [https://krebsonsecurity.com/](https://krebsonsecurity.com/)
 * [http://digg.com/](http://digg.com/)
-* [https://themorningnews.org/](https://themorningnews.org/)
 * [https://www.axios.com/](https://www.axios.com/)
 * [https://jalopnik.com](https://jalopnik.com)
 * [https://seekingalpha.com](https://seekingalpha.com)
