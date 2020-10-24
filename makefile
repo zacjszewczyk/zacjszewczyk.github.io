@@ -16,9 +16,9 @@ verbose:
 cli:
 	@./blog.py -a
 rebuild:
-	@./blog.py -R
+	@./blog.py -R --exit
 timestamp:
-	@./blog.py -r
+	@./blog.py -r --exit
 help:
 	@echo "make default   - Default rule. Update site."
 	@echo "make verbose   - Update site, with verbose output."
