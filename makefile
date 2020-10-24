@@ -19,6 +19,7 @@ rebuild:
 	@./blog.py -R --exit
 timestamp:
 	@./blog.py -r --exit
+	
 help:
 	@echo "make default   - Default rule. Update site."
 	@echo "make verbose   - Update site, with verbose output."
