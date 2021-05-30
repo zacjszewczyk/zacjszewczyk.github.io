@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Common Security Pitfalls
-Link: https://dzone.com/articles/most-common-security-fails-part-1
-Pubdate: 2019/07/22 10:34:11
-Category: Cybersecurity
-Author: Zac J. Szewczyk
-
-Tom Smith over at DZone, one of [a handful of websites I read every day](My Morning Reads.txt), just finished a great three-part series on common cybersecurity shortfalls. He highlights the importance of basic countermeasures, like encryption and patching, all the way up to complex topics like attack vectors. I recommend all three: [part 1](https://dzone.com/articles/most-common-security-fails-part-1), [part 2](https://dzone.com/articles/most-common-security-fails-part-2), and [part 3](https://dzone.com/articles/most-common-security-fails-other-part-3).

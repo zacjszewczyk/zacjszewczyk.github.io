@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Best Practices for Working with Configuration in Python Applications
-Link: https://tech.preferred.jp/en/blog/working-with-configuration-in-python/
-Pubdate: 2020/04/29 07:36:26
-Category: Programming
-Author: Zac Szewczyk
-
-I opened [Tobias Pfeiffer's article](https://tech.preferred.jp/en/blog/working-with-configuration-in-python/) expecting something along the lines of [*Your configs suck? Try a real programming language.*](https://beepb00p.xyz/configs-suck.html) Tobias focused not on configuring the environment, though, but rather best practices for configuring the control flow in the program itself. "Early Validation" was a particularly good point. Tobias has some sound advice, most of which I incorporated into the dev projects I started during the shelter-in-place period. I hope to talk about them more soon.

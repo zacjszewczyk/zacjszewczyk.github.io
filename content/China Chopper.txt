@@ -1,8 +1,0 @@
-Type: linkpost
-Title: China Chopper still active 9 years later
-Link: https://blog.talosintelligence.com/2019/08/china-chopper-still-active-9-years-later.html
-Pubdate: 2019/08/29 07:20:01
-Category: Cybersecurity
-Author: Zac J. Szewczyk
-
-Cisco Talos Intelligence Group certainly does not need my endorsement, but for extensive, in-depth analysis like this, they definitely have it. Add it to your list, if it's not [already there](My Morning Reads.txt).

@@ -1,8 +1,0 @@
-Type: linkpost
-Title: The Real Comprehensive Terminal Guide
-Link: http://furbo.org/2014/09/03/the-terminal/
-Pubdate: 2014/09/18 11:02:21
-Category: Tech
-Author: Zac Szewczyk
-
-Quite some time ago, in a life before this one, I wrote an article that gained quite a bit of attention titled, "The Comprehensive Terminal Guide". Someday, I hope to update and re-release that piece here. Meanwhile, Craig Hockenberry wrote and published an even longer, even more in-depth, and undoubtedly much better article than mine simply titled, "[The Terminal](http://furbo.org/2014/09/03/the-terminal/)". Although he geared his more towards power users, users of all skill levels will find value in this monster of a piece. I consider myself fairly competent when it comes to the UNIX terminal, but Craig had already taught me a thing or two within the first few sections. If you have ever wanted to take better control of your computer, this is a great jumping-off point.

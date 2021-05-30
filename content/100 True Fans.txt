@@ -1,8 +1,0 @@
-Type: linkpost
-Title: 1,000 True Fans? Try 100
-Link: https://a16z.com/2020/02/06/100-true-fans/
-Pubdate: 2020/02/21 16:45:08
-Category: Blogging
-Author: Zac Szewczyk
-
-Over a decade ago, [Keven Kelly put forward the idea that creators could earn a living from 1,000 fans](https://kk.org/thetechnium/1000-true-fans/). In [this piece](https://a16z.com/2020/02/06/100-true-fans/), Li Jin proposes that they can do the same from 100 super fans. Crucially, though, as the number of patrons goes down, the value that creator provides must go up. Many seem to forget this last point, and see headlines like these as evidence that they can somehow make it with 1,000 subscribers or 100 readers. It just doesn't work. Understand the tradeoffs, make a realistic plan, and never [quit](Simple Not Easy.txt).

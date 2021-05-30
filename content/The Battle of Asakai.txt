@@ -1,8 +1,0 @@
-Type: original
-Title: The Battle of Asakai
-Link: The Battle of Asakai.htm
-Pubdate: 2013/01/29 15:43:02
-Category: Uncategorized
-Author: Zac Szewczyk
-
-Penny Arcade's piece [Planning for war: how the EVE Online servers deal with a 3,000 person battle](http://penny-arcade.com/report/editorial-article/planning-for-war-how-the-eve-online-servers-deal-with-a-3000-person-battle) climbed to the front page of Hacker News early this afternoon, at which point I came across the article and, curious, opened it. Althoug I spent roughly the next hour reading [PC Gamer](http://www.pcgamer.com/2013/01/28/eve-online-battle-asakai/) and [The Mittani's coverage](http://themittani.com/news/asakai-aftermath-all-over-cobalt-moon) of the incident and watching [a number](http://www.youtube.com/watch?v=001iQyju_Cs) [of videos](http://www.youtube.com/watch?v=TLqb-m1ZZUA) taken during the battle, I still can't quite wrap my head around a fight consisting of more than 3,000 individuals. Amazing.
