@@ -20,21 +20,19 @@ As a cyber Soldier, you must divide your personal development time between milit
 
 ## 1/3 - Military Education
 
-Military leaders must read, understand, and live doctrine. These documents govern every aspect of military life, both on and off the battlefield. All soldiers should read the following Field Manuals (FM). For more information, some have Army Doctrine Publication (ADP) versions, or Army Doctrine Reference Publication (ADRP) versions. These tend to consist of similar information presented in different ways, which can sometimes prove useful. Most Soldiers will read many FMs throughout the course of their military careers, but start with these "books".
+Military leaders must read, understand, and live doctrine. These documents govern every aspect of military life, both on and off the battlefield. All soldiers should read the following Field Manuals (FM). For more information, some have Army Doctrine Publication (ADP) versions, or Army Doctrine Reference Publication (ADRP) versions. These tend to consist of similar information presented in different ways, which can sometimes aid in the understanding of a difficult topic. Most Soldiers will read many FMs throughout the course of their military careers, but start with these "books".
 
 ### Books
 
-* [FM 3-12](https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=1002097), Cyberspace and Electronic Warfare Operations. Most jobs have their own manual; read it. As of this writing, the current FM 3-12 focuses on tactical operations rather than offensive or defensive cyber. I recommend Soldiers read [JP 3-12](https://www.jcs.mil/Doctrine/Joint-Doctrine-Pubs/3-0-Operations-Series/) instead. This document identifies the cyber forces the Nation has at its disposal, and their different mission sets.
-* [United States Army War College Strategic Cyberspace Operations Guide](https://csl.armywarcollege.edu/USACSL/Publications/Strategic_Cyberspace_Operations_Guide.pdf). Written to help U.S. Army War College students to understand design, planning, and execution of cyberspace operations, this document approaches cyber from a different perspective than FM/JP 3-12. Although there is a lot of overlap, the *Strategic Cyberspace Operations Guide* has a few worthwhile nuggets. 
 * [FM 6-22](https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=83592), Leader Development. If you plan to go beyond the junior enlisted ranks, you should plan to spend a lot of time studying leadership. In particular, study the Army's take on leadership. You will find no shortage of books, articles, and speeches on this subject, but start here. This will give you a solid foundation to build upon.
 * [TC 3-21.76](https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=1002065), Ranger Handbook. Every Soldier must maintain both technical *and* tactical proficiency, which--for cyber Soldiers--means at least understanding basic tactics. Don't treat it like the Bible, but rather as a more concise version of [FM](https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=83905)/[ATP](https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=106213) 3-21.8: The Infantry Rifle Platoon and Squad. I like to take a laminated, pocket-sized version of the Ranger Handbook with me to the field. 
 * [ADP 1-02](https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=1005278), Terms and Military Symbols. Coming up in the Cyber branch, I thought traditional military thinking had no place in the fifth domain. The military had evolved over thousands of years to control physical terrain, after all, and the fifth domain was almost entirely logical. No one ever bothered to correct me, but operational experience wasted no time in doing so. Relating these seemingly disparate fields requires a thorough understanding of both, not a willingness to undertake an exercise in futility. It is imperative that cyber Soldiers understand military science and apply it to cyber operations.
 * [FM 3-90.1](https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=103287), Offense and Defense, Volume 1. To help meld cyber warfare and with traditional doctrine, also see FM 3-90.1. This field manual explains offensive and defensive tactical tasks and their graphical representations, which helps translate cyber operations to traditional doctrine.
 * [FM 3-90.2](https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=103288), Reconnaissance, Security, and Tactical Enabling Tasks, Volume 2. FM 3-90.2 explains tactical enabling tasks and their graphical representations, for the same purpose as the manuals cited above.
-* The Warrior Ethos, by Steven Pressfield. 
-* Left of Bang, by Patrick van Horne. 
+* Left of Bang, by Patrick van Horne. The paradigm-shifting Combat Hunter Program saved lives and increased the effectiveness of counter-insurgent operations. Defensive cyberspace operations forces must take a similar approach by not inspecting individual data points but rather looking at the entire picture to identify subtle clues indicative of malicious intent.
 * The Mission, The Men, and Me, by Pete Blaber. 
-* Gates of Fire, by Steven Pressfield.
+* Gates of Fire, by Steven Pressfield. A fictional retelling of the Spartan's stand at Thermopylae, this inspiring book painted a vivid picture of what it means to call oneself a warrior. 
+* The Warrior Ethos, by Steven Pressfield. After many works of fiction featuring warriors across time and cultures, Steven Pressfield explores what it means to be a warrior, and what it takes to call yourself one. The military drills its ethoses into soldiers, but this book explains their roots.
 * On Killing, by Dave Grossman. The Profession of Arms exists to provide nations with soldiers to fight and win their wars. This comes down to individuals from one nation destroying those who intend to do the same for their homeland. In *On Killing*, Dave Grossman takes a deep dive into this complex subject. 
 
 ### Articles
@@ -63,6 +61,8 @@ The Army expects all Soldiers to maintain both technical and tactical proficienc
 
 ### Books
 
+* [JP](https://www.jcs.mil/Doctrine/Joint-Doctrine-Pubs/3-0-Operations-Series/)/[FM](https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=1002097) 3-12, Cyberspace and Electronic Warfare Operations. Most jobs have their own manual; read it. As of this writing, the current FM 3-12 focuses on tactical effects rather than offensive or defensive cyber. I recommend Soldiers review JP 3-12 for an overview of the cyber forces the Nation has at its disposal, and their different mission sets, but do not invest a great deal of time in either of these publications. They have not yet caught up to the operational reality.
+* [CWP 3-33.4](). This manual explains what cyber protection teams bring to the fight. Although written for combatant command commanders and their staffs, even analysts at the lowest level ought to understand their intended purpose in the strategic picture.
 * [The Cyber Defense Review](https://cyberdefensereview.army.mil/). Although not a physical book, these book-length compilations from the Army Cyber Institute at West Point cover topics ranging from the technical to the philosophical. 
 * Blue Team Field Manual, by Alan White and Ben Clark. Think of this book as a physical cheat sheet for common defender or incident responder actions like mapping a network, checking for unusual user login events, and capturing network traffic. If you have to work without a reliable internet connection, or just don’t went to sift through Stack Overflow questions often, consider this instead. You may also find value here in novel tactics, techniques, or procedures. 
 * Red Team Field Manual, by Ben Clark. The same type of book except written for the attacker rather than the defender, I suggest checking this out regardless of the side on which you work. Defensive measures do not have to be a shot in the dark: understand the ways an adversary might attempt to break in so you can close off those likely avenues of approach. 
@@ -144,6 +144,18 @@ No matter how much you love your job, I encourage you to read, write, develop pe
 * [Reshoring Supply Chains: A Practical Policy Agenda](https://americanaffairsjournal.org/2020/05/reshoring-supply-chains-a-practical-policy-agenda/). David Adler and Dan Breznitz, in the American Affairs Journal, discuss the issue of enterprise outsourcing in America and offer some concrete policy suggestions for fixing it. I find this issue fascinating and applicable at a much lower level than strategic national security: I see outsourcing take place even amongst my team, to similar effects. 
 * [Keeping Up with Current Events](/blog/my-morning-reads.html). Back in 2019, as a precursor to this project, I sat down to catalog all the websites I visit every day to keep up with current events. I update this living document as I find new sources, or stop paying attention to old ones. Those of you who want to stay well-informed, but do not know where to start, may find this article helpful.
 * [My Evening Reads](/blog/my-evening-reads.html). I visit the handful of high-volume websites in [*Keeping Up with Current Events*](/blog/my-morning-reads.html) a few times a day; this article catalogs the much larger number of lower-volume, mostly independent websites I follow that post such high-quality content that I do not want to miss a single article. I also update this living document as I find new sources, or stop paying attention to old ones. I recommend using this list, in conjunction with the previous one, to start building a well-rounded and effective news aggregation strategy.
+
+https://fs.blog/2021/03/thinking-rate-fixed/
+https://fs.blog/2017/04/get-smart-brian-tracy/
+https://fs.blog/2018/03/half-life/
+https://fs.blog/2016/09/what-are-you-doing-about-it/
+https://fs.blog/2021/03/ooda-loop/
+https://fs.blog/2021/03/avoid-bad-decisions/
+https://fs.blog/2021/03/feedback-change/
+https://fs.blog/2009/12/mental-model-scientific-method/
+https://fs.blog/2021/02/feynman-learning-technique/
+https://fs.blog/2018/09/bayes-theorem/
+https://fs.blog/mental-models/
 
 ### Topics
 
