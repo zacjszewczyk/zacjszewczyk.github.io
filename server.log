@@ -1,10 +1,20 @@
-127.0.0.1 - - [27/Sep/2020 15:26:23] GET / HTTP/1.1 200 -
-127.0.0.1 - - [27/Sep/2020 15:26:23] GET /en-US/config?autoload=1 HTTP/1.1 404 -
-127.0.0.1 - - [27/Sep/2020 15:26:23] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [27/Sep/2020 15:26:23] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [27/Sep/2020 15:26:24] GET /assets/images/favicon_192.ico HTTP/1.1 200 -
-127.0.0.1 - - [27/Sep/2020 15:26:24] GET /assets/images/favicon.ico HTTP/1.1 200 -
-127.0.0.1 - - [27/Sep/2020 15:26:24] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [27/Sep/2020 15:26:25] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [27/Sep/2020 15:26:25] GET /assets/main.css HTTP/1.1 200 -
-- - - [27/9/2020 15:26:44] Graceful shutdown - -
+127.0.0.1 - - [30/May/2021 14:57:28] GET / HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:28] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:28] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:28] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:31] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:31] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:35] GET /archives.html HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:35] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:42] GET /blog/2020.html HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:42] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:45] GET /blog/2020-09.html HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:45] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:48] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:48] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:51] GET /index.html HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:51] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:51] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:53] GET /blog/personal-development.html HTTP/1.1 200 -
+127.0.0.1 - - [30/May/2021 14:57:53] GET /assets/main.css HTTP/1.1 200 -
+- - - [30/5/2021 14:58:3] Graceful shutdown - -
