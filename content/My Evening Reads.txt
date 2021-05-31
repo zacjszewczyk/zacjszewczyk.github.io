@@ -71,10 +71,8 @@ I also follow a few YouTube channels in the adventure space. I choose to do this
 
 * [Expedition Overland on YouTube](https://www.youtube.com/channel/UCiyiTqpss-ihtLHz-juFxIQ) - The folks that got me into overlanding in the first place, I cannot say enough good things about [Expedition Overland](https://www.xoverland.com/). They inspired me to get a 4Runner and start my grand adventure a few years ago, and they do the same even today. If you have any interest in overlanding, check this channel out.
 * [Mountain State Overland on YouTube](https://www.youtube.com/channel/UCFf8PTHJTZwtMWLfFkAkS4w) - [Mountain State Overland](http://www.mountainstateoverland.com/) also played an important role in getting me into adventuring. They post a lot of great videos, too, and go on some awesome adventures on the East Coast. I hope to cover a lot of the same routes someday.
-* [nutnfancy on YouTube](https://www.youtube.com/channel/UCbT5ssxEDZHNyz28N4Ov7Wg) - If you know of Nutnfancy, you know of him for his gun reviews; if not, go there for the thought-provoking talks on philosophy of use that should come before every piece of gear you own. I like both, but I think he brings the most value to the table when he forces me to think.
 * [The Tactical Defender on YouTube](https://www.youtube.com/channel/UCH9D1Alq8n7Dd3mM99O9G9A) - To his credit, Tim also does some nice gear reviews: he takes everything out, puts it through its paces in the woods, and gives his viewers an honest assessment. That said, I just enjoy hearing him talk. I watch the occasional gear review, but for the most part, I stick around for the rambling videos he records while hiking.
 * [Triple Aught Design on YouTube](https://www.youtube.com/channel/UCoBFcQPFNNhUzjsJFPDm2gw) - Triple Aught Design gets many things right, but even more pretty close. I have yet to go on an adventure without the phenomenal [Force 10 AC Cargo Pant](https://tripleaughtdesign.com/shop/force-10-ac-cargo-pant/), for example, but the also awesome [Triton AC Short](https://tripleaughtdesign.com/shop/triton-ac-short/) has fit me like spandex since I started deadlifting over 500 pounds. Their backpacks have some great features, but lack the capacity for more than a day trip. I follow the company's YouTube channel because it has demonstrated an ability to make cool things, and I believe it will make them better in time.
-* [Andrew Muse on YouTube](https://www.youtube.com/feeds/videos.xml?channel_id=UCxrtaro4GiqPIYmIwnlpIsQ) - Andrew and Ashley built an awesome expedition rig. I hope to someday do something similar.
 * [Homesteadonomics on YouTube](https://www.youtube.com/channel/UCMiTb1EJ5nhn_NbUyNu003w) - I came to Homesteadonomics on YouTube by way of [a nine part series in which Joe built a camper from scratch](https://www.youtube.com/playlist?list=PLJEhXwOJ_CGahuF3NEXfECUAgeHs3rSES). He had me impressed. I follow his channel to learn as much as I can about building before it comes time to begin my next project.
 
 ### DIY
@@ -114,6 +112,9 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [http://jvns.ca/](http://jvns.ca/) - Julia Evans is a remarkably smart developer; I follow her to become a better one.
 * [https://www.rdegges.com](https://www.rdegges.com) - Randall Degges writes about primarily about development on this lifestyle blog.
 * [https://blog.balthazar-rouberol.com](https://blog.balthazar-rouberol.com) - Balthazar Rouberol writes a lot about shell tips, tricks, and hacks.
+* [https://rixx.de/blog/](https://rixx.de/blog/) - Tobias Kunze's series on [the Python standard library](https://rixx.de/blog/0-introduction) got my attention at first, and his concise, thorough explanations kept me around. I look forward to more great content like this in the future.
+* [https://martinfowler.com](https://martinfowler.com) - Martin Fowler writes about the software development profession, with a focus on sharing lessons learned throughout his career and suggestions for improving the field.
+* [https://www.hillelwayne.com](https://www.hillelwayne.com) - Hillel Wayne also writes about the software development profession, and shares his own lessons and thoughts on improving the field.
 
 ### Information Security
 
@@ -137,7 +138,7 @@ This last group of websites does not fit into of the genres above, but over the 
 * [https://80000hours.org/](https://80000hours.org/) - The folks over at 80,000 Hours write about expertise and career development, which I find particularly interesting at this stage in my career.
 * [https://www.jefftk.com/p](https://www.jefftk.com/p) - A lifestyle blog if I have ever seen one, Jeff Kaufman works for Google and writes about a lot of things I don't care about, but about a few things that I do. In particular, I enjoy his writing on tech and his DIY projects around the house.
 * [https://www.justinobeirne.com/](https://www.justinobeirne.com/) - Justin Obeirne tracks Apple Maps' progress as the company works to map the entire country. The level of detail in his side-by-side comparisons of each version is exquisite. 
-* [https://secondbreakfast.co](https://secondbreakfast.co) - Another lifestyle blog, Will Schreiber writes about tech, current events, and whatever else strikesh is fancy.
+* [https://secondbreakfast.co](https://secondbreakfast.co) - Another lifestyle blog, Will Schreiber writes about tech, current events, and whatever else strikes his fancy.
 * [http://berthub.eu/articles/](http://berthub.eu/articles/) - Bert Hubert has written a lot about COVID-19 lately, but I stick around for his thoughts on economics and outsourcing that attracted me in the first place.
 * [https://snikt.net/](https://snikt.net/) - Andreas Happe's work on building an LTE modem got my attention, but I stayed for his eclectic writings on interesting, tech-related topics. 
 * [https://nrempel.com/](https://nrempel.com/) - Nicholas Rempel also all sorts of developer- and tech-related topics, and does so well.
@@ -148,6 +149,12 @@ This last group of websites does not fit into of the genres above, but over the 
 * [http://madhadron.com/index.html](http://madhadron.com/index.html) - Frederick Ross writes about tech, development, and infrastructure.
 * [http://danluu.com](http://danluu.com) - Dan Luu thinks there's "a desperate shortage of understandable explanation of technical topics", and set out to fix it with his blog; he's doing a great job.
 * [https://unixsheikh.com](https://unixsheikh.com) - The Unix Sheikh is just that: a Unix expert with a fascinating backlog of great articles on this ecosystem.
+* [https://fs.blog](https://fs.blog) - Perhaps the single greatest source of lessons in personal development, Farnam Street topics range from [the OODA loop](https://fs.blog/2021/03/ooda-loop/) and [other](https://fs.blog/2017/04/get-smart-brian-tracy/) [techniques](https://fs.blog/2021/03/thinking-rate-fixed/) for [making sound decisions](https://fs.blog/2021/03/avoid-bad-decisions/) to the use of [mental models for rapid and effective decision making](https://fs.blog/2016/09/what-are-you-doing-about-it/) to discussions of [the value of feedback](https://fs.blog/2021/03/feedback-change/) and [how best](https://fs.blog/2021/02/feynman-learning-technique/) to [act on it](https://fs.blog/2018/03/half-life/). Start with those articles, or work your way through [the site's most popular posts](https://fs.blog/best-articles/). You cannot go wrong with this excellent website.
+* [https://acaptainslog.com](https://acaptainslog.com) - Kayla Hodges, a former captain in the Army, writes about her time in the military and the lessons she learned.
+* [http://www.jeffgeerling.com/](http://www.jeffgeerling.com/) - Jeff Geerling's Raspberry Pi projects push the limits of what most consider possible for these small devices.
+* [https://n-o-d-e.net/](https://n-o-d-e.net/) - Check this website out for all sorts of interesting projects built using SBCs.
+* [https://battlepenguin.com/](https://battlepenguin.com/) - Although this site dips into the political often, it also talks about social media and the revival of the indie web.
+* [https://martinrue.com](https://martinrue.com) - Another lifestyle blog, Martin Rue writes about engineering, software development, and other topics of interest.
 
 #### The Full List
 
@@ -176,12 +183,9 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [http://dereklow.co/](http://dereklow.co/)
 * [Expedition Overland on YouTube](https://www.youtube.com/channel/UCiyiTqpss-ihtLHz-juFxIQ)
 * [Mountain State Overland on YouTube](https://www.youtube.com/channel/UCFf8PTHJTZwtMWLfFkAkS4w)
-* [nutnfancy on YouTube](https://www.youtube.com/channel/UCbT5ssxEDZHNyz28N4Ov7Wg)
 * [The Tactical Defender on YouTube](https://www.youtube.com/channel/UCH9D1Alq8n7Dd3mM99O9G9A)
 * [Triple Aught Design on YouTube](https://www.youtube.com/channel/UCoBFcQPFNNhUzjsJFPDm2gw)
-* [Andrew Muse on YouTube](https://www.youtube.com/feeds/videos.xml?channel_id=UCxrtaro4GiqPIYmIwnlpIsQ)
 * [Homesteadonomics on YouTube](https://www.youtube.com/channel/UCMiTb1EJ5nhn_NbUyNu003w)
-* [Low-Tech Magazine](https://www.lowtechmagazine.com/)
 * [https://www.financialsamurai.com](https://www.financialsamurai.com)
 * [http://www.genyfinanceguy.com](http://www.genyfinanceguy.com)
 * [https://www.lawfareblog.com/](https://www.lawfareblog.com/)
@@ -199,6 +203,9 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [http://jvns.ca/](http://jvns.ca/)
 * [https://www.rdegges.com](https://www.rdegges.com)
 * [https://blog.balthazar-rouberol.com](https://blog.balthazar-rouberol.com)
+* [https://rixx.de/blog/](https://rixx.de/blog/)
+* [https://martinfowler.com](https://martinfowler.com)
+* [https://www.hillelwayne.com](https://www.hillelwayne.com)
 * [https://blog.cryptographyengineering.com/](https://blog.cryptographyengineering.com/)
 * [https://decipher.sc](https://decipher.sc)
 * [https://blog.redteam.pl/feeds/posts/default](https://blog.redteam.pl/)
@@ -225,5 +232,11 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [http://madhadron.com/index.html](http://madhadron.com/index.html)
 * [http://danluu.com](http://danluu.com)
 * [https://unixsheikh.com](https://unixsheikh.com)
+* [https://fs.blog](https://fs.blog)
+* [https://acaptainslog.com](https://acaptainslog.com)
+* [http://www.jeffgeerling.com/](http://www.jeffgeerling.com/)
+* [https://n-o-d-e.net/](https://n-o-d-e.net/)
+* [https://battlepenguin.com/](https://battlepenguin.com/)
+* [https://martinrue.com](https://martinrue.com)
 
 I like big-name websites for keeping up on current events, but I tend to find the best content on sites like these. The advice to "follow people, not places" has served me well, and I encourage you to start doing the same.
