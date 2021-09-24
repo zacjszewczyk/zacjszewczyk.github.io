@@ -1,7 +1,11 @@
-127.0.0.1 - - [27/Jul/2021 19:21:28] GET / HTTP/1.1 200 -
-127.0.0.1 - - [27/Jul/2021 19:21:28] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [27/Jul/2021 19:21:28] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [27/Jul/2021 19:21:29] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [27/Jul/2021 19:21:36] GET /blog/personal-development.html HTTP/1.1 200 -
-127.0.0.1 - - [27/Jul/2021 19:21:36] GET /assets/main.css HTTP/1.1 200 -
-- - - [27/7/2021 19:22:7] Graceful shutdown - -
+127.0.0.1 - - [24/Sep/2021 12:23:12] GET / HTTP/1.1 200 -
+127.0.0.1 - - [24/Sep/2021 12:23:12] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [24/Sep/2021 12:23:12] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [24/Sep/2021 12:23:16] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [24/Sep/2021 12:23:16] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [24/Sep/2021 12:24:00] GET /index.html HTTP/1.1 200 -
+127.0.0.1 - - [24/Sep/2021 12:24:00] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [24/Sep/2021 12:24:00] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [24/Sep/2021 12:24:04] GET /blog/personal-development.html HTTP/1.1 200 -
+127.0.0.1 - - [24/Sep/2021 12:24:04] GET /assets/main.css HTTP/1.1 200 -
+- - - [24/9/2021 12:38:22] Graceful shutdown - -
