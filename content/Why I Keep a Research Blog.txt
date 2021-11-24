@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Why I Keep a Research Blog
-Link: http://gregorygundersen.com/blog/2020/01/12/why-research-blog/
-Pubdate: 2020/06/04 07:05:19
-Category: Uncategorized
-Author: Zac Szewczyk
-
-Gregory Gundersen, in writing [*Why I Keep a Research Blog*](http://gregorygundersen.com/blog/2020/01/12/why-research-blog/), might as well have just written a post on why *everyone* should blog. I have talked about this [before](Own Your Platform.txt), and how you can [get started today with a handful of free services](How to Own Your Platform.txt); I hope you will.

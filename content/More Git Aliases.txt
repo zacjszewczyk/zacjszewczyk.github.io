@@ -1,8 +1,0 @@
-Type: linkpost
-Title: More Git Aliases
-Link: https://victorzhou.com/blog/git-aliases/
-Pubdate: 2019/10/02 07:11:48
-Category: Programming
-Author: Zac J. Szewczyk
-
-I have talked before about [some of the aliases I use in my development environment](Git Home.txt), and how these and [other little tricks](Pushing to Multiple Repos.txt) make my life just a bit easier. Victor Zhou wrote a neat post about his aliases, and about while they don't save him much time in the end, they make his life a little easier, too.

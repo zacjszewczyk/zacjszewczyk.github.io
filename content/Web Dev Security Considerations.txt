@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Web Dev Security Considerations
-Link: https://www.256kilobytes.com/content/show/10404/3-5-web-dev-security-considerations-you-didn-t-know-about
-Pubdate: 2019/04/23 12:09:57
-Category: Cybersecurity
-Author: Zac Szewczyk
-
-This piece, by August Garcia over at the horrendously designed [256 Kilobytes](https://www.256kilobytes.com/), is a good counterpoint to [a paper I didn't bother linking](http://www.dtc.umn.edu/odlyzko/doc/cyberinsecurity.pdf) to [when it hit Hacker News](https://news.ycombinator.com/item?id=19442049) last month. Just because we cannot build hacker-proof systems does not mean we should avoid easy steps that will make their lives harder.

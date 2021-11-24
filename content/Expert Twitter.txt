@@ -1,8 +1,0 @@
-Type: linkpost
-Title: 'Expert Twitter' Only Goes So Far. Bring Back Blogs
-Link: https://www.wired.com/story/opinion-expert-twitter-only-goes-so-far-bring-back-blogs/
-Pubdate: 2020/04/28 12:03:45
-Category: Politics
-Author: Zac Szewczyk
-
-Cal [started strong](https://www.wired.com/story/opinion-expert-twitter-only-goes-so-far-bring-back-blogs/): his recommendation that experts improve the decentralized distribution of critical information by moving beyond Twitter, the original microblog, to their own blogs hits the nail on the head. I cannot agree more. I wish I could say he finished strong as well, but he just completely missed the mark. In closing, he played up the importance of institutional backing for these sites as a way to lend them credibility. As Ben Thompson explained in [*Zero Trust Information*](https://stratechery.com/2020/zero-trust-information/), though, not only have most of the institutional players put forth bad information throughout this crisis, they actively sought to suppress critical (factual) information as well. Although not all did so knowingly (some just sought to suppress dissenting voices), some did; the idea that we can improve the shortcomings of Twitter with greater institutional oversight is unbelievable. Read the first half of Cal's piece and then close your tab; the rest is just ridiculous.

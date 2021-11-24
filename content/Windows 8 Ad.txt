@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Microsoft turns Siri against Apple
-Link: http://www.macworld.com/article/2039629/microsoft-turns-siri-against-apple-in-hilarious-new-windows-8-ad.html?%23tk.out_mod?=obinsite
-Pubdate: 2013/06/13 09:12:05
-Category: Tech
-Author: Zac Szewczyk
-
-Reminds me of [the old "I'm a Mac, and I'm a PC"](http://en.wikipedia.org/wiki/Get_a_Mac) days. Even though, as Ian Paul points out in his article, the commercial is laughably innacruate, I still had a good chuckle.

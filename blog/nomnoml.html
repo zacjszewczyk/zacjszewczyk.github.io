@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="Avdi Grimm wrote an interesting post back in June, about [using text to create simple diagrams](https://avdi.codes/tools-for-turning-descriptions-into-diagrams/). He highlighted a few different tools, but one stood out: [nomnoml](http://www.nomnoml.com/). I used [UMLet](https://www.umlet.com/) a lot back in college, to create some mediocre user stories, which soured me on UML in general. I gave nomnoml a shot, though, and created this simple network diagram:">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="Building a Simple Network Map with nomnoml - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>Building a Simple Network Map with nomnoml - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/nomnoml.html">Building a Simple Network Map with nomnoml</a>
+</h2>
+<time id='article_time' datetime="2019-11-19 06:42:51-0400" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2019.html">2019</a>/<a href="/blog/2019-11.html">11</a>/19 06:42:51 EST in <a href='/uncategorized.html'>Uncategorized</a></time>
+<p>Avdi Grimm wrote an interesting post back in June, about <a href="https://avdi.codes/tools-for-turning-descriptions-into-diagrams/">using text to create simple diagrams</a>. He highlighted a few different tools, but one stood out: <a href="http://www.nomnoml.com/">nomnoml</a>. I used <a href="https://www.umlet.com/">UMLet</a> a lot back in college, to create some mediocre user stories, which soured me on UML in general. I gave nomnoml a shot, though, and created this simple network diagram:</p>
+
+<div class='image'><img src='/assets/images/example_network.png' alt='Example network diagram created with nomnoml' title='Example network diagram created with nomnoml' loading='lazy' /></div>
+
+<p>Check out the code that generated it, below:</p>
+
+<div class='pre'>
+<span class='pre_line_wrap'>#.adversary:&nbsp;visual=rhomb&nbsp;fill=red</span>
+<span class='pre_line_wrap'>#.cloud:&nbsp;visual=database</span>
+<span class='pre_line_wrap'>#.router:&nbsp;visual=ellipse</span>
+<span class='pre_line_wrap'></span>
+<span class='pre_line_wrap'>[&lt;adversary&gt;ENY]-&gt;[&lt;cloud&gt;Gray;space]</span>
+<span class='pre_line_wrap'>[&lt;cloud&gt;Gray;space]&lt;-&gt;firewall[\|\|\|\|]</span>
+<span class='pre_line_wrap'>[\|\|\|\|]&lt;-&gt;100.200.0.0/16[&lt;router&gt;✥]</span>
+<span class='pre_line_wrap'></span>
+<span class='pre_line_wrap'>[&lt;router&gt;✥]&lt;-&gt;100.200.1.0/24[Subnet&nbsp;1;↔]</span>
+<span class='pre_line_wrap'>[Subnet&nbsp;1;↔]&lt;-&gt;[M1_1]</span>
+<span class='pre_line_wrap'>[Subnet&nbsp;1;↔]&lt;-&gt;[M2_1]</span>
+<span class='pre_line_wrap'>[Subnet&nbsp;1;↔]&lt;-&gt;[M3_1]</span>
+<span class='pre_line_wrap'>[Subnet&nbsp;1;↔]&lt;-&gt;[M4_1]</span>
+<span class='pre_line_wrap'></span>
+<span class='pre_line_wrap'>[&lt;router&gt;✥]&lt;-&gt;100.200.2.0/24[Subnet&nbsp;2;↔]</span>
+<span class='pre_line_wrap'>[Subnet&nbsp;2;↔]&lt;-&gt;[M1_2]</span>
+<span class='pre_line_wrap'>[Subnet&nbsp;2;↔]&lt;-&gt;[M2_2]</span>
+<span class='pre_line_wrap'>[Subnet&nbsp;2;↔]&lt;-&gt;[M3_2]</span>
+<span class='pre_line_wrap'>[Subnet&nbsp;2;↔]&lt;-&gt;[M4_2]</span>
+<span class='pre_line_wrap'></span>
+<span class='pre_line_wrap'>[&lt;router&gt;✥]&lt;-&gt;100.200.3.0/24[DMZ;↔]</span>
+<span class='pre_line_wrap'>[DMZ;↔]&lt;-&gt;[Server]</span>
+<span class='pre_line_wrap'>[DMZ;↔]&lt;-&gt;[Plex]</span>
+<span class='pre_line_wrap'>[DMZ;↔]&lt;-&gt;[Pi]</span>
+<span class='pre_line_wrap'>[DMZ;↔]&lt;-&gt;[Pi2]</span>
+</div>
+
+<p>Most people use PowerPoint for simple network diagrams, and Visio Studio for more complex ones, but I liked using nomnoml more than either of those. Next time I need to mock up something simple, I&#8217;ll go there first.</p>
+
+
+</article>
+<p>
+<a href="/blog/nomnoml.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2020 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>

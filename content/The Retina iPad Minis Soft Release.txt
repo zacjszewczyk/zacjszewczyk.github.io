@@ -1,8 +1,0 @@
-Type: linkpost
-Title: The Retina iPad Mini's Soft Release
-Link: http://daringfireball.net/linked/2013/11/13/ipad-mini-soft-release
-Pubdate: 2013/11/15 15:42:17
-Category: Tech
-Author: Zac Szewczyk
-
-Recently I have begun exercising more restrain when deciding whether to publish a link post or not, attempting to decrease the lopsided original content to echo piece ratio by posting more of my own work than others'. I find it somewhat ironic, then, that today's first link post goes to John Gruber's linked list item commenting on Ed Dale's [*Smart Move Apple*](http://www.eddale.co/general/smart-move-apple).

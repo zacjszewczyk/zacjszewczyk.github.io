@@ -1,8 +1,0 @@
-Type: original
-Title: My 2013 Software Wishlist
-Link: My 2013 Software Wishlist.htm
-Pubdate: 2013/03/15 12:09:09
-Category: Tech
-Author: Zac Szewczyk
-
-Granted we're already well into 2013, but then again, this isn't much of a list. I don't want to see a "better" social network usurp Twitter and Facebook, a new laptop with a million pixels, or a bendy phone; I want to see rock solid syncing across all my devices regardless of platform, bundled neatly into an attractive and usable app. Simplenote comes close but, as I detailed in [*Changing my Workflow with Drafts and Reeder*](Drafts and Reeder.txt), is a far cry from even mediocre syncing; similarly, Dropbox is great and absolutely reliable, but requires that I manage individual text files where instead I simply want to create a blank note and walk away secure in the knowledge that regardless of which device I pick up next, it will be everywhere. While Drafts comes close with an excellent cross-platform app and reliable syncing across my iOS devices, there is no desktop counterpart to this wonderful writing experience. As of right now, not a single solution exists to solve this problem, and that's quite unfortunate.
