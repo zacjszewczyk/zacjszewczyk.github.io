@@ -28,7 +28,7 @@ MONTHS = {"01":"January","02":"February","03":"March","04":"April","05":"May","0
 # - stats: Content file stats by year/month/day/time (Dict)
 # - files: Content file names by year/month/day/time (Dict)
 # Return: True (Operation completes), False (Operation fails)
-def BuildByYear(year,stats,files):
+def BuildByYear(year,stats,files,template):
     # For each year in which a post was made, generate a 'year' file, that
     # contains links to each month in which a post was published.
 
@@ -81,7 +81,7 @@ def BuildByYear(year,stats,files):
 # - content_file: Name of the source file (String)
 # - title: Output page title. Optional (String)
 # Return: True (Operation completes), False (Operation fails)
-def BuildFromTemplate(content_file,title):
+def BuildFromTemplate(content_file,title,template):
     if (title == "Index"): title = "Home" # Fix title for home page
     # Clear, then open output file
     open(f"./html/{content_file}", "w", encoding=ENCODING).close()
@@ -343,11 +343,11 @@ if (__name__ == "__main__"):
         # Build index, projects, and disclaimers pages based on template files
         for file in listdir("./templates/"):
             if (file != "main.html"): # Exclude main template file
-                results.append(pool.apply_async(BuildFromTemplate,(file,file.split(".")[0].title())))
+                results.append(pool.apply_async(BuildFromTemplate,(file,file.split(".")[0].title(),template)))
 
         # Build all year and month indexes
         for year in files:
-            results.append(pool.apply_async(BuildByYear,(year,stats,files)))
+            results.append(pool.apply_async(BuildByYear,(year,stats,files,template)))
 
         # Build blog and archives pages, and RSS feed
         paragraphs = []
