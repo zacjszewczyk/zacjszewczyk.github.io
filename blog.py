@@ -187,7 +187,7 @@ def Migrate(content_file):
 # - content_file: Name of file to check (String)
 # - mtime: Modtime of file to check (Int)
 # Return: True (No change), False (File rebuilt)
-def TestAndBuild(content_file,mtime):
+def TestAndBuild(content_file,mtime,config,template):
     md = Markdown(config["meta_baseurl"])
     # Transform content file name into structure file name
     structure_file = content_file.lower().replace(" ", "-")[0:-3]+"html"
@@ -313,7 +313,7 @@ if (__name__ == "__main__"):
         # Get mod time, then test for existence and equivalence of structure
         # file with TestAndBuild. Multiprocessed.
         mtime = stat(f"{BASE_DIR}content/{file}").st_mtime
-        results.append(pool.apply_async(TestAndBuild,(file,mtime)))
+        results.append(pool.apply_async(TestAndBuild,(file,mtime,config,template)))
 
         # Convert mtime to YYYY/MM/DD/HH:MM:SS format for dictionary indexing 
         mtime = strftime("%Y/%m/%d/%H:%M:%S", localtime(mtime)).split("/")
