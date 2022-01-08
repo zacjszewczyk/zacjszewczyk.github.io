@@ -397,9 +397,9 @@ class Markdown:
         elif (self.__line_type_tracker[-1] == "idx"):
             # Open the target file, write the opening <ul> tag, and add each
             # link in the file to the new index.
-            if (not isfile("./Content/System/"+__line[1:-1])):
+            if (not isfile("./content/System/"+__line[1:-1])):
                 return "<blink>ERROR: Index file does not exist.</blink>"
-            with open("./Content/System/"+__line[1:-1], "r") as fd:
+            with open("./content/System/"+__line[1:-1], "r") as fd:
                 __line = "<ul style=\"border:1px dashed gray\" id=\"series_index\">\n"
                 for each in fd:
                     __line += "    <li>"+each.strip()+"</li>\n"
