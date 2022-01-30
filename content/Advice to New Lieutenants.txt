@@ -1,0 +1,138 @@
+Type: original
+Title: Advice to New Lieutenants
+Link: advice-to-new-lieutenants.html
+Pubdate: 2022/01/30 11:25:16
+Category: Military
+Author: Zac Szewczyk
+
+As I close in on my promotion to captain, mentorship has become an increasingly important part of my job. Many new lieutenants find the Basic Officer Leader Course just that--basic--and so they report eager to develop personally, professionally, and militarily. My article [*Personal Development*](Personal Development.txt) addresses that first domain in terms of improving one's personal, professional, and military *knowledge*, but neglects other areas. After several conversations with new lieutenants eager for professional development as officers and military development as warfighters, I decided to turn some of those discussion points into a post here. As a Cyberspace Operations Officer, most of this advice will target other 17-series soldiers, although some of it may help new officers in other branches. This advice is also not specific to officers, and in some cases may apply to enlisted soldiers as well.
+
+This advice is based entirely on my own experience. There will be gaps. I cannot make sound recommendations for situations I have not encountered, and so I linked to resources throughout this post that will help bridge those gaps. I also chose to omit any discussion of, or resources for, programs like SHARP that the Army covers in its annual trainings. I wrote this to highlight interesting lessons from my first four years as an Army officer, not to catalog mandatory trainings or to share a diary of mostly mundane experiences. In addition to [*Personal Development*](Personal Development.txt), those in search of more military advice may also find [*Your First Week as a New Lieutenant*](Your First Week.txt) helpful.
+
+### There is a role for technical officers in U.S. Cyber Command.
+
+I often heard that the cyber branch had no use for technical officers--that I should enjoy doing technical things during my lieutenant time, because I would spend the rest of my career doing mission planning, administrative tasks, and other staff work. This does not have to be true.
+
+You will have to do a lot of non-cyber tasks throughout your career. You will have to create memos, brief operations, and write NCOERs because you are an officer. That does not, however, mean you cannot do technical things--you just have to be very good at them.
+
+In this field, you get zero points for trying. There are no participation trophies. If you want to sit at the technical table, you have to bring value to it. There is a role for technical officers in U.S. Cyber Command, but only for the best. This is one of the reasons that, if you want to be good at the technical side, you have to take an active role in your technical development and you have to do so starting *now*.
+
+### If you want to be good at cyber, you have to take an active role in your technical development, and you have to start now.
+
+I was burned out after college. Many of my peers felt the same way: after years of studying excessively boring topics, the prospect of jumping right back into learning excited no one. You might need a break, and if you do, that's fine--but keep this advice in the back of your mind until you can act on it. 
+
+If you want to be good at cyber, you have to take an active role in your technical development. For the most part, the military development will come in time and it will come naturally: you will have to create memos, brief operations, and write NCOERs because you are an officer. No one will force you to learn the ins and outs of the Domain Name System, though, or learn how to design an enterprise-grade SIEM. If you want to be good at the Cyber Operations side of "Cyber Operations Officer", you have to make that happen on your own time, of your own volition, and with whatever resources you can muster. Technical expertise is *not* solely the domain of warrant officers and NCOs. Effective leadership requires you to know your soldiers' jobs just as well as they do.
+
+Many soldiers bristle at the notion that they should spend their own time developing themselves. I like to refer them to Marine Corps Doctrinal Publication 1-3, [*Tactics*](https://www.marines.mil/News/Publications/MCPEL/Electronic-Library-Display/Article/899836/mcdp-1-3/):
+
+    > "Professional readings and study are not solely the responsibility of military schools. Individuals cannot afford to wait for attendance at a military school to begin a course of self-directed study. Military professionalism demands that individuals and units find time to increase their professional knowledge through professional reading, professional military education classes, and individual study."
+
+The reality is that if you want to be good at cyber, you have to take an active role in your technical development, and you have to start as soon as possible.
+
+### Your job is what you have to do, not the only thing you can do.
+
+Whether through dumb luck or because they failed to develop themselves technically, many cyber soldiers find themselves saddled with non-cyber duties. They say they wish they could do cyber things--data analysis, forensics work, capabilities development--but must spend their time doing other tasks instead. I worked with one soldier in this situation who spent their afternoons watching Cops at their desk. Another spent their spare time working on a third degree. If those are the things you want to do, that's fine, but don't complain that you can't do cyber things because your job does not allow it. In their cases, they couldn't do cyber things because they didn't want to; their job had nothing to do with it.
+
+Again, "If you want to be good at the Cyber Operations side of ‘Cyber Operations Officer', you have to make that happen on your own time, of your own volition, and with whatever resources you can muster." You might get lucky to land a job that encourages this, but just because you don't doesn't mean you can't.
+
+### The military has a lot to learn from industry, but it also has a lot to teach the private sector about war.
+
+No one has ever accused the military of being too progressive: too quick to recognize the need for change, too eager to implement it, or too effective at seeing it through. It falls short in all those areas. When it comes to agility, the military has a lot to learn. It excels at competition, though, and as the fifth domain increasingly becomes a battleground, it has a great deal to teach industry about the conduct of war.
+
+Offense, defense, and all the tactical tasks that support them--the art of war--are the product of centuries of armed conflict. The tactics in ATP 3-21.8 are not new, they are just the latest iteration in a cycle thousands of years old. The military's rich doctrinal archive details proven tactics, techniques, and procedures in the conduct of war, many of which apply equally to the fifth domain as the other four. Those who say otherwise lack understanding of cyber operations, war, or both. The sooner you come to terms with this, the sooner you will gain the ability to bridge the gap between the kinetic and cyber domains. This is a veritable superpower in this field. It took me years to realize this, but in the words of Miyamoto Musashi, "If you know the way broadly, you will see it in everything."
+
+Not everything transfers. Many have wasted colossal amounts of time and resources shoehorning a classic military practice into the fifth domain. Many concepts do transfer, though, so do not neglect your military education.
+
+### Nothing you do matters if you can't communicate it effectively.
+
+There are two sides to this. The first side is about affecting change; the second is about reporting findings.
+
+It doesn't matter how good your idea is, or how impactful a change would be: if you cannot communicate--clearly and effectively--the issue, solution, and its associated costs, you will never get anywhere. It also doesn't matter how groundbreaking a discovery you made; if you cannot communicate--clearly and effectively--the so what, it will never go anywhere.
+
+A lot of people make jokes about officers spending all their time making PowerPoint slides. The reality is, this is the military's primary means of communication. Like it or not, agree with it or not, this is the deal. There is room for other forms of communications such as white papers, but PowerPoint slides continue to be the primary communication medium in this organization. Your ability to craft attractive, informative slides, then, has a direct impact on your ability to effectively influence the organization.
+
+This section comes down to this: a solution without a problem will fail; information alone will be ignored; your job, as an officer, is to communicate well, and this is how you do it.
+
+### Be yourself, unless yourself is a shitbag; then be someone better.
+
+Enough said.
+
+### The Army is not a 9-to-5 job.
+
+Good commanders, those truly concerned with the health and welfare of their soldiers and those soldiers' families, will try to make garrison work as close to a Monday through Friday, 9-to-5 job as possible--because when deployed, during training exercises, or simply when the mission demands it, those hours will get much closer to Monday to Monday, 5-to-9. That is the reality of military life. Enjoy the easy days and the time off when you can, but steel yourself for the reality of this profession of arms.
+
+Many lieutenants cite long hours as a primary motive for leaving the Army (alongside low pay; see below). They start their clock at 0500 when they wake up for PT and stop it at 1700 when the duty day ends--that's a twelve hour day, 3,120 hours per year! Compared to the 2,080 hours they believe the rest of the world puts in at a 9-to-5, this seems unfair. They fail to account for the thirty days of paid time off they receive, twenty more than [the private sector's average of ten](https://www.zippia.com/advice/pto-statistics/). They forget about the frequent three- and four-day weekends and the half days around the holidays, conservatively an additional twenty days off per year. Paid time off in the Army alone closes the gap to around 2,700 hours at sixty hours per week. Allow for an hour of physical fitness regardless of profession and the gap slips to 2,475 at fifty-five hours per week. Admit that few go directly from PT to work and the gap shrinks again at fifty hours per week to 2,250 hours a year. Many work even fewer hours than that: just watch the stream of cars exiting the gate at 1600 every day. Those who leave at 1600 work forty-five hours a week for 2,025 hours per year--almost the same amount as a 9-to-5 worker puts in after ten days of paid time off. That's [less](https://www.weareteachers.com/teacher-overtime/) than [some](https://www.scholastic.com/teachers/articles/teaching-content/teachers-work-nearly-11-hour-days/) teachers [work](https://www.forbes.com/sites/nickmorrison/2019/09/18/one-in-four-teachers-works-60-plus-hours-a-week/).
+
+The Army is not a 9-to-5 job. Sometimes that's great: I know plenty of people who have not worked a full forty hour week in *years*. Sometimes that's not: I know plenty of people who work sixty hours or more every single week, to say nothing of deployment hours. New lieutenants like to cite long work hours as reason to leave, but the math just doesn't work out. Even at fifty to sixty hours a week, though, [those are not unusual hours for high-paying jobs](https://www.zippia.com/research/earnings-vs-hours-worked/)--and as I will explain later, the Army can be a high-paying job.
+
+### You're probably not right, and if you're sure you are, you still might not be.
+
+New lieutenants have a tendency to think they know the obvious solution to clear organizational problems. "If only the unit would do it this way, they would avoid all these issues. How can they not see this!"
+
+You need to understand that the situation is almost never as simple as you think it is. 
+
+The military is a massive bureaucracy. In any given scenario, there are likely tens of different forces at play, most of them at odds with each other. That is the nature of the beast. When you think you see one clear issue and can fix it with one simple change, you are almost always ignorant of nine other factors. Don't embarrass yourself by walking into the commander's office and smugly presenting the solution he or she was just too dumb to recognize earlier. That's almost never the case.
+
+Now, with that said, this is not to discourage you from trying to solve long-standing issues. Your fresh perspective may be exactly what the organization needs to finally solve a tough problem. You may even come up with a simple solution that no one thought of before. It's possible. The point here is that you must always understand the entire scenario and all the factors at play before making a decision--and that even once you think you have a good handle on both, keep an open mind: there may yet be other factors unknown.
+
+Observe. Listen. Ask questions. Gather all the information you can before making a decision. The best leaders spend far more time on the former than the latter.
+
+### No one cares if you're wrong.
+
+The cyber branch attracts some *phenomenally* smart people. Ironically, though, in a branch full of people likely to be the smartest in the room, a debilitating fear of being wrong permeates our ranks. Self-doubt keeps many from speaking up when they have the answer, while others self-censor to avoid looking unintelligent. No one cares if you're wrong, and there are no dumb questions, *as long as you learn*. I like to tell soldiers from other branches that it's okay to be wrong, especially when it comes to cyber things, but only once: I don't expect them to know everything, but I do expect them to learn so that eventually they do. No one cares if you're wrong as long as you make a concerted effort to get better.
+
+### You get zero points for participating.
+
+Those at the other end of the spectrum, who lack the self-awareness to recognize that they have nothing to contribute to a situation, often also lack the personal integrity to excuse themselves from situation for which they are unqualified. They find a way to ride the coattails of those who make meaningful contributions and then expect some sort of reward for their participation. While you may never have the ability to remove these leeches, you can avoid becoming one yourself. You get zero points for participating: if you have nothing meaningful to contribute, make room for those who do.
+
+### Your reputation matters.
+
+In a branch as small as the cyber corps, one of the most important factors is your reputation. Evaluations, rank among your peers, PT score, and all those other metrics are important, but as long as they are all positive--that is, you don't have any negative evaluations, failed PT tests, legal issues, etc--it will primarily be your reputation that determines where you go and what you do. Your reputation matters here more than almost anywhere else in the Army.
+
+Your reputation also matters more than your rank or position. A well-respected lieutenant will have greater impact on the organization than an incompetent major. There are, of course, limitations to this rule, but in general, it will be your reputation--more than anything else--that informs your ability to influence others and this organization as a whole.
+
+You build your reputation in this organization by acting on the advice I have outlined here:
+
+* Taking an active role in your personal, professional, *and* military development. The best officers study constantly, and they study all three.
+* Being very good at the "Cyber Operations" side of "Cyber Operations Officer", or the "Officer" side, or both. The best officers excel in both areas, but there is a role for good technical officers in this organization just as there is a role for good staff officers.
+* Seeking out challenges. The best officers don't just limit themselves to doing their job well, they actively seek out and solve real problems for the organization.
+* Communicating effectively. The best officers write well, speak well, and brief well. They also possess the ability to craft well-designed products, tailored to their target audience, that convey the desired information as briefly and clearly as possible.
+* Modeling good character. Taking care of soldiers.
+* Cultivating humility. Take time to understand the entire situation, but don't hesitate to go out on a limb and suggest something new. Whatever you do, don't just make *something* happen, make the right thing happen. 
+
+Understand that everything you do or fail to do impacts your reputation. You are always being evaluated--by your soldiers, by your peers, and by your superiors. I like to tell a story from my time as a cadet to drive this point home. After a month-long cultural exchange program, each cadet received a developmental counseling. The only negative comment one of my peers received highlighted how, on an unplanned hike up a remote mountain in Mongolia, she had gotten to the top last. It recommended she improve her physical fitness.
+
+Everything you do or fail to do ends up in your hallway file, so make sure it's all good.
+
+### Pay.
+
+Many new officers complain about their pay. They see a handful of college friends making lots of money, ignore the majority struggling to get by, look at the [military pay tables](https://www.dfas.mil/militarymembers/payentitlements/Pay-Tables/), and then feel slighted earning "just" $40,000 per year as of 2021. Like those who complain about long hours, though, they fail to see the whole picture.
+
+* New lieutenants have almost no real skills. Second lieutenants exist to learn so that they can become effective first lieutenants and then captains. They understand basic leadership concepts, basic tactics, and almost nothing about their job. Most new officers bring nothing to the organization, and they are paid accordingly. This is the reality of being "the privates of the officer world." The bitter pill BOLC students must swallow is that you do not get paid much, and you don't yet deserve to.
+* The other side to this, though, is that it will change very quickly, and so will your pay. Those of you not getting BAH and BAS will after about a year in BOLC. At a place like Fort Gordon, that will mean over $1500 extra per month; at a high cost of living location like Hawaii, that will mean over $3000 per month. Then, at 18 months time in service, you will get a raise when you get promoted. You will get another raise at 24 months. You will get another raise at 36 months. You will get another raise at 48 months. You will get another raise shortly after the 48 month mark when you get promoted to captain. Those of you in key work roles will also be eligible for incentive pays, worth from several hundred to over a thousand dollars a month. As your experience increases, so, too, will your pay.
+* $40,000 per year is the taxable portion of their income, but depending on their duty station most new lieutenants will receive an extra $10,000 (at a place like Fort Benning, Georgia) to $40,000 (in Hawaii) in non-taxable income. Cyber officers at Fort Gordon, Georgia, would have earned an extra 20,000 tax-free dollars in 2021. This alone goes a long way to bridge the perceived gap between the military and the private sector.
+* New lieutenants also need to understand the concept of total military compensation. The Army *wants* soldiers to stay in for twenty years or more, so it incentivizes that with a pension. When second lieutenants at Fort Gordon, Georgia, earn $60,000 a year, they also "earn" contributions to a pension fund equivalent to approximately $100,000 a year. The catch is that they will never see that money unless they stay in for twenty years or more--but if they do, they will retire with a pension worth about $2,000,000 without ever contributing a cent. This is important to understand because it means company-grade officers who choose to leave the Army after four years will have to find a job that matches their $70,000 base pay, $20,000 in non-taxable income, *and* $100,000 in retirement contributions just to match their military compensation. Not many jobs pay $190,000, so many work years or decades longer to make up for that difference. 
+* Many also fail to account for the valuable training the military can provide. Setting aside military-specific training of dubious value outside the government, some units will foot the bill for expensive professional courses. Over the last three years, my unit has spent over $30,000 on my industry training alone. Some private sector companies might have paid for those classes, or covered a part of the bill, but many would not. I just asked. This does not even include Tuition Assistance that can pay for college courses or Certificate Assistance to pay for industry certifications, thousands of dollars more per year.
+
+The military does not pay a lot, but as an officer it pays well--and if you commit to a career, it actually becomes quite lucrative. As a new lieutenant, make an aggressive budget: save, contribute to an IRA, and pay off your student loans and any credit card debt. Learn to live on a second lieutenant's pay, and you will soon have more money than you know what to do with.
+
+### No one will change their behavior until they get punched in the face for it.
+
+In this massive bureaucracy, no one will ever change their behavior until they get punched in the face for it. Do not think this gives you the right to be rude, inconsiderate, or abrasive. These traits will get you nowhere. In some situations, though, polite requests will not suffice. Avoid escalation if possible, but realize that those who have gotten away with doing the wrong thing often require significant motivation to begin doing the right thing. As a junior officer this will almost never come from you, but you can set it in motion through senior officers, NCOs, or a civilians supervisor.
+
+### Do not get hung up on affecting change.
+
+Many young officers enter the military eager to do a good job, but also eager to fix things. They read about [tragic failures of leadership](https://en.wikipedia.org/wiki/Killing_of_Vanessa_Guill%C3%A9n), but also the myriad ways this massive bureaucracy imposes unnecessary hardship on soldiers; they hear stories of gross inefficiencies, minor abuses of power, and antiquated, nonsensical, and byzantine processes, and they want to make things better. 
+
+Do not get hung up on affecting change. Do not get hung up on affecting broad-scale change, rapid change, and *definitely* not rapid change at scale.
+
+As a new first lieutenant I had worked my way into a position unique among my peers, where I had the trust and respect to affect change at echelons far above a typical company-grade officer. Many of my mentors encouraged me to capitalize on this (although one was presciently cynical, who I ignored), and I tried to do just that. After almost two years of fifty hour weeks and then nights and weekends spent researching, studying, and working even more, though, I could point to little evidence of meaningful change in my organization. As Dr. W. Edwards Deming [once said](https://deming.org/a-bad-system-will-beat-a-good-person-every-time/), "A bad system will beat a good person every time", and relying on heroic measures is a poor way to manage. I tried to be a hero, and the system beat me. This lesson took me years to learn, so save yourself a lot of wasted time and effort: do not get hung up on affecting broad-scale change, rapid change, and *definitely* not rapid change at scale.
+
+What you should do, though, is focus on affecting change at your level. Every officer must make the transition from improving their own foxhole to improving their unit's, but as a cyber lieutenant that means worrying about your Mission Element's foxhole, not the battalion's, not the brigade's, and certainly not the strategic headquarters'. Worry about your soldiers and your mission: affect change in their lives, and find ways to accomplish it well; leave the Army's reformation to someone else. Look for opportunities to improve the organization, but do not count on or expect them.
+
+
+I cover other advice in [*Your First Week as a New Lieutenant*](Your First Week.txt). For even more, check out the [Center for Junior Officers](https://juniorofficer.army.mil/) (CJO). This is a severely underused resource with a phenomenal amount of helpful information. Need to run a range? CJO has [an article](https://juniorofficer.army.mil/planning-running-a-range/) and [a checklist](https://juniorofficer.army.mil/general-range-checklist/) for you. Need help counseling your soldiers? CJO has [an article on that](https://juniorofficer.army.mil/the-best-initial-counseling-i-ever-received/). Not sure how to write a letter of introduction? Check out [CJO's article on letters of introduction](https://juniorofficer.army.mil/student-to-lieutenant-series-part-7/)--it even includes templates. CJO is one of the best resources a company-grade officer can have. If you show up and get thrown into a tough situation on day one, CJO can be a lifesaver. Subscribe to the mailing list to stay up to date on all the great new content CJO puts out.
+
+I also recommend digging into doctrine as much as possible. The [Army Publishing Directorate](https://armypubs.army.mil/) hosts manuals for almost every process, task, or situation a soldier will encounter in the military. It continues to astound me when soldiers ask basic questions about military [terms](https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=1021737) and [graphics](https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=1021289) or use the wrong [letterhead](https://armypubs.army.mil/Tools/PubsResources.aspx) in a memo. The Army has invested an incredible amount of resources into recording and disseminating a wealth of information to the force. Use the resources the Army has given you. Come to me for guidance, but do your homework first. As a new lieutenant, your first days and weeks will have a tremendous impact on the unit's impression of your competence. Do well and you will set a positive tone for the entire year; do poorly and all future mistakes will just look like more evidence of your incompetence. Do not squander this opportunity with dumb questions and basic mistakes.
+
+Finally, I cannot recommend [The Jocko Podcast](https://jockopodcast.com/) enough. I consider this podcast the preeminent resource for leadership and military development. If you do just one thing to continue your development as an officer and as a warfighter, make it listening to this podcast. From the personal experiences Jocko and his guests share based on their time in the military to the exhaustive literary and historical reviews they conduct, this is one of the best resources I have ever come across. Do not wait for professional and military development to happen to you; take an active role in it. Whether or not you do, and how you go about it, may play an important role in the perception of your potential as an officer and a leader. I link to CJO, The Jocko Podcast, and many other resources in my article [*Personal Development*](Personal Development.txt); if you want even more, go there.

@@ -2,7 +2,7 @@ Type: original
 Title: Personal Development
 Link: personal-development.html
 Pubdate: 2020/07/10 08:54:06
-Category: Uncategorized
+Category: Military
 Author: Zac Szewczyk
 
 A smart person knows everything about a single topic. An intelligent person knows as much as possible about more than one topic. Both have great value, and depending on the industry, some organizations value [one more than the other](Smart versus intelligent.html). In general, though, smart people fill entry-level jobs, who then become intelligent people to move up the ladder[^1]. A robust personal development strategy will help you go from the former to the latter.
@@ -53,6 +53,7 @@ Look to unofficial sources for military education as well. Some people like to p
 * [*Trigger-Happy, Autonomous, and Disobedient: Nordbat 2 and Mission Command in Bosnia*](https://thestrategybridge.org/the-bridge/2017/9/20/trigger-happy-autonomous-and-disobedient-nordbat-2-and-mission-command-in-bosnia). This story provides a glimpse of just how effective true mission command can be. It also shows us that fostering an environment conducive to decentralized initiative requires more than just leaders who pay lip service to the ideal.
 * [A Fractal of Lies](https://drmaciver.substack.com/p/a-fractal-of-lies). Military leaders *must* understand the disconnect between reality and the feedback they receive. As their rank increases, their direct knowledge of all situations decreases; they rely on staffs to paint an accurate picture for them, who--as David explains in this article--seldom do. Even attempts to mitigate this have fallen short: just read any pseudo-anonymous social media thread on command climate surveys, sensing sessions, and after action reviews: they are plagued by mid-level leaders either explicitly directing participants not to provide "unproductive" or "inflammatory" (read: honest) feedback, or the subjects have become so disillusioned by these ineffectual processes that they no longer bother to participate. The more senior the leader, the less likely the feedback they receive accurately reflects the situation on the ground--but by acknowledging that disconnect, they can take steps to mitigate it.
 * [*Your First Week as a New Lieutenant*](Your First Week.txt). As I closed in on my promotion to Captain, mentorship became an increasingly important part of my job. After several similar conversations with new officers, I decided to answer a common question in this article: "What do I do as a new lieutenant?" This advice should generalize well; if you follow it during your first week, you will put yourself in a good spot at the beginning of your assignment and set you up for success in the long run.
+* [*Advice to New Lieutenants*](Advice to New Lieutenants.txt). After several conversations with new lieutenants eager for professional development as officers and military development as warfighters, I decided to turn some of those discussion points into a post. Whereas [*Your First Week as a New Lieutenant*](Your First Week.txt) provides specific advice for new lieutenants reporting to a new unit, this article contains more general advice, observations, and lessons learned based on my first four years in the Army.
 
 ### Podcasts
 
