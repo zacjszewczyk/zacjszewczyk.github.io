@@ -125,6 +125,9 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [https://www.mbsecure.nl/blog/](https://www.mbsecure.nl/blog/) - Marcus Bakker posts of MB Secure does a lot of interesting work in the information security space, perhaps most impactful of which was his company's part in the development of the [TaHiTI Threat Hunting Methodology](https://www.mbsecure.nl/blog/2018/12/tahiti-threat-hunting-methodology).
 * [https://securityshenaningans.medium.com/](https://securityshenaningans.medium.com/) - Security Shenanigans focuses more on the red team side of the house, which the blue team must keep up with in order to remain effective.
 * [https://svch0st.medium.com/](https://svch0st.medium.com/) - Zach's informative posts provide great tips for threat hunting. 
+* [https://blog.talosintelligence.com/](https://blog.talosintelligence.com/) - Cisco's Talos Intelligence group is a great source of exploit and malware news.
+* [https://blog.erratasec.com/](https://blog.erratasec.com/) - The personal blog of Robert Graham, a security researcher, and David Maynor, who also writes for Talos Intelligence. I enjoy their style, they cover a broad range of topics related to cybersecurity, and their articles always get me thinking.
+* [https://krebsonsecurity.com/](https://krebsonsecurity.com/) - Every time a list of cybersecurity-related sites comes up, so does Brian Krebs' blog. A prolific writer and self-educated security researcher, his background in investigative journalism helps him write a different kind of story than most in this space.
 
 ### Miscellaneous
 
@@ -211,6 +214,9 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://www.mbsecure.nl/blog/](https://www.mbsecure.nl/blog/)
 * [https://securityshenaningans.medium.com/](https://securityshenaningans.medium.com/)
 * [https://svch0st.medium.com/](https://svch0st.medium.com/)
+* [https://blog.talosintelligence.com/](https://blog.talosintelligence.com/)
+* [https://blog.erratasec.com/](https://blog.erratasec.com/)
+* [https://krebsonsecurity.com/](https://krebsonsecurity.com/)
 * [https://zenhabits.net](https://zenhabits.net)
 * [http://blairreeves.me](http://blairreeves.me)
 * [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/)
