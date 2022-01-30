@@ -384,6 +384,7 @@ if (__name__ == "__main__"):
                 closeout.append(f"./html/{each[3]}")
                 fd = open(f"./html/{each[3]}", "w", encoding=ENCODING)
                 fd.write(template[0].replace("{{META_DESC}}", f"{each[3][:-5]} Posts").replace("{{TITLE}}", f"{each[3][:-5].replace('-', ' ').title()} Posts", 2).replace("{{BODYID}}", each[3][:-5], 1)+"\n"+f"<article>\n    <h2>{each[3][:-5].replace('-', ' ').title()} Posts</h2>\n</article>\n")
+                fd.write(f"<article>\n    <p><a href=\"/blog/{mtime.tm_year}.html\">{mtime.tm_year}</a>/<a href=\"/blog/{mtime.tm_year}-{mtime.tm_mon:02}.html\">{mtime.tm_mon:02}</a>/{mtime.tm_mday:02} {mtime.tm_hour:02}:{mtime.tm_min:02}:{mtime.tm_sec:02} EST: <a href=\"/blog/{each[4]}\">{each[0]}</a></p>\n</article>\n")
                 fd.close()
             else:
                 fd = open(f"./html/{each[3]}", "a", encoding=ENCODING)
