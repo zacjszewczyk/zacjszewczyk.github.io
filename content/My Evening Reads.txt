@@ -39,16 +39,7 @@ Recall that [I defined](Before Now and Future.txt) "adventuring" as "the vehicle
 
 #### ...to get the gear you pack...
 
-I like gear. I like reading about it, trying cool new things, and finding the best tools for the job. This has cost me a lot of money in the past, so I stick to reading now. These sites help me do that. Some have a narrow focus--on ultralight backpacking on the Appalachian Trail, for example; others focus on a much broader swath of the industry. These are the best sites for gear news on the internet.
-
-I look to these first four sites for general interest gear news. Show me the coolest, newest toys on the market--everything from cars to pocket knives to yachts. Although their coverage overlaps some, they feature enough different content to warrant watching all four. I will never buy most of the things I see here, but I enjoy reading about them.
-
-* [https://gearpatrol.com](https://gearpatrol.com) - Gear Patrol
-* [https://www.gearhungry.com](https://www.gearhungry.com) - Gear Hungry
-* [https://gearjunkie.com](https://gearjunkie.com) - GearJunkie
-* [https://uncrate.com/](https://uncrate.com/) - Uncrate
-
-These next sites focus on things like backpacks and knives--items an individual would use for a day trip, for example. I have put a lot of money into this type of gear in the past, so I like to keep up on the latest trends and inventions.
+I like gear. I like reading about it, trying cool new things, and finding the best tools for the job. This has cost me a lot of money in the past, so I stick to reading now. These sites help me do that. Some have a narrow focus--on ultralight backpacking on the Appalachian Trail, for example; others focus on a much broader swath of the industry. These are some of the best sites for gear news on the internet.
 
 * [https://www.carryology.com](https://www.carryology.com) - I like backpacks, I own a lot of them, and [Carryology](https://www.carryology.com) helps me keep up with the best the industry has to offer.
 * [https://packconfig.com](https://packconfig.com) - The folks over at [Pack Config](https://packconfig.com) bring an interesting mix of gear reviews, recommendations, and in-depth testing to the table, alongside curated "pocket dumps" that showcase the cool gear their readers carry. These posts in particular have lead to some interesting finds for me.
@@ -120,7 +111,8 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [https://weberblog.net/](https://weberblog.net) - Johannes Weber covers interesting information security topics.
 * [https://spacetime.dev/](https://spacetime.dev/) - Awn Umar wrote [two](https://spacetime.dev/encrypting-secrets-in-memory) fascinating [posts](https://spacetime.dev/plausibly-deniable-encryption) on encryption; I stick around hoping for more.
 * [https://www.splunk.com/blog](https://www.splunk.com/blog) - The Splunk blogs have several great articles for network defenders.
-* [https://www.elastic.co/blog/](* https://www.elastic.co/blog/) - Like Splunk, Elastic also does a good job of posting informative articles for network defenders.
+* [https://www.elastic.co/blog/](https://www.elastic.co/blog/) - Like Splunk, Elastic also does a good job of posting informative articles for network defenders.
+* [https://elastic.github.io/security-research/](https://elastic.github.io/security-research/) - I also follow the Elastic Security Research blog, which provides even more granular articles on network analysis and defense.
 * [https://thedfirreport.com](https://thedfirreport.com) - The DFIR Report posts great, in-depth writeups on current malware campaigns. 
 * [https://www.mbsecure.nl/blog/](https://www.mbsecure.nl/blog/) - Marcus Bakker posts of MB Secure does a lot of interesting work in the information security space, perhaps most impactful of which was his company's part in the development of the [TaHiTI Threat Hunting Methodology](https://www.mbsecure.nl/blog/2018/12/tahiti-threat-hunting-methodology).
 * [https://securityshenaningans.medium.com/](https://securityshenaningans.medium.com/) - Security Shenanigans focuses more on the red team side of the house, which the blue team must keep up with in order to remain effective.
@@ -155,6 +147,7 @@ This last group of websites does not fit into of the genres above, but over the 
 * [https://martinrue.com](https://martinrue.com) - Another lifestyle blog, Martin Rue writes about engineering, software development, and other topics of interest.
 * [http://paulgraham.com/articles.html](http://paulgraham.com/articles.html) - Paul Graham writes about a lot of things, but his thoughts on professional development and work in particular are always instructive.
 * [https://world.hey.com/dhh](https://world.hey.com/dhh) - Another lifestyle blog, David Hansson writes about his perspective on topics ranging from current events to business.
+* [https://blog.haschek.at/home/](https://blog.haschek.at/home/) - Christian Hascheck writes a lot of interesting tech articles on topics like homelab projects and information security.
 
 #### The Full List
 
@@ -166,10 +159,6 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://liveworkwander.com](https://liveworkwander.com)
 * [https://expeditionportal.com/](https://expeditionportal.com/)
 * [http://www.drivingline.com/](http://www.drivingline.com/)
-* [https://gearpatrol.com](https://gearpatrol.com)
-* [https://www.gearhungry.com](https://www.gearhungry.com)
-* [https://gearjunkie.com](https://gearjunkie.com)
-* [https://uncrate.com/](https://uncrate.com/)
 * [https://www.carryology.com](https://www.carryology.com)
 * [https://packconfig.com](https://packconfig.com)
 * [http://www.exploringoverland.com/](http://www.exploringoverland.com/overland-tech-travel/)
@@ -210,6 +199,7 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://spacetime.dev/](https://spacetime.dev/)
 * [https://www.splunk.com/blog](https://www.splunk.com/blog)
 * [https://www.elastic.co/blog/](https://www.elastic.co/blog/)
+* [https://elastic.github.io/security-research/](https://elastic.github.io/security-research/)
 * [https://thedfirreport.com](https://thedfirreport.com)
 * [https://www.mbsecure.nl/blog/](https://www.mbsecure.nl/blog/)
 * [https://securityshenaningans.medium.com/](https://securityshenaningans.medium.com/)
