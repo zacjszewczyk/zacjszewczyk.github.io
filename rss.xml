@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 03 Feb 2022 01:10:43 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 03 Feb 2022 01:19:04 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Threat Intelligence &amp; Threat Research</title>
+            <link>https://zacs.site/blog/threat-intel-and-threat-research.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/threat-intel-and-threat-research.html</guid>
+            <pubDate>Thu, 03 Feb 2022 13:18:56 GMT</pubDate>
+            <description>
+                &lt;p&gt;Network defenders often struggle to obtain timely, accurate, relevant, predictive, and tailored intelligence about the enemy and other aspects of the operational environment. This document attempts to address that difficulty by detailing a single, curated list of reputable, open sources of threat data, information, and intelligence. This list combines traditional sources such as cybersecurity organizations that publish detailed reports (think finished intelligence) with non-traditional ones like social media that provide feeds more akin to information or raw data. While many others exist, I tried to stick to those with a high signal to noise ratio. That ruled out some decent sources, but I consider that a worthy trade off. Keeping up with this entire list would require a full-time job as-is, so while you may choose differently, choose wisely.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/cybersecurity.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Advice to New Lieutenants</title>
             <link>https://zacs.site/blog/advice-to-new-lieutenants.html</link>
