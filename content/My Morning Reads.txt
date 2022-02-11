@@ -36,8 +36,6 @@ Given my background, I like to watch the tech space. I have found that these thr
 I have to keep up with emerging cyber threats for my job. I would like to round this area out, but quality sources are hard to come by.
 
 * [https://thehackernews.com/](https://thehackernews.com/) - I watch this site for new data breaches and exploits. It lacks the depth of other websites, but it does a good job of getting news out fast and, often, first.
-* [https://www.scmagazine.com/](https://www.scmagazine.com/) - The newest addition to this list, SC Magazine also does a good job of getting quality content out fast. I will continue to evaluate it.
-
 
 #### Long form writing
 
@@ -65,7 +63,6 @@ To make your life a little easier, I list the sites I read to keep up with curre
 * [https://lobste.rs/](https://lobste.rs/)
 * [https://www.techmeme.com/](https://www.techmeme.com/)
 * [https://thehackernews.com/](https://thehackernews.com/)
-* [https://www.scmagazine.com/](https://www.scmagazine.com/)
 * [http://digg.com/](http://digg.com/)
 * [https://www.axios.com/](https://www.axios.com/)
 * [https://survivalblog.com/](https://survivalblog.com/)
