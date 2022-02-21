@@ -210,6 +210,7 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://securityshenaningans.medium.com/](https://securityshenaningans.medium.com/)
 * [https://svch0st.medium.com/](https://svch0st.medium.com/)
 * [https://blog.talosintelligence.com/](https://blog.talosintelligence.com/)
+* [https://posts.bluraven.io/](https://posts.bluraven.io/)
 * [https://blog.erratasec.com/](https://blog.erratasec.com/)
 * [https://krebsonsecurity.com/](https://krebsonsecurity.com/)
 * [https://zenhabits.net](https://zenhabits.net)
