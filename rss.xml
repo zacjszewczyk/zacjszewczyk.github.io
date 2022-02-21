@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 20 Feb 2022 04:23:16 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 21 Feb 2022 07:31:26 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Bookmarks</title>
+            <link>https://zacs.site/blog/bookmarks.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/bookmarks.html</guid>
+            <pubDate>Mon, 21 Feb 2022 15:55:12 GMT</pubDate>
+            <description>
+                &lt;p&gt;I frequently encounter people eager to learn or interested in understanding current events but that do not know where to start. Many lack the experience to know what they should study. Others have become so disillusioned by the hyper-partisan twenty-four-hour news cycle that they just ignore current events altogether. While I have addressed those challenges in &lt;a href="https://zacs.site/blog/personal-development.html"&gt;&lt;em&gt;Personal Development&lt;/em&gt;&lt;/a&gt; and the two-part series &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;&lt;em&gt;Keeping Up with Current Events&lt;/em&gt;&lt;/a&gt; and &lt;a href="https://zacs.site/blog/my-evening-reads.html"&gt;&lt;em&gt;My Evening Reads&lt;/em&gt;&lt;/a&gt;, respectively, those aggressively curated lists leave out many useful sources that did not make the cut. I just don&amp;#8217;t have time to keep up with everything. This article highlights those sources as well as several other valuable resources. While I may not visit these websites often, these are my first stops when I must seek out trustworthy information on a range of topics.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/blogging.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Threat Intelligence &amp; Threat Research</title>
             <link>https://zacs.site/blog/threat-intel-and-threat-research.html</link>
