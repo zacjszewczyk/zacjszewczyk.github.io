@@ -120,6 +120,7 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [https://securityshenaningans.medium.com/](https://securityshenaningans.medium.com/) - Security Shenanigans focuses more on the red team side of the house, which the blue team must keep up with in order to remain effective.
 * [https://svch0st.medium.com/](https://svch0st.medium.com/) - Zach's informative posts provide great tips for threat hunting. 
 * [https://blog.talosintelligence.com/](https://blog.talosintelligence.com/) - Cisco's Talos Intelligence group is a great source of exploit and malware news.
+* [https://posts.bluraven.io/](https://posts.bluraven.io/) - Mehmet Ergene does not post often, but when he does, he writes about interesting detection techniques and other, related topics for network defenders.
 * [https://blog.erratasec.com/](https://blog.erratasec.com/) - The personal blog of Robert Graham, a security researcher, and David Maynor, who also writes for Talos Intelligence. I enjoy their style, they cover a broad range of topics related to cybersecurity, and their articles always get me thinking.
 * [https://krebsonsecurity.com/](https://krebsonsecurity.com/) - Every time a list of cybersecurity-related sites comes up, so does Brian Krebs' blog. A prolific writer and self-educated security researcher, his background in investigative journalism helps him write a different kind of story than most in this space.
 
