@@ -59,6 +59,7 @@ The OSINT field is vast and it continues to change rapidly; since it falls outsi
 * [https://sector035.nl/](https://sector035.nl/)
 * [https://osintcurio.us/](https://osintcurio.us/)
 * [https://www.bellingcat.com/](https://www.bellingcat.com/)
+* [https://citizenevidence.org/](https://citizenevidence.org/)
 
 #### Web Development
 
