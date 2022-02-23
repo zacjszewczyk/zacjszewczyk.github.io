@@ -89,7 +89,7 @@ Social media is a phenomenally useful source of threat intelligence. My primary 
 
 #### Twitter
 
-This first sections groups select Twitter accounts according to whether they belong to individual personas, organizations, bots, or hashtags. Creating [Twitter Lists](https://help.twitter.com/en/using-twitter/twitter-lists), and then arranging those lists in [Tweetdeck](https://tweetdeck.twitter.com/), makes keeping up with even this many accounts a breeze.
+This first sections groups select Twitter accounts according to whether they belong to individual personas, organizations, bots, or hashtags. Creating [Twitter Lists](https://help.twitter.com/en/using-twitter/twitter-lists), and then arranging those lists in [Tweetdeck](https://tweetdeck.twitter.com/), makes keeping up with even this many accounts a breeze. [threatABLE](https://www.threatable.io/) attempts to fill a similar role for many different data sources such as social media platforms, blogs, GitHub projects, and vulnerabilities.
 
 Twitter provides no clear way to search lists through its main user interface. In the likely event that you come across something notable and then need to find it again later, use the syntax below to search the list identified by `[list ID]` for tweets that match `[query]`.
 
