@@ -60,6 +60,11 @@ The OSINT field is vast and it continues to change rapidly; since it falls outsi
 * [https://osintcurio.us/](https://osintcurio.us/)
 * [https://www.bellingcat.com/](https://www.bellingcat.com/)
 * [https://citizenevidence.org/](https://citizenevidence.org/)
+* [https://os2int.com/toolbox/](https://os2int.com/toolbox/)
+
+DorkSearch is a neat tool for a type of open-source research known as "dorking", where analysts craft specific queries to find unconventional data via search engines like Google.
+
+* [https://dorksearch.com/](https://dorksearch.com/)
 
 #### Web Development
 
