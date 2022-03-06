@@ -56,6 +56,7 @@ I task my analysts to stay abreast of emerging threats and understand the organi
 * [https://www.huntress.com/blog](https://www.huntress.com/blog)
 * [https://www.intel471.com/](https://www.intel471.com/)
 * [https://www.ironnet.com/blog](https://www.ironnet.com/blog)
+* [https://www.lares.com/resources/blog/](https://www.lares.com/resources/blog/)
 * [https://www.mbsecure.nl/blog](https://www.mbsecure.nl/blog)
 * [https://www.microsoft.com/security/blog/](https://www.microsoft.com/security/blog/)
 * [https://www.nsa.gov/What-We-Do/Cybersecurity/](https://www.nsa.gov/What-We-Do/Cybersecurity/)
