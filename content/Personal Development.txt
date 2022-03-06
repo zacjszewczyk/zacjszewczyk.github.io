@@ -60,6 +60,13 @@ Look to unofficial sources for military education as well. Some people like to p
 
 * [The Jocko Podcast](https://jockopodcast.com/). This podcast is the preeminent resource for leadership and military development. If you take just one resource and ignore every single other recommendation in this post, make it this podcast. From the informative personal experiences Jocko and his guests share to the exhaustive literary and historical reviews they conduct, the only thing that could make these hundreds of hours of audio more valuable would be more of them. Also check out the [Jocko Unraveling](https://www.theunravelingpodcast.com/) podcast focuses on current events.
 
+### Movies
+
+Nothing can replace first-hand experience, but by listening to the stories of those who came before us, we may benefit from their hard-learned lessons in war. Movies like these have valuable lessons to teach soldiers about leadership and the conduct of war.
+
+* **Saving Private Ryan**. 
+* **Band of Brothers**. 
+
 ### Projects
 
 * **Build an SOP.** In an organization as new as USCYBERCOM, there's a good chance your team doesn't have one; on the off chance it does, you can at least add to, improve, or update it. Codify the things your team does right, and identify areas in need.
