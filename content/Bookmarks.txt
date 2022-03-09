@@ -41,7 +41,6 @@ I look to these websites for quality, in-depth technical reporting. I do not mak
 * [http://www.asymco.com/](http://www.asymco.com/) - I followed Horace Dediu and listened to his podcasts for several years. Although our interests have diverged, he continues to write interesting articles on business and market analysis. 
 * [https://fivethirtyeight.com/](https://fivethirtyeight.com/) - FiveThirtEight publishes interesting data-based analyses of current events topics. However, do not let it's purported [empiricism](https://fivethirtyeight.com/about-us/) lull you into complacency: as is evidenced by its articles and further supported by measures of media bias, FiveThirtyEight leans left to a similar degree as outlets like CNN. I find these articles interesting, but as with any biased outlet, take their conclusions with a grain of salt.
 
-
 #### Politics, Current Events, National Security
 
 * [https://www.foreignaffairs.com/](https://www.foreignaffairs.com/) - Foreign Affairs is a high-volume national security-focused news outlet. Although its authors do great work, I have neither the time nor interest to keep up with everything it publishes.
@@ -62,6 +61,13 @@ DorkSearch is a neat tool for a type of open-source research known as "dorking",
 
 * [https://dorksearch.com/](https://dorksearch.com/)
 
+#### Discord Servers
+
+A mix of the tech news and open-source intelligence categories and the information security field, I periodically check in on these Discord servers to find new and interesting techniques, perspectives, and projects. Twitter is better for lurking, but it seems that interacting with knowledgeable individuals is easier on Discord.
+
+* [https://discord.gg/bhis](https://discord.gg/bhis)
+* [https://discord.gg/digitalforensics](https://discord.gg/digitalforensics)
+
 #### Web Development
 
 In what sometimes feels like [another life](/projects.html) I spent a great deal of time designing and building websites. These were some of my favorite resources for helpful guides, ideas, and design inspiration.
@@ -69,15 +75,15 @@ In what sometimes feels like [another life](/projects.html) I spent a great deal
 * [https://css-tricks.com/](https://css-tricks.com/)
 * [https://www.smashingmagazine.com/](https://www.smashingmagazine.com/)
 
-
 #### Finances
 
-Nerd Wallet and Bankrate contain a wealth of helpful information about everything from the best credit cards to mortgage brokers. Whenever I have to deal with anything related to finances, I look to these websites first.
+Nerd Wallet and Bankrate contain a wealth of helpful information about everything from the best credit cards to mortgage brokers. The Forbes Advisor site provides similar information. Whenever I have to deal with anything related to finances, I look to these websites first.
 
 Seeking Alpha publishes a lot of good information about investing and the markets. Whenever I have a question about a stock or market activity, I go there.
 
 * [https://www.nerdwallet.com/](https://www.nerdwallet.com/)
 * [https://www.bankrate.com/](https://www.bankrate.com/)
+* [https://www.forbes.com/advisor/banking/](https://www.forbes.com/advisor/banking/)
 * [https://seekingalpha.com/](https://seekingalpha.com/)
 
 #### Career Advice
