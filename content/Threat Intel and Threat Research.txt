@@ -17,6 +17,7 @@ I task my analysts to stay abreast of emerging threats and understand the organi
 
 * [http://blogs.splunk.com/](http://blogs.splunk.com/)
 * [https://blog.fox-it.com/](https://blog.fox-it.com/)
+* [https://blog.google/threat-analysis-group/](https://blog.google/threat-analysis-group/)
 * [https://blog.menasec.net/](https://blog.menasec.net/)
 * [https://blog.netlab.360.com/](https://blog.netlab.360.com/)
 * [https://blog.talosintelligence.com/](https://blog.talosintelligence.com/)
