@@ -87,6 +87,7 @@ I struggled long and hard to find good, non-partisan writing on politics and cur
 * [https://tnsr.org/](https://tnsr.org/) - The journal counterpart to War on the Rocks, the Texas National Security Review focuses on long-form articles it makes available in a quarterly publication.
 * [https://americanaffairsjournal.org/](https://americanaffairsjournal.org/) - The American Affairs Journal is a quarterly publication with great, in-depth pieces on public policy.
 * [https://smallwarsjournal.com/](https://smallwarsjournal.com/) - Small Wars Journal covers current events and national security topics.
+* [https://taskandpurpose.com/](https://taskandpurpose.com/) - Task & Purpose also covers national security topics.
 * [http://coyoteblog.com](http://coyoteblog.com) - At Coyote Blog, Warren Meyer brings to the table an analytical perspective critical of both sides.
 
 ### Development
@@ -125,6 +126,7 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [https://krebsonsecurity.com/](https://krebsonsecurity.com/) - Every time a list of cybersecurity-related sites comes up, so does Brian Krebs' blog. A prolific writer and self-educated security researcher, his background in investigative journalism helps him write a different kind of story than most in this space.
 * [https://www.philvenables.com/](https://www.philvenables.com/) - Phil Venables, CISO at Google Cloud, writes about cybersecurity programs. His advice for their effective operation at the practitioner level, and use at the executive level, is informative.
 * [https://jackson-t.ca/](https://jackson-t.ca/) - Jackson writes about the offensive and the defensive sides, circumventing and improving defensive controls.
+* [http://windowsir.blogspot.com/](http://windowsir.blogspot.com/) - Harlan Carvey's Windows Incident Response blog covers interesting technical topics from high-level threat hunting to low-level forensics
 
 ### Miscellaneous
 
@@ -153,6 +155,7 @@ This last group of websites does not fit into of the genres above, but over the 
 * [http://paulgraham.com/articles.html](http://paulgraham.com/articles.html) - Paul Graham writes about a lot of things, but his thoughts on professional development and work in particular are always instructive.
 * [https://world.hey.com/dhh](https://world.hey.com/dhh) - Another lifestyle blog, David Hansson writes about his perspective on topics ranging from current events to business.
 * [https://blog.haschek.at/home/](https://blog.haschek.at/home/) - Christian Hascheck writes a lot of interesting tech articles on topics like homelab projects and information security.
+* [https://queue.acm.org/](https://queue.acm.org/) - The Association for Computing Machinery hosts articles on a variety of technical topics. 
 
 #### The Full List
 
@@ -187,6 +190,7 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://tnsr.org/](https://tnsr.org/)
 * [https://americanaffairsjournal.org/](https://americanaffairsjournal.org/)
 * [https://smallwarsjournal.com/](https://smallwarsjournal.com/)
+* [https://taskandpurpose.com/](https://taskandpurpose.com/)
 * [http://coyoteblog.com](http://coyoteblog.com)
 * [https://www.hanselman.com/blog/](https://www.hanselman.com/blog/)
 * [https://bitsofco.de/](https://bitsofco.de/)
@@ -217,6 +221,7 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://krebsonsecurity.com/](https://krebsonsecurity.com/)
 * [https://www.philvenables.com/](https://www.philvenables.com/)
 * [https://jackson-t.ca/](https://jackson-t.ca/)
+* [http://windowsir.blogspot.com/](http://windowsir.blogspot.com/)
 * [https://zenhabits.net](https://zenhabits.net)
 * [http://blairreeves.me](http://blairreeves.me)
 * [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/)
