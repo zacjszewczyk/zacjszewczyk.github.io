@@ -41,7 +41,7 @@ I look to these websites for quality, in-depth technical reporting. I do not mak
 * [http://www.asymco.com/](http://www.asymco.com/) - I followed Horace Dediu and listened to his podcasts for several years. Although our interests have diverged, he continues to write interesting articles on business and market analysis. 
 * [https://fivethirtyeight.com/](https://fivethirtyeight.com/) - FiveThirtEight publishes interesting data-based analyses of current events topics. However, do not let it's purported [empiricism](https://fivethirtyeight.com/about-us/) lull you into complacency: as is evidenced by its articles and further supported by measures of media bias, FiveThirtyEight leans left to a similar degree as outlets like CNN. I find these articles interesting, but as with any biased outlet, take their conclusions with a grain of salt.
 
-#### Politics, Current Events, National Security
+### Politics, Current Events, National Security
 
 * [https://www.foreignaffairs.com/](https://www.foreignaffairs.com/) - Foreign Affairs is a high-volume national security-focused news outlet. Although its authors do great work, I have neither the time nor interest to keep up with everything it publishes.
 
@@ -68,31 +68,30 @@ A mix of the tech news and open-source intelligence categories and the informati
 * [https://discord.gg/bhis](https://discord.gg/bhis)
 * [https://discord.gg/digitalforensics](https://discord.gg/digitalforensics)
 
-#### Web Development
+### Web Development
 
 In what sometimes feels like [another life](/projects.html) I spent a great deal of time designing and building websites. These were some of my favorite resources for helpful guides, ideas, and design inspiration.
 
 * [https://css-tricks.com/](https://css-tricks.com/)
 * [https://www.smashingmagazine.com/](https://www.smashingmagazine.com/)
 
-#### Finances
+### Finances
 
-Nerd Wallet and Bankrate contain a wealth of helpful information about everything from the best credit cards to mortgage brokers. The Forbes Advisor site provides similar information. Whenever I have to deal with anything related to finances, I look to these websites first.
-
-Seeking Alpha publishes a lot of good information about investing and the markets. Whenever I have a question about a stock or market activity, I go there.
+Nerd Wallet and Bankrate contain a wealth of helpful information about everything from the best credit cards to mortgage brokers. The Forbes Advisor site provides similar information. Whenever I have to deal with anything related to finances, I look to these websites first. Seeking Alpha publishes a lot of good information about investing and the markets. When I have a question about a stock or market activity, I go there.
 
 * [https://www.nerdwallet.com/](https://www.nerdwallet.com/)
 * [https://www.bankrate.com/](https://www.bankrate.com/)
 * [https://www.forbes.com/advisor/banking/](https://www.forbes.com/advisor/banking/)
 * [https://seekingalpha.com/](https://seekingalpha.com/)
 
-#### Career Advice
+### Personal & Professional Development
 
-From resume tips to career advice, The Balance Careers has a lot of great information, especially for those in the early years of their professional careers.
+This section contains resources for personal and professional development. I also encourage you to check out my article [*Personal Development*](Personal Development.txt) for more recommendations.
 
-* [https://www.thebalancecareers.com/](https://www.thebalancecareers.com/)
+* [https://www.thebalancecareers.com/](https://www.thebalancecareers.com/) - From resume tips to career advice, The Balance Careers has a lot of great information, especially for those in the early years of their professional careers.
+* [https://fs.blog/](https://fs.blog/) - Farnam Street is less about career advice and more about general personal and professional development.
 
-#### Long reads
+### Long reads
 
 As much as I enjoy short, interesting articles from many of the sources on this list, I enjoy long-form writing even more. On the rare occasion I find myself with extra time, I like to spend it immersing myself in interesting stories from places like these.
 
@@ -101,10 +100,19 @@ As much as I enjoy short, interesting articles from many of the sources on this 
 * [https://tetw.org/](https://tetw.org/)
 * [https://magazine.atavist.com/](https://magazine.atavist.com/)
 
-#### Reviews
+### Reviews
 
-I do a lot of research before I buy, and that research starts with a handful of trusted websites. Rather than reproduce that list here, I will take this opportunity to refer you to [*The Best of the Best*](https://zacs.site/blog/the-best-of-the-best.html) where I maintain a current list of my favorite review sites.
+I do a lot of research before I buy, and that research starts with a handful of trusted websites. Rather than reproduce that list here, I will take this opportunity to refer you to [*The Best of the Best*](https://zacs.site/blog/the-best-of-the-best.html) where I maintain a current list of my favorite review sites. I also like to consult these websites.
 
-* [https://zacs.site/blog/the-best-of-the-best.html](https://zacs.site/blog/the-best-of-the-best.html)
+* [https://www.productchart.com/](https://www.productchart.com/) - This website provides helpful comparison charts for tech products, as its name suggests, but also a nice workflow for finding products to compare. Rather than going to a specific vendor's website and trying to find something that meets your needs there, you can use Product Chart to search for products that meet your specifications across all manufacturers.
+
+Buying a car is part art and part science. Use these resources to guide the buying process by helping you to understand which cars hold their value and a fair price range for those vehicles.
+
+* [https://www.kbb.com/](https://www.kbb.com/)
+* [https://www.iseecars.com/](https://www.iseecars.com/)
+
+### Miscellaneous
+
+* [https://lifehacker.com/](https://lifehacker.com/) - Lifehacker is a great source for how-tos, tips, and reviews. Although a high-volume publication, it publishes generally good general-purpose content.
 
 [>1] Ad Fontes Media maintains an [Interactive Media Bias Chart](https://adfontesmedia.com/interactive-media-bias-chart/)
