@@ -135,7 +135,7 @@ This section lists resources that don't fit into any of the other categories.
 
 ### Tools
 
-Whereas most of this article links to websites and other resources that provide information, this section lists a collection of tools 
+Whereas most of this article links to websites and other resources that provide information, this section lists a handful of useful tools.
 
 * [https://www.overleaf.com/](https://www.overleaf.com/) - I prefer to write simple documents using Markdown, and anything more complex than a simple blog post in TeX. Overleaf is *the* online TeX editor. I use it for everything from my personal resume to sprawling technical white papers. If you don't want to go through the (few) steps to [set up a TeX writing environment on your computer](XeTeX on Windows.txt), Overleaf is a phenomenal alternative.
 
