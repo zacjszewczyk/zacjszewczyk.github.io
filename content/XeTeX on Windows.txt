@@ -5,7 +5,7 @@ Pubdate: 2022/03/23 15:30:45
 Category: Uncategorized
 Author: Zac Szewczyk
 
-I switched from Ubuntu to Windows 10 a few days ago. After eight years of macOS and then a year of Linux, I wanted to circle back to Windows.[^1] Since my latest [writing project](/projects.html#mtec) relies on [XeTeX](https://en.wikipedia.org/wiki/XeTeX), a lesser-known typesetting engine within the already obscure [TeX](https://en.wikipedia.org/wiki/TeX) world, I expected some trouble recreating my workflow in Windows; I was not disappointed. This post explains the steps I went through to create a functional TeX writing environment in Windows 10.
+I switched from Ubuntu to Windows 10 a few days ago. After eight years of macOS and then a year of Linux, I wanted to circle back to Windows.[^1] Since my latest [writing project](/projects.html#mtec) relies on [XeTeX](https://en.wikipedia.org/wiki/XeTeX), a lesser-known typesetting engine within the already obscure [TeX](https://en.wikipedia.org/wiki/TeX) world, I expected some trouble recreating my workflow in Windows; I was not disappointed.[^2] This post explains the steps I went through to create a functional TeX writing environment in Windows 10.
 
 ### Step #0: (Optional) Install Chocolatey
 
@@ -55,3 +55,5 @@ xetex.exe main.tex
 I had a lot of problems with Ubuntu, but my TeX wormflow was not one of them. Fortunately, after a bit of trial and error, I was able to replicate that level of functionality on Windows--and now you can, too.
 
 [>1] Briefly, because Windows versus Linux (versus macOS) is not the point of this post: 2022 is not the year of Linux on the desktop. It's good, but not great, and until that operating system becomes an appliance rather than a tool, it will remain so. As for Windows versus macOS, I continue to default to Apple products across all verticals; those who actually need Windows (or a non-Apple device) understand their needs well enough to ignore my recommendation or not ask for it in the first place.
+
+[>2] In Ubuntu, `sudo apt-get install texlive-full` did the job.

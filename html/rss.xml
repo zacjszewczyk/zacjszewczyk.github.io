@@ -7,7 +7,7 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 03 Apr 2022 03:24:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 Apr 2022 08:08:30 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
@@ -16,7 +16,7 @@
             <guid isPermaLink='true'>https://zacs.site/blog/xetex-on-windows.html</guid>
             <pubDate>Wed, 23 Mar 2022 19:30:45 GMT</pubDate>
             <description>
-                &lt;p&gt;I switched from Ubuntu to Windows 10 a few days ago. After eight years of macOS and then a year of Linux, I wanted to circle back to Windows.&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; Since my latest &lt;a href="https://zacs.site/projects.html#mtec"&gt;writing project&lt;/a&gt; relies on &lt;a href="https://en.wikipedia.org/wiki/XeTeX"&gt;XeTeX&lt;/a&gt;, a lesser-known typesetting engine within the already obscure &lt;a href="https://en.wikipedia.org/wiki/TeX"&gt;TeX&lt;/a&gt; world, I expected some trouble recreating my workflow in Windows; I was not disappointed. This post explains the steps I went through to create a functional TeX writing environment in Windows 10.&lt;/p&gt;
+                &lt;p&gt;I switched from Ubuntu to Windows 10 a few days ago. After eight years of macOS and then a year of Linux, I wanted to circle back to Windows.&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; Since my latest &lt;a href="https://zacs.site/projects.html#mtec"&gt;writing project&lt;/a&gt; relies on &lt;a href="https://en.wikipedia.org/wiki/XeTeX"&gt;XeTeX&lt;/a&gt;, a lesser-known typesetting engine within the already obscure &lt;a href="https://en.wikipedia.org/wiki/TeX"&gt;TeX&lt;/a&gt; world, I expected some trouble recreating my workflow in Windows; I was not disappointed.&lt;sup id="fnref2"&gt;&lt;a href="#fn2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt; This post explains the steps I went through to create a functional TeX writing environment in Windows 10.&lt;/p&gt;
                 &lt;p&gt;&lt;a href="https://zacs.site/blog/uncategorized.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
             </description>
         </item>

@@ -70,10 +70,14 @@ A mix of the tech news and open-source intelligence categories and the informati
 
 ### Web Development
 
-In what sometimes feels like [another life](/projects.html) I spent a great deal of time designing and building websites. These were some of my favorite resources for helpful guides, ideas, and design inspiration.
+In what sometimes feels like [another life](/projects.html) I spent a great deal of time designing and building websites. These were some of my favorite resources for helpful guides, ideas, and design inspiration. For ease of organization, I also include a few useful tools in this section as well.
 
 * [https://css-tricks.com/](https://css-tricks.com/)
+* [https://css-irl.info/](https://css-irl.info/)
 * [https://www.smashingmagazine.com/](https://www.smashingmagazine.com/)
+* [http://border-radius.com/](http://border-radius.com/) - This simple tool makes generating the CSS code for curved borders a breeze.
+* [https://www.toptal.com/designers/subtlepatterns/](https://www.toptal.com/designers/subtlepatterns/) - Subtle Patterns provides simple, tiling backgrounds for websites for free.
+* [https://paletton.com/](https://paletton.com/) - Paletton makes designing attractive color schemes easy.
 
 ### Finances
 
@@ -91,7 +95,7 @@ This section contains resources for personal and professional development. I als
 * [https://www.thebalancecareers.com/](https://www.thebalancecareers.com/) - From resume tips to career advice, The Balance Careers has a lot of great information, especially for those in the early years of their professional careers.
 * [https://fs.blog/](https://fs.blog/) - Farnam Street is less about career advice and more about general personal and professional development.
 
-### Long reads
+### Long Reads
 
 As much as I enjoy short, interesting articles from many of the sources on this list, I enjoy long-form writing even more. On the rare occasion I find myself with extra time, I like to spend it immersing myself in interesting stories from places like these.
 
@@ -111,8 +115,28 @@ Buying a car is part art and part science. Use these resources to guide the buyi
 * [https://www.kbb.com/](https://www.kbb.com/)
 * [https://www.iseecars.com/](https://www.iseecars.com/)
 
+### Style
+
+I have little to no style and make no claim to keep up with fashion, but I do keep these websites in my back pocket when I need to put together a professional outfit or update my wardrobe.
+
+* [https://www.heddels.com/](https://www.heddels.com/)
+* [http://www.esquire.com/style/](http://www.esquire.com/style/)
+* [http://valetmag.com/](http://valetmag.com/)
+* [https://huckberry.com/](https://huckberry.com/)
+* [https://www.gq.com/](https://www.gq.com/)
+* [http://www.valetmag.com/](http://www.valetmag.com/)
+* [https://www.vogue.com/](https://www.vogue.com/)
+
 ### Miscellaneous
 
+This section lists resources that don't fit into any of the other categories.
+
 * [https://lifehacker.com/](https://lifehacker.com/) - Lifehacker is a great source for how-tos, tips, and reviews. Although a high-volume publication, it publishes generally good general-purpose content.
+
+### Tools
+
+Whereas most of this article links to websites and other resources that provide information, this section lists a collection of tools 
+
+* [https://www.overleaf.com/](https://www.overleaf.com/) - I prefer to write simple documents using Markdown, and anything more complex than a simple blog post in TeX. Overleaf is *the* online TeX editor. I use it for everything from my personal resume to sprawling technical white papers. If you don't want to go through the (few) steps to [set up a TeX writing environment on your computer](XeTeX on Windows.txt), Overleaf is a phenomenal alternative.
 
 [>1] Ad Fontes Media maintains an [Interactive Media Bias Chart](https://adfontesmedia.com/interactive-media-bias-chart/)
