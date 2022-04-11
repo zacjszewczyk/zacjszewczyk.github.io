@@ -46,11 +46,13 @@ public:
 deploy:
 	@git add -A
 	@git commit -m "Deployment commit on `date`"
-	@git subtree push --prefix=html git@github.com:zacjszewczyk/zacjszewczyk.github.io.git master
-	@git push
+	@make push
 pull:
 	@git subtree pull --prefix=html git@github.com:zacjszewczyk/zacjszewczyk.github.io.git master
 	@git pull
+push:
+	@git subtree push --prefix=html git@github.com:zacjszewczyk/zacjszewczyk.github.io.git master
+	@git push
 
 Config.json:
 	@echo "First run detected. Please enter the following information:"
