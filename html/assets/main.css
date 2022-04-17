@@ -193,6 +193,10 @@ ul,ol,blockquote {
 ul li, ol li {
 	line-height: 175%;
 }
+#series_index:before {
+    content: "Posts in this series:";
+    font-weight: bold;
+}
 #fn1 {
 	margin-top: 5em;
 	border-top: 1pt dashed;
