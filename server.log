@@ -1,8 +1,23 @@
-127.0.0.1 - - [06/Mar/2022 10:24:27] GET / HTTP/1.1 200 -
-127.0.0.1 - - [06/Mar/2022 10:24:27] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [06/Mar/2022 10:24:27] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [06/Mar/2022 10:24:28] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [06/Mar/2022 10:24:28] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [06/Mar/2022 10:24:36] GET /blog/command-versus-leadership.html HTTP/1.1 200 -
-127.0.0.1 - - [06/Mar/2022 10:24:36] GET /assets/main.css HTTP/1.1 200 -
-- - - [6/3/2022 10:25:3] Graceful shutdown - -
+127.0.0.1 - - [17/Apr/2022 13:28:15] GET / HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:15] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:15] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:18] GET /archives.html HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:18] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:25] GET /blog/building-my-4runner-sleeping-platform.html HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:25] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:26] GET /assets/images/4Runner_sleeping_platform.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:26] GET /assets/images/4Runner_sleeping_platform_rounded_edges.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:27] GET /assets/images/MTV/IMG_5832.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:27] GET /assets/images/MTV/IMG_5806.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:27] GET /assets/images/MTV/IMG_5807.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:27] GET /assets/images/MTV/IMG_5808.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:27] GET /assets/images/MTV/IMG_5809.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:27] GET /assets/images/MTV/IMG_5810.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:27] GET /assets/images/MTV/IMG_5811.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:28] GET /assets/images/MTV/IMG_5812.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:28] GET /assets/images/MTV/IMG_5813.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:28] GET /assets/images/MTV/IMG_5821.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:28] GET /assets/images/MTV/IMG_5830.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:28] GET /assets/images/MTV/IMG_5831.jpg HTTP/1.1 200 -
+127.0.0.1 - - [17/Apr/2022 13:28:28] GET /assets/images/MTV/IMG_5805.jpg HTTP/1.1 200 -
+- - - [17/4/2022 13:30:29] Graceful shutdown - -
