@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="I wanted to get into this [when I explained why you should manage your own website](Own Your Platform.txt), but that got a little long and this topic deserves its own post. I have talked before about [my setup](My Setup 2019.txt) and [my](Re Introducing First Crack.txt) [blog](First Crack Release Notes 0619.txt) [engine](/projects.html#firstCrack), First Crack, but today I want to explain how I run my site, so that you can run yours. [I agree](https://news.ycombinator.com/item?id=20362319#20363104) that most technical people underestimate the difficulty of setting up a website, and so today I will make that easy.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="How to Run Your Own Website - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>How to Run Your Own Website - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/how-to-own-your-platform.html">How to Run Your Own Website</a>
+</h2>
+<time id='article_time' datetime="2019-07-12 17:59:51-0400" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2019.html">2019</a>/<a href="/blog/2019-07.html">07</a>/12 17:59:51 EST in <a href='/programming.html'>Programming</a></time>
+<p>I wanted to get into this <a href="https://zacs.site/blog/own-your-platform.html">when I explained why you should manage your own website</a>, but that got a little long and this topic deserves its own post. I have talked before about <a href="https://zacs.site/blog/my-setup-2019.html">my setup</a> and <a href="https://zacs.site/blog/re-introducing-first-crack.html">my</a> <a href="https://zacs.site/blog/first-crack-release-notes-0619.html">blog</a> <a href="/projects.html#firstCrack">engine</a>, First Crack, but today I want to explain how I run my site, so that you can run yours. <a href="https://news.ycombinator.com/item?id=20362319#20363104">I agree</a> that most technical people underestimate the difficulty of setting up a website, and so today I will make that easy.</p>
+
+<p><a href="https://zacs.site/blog/own-your-platform.html">Again</a>, let me clarify what &#8220;run your own website&#8221; means. Under my definition, you must have 1) total control over your content, and 2) the ability to make it public or private at any time. This rules out Medium, for example, because the company owns the rights to the content you publish there. It can also rule out hosted engines like Blogger: if you come back to writing <a href="https://zacs.site/blog/the-last-four-years.html">after a four year break</a> to find your host shuttered, you may no longer have the ability to manage that work. Good backups mitigate this risk, though, so you do not have to start from zero. You may <a href="https://zacs.site/blog/re-introducing-first-crack.html">write your own blogging engine</a> that <a href="https://zacs.site/blog/first-crack-release-notes-0619.html">builds a site</a> you can <a href="https://zacs.site/blog/dont-use-amazon-web-services.html">upload to any web server</a>, but you do not have to.</p>
+
+<h2 class="headers" id="HowIRunMyWebsite">How I Run My Website<span>&nbsp;<a href="#HowIRunMyWebsite">#</a></span></h2>
+
+<p>In brief, <a href="https://zacs.site/blog/my-setup-2019.html">because I have covered it before</a>, my setup allows me to write <a href="https://zacs.site/blog/why-i-write-in-plain-text.html">anywhere</a>. I send finished posts to <a href="/projects.html#firstCrack">First Crack</a>, <a href="https://zacs.site/blog/re-introducing-first-crack.html">which can run on any machine</a> <a href="https://zacs.site/blog/first-crack-release-notes-0619.html">with Python 3</a>. First Crack then builds a full-featured static website that I can deploy to even the most basic web server. After spending a few arduous weeks with <a href="https://zacs.site/blog/dont-use-amazon-web-services.html">Amazon Web Services</a>, I now use Google Firebase. </p>
+
+<p>This covers, at a high level, how I run my own website. That&#8217;s not what you came here for, though, so let&#8217;s move on to how you can run your own.</p>
+
+<h2 class="headers" id="HowtoRunYourOwnWebsite">How to Run Your Own Website<span>&nbsp;<a href="#HowtoRunYourOwnWebsite">#</a></span></h2>
+
+<p>Running your own website does not have to take a lot of time, effort, expertise, or money. Sure, you can choose between the easy path that screams &#8220;<a href="https://www.wix.com/explore/websites">I just picked a template someone else designed</a>&#8221; and <a href="https://www.heroku.com/free">a hard one that took many painful weeks to build yourself</a>, but why not opt for the middle ground? This guide will take you from zero to having a live, distinct, and professional-looking website in five easy steps. Although a technical background will make some steps a bit easier, I wrote this guide for novices. I have included links to in-depth how-tos, spelled out every field you need to fill in, named every button you must click, and listed all the command you have to run. </p>
+
+<h3 class="headers" id="Step1">Step 1: Buy a Domain Name<span>&nbsp;<a href="#Step1">#</a></span></h3>
+
+<p>For the novices reading this, domain names identify websites. When you want to use Google, you type its domain name, <code>google.com</code>, into your browser. When I want someone to see my site, I tell them to go to <code>zacs.site</code>. These addresses are unique: there is only one <code>google.com</code>, and only one <code>zacs.site</code>. In this step, you will buy the rights to your own unique address that anyone in the world can use to get to your website. </p>
+
+<p>As <a href="https://zacs.site/blog/own-your-platform.html">your public resume and home on the Internet</a>, you will build a brand around this website; as the gateway to your site, take care in choosing a good domain name. This rules out unprofessional ones, and means you should pick one and stick to it. You will jot it down or spell it out for years, so get rid of any ideas for funny wordplay or creative spellings now. Choose something short, unambiguous, and&#160;&#8212;&#160;if possible&#160;&#8212;&#160;catchy or memorable. I recommend something based on your name. </p>
+
+<p>I prefer to buy domain names at <a href="https://www.hover.com/">Hover</a>. If you want an odd one like <code>thisismy.site</code> instead of <code>thisismy.com</code>, you could also use <a href="https://www.namecheap.com/">Namecheap</a>. Both <a href="https://help.hover.com/hc/en-us/articles/217281467-How-to-Register-a-new-domain">Hover</a> and <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/10072/35/how-to-register-a-domain-name">Namecheap</a> have good how-to guides to help you through this process, so check those out. Make sure you get WHOIS protection, which both offer during checkout. This service will keep your name and address private. Other than that, though, take care to avoid any added products or services. No matter what anyone says, you do not need them. Most domains will set you back about $25 per year. </p>
+
+<h3 class="headers" id="Step2">Step 2: Choose a Host<span>&nbsp;<a href="#Step2">#</a></span></h3>
+
+<p>Next, choose a host. For the novices reading this, these companies store your website on a computer&#160;&#8212;&#160;called a &#8220;server&#8221;&#160;&#8212;&#160;that anyone in the world can see. These servers have addresses that look like <code>156.100.101.102</code>, though. Who wants to deal with that? Your domain name can mask that IP address behind the short and catchy domain name you bought earlier. This will make getting to your website easy for anyone in the world, and the host you choose here will keep it online 24/7/365.</p>
+
+<p>Choosing a host sounds scary. It gets even scarier when facing monthly fees and the prospect of spinning up virtual machines on <a href="https://zacs.site/blog/dont-use-amazon-web-services.html">Amazon Web Services</a> for a side project with little tangible value, so let me make this step easy for you. Look for a company with a free tier and easy scalability. This will keep your costs low, and on the off chance a post goes viral, the traffic won&#8217;t crash your server. <a href="https://zacs.site/blog/dont-use-amazon-web-services.html">Amazon S3</a> comes up all the time, but few think of <a href="https://firebase.google.com/pricing/">Google Firebase</a>. For some reason, no one talks about the easiest, cheapest, and most flexible host, and the one I recommend for all new websites. </p>
+
+<p>Firebase&#8217;s free Spark plan has plenty of resources for a simple website. Even better, on the off chance a post goes viral, for pennies a month you can allow those resources to grow to keep your site online. I have yet to find an easier, more powerful host. Setup takes minutes, and even after days where I have had thousands of visitors, I have yet to pay a single bill. To create a free Firebase account, follow <strong>only</strong> step one in <a href="https://firebase.google.com/docs/web/setup#create-project">this guide</a>. Do not move on to step two. You can also follow the short guide below:</p>
+
+<ol>
+    <li>Go to <a href="https://console.firebase.google.com/">https://console.firebase.google.com/</a>.</li>
+<li>Click &#8220;Create a project&#8221;.</li>
+<li>In the &#8220;Project Name&#8221; field, enter a name. Choose anything you want, or just use &#8220;public-website&#8221;. Don&#8217;t worry about changing the &#8220;Project ID&#8221; field.</li>
+<li>Check all three checkboxes, then click &#8220;Create project&#8221;.</li>
+<li>Firebase will take a few seconds to build everything. Click &#8220;Continue&#8221; once it finishes.</li>
+</ol>
+
+<p>You now have a Google server set aside for your website, and a domain name to make it easy for people to get there. We will finish setting that up later, though, so move on to step three now.</p>
+
+<h3 class="headers" id="Step3">Step 3: Choose a Blog Engine<span>&nbsp;<a href="#Step3">#</a></span></h3>
+
+<p>Blog engines build websites. Some have all sorts of fancy features, which come at the cost of speed and complexity. Others do a little less, but churn out lightweight sites and do not need a bunch of third-party tools just to function. I prefer the latter, and so I wrote <a href="/projects.html#firstCrack">First Crack</a>. Given a thousand articles, my engine will build a full-featured, lightweight, static site in less than two seconds. I recommend First Crack, but you can choose anything you want. To follow along with this guide, though, your engine will need to give you a folder full of HTML files.</p>
+
+<p>To get started with First Crack, open a shell window. On a Mac, open Spotlight with the shortcut &#8984;+SPACE, type in <code>terminal.app</code>, hit return, then follow the steps below. You can also skip to the end for a single command that will take care of everything at once. On Windows, use a git client. </p>
+
+<ol>
+    <li>Copy this snippet, paste it into your shell, and hit return: <code>git clone https://github.com/zacjszewczyk/FirstCrack-Public.git ~/FirstCrack</code>. This will download First Crack into your home folder, in a folder called <code>FirstCrack</code>.</li>
+<li>Open the <code>FirstCrack</code> folder with this command: <code>cd ~/FirstCrack</code>.</li>
+<li>Use <code>ls</code> to see all the files in the folder. </li>
+</ol>
+
+<p>Download First Crack and open the folder in one command by copying and pasting this into your shell, and hitting return: <code>git clone https://zjszewczyk@bitbucket.org/zjszewczyk/firstcrack-public.git ~/FirstCrack; cd ~/FirstCrack</code>.</p>
+
+<h3 class="headers" id="Step4">Step 4: Build Your Site<span>&nbsp;<a href="#Step4">#</a></span></h3>
+
+<p>I will assume you chose First Crack for the rest of this guide. If you did, follow the steps below to build your new site; if not, build it with your engine, then move on to step five.</p>
+
+<ol>
+    <li>Setup First Crack by running the <em>makefile</em>. Just type <code>make</code> in your shell, and hit return.</li>
+<li>First Crack will display some helpful information about the commands you can run with the makefile, then tell you that the configuration file does not exist. It will then ask if you want to set it up. Answer <code>y</code> and hit return.</li>
+<li>First Crack will not build your website unless you answer each question. If one does not apply to you, enter <code>None</code>. </li>
+<li>Once finished, First Crack will build your new website. Check it out with <code>make preview</code>, which will open the local copy in your default browser. </li>
+</ol>
+
+<h3 class="headers" id="Step5">Step 5: Publish Your Site<span>&nbsp;<a href="#Step5">#</a></span></h3>
+
+<p>You now have a Google server, a domain name, and a website on your home computer. You must get that site to that server, though, and so we will focus on that next. The Firebase how-to does a nice job of <a href="https://firebase.google.com/docs/hosting">walking you through this process</a>, but so do I.</p>
+
+<ol>
+    <li>Go to <a href="https://nodejs.org/en/">the Node.js website</a> and get <code>npm</code>, the Node Package Manager. Download the version recommended for most users, then double-click the <code>.pkg</code> file to install it.</li>
+<li>Go back to the shell window from before, and enter this command: <code>npm install -g firebase-tools</code>. Wait until the Firebase install finishes.</li>
+<li>Enter <code>firebase login</code>. Sign in to the Google account you used to create a Firebase project in step two.</li>
+<li>Enter <code>firebase init</code>. Scroll down to &#8220;Hosting&#8221;, using the down arrow. Press the space bar to select this line, then hit return.</li>
+<li>Scroll down to select the project name from step two, then hit enter.</li>
+<li>When Firebase asks for a public directory, type in <code>./local</code> and hit return. Do not use <code>./local/</code> or any other folder, unless you chose a blog engine other than First Crack.</li>
+<li>Answer &#8220;n&#8221; to &#8220;Configure as a single-page app&#8221;. You want a full website. </li>
+<li>First Crack comes with a <code>404.html</code> page, so answer &#8220;n&#8221; when it asks to overwrite the existing one. Answer &#8220;n&#8221; when it asks you to overwrite <code>index.html</code>, too.</li>
+<li>To make your new site live, use <code>make deploy</code>. </li>
+</ol>
+
+<p>Firebase will upload <code>local</code> to your server, then display two URLs. Use the first, &#8220;Project Console&#8221;, to manage your site. The second, &#8220;Hosting URL&#8221;, replaces that ugly IP address we talked about earlier. You can use this to get to your server, like <code>156.100.101.102</code> earlier, but since <code>public-site-12345.firebaseapp.com</code> does little to improve on <code>156.100.101.102</code>, let&#8217;s change that next.</p>
+
+<ol>
+    <li>To make your domain name redirect to your new site, open the &#8220;Project Console&#8221; URL. Login if necessary.</li>
+<li>Click &#8220;Connect domain&#8221;, and enter the name you bought in step one. If, for example, you bought <code>zacs.site</code>, you would enter <code>zacs.site</code> in the first box.</li>
+<li>Leave the redirect checkbox unchecked, then click &#8220;Continue&#8221;.</li>
+<li>To verify that you own the domain name, you will need to add a TXT record. Google has helpful guides for <a href="https://support.google.com/a/answer/6151044?hl=en">Hover</a> and <a href="https://support.google.com/a/answer/6142985?hl=en">Namecheap</a>, so check those out. In general, though, find the advanced settings in your registrar, click the button to create a new entry, choose &#8220;TXT&#8221; for the type, and paste in the values Firebase provides.</li>
+<li>Go back to the Firebase console and click &#8220;Verify&#8221;.</li>
+<li>Once Firebase verifies that you own the domain name, go through similar steps to add &#8220;A&#8221; records. These &#8220;A&#8221; records will let anyone in the world type in your domain name and get redirected to the Hosting URL from before.</li>
+<li>Click &#8220;Finish&#8221;. It may take a few hours for your domain to start redirecting to your version of <code>public-site-12345.firebaseapp.com</code>.</li>
+</ol>
+
+<p>You now have a public website on your own custom domain. Anyone in the world can see this now, so let&#8217;s make it your own.</p>
+
+<h2 class="headers" id="YourNextSteps">Your Next Steps<span>&nbsp;<a href="#YourNextSteps">#</a></span></h2>
+
+<p>Out of the box, First Crack gives you a working website. It has a home page, a blog, a place for projects, and a disclaimer with a copyright notice and some verbiage saying you speak for yourself alone. Make this site your own by editing the home page, writing about your projects, and posting your first article. I will walk you through this, but you should check out <a href="https://github.com/zacjszewczyk/FirstCrack-Public">First Crack&#8217;s README</a>, too.</p>
+
+<h3 class="headers" id="EditingtheHomeandProjectsPages">Editing the Home and Projects Pages<span>&nbsp;<a href="#EditingtheHomeandProjectsPages">#</a></span></h3>
+
+<p>First Crack updates the blog and archives pages, and the RSS feed, every time you post something new, For the content of the home and projects pages, though, it looks to the HTML files in the <code>system</code> folder. Start by editing these. </p>
+
+<p>In a text editor like <a href="https://www.sublimetext.com/">Sublime Text</a> or <a href="https://notepad-plus-plus.org/">Notepad++</a>, open <code>index.html</code>. Replace everything below <code>&lt;!&#160;&#8212;&#160; DIVIDER &#160;&#8212;&#160;&gt;</code> with a picture of yourself and a short bio. Remember, as <a href="https://zacs.site/blog/own-your-platform.html">your public resume and home on the Internet</a>, you want this page to give potential employers and new acquaintances a polished first impression. <a href="/">I talk about myself, some of the things I wrote, and how readers can get in touch</a>. Save the file, then move on to the projects page.</p>
+
+<p>On this page, talk about all the projects you have ever worked on. They all deserve a shout out here, no matter how small. I got my first job in the Army because of some work I did on a Hacker News scraper, even though that project never amounted to anything. You never know what might catch someone&#8217;s eye.</p>
+
+<p>I like to break up academic work, writing, and programming. Leave the stock table and headers in there for this layout, or toss them all out for your own. Save the file, then move on to posting your first article.</p>
+
+<h3 class="headers" id="PostingYourFirstArticle">Posting Your First Article<span>&nbsp;<a href="#PostingYourFirstArticle">#</a></span></h3>
+
+<p>The <code>Content</code> folder has examples of the two types of blog posts First Crack supports. Use original articles for long-form original content, and linkposts to add in your two cents as you point your readers to something someone else wrote. This piece is an example of the former. Look to <a href="https://zacs.site/blog/tbt-writing-vs-writing.html">my recent link</a> to Shawn Blanc&#8217;s excellent article <a href="https://shawnblanc.net/2011/02/writing-vs-writing/"><em>Writing vs writing</em></a> for an example of the latter.</p>
+
+<p>For your first post, I recommend a short intro. Talk about yourself and your goals. Picture someone reading this because they want to know more about you, why you decided to start a website, and what they can expect from you in the future. Use this to set the tone for your entire website. Do a good job. Once you finish, save the file in the <code>Content</code> folder. Get rid of the two example posts, then rebuild your site with <code>make</code>. Preview your work with <code>make preview</code>. Edit as necessary, then make it all public with <code>make deploy</code>. Your new site will go live a few seconds later.</p>
+
+<br />
+
+<p>You now have a distinct and professional-looking website, open to the world, on your own custom domain. Aside from $2/month for the domain name, this will cost you nothing until you hit it big&#160;&#8212;&#160;so get to writing, already. It&#8217;s about time we heard from you.</p>
+
+
+</article>
+<p>
+<a href="/blog/how-to-own-your-platform.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2020 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>
