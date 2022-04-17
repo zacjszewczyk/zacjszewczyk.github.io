@@ -400,7 +400,7 @@ class Markdown:
             if (not isfile("./content/System/"+__line[1:-1])):
                 return "<blink>ERROR: Index file does not exist.</blink>"
             with open("./content/System/"+__line[1:-1], "r") as fd:
-                __line = "<ul style=\"border:1px dashed gray\" id=\"series_index\">\n"
+                __line = "<ul id=\"series_index\">\n"
                 for each in fd:
                     __line += "    <li>"+each.strip()+"</li>\n"
                 __line += "</ul>"
