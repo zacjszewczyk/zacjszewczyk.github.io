@@ -11,6 +11,7 @@ body { /** Create grid layout **/
 		"nav nav nav"
 		"lg main rg"
 		"lg footer rg";
+	counter-reset: footnotes;
 }
 nav { /** Assign nav menu to first row **/
 	grid-area: nav;
@@ -116,6 +117,10 @@ main img {
 }
 article {
 	margin: 2em 0 0 0;
+}
+.fn::before {
+	counter-increment: footnotes;
+    content: counter(footnotes) ". ";
 }
 .logo {
 	font-size: 85%;
