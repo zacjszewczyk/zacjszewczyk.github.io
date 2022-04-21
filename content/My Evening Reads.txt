@@ -127,6 +127,7 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [https://www.philvenables.com/](https://www.philvenables.com/) - Phil Venables, CISO at Google Cloud, writes about cybersecurity programs. His advice for their effective operation at the practitioner level, and use at the executive level, is informative.
 * [https://jackson-t.ca/](https://jackson-t.ca/) - Jackson writes about the offensive and the defensive sides, circumventing and improving defensive controls.
 * [http://windowsir.blogspot.com/](http://windowsir.blogspot.com/) - Harlan Carvey's Windows Incident Response blog covers interesting technical topics from high-level threat hunting to low-level forensics
+* [https://corelight.com/blog](https://corelight.com/blog) - Zeek is one of my favorite tools, and Corelight frequently publishes instructive articles on making better use of this powerhouse of a tool.
 
 ### Miscellaneous
 
@@ -221,6 +222,7 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://www.philvenables.com/](https://www.philvenables.com/)
 * [https://jackson-t.ca/](https://jackson-t.ca/)
 * [http://windowsir.blogspot.com/](http://windowsir.blogspot.com/)
+* [https://corelight.com/blog](https://corelight.com/blog)
 * [https://zenhabits.net](https://zenhabits.net)
 * [http://blairreeves.me](http://blairreeves.me)
 * [http://www.ericdavis215.com/blog/](http://www.ericdavis215.com/blog/)
