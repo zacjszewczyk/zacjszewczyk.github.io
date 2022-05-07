@@ -1,20 +1,8 @@
-127.0.0.1 - - [18/Apr/2022 08:08:39] GET / HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:08:39] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:08:39] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:08:39] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:08:46] GET / HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:08:46] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:08:46] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:08:51] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:08:51] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:08:53] GET /blog/command-versus-leadership.html HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:08:53] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:12:02] GET /blog/command-versus-leadership.html HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:12:02] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:12:06] GET /blog/command-versus-leadership.html HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:12:06] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:12:06] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:12:26] GET /blog/command-versus-leadership.html HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:12:26] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [18/Apr/2022 08:12:26] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-- - - [18/4/2022 8:12:51] Graceful shutdown - -
+127.0.0.1 - - [07/May/2022 10:42:35] GET / HTTP/1.1 200 -
+127.0.0.1 - - [07/May/2022 10:42:35] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [07/May/2022 10:42:35] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [07/May/2022 10:42:37] GET /blog/soc-metrics-part-iii.html HTTP/1.1 200 -
+127.0.0.1 - - [07/May/2022 10:42:37] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [07/May/2022 10:43:14] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [07/May/2022 10:43:14] GET /assets/main.css HTTP/1.1 200 -
+- - - [7/5/2022 10:43:24] Graceful shutdown - -

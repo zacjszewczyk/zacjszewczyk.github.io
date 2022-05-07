@@ -39,6 +39,30 @@
         <main>
 <article>
 <h2 id='article_title'>
+<a class="original" href="/blog/soc-metrics-part-iii.html">SOC Metrics, Part III: Measures of Effectiveness</a>
+</h2>
+<time id='article_time' datetime="2022-05-07 10:42:23-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2022.html">2022</a>/<a href="/blog/2022-05.html">05</a>/07 10:42:23 EST in <a href='/uncategorized.html'>Uncategorized</a></time>
+<p>In <a href="https://zacs.site/blog/soc-metrics-part-i.html">part one</a> of the SOC Metrics series, I introduced the idea that success requires the <em>right person</em> doing the <em>right things</em> in the <em>right ways</em>. That article also described several <strong>foundational metrics</strong>, ways to measure the SOC&#8217;s ability to produce meaningful results. <a href="https://zacs.site/blog/soc-metrics-part-ii.html">Part two</a> then focused on <strong>measures of performance</strong> (MOPs), which assess whether or not (and to what degree) the SOC is doing the <em>right things</em>. This article delves into <strong>measures of effectiveness</strong>, the last step in defining useful SOC metrics.</p>
+<p><a class='read_more_link' href='/blog/soc-metrics-part-iii.html'>Read more</a><span class='logo'>&#x24E9;</span></p>
+</article>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/soc-metrics-part-ii.html">SOC Metrics, Part II: Measures of Performance</a>
+</h2>
+<time id='article_time' datetime="2022-05-07 10:16:27-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2022.html">2022</a>/<a href="/blog/2022-05.html">05</a>/07 10:16:27 EST in <a href='/uncategorized.html'>Uncategorized</a></time>
+<p>In <a href="https://zacs.site/blog/soc-metrics-part-i.html">part one</a> of the SOC Metrics series, I introduced the idea that success requires the <em>right person</em> doing the <em>right things</em> in the <em>right ways</em>. <strong>Measures of performance</strong> (MOPs) assess whether or not (and to what degree) the SOC is doing the <em>right things</em>, and <strong>measures of effectiveness</strong> (MOEs) assess whether or not (and to what degree) the SOC is doing them in the <em>right ways</em>. MOPs and MOEs rely on foundational metrics to produce meaningful results, though, and so I started with them in <a href="https://zacs.site/blog/soc-metrics-part-i.html">part one</a>. This article delves into <strong>measures of performance</strong>, the next key step in defining useful SOC metrics.</p>
+<p><a class='read_more_link' href='/blog/soc-metrics-part-ii.html'>Read more</a><span class='logo'>&#x24E9;</span></p>
+</article>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/soc-metrics-part-i.html">SOC Metrics, Part I: Foundational Metrics</a>
+</h2>
+<time id='article_time' datetime="2022-05-07 10:01:38-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2022.html">2022</a>/<a href="/blog/2022-05.html">05</a>/07 10:01:38 EST in <a href='/uncategorized.html'>Uncategorized</a></time>
+<p>I prefer a hands-off approach to management. Describe a goal, give me the freedom and resources to achieve it, and I will. The success of that approach, which the Army calls &#8220;mission command&#8221;, ultimately depends on the <em>right person</em> doing the <em>right things</em> in the <em>right ways</em>. Unfortunately, many focus on that first criterion but neglect the second and the third. In many cases, that leads to failure. In the final days of my last job, in a security operations center (SOC), I realized that this explained many of our systemic problems. We had the <em>right people</em>, they just did the <em>right things</em> in the <em>wrong ways</em> or&#160;&#8212;&#160;in some cases&#160;&#8212;&#160;did the <em>wrong things</em> altogether. This was not an inherent consequence of that hands-off approach, of mission command, but rather a necessary consequence of its partial implementation: we lacked <strong>measures of performance</strong> (MOPs), to assess whether or not (and to what degree) we were doing the <em>right things</em>, and <strong>measures of effectiveness</strong> (MOEs), to assess whether or not (and to what degree) we were doing them in the <em>right ways</em>. In their absence the <em>right things</em> and the <em>right ways</em> became inconsistent and subjective, and so did our success. I wrote this series to fix that.</p>
+<p><a class='read_more_link' href='/blog/soc-metrics-part-i.html'>Read more</a><span class='logo'>&#x24E9;</span></p>
+</article>
+<article>
+<h2 id='article_title'>
 <a class="original" href="/blog/xetex-on-windows.html">XeTeX on Windows</a>
 </h2>
 <time id='article_time' datetime="2022-03-23 15:30:45-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2022.html">2022</a>/<a href="/blog/2022-03.html">03</a>/23 15:30:45 EST in <a href='/uncategorized.html'>Uncategorized</a></time>
@@ -338,36 +362,6 @@
 <time id='article_time' datetime="2020-05-02 19:53:45-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-05.html">05</a>/02 19:53:45 EST in <a href='/programming.html'>Programming</a></time>
 <p>I spent most of my development time in April working on a project that I can, at best, call tangentially related to First Crack. After fighting with <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a>, <a href="http://bottlepy.org/docs/dev/">Bottle</a>, and then Python’s own <a href="https://docs.python.org/3/library/http.server.html">http.server</a> library, I decided to write my own web framework. I won’t spend much time on this now, since I plan to deploy it in an Intranet soon and then release it after some real use, but I will say this: I liked Flask, but it has far too many dependencies to work in my target environment. I liked Bottle even more, since it mirrors most of Flask’s functionality without any dependencies, but it lacks the ability to handle concurrent connections. The surprisingly capable <code>http.server</code> library has zero dependencies and supports concurrent execution, but is ill-suited for building out an entire web application. My project, <em>Swig</em><sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>, solves all of these problems. For now, though, let’s talk about First Crack&#160;&#8212;&#160;a day late, yes, but I hope not a dollar short. </p>
 <p><a class='read_more_link' href='/blog/first-crack-release-notes-0420.html'>Read more</a><span class='logo'>&#x24E9;</span></p>
-</article>
-<article>
-<h2 id='article_title'>
-<a class="linkpost" href="https://thume.ca/2020/04/18/telefork-forking-a-process-onto-a-different-computer/">Teleforking a process onto a different computer</a>
-</h2>
-<time id='article_time' datetime="2020-04-30 10:37:23-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-04.html">04</a>/30 10:37:23 EST in <a href='/programming.html'>Programming</a></time>
-<p>I <a href="https://zacs.site/blog/linear-python.html">love</a> multiprocessing, and in <a href="https://thume.ca/2020/04/18/telefork-forking-a-process-onto-a-different-computer/">this interesting piece</a> by Tristan Hume, he takes parallel execution to another level. What a neat idea.</p>
-
-
-<p><a class='read_more_link' href='/blog/teleforking.html'>Read more</a><span class='logo'>&#x24E9;</span></p>
-</article>
-<article>
-<h2 id='article_title'>
-<a class="linkpost" href="https://tech.preferred.jp/en/blog/working-with-configuration-in-python/">Best Practices for Working with Configuration in Python Applications</a>
-</h2>
-<time id='article_time' datetime="2020-04-29 07:36:26-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-04.html">04</a>/29 07:36:26 EST in <a href='/programming.html'>Programming</a></time>
-<p>I opened <a href="https://tech.preferred.jp/en/blog/working-with-configuration-in-python/">Tobias Pfeiffer&#8217;s article</a> expecting something along the lines of <a href="https://beepb00p.xyz/configs-suck.html"><em>Your configs suck? Try a real programming language.</em></a> Tobias focused not on configuring the environment, though, but rather best practices for configuring the control flow in the program itself. &#8220;Early Validation&#8221; was a particularly good point. Tobias has some sound advice, most of which I incorporated into the dev projects I started during the shelter-in-place period. I hope to talk about them more soon.</p>
-
-
-<p><a class='read_more_link' href='/blog/working-with-configuration-in-python.html'>Read more</a><span class='logo'>&#x24E9;</span></p>
-</article>
-<article>
-<h2 id='article_title'>
-<a class="linkpost" href="https://www.wired.com/story/opinion-expert-twitter-only-goes-so-far-bring-back-blogs/">'Expert Twitter' Only Goes So Far. Bring Back Blogs</a>
-</h2>
-<time id='article_time' datetime="2020-04-28 12:03:45-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-04.html">04</a>/28 12:03:45 EST in <a href='/politics.html'>Politics</a></time>
-<p>Cal <a href="https://www.wired.com/story/opinion-expert-twitter-only-goes-so-far-bring-back-blogs/">started strong</a>: his recommendation that experts improve the decentralized distribution of critical information by moving beyond Twitter, the original microblog, to their own blogs hits the nail on the head. I cannot agree more. I wish I could say he finished strong as well, but he just completely missed the mark. In closing, he played up the importance of institutional backing for these sites as a way to lend them credibility. As Ben Thompson explained in <a href="https://stratechery.com/2020/zero-trust-information/"><em>Zero Trust Information</em></a>, though, not only have most of the institutional players put forth bad information throughout this crisis, they actively sought to suppress critical (factual) information as well. Although not all did so knowingly (some just sought to suppress dissenting voices), some did; the idea that we can improve the shortcomings of Twitter with greater institutional oversight is unbelievable. Read the first half of Cal&#8217;s piece and then close your tab; the rest is just ridiculous.</p>
-
-
-<p><a class='read_more_link' href='/blog/expert-twitter.html'>Read more</a><span class='logo'>&#x24E9;</span></p>
 </article>
 
         </main>

@@ -7,9 +7,39 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 25 Apr 2022 03:25:18 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 May 2022 02:42:27 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>SOC Metrics, Part III: Measures of Effectiveness</title>
+            <link>https://zacs.site/blog/soc-metrics-part-iii.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/soc-metrics-part-iii.html</guid>
+            <pubDate>Sat, 07 May 2022 14:42:23 GMT</pubDate>
+            <description>
+                &lt;p&gt;In &lt;a href="https://zacs.site/blog/soc-metrics-part-i.html"&gt;part one&lt;/a&gt; of the SOC Metrics series, I introduced the idea that success requires the &lt;em&gt;right person&lt;/em&gt; doing the &lt;em&gt;right things&lt;/em&gt; in the &lt;em&gt;right ways&lt;/em&gt;. That article also described several &lt;strong&gt;foundational metrics&lt;/strong&gt;, ways to measure the SOC&amp;#8217;s ability to produce meaningful results. &lt;a href="https://zacs.site/blog/soc-metrics-part-ii.html"&gt;Part two&lt;/a&gt; then focused on &lt;strong&gt;measures of performance&lt;/strong&gt; (MOPs), which assess whether or not (and to what degree) the SOC is doing the &lt;em&gt;right things&lt;/em&gt;. This article delves into &lt;strong&gt;measures of effectiveness&lt;/strong&gt;, the last step in defining useful SOC metrics.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/uncategorized.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>SOC Metrics, Part II: Measures of Performance</title>
+            <link>https://zacs.site/blog/soc-metrics-part-ii.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/soc-metrics-part-ii.html</guid>
+            <pubDate>Sat, 07 May 2022 14:16:27 GMT</pubDate>
+            <description>
+                &lt;p&gt;In &lt;a href="https://zacs.site/blog/soc-metrics-part-i.html"&gt;part one&lt;/a&gt; of the SOC Metrics series, I introduced the idea that success requires the &lt;em&gt;right person&lt;/em&gt; doing the &lt;em&gt;right things&lt;/em&gt; in the &lt;em&gt;right ways&lt;/em&gt;. &lt;strong&gt;Measures of performance&lt;/strong&gt; (MOPs) assess whether or not (and to what degree) the SOC is doing the &lt;em&gt;right things&lt;/em&gt;, and &lt;strong&gt;measures of effectiveness&lt;/strong&gt; (MOEs) assess whether or not (and to what degree) the SOC is doing them in the &lt;em&gt;right ways&lt;/em&gt;. MOPs and MOEs rely on foundational metrics to produce meaningful results, though, and so I started with them in &lt;a href="https://zacs.site/blog/soc-metrics-part-i.html"&gt;part one&lt;/a&gt;. This article delves into &lt;strong&gt;measures of performance&lt;/strong&gt;, the next key step in defining useful SOC metrics.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/uncategorized.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>SOC Metrics, Part I: Foundational Metrics</title>
+            <link>https://zacs.site/blog/soc-metrics-part-i.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/soc-metrics-part-i.html</guid>
+            <pubDate>Sat, 07 May 2022 14:01:38 GMT</pubDate>
+            <description>
+                &lt;p&gt;I prefer a hands-off approach to management. Describe a goal, give me the freedom and resources to achieve it, and I will. The success of that approach, which the Army calls &amp;#8220;mission command&amp;#8221;, ultimately depends on the &lt;em&gt;right person&lt;/em&gt; doing the &lt;em&gt;right things&lt;/em&gt; in the &lt;em&gt;right ways&lt;/em&gt;. Unfortunately, many focus on that first criterion but neglect the second and the third. In many cases, that leads to failure. In the final days of my last job, in a security operations center (SOC), I realized that this explained many of our systemic problems. We had the &lt;em&gt;right people&lt;/em&gt;, they just did the &lt;em&gt;right things&lt;/em&gt; in the &lt;em&gt;wrong ways&lt;/em&gt; or&amp;#160;&amp;#8212;&amp;#160;in some cases&amp;#160;&amp;#8212;&amp;#160;did the &lt;em&gt;wrong things&lt;/em&gt; altogether. This was not an inherent consequence of that hands-off approach, of mission command, but rather a necessary consequence of its partial implementation: we lacked &lt;strong&gt;measures of performance&lt;/strong&gt; (MOPs), to assess whether or not (and to what degree) we were doing the &lt;em&gt;right things&lt;/em&gt;, and &lt;strong&gt;measures of effectiveness&lt;/strong&gt; (MOEs), to assess whether or not (and to what degree) we were doing them in the &lt;em&gt;right ways&lt;/em&gt;. In their absence the &lt;em&gt;right things&lt;/em&gt; and the &lt;em&gt;right ways&lt;/em&gt; became inconsistent and subjective, and so did our success. I wrote this series to fix that.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/uncategorized.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>XeTeX on Windows</title>
             <link>https://zacs.site/blog/xetex-on-windows.html</link>

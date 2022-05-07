@@ -1,0 +1,147 @@
+Type: original
+Title: SOC Metrics, Part II: Measures of Performance
+Link: soc-metrics-part-ii.html
+Pubdate: 2022/05/07 10:16:27
+Category: Uncategorized
+Author: Zac Szewczyk
+
+In [part one](SOC Metrics Part I.txt) of the SOC Metrics series, I introduced the idea that success requires the *right person* doing the *right things* in the *right ways*. **Measures of performance** (MOPs) assess whether or not (and to what degree) the SOC is doing the *right things*, and **measures of effectiveness** (MOEs) assess whether or not (and to what degree) the SOC is doing them in the *right ways*. MOPs and MOEs rely on foundational metrics to produce meaningful results, though, and so I started with them in [part one](SOC Metrics Part I.txt). This article delves into **measures of performance**, the next key step in defining useful SOC metrics.
+
+{SOC_Metrics_Series_Index.txt}
+
+As in the last article, I based my selection of metrics on extensive research and on personal operational experience. I also include several sources for other metrics at the end of this article in the [resources](#resources) section. 
+
+### Measures of Performance
+
+Recall that definitions of MOPs and MOEs from JP 5-0: [*Joint Planning*](https://www.jcs.mil/Doctrine/Joint-Doctrine-Pubs/5-0-Planning-Series/) underlie this series. JP 5-0 defines a measure of performance as "an indicator used to measure a friendly action that is tied to measuring task accomplishment", and a measure of effectiveness as "an indicator used to measure a current system state, with change indicated by comparing multiple observations over time." MOPs concern themselves with friendly action (the *right things*), while MOEs concern themselves with those actions' ability to change the system (the *right things* done in the *right ways*). This article describes several SOC-specific **measures of performance**, selected for their ability to help answer the question, "Is the SOC doing the right things?"
+
+In the interest of time, and since many of these measures require less explanation than the ones I described in [part one](SOC Metrics Part I.txt), I erred on the side of brevity here. Subsequent articles may cover some of these in greater detail.
+
+#### The Funnel of Fidelity
+
+In 2019, Jared Atkinson developed the *Funnel of Fidelity*, pictured below. As he explained in [*Introducing the Funnel of Fidelity*](https://posts.specterops.io/introducing-the-funnel-of-fidelity-b1bb59b04036), this model depicts the process by which many events become a few incidents through triage and investigation. It also highlights the importance of optimizing that evolution so that the funnel does not become clogged, a key consideration for those overseeing the incident handling process.[^1]
+
+![Funnel of Fidelity diagram](/assets/images/funnel-of-fidelity.png)
+
+I frequently encountered organizations that devoted all their resources to investigations. This meant their analysts dipped into alerts only occasionally to find a lead, and only viewed events in the narrow context of the investigation they had already begun. As a result, almost all events went uninspected and the vast majority of alerts went ignored. While this misallocation of resources may have seemed reasonable, since the relatively few investigations those analysts performed did produce meaningful findings, in reality those SOCs just ignored almost everything. On the other hand, I have also encountered many organizations that focused all their effort on triaging alerts but never moved on to investigating those incidents. These metrics measure each stage in that progression to promote an appropriate allocation of resources—to help answer, "Is the SOC doing the right things?"
+
+##### Events
+
+A raw count of events, typically expressed over time. Looks for trends: a sharp increase could indicate a noisy intrusion, while a decrease could indicate a loss in visibility. Look at events over time at a macro scale (in terms of days, weeks, and months) but also at the micro scale (hours).
+
+###### Events per Feed
+
+A raw count of events per feed. This highlights the most taxing data sources; when combined with some of the other measures below, this can help identify low-value feeds and serve as the basis for phasing them out.
+
+##### Alerts
+
+A raw count of alerts, typically expressed over time. Looks for trends here, too: an increase could indicate the introduction of a bad rule into production, while a decrease could indicate a loss in visibility. Look at alerts over time at a macro scale (in terms of days, weeks, and months) but also at the micro scale (hours). (via Expel in [Performance metrics, part 1: Measuring SOC efficiency](https://expel.com/blog/performance-metrics-measuring-soc-efficiency/))
+
+###### Alerts per Feed
+
+A raw count of alerts per feed. This highlights the noisiest data sources; when combined with some of the other measures below, this can help identify low-value feeds and serve as the basis for phasing them out. (via [Rob Morgan](https://twitter.com/sudobashman/status/1504376663320276995))
+
+###### Alert Latency
+
+The amount of time from alert to escalation as an incident or closure as a false positive. The SOC should set thresholds for **alert latency** based on the severity of the alert. For example, critical alerts must be handled within five minutes, high within fifteen minutes, medium within two hours, and low within six hours. (via Expel in [Performance metrics, part 1: Measuring SOC efficiency](https://expel.com/blog/performance-metrics-measuring-soc-efficiency/))
+
+###### Time Claimed
+
+The amount of time claimed per alert. A high value could indicate a low quality alert that requires a significant amount of investigation to triage effectively, which should drive the SOC to re-evaluate the alert or augment it with additional context. Although not so much a **measure of performance**, in the category of "alert-centric metrics", this is a helpful one to free up analysts for more productive work. (via Red Canary in [*Driving Efficacy Through Detector Tuning: a Deeper Dive Into Detection Engineering*](https://redcanary.com/blog/tuning-detectors/))
+
+##### Incidents
+
+A raw count of incidents, typically expressed over time. As opposed to alerts, which identify potential malicious activity based on some heuristic, incidents are declared in response to confirmed malicious activity. The declaration of an incident should trigger an investigation.
+
+###### Incidents per feed
+
+A raw count of incidents per feed. This should highlight high-value data sources, and serve as a basis for de-prioritizing low-value ones. ([via Rob Morgan on Twitter](https://twitter.com/sudobashman/status/1504376663320276995))
+
+##### Investigations
+
+A raw count of investigations, typically expressed over time.
+
+While an incident should trigger an investigation, and therefore **incidents** and **investigations** should equal each other, several situations could cause them to diverge. For example, an understaffed SOC might lack the capacity to investigate every incident, causing **investigations** to remain constant as **incidents** increases. A change in policy could instead require the SOC to investigate certain events, regardless of whether or not those events warrant investigating, which would cause **investigations** to increase as **incidents** remained constant. Loss of a critical data feed might cause both to nosedive. Visualize these counts over time and identify the root cause when they increase, decrease, or diverge.
+
+###### Investigations per feed
+
+A raw count of investigations per feed. This should help identify high-value data sources, and serve as a basis for de-prioritizing low-value ones. A divergence between **events**, **alerts**, or **incidents per feed** and **investigations per feed** would highlight data sources with a low signal to noise ratio. Such noisy feeds should be tuned or removed. ([via Rob Morgan on Twitter](https://twitter.com/sudobashman/status/1504376663320276995))
+
+Syslog is a good example of a feed that tends to have a low signal to noise ratio. Many devices generate syslog-formatted logs by default and have a native mechanism for sending them to a central server. This makes syslog one of the easiest data sources to collect. Inconsistency across syslog implementations, however, and sparse information within those logs limits their practical value. 
+
+##### Remediations
+
+A raw count of remediations, typically expressed over time. A divergence in investigations and remediations could help identify a shortage of resources in one of those groups.
+
+
+The Funnel of Fidelity provides a good framework for assessing the SOC’s allocation of resources in the investigative pipeline. Measuring volume at each stage, as described above, is a good way to help answer the question, "Is the SOC doing the right things?" **Time to Resolution** and its constituent metrics, discussed next, help assess whether or not (and to what degree) the SOC is doing the *right things* based on how its personnel spend their time. 
+
+#### Time to Detection (TTD)
+
+The amount of time from the earliest evidence of related activity to the start of an investigation; also called the adversary's "dwell time". Take note of the "related activity" qualifier: if the investigation uncovers evidence of malicious activity going back to January 1st, the SOC must use January 1st as the starting point for its **time to detection** calculation even if the first alert did not appear until January 15th. The **time to detection** calculation ends with the formal declaration of an investigation.
+
+Event or alert latency can be an important factor in this calculation. Some organizations ship all data to their SIEM at night to avoid clogging the network with management traffic during normal business hours, which means it would take *at a minimum* an entire business day for the SOC to identify a malicious command executed on one of its endpoints. This may be a compromise born of necessity, but it is still a compromise, and the SOC must make clear the risk it entails.
+
+#### Time to Investigate (TTI)
+
+The amount of time from the start of an investigation to its conclusion. This calculation begins with the formal declaration of an investigation, and ends with its closure. Closing an investigation should automatically trigger some sort of remediation procedure.
+
+In [*Testing and validation in the modern security operations center*](https://redcanary.com/blog/testing-validation-security-operations-center/), Keith McCammon recommended breaking up TTD and TTI further: 
+
+* Time to Detect (from earliest evidence of related activity to detection)
+* Time to Acknowledge (from detection to acknowledgement by SOC personnel)
+* Time to Confirmation (from acknowledgement to confirmation of an incident, which initiates an investigation)
+* Time to Investigate (from confirmation of an incident to the conclusion of its investigation)
+
+I consider this unnecessarily complicated for most SOCs. TTD and TTI should suffice, and if those metrics need improved managers can delve into more granular detail to identify bottlenecks.
+
+#### Time to Remediate (TTRem)
+
+The amount of time from the end of an investigation, which should automatically trigger some sort of remediation procedure, to fully remediated. An appropriate definition of "remediated" is beyond the scope of this article, but in the interest of promoting effective response actions, I will include this explanation from an as of yet unpublished paper *Understanding the Enemy: Techniques for Mapping Adversary Infrastructure*.
+
+> In order to be effective, an incident response methodology must deny the adversary use of all avenues of approach: not just the domains and IP addresses the analysts initially identified, but also backup persistence mechanisms involving secondary command and control servers; in order to be effective, that response must focus not only on the original hosts, but other endpoints in the environment to which the adversary may have laterally moved as well. In MITRE's technical report *TTP-Based Hunting*, authors Daszczyszak et. al. called this "pulling the thread": "To pursue a malicious hit, the hunt team should 'pull the thread' both backwards and forwards to find the activity which caused the hit (ideally back to the initial infection), as well as subsequent activity to determine the scope and scale of the adversary's actions." Compared to the traditional incident response process in which administrators block individual IP addresses, re-image hosts, and then move on, this methodology may actually enable an effective response.
+
+#### Time to Resolution (TTRes)
+
+The amount of time from the earliest evidence of related activity to fully remediated. Time to Resolution can also be expressed as an equation: `TTRes = TTD + TTI + TTRem`.
+
+This level of granularity helps identify bottlenecks in the security program. For example, if SOC analysts drag their feet investigating (high TTI) but IT admins do a stellar job remediating systems after a compromise (low TTRem), this might lead to an overall acceptable TTRes; that metric alone, however, would mask the SOC's gross inefficiency. Since investigation and remediation are typically the responsibilities of separate groups, it helps to evaluate their performance separately. 
+
+A good benchmark for these metrics is the 1-10-60 rule: detecting an intrusion within 1 minute (TTD), investigating within 10 minutes (TTI), and isolating or remediating the problem within 60 minutes (TTRem). This would place the upper bound for TTRes at 71 minutes. Given the rapid pace at which most modern threat actors compromise their targets, consider this the *minimum* necessary to effectively defend a network.[^2]
+
+**Time to Resolution**, and its constituent metrics, help assess whether or not (and to what degree) the SOC is doing the *right things* based on how its personnel spend their time. If its analysts do not focus on hunting or triaging alerts, TTD will go up; if they focus too much on detection or remediation, TTI will go up; if the remediation team drags their feet, TTRem will go up. Time is one way to measure this at the macro level, and the Funnel of Fidelity helps measure focus at the micro level by looking at that detection-investigation-remediation pipeline specifically. 
+
+**Time to Assess Exposure** and **Time to Onboard**, below, measure how quickly the SOC can sweep its environment for viable avenues of approach and integrate new data feeds into its SIEM, respectively. These are also important measures when assessing the SOC's actions in support of its goal to efficiently detect, thoroughly investigate, and effectively remediate malicious activity.
+
+#### Time to Assess Exposure
+
+The amount of time to sweep an environment for a specific vulnerability or particular configuration that exposes the organization. (via Carson Zimmerman, from [*Practical SOC Metrics*](https://www.first.org/global/sigs/metrics/events)) 
+
+#### Time to Onboard
+
+The amount of time to onboard a new data feed into the SOC's SIEM. This is one of the most subjective metrics in this list: should the clock start when an analysts requests a new data feed, when an executive approves the request, when the systems administrators reconfigure the environment to collect that data, or only after all those steps as a way to assess the SOC's ability to integrate an extant feed into the SIEM? Each course of action has its benefits and drawbacks, but I prefer to start the clock when the analyst makes the original request. Again, if this metric needs improved, managers can delve into more granular details to identify bottlenecks as necessary. ([via Rob Morgan on Twitter](https://twitter.com/sudobashman/status/1504375889609506818))
+
+
+In a follow-up blog post to [his Twitter thread](https://twitter.com/anton_chuvakin/status/1502431529481375747), [*How to SLO Your SOC Right? More SRE Wisdom for Your SOC!*](https://medium.com/anton-on-security/how-to-slo-your-soc-right-more-sre-wisdom-for-your-soc-3113000d065), Dr. Anton Chuvakin made several recommendations for implementing SOC metrics well. A few of my favorites:
+
+* **Assess metrics by percentiles, not averages.** A single outlier could destroy a strong average, but percentiles tell a similar story with less sensitivity to extreme values.
+* **Define an error budget.** If you set targets for these metrics, also set an acceptable error range for those targets.
+* **Avoid over-optimization.** The corollary to Albert Einstein's advice, "Make everything as simple as possible, but not simpler" is to improve these metrics as much as possible but not more. Many metrics have counter-intuitive optimal values. For example, it may seem like Time to Investigate should get as close to zero as possible, but at some point over-indexing on that number encourages the wrong behavior as analysts prematurely close tickets just to meet an arbitrary target.
+
+Dr. Chuvakin also explained that, "I've not seen people succeed with more than 10 [metrics], and I've not seen people describe and optimize SOC performance with less than 3." No hard rule exists. Between this article and [part one](SOC Metrics Part I.txt), I have already outlined several SOC-specific metrics, many of which required sub-metrics, with several more to come in [part three](Soc Metrics Part III.txt). Managers must strike a delicate balance between measuring too much, such that measurement becomes the objective over the actual execution of effective security operations, versus measuring too little, such that the program becomes ineffective for lack of oversight. I have no recommendation for exactly how many metrics a SOC should employ, just recommendations for what it should measure.
+
+This article outlined several **measures of performance**, metrics that assess friendly action (the *right things*), but not those actions' ability to affect the system. Recall that success requires not just doing the *right things*, but also doing them in the *right ways*. [Part three](SOC Metrics Part III.txt) focuses on the last piece of this puzzle, on **measures of effectiveness**.
+
+{SOC_Metrics_Series_Index.txt}
+
+### Resources
+
+This section lists several resources for SOC metrics, some of which were cited throughout this article. This post contained the metrics that would have been most effective in my organization as judged by my personal experience working in a SOC, but you may find these articles helpful as well.
+
+* [7 Incident Response Metrics and How to Use Them](https://securityscorecard.com/blog/how-to-use-incident-response-metrics)
+* [SOC Series: How to Make a Security Operations Center More Efficient](https://www.rapid7.com/blog/post/2016/12/06/how-to-make-your-security-operations-center-more-efficient/)
+* [Five Guidelines for Measuring and Reporting on Your Security Operations Program](https://redcanary.com/blog/measuring-reporting-security-operations-program/)
+
+[>1] During [episode 10](https://overcast.fm/+n56BexybY) of [Detection: Challenging Paradigms](https://www.dcppodcast.com/), starting at [00:44:35](https://overcast.fm/+n56BexybY/44:37), Jonathan Johnson explained an interesting application of the Funnel of Fidelity as a way to visualize evasion opportunities. Attackers may evade collection altogether by bypassing logging, triage by manipulating the artifacts that appear in alerts, investigation by blending in with normal activity, and remediation with backup persistence mechanisms. The Funnel of Fidelity is a useful lens through which to view many challenges, but this article focuses on its applicability to measuring SOC performance.
+
+[>2] Mandiant's annual M-Trends report for 2022, published on [April 19th](https://www.mandiant.com/resources/m-trends-2022), included some statistics on TTD: "Let's start with a win for defenders: the global median dwell time has continued its decline in 2021. For intrusions investigated between October 1, 2020 through December 31, 2021, the median number of days between compromise and detection was 21 days (down from 24 days in 2020)." While TTD may be decreasing, it is certainly far from optimal.

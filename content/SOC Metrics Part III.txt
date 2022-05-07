@@ -1,0 +1,150 @@
+Type: original
+Title: SOC Metrics, Part III: Measures of Effectiveness
+Link: soc-metrics-part-iii.html
+Pubdate: 2022/05/07 10:27:01
+Category: Uncategorized
+Author: Zac Szewczyk
+
+In [part one](SOC Metrics Part I.txt) of the SOC Metrics series, I introduced the idea that success requires the *right person* doing the *right things* in the *right ways*. That article also described several **foundational metrics**, ways to measure the SOC's ability to produce meaningful results. [Part two](SOC Metrics Part II.txt) then focused on **measures of performance** (MOPs), which assess whether or not (and to what degree) the SOC is doing the *right things*. This article delves into **measures of effectiveness**, the last step in defining useful SOC metrics.
+
+{SOC_Metrics_Series_Index.txt}
+
+As in the last article, I based my selection of metrics on extensive research and on personal operational experience. I also include several sources for other metrics at the end of this article in the [resources](#resources) section. 
+
+### Measures of Effectiveness
+
+Again, recall that definitions of MOPs and MOEs from JP 5-0: [*Joint Planning*](https://www.jcs.mil/Doctrine/Joint-Doctrine-Pubs/5-0-Planning-Series/) underlie this series. JP 5-0 defines a measure of performance as "an indicator used to measure a friendly action that is tied to measuring task accomplishment", and a measure of effectiveness as "an indicator used to measure a current system state, with change indicated by comparing multiple observations over time." MOPs concern themselves with friendly action (the *right things*), while MOEs concern themselves with those actions' ability to change the system (the *right things* done in the *right ways*). This article describes several SOC-specific **measures of effectiveness**, selected for their ability to help answer the question, "Is the SOC doing the right things in the right ways?"
+
+Recall also that "right", here, depends on the SOC's purpose, and that this series assumes that the SOC's purpose is to efficiently detect, thoroughly investigate, and effectively remediate malicious activity. MOPs help ensure friendly actions support that goal, and MOEs help ensure those actions actually achieve it. It is not enough that the SOC "go through the motions", and these **measures of effectiveness** serve as a guardrail against that.
+
+As in [part two](SOC Metrics Part II.txt), in the interest of time and since many of these measures require less explanation than the ones I described in [part one](SOC Metrics Part I.txt), I erred on the side of brevity here. Subsequent articles may cover some of these in greater detail.
+
+#### Alert Resolution
+
+Tracking alert volume over time helps understand the SOC's allocation of resources, [how its personnel spend their time](/blog/soc-metrics-part-i.html#thefunneloffidelity), but that practice does not capture how effectively those analysts process those alerts. Once, during an incident response, I discovered that the local administrator had received so many alerts for Mimikatz that he marked them all as false positives, cleared all the alerts, and then disabled the rule. In order to be *effective*, a SOC should also track alert resolution using categories such as those described in Desiree Sacher's paper [*Improving Security Incident Quality in SOCs with Resolution Categories*](/assets/Improving_Security_Incident_Quality_in_SOCs_with_Resolution_Categories.pdf). In the case of that administrator, the tens of alerts he classified as "false positives" would have caused an unusual spike in that category, which his manager could have then investigated.
+
+#### Investigation Resolution
+
+For the same reason it is important to track alert resolution by category, it is also important to track investigation resolution by category as well. CJCSM 6510.01B: *Cyber Incident Handling Program*](https://www.jcs.mil/Library/CJCS-Manuals/), details a basic categorization scheme on page B-A-1 (page 51). Again, look for conspicuous concentrations here, too.
+
+I also find it helpful to track number of investigations by category over time as well. Some organizations have a tendency to use "Category 8: Investigating" as the catch-all bin for anything without a clear answer, which means it only grows over time. Alternately, an inexperienced analyst might have a tendency to close investigations as "Category 5: Unsuccessful Activity Attempt" without performing the due diligence to reasonably support that conclusion.
+
+#### Classification
+
+In this context, classification is the process by which investigations are arrayed into one of three categories: 
+
+* **True positives**: the investigation was based on malicious activity.
+* **False positives**: the investigation was based on benign activity.
+* **False negatives**: the investigation failed to identify malicious activity despite its presence.
+
+Although a fourth category exists, **true negatives**, it is infeasible to expect SOC analysts to prove the innocence of any activity in a sufficiently rigorous manner--especially at scale. The amorphous nature of the fifth domain, the level of abstraction inherent in the data collected from it, and the general lack of context necessary to support such a classification make this a poor use of limited SOC resources. As Matt Graeber pointed out years ago [on Twitter](https://twitter.com/mattifestation/status/809105346870460416), "A sufficiently advanced threat actor is indistinguishable from a competent system administrator." To task an analyst to make that distinction would be to task them to do the impossible.
+
+Classifying investigations into one of these three categories supports the SOC's mission to thoroughly investigate malicious activity: it demonstrates rigor, to ensure that the SOC is not just processing events, alerts, and investigations, but that it is doing so well. 
+
+##### True Positives
+
+The percentage of investigations based on malicious activity. The SOC should strive for a high true positive rate to establish and maintain credibility.
+
+##### False Positives
+
+The percentage of investigations based on benign activity. Although many consider false positives a waste of time, it is important not to try to eliminate false positives. That would mean (implicitly) accepting an irresponsibly high false negative rate. The SOC should strive to reduce false positives, but it must not reduce them to such an extent that it biases analysts away from investigating suspicious activity and in doing so increases false negatives. As Jared Atkinson explained in [episode twenty-one of the Detecting Challenging Paradigms podcast](https://anchor.fm/dcppodcast/episodes/Episode-21-Anton-Ovrutsky-e1foho3), the danger of false negatives is too high:
+
+> "There's no cap to the impact a false negative can have. The cost of a false positive is the equivalent of the amount of time an analyst spends looking into it. And so there's a finite cost to false positives. Now, the criticism of that approach is, while the impact of false negatives is exponential and the impact of false positives is linear, the occurrence of false negatives is linear and the occurrence of false positives is exponential." - [102:20:00](https://overcast.fm/+n56D_4EhQ/1:42:20).
+
+##### False Negatives
+
+The percentage of investigations that failed to identify malicious activity despite its presence. These errors typically stem from a far too narrow rule in the case of alerts[^1], or from inexperienced and unsupervised analysts in the case of investigations. Unlike false positives, the SOC should strive to eliminate false negatives through training and education.
+
+
+In [a Twitter thread on measuring SOC quality](https://twitter.com/jhencinski/status/1254465280367083521), Jon Hencinski recommended finding defects in the investigative process by assigning a third party (an analyst not involved in the initial classification) to review investigations using a standard, transparent, and well-reasoned process. The investigations themselves should identify true and false positives, but only this practice will identify false negatives.
+
+#### Root Cause Remediation (RCR)
+
+In an as of yet unpublished paper, *Understanding the Enemy: Techniques for Mapping Adversary Infrastructure*, I explain the importance of identifying the root of a compromise in order to effectively remediate it:
+
+> In order to be effective, an incident response methodology must deny the adversary use of all avenues of approach: not just the domains and IP addresses the analysts initially identified, but also backup persistence mechanisms involving secondary command and control servers; in order to be effective, that response must focus not only on the original hosts, but other endpoints in the environment to which the adversary may have laterally moved as well. In MITRE's technical report *TTP-Based Hunting*, authors Daszczyszak et. al. called this "pulling the thread": "To pursue a malicious hit, the hunt team should 'pull the thread' both backwards and forwards to find the activity which caused the hit (ideally back to the initial infection), as well as subsequent activity to determine the scope and scale of the adversary's actions." Compared to the traditional incident response process in which administrators block individual IP addresses, re-image hosts, and then move on, this methodology may actually enable an effective response.
+
+Every single metric in this series, from [foundational metrics](SOC Metrics Part I.txt) to [measures of performance](SOC Metrics Part II.txt) to the measures of effectiveness described above, was chosen to support effective remediation. Measures of performance help ensure the SOC is doing the right things, measures of effectiveness help ensure the SOC is doing them in the right ways, and foundational metrics ensure those two measures mean something--and they all exist to to ensure the SOC efficiently detects, thoroughly investigates, and effectively remediates malicious activity. Effective remediation depends on efficient detection and thorough investigation, which the rest of the metrics in this series assess; this final metric measures the percentage of investigations in which the root cause of the compromise was remediated. 
+
+`RCR = (Investigations w/out root cause) / ((Investigations w/out root cause) + (Investigations w/ root cause))`
+
+At first, this may seem like an impossible metric. Many organizations lack the collection, retention, and visibility to trace a compromise back in time and throughout its environment--but that is the point. Every single metric in this series was chosen to support effective remediation, the cornerstone upon which successful security programs rest; if any of them fail, so will this one.
+
+### SOC Metrics
+
+This series described a collection of SOC-specific metrics. For ease of reference, this list contains each of those metrics along with a brief description.
+
+<ul>
+    <li><a href="SOC Metrics Part I.txt">Part I: Foundational Metrics</a></li>
+        <ul>
+            <li><a href="/blog/soc-metrics-part-i.html#Datacoverage"><strong>Data coverage</strong></a>: the percentage of the environment the SOC can observe. `Monitored / (Monitored + Unmonitored + Shadow IT + Rogue devices`</li>
+            <li><a href="/blog/soc-metrics-part-i.html#Dataquality"><strong>Data quality</strong></a>: a measure of the SOC's ability to detect malicious activity occurring within its environment.</li>
+            <ul>
+                <li><strong>MITRE ATT&CK coverage</strong>: the percentage of techniques the SOC has the ability to detect</li>
+                <li><strong>presence</strong>: a binary, whether or not the SOC is receiving a particular data feed at any given time</li>
+                <li><strong>latency</strong>: a leading indicator that would highlight bottlenecks before they become catastrophic failures</li>
+                <li><strong>volume</strong>: a basic count of events.</li>
+                <li><strong>constitution</strong>: a count of unique sources, such as systems for endpoint events or sensors for network events.</li>
+            </ul>
+        </ul>
+    <li><a href="SOC Metrics Part II.txt">Part II: Measures of Performance</a></li>
+        <ul>
+            <li><a href="/blog/soc-metrics-part-ii.html#Events"><strong>Events</strong></a>: a raw count of events, typically expressed over time.</li>
+            <ul>
+                <li><a href="/blog/soc-metrics-part-ii.html#EventsperFeed"><strong>Events per Feed</strong></a>: a raw count of events per feed.</li>
+            </ul>
+            <li><a href="/blog/soc-metrics-part-ii.html#Alerts"><strong>Alerts</strong></a>: a raw count of alerts, typically expressed over time. </li>
+            <ul>
+                <li><a href="/blog/soc-metrics-part-ii.html#AlertsperFeed"><strong>Alerts per Feed</strong></a>: a raw count of alerts per feed.</li>
+                <li><a href="/blog/soc-metrics-part-ii.html#AlertLatency"><strong>Alert Latency</strong></a>: the amount of time from alert to escalation as an incident or closure as a false positive.</li>
+                <li><a href="/blog/soc-metrics-part-ii.html#TimeClaimed"><strong>Time Claimed</strong></a>: the amount of time claimed per alert.</li>
+            </ul>
+            <li><a href="/blog/soc-metrics-part-ii.html#Incidents"><strong>Incidents</strong></a>: a raw count of incidents, typically expressed over time.</li>
+            <ul>
+                <li><a href="/blog/soc-metrics-part-ii.html#Incidentsperfeed"><strong>Incidents per feed</strong></a>: a raw count of incidents per feed.</li>
+            </ul>
+            <li><a href="/blog/soc-metrics-part-ii.html#Investigations"><strong>Investigations</strong></a>: a raw count of investigations, typically expressed over time.</li>
+            <ul>
+                <li><a href="/blog/soc-metrics-part-ii.html#Investigationsperfeed"><strong>Investigations per feed</strong></a>: a raw count of investigations per feed.</li>
+            </ul>
+            <li><a href="/blog/soc-metrics-part-ii.html#Remediations"><strong>Remediations</strong></a>: a raw count of remediations, typically expressed over time.</li>
+            <li><a href="/blog/soc-metrics-part-ii.html#TimetoDetectionTTD"><strong>Time to Detection (TTD)</strong></a>: the amount of time from the earliest evidence of related activity to the start of an investigation; also called the adversary's "dwell time".</li>
+            <li><a href="/blog/soc-metrics-part-ii.html#TimetoInvestigateTTI"><strong>Time to Investigate (TTI)</strong></a>: the amount of time from the start of an investigation to its conclusion.</li>
+            <li><a href="/blog/soc-metrics-part-ii.html#TimetoRemediateTTRem"><strong>Time to Remediate (TTRem)</strong></a>: the amount of time from the end of an investigation, which should automatically trigger some sort of remediation procedure, to fully remediated.</li>
+            <li><a href="/blog/soc-metrics-part-ii.html#TimetoResolutionTTRes"><strong>Time to Resolution (TTRes)</strong></a>: the amount of time from the earliest evidence of related activity to fully remediated. `TTRes = TTD + TTI + TTRem`.</li>
+            <li><a href="/blog/soc-metrics-part-ii.html#TimetoAssessExposure"><strong>Time to Assess Exposure</strong></a>: The amount of time to sweep an environment for a specific vulnerability or particular configuration that exposes the organization.</li>
+            <li><a href="/blog/soc-metrics-part-ii.html#TimetoOnboard"><strong>Time to Onboard</strong></a>: The amount of time to onboard a new data feed into the SOC's SIEM.</li>
+        </ul>
+    <li><a href="SOC Metrics Part III.txt">Part III: Measures of Effectiveness</a></li>
+        <ul>
+            <li><a href="/blog/soc-metrics-part-iii.html#AlertResolution"><strong>Alert Resolution</strong></a>: alert resolution by category over time.</li>
+            <li><a href="/blog/soc-metrics-part-iii.html#InvestigationResolution"><strong>Investigation Resolution</strong></a>: investigation resolution by category over time.</li>
+            <li><a href="/blog/soc-metrics-part-iii.html#Classification"><strong>Classification</strong></a>: </li>
+            <ul>
+                <li><a href="/blog/soc-metrics-part-iii.html#TruePositives"><strong>True Positives</strong></a>: the percentage of alerts that correctly identified malicious activity, also called an incident.</li>
+                <li><a href="/blog/soc-metrics-part-iii.html#FalsePositives"><strong>False Positives</strong></a>: the percentage of alerts that flagged benign activity as malicious.</li>
+                <li><a href="/blog/soc-metrics-part-iii.html#FalseNegatives"><strong>False Negatives</strong></a>: the percentage of alerts that failed to flag malicious activity.</li>
+            </ul>
+            <li><a href="/blog/soc-metrics-part-iii.html#RootCauseRemediationRCR"><strong>Root Cause Remediation (RCR)</strong></a>: the percentage of investigations in which the root cause of the compromise was remediated.</li>
+        </ul>
+</ul>
+
+Mission command is a powerful tool. Like many military concepts, it translates well to the private sector. Empowerment, however, does not absolve decision makers of their duty to steward initiatives through appropriate guidance. In fact, it makes that guidance even *more* important. MOPs and MOEs are the guardrails against failure--without them, success becomes a game of chance. SOC metrics are hard, though, and so for years decision makers both in and out of the military have abdicated their responsibility to define them. At least now, nearly ten thousand words later, they will have somewhere to start.
+
+{SOC_Metrics_Series_Index.txt}
+
+### Resources
+
+This section lists several resources for SOC metrics, some of which were cited throughout this article. This post contained the metrics that would have been most effective in my organization as judged by my personal experience working in a SOC, but you may find these articles helpful as well.
+
+* [Behind the Scenes with Red Canary's Detection Engineering Team](https://redcanary.com/blog/detection-engineering/)
+* [Driving Efficacy Through Detector Tuning: a Deeper Dive Into Detection Engineering](https://redcanary.com/blog/tuning-detectors/)
+* [Triage Planning: What Can Security Teams Learn From First Responders?](https://redcanary.com/blog/triage-planning-first-responders/)
+* [Performance metrics, part 1: Measuring SOC efficiency](https://expel.com/blog/performance-metrics-measuring-soc-efficiency/)
+* [Performance metrics, part 2: Keeping things under control](https://expel.com/blog/performance-metrics-keeping-things-under-control/)
+* [Performance metrics, part 3: Success stories](https://expel.com/blog/performance-metrics-part-3-success-stories/)
+* [Talkin' SMAC: Alert Labeling and Why It Matters](https://www.rapid7.com/blog/post/2021/02/12/talkin-smac-alert-labeling-and-why-it-matters/)
+* [Moving Toward a Better Signature Metric in SOCs: Detection Efficacy](https://www.rapid7.com/blog/post/2020/05/15/moving-toward-a-better-signature-metric-in-socs-detection-efficacy/)
+* [How to measure SOC quality](https://expel.com/blog/how-to-measure-soc-quality/)
+
+[>1] Another way to identify false negatives is through threat hunting, the act of searching for evidence of malicious activity in an environment. The goal of threat hunting is to uncover the malicious activity that the extant detections did not identify either due to a gap or an incomplete rule--in other words, to identify false negatives.
