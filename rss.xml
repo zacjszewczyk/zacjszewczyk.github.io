@@ -7,14 +7,14 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 08 May 2022 04:19:01 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 May 2022 10:02:18 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
         <item>
             <title>SOC Metrics, Part III: Measures of Effectiveness</title>
             <link>https://zacs.site/blog/soc-metrics-part-iii.html</link>
             <guid isPermaLink='true'>https://zacs.site/blog/soc-metrics-part-iii.html</guid>
-            <pubDate>Sat, 07 May 2022 14:42:23 GMT</pubDate>
+            <pubDate>Sat, 07 May 2022 14:27:01 GMT</pubDate>
             <description>
                 &lt;p&gt;In &lt;a href="https://zacs.site/blog/soc-metrics-part-i.html"&gt;part one&lt;/a&gt; of the SOC Metrics series, I introduced the idea that success requires the &lt;em&gt;right person&lt;/em&gt; doing the &lt;em&gt;right things&lt;/em&gt; in the &lt;em&gt;right ways&lt;/em&gt;. That article also described several &lt;strong&gt;foundational metrics&lt;/strong&gt;, ways to measure the SOC&amp;#8217;s ability to produce meaningful results. &lt;a href="https://zacs.site/blog/soc-metrics-part-ii.html"&gt;Part two&lt;/a&gt; then focused on &lt;strong&gt;measures of performance&lt;/strong&gt; (MOPs), which assess whether or not (and to what degree) the SOC is doing the &lt;em&gt;right things&lt;/em&gt;. This article delves into &lt;strong&gt;measures of effectiveness&lt;/strong&gt;, the last step in defining useful SOC metrics.&lt;/p&gt;
                 &lt;p&gt;&lt;a href="https://zacs.site/blog/soc-metrics-part-iii.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
