@@ -2,7 +2,7 @@ Type: original
 Title: SOC Metrics, Part III: Measures of Effectiveness
 Link: soc-metrics-part-iii.html
 Pubdate: 2022/05/07 10:27:01
-Category: Uncategorized
+Category: Cybersecurity
 Author: Zac Szewczyk
 
 In [part one](SOC Metrics Part I.txt) of the SOC Metrics series, I introduced the idea that success requires the *right person* doing the *right things* in the *right ways*. That article also described several **foundational metrics**, ways to measure the SOC's ability to produce meaningful results. [Part two](SOC Metrics Part II.txt) then focused on **measures of performance** (MOPs), which assess whether or not (and to what degree) the SOC is doing the *right things*. This article delves into **measures of effectiveness**, the last step in defining useful SOC metrics.

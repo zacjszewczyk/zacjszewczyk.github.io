@@ -2,7 +2,7 @@ Type: original
 Title: SOC Metrics, Part II: Measures of Performance
 Link: soc-metrics-part-ii.html
 Pubdate: 2022/05/07 10:16:27
-Category: Uncategorized
+Category: Cybersecurity
 Author: Zac Szewczyk
 
 In [part one](SOC Metrics Part I.txt) of the SOC Metrics series, I introduced the idea that success requires the *right person* doing the *right things* in the *right ways*. **Measures of performance** (MOPs) assess whether or not (and to what degree) the SOC is doing the *right things*, and **measures of effectiveness** (MOEs) assess whether or not (and to what degree) the SOC is doing them in the *right ways*. MOPs and MOEs rely on foundational metrics to produce meaningful results, though, and so I started with them in [part one](SOC Metrics Part I.txt). This article delves into **measures of performance**, the next key step in defining useful SOC metrics.
