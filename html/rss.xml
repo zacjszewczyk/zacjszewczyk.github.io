@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 10 May 2022 10:02:18 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 May 2022 02:27:48 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Amateurs Talk Detection. Professionals Talk Collection.</title>
+            <link>https://zacs.site/blog/collection-and-detection.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/collection-and-detection.html</guid>
+            <pubDate>Sat, 14 May 2022 14:24:22 GMT</pubDate>
+            <description>
+                &lt;p&gt;I went to a presentation from a large cybersecurity firm the other day. The salesmen&amp;#160;&amp;#8212;&amp;#160;and they were all salesmen, as even a few post-presentation questions made clear&amp;#160;&amp;#8212;&amp;#160;focused on the intelligence their company produced, but knew little about the rest of their company&amp;#8217;s &lt;a href="https://www.jcs.mil/Doctrine/Joint-Doctrine-Pubs/2-0-Intelligence-Series/"&gt;intelligence cycle&lt;/a&gt;. As a consumer of their products, though, I consider knowledge of the process that created them critical. After an hour on finished intelligence, and in particular a slide that touted a &amp;#8220;globally deployed sensor grid&amp;#8221;, I wanted to know more about that production process in general, and about their collection specifically. Unfortunately, when asked, the salesmen offered a handful of handwavy &amp;#8220;We have millions of sensors across the globe&amp;#8221;, and, &amp;#8220;We ingest billions of events per day&amp;#8221; statements, but little beyond that.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/collection-and-detection.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>SOC Metrics, Part III: Measures of Effectiveness</title>
             <link>https://zacs.site/blog/soc-metrics-part-iii.html</link>
