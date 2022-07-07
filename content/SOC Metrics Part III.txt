@@ -147,4 +147,6 @@ This section lists several resources for SOC metrics, some of which were cited t
 * [Moving Toward a Better Signature Metric in SOCs: Detection Efficacy](https://www.rapid7.com/blog/post/2020/05/15/moving-toward-a-better-signature-metric-in-socs-detection-efficacy/)
 * [How to measure SOC quality](https://expel.com/blog/how-to-measure-soc-quality/)
 
+For his GIAC Gold Certification, Kirill Filatov wrote a good paper on information security metrics titlted [*Metrics-driven information security framework as part of information security management*](https://www.sans.org/white-papers/metrics-driven-information-security-framework-as-part-of-information-security-management/). While that paper focuses more on the *importance* of metrics rather than recommending specific metrics, especially for a SOC, his arguments are sound.
+
 [>1] Another way to identify false negatives is through threat hunting, the act of searching for evidence of malicious activity in an environment. The goal of threat hunting is to uncover the malicious activity that the extant detections did not identify either due to a gap or an incomplete rule--in other words, to identify false negatives.
