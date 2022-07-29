@@ -1,0 +1,12 @@
+Type: linkpost
+Title: There is no iceberg
+Link: https://world.hey.com/dhh/there-is-no-iceberg-d34f45bb)
+Pubdate: 2022/07/29 13:22:31
+Category: Uncategorized
+Author: Zac Szewczyk
+
+From David Heinemeier Hansson:
+
+> It's human nature to assume there's a good reason for why things are the way they are. And that this reason is either benign, based on careful deliberation, or malignant, derived from malice or incompetence. But this is a false dichotomy that often steers us away from the simpler answer: Nobody thought about this at all.
+
+Given an absence of information, many tend to fill those gaps with generous assumptions. At the beginning of Russia's botched invasion of Ukraine, national security pundits considered it some sort of 4D chess game; time proved otherwise. [No one knows what they're doing](https://www.fastcompany.com/675870/no-one-knows-what-theyre-doing), "It's OK though--that's not where your problems are coming from. Rather, your problems are coming from the fact that you think other people know what they're doing."

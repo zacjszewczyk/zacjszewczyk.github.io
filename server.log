@@ -1,8 +1,7 @@
-127.0.0.1 - - [07/May/2022 10:42:35] GET / HTTP/1.1 200 -
-127.0.0.1 - - [07/May/2022 10:42:35] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [07/May/2022 10:42:35] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [07/May/2022 10:42:37] GET /blog/soc-metrics-part-iii.html HTTP/1.1 200 -
-127.0.0.1 - - [07/May/2022 10:42:37] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [07/May/2022 10:43:14] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [07/May/2022 10:43:14] GET /assets/main.css HTTP/1.1 200 -
-- - - [7/5/2022 10:43:24] Graceful shutdown - -
+127.0.0.1 - - [29/Jul/2022 13:22:55] GET / HTTP/1.1 200 -
+127.0.0.1 - - [29/Jul/2022 13:22:55] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [29/Jul/2022 13:22:55] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [29/Jul/2022 13:22:58] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [29/Jul/2022 13:22:58] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [29/Jul/2022 13:22:58] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+- - - [29/7/2022 13:23:10] Graceful shutdown - -
