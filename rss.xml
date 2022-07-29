@@ -7,9 +7,27 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 29 Jul 2022 04:53:08 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 29 Jul 2022 05:22:44 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>There is no iceberg</title>
+            <link>https://world.hey.com/dhh/there-is-no-iceberg-d34f45bb)</link>
+            <guid isPermaLink='true'>https://world.hey.com/dhh/there-is-no-iceberg-d34f45bb)</guid>
+            <pubDate>Fri, 29 Jul 2022 17:22:31 GMT</pubDate>
+            <description>
+                &lt;p&gt;From David Heinemeier Hansson:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It&amp;#8217;s human nature to assume there&amp;#8217;s a good reason for why things are the way they are. And that this reason is either benign, based on careful deliberation, or malignant, derived from malice or incompetence. But this is a false dichotomy that often steers us away from the simpler answer: Nobody thought about this at all.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Given an absence of information, many tend to fill those gaps with generous assumptions. At the beginning of Russia&amp;#8217;s botched invasion of Ukraine, national security pundits considered it some sort of 4D chess game; time proved otherwise. &lt;a href="https://www.fastcompany.com/675870/no-one-knows-what-theyre-doing"&gt;No one knows what they&amp;#8217;re doing&lt;/a&gt;, &amp;#8220;It&amp;#8217;s OK though&amp;#160;&amp;#8212;&amp;#160;that&amp;#8217;s not where your problems are coming from. Rather, your problems are coming from the fact that you think other people know what they&amp;#8217;re doing.&amp;#8221;&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://world.hey.com/dhh/there-is-no-iceberg-d34f45bb)"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Amateurs Talk Detection. Professionals Talk Collection.</title>
             <link>https://zacs.site/blog/collection-and-detection.html</link>
