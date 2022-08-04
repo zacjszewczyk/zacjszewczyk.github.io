@@ -1,0 +1,63 @@
+Individual versus Program SOC Metrics
+=====================================
+
+The other day, a member of SANS's [GIAC Advisory Board](https://lists.sans.org/mailman/listinfo/advisory-board-open) asked a question about Mean Time to Detect, or MTTD. In the ensuing discussion, another member cautioned against confusing key performance indicators (KPIs) used to assess individual efficiency, to then serve as the basis for penalties and rewards, with measures of program efficiency. Holding individuals accountable for MTTD, for example, made little sense when that detection relied on factors outside of their control such as effective data collection and efficient aggregation into a centralized platform, all of which were likely to be managed by a separate department. I alluded to the challenge of implementing metrics well in [part one](/blog/soc-metrics-part-i.html#TheMetricsControversy), but did not deal with this or other, similar issues specifically. This bonus article provides specific recommendations for applying SOC metrics to individuals versus an entire program.
+
+> "On the other hand, few use metrics in general--and SOC metrics in particular--well. This series does not ignore the potential downsides of introducing metrics into an organization not ready for them. As Mick Douglass alluded to in [*Rapid–er Incident Response: How Fast Should You Go?*](https://dynamicciso.com/rapid-er-incident-response-how-fast-should-you-go/), organizations that prioritize speed over effectiveness just rush to failure. The root of this problem, however, lies in poor management. Any discussion of SOC metrics must separate their value as enablers of the positives I described in [part one] from the downsides that result from their improper implementation. A corollary to one of this post's central ideas, the notion of success resulting from the *right person* doing the *right things* in the *right ways*, is that successfully implementing SOC metrics requires the *right person* acting on the *right metrics* in the *right ways*. I have little to offer in the way of recommendations for selecting the *right person*, but I will offer my take on the *right metrics* and the *right ways*. I did, however, select many of these metrics such that over-indexing on any one would cause one or more others to fail. This will not solve the problem of bad management, but it may at least help reduce its impact."
+
+When the SOC manager sees high TTI and above average false negatives, does he or she see a lazy and incompetent analyst? Or does that manager see someone who could benefit from some training (were they hired or promoted into a role for which they did not have sufficient knowledge and experience?) or individual mentorship (are outside factors impacting their work performance, such as trouble at home?)? Even the best SOC metrics cannot mitigate the impact of bad management. 
+
+<ul>
+    <li><a href="SOC Metrics Part I.txt">Part I: Foundational Metrics</a></li>
+    <ul>
+        <li><a href="/blog/soc-metrics-part-i.html#Datacoverage"><strong>Data coverage</strong></a>: the percentage of the environment the SOC can observe. `Monitored / (Monitored + Unmonitored + Shadow IT + Rogue devices`</li>
+        <li><a href="/blog/soc-metrics-part-i.html#Dataquality"><strong>Data quality</strong></a>: a measure of the SOC's ability to detect malicious activity occurring within its environment.</li>
+        <ul>
+            <li><strong>MITRE ATT&CK coverage</strong>: the percentage of techniques the SOC has the ability to detect</li>
+            <li><strong>presence</strong>: a binary, whether or not the SOC is receiving a particular data feed at any given time</li>
+            <li><strong>latency</strong>: a leading indicator that would highlight bottlenecks before they become catastrophic failures</li>
+            <li><strong>volume</strong>: a basic count of events.</li>
+            <li><strong>constitution</strong>: a count of unique sources, such as systems for endpoint events or sensors for network events.</li>
+        </ul>
+    </ul>
+    <li><a href="SOC Metrics Part II.txt">Part II: Measures of Performance</a></li>
+    <ul>
+        <li><a href="/blog/soc-metrics-part-ii.html#Events"><strong>Events</strong></a>: a raw count of events, typically expressed over time.</li>
+        <ul>
+            <li><a href="/blog/soc-metrics-part-ii.html#EventsperFeed"><strong>Events per Feed</strong></a>: a raw count of events per feed.</li>
+        </ul>
+        <li><a href="/blog/soc-metrics-part-ii.html#Alerts"><strong>Alerts</strong></a>: a raw count of alerts, typically expressed over time. </li>
+        <ul>
+            <li><a href="/blog/soc-metrics-part-ii.html#AlertsperFeed"><strong>Alerts per Feed</strong></a>: a raw count of alerts per feed.</li>
+            <li><a href="/blog/soc-metrics-part-ii.html#AlertLatency"><strong>Alert Latency</strong></a>: the amount of time from alert to escalation as an incident or closure as a false positive.</li>
+            <li><a href="/blog/soc-metrics-part-ii.html#TimeClaimed"><strong>Time Claimed</strong></a>: the amount of time claimed per alert.</li>
+        </ul>
+        <li><a href="/blog/soc-metrics-part-ii.html#Incidents"><strong>Incidents</strong></a>: a raw count of incidents, typically expressed over time.</li>
+        <ul>
+            <li><a href="/blog/soc-metrics-part-ii.html#Incidentsperfeed"><strong>Incidents per feed</strong></a>: a raw count of incidents per feed.</li>
+        </ul>
+        <li><a href="/blog/soc-metrics-part-ii.html#Investigations"><strong>Investigations</strong></a>: a raw count of investigations, typically expressed over time.</li>
+        <ul>
+            <li><a href="/blog/soc-metrics-part-ii.html#Investigationsperfeed"><strong>Investigations per feed</strong></a>: a raw count of investigations per feed.</li>
+        </ul>
+        <li><a href="/blog/soc-metrics-part-ii.html#Remediations"><strong>Remediations</strong></a>: a raw count of remediations, typically expressed over time.</li>
+        <li><a href="/blog/soc-metrics-part-ii.html#TimetoDetectionTTD"><strong>Time to Detection (TTD)</strong></a>: the amount of time from the earliest evidence of related activity to the start of an investigation; also called the adversary's "dwell time".</li>
+        <li><a href="/blog/soc-metrics-part-ii.html#TimetoInvestigateTTI"><strong>Time to Investigate (TTI)</strong></a>: the amount of time from the start of an investigation to its conclusion.</li>
+        <li><a href="/blog/soc-metrics-part-ii.html#TimetoRemediateTTRem"><strong>Time to Remediate (TTRem)</strong></a>: the amount of time from the end of an investigation, which should automatically trigger some sort of remediation procedure, to fully remediated.</li>
+        <li><a href="/blog/soc-metrics-part-ii.html#TimetoResolutionTTRes"><strong>Time to Resolution (TTRes)</strong></a>: the amount of time from the earliest evidence of related activity to fully remediated. `TTRes = TTD + TTI + TTRem`.</li>
+        <li><a href="/blog/soc-metrics-part-ii.html#TimetoAssessExposure"><strong>Time to Assess Exposure</strong></a>: The amount of time to sweep an environment for a specific vulnerability or particular configuration that exposes the organization.</li>
+        <li><a href="/blog/soc-metrics-part-ii.html#TimetoOnboard"><strong>Time to Onboard</strong></a>: The amount of time to onboard a new data feed into the SOC's SIEM.</li>
+    </ul>
+    <li><a href="SOC Metrics Part III.txt">Part III: Measures of Effectiveness</a></li>
+    <ul>
+        <li><a href="/blog/soc-metrics-part-iii.html#AlertResolution"><strong>Alert Resolution</strong></a>: alert resolution by category over time.</li>
+        <li><a href="/blog/soc-metrics-part-iii.html#InvestigationResolution"><strong>Investigation Resolution</strong></a>: investigation resolution by category over time.</li>
+        <li><a href="/blog/soc-metrics-part-iii.html#Classification"><strong>Classification</strong></a>: </li>
+        <ul>
+            <li><a href="/blog/soc-metrics-part-iii.html#TruePositives"><strong>True Positives</strong></a>: the percentage of alerts that correctly identified malicious activity, also called an incident.</li>
+            <li><a href="/blog/soc-metrics-part-iii.html#FalsePositives"><strong>False Positives</strong></a>: the percentage of alerts that flagged benign activity as malicious.</li>
+            <li><a href="/blog/soc-metrics-part-iii.html#FalseNegatives"><strong>False Negatives</strong></a>: the percentage of alerts that failed to flag malicious activity.</li>
+        </ul>
+        <li><a href="/blog/soc-metrics-part-iii.html#RootCauseRemediationRCR"><strong>Root Cause Remediation (RCR)</strong></a>: the percentage of investigations in which the root cause of the compromise was remediated.</li>
+    </ul>
+</ul>
