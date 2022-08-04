@@ -77,7 +77,7 @@ This series described a collection of SOC-specific metrics. For ease of referenc
 <ul>
     <li><a href="SOC Metrics Part I.txt">Part I: Foundational Metrics</a></li>
         <ul>
-            <li><a href="/blog/soc-metrics-part-i.html#Datacoverage"><strong>Data coverage</strong></a>: the percentage of the environment the SOC can observe. `Monitored / (Monitored + Unmonitored + Shadow IT + Rogue devices`</li>
+            <li><a href="/blog/soc-metrics-part-i.html#Datacoverage"><strong>Data coverage</strong></a>: the percentage of the environment the SOC can observe. <code>Monitored / (Monitored + Unmonitored + Shadow IT + Rogue devices</code></li>
             <li><a href="/blog/soc-metrics-part-i.html#Dataquality"><strong>Data quality</strong></a>: a measure of the SOC's ability to detect malicious activity occurring within its environment.</li>
             <ul>
                 <li><strong>MITRE ATT&CK coverage</strong>: the percentage of techniques the SOC has the ability to detect</li>
@@ -111,7 +111,7 @@ This series described a collection of SOC-specific metrics. For ease of referenc
             <li><a href="/blog/soc-metrics-part-ii.html#TimetoDetectionTTD"><strong>Time to Detection (TTD)</strong></a>: the amount of time from the earliest evidence of related activity to the start of an investigation; also called the adversary's "dwell time".</li>
             <li><a href="/blog/soc-metrics-part-ii.html#TimetoInvestigateTTI"><strong>Time to Investigate (TTI)</strong></a>: the amount of time from the start of an investigation to its conclusion.</li>
             <li><a href="/blog/soc-metrics-part-ii.html#TimetoRemediateTTRem"><strong>Time to Remediate (TTRem)</strong></a>: the amount of time from the end of an investigation, which should automatically trigger some sort of remediation procedure, to fully remediated.</li>
-            <li><a href="/blog/soc-metrics-part-ii.html#TimetoResolutionTTRes"><strong>Time to Resolution (TTRes)</strong></a>: the amount of time from the earliest evidence of related activity to fully remediated. `TTRes = TTD + TTI + TTRem`.</li>
+            <li><a href="/blog/soc-metrics-part-ii.html#TimetoResolutionTTRes"><strong>Time to Resolution (TTRes)</strong></a>: the amount of time from the earliest evidence of related activity to fully remediated. <code>TTRes = TTD + TTI + TTRem</code>.</li>
             <li><a href="/blog/soc-metrics-part-ii.html#TimetoAssessExposure"><strong>Time to Assess Exposure</strong></a>: The amount of time to sweep an environment for a specific vulnerability or particular configuration that exposes the organization.</li>
             <li><a href="/blog/soc-metrics-part-ii.html#TimetoOnboard"><strong>Time to Onboard</strong></a>: The amount of time to onboard a new data feed into the SOC's SIEM.</li>
         </ul>
