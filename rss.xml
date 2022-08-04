@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 02 Aug 2022 04:17:34 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Aug 2022 09:28:13 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Individual versus Program SOC Metrics</title>
+            <link>https://zacs.site/blog/individual-versus-program-soc-metrics.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/individual-versus-program-soc-metrics.html</guid>
+            <pubDate>Thu, 04 Aug 2022 21:20:36 GMT</pubDate>
+            <description>
+                &lt;p&gt;The other day, a member of SANS&amp;#8217;s &lt;a href="https://lists.sans.org/mailman/listinfo/advisory-board-open"&gt;GIAC Advisory Board&lt;/a&gt; asked a question about Mean Time to Detection, or MTTD. In the ensuing discussion, another member cautioned against confusing key performance indicators used to assess individual efficiency, to then serve as the basis for penalties and rewards, with measures of program efficiency. Holding individuals accountable for MTTD, for example, made little sense when that detection relied on factors outside of their control such as effective data collection and efficient aggregation into a centralized platform, each of which were likely to be managed by a separate department. I alluded to the challenge of implementing metrics in &lt;a href="https://zacs.site/blog/soc-metrics-part-i.html#TheMetricsControversy"&gt;part one&lt;/a&gt;, but did not deal with this issue specifically. This bonus article provides specific recommendations for applying SOC metrics to individuals versus an entire program.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/individual-versus-program-soc-metrics.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>There is no iceberg</title>
             <link>https://world.hey.com/dhh/there-is-no-iceberg-d34f45bb)</link>
