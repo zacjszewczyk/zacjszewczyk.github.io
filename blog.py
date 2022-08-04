@@ -146,7 +146,7 @@ def GetContent(*content_file):
 # that information, insert it into the file, and revert the update time.
 # Parameters
 # - content_file: Path to content file. (String)
-def Migrate(content_file):
+def Migrate(content_file, config):
     # Store mod time for later
     mtime = stat(content_file).st_mtime
 
@@ -206,7 +206,7 @@ def TestAndBuild(content_file,mtime,config,template):
     line = content_fd.readline()
     if ("Type: " not in line):
         content_fd.close()
-        Migrate(f"{BASE_DIR}content/{content_file}")
+        Migrate(f"{BASE_DIR}content/{content_file}",config)
         content_fd = open(f"{BASE_DIR}content/{content_file}", "r", encoding=ENCODING)
     else:
         line = line.split(":", 1)
