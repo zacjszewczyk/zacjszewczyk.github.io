@@ -2,7 +2,7 @@ Type: original
 Title: Individual versus Program SOC Metrics
 Link: individual-versus-program-soc-metrics.html
 Pubdate: 2022/08/04 17:20:36
-Category: Uncategorized
+Category: Cybersecurity
 Author: Zac Szewczyk
 
 The other day, a member of SANS's [GIAC Advisory Board](https://lists.sans.org/mailman/listinfo/advisory-board-open) asked a question about Mean Time to Detection, or MTTD. In the ensuing discussion, another member cautioned against confusing key performance indicators used to assess individual efficiency, to then serve as the basis for penalties and rewards, with measures of program efficiency. Holding individuals accountable for MTTD, for example, made little sense when that detection relied on factors outside of their control such as effective data collection and efficient aggregation into a centralized platform, each of which were likely to be managed by a separate department. I alluded to the challenge of implementing metrics in [part one](/blog/soc-metrics-part-i.html#TheMetricsControversy), but did not deal with this issue specifically. This bonus article provides specific recommendations for applying SOC metrics to individuals versus an entire program.

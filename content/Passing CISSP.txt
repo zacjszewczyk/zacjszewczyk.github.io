@@ -2,7 +2,7 @@ Type: original
 Title: Passing CISSP
 Link: passing-cissp.html
 Pubdate: 2022/08/05 13:18:09
-Category: Uncategorized
+Category: Cybersecurity
 Author: Zac Szewczyk
 
 Like college degrees before them, professional certifications seem to be waning in popularity in the cybersecurity industry. Perhaps as a way to mitigate the well-documented workforce shortage, some companies have gradually begun to account for competence and experience, too, rather than onerous credentials alone--and in some cases, base their hiring decisions solely on those criteria. This is a localized phenomenon, though, exclusively limited to the private sector, and even there primarily limited to smaller firms. In the public sector, at many large firms, and particularly at large firms that work with the government, formal credentials such as a degree and professional certifications remain not only an important factor, but in many cases the only factor. This led me to take (ISC)<sup>2</sup>'s Certified Information Systems Security Professional (CISSP) exam earlier this summer. Even as a Cyber Operations Officer, credentials like this one carry great weight. I passed on my first attempt, so in this article I want to share my preparation strategy.
