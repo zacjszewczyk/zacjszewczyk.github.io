@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 04 Aug 2022 09:28:13 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Aug 2022 05:18:20 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Passing CISSP</title>
+            <link>https://zacs.site/blog/passing-cissp.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/passing-cissp.html</guid>
+            <pubDate>Fri, 05 Aug 2022 17:18:09 GMT</pubDate>
+            <description>
+                &lt;p&gt;Like college degrees before them, professional certifications seem to be waning in popularity in the cybersecurity industry. Perhaps as a way to mitigate the well-documented workforce shortage, some companies have gradually begun to account for competence and experience, too, rather than onerous credentials alone&amp;#160;&amp;#8212;&amp;#160;and in some cases, base their hiring decisions solely on those criteria. This is a localized phenomenon, though, exclusively limited to the private sector, and even there primarily limited to smaller firms. In the public sector, at many large firms, and particularly at large firms that work with the government, formal credentials such as a degree and professional certifications remain not only an important factor, but in many cases the only factor. This led me to take (ISC)&amp;lt;sup&amp;gt;2&amp;lt;/sup&amp;gt;&amp;#8217;s Certified Information Systems Security Professional (CISSP) exam earlier this summer. Even as a Cyber Operations Officer, credentials like this one carry great weight. I passed on my first attempt, so in this article I want to share my preparation strategy.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/passing-cissp.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Individual versus Program SOC Metrics</title>
             <link>https://zacs.site/blog/individual-versus-program-soc-metrics.html</link>
