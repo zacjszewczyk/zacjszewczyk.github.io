@@ -293,7 +293,7 @@ if (__name__ == "__main__"):
 
     # Make replacements in template based on config file
     template[0] = template[0].replace("{{byline}}", config["byline"], 5).replace("{{meta_appname}}", config["meta_appname"], 1).replace("{{meta_keywords}}", config["meta_keywords"], 1).replace("{{meta_baseurl}}", config["meta_baseurl"], 1).replace("{{full_name}}", config["full_name"], 1)
-    template[1] = template[1].replace("{{twitter_url}}", config["twitter_url"], 1).replace("{{insta_url}}", config["insta_url"], 1).replace("{{full_name}}", config["full_name"], 1)
+    template[1] = template[1].replace("{{twitter_url}}", config["twitter_url"], 1).replace("{{insta_url}}", config["insta_url"], 1).replace("{{linkedin_url}}", config["linkedin_url"], 1).replace("{{full_name}}", config["full_name"], 1)
 
     # Build list of files (files), track stats (stats), and track success
     # or failure of generator function (results)
