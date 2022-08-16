@@ -62,6 +62,8 @@ Look to unofficial sources for military education as well. Some people like to p
 ### Podcasts
 
 * [The Jocko Podcast](https://jockopodcast.com/). This podcast is the preeminent resource for leadership and military development. If you take just one resource and ignore every single other recommendation in this post, make it this podcast. From the informative personal experiences Jocko and his guests share to the exhaustive literary and historical reviews they conduct, the only thing that could make these hundreds of hours of audio more valuable would be more of them. Also check out the [Jocko Unraveling](https://www.theunravelingpodcast.com/) podcast focuses on current events.
+* [Hardcore History](https://www.dancarlin.com/hardcore-history-series/). Dan Carlin's ability to research, prepare, and tell a story is unmatched. His lessons in history are some of the best I have ever encountered. Also check out [Common Sense with Dan Carlin](https://www.dancarlin.com/product-category/common-sense-with-dan-carlin/) as well.
+* [Martyr Made](https://martyrmade.com/). Darryl Cooper's podcast also draws from a variety of sources to paint a vivid picture of days long past. He is a close second to Dan Carlin in terms of research, preparation, and storytelling ability.
 
 ### Movies
 
@@ -112,6 +114,10 @@ Rather than maintain duplicate lists, this section includes few books or article
 * [*Computers can be understood*](https://blog.nelhage.com/post/computers-can-be-understood/). Modern computers have gotten so complex that the prospect of trying to understand them intimidates a lot of people. Unfortunately, many use that fear as an excuse not to even try. As professionals, though, we have a responsibility to develop this expertise. Nelson Elhage has some good advice for tackling this gargantuan task.
 * [*They don't even know the fundamentals*](https://blog.royalsloth.eu/posts/they-dont-even-know-the-fundamentals/). Here the author argues that “the fundamentals” are knowable but not necessary for everyone: “one man’s fundamentals are another man’s trivia.” This is a nice counterpoint to *Computers Can be Understood*, which makes the case for developing that broad expertise.
 * [*Operators, EDR Sensors, and OODA Loops*](http://jackson-t.ca/ooda-loops.html). This article not only explains John Boyd's OODA as it applies to operators in the fifth domain, Jackson also walks through its practical application to cyberspace operations. This is a fantastic read, and one of the rare works that bridges the gap between conventional military knowledge and cyber.
+
+### Podcasts
+
+* [Detection: Challenging Paradigms]. Jared Atkinson and Jonathan Johnson, and their guests, have a lot of interesting thoughts on the theory behind threat hunting and incident response. Their fascinating discussions have taught me a great deal about this field.
 
 ### Topics
 
