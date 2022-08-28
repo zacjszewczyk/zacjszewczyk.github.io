@@ -137,6 +137,7 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [https://pre.empt.dev/](https://pre.empt.dev/) - A joint project between two researchers, this website has a handful of interesting articles about detection and detection evasion.
 * [https://shellsharks.com](https://shellsharks.com) - Mike Sass's website is a wealth of information for everyone in the information security space, from beginners to all experience levels.
 * [https://danielmiessler.com/](https://danielmiessler.com/) - Daniel Miessler writes *a lot* about *a lot* of topics, but I discovered his website through his information security writings. 
+* [https://offensivecyber.org/](https://offensivecyber.org/) - The Offensive Cyber Working Group is a UK-based initiative to to examine the conceptual, policy, and practical implications of offensive cyber operations.
 
 ### Miscellaneous
 
@@ -163,6 +164,7 @@ This last group of websites does not fit into of the genres above, but over the 
 * [http://www.jeffgeerling.com/](http://www.jeffgeerling.com/) - Jeff Geerling's Raspberry Pi projects push the limits of what most consider possible for these small devices.
 * [https://utf9k.net](https://utf9k.net) - Marcus Crane writes about tech.
 * [http://blairreeves.me](http://blairreeves.me) - Blair Reeves talks about tech, life, and writing a blog.
+* [https://michael.stapelberg.ch/](https://michael.stapelberg.ch/) - Michael Stapelberg consistently posts great articles on his many interesting projects.
 
 #### The Full List
 
@@ -235,6 +237,7 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://jackson_t.gitlab.io/](https://jackson_t.gitlab.io/)
 * [https://shellsharks.com](https://shellsharks.com)
 * [https://danielmiessler.com/](https://danielmiessler.com/)
+* [https://offensivecyber.org/](https://offensivecyber.org/)
 * [https://n-o-d-e.net/](https://n-o-d-e.net/)
 * [https://secondbreakfast.co](https://secondbreakfast.co)
 * [http://danluu.com](http://danluu.com)
@@ -256,5 +259,6 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [http://www.jeffgeerling.com/](http://www.jeffgeerling.com/)
 * [https://utf9k.net](https://utf9k.net)
 * [http://blairreeves.me](http://blairreeves.me)
+* [https://michael.stapelberg.ch](https://michael.stapelberg.ch)
 
 I like big-name websites for keeping up on current events, but I tend to find the best content on sites like these. The advice to "follow people, not places" has served me well, and I encourage you to start doing the same.
