@@ -142,6 +142,7 @@ This section lists several resources for SOC metrics, some of which were cited t
 * [SOC Series: How to Make a Security Operations Center More Efficient](https://www.rapid7.com/blog/post/2016/12/06/how-to-make-your-security-operations-center-more-efficient/)
 * [Five Guidelines for Measuring and Reporting on Your Security Operations Program](https://redcanary.com/blog/measuring-reporting-security-operations-program/)
 * [An Information Security Metrics Primer](https://danielmiessler.com/study/information-security-metrics/)
+* [Better Security Metrics](https://github.com/malwarejake-public/conference-presentations/blob/main/Metrics%20-%202022%20BlueTeamCon%20-%20MalwareJake.pdf)
 
 [>1] During [episode 10](https://overcast.fm/+n56BexybY) of [Detection: Challenging Paradigms](https://www.dcppodcast.com/), starting at [00:44:35](https://overcast.fm/+n56BexybY/44:37), Jonathan Johnson explained an interesting application of the Funnel of Fidelity as a way to visualize evasion opportunities. Attackers may evade collection altogether by bypassing logging, triage by manipulating the artifacts that appear in alerts, investigation by blending in with normal activity, and remediation with backup persistence mechanisms. The Funnel of Fidelity is a useful lens through which to view many challenges, but this article focuses on its applicability to measuring SOC performance.
 
