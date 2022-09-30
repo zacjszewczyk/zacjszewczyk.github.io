@@ -138,6 +138,7 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [https://shellsharks.com](https://shellsharks.com) - Mike Sass's website is a wealth of information for everyone in the information security space, from beginners to all experience levels.
 * [https://danielmiessler.com/](https://danielmiessler.com/) - Daniel Miessler writes *a lot* about *a lot* of topics, but I discovered his website through his information security writings. 
 * [https://offensivecyber.org/](https://offensivecyber.org/) - The Offensive Cyber Working Group is a UK-based initiative to to examine the conceptual, policy, and practical implications of offensive cyber operations.
+* [https://www.netmeister.org/blog/](https://www.netmeister.org/blog/) - Jan Schaumann writes fantastically in-depth posts about networking and network protocols.
 
 ### Miscellaneous
 
@@ -238,6 +239,7 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://shellsharks.com](https://shellsharks.com)
 * [https://danielmiessler.com/](https://danielmiessler.com/)
 * [https://offensivecyber.org/](https://offensivecyber.org/)
+* [https://www.netmeister.org/blog/](https://www.netmeister.org/blog/)
 * [https://n-o-d-e.net/](https://n-o-d-e.net/)
 * [https://secondbreakfast.co](https://secondbreakfast.co)
 * [http://danluu.com](http://danluu.com)
