@@ -139,6 +139,7 @@ I would not call myself a good programmer. I know enough [to do some damage](/pr
 * [https://danielmiessler.com/](https://danielmiessler.com/) - Daniel Miessler writes *a lot* about *a lot* of topics, but I discovered his website through his information security writings. 
 * [https://offensivecyber.org/](https://offensivecyber.org/) - The Offensive Cyber Working Group is a UK-based initiative to to examine the conceptual, policy, and practical implications of offensive cyber operations.
 * [https://www.netmeister.org/blog/](https://www.netmeister.org/blog/) - Jan Schaumann writes fantastically in-depth posts about networking and network protocols.
+* [https://bakerstreetforensics.com/](https://bakerstreetforensics.com/) - Doug Metz writes some interesting posts about information security and other, related topics.
 
 ### Miscellaneous
 
