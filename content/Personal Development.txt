@@ -118,7 +118,7 @@ Rather than maintain duplicate lists, this section includes few books or article
 
 ### Podcasts
 
-* [Detection: Challenging Paradigms]. Jared Atkinson and Jonathan Johnson, and their guests, have a lot of interesting thoughts on the theory behind threat hunting and incident response. Their fascinating discussions have taught me a great deal about this field.
+* [Detection: Challenging Paradigms](https://www.dcppodcast.com/). Jared Atkinson and Jonathan Johnson, and their guests, have a lot of interesting thoughts on the theory behind threat hunting and incident response. Their fascinating discussions have taught me a great deal about this field.
 
 ### Topics
 
