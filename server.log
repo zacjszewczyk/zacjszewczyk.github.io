@@ -1,14 +1,6 @@
-127.0.0.1 - - [04/Aug/2022 17:28:32] GET / HTTP/1.1 200 -
-127.0.0.1 - - [04/Aug/2022 17:28:32] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [04/Aug/2022 17:28:32] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [04/Aug/2022 17:28:32] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
-127.0.0.1 - - [04/Aug/2022 17:28:34] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [04/Aug/2022 17:28:34] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [04/Aug/2022 17:28:35] GET /blog/individual-versus-program-soc-metrics.html HTTP/1.1 200 -
-127.0.0.1 - - [04/Aug/2022 17:28:35] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [04/Aug/2022 17:28:45] GET /favicon.ico HTTP/1.1 404 -
-127.0.0.1 - - [04/Aug/2022 17:28:53] GET /blog/soc-metrics-part-iii.html HTTP/1.1 200 -
-127.0.0.1 - - [04/Aug/2022 17:28:53] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [04/Aug/2022 17:29:01] GET /blog/individual-versus-program-soc-metrics.html HTTP/1.1 200 -
-127.0.0.1 - - [04/Aug/2022 17:29:01] GET /assets/main.css HTTP/1.1 200 -
-- - - [4/8/2022 17:29:3] Graceful shutdown - -
+127.0.0.1 - - [18/Oct/2022 14:26:39] GET / HTTP/1.1 200 -
+127.0.0.1 - - [18/Oct/2022 14:26:39] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [18/Oct/2022 14:26:39] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [18/Oct/2022 14:26:40] GET /blog/cybersecurity-tools-and-resources.html HTTP/1.1 200 -
+127.0.0.1 - - [18/Oct/2022 14:26:40] GET /assets/main.css HTTP/1.1 200 -
+- - - [18/10/2022 14:48:8] Graceful shutdown - -
