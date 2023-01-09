@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Does Jeff Bezos Read Asymco?
-Link: http://stratechery.com/2014/jeff-bezos-read-asymco/
-Pubdate: 2014/04/23 15:17:55
-Category: Tech
-Author: Zac Szewczyk
-
-I doubt it, but who knows--maybe Jeff Bezos has an assistant gather Horace's articles every evening, print them onto sheets of newspaper, and insert the pages between those of his morning delivery of The Washington Post. Weirder things have happened before, anyway. To Ben's point though, making the distinction between novelty, creation, invention, and innovation is incredibly important regardless of which side of the fence you fall on, whether among those creating products or writing about them. Having a firm grasp of these marked differences will not only inform how one frames emergent technologies, developing market segments, and potential businesses, but the viability of focusing any attention on to any one--or all--of these areas as well.

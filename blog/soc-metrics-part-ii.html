@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="In [part one](SOC Metrics Part I.txt) of the SOC Metrics series, I introduced the idea that success requires the *right person* doing the *right things* in the *right ways*. **Measures of performance** (MOPs) assess whether or not (and to what degree) the SOC is doing the *right things*, and **measures of effectiveness** (MOEs) assess whether or not (and to what degree) the SOC is doing them in the *right ways*. MOPs and MOEs rely on foundational metrics to produce meaningful results, though, and so I started with them in [part one](SOC Metrics Part I.txt). This article delves into **measures of performance**, the next key step in defining useful SOC metrics.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="SOC Metrics, Part II: Measures of Performance - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>SOC Metrics, Part II: Measures of Performance - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/soc-metrics-part-ii.html">SOC Metrics, Part II: Measures of Performance</a>
+</h2>
+<time id='article_time' datetime="2022-05-07 10:16:27-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2022.html">2022</a>/<a href="/blog/2022-05.html">05</a>/07 10:16:27 EST in <a href='/cybersecurity.html'>Cybersecurity</a></time>
+<p>In <a href="https://zacs.site/blog/soc-metrics-part-i.html">part one</a> of the SOC Metrics series, I introduced the idea that success requires the <em>right person</em> doing the <em>right things</em> in the <em>right ways</em>. <strong>Measures of performance</strong> (MOPs) assess whether or not (and to what degree) the SOC is doing the <em>right things</em>, and <strong>measures of effectiveness</strong> (MOEs) assess whether or not (and to what degree) the SOC is doing them in the <em>right ways</em>. MOPs and MOEs rely on foundational metrics to produce meaningful results, though, and so I started with them in <a href="https://zacs.site/blog/soc-metrics-part-i.html">part one</a>. This article delves into <strong>measures of performance</strong>, the next key step in defining useful SOC metrics.</p>
+
+<ul id="series_index">
+    <li><a href="/blog/soc-metrics-part-i.html">SOC Metrics, Part I: Foundational Metrics</a></li>
+    <li><a href="/blog/soc-metrics-part-ii.html">SOC Metrics, Part II: Measures of Performance</a></li>
+    <li><a href="/blog/soc-metrics-part-iii.html">SOC Metrics, Part III: Measures of Effectiveness</a></li>
+    <li>Bonus: <a href="/blog/individual-versus-program-soc-metrics.html">Individual versus Program SOC Metrics</a></li>
+</ul>
+
+<p>As in the last article, I based my selection of metrics on extensive research and on personal operational experience. I also include several sources for other metrics at the end of this article in the <a href="#resources">resources</a> section. </p>
+
+<h3 class="headers" id="MeasuresofPerformance">Measures of Performance<span>&nbsp;<a href="#MeasuresofPerformance">#</a></span></h3>
+
+<p>Recall that definitions of MOPs and MOEs from JP 5-0: <a href="https://www.jcs.mil/Doctrine/Joint-Doctrine-Pubs/5-0-Planning-Series/"><em>Joint Planning</em></a> underlie this series. JP 5-0 defines a measure of performance as &#8220;an indicator used to measure a friendly action that is tied to measuring task accomplishment&#8221;, and a measure of effectiveness as &#8220;an indicator used to measure a current system state, with change indicated by comparing multiple observations over time.&#8221; MOPs concern themselves with friendly action (the <em>right things</em>), while MOEs concern themselves with those actions&#8217; ability to change the system (the <em>right things</em> done in the <em>right ways</em>). This article describes several SOC-specific <strong>measures of performance</strong>, selected for their ability to help answer the question, &#8220;Is the SOC doing the right things?&#8221;</p>
+
+<p>In the interest of time, and since many of these measures require less explanation than the ones I described in <a href="https://zacs.site/blog/soc-metrics-part-i.html">part one</a>, I erred on the side of brevity here. Subsequent articles may cover some of these in greater detail.</p>
+
+<h4 class="headers" id="TheFunnelofFidelity">The Funnel of Fidelity<span>&nbsp;<a href="#TheFunnelofFidelity">#</a></span></h4>
+
+<p>In 2019, Jared Atkinson developed the <em>Funnel of Fidelity</em>, pictured below. As he explained in <a href="https://posts.specterops.io/introducing-the-funnel-of-fidelity-b1bb59b04036"><em>Introducing the Funnel of Fidelity</em></a>, this model depicts the process by which many events become a few incidents through triage and investigation. It also highlights the importance of optimizing that evolution so that the funnel does not become clogged, a key consideration for those overseeing the incident handling process.<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup></p>
+
+<div class='image'><img src='/assets/images/funnel-of-fidelity.png' alt='' title='Funnel of Fidelity diagram' loading='lazy' /></div>
+
+<p>I frequently encountered organizations that devoted all their resources to investigations. This meant their analysts dipped into alerts only occasionally to find a lead, and only viewed events in the narrow context of the investigation they had already begun. As a result, almost all events went uninspected and the vast majority of alerts went ignored. While this misallocation of resources may have seemed reasonable, since the relatively few investigations those analysts performed did produce meaningful findings, in reality those SOCs just ignored almost everything. On the other hand, I have also encountered many organizations that focused all their effort on triaging alerts but never moved on to investigating those incidents. These metrics measure each stage in that progression to promote an appropriate allocation of resources—to help answer, &#8220;Is the SOC doing the right things?&#8221;</p>
+
+<h5 class="headers" id="Events">Events<span>&nbsp;<a href="#Events">#</a></span></h5>
+
+<p>A raw count of events, typically expressed over time. Looks for trends: a sharp increase could indicate a noisy intrusion, while a decrease could indicate a loss in visibility. Look at events over time at a macro scale (in terms of days, weeks, and months) but also at the micro scale (hours).</p>
+
+<h6 class="headers" id="EventsperFeed">Events per Feed<span>&nbsp;<a href="#EventsperFeed">#</a></span></h6>
+
+<p>A raw count of events per feed. This highlights the most taxing data sources; when combined with some of the other measures below, this can help identify low-value feeds and serve as the basis for phasing them out.</p>
+
+<h5 class="headers" id="Alerts">Alerts<span>&nbsp;<a href="#Alerts">#</a></span></h5>
+
+<p>A raw count of alerts, typically expressed over time. Looks for trends here, too: an increase could indicate the introduction of a bad rule into production, while a decrease could indicate a loss in visibility. Look at alerts over time at a macro scale (in terms of days, weeks, and months) but also at the micro scale (hours). (via Expel in <a href="https://expel.com/blog/performance-metrics-measuring-soc-efficiency/">Performance metrics, part 1: Measuring SOC efficiency</a>)</p>
+
+<h6 class="headers" id="AlertsperFeed">Alerts per Feed<span>&nbsp;<a href="#AlertsperFeed">#</a></span></h6>
+
+<p>A raw count of alerts per feed. This highlights the noisiest data sources; when combined with some of the other measures below, this can help identify low-value feeds and serve as the basis for phasing them out. (via <a href="https://twitter.com/sudobashman/status/1504376663320276995">Rob Morgan</a>)</p>
+
+<h6 class="headers" id="AlertLatency">Alert Latency<span>&nbsp;<a href="#AlertLatency">#</a></span></h6>
+
+<p>The amount of time from alert to escalation as an incident or closure as a false positive. The SOC should set thresholds for <strong>alert latency</strong> based on the severity of the alert. For example, critical alerts must be handled within five minutes, high within fifteen minutes, medium within two hours, and low within six hours. (via Expel in <a href="https://expel.com/blog/performance-metrics-measuring-soc-efficiency/">Performance metrics, part 1: Measuring SOC efficiency</a>)</p>
+
+<h6 class="headers" id="TimeClaimed">Time Claimed<span>&nbsp;<a href="#TimeClaimed">#</a></span></h6>
+
+<p>The amount of time claimed per alert. A high value could indicate a low quality alert that requires a significant amount of investigation to triage effectively, which should drive the SOC to re-evaluate the alert or augment it with additional context. Although not so much a <strong>measure of performance</strong>, in the category of &#8220;alert-centric metrics&#8221;, this is a helpful one to free up analysts for more productive work. (via Red Canary in <a href="https://redcanary.com/blog/tuning-detectors/"><em>Driving Efficacy Through Detector Tuning: a Deeper Dive Into Detection Engineering</em></a>)</p>
+
+<h5 class="headers" id="Incidents">Incidents<span>&nbsp;<a href="#Incidents">#</a></span></h5>
+
+<p>A raw count of incidents, typically expressed over time. As opposed to alerts, which identify potential malicious activity based on some heuristic, incidents are declared in response to confirmed malicious activity. The declaration of an incident should trigger an investigation.<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup></p>
+
+<h6 class="headers" id="Incidentsperfeed">Incidents per feed<span>&nbsp;<a href="#Incidentsperfeed">#</a></span></h6>
+
+<p>A raw count of incidents per feed. This should highlight high-value data sources, and serve as a basis for de-prioritizing low-value ones. (<a href="https://twitter.com/sudobashman/status/1504376663320276995">via Rob Morgan on Twitter</a>)</p>
+
+<h5 class="headers" id="Investigations">Investigations<span>&nbsp;<a href="#Investigations">#</a></span></h5>
+
+<p>A raw count of investigations, typically expressed over time.</p>
+
+<p>While an incident should trigger an investigation, and therefore <strong>incidents</strong> and <strong>investigations</strong> should equal each other, several situations could cause them to diverge. For example, an understaffed SOC might lack the capacity to investigate every incident, causing <strong>investigations</strong> to remain constant as <strong>incidents</strong> increases. A change in policy could instead require the SOC to investigate certain events, regardless of whether or not those events warrant investigating, which would cause <strong>investigations</strong> to increase as <strong>incidents</strong> remained constant. Loss of a critical data feed might cause both to nosedive. Visualize these counts over time and identify the root cause when they increase, decrease, or diverge.</p>
+
+<h6 class="headers" id="Investigationsperfeed">Investigations per feed<span>&nbsp;<a href="#Investigationsperfeed">#</a></span></h6>
+
+<p>A raw count of investigations per feed. This should help identify high-value data sources, and serve as a basis for de-prioritizing low-value ones. A divergence between <strong>events</strong>, <strong>alerts</strong>, or <strong>incidents per feed</strong> and <strong>investigations per feed</strong> would highlight data sources with a low signal to noise ratio. Such noisy feeds should be tuned or removed. (<a href="https://twitter.com/sudobashman/status/1504376663320276995">via Rob Morgan on Twitter</a>)</p>
+
+<p>Syslog is a good example of a feed that tends to have a low signal to noise ratio. Many devices generate syslog-formatted logs by default and have a native mechanism for sending them to a central server. This makes syslog one of the easiest data sources to collect. Inconsistency across syslog implementations, however, and sparse information within those logs limits their practical value. </p>
+
+<h5 class="headers" id="Remediations">Remediations<span>&nbsp;<a href="#Remediations">#</a></span></h5>
+
+<p>A raw count of remediations, typically expressed over time. A divergence in investigations and remediations could help identify a shortage of resources in one of those groups.</p>
+
+
+<p>The Funnel of Fidelity provides a good framework for assessing the SOC’s allocation of resources in the investigative pipeline. Measuring volume at each stage, as described above, is a good way to help answer the question, &#8220;Is the SOC doing the right things?&#8221; <strong>Time to Resolution</strong> and its constituent metrics, discussed next, help assess whether or not (and to what degree) the SOC is doing the <em>right things</em> based on how its personnel spend their time. </p>
+
+<h4 class="headers" id="TimetoDetectionTTD">Time to Detection (TTD)<span>&nbsp;<a href="#TimetoDetectionTTD">#</a></span></h4>
+
+<p>The amount of time from the earliest evidence of related activity to the start of an investigation; also called the adversary&#8217;s &#8220;dwell time&#8221;. Take note of the &#8220;related activity&#8221; qualifier: if the investigation uncovers evidence of malicious activity going back to January 1st, the SOC must use January 1st as the starting point for its <strong>time to detection</strong> calculation even if the first alert did not appear until January 15th. The <strong>time to detection</strong> calculation ends with the formal declaration of an investigation.</p>
+
+<p>Event or alert latency can be an important factor in this calculation. Some organizations ship all data to their SIEM at night to avoid clogging the network with management traffic during normal business hours, which means it would take <em>at a minimum</em> an entire business day for the SOC to identify a malicious command executed on one of its endpoints. This may be a compromise born of necessity, but it is still a compromise, and the SOC must make clear the risk it entails.</p>
+
+<h4 class="headers" id="TimetoInvestigateTTI">Time to Investigate (TTI)<span>&nbsp;<a href="#TimetoInvestigateTTI">#</a></span></h4>
+
+<p>The amount of time from the start of an investigation to its conclusion. This calculation begins with the formal declaration of an investigation, and ends with its closure. Closing an investigation should automatically trigger some sort of remediation procedure.</p>
+
+<p>In <a href="https://redcanary.com/blog/testing-validation-security-operations-center/"><em>Testing and validation in the modern security operations center</em></a>, Keith McCammon recommended breaking up TTD and TTI further: </p>
+
+<ul>
+    <li>Time to Detect (from earliest evidence of related activity to detection)</li>
+<li>Time to Acknowledge (from detection to acknowledgement by SOC personnel)</li>
+<li>Time to Confirmation (from acknowledgement to confirmation of an incident, which initiates an investigation)</li>
+<li>Time to Investigate (from confirmation of an incident to the conclusion of its investigation)</li>
+</ul>
+
+<p>I consider this unnecessarily complicated for most SOCs. TTD and TTI should suffice, and if those metrics need improved managers can delve into more granular detail to identify bottlenecks.</p>
+
+<h4 class="headers" id="TimetoRemediateTTRem">Time to Remediate (TTRem)<span>&nbsp;<a href="#TimetoRemediateTTRem">#</a></span></h4>
+
+<p>The amount of time from the end of an investigation, which should automatically trigger some sort of remediation procedure, to fully remediated. An appropriate definition of &#8220;remediated&#8221; is beyond the scope of this article, but in the interest of promoting effective response actions, I will include this explanation from an as of yet unpublished paper <em>Understanding the Enemy: Techniques for Mapping Adversary Infrastructure</em>.</p>
+
+<blockquote>
+    <p>In order to be effective, an incident response methodology must deny the adversary use of all avenues of approach: not just the domains and IP addresses the analysts initially identified, but also backup persistence mechanisms involving secondary command and control servers; in order to be effective, that response must focus not only on the original hosts, but other endpoints in the environment to which the adversary may have laterally moved as well. In MITRE&#8217;s technical report <em>TTP-Based Hunting</em>, authors Daszczyszak et. al. called this &#8220;pulling the thread&#8221;: &#8220;To pursue a malicious hit, the hunt team should &#8216;pull the thread&#8217; both backwards and forwards to find the activity which caused the hit (ideally back to the initial infection), as well as subsequent activity to determine the scope and scale of the adversary&#8217;s actions.&#8221; Compared to the traditional incident response process in which administrators block individual IP addresses, re-image hosts, and then move on, this methodology may actually enable an effective response.</p>
+</blockquote>
+
+<h4 class="headers" id="TimetoResolutionTTRes">Time to Resolution (TTRes)<span>&nbsp;<a href="#TimetoResolutionTTRes">#</a></span></h4>
+
+<p>The amount of time from the earliest evidence of related activity to fully remediated. Time to Resolution can also be expressed as an equation: <code>TTRes = TTD + TTI + TTRem</code>.</p>
+
+<p>This level of granularity helps identify bottlenecks in the security program. For example, if SOC analysts drag their feet investigating (high TTI) but IT admins do a stellar job remediating systems after a compromise (low TTRem), this might lead to an overall acceptable TTRes; that metric alone, however, would mask the SOC&#8217;s gross inefficiency. Since investigation and remediation are typically the responsibilities of separate groups, it helps to evaluate their performance separately. </p>
+
+<p>A good benchmark for these metrics is the 1-10-60 rule: detecting an intrusion within 1 minute (TTD), investigating within 10 minutes (TTI), and isolating or remediating the problem within 60 minutes (TTRem). This would place the upper bound for TTRes at 71 minutes. Given the rapid pace at which most modern threat actors compromise their targets, consider this the <em>minimum</em> necessary to effectively defend a network.<sup id="fnref3"><a href="#fn3" rel="footnote">3</a></sup></p>
+
+<p><strong>Time to Resolution</strong>, and its constituent metrics, help assess whether or not (and to what degree) the SOC is doing the <em>right things</em> based on how its personnel spend their time. If its analysts do not focus on hunting or triaging alerts, TTD will go up; if they focus too much on detection or remediation, TTI will go up; if the remediation team drags their feet, TTRem will go up. Time is one way to measure this at the macro level, and the Funnel of Fidelity helps measure focus at the micro level by looking at that detection-investigation-remediation pipeline specifically. </p>
+
+<p><strong>Time to Assess Exposure</strong> and <strong>Time to Onboard</strong>, below, measure how quickly the SOC can sweep its environment for viable avenues of approach and integrate new data feeds into its SIEM, respectively. These are also important measures when assessing the SOC&#8217;s actions in support of its goal to efficiently detect, thoroughly investigate, and effectively remediate malicious activity.</p>
+
+<h4 class="headers" id="TimetoAssessExposure">Time to Assess Exposure<span>&nbsp;<a href="#TimetoAssessExposure">#</a></span></h4>
+
+<p>The amount of time to sweep an environment for a specific vulnerability or particular configuration that exposes the organization. (via Carson Zimmerman, from <a href="https://www.first.org/global/sigs/metrics/events"><em>Practical SOC Metrics</em></a>) </p>
+
+<h4 class="headers" id="TimetoOnboard">Time to Onboard<span>&nbsp;<a href="#TimetoOnboard">#</a></span></h4>
+
+<p>The amount of time to onboard a new data feed into the SOC&#8217;s SIEM. This is one of the most subjective metrics in this list: should the clock start when an analysts requests a new data feed, when an executive approves the request, when the systems administrators reconfigure the environment to collect that data, or only after all those steps as a way to assess the SOC&#8217;s ability to integrate an extant feed into the SIEM? Each course of action has its benefits and drawbacks, but I prefer to start the clock when the analyst makes the original request. Again, if this metric needs improved, managers can delve into more granular details to identify bottlenecks as necessary. (<a href="https://twitter.com/sudobashman/status/1504375889609506818">via Rob Morgan on Twitter</a>)</p>
+
+
+<p>In a follow-up blog post to <a href="https://twitter.com/anton_chuvakin/status/1502431529481375747">his Twitter thread</a>, <a href="https://medium.com/anton-on-security/how-to-slo-your-soc-right-more-sre-wisdom-for-your-soc-3113000d065"><em>How to SLO Your SOC Right? More SRE Wisdom for Your SOC!</em></a>, Dr. Anton Chuvakin made several recommendations for implementing SOC metrics well. A few of my favorites:</p>
+
+<ul>
+    <li><strong>Assess metrics by percentiles, not averages.</strong> A single outlier could destroy a strong average, but percentiles tell a similar story with less sensitivity to extreme values.</li>
+<li><strong>Define an error budget.</strong> If you set targets for these metrics, also set an acceptable error range for those targets.</li>
+<li><strong>Avoid over-optimization.</strong> The corollary to Albert Einstein&#8217;s advice, &#8220;Make everything as simple as possible, but not simpler&#8221; is to improve these metrics as much as possible but not more. Many metrics have counter-intuitive optimal values. For example, it may seem like Time to Investigate should get as close to zero as possible, but at some point over-indexing on that number encourages the wrong behavior as analysts prematurely close tickets just to meet an arbitrary target.</li>
+</ul>
+
+<p>Dr. Chuvakin also explained that, &#8220;I&#8217;ve not seen people succeed with more than 10 [metrics], and I&#8217;ve not seen people describe and optimize SOC performance with less than 3.&#8221; No hard rule exists. Between this article and <a href="https://zacs.site/blog/soc-metrics-part-i.html">part one</a>, I have already outlined several SOC-specific metrics, many of which required sub-metrics, with several more to come in <a href="https://zacs.site/blog/soc-metrics-part-iii.html">part three</a>. Managers must strike a delicate balance between measuring too much, such that measurement becomes the objective over the actual execution of effective security operations, versus measuring too little, such that the program becomes ineffective for lack of oversight. I have no recommendation for exactly how many metrics a SOC should employ, just recommendations for what it should measure.</p>
+
+<p>This article outlined several <strong>measures of performance</strong>, metrics that assess friendly action (the <em>right things</em>), but not those actions&#8217; ability to affect the system. Recall that success requires not just doing the <em>right things</em>, but also doing them in the <em>right ways</em>. <a href="https://zacs.site/blog/soc-metrics-part-iii.html">Part three</a> focuses on the last piece of this puzzle, on <strong>measures of effectiveness</strong>.</p>
+
+<ul id="series_index">
+    <li><a href="/blog/soc-metrics-part-i.html">SOC Metrics, Part I: Foundational Metrics</a></li>
+    <li><a href="/blog/soc-metrics-part-ii.html">SOC Metrics, Part II: Measures of Performance</a></li>
+    <li><a href="/blog/soc-metrics-part-iii.html">SOC Metrics, Part III: Measures of Effectiveness</a></li>
+    <li>Bonus: <a href="/blog/individual-versus-program-soc-metrics.html">Individual versus Program SOC Metrics</a></li>
+</ul>
+
+<h3 class="headers" id="Resources">Resources<span>&nbsp;<a href="#Resources">#</a></span></h3>
+
+<p>This section lists several resources for SOC metrics, some of which were cited throughout this article. This post contained the metrics that would have been most effective in my organization as judged by my personal experience working in a SOC, but you may find these articles helpful as well.</p>
+
+<ul>
+    <li><a href="https://securityscorecard.com/blog/how-to-use-incident-response-metrics">7 Incident Response Metrics and How to Use Them</a></li>
+<li><a href="https://www.rapid7.com/blog/post/2016/12/06/how-to-make-your-security-operations-center-more-efficient/">SOC Series: How to Make a Security Operations Center More Efficient</a></li>
+<li><a href="https://redcanary.com/blog/measuring-reporting-security-operations-program/">Five Guidelines for Measuring and Reporting on Your Security Operations Program</a></li>
+<li><a href="https://danielmiessler.com/study/information-security-metrics/">An Information Security Metrics Primer</a></li>
+<li><a href="https://github.com/malwarejake-public/conference-presentations/blob/main/Metrics%20-%202022%20BlueTeamCon%20-%20MalwareJake.pdf">Better Security Metrics</a></li>
+</ul>
+
+<p id='fn1'><a class='fn' title='return to article' href='#fnref1'>&#x21a9;</a>&nbsp;During <a href="https://overcast.fm/+n56BexybY">episode 10</a> of <a href="https://www.dcppodcast.com/">Detection: Challenging Paradigms</a>, starting at <a href="https://overcast.fm/+n56BexybY/44:37">00:44:35</a>, Jonathan Johnson explained an interesting application of the Funnel of Fidelity as a way to visualize evasion opportunities. Attackers may evade collection altogether by bypassing logging, triage by manipulating the artifacts that appear in alerts, investigation by blending in with normal activity, and remediation with backup persistence mechanisms. The Funnel of Fidelity is a useful lens through which to view many challenges, but this article focuses on its applicability to measuring SOC performance.</p>
+
+<p id='fn2'><a class='fn' title='return to article' href='#fnref2'>&#x21a9;</a>&nbsp;For some perspective, in Red Canary&#8217;s 2022 <a href="https://redcanary.com/threat-detection-report/">Threat Detection Report</a>, Red Canary identified fourteen million investigative leads (alerts) that then turned into just thirty-three thousand confirmed threats (incidents), a conversion rate of just 0.24%. The Funnel of Fidelity filters aggressively.</p>
+
+<p id='fn3'><a class='fn' title='return to article' href='#fnref3'>&#x21a9;</a>&nbsp;Mandiant&#8217;s annual M-Trends report for 2022, published on <a href="https://www.mandiant.com/resources/m-trends-2022">April 19th</a>, included some statistics on TTD: &#8220;Let&#8217;s start with a win for defenders: the global median dwell time has continued its decline in 2021. For intrusions investigated between October 1, 2020 through December 31, 2021, the median number of days between compromise and detection was 21 days (down from 24 days in 2020).&#8221; While TTD may be decreasing, it is certainly far from optimal.</p>
+
+
+</article>
+<p>
+<a href="/blog/soc-metrics-part-ii.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, <a href="https://www.linkedin.com/in/zachary-szewczyk-441969235/">LinkedIn</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2022 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>

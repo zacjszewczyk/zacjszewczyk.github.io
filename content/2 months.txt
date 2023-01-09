@@ -1,8 +1,0 @@
-Type: linkpost
-Title: We're in for 2 months
-Link: https://foobuzz.github.io/covid19/
-Pubdate: 2020/04/10 10:45:05
-Category: Uncategorized
-Author: Zac Szewczyk
-
-As the number of states with shelter-in-place orders nears 50, if you haven't [run out of time yet](Revisiting Preparedness.txt), you will soon. Valentin [makes the case that these orders will stand for at least two months](https://foobuzz.github.io/covid19/), so prepare now--if you still can.

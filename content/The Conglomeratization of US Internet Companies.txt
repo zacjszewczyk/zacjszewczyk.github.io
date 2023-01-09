@@ -1,8 +1,0 @@
-Type: linkpost
-Title: The Conglomeratization of US Internet Companies
-Link: http://digitstodollars.com/2014/02/25/314/
-Pubdate: 2014/03/02 12:39:07
-Category: Tech
-Author: Zac Szewczyk
-
-Just as early nineteenth century Americans took Britain's manufacturing process, improved upon it, and quickly outpaced the nation from which they originally learned from, so too it appears China learned from the early mistakes that befell American internet companies, improved upon their flaws, and now seeks to outpace the country from which they drew those original lessons. So says this article from [Digits to Dollars](http://digitstodollars.com), anyway, and after reading it I am inclined to agree: as of late the notion of Google becoming an internet conglomerate, or "General Internet" as Horace Dediu and many others have put it, has gained a significant amount of traction. The larger notion of "conglomeratization" has also grown quite popular, and with Facebook's recent acquisition of Whatsapp some have even gone on to say that Facebook could become [the social conglomerate](http://stratechery.com/2014/social-conglomerate/). Halfway around the world, however, as this article from Digits to Dollars points out, many Chinese internet companies have already made the switch that only the largest American internet companies are just now showing signs of considering. Very interesting, and possible even telling, observation.

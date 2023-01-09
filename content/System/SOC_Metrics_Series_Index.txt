@@ -1,4 +1,0 @@
-<a href="/blog/soc-metrics-part-i.html">SOC Metrics, Part I: Foundational Metrics</a>
-<a href="/blog/soc-metrics-part-ii.html">SOC Metrics, Part II: Measures of Performance</a>
-<a href="/blog/soc-metrics-part-iii.html">SOC Metrics, Part III: Measures of Effectiveness</a>
-Bonus: <a href="/blog/individual-versus-program-soc-metrics.html">Individual versus Program SOC Metrics</a>

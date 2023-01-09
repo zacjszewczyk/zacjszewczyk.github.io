@@ -1,8 +1,0 @@
-Type: linkpost
-Title: 'Just Enough' Piracy Can Be a Good Thing
-Link: https://sloanreview.mit.edu/article/just-enough-piracy-can-be-a-good-thing/
-Pubdate: 2019/09/03 08:31:34
-Category: Tech
-Author: Zac J. Szewczyk
-
-A *friend* of mine used to pirate all sorts of things. He didn't realize it at the time, but he grew up in the golden age of piracy: Napster had proven the idea just a few years ago, and sites like The Pirate Bay and Kickass Torrents had since stepped in to keep the dream alive and well. Fast-forward to today, though, and most of those sites have shut down. The Pirate Bay still manages to [limp along](https://www.newidea.com.au/pirate-bay-what-happened-are-there-any-alternatives), but copyright laws and watchful Internet Service Providers have made piracy a mere shadow of its former self. As for my friend, now he pays for a basic Netflix subscription each month to watch a few shows--but for the most part, nothing replaced all that content he once pirated. As Antino Kim, Atanu Lahiri, Debabrata Dey, and Gerald Kane [point out in MIT's Sloan Management Review](https://sloanreview.mit.edu/article/just-enough-piracy-can-be-a-good-thing/), that may not actually be the clear win most would have you believe.

@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Cheap or Free Static Hosting
-Link: https://alignedleft.com/resources/cheap-web-hosting
-Pubdate: 2019/07/20 09:20:47
-Category: Programming
-Author: Zac J. Szewczyk
-
-I found Scott Murray's post [after I started looking for something to replace Amazon S3](Dont Use Amazon Web Services.txt). He lists a bunch of places for cheap or free static hosting, most of which I had never heard of. If [Google Firebase](How to Own Your Platform.txt) will not work for you, check this post out for some other ideas.

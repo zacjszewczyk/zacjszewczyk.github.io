@@ -1,8 +1,0 @@
-Type: linkpost
-Title: "Working on an app redesign...
-Link: https://twitter.com/mrgan/status/350278101332262916/photo/1
-Pubdate: 2013/07/02 21:55:28
-Category: Tech
-Author: Zac Szewczyk
-
-[Speaking of app redesigns](Bye Instacast.txt), Nevan Mrgan tweeted a screenshot of an app he was in the process of redesigning for iOS 7. Unlike Instacast 4's mockups, this one looks like it will fit right in.

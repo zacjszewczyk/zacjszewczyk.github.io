@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Eat Out Less
-Link: https://www.outsideonline.com/2391309/eat-out-less-tips
-Pubdate: 2019/04/19 10:36:54
-Category: Finances
-Author: Zac Szewczyk
-
-I like cooking my own meals for the same reason [I code](/projects.html): I get exactly what I want, without anything I don't, and I know every little detail about the "ingredients" that go into my projects. It takes some time, effort, and expertise, but the benefits far outweigh the minor drawbacks.

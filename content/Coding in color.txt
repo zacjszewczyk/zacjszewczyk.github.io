@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Coding in color
-Link: https://medium.com/programming-ideas-tutorial-and-experience/3a6db2743a1e
-Pubdate: 2014/01/27 08:45:29
-Category: Programming
-Author: Zac Szewczyk
-
-I spend quite a bit of time writing Python in Sublime Text, navigating documents whose line counts range from ten to five hundred. System variables--"False", "`s", "`Y"--and integers render in purple, strings in yellow, flow control statements--"for", "while", "if"--in red, and built-in functions--"open", "sorted", "len"--all display with an electric blue tint. These keywords only make up a small portion of my scripts, however; for the rest, I dig through line upon line of white variable names and regular expression operations. So when I saw this article from Evan Brooks on coding in color--essentially, implementing [semantic highlighting rather than syntax highlighting](http://zwabel.wordpress.com/2009/01/08/c-ide-evolution-from-syntax-highlighting-to-semantic-highlighting/)--I could immediately realize the practical application of the former over the latter. Unfortunately, given the way semantic versus syntax highlighting works though, few editors support it natively.

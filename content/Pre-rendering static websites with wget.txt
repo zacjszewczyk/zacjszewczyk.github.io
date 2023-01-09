@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Pre-rendering static websites with wget
-Link: https://apex.sh/blog/post/pre-render-wget/
-Pubdate: 2019/09/10 07:37:32
-Category: Programming
-Author: Zac J. Szewczyk
-
-What a cool idea from TJ Holowaychuk. For a while before I [re-released First Crack](Re-Introducing First Crack.txt), my static blog engine, I used a custom Node.js frontend to serve my site. I ended up overhauling the project to build a static website instead, but I could have just used this neat trick instead.

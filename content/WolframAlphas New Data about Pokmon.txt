@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Wolfram|Alpha's New Data about Pokmon
-Link: http://blog.wolframalpha.com/2013/10/10/gotta-compute-em-all-wolframalphas-new-data-about-pokemon/
-Pubdate: 2013/10/22 22:54:10
-Category: Uncategorized
-Author: Zac Szewczyk
-
-I would have loved to have this back when I played Pokmon LeafGreen and Pokmon Saphire. Instead I had Prima Games' [*Pokmon Pokedex Collector's Edition*](http://www.amazon.com/Pokemon-Pokedex-Collectors-Edition-Official/dp/0761547614/ref=sr_1_1?ie=UTF8&qid=1382496492&sr=8-1&keywords=pokedex+collectors+edition) which, although a great book for its time, simply cannot compare to the power Wolfram|Alpha will afford its users. I don't even play the game any more and I'm still excited.

@@ -1,8 +1,0 @@
-Type: linkpost
-Title: A tediously accurate map of the solar system
-Link: http://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html
-Pubdate: 2014/03/14 16:40:45
-Category: Uncategorized
-Author: Zac Szewczyk
-
-Very, very cool project from Josh Worth--both technically, and as a source of perspective for how vast space really is, and how small the earth--and, by extension, we--are.

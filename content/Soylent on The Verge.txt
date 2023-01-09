@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Soylent isn't people, it's a full-nutrition drink
-Link: http://www.theverge.com/2013/3/20/4126760/soylent-diet-drink-rob-rhinehart-mostly-harmless
-Pubdate: 2013/03/22 09:31:39
-Category: Tech
-Author: Zac Szewczyk
-
-Soylent's story got picked up by The Verge the other day. Great to see it getting some traction.

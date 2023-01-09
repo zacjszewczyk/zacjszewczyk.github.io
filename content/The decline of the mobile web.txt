@@ -1,8 +1,0 @@
-Type: linkpost
-Title: The decline of the mobile web
-Link: http://cdixon.org/2014/04/07/the-decline-of-the-mobile-web/
-Pubdate: 2014/04/21 10:02:40
-Category: Tech
-Author: Zac Szewczyk
-
-In preparing to read this article, rather than read it on Chris Dixon's website, I first tried in Instapaper. Instapaper failed to accurately parse the article though, so I then created an account at Pocket where I ultimately read and finished the piece before writing about it in Drafts and posting the end result from my computer. Now, as I have explained [in the past](Owning Their Words.txt), this is not usual: for the most part, I prefer to read articles in their intended environment. Ideological values only last so long though, and if that's not a damning case for the future of apps over the web, I don't know what is.
