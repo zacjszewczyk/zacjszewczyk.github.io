@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="I switched from Ubuntu to Windows 10 a few days ago. After eight years of macOS and then a year of Linux, I wanted to circle back to Windows.[^1] Since my latest [writing project](/projects.html#mtec) relies on [XeTeX](https://en.wikipedia.org/wiki/XeTeX), a lesser-known typesetting engine within the already obscure [TeX](https://en.wikipedia.org/wiki/TeX) world, I expected some trouble recreating my workflow in Windows; I was not disappointed.[^2] This post explains the steps I went through to create a functional TeX writing environment in Windows 10.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="XeTeX on Windows - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>XeTeX on Windows - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/xetex-on-windows.html">XeTeX on Windows</a>
+</h2>
+<time id='article_time' datetime="2022-03-23 15:30:45-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2022.html">2022</a>/<a href="/blog/2022-03.html">03</a>/23 15:30:45 EST in <a href='/uncategorized.html'>Uncategorized</a></time>
+<p>I switched from Ubuntu to Windows 10 a few days ago. After eight years of macOS and then a year of Linux, I wanted to circle back to Windows.<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup> Since my latest <a href="/projects.html#mtec">writing project</a> relies on <a href="https://en.wikipedia.org/wiki/XeTeX">XeTeX</a>, a lesser-known typesetting engine within the already obscure <a href="https://en.wikipedia.org/wiki/TeX">TeX</a> world, I expected some trouble recreating my workflow in Windows; I was not disappointed.<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup> This post explains the steps I went through to create a functional TeX writing environment in Windows 10.</p>
+
+<h3 class="headers" id="Step0">Step #0: (Optional) Install Chocolatey<span>&nbsp;<a href="#Step0">#</a></span></h3>
+
+<p><a href="https://chocolatey.org/">Chocolatey</a> is a package manager for Windows. Like <code>apt</code> or <code>yum</code> on Linux, Chocolatey provides a simple command line interface through which to install, update, and manage applications. Its rich catalog contains every program I use on a regular basis, from open source software like git to paid software like Sublime Text. Instead of manually finding and installing tens of applications, with Chocolatey I simply build a list of applications and let it handle the rest. Even better, when it comes time to update them, a single command gets the job done. No more homegrown update mechanisms or, worse, manual updates. Chocolatey takes away the pain of application management on Windows.</p>
+
+<p>Although not necessary, Chocolatey does make the process of setting up a TeX writing environment easier. The next step relies on Chocolatey to install a TeX distribution and a TeX editor, although you can complete it manually if you so desire.</p>
+
+<h3 class="headers" id="Step1">Step #1: Install TeX Live and TeXstudio<span>&nbsp;<a href="#Step1">#</a></span></h3>
+
+<p>Start by installing a TeX distribution and a TeX editor. The former will give you access to the back-end necessary to transform TeX documents into PDFs, and the latter will give you a front-end through which to create those TeX documents and manage the build pipeline. Although several TeX distributions exist for Windows, I chose <a href="https://tug.org/texlive/">TeX Live</a>. Fewer TeX editors seem to exist for Windows, so I went with what appeared to be the most popular: <a href="https://www.texstudio.org/">TeXstudio</a>.</p>
+
+<p>Many modern text editors like Visual Studio Code and Sublime Text offer plugins for writing, building, and previewing TeX documents. I have had mixed experiences with these in the past, so I opted for standalone TeX tools this time around. I may reevaluate that decision later.</p>
+
+<p>The commands below use Chocolatey to install TeX Live and TeXstudio.</p>
+
+<div class='pre'>
+<span class='pre_line_wrap'>choco&nbsp;install&nbsp;texlive</span>
+<span class='pre_line_wrap'>choco&nbsp;install&nbsp;texstudio</span>
+</div>
+
+<h3 class="headers" id="Step2">Step #2: Install XeTeX<span>&nbsp;<a href="#Step2">#</a></span></h3>
+
+<p>Once TeX Live and TeXstudio install, open the TeX Live Manager. The resultant window, misleadingly named &#8220;TeX Live Shell&#8221;, is the graphical user interface through which you will manage all packages and typesetting engines on your local machine. For now, we will use it to install the XeTeX typesetting engine.</p>
+
+<p>In TeX Live Manager, click the &#8220;Not installed&#8221; radio button in the &#8220;Status&#8221; section to list packages not present on your local machine. Next, type &#8220;xetex&#8221; in the &#8220;Search&#8221; text box to its right. Find the package &#8220;xetex&#8221;, right-click it, then click &#8220;Install&#8221;. XeTeX will install in a few seconds. Once the &#8220;Logs&#8221; window status changes from &#8220;Running&#8221; to &#8220;Idle&#8221;, click the &#8220;Close&#8221; button.</p>
+
+<h3 class="headers" id="Step3">Step #3: Configure the Build Pipeline<span>&nbsp;<a href="#Step3">#</a></span></h3>
+
+<p>Next, open TeXstudio. TeXstudio defaults to building TeX files with the LaTeX typesetting engine, but it also makes changing that preference easy. Since my project requires XeTeX, I changed the default to XeLaTeX.</p>
+
+<p>In TeXstudio, click &#8220;Options&#8221; in the top menu bar, then click &#8220;Configure TeXstudio...&#8221; Once the settings window opens, click the &#8220;Build&#8221; item on the left, then change the &#8220;Default Compiler&#8221; setting to &#8220;XeLaTeX&#8221;. Click &#8220;OK&#8221; to save this setting.</p>
+
+<h3 class="headers" id="Step4">Step #4: Build the Document in TeX Studio<span>&nbsp;<a href="#Step4">#</a></span></h3>
+
+<p>Finally, build your TeX document by opening it in TeX Studio and then clicking the green &#8220;Compile &#38; View&#8221; button, or by hitting the F5 key. If the build fails, you can use the &#8220;Messages&#8221; and &#8220;Log&#8221; panes near the bottom of the screen to find out why.</p>
+
+<p>For any missing packages, go back to TeX Live Manager, click the &#8220;Not installed&#8221; radio button, search for the missing package, right-click it, and then click &#8220;Install&#8221;. Try to rebuild the document and repeat this process until it succeeds. Once it does, you should see the PDF output on the right side of your screen.</p>
+
+<h3 class="headers" id="Step5">Step #5: (Optional) Build the Document in PowerShell<span>&nbsp;<a href="#Step5">#</a></span></h3>
+
+<p>With XeTeX installed, you can now also invoke it throgh PowerShell. The command below uses XeTeX to build the file &#8220;main.tex&#8221; in the current working directory.</p>
+
+<div class='pre'>
+<span class='pre_line_wrap'>xetex.exe&nbsp;main.tex</span>
+</div>
+
+<p>I had a lot of problems with Ubuntu, but my TeX wormflow was not one of them. Fortunately, after a bit of trial and error, I was able to replicate that level of functionality on Windows&#160;&#8212;&#160;and now you can, too.</p>
+
+<p id='fn1'><a class='fn' title='return to article' href='#fnref1'>&#x21a9;</a>&nbsp;Briefly, because Windows versus Linux (versus macOS) is not the point of this post: 2022 is not the year of Linux on the desktop. It&#8217;s good, but not great, and until that operating system becomes an appliance rather than a tool, it will remain so. As for Windows versus macOS, I continue to default to Apple products across all verticals; those who actually need Windows (or a non-Apple device) understand their needs well enough to ignore my recommendation or not ask for it in the first place.</p>
+
+<p id='fn2'><a class='fn' title='return to article' href='#fnref2'>&#x21a9;</a>&nbsp;In Ubuntu, <code>sudo apt-get install texlive-full</code> did the job.</p>
+
+
+</article>
+<p>
+<a href="/blog/xetex-on-windows.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, <a href="https://www.linkedin.com/in/zachary-szewczyk-441969235/">LinkedIn</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2022 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>

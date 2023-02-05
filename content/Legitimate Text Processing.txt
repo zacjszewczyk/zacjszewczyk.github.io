@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Legitimate Text Processing
-Link: http://joe-steel.com/2014-09-04-Legitimate-Text-Processing.html
-Pubdate: 2014/09/09 11:56:01
-Category: Uncategorized
-Author: Zac Szewczyk
-
-As usual, a great post by Joe Steel over at Unauthoritative Pronouncements where he tackles the now-inflammatory issue of Markdown and its numerous variants, and goes on to explain why he cannot get behind Jeff Atwood's "Standard Markdown"--later renamed to "Common Markdown", and then finally "CommonMark"--play. I completely agree with every point Joe made. However, I will say that although I do agree with Joe, I cannot get behind the undertone vilifying Jeff Atwood running beneath a number of the articles I have read on this topic. If [Jeff's latest blog post](http://blog.codinghorror.com/standard-markdown-is-now-common-markdown/) is anything to go by, he meant no offense in the first place. In fact, Jeff gave John Gruber multiple opportunities to express any issues with any aspect of his project, but John could not be bothered to respond. As [Carl Holscher pointed out](http://peroty.com/blog/wrote-about/mark-down-will-make-you-a-great-deal-on-formatted-text/), adults should have acted like adults to begin with, aired their grievances promptly and privately, and then proceeded with an interesting project sans the drama. Act your age, and not your font size.

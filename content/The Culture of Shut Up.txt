@@ -1,8 +1,0 @@
-Type: linkpost
-Title: The Culture of Shut Up
-Link: http://www.theatlantic.com/politics/archive/2014/04/the-culture-of-shut-up/360239/
-Pubdate: 2014/04/10 10:10:27
-Category: Politics
-Author: Zac Szewczyk
-
-Fantastic article by Jon Lovett at The Atlantic, where he writs about the power of free speech particularly with regards to internet culture. In my mind, these two issues have [collided](Discrimination Comes Full Circle.txt) and [come to a head](Palpable Irony.txt) recently with the resignation of Mozilla's CEO Brendan Eich: given the political nature of the reasons Eich lost his job, I have seen a great number of people on both sides of the issue speak up, out, and often vilify each other. And that's not helping anyone at all.

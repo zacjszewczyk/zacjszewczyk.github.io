@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Custom Homescreen Icons with Pythonista
-Link: http://olemoritz.net/custom-homescreen-icons-with-pythonista.html
-Pubdate: 2014/04/10 15:02:33
-Category: Programming
-Author: Zac Szewczyk
-
-This is so cool. Back when I used to write exclusively on my iPad, I nearly did this so that I could copy a finished article to my clipboard, and then simply tap on a home screen icon to publish it using Pythonista rather than opening the app as an intermediary step between creation and pushing it up to my server. Then I got my MacBook Pro, though, and it became my primary writing device. I doubt this will remain the case forever, so I plan on keeping this one in my back pocket.

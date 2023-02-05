@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Bitter Medicine
-Link: http://www.macstories.net/stories/bitter-medicine/
-Pubdate: 2014/07/10 07:16:11
-Category: Tech
-Author: Zac Szewczyk
-
-I never had a problem with the aesthetics of iOS 7, and continue to have no troubles whatsoever with it running atop my iPhone 4S: my phone never restarts, and my battery works just fine--especially for a device rapidly approaching its third birthday. Nevertheless, I can appreciate that many have had numerous and insurmountable problems in these areas as well as in many others, and that these issues have made iOS 7 a very difficult release with which to reckon their faith in Apple. And when framed in this light, I can understand why some would characterize their experience with iOS 7 as "bitter". However, no significant, meaningful change comes without at least some modicum of pain: one does not become fit without straining at the gym, and becoming a big-time fancy-pants blogger takes more than one sleepless night along with a fair amount of effort. It's important to keep in mind, then, the difference between necessary and unnecessary pain. This, I believe, was the former, and--at least for me--a relatively painless evolution at that.

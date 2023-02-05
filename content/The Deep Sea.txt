@@ -1,8 +1,0 @@
-Type: linkpost
-Title: The Deep Sea
-Link: https://neal.fun/deep-sea/
-Pubdate: 2019/12/06 08:07:09
-Category: Uncategorized
-Author: Zac J. Szewczyk
-
-This is so cool. Neal Agarwal created a neat visualization of just how deep the ocean is. See also, [One Man's Wild Quest to Reach the Bottom of Every Ocean](https://www.outsideonline.com/2403988/victor-vescovo-five-deeps).

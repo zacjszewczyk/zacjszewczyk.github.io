@@ -1,8 +1,0 @@
-Type: linkpost
-Title: How and why Bitcoin will plummet in price
-Link: http://marginalrevolution.com/marginalrevolution/2013/12/how-and-why-bitcoin-will-plummet-in-price.html
-Pubdate: 2014/01/02 14:12:49
-Category: Tech
-Author: Zac Szewczyk
-
-An interesting article from Tyler Cowen that gained considerable popularity on Hacker News a few days ago, for very good reason: although a difficult read at times, his article makes a strong case for Bitcoin's inevitable decline. Also worth reading, Tyler linked to [an article by Dan Kervick](http://www.nakedcapitalism.com/2013/04/dan-kervick-bitcoins-deflationary-weirdness.html) in a similar vein to this one along with another of his own from November, [*China, and the soaring price of Bitcoin*](http://marginalrevolution.com/marginalrevolution/2013/11/china-and-the-soaring-price-of-bitcoin.html), both worth checking out.
