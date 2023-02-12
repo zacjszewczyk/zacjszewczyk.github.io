@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 12 Feb 2023 10:36:05 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Feb 2023 10:58:07 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Changing History with git-filter-repo</title>
+            <link>https://zacs.site/blog/changing-history-with-git-filter-repo.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/changing-history-with-git-filter-repo.html</guid>
+            <pubDate>Sun, 12 Feb 2023 22:57:23 GMT</pubDate>
+            <description>
+                &lt;p&gt;I have used &lt;code&gt;&lt;/code&gt;git&lt;code&gt;&lt;/code&gt; to synchronize work between several different devices and across several different platforms for quite some time now. Over the years, though, inconsistencies have crept in. The name attached to my commit messages, for example, might be &amp;#8220;Zac&amp;#8221; on one device, &amp;#8220;Zachary Szewczyk&amp;#8221; on another, and &amp;#8220;Zac Szewczyk&amp;#8221; when committing via GitLab&amp;#8217;s web editor. The same applied to the email address attached to those messages. Elijah Newren&amp;#8217;s &lt;a href="https://github.com/newren/git-filter-repo"&gt;git-filter-repo&lt;/a&gt; project made it a breeze to fix this.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/changing-history-with-git-filter-repo.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Cybersecurity Tools &amp; Resources</title>
             <link>https://zacs.site/blog/cybersecurity-tools-and-resources.html</link>

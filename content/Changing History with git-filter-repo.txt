@@ -1,0 +1,32 @@
+Type: original
+Title: Changing History with git-filter-repo
+Link: changing-history-with-git-filter-repo.html
+Pubdate: 2023/02/12 12:57:23
+Category: Uncategorized
+Author: Zac Szewczyk
+
+I have used ``git`` to synchronize work between several different devices and across several different platforms for quite some time now. Over the years, though, inconsistencies have crept in. The name attached to my commit messages, for example, might be "Zac" on one device, "Zachary Szewczyk" on another, and "Zac Szewczyk" when committing via GitLab's web editor. The same applied to the email address attached to those messages. Elijah Newren's [git-filter-repo](https://github.com/newren/git-filter-repo) project made it a breeze to fix this.
+
+Based on [a helpful StackOverflow post](https://stackoverflow.com/questions/4981126/how-to-amend-several-commits-in-git-to-change-author/69947947#69947947), I put together a quick script called ``git-repair.sh`` to rewrite my commit history. For each incorrect email address, it contained a stanza like the one below:
+
+``` shell
+git-filter-repo --commit-callback '
+    if commit.author_email == b"wrong_email@email.com":
+        commit.author_email = b"right_email@email.com" 
+        commit.author_name = b"Zachary Szewczyk"
+        commit.committer_email = b"right_email@email.com" 
+        commit.committer_name = b"Zachary Szewczyk"
+'
+```
+
+I also took this opportunity to remove references to a few sensitive files from my repositories as well. ``git-filter-repo`` made that easy, too. GitHub even recommends Elijah's tool in [its official documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository).
+
+``` shell
+git-filter-repo --invert-paths --path './sensitive_file.txt'
+```
+
+A few minutes later, I re-uploaded my fixed repositories to GitHub:
+
+``` shell
+git push origin --force --all
+```

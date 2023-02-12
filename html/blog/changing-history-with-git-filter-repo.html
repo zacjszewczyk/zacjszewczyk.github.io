@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="I have used ``git`` to synchronize work between several different devices and across several different platforms for quite some time now. Over the years, though, inconsistencies have crept in. The name attached to my commit messages, for example, might be &#8243;Zac&#8243; on one device, &#8243;Zachary Szewczyk&#8243; on another, and &#8243;Zac Szewczyk&#8243; when committing via GitLab's web editor. The same applied to the email address attached to those messages. Elijah Newren's [git-filter-repo](https://github.com/newren/git-filter-repo) project made it a breeze to fix this.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="Changing History with git-filter-repo - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>Changing History with git-filter-repo - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/changing-history-with-git-filter-repo.html">Changing History with git-filter-repo</a>
+</h2>
+<time id='article_time' datetime="2023-02-12 12:57:23-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2023.html">2023</a>/<a href="/blog/2023-02.html">02</a>/12 12:57:23 EST in <a href='/uncategorized.html'>Uncategorized</a></time>
+<p>I have used <code></code>git<code></code> to synchronize work between several different devices and across several different platforms for quite some time now. Over the years, though, inconsistencies have crept in. The name attached to my commit messages, for example, might be &#8220;Zac&#8221; on one device, &#8220;Zachary Szewczyk&#8221; on another, and &#8220;Zac Szewczyk&#8221; when committing via GitLab&#8217;s web editor. The same applied to the email address attached to those messages. Elijah Newren&#8217;s <a href="https://github.com/newren/git-filter-repo">git-filter-repo</a> project made it a breeze to fix this.</p>
+
+<p>Based on <a href="https://stackoverflow.com/questions/4981126/how-to-amend-several-commits-in-git-to-change-author/69947947#69947947">a helpful StackOverflow post</a>, I put together a quick script called <code></code>git-repair.sh<code></code> to rewrite my commit history. For each incorrect email address, it contained a stanza like the one below:</p>
+
+<div class='pre shell'>
+<span class='pre_line_wrap'>git-filter-repo&nbsp;--commit-callback&nbsp;'</span>
+<span class='pre_line_wrap'>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;commit.author_email&nbsp;==&nbsp;b"wrong_email@email.com":</span>
+<span class='pre_line_wrap'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;commit.author_email&nbsp;=&nbsp;b"right_email@email.com"&nbsp;</span>
+<span class='pre_line_wrap'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;commit.author_name&nbsp;=&nbsp;b"Zachary&nbsp;Szewczyk"</span>
+<span class='pre_line_wrap'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;commit.committer_email&nbsp;=&nbsp;b"right_email@email.com"&nbsp;</span>
+<span class='pre_line_wrap'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;commit.committer_name&nbsp;=&nbsp;b"Zachary&nbsp;Szewczyk"</span>
+<span class='pre_line_wrap'>'</span>
+</div>
+
+<p>I also took this opportunity to remove references to a few sensitive files from my repositories as well. <code></code>git-filter-repo<code></code> made that easy, too. GitHub even recommends Elijah&#8217;s tool in <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository">its official documentation</a>.</p>
+
+<div class='pre shell'>
+<span class='pre_line_wrap'>git-filter-repo&nbsp;--invert-paths&nbsp;--path&nbsp;'./sensitive_file.txt'</span>
+</div>
+
+<p>A few minutes later, I re-uploaded my fixed repositories to GitHub:</p>
+
+<div class='pre shell'>
+<span class='pre_line_wrap'>git&nbsp;push&nbsp;origin&nbsp;--force&nbsp;--all</span>
+</div>
+
+
+</article>
+<p>
+<a href="/blog/changing-history-with-git-filter-repo.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, <a href="https://www.linkedin.com/in/zachary-szewczyk-441969235/">LinkedIn</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2022 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>
