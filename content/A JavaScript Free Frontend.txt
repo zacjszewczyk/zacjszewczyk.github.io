@@ -1,8 +1,0 @@
-Type: linkpost
-Title: A JavaScript-Free Frontend
-Link: https://dev.to/winduptoy/a-javascript-free-frontend-2d3e
-Pubdate: 2019/04/18 15:15:26
-Category: Programming
-Author: Zac Szewczyk
-
-Matt Reyer talks about turning his web front-end into a much lighter client. I have done this for years with my own projects, cutting out external libraries and even non-essential Javascript and CSS until I had as minimal an application as possible. [This is a growing trend](https://alistapart.com/article/responsible-javascript-part-1/). My desire to avoid unnecessary complexity and code dependence drove the development of [First Crack](/projects.html#firstCrack), the blogging engine behind this site. In the same vein, check out Addy Osmani's great article [*The Cost Of JavaScript In 2018*](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4).

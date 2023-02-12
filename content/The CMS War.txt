@@ -1,8 +1,0 @@
-Type: linkpost
-Title: The CMS War
-Link: http://brooksreview.net/2013/02/cms-war/
-Pubdate: 2013/03/04 17:10:00
-Category: Writing
-Author: Zac Szewczyk
-
-"I've looked deeply into SquareSpace. I know a lot about Shopify. I had this site running on MovableType, and tons of other CMSs -- but at the end of the day I realized that WordPress works fine and I need to concentrate on the things readers will actually notice."

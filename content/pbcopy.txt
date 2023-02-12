@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Pipe to/from the clipboard in Bash script
-Link: https://stackoverflow.com/questions/749544/pipe-to-from-the-clipboard-in-bash-script
-Pubdate: 2019/11/18 11:58:50
-Category: Programming
-Author: Zac J. Szewczyk
-
-At home, I can send a link from any device to a local web server that saves it for later. Then, when I have time to read, I can see all my saved articles, move them into folders, and refer back to them as needed. At work, though, those links go into a text file. When I get home, I find the text file, open it, copy the list, clear the file, close it, and then send the list to the server. `pbcopy` makes that process just a little easier. Now, `cat ingest.txt > pbcophy & echo "" > ingest.txt` puts the contents of `ingest.txt` on my clipboard and then clears the file, so I can add the links through the web interface with just a bit less hassle.

@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Pythonista Updated for iOS 7
-Link: http://omz-software.com/pythonista/docs-140/ios/new.html
-Pubdate: 2013/11/14 19:17:17
-Category: Programming
-Author: Zac Szewczyk
-
-Shortly after Ole Zorn released Editorial for iPad I adopted a workflow heavily reliant on this and his other--some would say companion--app Pythonista. Employing Editorial for all my writing needs and Pythonista to run a retrofitted version of FirstCrack thus enabling me to post on the go, I read, wrote, and updated my website almost exclusively on my iPad. Although recent months have seen a reversal of that shift in conjunction with my purchase of a new MacBook Pro, certain circumstances still make me thankful for the ability to not only consume but also produce content on such a portable device. Pythonista 1.4 brings a whole host of exciting changes to this already excellent app; perhaps even more exciting, though, is what these changes indicate for the future of Editorial.

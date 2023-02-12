@@ -1,8 +1,0 @@
-Type: linkpost
-Title: iTextEditors
-Link: http://brettterpstra.com/ios-text-editors/
-Pubdate: 2013/05/22 11:14:58
-Category: Tech
-Author: Zac Szewczyk
-
-[Speaking of iOS text editors](A Broken Spacebar and my iPad.txt), Brett Terpstra created an amazing chart comparing more iOS text editors than anyone could possibly use in a lifetime. This list went around the internet a few months ago, but it certainly merits linking to again. To anyone searching for a new editor, start here.

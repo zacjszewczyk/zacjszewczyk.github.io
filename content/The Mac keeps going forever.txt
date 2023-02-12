@@ -1,8 +1,0 @@
-Type: linkpost
-Title: The Mac keeps going forever
-Link: http://www.macworld.com/article/2090829/apple-executives-on-the-mac-at-30-the-mac-keeps-going-forever.html
-Pubdate: 2014/01/25 19:38:26
-Category: Tech
-Author: Zac Szewczyk
-
-I generally dislike interviews, but Jason Snell did a great job with this one. With the incredible popularity of the iPhone and, although to a slightly lesser degree, the iPad these days, it's easy to disregard the Mac's significance. Thankfully, Apple's senior leadership does not make that same mistake.

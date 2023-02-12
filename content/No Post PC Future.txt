@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Tablets may eclipse laptops, but there's no post-PC future
-Link: http://www.pcworld.com/article/2032207/tablets-may-eclipse-laptops-in-2014-but-theres-no-post-pc-future-on-the-horizon.html
-Pubdate: 2013/04/08 14:55:48
-Category: Tech
-Author: Zac Szewczyk
-
-"But percentages can be deceiving and they tell only half the tale of IDC's predictions. Peering ahead to the future, IDC's numbers suggest that while the overall market share for PCs will decline, shipments will still increase, if only by a hair. In other words, the demand for PCs isn't dying down--it's just that the thirst for mobile devices is exploding."

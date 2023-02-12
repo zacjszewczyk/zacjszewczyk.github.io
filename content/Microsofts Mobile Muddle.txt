@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Microsoft's Mobile Muddle
-Link: http://stratechery.com/2014/microsofts-mobile-muddle/
-Pubdate: 2014/02/14 12:52:13
-Category: Tech
-Author: Zac Szewczyk
-
-I cited this quote [on Twitter](https://twitter.com/zacjszewczyk/status/434380340157616128) and I'll do so again here: "Saying 'Microsoft missed mobile' is a bit unfair ... Not that that should make Satya Nadella sleep any better at night." I love this, and I found the rest of Ben's article on Microsoft's mobility saga very interesting as well. This is Strat&#275;chery at its best, folks; great work by Ben Thompson, as usual.
