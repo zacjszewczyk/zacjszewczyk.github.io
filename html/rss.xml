@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 12 Feb 2023 10:58:07 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Feb 2023 01:39:57 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Git is My Hammer; Everything is a Nail</title>
+            <link>https://zacs.site/blog/git-is-my-hammer.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/git-is-my-hammer.html</guid>
+            <pubDate>Sun, 19 Feb 2023 01:33:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;A &lt;a href="https://zacs.site/blog/changing-history-with-git-filter-repo.html"&gt;few days ago&lt;/a&gt;, I mentioned that I use Git to synchronize work between several different devices and across several different platforms. This setup has served me well, and so today I want to talk about it in detail.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/git-is-my-hammer.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Changing History with git-filter-repo</title>
             <link>https://zacs.site/blog/changing-history-with-git-filter-repo.html</link>

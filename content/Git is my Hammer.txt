@@ -1,0 +1,29 @@
+Type: original
+Title: Git is My Hammer; Everything is a Nail
+Link: git-is-my-hammer.html
+Pubdate: 2023/02/18 15:33:00
+Category: Uncategorized
+Author: Zac Szewczyk
+
+A [few days ago](Changing History with git-filter-repo.txt), I mentioned that I use Git to synchronize work between several different devices and across several different platforms. This setup has served me well, and so today I want to talk about it in detail.
+
+I use Git for everything. It manages the [dotfiles](https://mitxela.com/projects/dotfiles_management) that configure my applications. It tracks the articles I write for this website, the code that builds these pages, and even handles their deployment through [GitHub Pages](https://pages.github.com). For the last two years, most of my long-form writing has been in the TeX typesetting language; Git handles all of those projects, too. I have integrated Git so tightly into my workflow that I even use it to version binary files like Word documents and PowerPoint presentations. At work, we use Git to store and collaborate on team documentation, training material, and professional development resources. Git is my hammer, and through its lens I see everything as a nail.
+
+In a conventional setup, my workflow would involve making edits on a local workstation and then pushing those changes to a remote Git server. From there, others could pull the changes into their local repository, work, push, and repeat. I do not have a conventional setup. The diagram below depicts my current workflow.
+
+![Git workflow featuring home, mobile, and work devices interacting with two Git servers primarily through Overleaf.](/assets/images/git-workflow.png)
+
+GitHub, at the center of the diagram, is my single source of truth. All my projects reside there. Whether at home, at work, or on a mobile device, though, [Overleaf](https://overleaf.com/) is the primary interface through which I interact with those projects. A [personal plan](https://www.overleaf.com/user/subscription/plans) allows me to [sync my GitHub repositories](https://www.overleaf.com/learn/how-to/Using_Git_and_GitHub) into Overleaf, where I can then view, edit, and ultimately push changes back to GitHub via a clean, intuitive web interface. Overleaf's online editor handles Markdown, which I write these blog posts in, as well as TeX, which I use for everything else.
+
+I also have the ability to work with my projects locally via Git on both my home computer and mobile devices. Any changes I make there can be pushed to GitHub and then pulled from GitHub into Overleaf. My home and mobile devices also allow me to push certain repositories to a secondary GitLab server for additional redundancy and easier collaboration. Of course, I can also access GitHub or GitLab via any device to edit files through their web interfaces; once committed, those changes propagate throughout this little ecosystem via Git.
+
+This approach has several benefits.
+
+* **Portability.** Since Git tracks almost all of my projects, I can work from almost anywhere without having to worry about consolidating changes or losing work. I can start an article at home, add notes on a mobile device, make a few fixes via a web editor, and then merge all those changes together automatically at the end of the day. If I end up using a new device, I can just pull down my current project from the server and get to work. With a Git server as my single source of truth, I can work from anywhere without fear of losing anything.
+* **Versioning.** Thanks to Git’s built-in versioning system, I can roll back changes when a code refactoring fails, for example, or to re-incorporate some content lost on the cutting room floor. I have found this invaluable, especially several hours down a debugging or proofing rabbit hole.
+* **Backup.** With both versioning and off-site storage, Git serves as a great backup system for most of my files. Not everything fits into this system, even with [Git Large File Storage](https://git-lfs.com/), but almost all of my most important files do. Multiple Git servers enable even greater redundancy.[^1]
+* **Collaboration.** Since Git tracks almost all of my projects, and since those files exist both locally and on a server, sharing is easy. With a few clicks I can make a private project public, or just invite a single person to collaborate. With multiple branches, we can then easily collaborate and incorporate each other’s changes into the main repository.
+
+I love this setup. Overleaf takes away the pain of working with TeX files while also allowing me to write other, simpler documents through the same editor. Git on the back-end keeps everything in sync so I can work across devices, almost anywhere. This setup has served me well, and I think it will continue to going forward.
+
+[>1] At one point I also pushed to a third Git server for *even more* redundancy, but this seemed like overkill.
