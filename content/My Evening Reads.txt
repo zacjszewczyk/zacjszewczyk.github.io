@@ -167,6 +167,7 @@ This last group of websites does not fit into of the genres above, but over the 
 * [https://utf9k.net](https://utf9k.net) - Marcus Crane writes about tech.
 * [http://blairreeves.me](http://blairreeves.me) - Blair Reeves talks about tech, life, and writing a blog.
 * [https://michael.stapelberg.ch/](https://michael.stapelberg.ch/) - Michael Stapelberg consistently posts great articles on his many interesting projects.
+* [https://jenson.org/](https://jenson.org/) - Scott Jenson writes about user experience.
 
 #### The Full List
 
@@ -263,5 +264,6 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [https://utf9k.net](https://utf9k.net)
 * [http://blairreeves.me](http://blairreeves.me)
 * [https://michael.stapelberg.ch](https://michael.stapelberg.ch)
+* [https://jenson.org/](https://jenson.org/)
 
 I like big-name websites for keeping up on current events, but I tend to find the best content on sites like these. The advice to "follow people, not places" has served me well, and I encourage you to start doing the same.
