@@ -1,6 +1,9 @@
-127.0.0.1 - - [18/Oct/2022 14:26:39] GET / HTTP/1.1 200 -
-127.0.0.1 - - [18/Oct/2022 14:26:39] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [18/Oct/2022 14:26:39] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [18/Oct/2022 14:26:40] GET /blog/cybersecurity-tools-and-resources.html HTTP/1.1 200 -
-127.0.0.1 - - [18/Oct/2022 14:26:40] GET /assets/main.css HTTP/1.1 200 -
-- - - [18/10/2022 14:48:8] Graceful shutdown - -
+127.0.0.1 - - [18/Feb/2023 15:40:00] GET / HTTP/1.1 200 -
+127.0.0.1 - - [18/Feb/2023 15:40:00] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [18/Feb/2023 15:40:00] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [18/Feb/2023 15:40:03] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [18/Feb/2023 15:40:03] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [18/Feb/2023 15:40:05] GET /blog/git-is-my-hammer.html HTTP/1.1 200 -
+127.0.0.1 - - [18/Feb/2023 15:40:05] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [18/Feb/2023 15:40:05] GET /assets/images/git-workflow.png HTTP/1.1 200 -
+- - - [18/2/2023 15:41:40] Graceful shutdown - -
