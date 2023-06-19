@@ -27,7 +27,7 @@ I check the same sites every morning. Most days, I take about half an hour to go
 
 Given my background, I like to watch the tech space. I have found that these three sites do a great job of finding the best content, the hottest stories, and the coolest projects from around the Internet. They do not miss much.
 
-* [https://news.ycombinator.com/](https://news.ycombinator.com/) - The most interesting articles and projects in the tech space. To search for old posts that appeared on Hacker News, I like to use [Algolia’s Hacker News search engine](https://hn.algolia.com/).
+* [https://news.ycombinator.com/](https://news.ycombinator.com/) - The most interesting articles and projects in the tech space. To search for old posts that appeared on Hacker News, I like to use [Algolia’s Hacker News search engine](https://hn.algolia.com/) or [Julien's recommendation engine](https://hn-recommend.julienc.me/).
 * [https://lobste.rs/](https://lobste.rs/) - Hacker News, but with an even more technical bent.
 * [https://www.techmeme.com/](https://www.techmeme.com/) - All the tech news from around the Internet.
 
