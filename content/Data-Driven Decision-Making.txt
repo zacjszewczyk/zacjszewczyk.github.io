@@ -36,7 +36,7 @@ Without collection and transport, even the most intuitive presentation system wi
 
 This should not be construed to justify boutique, end-to-end solutions. Incompatible systems already abound. Rather, this should highlight the importance of understanding the ability of new systems to integrate with pre-existing systems for collection, transport, and presentation *as well as* the suitability of those pres-existing systems to support the new one. Each new solution need not add a new row to the table below; instead, designers must ensure that their new solution **C** can integrate with a sufficient transport medium **1** to feed a suitable presentation tool **Y**—all in service of enabling the ultimate goal, data-driven decision-making.
 
-![/assets/images/collection-transport-presentation.PNG](/assets/images/collection-transport-presentation.PNG)
+![Collection, transport, and presentation capability matrix](/assets/images/collection-transport-presentation.PNG “Collection, transport, and presentation capability matrix”)
 
 At the other end of the spectrum, however, concepts like the joint all domain command and control, or JADC2, attempt to address these three challenges together but do so in far too general a manner to succeed. As David Deptula recently explained in [*Making Joint All Domain Command and Control a Reality*](https://warontherocks.com/2022/12/making-joint-all-demand-command-and-control-a-reality/), ``But while [the Department of Defense’s JADC2] definition captures what JADC2 aims to achieve, it says little about how to achieve it. As a result, joint all domain command and control has partially stalled due to a cloudy department-wide vision that every service views slightly differently. To make this concept a reality, the Pentagon needs a straightforward, clear, and understandable description of what its vision entails.’’ Opposite cumbersome specificity lies unhelpful generality, a danger leaders must take care to avoid in addressing data-driven decision-making.
 
@@ -46,7 +46,7 @@ The present approach to enabling data-driven decision-making continues to err on
 
 This paper examined the technical challenges facing the Joint Force in making data-driven decisions. The oft-discussed ``sensor-to-shooter’’ loop is a subset of this problem that focuses specifically on shrinking the delay between a sensor capturing data and a shooter prosecuting a target. This paper’s framework of collection, transport, and presentation apply equally well to this specific instance of the more general problem facing the joint force.
 
-![/assets/images/dddm-ss.PNG](/assets/images/dddm-ss.PNG)
+![Data-driven decision-making and sensor-to-shooter relationship](/assets/images/dddm-ss.PNG “Data-driven decision-making and sensor-to-shooter relationship”)
 
 Similarly, this framework also captures the challenges facing defensive cyberspace operations well. Correct and complete collection remains elusive across the enterprise. Transport for such volumes of data remains infeasible under many circumstances. Precious few systems have succeeded in presenting that data in a coherent manner. This paper’s framework applies not only at the macro level, but also the micro level as well.
 
