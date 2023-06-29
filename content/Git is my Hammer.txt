@@ -2,7 +2,7 @@ Type: original
 Title: Git is My Hammer; Everything is a Nail
 Link: git-is-my-hammer.html
 Pubdate: 2023/02/18 15:33:00
-Category: Uncategorized
+Category: Programming
 Author: Zac Szewczyk
 
 A [few days ago](Changing History with git-filter-repo.txt), I mentioned that I use Git to synchronize work between several different devices and across several different platforms. This setup has served me well, and so today I want to talk about it in detail.

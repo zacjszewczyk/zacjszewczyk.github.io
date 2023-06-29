@@ -2,7 +2,7 @@ Type: original
 Title: Changing History with git-filter-repo
 Link: changing-history-with-git-filter-repo.html
 Pubdate: 2023/02/12 12:57:23
-Category: Uncategorized
+Category: Programming
 Author: Zac Szewczyk
 
 I have used ``git`` to synchronize work between several different devices and across several different platforms for quite some time now. Over the years, though, inconsistencies have crept in. The name attached to my commit messages, for example, might be "Zac" on one device, "Zachary Szewczyk" on another, and "Zac Szewczyk" when committing via GitLab's web editor. The same applied to the email address attached to those messages. Elijah Newren's [git-filter-repo](https://github.com/newren/git-filter-repo) project made it a breeze to fix this.
