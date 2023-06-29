@@ -3,7 +3,7 @@ Title: Collection, Transport, and Presentation: The Three Wicked Problems Inhibi
 Link: data-driven-decision-making.html
 Pubdate: 2023/06/27 11:46:06
 Category: Military
-Author: Zac J. Szewczyk
+Author: Zac Szewczyk
 
 Military leaders have sought hard data to drive their decisions for decades, perhaps most famously beginning with Secretary of Defense Robert McNamara’s so-called ``Whiz Kids’’ in the 1960s. As retrospective analysis of those decisions made clear, however, data alone does not good decisions make. Errors in collection, transmission, and presentation decimated the efficacy of this initiative.[^1] The Vietnam War is a cautionary tale in data-driven decision-making gone wrong, an important reminder that modernity’s insatiable need for more data is no more a silver bullet today than it was sixty years ago.
 

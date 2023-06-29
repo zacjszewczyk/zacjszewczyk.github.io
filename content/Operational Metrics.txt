@@ -3,7 +3,7 @@ Title: Operational Metrics: The Next Step in the Evolution of Defensive Cyberspa
 Link: operational-metrics.html
 Pubdate: 2022/05/10 10:36:06
 Category: Military
-Author: Zac J. Szewczyk
+Author: Zac Szewczyk
 
 As a senior First Lieutenant, I volunteered to teach new Second Lieutenants about defensive cyberspace operations. Over the course of a year I spent more than twelve hours with three different Cyber Basic Officer Leaders Course (BOLC) classes; each time, they asked the same question: what did your missions ac- complish? Each time, I struggled for an answer.
 
