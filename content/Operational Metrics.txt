@@ -51,4 +51,4 @@ Thanks to the following people for providing feedback for this article.
 
 Their input was considered, but this paper may not accurately reflection their opinions. 
 
-*Note:* An edited version of this article appeared on West Point’s *Modern War Institute*, published June 10th, 2022, which can be viewed [here](https://mwi.usma.edu/operational-metrics-the-next-step-in-the-evolution-of-defensive-cyberspace-operations/).
+*Note:* An edited version of this article appeared on West Point’s *Modern War Institute*, published May 10th, 2022, which can be viewed [here](https://mwi.usma.edu/operational-metrics-the-next-step-in-the-evolution-of-defensive-cyberspace-operations/).
