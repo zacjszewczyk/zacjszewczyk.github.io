@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 19 Jun 2023 11:21:38 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Jun 2023 06:19:09 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Collection, Transport, and Presentation: The Three Wicked Problems Inhibiting Data-Driven Decision-Making in the Army</title>
+            <link>https://zacs.site/blog/data-driven-decision-making.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/data-driven-decision-making.html</guid>
+            <pubDate>Tue, 27 Jun 2023 21:46:06 GMT</pubDate>
+            <description>
+                &lt;p&gt;Military leaders have sought hard data to drive their decisions for decades, perhaps most famously beginning with Secretary of Defense Robert McNamara’s so-called &lt;code&gt;&lt;/code&gt;Whiz Kids’’ in the 1960s. As retrospective analysis of those decisions made clear, however, data alone does not good decisions make. Errors in collection, transmission, and presentation decimated the efficacy of this initiative.&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; The Vietnam War is a cautionary tale in data-driven decision-making gone wrong, an important reminder that modernity’s insatiable need for more data is no more a silver bullet today than it was sixty years ago.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/data-driven-decision-making.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Git is My Hammer; Everything is a Nail</title>
             <link>https://zacs.site/blog/git-is-my-hammer.html</link>
@@ -86,6 +96,16 @@
             <description>
                 &lt;p&gt;I went to a presentation from a large cybersecurity firm the other day. The salesmen&amp;#160;&amp;#8212;&amp;#160;and they were all salesmen, as even a few post-presentation questions made clear&amp;#160;&amp;#8212;&amp;#160;focused on the intelligence their company produced, but knew little about the rest of their company&amp;#8217;s &lt;a href="https://www.jcs.mil/Doctrine/Joint-Doctrine-Pubs/2-0-Intelligence-Series/"&gt;intelligence cycle&lt;/a&gt;. As a consumer of their products, though, I consider knowledge of the process that created them critical. After an hour on finished intelligence, and in particular a slide that touted a &amp;#8220;globally deployed sensor grid&amp;#8221;, I wanted to know more about that production process in general, and about their collection specifically. Unfortunately, when asked, the salesmen offered a handful of handwavy &amp;#8220;We have millions of sensors across the globe&amp;#8221;, and, &amp;#8220;We ingest billions of events per day&amp;#8221; statements, but little beyond that.&lt;/p&gt;
                 &lt;p&gt;&lt;a href="https://zacs.site/blog/collection-and-detection.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Operational Metrics: The Next Step in the Evolution of Defensive Cyberspace Operations</title>
+            <link>https://zacs.site/blog/operational-metrics.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/operational-metrics.html</guid>
+            <pubDate>Tue, 10 May 2022 20:36:06 GMT</pubDate>
+            <description>
+                &lt;p&gt;As a senior First Lieutenant, I volunteered to teach new Second Lieutenants about defensive cyberspace operations. Over the course of a year I spent more than twelve hours with three different Cyber Basic Officer Leaders Course (BOLC) classes; each time, they asked the same question: what did your missions ac- complish? Each time, I struggled for an answer.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/operational-metrics.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
             </description>
         </item>
         <item>
