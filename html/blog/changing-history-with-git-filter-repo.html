@@ -41,7 +41,7 @@
 <h2 id='article_title'>
 <a class="original" href="/blog/changing-history-with-git-filter-repo.html">Changing History with git-filter-repo</a>
 </h2>
-<time id='article_time' datetime="2023-02-12 12:57:23-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2023.html">2023</a>/<a href="/blog/2023-02.html">02</a>/12 12:57:23 EST in <a href='/uncategorized.html'>Uncategorized</a></time>
+<time id='article_time' datetime="2023-02-12 12:57:23-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2023.html">2023</a>/<a href="/blog/2023-02.html">02</a>/12 12:57:23 EST in <a href='/programming.html'>Programming</a></time>
 <p>I have used <code></code>git<code></code> to synchronize work between several different devices and across several different platforms for quite some time now. Over the years, though, inconsistencies have crept in. The name attached to my commit messages, for example, might be &#8220;Zac&#8221; on one device, &#8220;Zachary Szewczyk&#8221; on another, and &#8220;Zac Szewczyk&#8221; when committing via GitLab&#8217;s web editor. The same applied to the email address attached to those messages. Elijah Newren&#8217;s <a href="https://github.com/newren/git-filter-repo">git-filter-repo</a> project made it a breeze to fix this.</p>
 
 <p>Based on <a href="https://stackoverflow.com/questions/4981126/how-to-amend-several-commits-in-git-to-change-author/69947947#69947947">a helpful StackOverflow post</a>, I put together a quick script called <code></code>git-repair.sh<code></code> to rewrite my commit history. For each incorrect email address, it contained a stanza like the one below:</p>

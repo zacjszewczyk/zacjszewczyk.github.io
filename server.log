@@ -1,9 +1,14 @@
-127.0.0.1 - - [18/Feb/2023 15:40:00] GET / HTTP/1.1 200 -
-127.0.0.1 - - [18/Feb/2023 15:40:00] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [18/Feb/2023 15:40:00] GET /assets/images/zjs.jpg HTTP/1.1 200 -
-127.0.0.1 - - [18/Feb/2023 15:40:03] GET /blog.html HTTP/1.1 200 -
-127.0.0.1 - - [18/Feb/2023 15:40:03] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [18/Feb/2023 15:40:05] GET /blog/git-is-my-hammer.html HTTP/1.1 200 -
-127.0.0.1 - - [18/Feb/2023 15:40:05] GET /assets/main.css HTTP/1.1 200 -
-127.0.0.1 - - [18/Feb/2023 15:40:05] GET /assets/images/git-workflow.png HTTP/1.1 200 -
-- - - [18/2/2023 15:41:40] Graceful shutdown - -
+127.0.0.1 - - [29/Jun/2023 20:19:16] GET / HTTP/1.1 200 -
+127.0.0.1 - - [29/Jun/2023 20:19:16] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [29/Jun/2023 20:19:16] GET /assets/images/zjs.jpg HTTP/1.1 200 -
+127.0.0.1 - - [29/Jun/2023 20:19:16] GET /assets/images/favicon_512.ico HTTP/1.1 200 -
+127.0.0.1 - - [29/Jun/2023 20:19:22] GET /blog.html HTTP/1.1 200 -
+127.0.0.1 - - [29/Jun/2023 20:19:22] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [29/Jun/2023 20:19:25] GET /blog/data-driven-decision-making.html HTTP/1.1 200 -
+127.0.0.1 - - [29/Jun/2023 20:19:25] GET /assets/main.css HTTP/1.1 200 -
+127.0.0.1 - - [29/Jun/2023 20:19:26] GET /assets/images/collection-transport-presentation.PNG HTTP/1.1 200 -
+127.0.0.1 - - [29/Jun/2023 20:19:26] GET /assets/images/dddm-ss.PNG HTTP/1.1 200 -
+127.0.0.1 - - [29/Jun/2023 20:19:37] GET /favicon.ico HTTP/1.1 404 -
+127.0.0.1 - - [29/Jun/2023 20:19:44] GET /blog/operational-metrics.html HTTP/1.1 200 -
+127.0.0.1 - - [29/Jun/2023 20:19:44] GET /assets/main.css HTTP/1.1 200 -
+- - - [29/6/2023 20:19:55] Graceful shutdown - -
