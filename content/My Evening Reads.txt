@@ -168,6 +168,7 @@ This last group of websites does not fit into of the genres above, but over the 
 * [http://blairreeves.me](http://blairreeves.me) - Blair Reeves talks about tech, life, and writing a blog.
 * [https://michael.stapelberg.ch/](https://michael.stapelberg.ch/) - Michael Stapelberg consistently posts great articles on his many interesting projects.
 * [https://jenson.org/](https://jenson.org/) - Scott Jenson writes about user experience.
+* [https://ferd.ca/](https://ferd.ca/) - Fred Hebert does not post often, but I enjoy his longform writing somewhere near the intersection of information technology and philosophy.
 
 #### The Full List
 
