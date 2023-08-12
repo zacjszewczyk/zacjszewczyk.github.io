@@ -169,6 +169,7 @@ This last group of websites does not fit into of the genres above, but over the 
 * [https://michael.stapelberg.ch/](https://michael.stapelberg.ch/) - Michael Stapelberg consistently posts great articles on his many interesting projects.
 * [https://jenson.org/](https://jenson.org/) - Scott Jenson writes about user experience.
 * [https://ferd.ca/](https://ferd.ca/) - Fred Hebert does not post often, but I enjoy his longform writing somewhere near the intersection of information technology and philosophy.
+* [https://blog.networkprofile.org/](https://blog.networkprofile.org/) - Here the author talks about networking and other interesting projects.
 
 #### The Full List
 
@@ -266,5 +267,7 @@ Like [last time](My Morning Reads.txt), to make your life a little easier, I lis
 * [http://blairreeves.me](http://blairreeves.me)
 * [https://michael.stapelberg.ch](https://michael.stapelberg.ch)
 * [https://jenson.org/](https://jenson.org/)
+* [https://ferd.ca/](https://ferd.ca/)
+* [https://blog.networkprofile.org/](https://blog.networkprofile.org/)
 
 I like big-name websites for keeping up on current events, but I tend to find the best content on sites like these. The advice to "follow people, not places" has served me well, and I encourage you to start doing the same.
