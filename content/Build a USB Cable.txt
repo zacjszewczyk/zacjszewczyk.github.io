@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Build a USB Cable
-Link: https://josef-adamcik.cz/electronics/need-a-usb-cable-build-on.html
-Pubdate: 2019/09/11 07:37:53
-Category: Tech
-Author: Zac J. Szewczyk
-
-Josef Adamcik wrote a neat how-to on building a custom USB cable. It looks great. I can see myself doing something like this, maybe for [my RV build](/projects.html#lmtvRV)--[building my own keyboard](https://josef-adamcik.cz/electronics/buiding-a-custom-keyboard-katana60.html), though, not so much. Still, interesting stuff.

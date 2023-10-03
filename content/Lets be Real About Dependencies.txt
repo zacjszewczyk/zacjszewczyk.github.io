@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Let's be Real About Dependencies
-Link: https://wiki.alopex.li/LetsBeRealAboutDependencies
-Pubdate: 2020/02/26 06:54:42
-Category: Programming
-Author: Zac Szewczyk
-
-I [don't like](/projects.html#firstCrack) [dependencies](Linear Python.txt), but excusing one language's reliance on bucketloads of them because others use built-in libraries misses the point. I care about the number of dependencies I have to install just for your project. On a system full of libraries that could have met most of those requirements, as evidenced by other, similar projects that do not need hundreds of extra packages, the fact that yours does gives me pause. The fact that this language seems to cause this leads me to believe some fundamental shortcoming must exist. Let's not excuse that.

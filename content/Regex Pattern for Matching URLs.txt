@@ -1,8 +1,0 @@
-Type: linkpost
-Title: An Improved Liberal, Accurate Regex Pattern for Matching URLs
-Link: http://daringfireball.net/2010/07/improved_regex_for_matching_urls
-Pubdate: 2014/02/09 10:29:05
-Category: Programming
-Author: Zac Szewczyk
-
-Last week John Gruber updated his regular expression for matching URLs from a relatively modest 205 characters to just shy of two thousand. Given that I wrote my own Markdown parser for this site and thus spent quite a bit of time crafting regular expressions myself, his article immediately piqued my interest. Unlike John though, who wrote his to actually match URLs, mine assumes that everything formatted as a Markdown link is, in fact, a link of some fashion and deals with it accordingly. Thus, we approached the problem from two very different directions, and solved it in very different ways as a result. Perhaps in the future, if I ever take First Crack public, the ability to detect valid URLS could prove useful; however, until then, my solution works just fine, and I see absolutely no reason to change it.
