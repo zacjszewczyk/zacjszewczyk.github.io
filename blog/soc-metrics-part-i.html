@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="I prefer a hands-off approach to management. Describe a goal, give me the freedom and resources to achieve it, and I will. The success of that approach, which the Army calls &#8243;mission command&#8243;, ultimately depends on the *right person* doing the *right things* in the *right ways*. Unfortunately, many focus on that first criterion but neglect the second and the third. In many cases, that leads to failure. In the final days of my last job, in a security operations center (SOC), I realized that this explained many of our systemic problems. We had the *right people*, they just did the *right things* in the *wrong ways* or--in some cases--did the *wrong things* altogether. This was not an inherent consequence of that hands-off approach, of mission command, but rather a necessary consequence of its partial implementation: we lacked **measures of performance** (MOPs), to assess whether or not (and to what degree) we were doing the *right things*, and **measures of effectiveness** (MOEs), to assess whether or not (and to what degree) we were doing them in the *right ways*. In their absence the *right things* and the *right ways* became inconsistent and subjective, and so did our success. I wrote this series to fix that.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="SOC Metrics, Part I: Foundational Metrics - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>SOC Metrics, Part I: Foundational Metrics - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/soc-metrics-part-i.html">SOC Metrics, Part I: Foundational Metrics</a>
+</h2>
+<time id='article_time' datetime="2022-05-07 10:01:38-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2022.html">2022</a>/<a href="/blog/2022-05.html">05</a>/07 10:01:38 EST in <a href='/cybersecurity.html'>Cybersecurity</a></time>
+<p>I prefer a hands-off approach to management. Describe a goal, give me the freedom and resources to achieve it, and I will. The success of that approach, which the Army calls &#8220;mission command&#8221;, ultimately depends on the <em>right person</em> doing the <em>right things</em> in the <em>right ways</em>. Unfortunately, many focus on that first criterion but neglect the second and the third. In many cases, that leads to failure. In the final days of my last job, in a security operations center (SOC), I realized that this explained many of our systemic problems. We had the <em>right people</em>, they just did the <em>right things</em> in the <em>wrong ways</em> or&#160;&#8212;&#160;in some cases&#160;&#8212;&#160;did the <em>wrong things</em> altogether. This was not an inherent consequence of that hands-off approach, of mission command, but rather a necessary consequence of its partial implementation: we lacked <strong>measures of performance</strong> (MOPs), to assess whether or not (and to what degree) we were doing the <em>right things</em>, and <strong>measures of effectiveness</strong> (MOEs), to assess whether or not (and to what degree) we were doing them in the <em>right ways</em>. In their absence the <em>right things</em> and the <em>right ways</em> became inconsistent and subjective, and so did our success. I wrote this series to fix that.</p>
+
+<p>MOPs and MOEs are military terms rooted in Joint doctrine. A 2014 edition of ARMOR magazine, the Armor Branch&#8217;s professional development bulletin, included an article by Captains Tom Westphal and Jason Guffey titled <a href="https://www.benning.army.mil/armor/eARMOR/content/issues/2014/OCT_DEC/Westphal.html"><em>Measures of Effectiveness in Army Doctrine</em></a>. That comprehensive review highlighted many discrepancies in doctrinal definitions of MOPs and MOEs; this article relies on definitions from JP 5-0: <a href="https://www.jcs.mil/Doctrine/Joint-Doctrine-Pubs/5-0-Planning-Series/"><em>Joint Planning</em></a>, dated 01 December, 2020. JP 5-0 defines a measure of performance as &#8220;an indicator used to measure a friendly action that is tied to measuring task accomplishment&#8221;, and a measure of effectiveness as &#8220;an indicator used to measure a current system state, with change indicated by comparing multiple observations over time.&#8221; MOPs concern themselves with friendly action (the <em>right things</em>), while MOEs concern themselves with those actions&#8217; ability to change the system (the <em>right things</em> done in the <em>right ways</em>). Note that that change may be tangible (a new firewall) or intangible (sufficient evidence that a questionable environment is secure).</p>
+
+<p>&#8220;Right&#8221;, here, depends on the SOC&#8217;s purpose. I have encountered several organizations that had a SOC just to say they had a SOC; what it actually did, or how well it did it, was irrelevant. This series assumes that the SOC&#8217;s purpose is to efficiently detect, thoroughly investigate, and effectively remediate malicious activity. MOPs help ensure friendly actions support that goal, and MOEs help ensure those actions actually achieve it. It may help to think of more literal interpretation of these terms, where <strong>measures of performance</strong> measure the SOC&#8217;s ability to perform an action, and <strong>measures of effectiveness</strong> measure the SOC&#8217;s ability to do so effectively.</p>
+
+<p>This series details a selection of SOC-specific MOPs and MOEs I refer to generally as &#8220;SOC metrics.&#8221;<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup> In this post, in part one, I touch briefly on the controversy surrounding SOC metrics. I then describe <strong>foundational metrics</strong>, the crucial but often overlooked metrics that measure the SOC&#8217;s ability to produce meaningful results. That topic then leads into part two, which focuses on <strong>measures of performance</strong>, which help assess whether or not (and to what degree) the SOC is doing the <em>right things</em>. Part three focuses on <strong>measures of effectiveness</strong>, which help assess whether or not (and to what degree) the SOC is doing those <em>right things</em> in the <em>right ways</em>. I based my selection on extensive research and on personal operational experience, but I also include several sources for other metrics in the <a href="#resources">resources</a> section at the end of each article. In the final days of my last job, I realized that these were the missing pieces inhibiting our success; if your SOC also struggles to recruit, resource, and retain talented information security professionals, perhaps you are missing them, too.</p>
+
+<ul id="series_index">
+    <li><a href="/blog/soc-metrics-part-i.html">SOC Metrics, Part I: Foundational Metrics</a></li>
+    <li><a href="/blog/soc-metrics-part-ii.html">SOC Metrics, Part II: Measures of Performance</a></li>
+    <li><a href="/blog/soc-metrics-part-iii.html">SOC Metrics, Part III: Measures of Effectiveness</a></li>
+    <li>Bonus: <a href="/blog/individual-versus-program-soc-metrics.html">Individual versus Program SOC Metrics</a></li>
+</ul>
+
+<h3 class="headers" id="TheMetricsControversy">The Metrics Controversy<span>&nbsp;<a href="#TheMetricsControversy">#</a></span></h3>
+
+<p>I drew on a number of resources for this series. The primary was <a href="https://twitter.com/anton_chuvakin/status/1502431529481375747">a Twitter thread by Dr. Anton Chuvakin</a> in which he polled the information security community for SOC metrics. Many replied with good suggestions or links to helpful articles.<sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup> Many also pointed out challenges of working in a metrics-driven SOC. Justin Lister, for example, <a href="https://twitter.com/justin_lister/status/1502459615593725954">commented</a> that, &#8220;Cyber metrics are like Schrödinger&#8217;s cat. In that you can&#8217;t manage what you can&#8217;t measure. But if you measure it then it starts to drive the wrong outcomes.&#8221; His was not an uncommon opinion.</p>
+
+<p>On the one hand, SOC metrics give managers ways to highlight the good work their teams do (the <em>right things</em> done in the <em>right ways</em>) and to identify areas in need of improvement (the <em>right things</em> done in the <em>wrong ways</em> or the <em>wrong things</em> altogether). They provide the necessary foundation for a learning organization that improves over time, which leads to an effective security program, boosts job satisfaction, and increases retention. They also give decision makers palpable returns on their investments, which helps justify appropriate resourcing, which then further improves the SOC. </p>
+
+<p>On the other hand, few use metrics in general&#160;&#8212;&#160;and SOC metrics in particular&#160;&#8212;&#160;well. This series does not ignore the potential downsides of introducing metrics into an organization not ready for them. As Mick Douglass alluded to in <a href="https://dynamicciso.com/rapid-er-incident-response-how-fast-should-you-go/"><em>Rapid–er Incident Response: How Fast Should You Go?</em></a>, organizations that prioritize speed over effectiveness just rush to failure. The root of this problem, however, lies in poor management. Any discussion of SOC metrics must separate their value as enablers of the positives I described in the last paragraph from the downsides that result from their improper implementation. A corollary to one of this post&#8217;s central ideas, the notion of success resulting from the <em>right person</em> doing the <em>right things</em> in the <em>right ways</em>, is that successfully implementing SOC metrics requires the <em>right person</em> acting on the <em>right metrics</em> in the <em>right ways</em>. I have little to offer in the way of recommendations for selecting the <em>right person</em>, but I will offer my take on the <em>right metrics</em> and the <em>right ways</em>. I did, however, select many of these metrics such that over-indexing on any one would cause one or more others to fail. This will not solve the problem of bad management, but it may at least help reduce its impact.</p>
+
+<h3 class="headers" id="FoundationalMetrics">Foundational Metrics<span>&nbsp;<a href="#FoundationalMetrics">#</a></span></h3>
+
+<p>Foundational metrics are the crucial but often overlooked metrics that measure the SOC&#8217;s ability to produce meaningful results. They contextualize all other measures, and common statements that&#160;&#8212;&#160;on their own&#160;&#8212;&#160;lack real meaning.</p>
+
+<p>Consider, for example, this statement: &#8220;The SOC processed one billion events last month.&#8221; Although perhaps impressive, if those events came from just 10% of the environment, any subsequent conclusions do not hold for the other 90%. Consider a common follow-on statement, &#8220;And we found no evidence of malicious activity.&#8221;<sup id="fnref3"><a href="#fn3" rel="footnote">3</a></sup> Again, that does not hold for 90% of the environment&#160;&#8212;&#160;but also, how did the analysts reach that conclusion? Did they collect the proper data to reasonably support such a bold claim? An absence of evidence is not the same as evidence of absence. This applies not just to the presence or absence of data in general (data coverage), but also to the presence or absence of the <em>right</em> data specifically (data quality). Foundational metrics measure both.</p>
+
+<h4 class="headers" id="DataCoverage">Data Coverage<span>&nbsp;<a href="#DataCoverage">#</a></span></h4>
+
+<p>Data coverage is the first foundational metric. It measures the SOC&#8217;s ability to observe the environment. I find it helpful to discuss this metric in terms of Donald Rumsfeld&#8217;s famous &#8220;known knowns&#8221;: &#8220;There are known knowns, things we know that we know; and there are known unknowns, things that we know we don&#8217;t know. But there are also unknown unknowns, things we do not know we don&#8217;t know.&#8221; That idea applies to data coverage just as well as intelligence. Specter Ops had a helpful description of those terms in its post <a href="https://posts.specterops.io/the-attack-path-management-manifesto-3a3b117f5e5"><em>The Attack Path Management Manifesto</em></a>, which also included a definition for &#8220;unknown knowns&#8221;, things we are not aware of but still understand. Measuring data coverage means quantifying the number of devices that fall into each category.</p>
+
+<h5 class="headers" id="Knownknowns">Known knowns<span>&nbsp;<a href="#Knownknowns">#</a></span></h5>
+
+<p>This class includes devices the SOC knows about and receives data from. I generally use the simpler label, &#8220;monitored.&#8221; </p>
+
+<p><strong>Monitored</strong>: The number of known devices feeding the SIEM. </p>
+
+<p>At the very least, break this down by host and network events. Take the number of devices feeding network events into the SOC&#8217;s SIEM, then the number of devices feeding host events into the SOC&#8217;s SIEM. Some also delineate between enclave or domain, layer of the computing stack, or device type such as workstation, server, infrastructure, or appliance. Some also delineate between log collection, antivirus alerts, endpoint detection and response events, and coverage on a per-tool basis. I recommend starting with a basic host and network breakdown before getting more specific.</p>
+
+<h5 class="headers" id="Knownunknowns">Known unknowns<span>&nbsp;<a href="#Knownunknowns">#</a></span></h5>
+
+<p>This class includes devices the SOC knows about but does not receive data from. I generally use the simpler label, &#8220;unmonitored.&#8221;</p>
+
+<p><strong>Unmonitored</strong>: The number of known devices not feeding the SIEM.</p>
+
+<p>Devices may fall into the &#8220;unmonitored&#8221; category for any number of reasons. For example, a new but not yet configured server may not yet send events to the SIEM. This class also includes devices the SOC cannot or will not monitor, such as legacy systems or personal devices. These pose persistent risk that, even if accepted, must remain at the front of the security team&#8217;s mind lest they become normalized and thus unduly disregarded. Potential sources for identifying unmonitored devices include, but are not limited to, Active Directory inventories, network scanners, network sensors, and logs from an appliance like a DHCP server.</p>
+
+<h5 class="headers" id="Unknownknowns">Unknown knowns<span>&nbsp;<a href="#Unknownknowns">#</a></span></h5>
+
+<p>This class includes devices the SOC is unaware of, but that someone in the organization is aware of, that do not send any data to the SOC. Most organizations understand that these devices exist but lack awareness of the individual machines themselves. I generally use the common term &#8220;shadow IT&#8221; for these systems.</p>
+
+<p><strong>Shadow IT</strong>: The number of unknown devices not feeding the SIEM.</p>
+
+<p>The unsanctioned nature of these devices makes it unlikely that anyone will voluntarily identify them. Others may not even realize they exist. Potential sources for quantifying shadow IT include, but are not limited to, Active Directory inventories, network scanners, network sensors, logs from an appliance like a DHCP server, or even the accounting department&#8217;s acquisition records. Again, the SOC might be unaware of these devices, but <em>someone</em> is.</p>
+
+<h5 class="headers" id="Unknownunknowns">Unknown unknowns<span>&nbsp;<a href="#Unknownunknowns">#</a></span></h5>
+
+<p>This class includes devices the entire organization, including the SOC, is unaware of that also do not send any data to the SOC. Compared to shadow IT, which well-intentioned personnel might maintain to circumvent onerous IT controls in service of legitimate business needs, outsiders insert these devices into a target environment for malicious purposes. These rogue devices pose significant risk to the organization.</p>
+
+<p><strong>Rogue devices</strong>: The number of illicit devices in the environment.</p>
+
+<p>The ease with which most attackers can gain access to an environment through its network make this vector unlikely but not impossible. Detect these devices by analyzing network logs from a passive network sensors or by physically inspecting hardware, network closets, and data centers for illicit devices.</p>
+
+<p>Given these four categories, data coverage is typically expressed as a percentage: </p>
+
+<p><strong>Data coverage</strong>: Monitored / (Monitored + Unmonitored + Shadow IT + Rogue devices)</p>
+
+<p>Each category, as well as the main metric itself, should be tracked over time to identify progress (as <strong>monitored</strong> increases and <strong>data coverage</strong> approaches one) or deterioration (as the denominator increases and <strong>data coverage</strong> approaches zero). Any modern SIEM should have the ability to automate this entire process in a scheduled report.</p>
+
+<p>Measuring data coverage is one of the ways the SOC can support more traditional IT functions. From an environmental standpoint, this moves the organization away from <em>wilderness</em> and toward <em>managed</em>. Carson Zimmerman (author of the excellent <a href="https://www.mitre.org/publications/all/ten-strategies-of-a-world-class-cybersecurity-operations-center"><em>Ten Strategies for a World-Class Cybersecurity Operations Center</em></a>) introduced this concept in his presentation <a href="https://www.first.org/global/sigs/metrics/events"><em>Practical SOC Metrics</em></a>: if a system is inventoried, tied to a business owner, tied to a business function, subject to configuration management, assigned to a responsible security team, and assessed for risk, it is managed; otherwise, it is wilderness. Measuring data coverage can help quantify that wilderness so that the IT team can bring it under their control. </p>
+
+<p>Recall, though, that it is not enough just to have <em>data</em> from an acceptable portion of the network.<sup id="fnref4"><a href="#fn4" rel="footnote">4</a></sup> Consider again my question from earlier, in response to the common statement, &#8220;And we found no evidence of malicious activity.&#8221; Did the analysts collect the proper data to reasonably support such a bold claim? After data coverage, measuring data quality helps answer that important question.</p>
+
+<h4 class="headers" id="DataQuality">Data Quality<span>&nbsp;<a href="#DataQuality">#</a></span></h4>
+
+<p>Whereas data coverage measures the SOC&#8217;s ability to observe the environment, data quality measures the SOC&#8217;s ability to detect malicious activity occurring within it. This requires assessing the data itself, as the enabler of that detection, as well as the feeds in general, as the enabler of that detection over time. Together, these two dimensions quantify which malicious tactics, techniques, and procedures the SOC can uncover and when it may do so; paired with data coverage, these metrics allow the SOC to define exactly what it can defend, what it can defend against, and when it can provide that defense. For under-resourced SOCs unable to effectively defend their environment, trapped in a &#8220;safety blanket&#8221; role, this is a game changer.</p>
+
+<p>To assess the tactics, techniques, and procedures the data itself enables the SOC to uncover, we must first define a range of possible nefarious activities. From there we may then determine which subset of those actions the SOC can uncover given its present collection. Without a denominator representing the realm of the possible, that measure would lack meaning. </p>
+
+<p>This article relies on the MITRE ATT&#38;CK Matrix to define the realm of the possible. The MITRE ATT&#38;CK Matrix lists actions an adversary might execute from initial access to end objectives. It consists of four components: tactics, the adversary&#8217;s technical goal; techniques, how the adversary achieved that technical goal; sub-techniques, more granular explanations of how the adversary achieved a technical goal; and procedures, the specific implementation of a technique or sub-technique. Although the Matrix may change slightly over time, it has matured enough that it is unlikely to change significantly or often. This does not reduce the importance of malleable collection to account for emerging threats, but it does make it a suitable starting point for understanding the range of possible nefarious activities.</p>
+
+<p>Using the MITRE ATT&#38;CK Matrix to represent the realm of the possible, the SOC can quantify the subset of those techniques it has the ability to detect given its present collection in a number of ways. The <a href="https://github.com/rabobank-cdc/DeTTECT">DeTT&CT</a> project presents the easiest route: simply identify data sources and provide a rough assessment of their coverage, and the DeTT&#38;CT tool will generate a heat map depicting the degree to which the SOC can detect each technique on the MITRE ATT&#38;CK Matrix. The excellent <a href="https://github.com/mitre-attack/attack-datasources">ATT&#38;CK Data Sources</a> repository on GitHub, which includes a helpful Jupyter Notebook for working with the ATT&#38;CK Matrix, could also help: use the <code>data_source</code> or <code>data_component</code> field to filter out techniques that match the SOC&#8217;s present collection, then count those that remain. A more rigorous approach would involve performing each action and then reviewing the SOC&#8217;s ability to detect them in a purple team-style engagement, but that would require a significant investment of time and resources. While certainly an important milestone in a SOC&#8217;s maturation, these less comprehensive yet much more efficient assessments are a suitable starting point for defining <strong>MITRE ATT&#38;CK coverage</strong>.</p>
+
+<p><strong>MITRE ATT&#38;CK coverage</strong>: The percentage of techniques the SOC has the ability to detect.</p>
+
+<p>&#8220;Starting point&#8221;, here, is the operative term. MITRE&#8217;s ATT&#38;CK Matrix describes the &#8220;known knowns&#8221; (actions we understand based on previous compromises), but not the &#8220;known unknowns&#8221; (actions we can conceptualize but have yet to observe), &#8220;unknown knowns&#8221; (novel ways to achieve an understood objective), or &#8220;unknown unknowns&#8221; (actions we cannot conceptualize). The MITRE ATT&#38;CK Matrix is a catalog of known threats that provides a framework for categorizing future ones, not a complete encyclopedia of all possible malicious activities ever. Further, as Jared Atkinson explained in <a href="https://twitter.com/jaredcatkinson/status/1512067698863198215">a Twitter thread</a>, the ATT&#38;CK Matrix is a very high level abstraction of the activities a threat actor might execute from initial access to end objectives. This makes detecting T1543: <em>Create of Modify System Process</em>, for example, a question of degrees&#160;&#8212;&#160;not a binary: to what <em>degree</em> can the SOC detect this technique given the many paths a threat actor could take to achieve it? Christopher Peacock&#8217;s <a href="https://www.scythe.io/library/summiting-the-pyramid-of-pain-the-ttp-pyramid">TTP Pyramid</a> is a useful tool for visualizing the level of abstraction for each type of action, as it decreases from tactic to technique to procedure. <strong>MITRE ATT&#38;CK coverage</strong> measures technique coverage; those techniques are abstractions of sub techniques, which are themselves abstraction of the actual activity occurring on a host. For the sake of time and simplicity, this article treats that question of degrees as a binary &#8220;yes&#8221; or &#8220;no&#8221;; in a real environment, the SOC must make a much more nuanced distinction. <a href="https://fs.blog/2015/11/map-and-territory/">The map is not the territory.</a></p>
+
+<p>MITRE ATT&#38;CK coverage&#160;&#8212;&#160;and particularly the heatmaps the <a href="https://github.com/rabobank-cdc/DeTTECT">DeTT&CT</a> project generates&#160;&#8212;&#160;are great ways to visualize the present state as a way to then justify resources to reach the desired future state, as Daniel Gordon explained <a href="https://twitter.com/ValidHorizon/status/1502827448626565125">on Twitter</a>.</p>
+
+<p><strong>MITRE ATT&#38;CK coverage</strong> describes the ideal state. It does not account for the complexity of implementing collection, particularly at scale, where the SOC&#8217;s ability to detect a given technique may vary from hour to hour based on factors completely outside of its control. Scheduled maintenance, network outages, and hardware failures all impact the data feeds upon which the SOC relies to do its job. Assessing data feeds in general, the second dimension of <strong>data quality</strong>, gives the SOC a way to monitor those critical inputs.</p>
+
+<p>Carson Zimmerman called this &#8220;data feed health&#8221; in his presentation <a href="https://www.first.org/global/sigs/metrics/events"><em>Practical SOC Metrics</em></a>, where he suggested monitoring <strong>presence</strong>, a binary, whether or not the SOC is receiving a particular data feed at any given time; <strong>latency</strong>, a leading indicator that would highlight bottlenecks before they become catastrophic failures; and <strong>volume</strong>, a basic count of events. I recommend also adding in <strong>constitution</strong>, a count of unique sources, such as systems for endpoint events or sensors for network events.</p>
+
+<p>Unlike <strong>MITRE ATT&#38;CK coverage</strong>, which is expressed as a percentage, data feed health requires a much more nuanced expression. I convey it on a per-feed basis using a series of dashboard panels as depicted below.</p>
+
+<div class='image'><img src='/assets/images/data-feed-health.png' alt='' title='Data feed health dashboard' loading='lazy' /></div>
+
+<p>These panels would immediately convey that the endpoint detection and response (EDR) feed was down, but that the host and network event feeds were operational. This would indicate that during the given period, the SOC lacked the ability to detect techniques reliant on the EDR feed. This is helpful to understand in real time, so that the SOC can rapidly fix an issue with a data feed, but also when looking back during a postmortem to figure out why it missed something.</p>
+
+<p>Closer inspection would also reveal that one or more network sensors had stopped sending events to the SIEM, which likely led to the downward trend in volume for that feed. Again, this is helpful to understand in real time but also during a postmortem. The host feed appears healthy, although an upward trend in event volume may indicate something unusual; an analyst could drill down on that uptick to rule out password spraying or brute forcing, for example.</p>
+
+<p>I frequently encountered environments without this basic level of &#8220;meta monitoring&#8221;, where an administrator had set up network collection but not noticed that many of the sensors had since gone offline. Network events appeared in the SIEM, but over time they came to represent less and less of the environment. It is imperative that SOCs not only assess <strong>MITRE ATT&#38;CK coverage</strong> as the enabler of detection but also <strong>data feed health</strong> as the enabler of detection over time.</p>
+
+<p>As with <strong>data coverage</strong>, <strong>data quality</strong>&#160;&#8212;&#160;and its sub-categories&#160;&#8212;&#160;should also be tracked over time to identify progress or deterioration. The SOC must accept some variability, particularly with data feed health, but wild swings in either direction&#160;&#8212;&#160;or sustained trends in the wrong direction&#160;&#8212;&#160;should be highlighted, investigated, and acted upon. In a dashboard like the one above, the SOC should aim for green boxes and horizontal arrows at all times.</p>
+
+<p>Together, <strong>data coverage</strong> and <strong>data quality</strong> provide the foundation upon which measures of performance and measures of effectiveness rely. Organizations that do not assess these foundational metrics, or that have not made the investment necessary to bring them to a suitable level, should do so before shifting their focus elsewhere. These metrics contextualize all other measures, and ensure the SOC possesses the ability to produce meaningful results; in their absence, take those results with a grain of salt.</p>
+
+<ul id="series_index">
+    <li><a href="/blog/soc-metrics-part-i.html">SOC Metrics, Part I: Foundational Metrics</a></li>
+    <li><a href="/blog/soc-metrics-part-ii.html">SOC Metrics, Part II: Measures of Performance</a></li>
+    <li><a href="/blog/soc-metrics-part-iii.html">SOC Metrics, Part III: Measures of Effectiveness</a></li>
+    <li>Bonus: <a href="/blog/individual-versus-program-soc-metrics.html">Individual versus Program SOC Metrics</a></li>
+</ul>
+
+<h3 class="headers" id="Resources">Resources<span>&nbsp;<a href="#Resources">#</a></span></h3>
+
+<p>This section lists several resources for SOC metrics, some of which were cited throughout this article. This post contained the metrics that would have been most effective in my organization as judged by my personal experience working in a SOC, but you may find these articles helpful as well.</p>
+
+<ul>
+    <li><a href="https://www.first.org/resources/papers/metrics-sig/SOC-Metrics-Webinar-for-FIRST-Metrics-SIG-v08a.pdf">Practical SOC Metrics</a>. Also available from <a href="https://www.fireeye.com/content/dam/fireeye-www/summit/cds-2019/presentations/cds19-executive-s03b-practical-soc-metrics.pdf">FireEye</a>.</li>
+</ul>
+
+<p id='fn1'><a class='fn' title='return to article' href='#fnref1'>&#x21a9;</a>&nbsp;Note that &#8220;SOC metrics&#8221; are not limited to security operations centers. In this article, I use &#8220;SOC&#8221; as a generic term for all groups responsible for securing an organization&#8217;s information systems. This includes the IT administrators who provision and maintain those systems, security and compliance monitors who deal with known threats and policy violations, and threat hunters who deal with emerging and novel threats. Each of these entities plays a distinct but critical role in an effective security program, but I will use &#8220;SOC&#8221; as a general term for all of them here.</p>
+
+<p id='fn2'><a class='fn' title='return to article' href='#fnref2'>&#x21a9;</a>&nbsp;I do not cite authors for well-known metrics like Mean Time to Detect. So many suggested these measures that it made little sense to attribute them to a single person. I do, however, cite individuals who came up with unique metrics, and I cite external resources as much as possible.</p>
+
+<p id='fn3'><a class='fn' title='return to article' href='#fnref3'>&#x21a9;</a>&nbsp;Once, at the beginning of an incident response, a technical advisor at the headquarters organization tried to derail the investigation. He said that he had already searched the endpoint agent for the key indicator and had found nothing, so we could all go home. I asked him how confident he was that the endpoint agent was deployed across the entire environment; he was not, and so we stayed. During another investigation, a different advisor tried to discount the findings of an analyst at a satellite location. He could not reproduce their work in the organization&#8217;s SIEM and so he lobbied to close the investigation as an unexplained anomaly. I asked him how confident he was that the satellite location actually forwarded any data to that SIEM; he was not, and so we continued.</p>
+
+<p id='fn4'><a class='fn' title='return to article' href='#fnref4'>&#x21a9;</a>&nbsp;&#8220;Acceptable&#8221; will vary across organizations and over time. Some may not consider the high cost of incremental improvement worth it: if automated deployment mechanisms can get the SIEM to, say, 75% coverage, some organizations may elect not to invest in shrinking the remaining 25%. Entities dealing with sensitive information, on the other hand, may not have that luxury. Although complete coverage is maddeningly elusive, it is not uncommon for some organizations to set a threshold well above 90%. As I once wrote elsewhere, "Many think collection exists on a spectrum. Maximum collection, at one end, puts analysts in the ideal position to answer almost any information requirement. Marginal collection, at the other, makes those assessments impossible. Adequate collection lies somewhere between the two. This assumption is incorrect. Collection is not subjective, it is binary. It is either present in its entirety, or effectively absent; it is either sufficiently detailed to enable the detection of malicious cyber actors, or wholly inadequate. In this domain of great power competition against advanced, persistent threats, our defenses must not only be advanced, but also persistent. In the fifth domain, where defensive cyberspace operations forces gain and maintain enemy contact every day, there is no ‘good enough.&#8216; There is all, or there is nothing, and nothing is unacceptable.&#8217;</p>
+
+
+</article>
+<p>
+<a href="/blog/soc-metrics-part-i.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, <a href="https://www.linkedin.com/in/zachary-szewczyk-441969235/">LinkedIn</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2022 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>
