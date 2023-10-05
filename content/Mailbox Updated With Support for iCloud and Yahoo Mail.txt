@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Mailbox Updated With Support for iCloud and Yahoo Mail
-Link: http://www.macstories.net/linked/mailbox-for-ios-updated-with-support-for-icloud-and-yahoo-mail/
-Pubdate: 2013/12/19 10:09:21
-Category: Tech
-Author: Zac Szewczyk
-
-Great news. Now, the only reason I have left to keep Apple's Mail app around is for the occasional spam message, which Mailbox curiously does not have any way of handling. Once Mailbox builds that functionality in, I can happily say goodbye to Mail.

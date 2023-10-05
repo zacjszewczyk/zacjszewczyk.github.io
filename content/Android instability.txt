@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Android instability
-Link: http://ben-evans.com/benedictevans/2014/2/8/instability
-Pubdate: 2014/02/09 10:11:27
-Category: Tech
-Author: Zac Szewczyk
-
-Interesting article from Benedict Evans drawing parallels between the dynamics of today's smartphone industry where device manufacturers have no idea what the next five years could hold for the platform they base their entire business upon, Android, and the days of WinTel's dominance we are only just now beginning to see the decline of, where OEMs had concrete road maps upon which to build future devices to. This lack of stability could have served as one of the primary motivations behind Samsung agreeing to stop skinning Android: perhaps Google offered Android's largest adopter an offer they just couldn't pass up.

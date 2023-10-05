@@ -1,8 +1,0 @@
-Type: linkpost
-Title: After the Storm
-Link: http://sansink.org/after-the-storm/
-Pubdate: 2014/06/11 06:54:29
-Category: Tech
-Author: Zac Szewczyk
-
-A few days ago [I asked](The magic of WWDC.txt) if those who speak out critically of the attention WWDC garners changed their opinions with last week's impressive roster of announcements; looks like it changed at least one person's mind, and rightfully so. Adam's more favorable opinion of WWDC is not the only noteworthy aspect of this piece, however: I believe he hit the nail squarely on the head when describing Apple's current and future relationship with Google by way of these innovations as well. In short, it will be an amicable partnership no more. Apple has yet to fully realize Steve Jobs' promise of going thermonuclear on Android, but they have been hard at work building the warheads behind closed doors up until now, of which we only got occasional glimpses here and there in the form of iOS 6 and then iOS 7. Now, though, the missiles have been wheeled out into full view, and I might even go so far as to argue primed and ready for launch. They say the only way to win is not to play, but in this case, I'm not so sure; personally, I'd put money on Apple.

@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Why are RV's so poorly made?
-Link: https://www.curbed.com/2019/9/18/20870828/rv-camper-repairs-poor-quality
-Pubdate: 2020/01/02 06:42:26
-Category: Overlanding
-Author: Zac J. Szewczyk
-
-Andrew Zaleski digs into the factors contributing to the RV market's notorious lack of quality. I thought a lot about getting [an RV](Expedition Rigs.txt) instead of my first house, but this pushed me away from buying an RV then and ensured that when I do decide to go that route, [I will build it myself](/projects.html#lmtvRV).

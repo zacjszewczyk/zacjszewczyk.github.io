@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="Full credit to Alex Armstrong and [his helpful article](https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos) for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these five lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="Pushing to Multiple Repos - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>Pushing to Multiple Repos - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="linkpost" href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos">Pushing to Multiple Repos</a>
+</h2>
+<time id='article_time' datetime="2019-09-06 07:11:37-0400" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2019.html">2019</a>/<a href="/blog/2019-09.html">09</a>/06 07:11:37 EST in <a href='/programming.html'>Programming</a></time>
+<p>Full credit to Alex Armstrong and <a href="https://alexarmstrong.net/2015/01/pushing-to-multiple-git-repos">his helpful article</a> for reminding me how to do this every time I start a new project. So I can better keep track of this, though, these five lines will create a local Git repo, tie GitHub and Bitbucket remote repos to it, and then push to both.</p>
+
+<div class='pre shell'>
+<span class='pre_line_wrap'>git&nbsp;init</span>
+<span class='pre_line_wrap'>git&nbsp;remote&nbsp;add&nbsp;origin&nbsp;{GitHub&nbsp;repo&nbsp;URL}&nbsp;#&nbsp;Get&nbsp;GitHub&nbsp;repo&nbsp;URL</span>
+<span class='pre_line_wrap'>git&nbsp;remote&nbsp;set-url&nbsp;--add&nbsp;--push&nbsp;origin&nbsp;{GitHub&nbsp;repo&nbsp;URL}&nbsp;#&nbsp;Get&nbsp;GitHub&nbsp;repo&nbsp;URL</span>
+<span class='pre_line_wrap'>git&nbsp;remote&nbsp;set-url&nbsp;--add&nbsp;--push&nbsp;origin&nbsp;{Bitbucket&nbsp;repo&nbsp;URL}&nbsp;#&nbsp;Get&nbsp;Bitbucket&nbsp;repo&nbsp;URL</span>
+<span class='pre_line_wrap'>git&nbsp;add&nbsp;.;&nbsp;git&nbsp;commit&nbsp;-m&nbsp;"Initial&nbsp;commit.";&nbsp;git&nbsp;push&nbsp;-u&nbsp;origin&nbsp;master</span>
+</div>
+
+<p>These simple commands make sure that for all my projects, I have a local copy, a local backup, a cloud backup, and two more off-site copies of all my work&#160;&#8212;&#160;just in case.</p>
+
+
+</article>
+<p>
+<a href="/blog/pushing-to-multiple-repos.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, <a href="https://www.linkedin.com/in/zachary-szewczyk-441969235/">LinkedIn</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2022 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>

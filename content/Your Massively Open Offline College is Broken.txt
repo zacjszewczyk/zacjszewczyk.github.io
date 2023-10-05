@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Your Massively Open Offline College is Broken
-Link: http://www.theawl.com/2013/02/how-to-save-college
-Pubdate: 2014/03/27 09:01:29
-Category: Uncategorized
-Author: Zac Szewczyk
-
-Education is a topic near and dear to my heart, so whenever I can find an interesting, well-written article on the subject I tend to afford it slightly more attention than I might Business Insider's terrible article explaining possible reasons behind Facebook's acquisition of Oculus. Unfortunately, these articles often turn out mediocre at best; this piece by Clay Shirky, however, and its predecessor [*Napster, Udacity, and the Academy*](http://www.shirky.com/weblog/2012/11/napster-udacity-and-the-academy/), are both very interesting in-depth looks at the problems facing higher education in America. You will have to spend a while reading both of these, but it will be time well spent.

@@ -1,8 +1,0 @@
-Type: linkpost
-Title: What Actually Makes a Truck Good Off-Road
-Link: https://www.outsideonline.com/2392520/best-off-road-truck-components
-Pubdate: 2019/09/24 07:53:24
-Category: Overlanding
-Author: Zac J. Szewczyk
-
-Wes Siler has some great advice for the things that actually matter in [an adventure rig](Expedition Rigs.txt), and the upgrades you should prioritize [to make yours better](Building my 4Runner Sleeping Platform.txt).

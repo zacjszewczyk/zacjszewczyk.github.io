@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Crunchdex Predicts Stock Performance with 92% Accuracy
-Link: https://hackernoon.com/crunchdex-predicts-stock-performance-with-92-accuracy-18df2cabf605
-Pubdate: 2019/04/27 13:14:40
-Category: Uncategorized
-Author: Zac Szewczyk
-
-Dominik Vacikar measured growth signals for 4,000 companies, then searched for historical correlations between those signals and stock market performance. His research lead to some interesting results that he plans to turn into an interest product. This reminded me of [my work on a Hacker News scraper](/projects.html#hnScraper), a project I hope to revive soon.

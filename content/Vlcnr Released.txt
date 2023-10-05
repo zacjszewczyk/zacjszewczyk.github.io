@@ -1,8 +1,0 @@
-Type: linkpost
-Title: Vlcnr 1.0 Released
-Link: https://itunes.apple.com/us/app/vlcnr/id789486884?mt=8
-Pubdate: 2014/01/07 09:10:20
-Category: Podcasts
-Author: Zac Szewczyk
-
-Taking a quick break from my next article I will hopefully publish late tonight, [John Voorhees](http://twitter.com/johnvoorhees) worked with Myke Hurley and Matt Alexander of [Bionic](http://5by5.tv/bionic) to create Vlcnr 1.0. Featuring the show's hallmark suspense accents one through eight and an easter egg that plays random clips from the show, I downloaded the app sight on seen. Not to steal [Matt's idea](https://twitter.com/mattalexand/status/420365381698461696), but I have to say: I have been testing this app for quite some time now, it's really great. Those of you unfamiliar with Bionic will likely think it ridiculous; for everyone else, might as well pack up and leave: 2014 has peaked.

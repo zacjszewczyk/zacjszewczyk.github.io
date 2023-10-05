@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="Again in October, like [in September](First Crack Release Notes 0919.txt), I spent most of my dev time on an Instapaper-like read later service. I use it every day, and plan to release it sometime soon. I did get a couple things done, though; once again, I did not neglect [First Crack](/projects.html#firstCrack) entirely.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="First Crack Release Notes, October 2019 - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>First Crack Release Notes, October 2019 - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/first-crack-release-notes-1019.html">First Crack Release Notes, October 2019</a>
+</h2>
+<time id='article_time' datetime="2019-11-02 16:05:01-0400" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2019.html">2019</a>/<a href="/blog/2019-11.html">11</a>/02 16:05:01 EST in <a href='/programming.html'>Programming</a></time>
+<p>Again in October, like <a href="https://zacs.site/blog/first-crack-release-notes-0919.html">in September</a>, I spent most of my dev time on an Instapaper-like read later service. I use it every day, and plan to release it sometime soon. I did get a couple things done, though; once again, I did not neglect <a href="/projects.html#firstCrack">First Crack</a> entirely.</p>
+
+<h2 class="headers" id="OctoberActivity">October Activity<span>&nbsp;<a href="#OctoberActivity">#</a></span></h2>
+
+<p>By &#8220;a couple things&#8221;, I do mean two: in October, I fixed a reference error that kept the favicon from showing up on all pages, and added a dark mode that uses the neat <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"><code>prefers-color-scheme</code></a> attribute to detect user preference. </p>
+
+<h2 class="headers" id="NovemberPlan">November Plan<span>&nbsp;<a href="#NovemberPlan">#</a></span></h2>
+
+<p>Going forward, I may focus on these areas in October, 2019. I carried most of these over from <a href="https://zacs.site/blog/first-crack-release-notes-0919.html">last month&#8217;s update</a>.</p>
+
+<h3 class="headers" id="ReImplementPrettyPrint">Re-Implement "Pretty Print"<span>&nbsp;<a href="#ReImplementPrettyPrint">#</a></span></h3>
+
+<p>I would still like to re-implement the &#8220;pretty print&#8221; feature now that First Crack uses a stateful Markdown parser. Low priority, but something I want to get done nonetheless.</p>
+
+<h3 class="headers" id="ReleaseMarkdownParser">Release Markdown Parser<span>&nbsp;<a href="#ReleaseMarkdownParser">#</a></span></h3>
+
+<p>I still want to release my Markdown parser as its own project. I still have some bugs to work out, though, I want to go public with greater coverage of the spec, and I would like to add the ability to parse multi-line strings and entire files at once.</p>
+
+<h3 class="headers" id="PublishImplementationofMarkdownSpec">Publish Implementation of Markdown Spec<span>&nbsp;<a href="#PublishImplementationofMarkdownSpec">#</a></span></h3>
+
+<p>I still want to outline the peculiarities of my implementation of the Markdown spec. This would cover weird edge cases for the most part, but documenting these shortfalls would still have value so that those who use my engine will have some sort of explanation for why their article looks weird, and so that I may one day fix them. I made some progress here this month, but not enough for a finished product.</p>
+
+<h3 class="headers" id="ImproveDocumentation">Improve Documentation<span>&nbsp;<a href="#ImproveDocumentation">#</a></span></h3>
+
+<p>I did some work on the documentation this month, but as always, I could do more. Again, a few of the ways I think I can improve the README in particular:</p>
+
+<ul>
+    <li>Performance graphs of First Crack&#8217;s back-end performance versus other, similar engines. At less than two seconds to build a website of over one thousand pages, I want to highlight this.</li>
+<li>Performance graphs of the web pages First Crack builds versus the pages common content management systems build.</li>
+<li>Screenshots. This site is a live demo of the engine, but I like the idea of having a few pictures in there, too.</li>
+</ul>
+
+<p>As always, I look forward to the work ahead.</p>
+
+
+</article>
+<p>
+<a href="/blog/first-crack-release-notes-1019.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, <a href="https://www.linkedin.com/in/zachary-szewczyk-441969235/">LinkedIn</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2022 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>

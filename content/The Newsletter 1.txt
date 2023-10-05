@@ -1,8 +1,0 @@
-Type: linkpost
-Title: The Neat and Out of Scope Newsletter, Issue &#35;1
-Link: http://eepurl.com/Mdln9
-Pubdate: 2014/01/12 10:37:09
-Category: Uncategorized
-Author: Zac Szewczyk
-
-Today marks the first installment of my brand new newsletter, awkwardly titled "The Neat and Out of Scope Newsletter", in which I talk about an alternative to MailChimp, shaking a device to trigger Javascript actions, speedy scrolling, House of Cards's second season, the latest foray into podcast clients, and the just-launched clipboard utility Command-C. In case you missed it, you can subscribe [here](http://eepurl.com/MdDeX) or by clicking the "Newsletter" menu item below. All in all, I am very happy with how it turned out. I do, however, recognize the significant room for improvement I still have within this medium. You can expect it to get better with every issue, because I have every intention of making this one great newsletter.
