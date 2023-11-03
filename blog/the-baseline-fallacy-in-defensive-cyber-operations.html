@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="Both civilian [cybersecurity practitioners](https://www.sans.org/white-papers/detecting-unauthorized-behavior-from-legitimate-accounts/) and military defensive cyber operations personnel continue to push a similar idea, that to identify malicious activity one must &#8243;just get a baseline and then flag anything different.&#8243; If only! I call this the Baseline Fallacy:">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="The Baseline Fallacy in Defensive Cyber Operations - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>The Baseline Fallacy in Defensive Cyber Operations - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/the-baseline-fallacy-in-defensive-cyber-operations.html">The Baseline Fallacy in Defensive Cyber Operations</a>
+</h2>
+<time id='article_time' datetime="2023-11-02 14:25:05-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2023.html">2023</a>/<a href="/blog/2023-11.html">11</a>/02 14:25:05 EST in <a href='/cybersecurity.html'>Cybersecurity</a></time>
+<p>Both civilian <a href="https://www.sans.org/white-papers/detecting-unauthorized-behavior-from-legitimate-accounts/">cybersecurity practitioners</a> and military defensive cyber operations personnel continue to push a similar idea, that to identify malicious activity one must &#8220;just get a baseline and then flag anything different.&#8221; If only! I call this the Baseline Fallacy:</p>
+
+<blockquote>
+    <p><strong>The Baseline Fallacy</strong>: One need only capture a baseline and then flag any differences to uncover meaningful evidence of compromise.</p>
+</blockquote>
+
+<p>I call it a &#8220;fallacy&#8221; rather than a strategy because it is infeasible to capture a useful baseline, infeasible to flag meaningful differences, and infeasible to expect such a basic and flawed practice to uncover actionable evidence of compromise in a computer network.</p>
+
+<h3 class="headers" id="Captureabaseline">"Capture a baseline..."<span>&nbsp;<a href="#Captureabaseline">#</a></span></h3>
+
+<p>The inherent flaw in this approach starts here, right at the beginning. &#8220;Capture a baseline&#8221;&#160;&#8212;&#160;a baseline of what? The number of people who can answer that question is much smaller than the number of people who recommend doing so. In the uncommon case that question has an answer, it then opens the door to a flood of secondary ones. </p>
+
+<p>Consider, for example, user activity. Should you capture a baseline of user activity at the individual level, where lurking variables limit the applicability of any one data point to another, or try to capture a baseline at the organizational level, where the window necessary to accommodate the data&#8217;s spread makes it insensitive to the outliers this approach seeks to identify? What is the necessary time period to establish this baseline, and what is the appropriate amount of time to apply it before generating a new one? At what level of granularity must that baseline be captured in order to account for patterns of life at one installation or another, the differences in individual units, and individual agency?</p>
+
+<h3 class="headers" id="andthenflaganydifferences">"... and then flag any differences..."<span>&nbsp;<a href="#andthenflaganydifferences">#</a></span></h3>
+
+<p>The challenges of capturing a suitable baseline, at the appropriate level of fidelity, compound here in the varying levels of importance for events that diverge from that baseline. </p>
+
+<p>Consider, again, the user activity example. If an individual logs in at 8:00 a.m. instead of their usual 9:00 a.am., does that warrant alarm? What is the appropriate threshold for an alert? Generating an alert for any difference is impractical, but there can be no standard rule. This is the essence of a wicked problem, a situation for which no perfect solutions exists.</p>
+
+<h3 class="headers" id="touncovermeaningfulevidenceofcompromise">"... to uncover meaningful evidence of compromise."<span>&nbsp;<a href="#touncovermeaningfulevidenceofcompromise">#</a></span></h3>
+
+<p>Ultimately, the problems of capturing a suitable baseline and the difficulty of identifying meaningful deviations from it manifest at this stage, where the level of precision in the baseline and fuzzy thresholds for the importance of unusual events either inundate analysts or, when inevitably over-tuned, lead to too many false negatives to uncover any meaningful evidence of compromise.</p>
+
+<p>The Baseline Fallacy is not insurmountable. These examples will never be the silver bullet to identifying malicious activity, just as no other class of analytics will completely solve this problem on their own. With reasonable assumptions, appropriate thresholds, transparent communication, and in combination with other techniques, though, even the problematic approaches derided in these scenarios can play an important role in illuminating subtle evidence of malicious activity. That is the real point of this post, that detection is not a matter of <em>just</em> doing anything&#160;&#8212;&#160;including capturing a baseline&#160;&#8212;&#160;so let&#8217;s stop pretending that it is.</p>
+
+
+</article>
+<p>
+<a href="/blog/the-baseline-fallacy-in-defensive-cyber-operations.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, <a href="https://www.linkedin.com/in/zachary-szewczyk-441969235/">LinkedIn</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2022 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>
