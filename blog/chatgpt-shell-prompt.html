@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="I have, for years now, wanted a cool shell prompt--something worth showing off on [r/linux](https://www.reddit.com/r/linux/) or even [r/unixporn](https://www.reddit.com/r/unixporn/). Not enough to dig into the weeds and figure out how to write one myself, but enough that it came up every once in a while. Then, the other day, I had a great idea: why not just let ChatGPT make it for me?">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="ChatGPT Wrote my Shell Prompt - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>ChatGPT Wrote my Shell Prompt - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/chatgpt-shell-prompt.html">ChatGPT Wrote my Shell Prompt</a>
+</h2>
+<time id='article_time' datetime="2023-11-06 22:04:30-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2023.html">2023</a>/<a href="/blog/2023-11.html">11</a>/06 22:04:30 EST in <a href='/uncategorized.html'>Uncategorized</a></time>
+<p>I have, for years now, wanted a cool shell prompt&#160;&#8212;&#160;something worth showing off on <a href="https://www.reddit.com/r/linux/">r/linux</a> or even <a href="https://www.reddit.com/r/unixporn/">r/unixporn</a>. Not enough to dig into the weeds and figure out how to write one myself, but enough that it came up every once in a while. Then, the other day, I had a great idea: why not just let ChatGPT make it for me?</p>
+
+<p>After some fiddling, I came up with the following schema for my new prompt:</p>
+
+<div class='pre'>
+<span class='pre_line_wrap'>{user}@{hostname}:{directory}&nbsp;[{local&nbsp;branch}&nbsp;{upstream&nbsp;branch}&nbsp;{branch&nbsp;tracking&nbsp;symbol}|{local&nbsp;status}]</span>
+<span class='pre_line_wrap'>{privilege&nbsp;character}&nbsp;</span>
+</div>
+
+<h3 class="headers" id="UserandHostname">User and Hostname<span>&nbsp;<a href="#UserandHostname">#</a></span></h3>
+
+<p>If the previous command succeeded, <code>{user}</code> and <code>{hostname}</code> would be green but the at symbol (@) would be left black to differentiate the current username from the current hostname; if the previous command failed, those portions of the prompt would be colored red to indidcate that something had gone wrong.</p>
+
+<h3 class="headers" id="Directory">Directory<span>&nbsp;<a href="#Directory">#</a></span></h3>
+
+<p>The directory variable would be replaced by the current working directory with <code>$HOME</code> abbreviated with a tilde (~). <code>{directory}</code> would always be light blue to make it easy to know where I was at all times.</p>
+
+<h3 class="headers" id="gitInformation">git Information<span>&nbsp;<a href="#gitInformation">#</a></span></h3>
+
+<p>The variables in the square brackets, which present <code>git</code> information, would be determined according to a series of rules.</p>
+
+<p>If the current working directory was not a git repository, this entire block would be ommitted. This would help keep my prompt clean when navigating the filesystem and debugging applications.</p>
+
+<p><code>{local branch}</code> would show the local branch if it existed. If there were unstaged changes in the local branch, the local branch would be colored orange. This visual cue would remind me to act on changes.</p>
+
+<p><code>{upstream branch}</code> would show the remote tracking branch. I typically work with multiple remotes, and on multiple occasions I have accidentally pushed code to the wrong location. This helps mitigate those types of accidents.</p>
+
+<p><code>{branch tracking symbol}</code> is determined by the following criteria (thanks <a href="https://github.com/magicmonty/bash-git-prompt">Martin Gondermann</a>):</p>
+
+<ul>
+    <li>↑n: ahead of remote by n commits</li>
+<li>↓n: behind remote by n commits</li>
+<li>↓m↑n: branches diverged, other by m commits, yours by n commits</li>
+<li>L: local branch, not remotely tracked</li>
+</ul>
+
+<p><code>{local status}</code> is determined by the following criteria: </p>
+
+<ul>
+    <li>✔: repository clean</li>
+<li>●n: there are n staged files</li>
+<li>✖n: there are n files with merge conflicts</li>
+<li>✖-n: there are n staged files waiting for removal</li>
+<li>✚n: there are n changed but unstaged files</li>
+<li>…n: there are n untracked files</li>
+<li>⚑n: there are n stash entries</li>
+</ul>
+
+<h3 class="headers" id="PrivilegeCharacter">Privilege Character<span>&nbsp;<a href="#PrivilegeCharacter">#</a></span></h3>
+
+<p>The privilege character would be a dollar sign ($) when running as an unprivileged user, and an octothorp (#) when running with elevated privileges. Note that the privilege character would appear on the second line. Although not necessary in most scenarios, when the username and hostname got long and the prompt had to display a lot of information for a complex <code>git</code> repository, this helped keep everything readable.</p>
+
+
+<p>In practice, my prompt can look as simple as this:</p>
+
+<p><span style="color: green;">zac</span>@<span style="color: green;">wk01</span>:<span style="color: blue;">~/</span><br />$</p>
+
+<p>Here I can easily see that I am logged in as <code>zac</code> on <code>wk01</code>, in the home directory, and the home directory is not a <code>git</code> repository.</p>
+
+<p>If I move into the <code>~/tools/</code> folder, I can quickly ascertain that this is a <code>git</code> repository, I am on the <code>master</code> branch, and there are no unstaged changes.</p>
+
+<p><span style="color: green;">zac</span>@<span style="color: green;">wk01</span>:<span style="color: blue;">~/tools</span> [master origin/master | ✔]<br />$</p>
+
+<p>Having altered one of the scripts in the project, my prompt would change to indicate that the repository had 1 unstaged change.</p>
+
+<p><span style="color: green;">zac</span>@<span style="color: green;">wk01</span>:<span style="color: blue;">~/tools</span> [<span color="yelow">master</span> origin/master | ● 1 ✖ 1 ✚ 1 ✖ - 1 … 1]<br />$</p>
+
+<p>I suspect there are some bugs in the prompt, particular in the <code>{local status}</code> formulation, but so far this has worked well for me. The underlying code is available on GitHub, in the <a href="https://github.com/zacjszewczyk/shell-prompt">shell-prompt</a> repository.</p>
+
+
+</article>
+<p>
+<a href="/blog/chatgpt-shell-prompt.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, <a href="https://www.linkedin.com/in/zachary-szewczyk-441969235/">LinkedIn</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2022 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>
