@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 16 Nov 2023 12:35:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Nov 2023 12:41:23 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>SANS Recommendations for Defensive Cyber Analysts</title>
+            <link>https://zacs.site/blog/sans-recommendations.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/sans-recommendations.html</guid>
+            <pubDate>Thu, 16 Nov 2023 00:39:49 GMT</pubDate>
+            <description>
+                &lt;p&gt;I keep fielding this question in private, so I finally decided to answer it in public: &amp;#8220;What SANS courses should I take?&amp;#8221; Although I have a much longer answer to give about training in general, this article answers that specific question based on my own personal experience, having taken several SANS courses over the years.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/sans-recommendations.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>ChatGPT Wrote my Shell Prompt</title>
             <link>https://zacs.site/blog/chatgpt-shell-prompt.html</link>
