@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 16 Nov 2023 12:41:23 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Nov 2023 10:35:10 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Introducing Colors</title>
+            <link>https://zacs.site/blog/introducing-colors.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/introducing-colors.html</guid>
+            <pubDate>Mon, 20 Nov 2023 22:35:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;Over a year ago I read Matthew Strom&amp;#8217;s article &lt;a href="https://matthewstrom.com/writing/how-to-pick-the-least-wrong-colors"&gt;&lt;em&gt;How to pick the least wrong colors&lt;/em&gt;&lt;/a&gt;, where he explored the fascinating intricacies of designing good color schemes. Here, &amp;#8220;good&amp;#8221; meant not just whether the colors looked nice, but also how distinguishable they were from each other and whether or not they accomodated individuals with conditions like protanopia, for example, who cannot see red light. He came up with a great solution and posted the NodeJS code &lt;a href="https://github.com/ilikescience/category-colors"&gt;to GitHub&lt;/a&gt;. Since I do most of my work in Python, though, I had few chances to take advantage of his research&amp;#160;&amp;#8212;&amp;#160;until now. My latest project, &lt;a href="https://github.com/zacjszewczyk/colors"&gt;Colors&lt;/a&gt;, helps to generate large sets of attractive and accessible color schemes. The current version of this project is, for the most part, a direct NodeJS-to-Python port of Matthew&amp;#8217;s code from 2022 with a few minor changes, but I look forward to building on it and keeping pace with Matthew. &lt;a href="https://github.com/zacjszewczyk/colors"&gt;Colors&lt;/a&gt; is currently available as a Jupyter notebook and a regular Python script.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/introducing-colors.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>SANS Recommendations for Defensive Cyber Analysts</title>
             <link>https://zacs.site/blog/sans-recommendations.html</link>
