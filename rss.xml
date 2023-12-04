@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 20 Nov 2023 10:39:52 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 04 Dec 2023 10:08:21 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>You Don't Need AI, You Need an Algorithm</title>
+            <link>https://zacs.site/blog/you-need-an-algorithm.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/you-need-an-algorithm.html</guid>
+            <pubDate>Mon, 04 Dec 2023 22:06:36 GMT</pubDate>
+            <description>
+                &lt;p&gt;A few weeks ago, I participated in a working group tasked with identifying areas where artificial intelligence and machine learning could improve network utilization. What, specifically, &amp;#8220;improve&amp;#8221; and &amp;#8220;utilization&amp;#8221; meant were some of the first questions we addressed. During that conversation, though, one of the participants made an insightful observation that the group promptly ignored. He told a brief story about how someone had asked him for a networking device that could aggregate multiple uplinks and then &amp;#8220;use AI to choose the best one.&amp;#8221; When he offered a simple WAN failover solution, a technology that has existed for decades and comes built-in to open source firewalls like pfSense, commercial appliances from the likes of Cisco, and every modern mobile phone, the customer told him, &amp;#8220;No.&amp;#8221; Like our working group, that customer person had a solution (artificial intelligence) driving their requirements (an AI-based WAN failover), not the other way around.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/you-need-an-algorithm.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Introducing Colors</title>
             <link>https://zacs.site/blog/introducing-colors.html</link>
