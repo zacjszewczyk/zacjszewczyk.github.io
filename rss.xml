@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 04 Dec 2023 10:08:21 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 08 Dec 2023 09:46:26 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Artificial Intelligence Reading List</title>
+            <link>https://zacs.site/blog/artificial-intelligence-reading-list.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/artificial-intelligence-reading-list.html</guid>
+            <pubDate>Fri, 08 Dec 2023 22:03:26 GMT</pubDate>
+            <description>
+                &lt;p&gt;Thanks in no small part to OpenAI&amp;#8217;s &lt;a href="https://chat.openai.com"&gt;ChatGPT&lt;/a&gt;, the past year has seen an explosion in interest in artificial intelligence in general, and in large language models in particular. That democratization of access turned this niche research area into a common topic of conversation, and has led to a lot of fascinating writing on the subject. Although certainly not comprehensive, this article collects some of my favorite articles, papers, and resources into a single reading list.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/artificial-intelligence-reading-list.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>You Don't Need AI, You Need an Algorithm</title>
             <link>https://zacs.site/blog/you-need-an-algorithm.html</link>
