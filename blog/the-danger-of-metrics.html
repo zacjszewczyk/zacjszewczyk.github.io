@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="I got an email a few weeks ago about my article [*Operational Metrics: The Next Step in the Evolution of Defensive Cyberspace Operations*](https://mwi.westpoint.edu/operational-metrics-the-next-step-in-the-evolution-of-defensive-cyberspace-operations/)[^1] from a researcher studying the same problem. We talked about my article, [some](SOC Metrics Part I.txt) of [the other](SOC Metrics Part II.txt) writing [I have](SOC Metrics Part III.txt) published [on this topic](Individual versus Program SOC Metrics.txt), and and then something I briefly touched on in my *SOC Metrics* series: the dangers of metrics.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="The Danger of Metrics - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>The Danger of Metrics - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/the-danger-of-metrics.html">The Danger of Metrics</a>
+</h2>
+<time id='article_time' datetime="2023-12-13 20:32:15-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2023.html">2023</a>/<a href="/blog/2023-12.html">12</a>/13 20:32:15 EST in <a href='/cybersecurity.html'>Cybersecurity</a></time>
+<p>I got an email a few weeks ago about my article <a href="https://mwi.westpoint.edu/operational-metrics-the-next-step-in-the-evolution-of-defensive-cyberspace-operations/"><em>Operational Metrics: The Next Step in the Evolution of Defensive Cyberspace Operations</em></a><sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup> from a researcher studying the same problem. We talked about my article, <a href="https://zacs.site/blog/soc-metrics-part-i.html">some</a> of <a href="https://zacs.site/blog/soc-metrics-part-ii.html">the other</a> writing <a href="https://zacs.site/blog/soc-metrics-part-iii.html">I have</a> published <a href="https://zacs.site/blog/individual-versus-program-soc-metrics.html">on this topic</a>, and and then something I briefly touched on in my <em>SOC Metrics</em> series: the dangers of metrics.</p>
+
+<p>In <a href="https://zacs.site/blog/soc-metrics-part-i.html"><em>SOC Metrics, Part I: Foundational Metrics</em></a>, and then again in <a href="https://zacs.site/blog/individual-versus-program-soc-metrics.html"><em>Individual versus Program SOC Metrics</em></a>, I explained how poor management could misinterpret metrics to damage rather than improve their organization. This conversation, though, reminded me of Justin Lister&#8217;s <a href="https://twitter.com/justin_lister/status/1502459615593725954">prescient point</a>, that &#8220;Cyber metrics are like Schrödinger’s cat. In that you can’t manage what you can’t measure. But if you measure it then it starts to drive the wrong outcomes.&#8221; What gets measured gets managed. Similarly, as Charlie Munger said, &#8220;Show me the incentive, and I will show you the outcome.&#8221; Numbers might not lie, but the way we contextualize, frame, and present them leaves a great deal of room for biases&#160;&#8212;&#160;inadvertant or intentional&#160;&#8212;&#160;to creep in at each stage. Mark Twain&#8217;s famous quote, &#8220;There are three kinds of lies: lies, dammed lies, and statistics&#8221; sums this up well: we must account not just for lies, straightforward falsehoods, but also &#8220;damned lies&#8221; or malicious lies, and also the most dangerous category, statistics&#160;&#8212;&#160;those lies that seem most convincing and thus best obscure the truth.</p>
+
+<p>We must measure the right things in the right ways, and we must also manage the right things in the right ways. The danger of metrics is that it opens us up to that most dangerous of scenarios, the one in which we believe we are doing the right things for the right reasons, but in acutality are optimizing for an arbitrary goal disconnected from reality.</p>
+
+<ul id="series_index">
+    <li><a href="/blog/soc-metrics-part-i.html">SOC Metrics, Part I: Foundational Metrics</a></li>
+    <li><a href="/blog/soc-metrics-part-ii.html">SOC Metrics, Part II: Measures of Performance</a></li>
+    <li><a href="/blog/soc-metrics-part-iii.html">SOC Metrics, Part III: Measures of Effectiveness</a></li>
+    <li>Bonus: <a href="/blog/individual-versus-program-soc-metrics.html">Individual versus Program SOC Metrics</a></li>
+    <li>Bonus: <a href="/blog/the-danger-of-metrics.html">The Danger of Metrics</a></li>
+</ul>
+
+<p id='fn1'><a class='fn' title='return to article' href='#fnref1'>&#x21a9;</a>&nbsp;Also published on my blog <a href="https://zacs.site/blog/operational-metrics.html">here</a>.</p>
+
+
+</article>
+<p>
+<a href="/blog/the-danger-of-metrics.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, <a href="https://www.linkedin.com/in/zachary-szewczyk-441969235/">LinkedIn</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2022 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>

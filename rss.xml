@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 12 Dec 2023 07:18:31 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 13 Dec 2023 08:33:53 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>The Danger of Metrics</title>
+            <link>https://zacs.site/blog/the-danger-of-metrics.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/the-danger-of-metrics.html</guid>
+            <pubDate>Wed, 13 Dec 2023 20:32:15 GMT</pubDate>
+            <description>
+                &lt;p&gt;I got an email a few weeks ago about my article &lt;a href="https://mwi.westpoint.edu/operational-metrics-the-next-step-in-the-evolution-of-defensive-cyberspace-operations/"&gt;&lt;em&gt;Operational Metrics: The Next Step in the Evolution of Defensive Cyberspace Operations&lt;/em&gt;&lt;/a&gt;&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; from a researcher studying the same problem. We talked about my article, &lt;a href="https://zacs.site/blog/soc-metrics-part-i.html"&gt;some&lt;/a&gt; of &lt;a href="https://zacs.site/blog/soc-metrics-part-ii.html"&gt;the other&lt;/a&gt; writing &lt;a href="https://zacs.site/blog/soc-metrics-part-iii.html"&gt;I have&lt;/a&gt; published &lt;a href="https://zacs.site/blog/individual-versus-program-soc-metrics.html"&gt;on this topic&lt;/a&gt;, and and then something I briefly touched on in my &lt;em&gt;SOC Metrics&lt;/em&gt; series: the dangers of metrics.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/the-danger-of-metrics.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Artificial Intelligence Reading List</title>
             <link>https://zacs.site/blog/artificial-intelligence-reading-list.html</link>
