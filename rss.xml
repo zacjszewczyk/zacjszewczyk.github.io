@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 30 Mar 2024 06:38:45 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 30 Mar 2024 06:59:00 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Laziness is the Root of All Evil</title>
+            <link>https://zacs.site/blog/laziness-is-the-root-of-all-evil.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/laziness-is-the-root-of-all-evil.html</guid>
+            <pubDate>Sat, 30 Mar 2024 18:58:48 GMT</pubDate>
+            <description>
+                &lt;p&gt;In a class a few days ago, the instructor trotted out Donald Knuth&amp;#8217;s famous quote about premature optimization. Of course, as nearly every other instructor has ever done, he cherry-picked the catchy middle part: &amp;#8220;Premature optimization is the root of all evil.&amp;#8221; He did not, however, share the context around it. Here&amp;#8217;s the full quote:&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/laziness-is-the-root-of-all-evil.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>The Danger of Metrics</title>
             <link>https://zacs.site/blog/the-danger-of-metrics.html</link>
