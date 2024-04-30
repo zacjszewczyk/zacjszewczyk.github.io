@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Zac Szewczyk">
+        <meta name="application-name" content="Zac Szewczyk">
+        <meta name="keywords" content="Zac Szewczyk, Zachary Szewczyk, Zac J. Szewczyk, Szewczyk, zacjszewczyk">
+        <meta name="description" content="I last wrote about [my setup](My Setup 2019.txt) in May of 2019, almost five years ago. While some of those specifics have stayed the same, much has changed since then, and so I decided to write a new version of that article today. For ease of comparison over time, this post will—-for the most part--follow the same format as in 2019.">
+        
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+        <meta name="referrer" content="no-referrer">
+        <meta name="theme-color" content="#FFFFFF">
+        <link rel="stylesheet" href="/assets/main.css">
+        
+        <meta property="og:image" content="/assets/images/favicon.ico">
+        <meta property="og:title" content="My Setup - Zac Szewczyk">
+        <meta property="og:site_name" content="Zac Szewczyk's Blog">
+        <meta property="og:article:author" content="Zac Szewczyk">
+        <meta property="og:see_also" content="https://zacs.site/">
+
+        <link rel="alternate" type="application/rss+xml" title="Zac Szewczyk's Feed" href="/rss.xml">
+        <link rel="shortcut icon" type="image/ico" size="16x16" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" size="192x192" href="/assets/images/favicon_192.ico">
+        <link rel="shortcut icon" type="image/ico" size="512x512" href="/assets/images/favicon_512.ico">
+        
+        <title>My Setup - Zachary Szewczyk</title>
+    </head>
+    <body id="{{BODYID}}">
+        <nav>
+            <a href="/index.html" id="home_link">Home</a>
+            <a href="/blog.html" id="blog_link">Blog</a>
+            <a href="/explore.html" id="explore_link">Explore</a>
+            <a href="/rss.xml" id="rss_link">RSS</a>
+            <a href="/archives.html" id="archives_link" rel="prefetch">Post Archives</a>
+            <a href="/projects.html" id="projects_link">Projects</a>
+            <a href="/disclaimers.html" id="disclaimers_link">Disclaimers</a>
+        </nav>
+        <main>
+<article>
+<h2 id='article_title'>
+<a class="original" href="/blog/my-setup-2024.html">My Setup</a>
+</h2>
+<time id='article_time' datetime="2024-04-30 02:00:09-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2024.html">2024</a>/<a href="/blog/2024-04.html">04</a>/30 02:00:09 EST in <a href='/uncategorized.html'>Uncategorized</a></time>
+<p>I last wrote about <a href="https://zacs.site/blog/my-setup-2019.html">my setup</a> in May of 2019, almost five years ago. While some of those specifics have stayed the same, much has changed since then, and so I decided to write a new version of that article today. For ease of comparison over time, this post will—-for the most part&#160;&#8212;&#160;follow the same format as in 2019.</p>
+
+<h3 class="headers" id="MyDevices">My Devices<span>&nbsp;<a href="#MyDevices">#</a></span></h3>
+
+<p>In 2021, I decided to build a home lab so I could learn to manage and monitor an enterprise-style network with more freedom to experiment than my day job gave me. This ultimately entailed adding a <a href="https://protectli.com/vault-6-port/">six port Protectli Vault</a> and two switches for networking, then four Raspberry Pi 4s, four <a href="https://radxa.com/product/detailed?productName=rock5b">Radxa Rock Pis</a>, and <a href="https://pcpartpicker.com/user/zacjszewczyk/saved/QBn899">a custom desktop workstation</a> for compute. The Protectli Vault allows me to run separate local area networks with a single wide area network uplink through my internet service provider. The switches handle inter-local area network communications. The ARM-based Raspberry Pi 4s and the Intel-based Radxa Rock Pis aggregate logs, provide various services, and run a few security incident and event management systems. For a network of this size, even these small devices handle that load just fine. I could have virtualized most of these devices, but I liked the idea of tackling the added challenge of managing discrete hardware. I plan to delve into my home lab in greater detail in an upcoming article, so for now, I will leave it at that.</p>
+
+<p>I started traveling frequently for work in 2023, and so while my home lab had given me a great deal of capability to experiment, I often found myself without access to that environment. First, I tried to bridge the gap with my aging MacBook Pro from 2013. While my MacBook Pro still worked fine for most everyday tasks, after almost ten years of service it struggled under heavier workloads, and its battery lasted just minutes. I tried using an iPad Pro next, but it just didn’t have the processing power for the new programming and data science jobs I threw at it. Neither could handle the artificial intelligence workloads I had started eyeing, either, so in early 2024 I finally replaced my MacBook Pro with a new laptop. </p>
+
+<p>After much deliberation, I decided to take a chance on a new <a href="https://frame.work/">Framework laptop</a>. Their admirable goal of building user-serviceable laptops caught my eye back when I built my own desktop in 2021, and with the Framework Laptop 16 set to ship in 2024, the company would finally offer a powerful device in the larger form factor I preferred. I had some serious concerns about build quality and reliability, especially after the first batch of reviews came out, but after a couple months and several cross-country trips, I can happily say that the Framework Laptop 16 is one of the best laptops I have ever used. I plan to delve into this subject in greater detail in an upcoming article, too, so for now, I will leave it at that.</p>
+
+<h3 class="headers" id="MyEditors">My Editors<span>&nbsp;<a href="#MyEditors">#</a></span></h3>
+
+<p>I still write in plain text, but these days I write in Markdown and, increasingly often, LaTeX. Markdown lets me write articles like these and documentation in a simple, lightweight format, while LaTeX fills a gap for more complex documents with unusual layouts and even entire presentations. <a href="/projects.html#proofer">Proofer</a>, the app I built to identify elements of weak writing, does not yet work with LaTeX, but given the volume of LaTeX I write these days, I hope to fix that soon.</p>
+
+<p>On my computers, Visual Studio Code has replaced Sublime Text as my editor of choice. I’m not yet sure that this change will stick, but for now, Visual Studio Code has managed to edge it out. On my mobile devices, I used to use <a href="https://getdrafts.com/">Drafts</a> and <a href="http://omz-software.com/editorial/">Editorial</a>; these days, I do most of my writing in Working Copy because it integrates directly with <code>git</code>, and I handle light development tasks in <a href="https://juno.sh/">Juno</a> with Working Copy as the interface for <code>git</code> on the back-end. I still use Dropbox for some things, but as I explained a few months ago, <a href="https://zacs.site/blog/git-is-my-hammer.html">git is my hammer; everything is a nail</a>. My new <code>git</code>-based workflow gives me the same local and off-site backups as my old setup did but with more granular control over when those backups are created and how they are propagated. Where my previous setup only had to deal with the simple Markdown files I wrote for this website, this new one also works much better with a more diverse array of use cases: blog posts but also presentations and scripts, too.</p>
+
+<h3 class="headers" id="MyBackups">My Backups<span>&nbsp;<a href="#MyBackups">#</a></span></h3>
+
+<p>While I did manage to streamline it, my backup system of 2019 was still too complex to last. These days, <a href="https://zacs.site/blog/git-is-my-hammer.html">I use <code>git</code> for everything</a>, which gives me a local and two or more off-site backups of all my projects. I also copy everything to a rotating array of external hard drives with periodic updates every couple of months. My mobile devices backup to the cloud automatically. All together, this strategy takes almost no time or effort&#160;&#8212;&#160;which, critically, means it actually happens.</p>
+
+<h3 class="headers" id="MySite">My Site<span>&nbsp;<a href="#MySite">#</a></span></h3>
+
+<p>I continue to use First Crack as my content management system, with only a few minor changes, to publish this site. It’s rock solid. Instead of Firebase, though, I expose the actual site through GitHub Pages now. With the content in <code>git</code> anyway, it made more sense to just add a second upstream repository to publish the site versus installing, configuring, and using an entirely separate tool.</p>
+
+
+<p>Five years after <a href="https://zacs.site/blog/my-setup-2019.html">the original post</a>, many aspects of my setup have changed. At a high level, though, the concept has remained the same&#160;&#8212;&#160;so much so, in fact, that I’ll close with the same conclusion today as I did in 2019. “Together these systems, programs, and services give me the ability to write anywhere without worry of losing my work, and manage this site from any machine with a shell. I can start working on my phone, finish an article on my home computer, and then use my phone to post it on the road. Whatever I want to do, I can with this setup. I have put a lot of work into it in over the years, and I believe I have created something to be proud of.”</p>
+
+
+</article>
+<p>
+<a href="/blog/my-setup-2024.html">Permalink.</a>
+</p>
+
+        </main>
+        <footer>
+            <p>
+                Follow me on <a href="http://twitter.com/zacjszewczyk">Twitter</a>, <a href="https://www.instagram.com/zacjszewczyk/">Instagram</a>, <a href="https://www.linkedin.com/in/zachary-szewczyk-441969235/">LinkedIn</a>, or subscribe to my <a href="/rss.xml">RSS</a> feed.
+            </p>
+            <p>
+                © 2012-2022 Zachary Szewczyk.
+            </p>
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. See <a href="/disclaimers.html">disclaimers</a>.
+            </p>
+        </footer>
+        <div id="lg"></div>
+        <div id="rg"></div>
+    </body>
+    <link rel="manifest" href="/assets/manifest.json">
+</html>
