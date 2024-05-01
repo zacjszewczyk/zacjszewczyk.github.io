@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 01 May 2024 09:25:03 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2024 09:55:27 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>A Brief Framework 16 Review</title>
+            <link>https://zacs.site/blog/framework-16.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/framework-16.html</guid>
+            <pubDate>Wed, 01 May 2024 21:54:47 GMT</pubDate>
+            <description>
+                &lt;p&gt;Let me save you some time: &lt;strong&gt;the Framework laptop is great, and you should buy it.&lt;/strong&gt; The rest of this post will delve&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; into the why, but that’s the “so what.”&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/framework-16.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>My Setup</title>
             <link>https://zacs.site/blog/my-setup-2024.html</link>
