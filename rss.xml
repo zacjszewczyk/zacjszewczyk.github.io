@@ -7,19 +7,9 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 30 Apr 2024 12:01:20 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2024 09:25:03 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
-        <item>
-            <title>Artificial Intelligence Reading List</title>
-            <link>https://zacs.site/blog/artificial-intelligence-reading-list.html</link>
-            <guid isPermaLink='true'>https://zacs.site/blog/artificial-intelligence-reading-list.html</guid>
-            <pubDate>Tue, 30 Apr 2024 12:01:13 GMT</pubDate>
-            <description>
-                &lt;p&gt;Thanks in no small part to OpenAI&amp;#8217;s &lt;a href="https://chat.openai.com"&gt;ChatGPT&lt;/a&gt;, the past year has seen an explosion in interest in artificial intelligence in general, and in large language models in particular. That democratization of access turned this niche research area into a common topic of conversation, and has led to a lot of fascinating writing on the subject. Although certainly not comprehensive, this article collects some of my favorite articles, papers, and resources into a single reading list.&lt;/p&gt;
-                &lt;p&gt;&lt;a href="https://zacs.site/blog/artificial-intelligence-reading-list.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
-            </description>
-        </item>
         <item>
             <title>My Setup</title>
             <link>https://zacs.site/blog/my-setup-2024.html</link>
@@ -48,6 +38,16 @@
             <description>
                 &lt;p&gt;I got an email a few weeks ago about my article &lt;a href="https://mwi.westpoint.edu/operational-metrics-the-next-step-in-the-evolution-of-defensive-cyberspace-operations/"&gt;&lt;em&gt;Operational Metrics: The Next Step in the Evolution of Defensive Cyberspace Operations&lt;/em&gt;&lt;/a&gt;&lt;sup id="fnref1"&gt;&lt;a href="#fn1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; from a researcher studying the same problem. We talked about my article, &lt;a href="https://zacs.site/blog/soc-metrics-part-i.html"&gt;some&lt;/a&gt; of &lt;a href="https://zacs.site/blog/soc-metrics-part-ii.html"&gt;the other&lt;/a&gt; writing &lt;a href="https://zacs.site/blog/soc-metrics-part-iii.html"&gt;I have&lt;/a&gt; published &lt;a href="https://zacs.site/blog/individual-versus-program-soc-metrics.html"&gt;on this topic&lt;/a&gt;, and and then something I briefly touched on in my &lt;em&gt;SOC Metrics&lt;/em&gt; series: the dangers of metrics.&lt;/p&gt;
                 &lt;p&gt;&lt;a href="https://zacs.site/blog/the-danger-of-metrics.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Artificial Intelligence Reading List</title>
+            <link>https://zacs.site/blog/artificial-intelligence-reading-list.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/artificial-intelligence-reading-list.html</guid>
+            <pubDate>Sat, 09 Dec 2023 08:03:26 GMT</pubDate>
+            <description>
+                &lt;p&gt;Thanks in no small part to OpenAI&amp;#8217;s &lt;a href="https://chat.openai.com"&gt;ChatGPT&lt;/a&gt;, the past year has seen an explosion in interest in artificial intelligence in general, and in large language models in particular. That democratization of access turned this niche research area into a common topic of conversation, and has led to a lot of fascinating writing on the subject. Although certainly not comprehensive, this article collects some of my favorite articles, papers, and resources into a single reading list.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/artificial-intelligence-reading-list.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
             </description>
         </item>
         <item>
