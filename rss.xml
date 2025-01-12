@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 12 Jan 2025 05:21:40 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2025 10:08:41 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>My Podcasts</title>
+            <link>https://zacs.site/blog/my-podcasts.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/my-podcasts.html</guid>
+            <pubDate>Sun, 12 Jan 2025 22:08:21 GMT</pubDate>
+            <description>
+                &lt;p&gt;In &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;&lt;em&gt;Keeping Up with Current Events&lt;/em&gt;&lt;/a&gt;, I talked about the websites I turn to each morning to stay informed; in &lt;a href="https://zacs.site/blog/my-evening-reads.html"&gt;&lt;em&gt;My Evening Reads&lt;/em&gt;&lt;/a&gt;, I shared the many others I follow on niche subjects. Podcasts, however, are another important part of how I learn and grow. Some offer regular updates on current events, while others dive deep into niche topics. As a complement to &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;&lt;em&gt;Keeping Up with Current Events&lt;/em&gt;&lt;/a&gt; and &lt;a href="https://zacs.site/blog/my-evening-reads.html"&gt;&lt;em&gt;My Evening Reads&lt;/em&gt;&lt;/a&gt;, I wanted to start a list of the podcasts I follow here.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/my-podcasts.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>A Brief Framework 16 Review</title>
             <link>https://zacs.site/blog/framework-16.html</link>
