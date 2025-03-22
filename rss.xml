@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 18 Mar 2025 11:55:55 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 22 Mar 2025 04:19:42 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>The Cybernetic Teammate</title>
+            <link>https://open.substack.com/pub/oneusefulthing/p/the-cybernetic-teammate)</link>
+            <guid isPermaLink='true'>https://open.substack.com/pub/oneusefulthing/p/the-cybernetic-teammate)</guid>
+            <pubDate>Sat, 22 Mar 2025 16:19:31 GMT</pubDate>
+            <description>
+                &lt;p&gt;Ethan Mollick wxplains a recent Harvard Business School study examined the impact of large language models as collaborative &amp;#8220;teammates&amp;#8221; within Procter &amp;#38; Gamble. The findings revealed that employees augmented with AI not only outperformed those without AI assistance but also experienced notable productivity gains. Significantly, the integration of AI enabled specialists to transcend their narrow expertise, fostering more comprehensive and well-rounded solutions. This suggests that AI can effectively dismantle knowledge silos, enhancing collaborative problem-solving&amp;#160;&amp;#8212;&amp;#160;a crucial insight for technical work in particular, such as in the cybersecurity field.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://open.substack.com/pub/oneusefulthing/p/the-cybernetic-teammate)"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>My Podcasts</title>
             <link>https://zacs.site/blog/my-podcasts.html</link>
