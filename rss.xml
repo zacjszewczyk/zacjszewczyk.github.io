@@ -7,9 +7,93 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 30 Oct 2026 02:29:34 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 04:45:05 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Artificial Intelligence and the Role of the Analyst</title>
+            <link>https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/2026-Edition/Artificial-Intelligence/</link>
+            <guid isPermaLink='true'>https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/2026-Edition/Artificial-Intelligence/</guid>
+            <pubDate>Thu, 01 Oct 2026 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;I recently published &lt;a href="https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/2026-Edition/Artificial-Intelligence/"&gt;&lt;em&gt;Artificial Intelligence and the Role of the Analyst&lt;/em&gt;&lt;/a&gt; on Gray Space, where I discuss how the growing role of artificial intelligence should shift cyber analysts toward supervising systems, evaluating evidence, and exercising judgment, rather than manually writing queries, debugging logic, and reviewing logs.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/2026-Edition/Artificial-Intelligence/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Making Analytic Confidence Visible: An Operational Rubric for Cyber Analysis</title>
+            <link>https://cyberdefensereview.army.mil/CDR-Content/Articles/Article-View/Article/4611691/making-analytic-confidence-visible-an-operational-rubric-for-cyber-analysis/</link>
+            <guid isPermaLink='true'>https://cyberdefensereview.army.mil/CDR-Content/Articles/Article-View/Article/4611691/making-analytic-confidence-visible-an-operational-rubric-for-cyber-analysis/</guid>
+            <pubDate>Fri, 25 Sep 2026 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;I’m pleased to share that my article, &lt;a href="https://cyberdefensereview.army.mil/CDR-Content/Articles/Article-View/Article/4611691/making-analytic-confidence-visible-an-operational-rubric-for-cyber-analysis/"&gt;&lt;em&gt;Making Analytic Confidence Visible: An Operational Rubric for Cyber Analysis&lt;/em&gt;&lt;/a&gt;, was just published in the Cyber Defense Review, where I discuss a rubric for assessing analytic rigor and communicating confidence in cyber analysis.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://cyberdefensereview.army.mil/CDR-Content/Articles/Article-View/Article/4611691/making-analytic-confidence-visible-an-operational-rubric-for-cyber-analysis/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>The Agentic Cyber Protection Team: Trading Mass for Mastery in the Algorithmic Battlespace</title>
+            <link>https://cyberdefensereview.army.mil/CDR-Content/Articles/Article-View/Article/4515223/the-agentic-cyber-protection-team-trading-mass-for-mastery-in-the-algorithmic-b/</link>
+            <guid isPermaLink='true'>https://cyberdefensereview.army.mil/CDR-Content/Articles/Article-View/Article/4515223/the-agentic-cyber-protection-team-trading-mass-for-mastery-in-the-algorithmic-b/</guid>
+            <pubDate>Thu, 11 Jun 2026 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;I’m pleased to share that an article I contributed to, &lt;a href="https://cyberdefensereview.army.mil/CDR-Content/Articles/Article-View/Article/4515223/the-agentic-cyber-protection-team-trading-mass-for-mastery-in-the-algorithmic-b/"&gt;&lt;em&gt;The Agentic Cyber Protection Team: Trading Mass for Mastery in the Algorithmic Battlespace&lt;/em&gt;&lt;/a&gt;, now available in the Cyber Defense Review. Brig. Gen. John Popiak outlines a model for smaller, expert cyber protection teams supervising AI agents while retaining human decision authority.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://cyberdefensereview.army.mil/CDR-Content/Articles/Article-View/Article/4515223/the-agentic-cyber-protection-team-trading-mass-for-mastery-in-the-algorithmic-b/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Demystifying the Analytic Scheme of Maneuver</title>
+            <link>https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/2026-Edition/Demystifying-the-Analytic-Scheme/</link>
+            <guid isPermaLink='true'>https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/2026-Edition/Demystifying-the-Analytic-Scheme/</guid>
+            <pubDate>Tue, 19 May 2026 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;My article &lt;a href="https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/2026-Edition/Demystifying-the-Analytic-Scheme/"&gt;&lt;em&gt;Demystifying the Analytic Scheme of Maneuver&lt;/em&gt;&lt;/a&gt; was just published on Gray Space, where I discuss how an analytic scheme of maneuver connects a commander’s questions to evidence, data, and investigative actions.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/2026-Edition/Demystifying-the-Analytic-Scheme/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Schrodinger's Breach</title>
+            <link>https://api.army.mil/e2/c/downloads/2025/10/15/d43f6b12/gray-space-fall-2025.pdf</link>
+            <guid isPermaLink='true'>https://api.army.mil/e2/c/downloads/2025/10/15/d43f6b12/gray-space-fall-2025.pdf</guid>
+            <pubDate>Fri, 12 Sep 2025 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;I recently published &lt;a href="https://api.army.mil/e2/c/downloads/2025/10/15/d43f6b12/gray-space-fall-2025.pdf"&gt;&lt;em&gt;Schrodinger&amp;#8217;s Breach&lt;/em&gt;&lt;/a&gt; on Gray Space, where I discuss why cyber investigations should assume compromise and rigorously test that assumption.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://api.army.mil/e2/c/downloads/2025/10/15/d43f6b12/gray-space-fall-2025.pdf"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>The Military Needs Frontier Models</title>
+            <link>https://www.armyupress.army.mil/journals/military-review/online-exclusive/2025-ole/military-needs-frontier-models/</link>
+            <guid isPermaLink='true'>https://www.armyupress.army.mil/journals/military-review/online-exclusive/2025-ole/military-needs-frontier-models/</guid>
+            <pubDate>Fri, 08 Aug 2025 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;I’m pleased to share that my article, &lt;a href="https://www.armyupress.army.mil/journals/military-review/online-exclusive/2025-ole/military-needs-frontier-models/"&gt;&lt;em&gt;The Military Needs Frontier Models&lt;/em&gt;&lt;/a&gt;, was just published on Military Review, where I discuss why complex military applications need the reasoning and contextual capabilities of frontier AI models.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://www.armyupress.army.mil/journals/military-review/online-exclusive/2025-ole/military-needs-frontier-models/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Artificial Intelligence-Enabled Cyber Education: An Approach to Accelerated Education Development</title>
+            <link>https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/Summer-2025/AI-Cyber-Ed/</link>
+            <guid isPermaLink='true'>https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/Summer-2025/AI-Cyber-Ed/</guid>
+            <pubDate>Tue, 01 Jul 2025 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;I’m glad to share &lt;a href="https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/Summer-2025/AI-Cyber-Ed/"&gt;&lt;em&gt;Artificial Intelligence-Enabled Cyber Education: An Approach to Accelerated Education Development&lt;/em&gt;&lt;/a&gt;, now available on Gray Space, where I discuss developing cyber expertise and using AI to accelerate the creation of educational materials.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/Summer-2025/AI-Cyber-Ed/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>The Cybernetic Teammate</title>
             <link>https://open.substack.com/pub/oneusefulthing/p/the-cybernetic-teammate)</link>
@@ -30,6 +114,42 @@
             <description>
                 &lt;p&gt;In &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;&lt;em&gt;Keeping Up with Current Events&lt;/em&gt;&lt;/a&gt;, I talked about the websites I turn to each morning to stay informed; in &lt;a href="https://zacs.site/blog/my-evening-reads.html"&gt;&lt;em&gt;My Evening Reads&lt;/em&gt;&lt;/a&gt;, I shared the many others I follow on niche subjects. Podcasts, however, are another important part of how I learn and grow. Some offer regular updates on current events, while others dive deep into niche topics. As a complement to &lt;a href="https://zacs.site/blog/my-morning-reads.html"&gt;&lt;em&gt;Keeping Up with Current Events&lt;/em&gt;&lt;/a&gt; and &lt;a href="https://zacs.site/blog/my-evening-reads.html"&gt;&lt;em&gt;My Evening Reads&lt;/em&gt;&lt;/a&gt;, I wanted to start a list of the podcasts I follow here.&lt;/p&gt;
                 &lt;p&gt;&lt;a href="https://zacs.site/blog/my-podcasts.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>A Cyber Force is Not the Only Solution</title>
+            <link>https://warontherocks.com/2024/07/a-cyber-force-is-not-the-only-solution/</link>
+            <guid isPermaLink='true'>https://warontherocks.com/2024/07/a-cyber-force-is-not-the-only-solution/</guid>
+            <pubDate>Thu, 25 Jul 2024 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;I’m pleased to share that my article, &lt;a href="https://warontherocks.com/2024/07/a-cyber-force-is-not-the-only-solution/"&gt;&lt;em&gt;A Cyber Force is Not the Only Solution&lt;/em&gt;&lt;/a&gt;, was just published on War on the Rocks, where I discuss how specialization, job-specific training, and improved career incentives could strengthen the Army’s cyber workforce. Ultimately, although a new Cyber Force is not the only way to implement these changes, it is unfortunately the most likely path given the services&amp;#8217; demonstrated unwillingness to make these changes on their own.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://warontherocks.com/2024/07/a-cyber-force-is-not-the-only-solution/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Everyone Can Contribute to Professional Discourse</title>
+            <link>https://www.hardingproject.com/p/everyone-can-contribute-to-professional</link>
+            <guid isPermaLink='true'>https://www.hardingproject.com/p/everyone-can-contribute-to-professional</guid>
+            <pubDate>Tue, 18 Jun 2024 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;I recently published &lt;a href="https://www.hardingproject.com/p/everyone-can-contribute-to-professional"&gt;&lt;em&gt;Everyone Can Contribute to Professional Discourse&lt;/em&gt;&lt;/a&gt; on The Harding Project, where I discuss how reading, writing, editing, and finding the right outlet can help anyone contribute to professional discourse.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://www.hardingproject.com/p/everyone-can-contribute-to-professional"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Advantage Defense: Artificial Intelligence at the Tactical Cyber Edge</title>
+            <link>https://mwi.westpoint.edu/advantage-defense-artificial-intelligence-at-the-tactical-cyber-edge/</link>
+            <guid isPermaLink='true'>https://mwi.westpoint.edu/advantage-defense-artificial-intelligence-at-the-tactical-cyber-edge/</guid>
+            <pubDate>Fri, 17 May 2024 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;My article &lt;a href="https://mwi.westpoint.edu/advantage-defense-artificial-intelligence-at-the-tactical-cyber-edge/"&gt;&lt;em&gt;Advantage Defense: Artificial Intelligence at the Tactical Cyber Edge&lt;/em&gt;&lt;/a&gt; was just published on Modern War Institute at West Point, where I discuss how artificial intelligence can support cyber analysis, warning intelligence, and training.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://mwi.westpoint.edu/advantage-defense-artificial-intelligence-at-the-tactical-cyber-edge/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
             </description>
         </item>
         <item>
@@ -133,6 +253,18 @@
             </description>
         </item>
         <item>
+            <title>The Three Wicked Problems Inhibiting Data-Driven Decision-Making in the Army</title>
+            <link>https://mwi.westpoint.edu/the-three-wicked-problems-inhibiting-data-driven-decision-making-in-the-army/</link>
+            <guid isPermaLink='true'>https://mwi.westpoint.edu/the-three-wicked-problems-inhibiting-data-driven-decision-making-in-the-army/</guid>
+            <pubDate>Tue, 27 Jun 2023 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;My article &lt;a href="https://mwi.westpoint.edu/the-three-wicked-problems-inhibiting-data-driven-decision-making-in-the-army/"&gt;&lt;em&gt;The Three Wicked Problems Inhibiting Data-Driven Decision-Making in the Army&lt;/em&gt;&lt;/a&gt; was just published on Modern War Institute at West Point, where I discuss the challenges of collecting, transporting, and presenting data for Army decision-making.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://mwi.westpoint.edu/the-three-wicked-problems-inhibiting-data-driven-decision-making-in-the-army/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
             <title>Collection, Transport, and Presentation: The Three Wicked Problems Inhibiting Data-Driven Decision-Making in the Army</title>
             <link>https://zacs.site/blog/data-driven-decision-making.html</link>
             <guid isPermaLink='true'>https://zacs.site/blog/data-driven-decision-making.html</guid>
@@ -211,6 +343,18 @@
             </description>
         </item>
         <item>
+            <title>Command vs Leadership</title>
+            <link>https://juniorofficer.army.mil/command-vs-leadership/</link>
+            <guid isPermaLink='true'>https://juniorofficer.army.mil/command-vs-leadership/</guid>
+            <pubDate>Sat, 23 Jul 2022 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;I’m pleased to share that my article, &lt;a href="https://juniorofficer.army.mil/command-vs-leadership/"&gt;&lt;em&gt;Command vs Leadership&lt;/em&gt;&lt;/a&gt;, was just published on The Center for Junior Officers, where I discuss why conflating command with leadership can discourage technically skilled cyber officers.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://juniorofficer.army.mil/command-vs-leadership/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
             <title>Amateurs Talk Detection. Professionals Talk Collection.</title>
             <link>https://zacs.site/blog/collection-and-detection.html</link>
             <guid isPermaLink='true'>https://zacs.site/blog/collection-and-detection.html</guid>
@@ -218,6 +362,18 @@
             <description>
                 &lt;p&gt;I went to a presentation from a large cybersecurity firm the other day. The salesmen&amp;#160;&amp;#8212;&amp;#160;and they were all salesmen, as even a few post-presentation questions made clear&amp;#160;&amp;#8212;&amp;#160;focused on the intelligence their company produced, but knew little about the rest of their company&amp;#8217;s &lt;a href="https://www.jcs.mil/Doctrine/Joint-Doctrine-Pubs/2-0-Intelligence-Series/"&gt;intelligence cycle&lt;/a&gt;. As a consumer of their products, though, I consider knowledge of the process that created them critical. After an hour on finished intelligence, and in particular a slide that touted a &amp;#8220;globally deployed sensor grid&amp;#8221;, I wanted to know more about that production process in general, and about their collection specifically. Unfortunately, when asked, the salesmen offered a handful of handwavy &amp;#8220;We have millions of sensors across the globe&amp;#8221;, and, &amp;#8220;We ingest billions of events per day&amp;#8221; statements, but little beyond that.&lt;/p&gt;
                 &lt;p&gt;&lt;a href="https://zacs.site/blog/collection-and-detection.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Operational Metrics: The Next Step in the Evolution of Defensive Cyberspace Operations</title>
+            <link>https://mwi.usma.edu/operational-metrics-the-next-step-in-the-evolution-of-defensive-cyberspace-operations/</link>
+            <guid isPermaLink='true'>https://mwi.usma.edu/operational-metrics-the-next-step-in-the-evolution-of-defensive-cyberspace-operations/</guid>
+            <pubDate>Tue, 10 May 2022 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;My article &lt;a href="https://mwi.usma.edu/operational-metrics-the-next-step-in-the-evolution-of-defensive-cyberspace-operations/"&gt;&lt;em&gt;Operational Metrics: The Next Step in the Evolution of Defensive Cyberspace Operations&lt;/em&gt;&lt;/a&gt; was just published on Modern War Institute at West Point, where I propose measures to understand the effectiveness of defensive cyber missions. See also &lt;a href="https://zacs.site/blog/soc-metrics.html"&gt;&lt;em&gt;SOC Metrics&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://mwi.usma.edu/operational-metrics-the-next-step-in-the-evolution-of-defensive-cyberspace-operations/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
             </description>
         </item>
         <item>
@@ -3159,6 +3315,18 @@
             <description>
                 &lt;p&gt;It&amp;#8217;s been awhile.&lt;/p&gt;
                 &lt;p&gt;&lt;a href="https://zacs.site/blog/simple-not-easy.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Freedom Fighter Interview #21 - Ground ZERO, with Zachary</title>
+            <link>https://www.genyfinanceguy.com/2016/01/14/freedom-fighter-interview-21-ground-zero-with-zachary/</link>
+            <guid isPermaLink='true'>https://www.genyfinanceguy.com/2016/01/14/freedom-fighter-interview-21-ground-zero-with-zachary/</guid>
+            <pubDate>Thu, 14 Jan 2016 17:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;I’m pleased to share that my interview, &lt;a href="https://www.genyfinanceguy.com/2016/01/14/freedom-fighter-interview-21-ground-zero-with-zachary/"&gt;&lt;em&gt;Freedom Fighter Interview #21 - Ground ZERO, with Zachary&lt;/em&gt;&lt;/a&gt;, now available on Gen Y Finance Guy, where I discuss my plans for saving, investing, and pursuing financial independence while in college.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://www.genyfinanceguy.com/2016/01/14/freedom-fighter-interview-21-ground-zero-with-zachary/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
             </description>
         </item>
         <item>
