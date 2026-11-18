@@ -39,25 +39,31 @@
         <main>
 <article>
 <h2 id='article_title'>
-<a class="original" href="/blog/the-failures-of-technology.html">The Failures of Technology(?)</a>
+<a class="original" href="/blog/first-crack-release-notes-0420.html">First Crack Release Notes, April 2020</a>
 </h2>
-<time id='article_time' datetime="2014-04-10 07:58:55-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2014.html">2014</a>/<a href="/blog/2014-04.html">04</a>/10 07:58:55 EST in <a href='/tech.html'>Tech</a></time>
-<p>After I posted <a href="https://zacs.site/blog/a-question-of-value.html">A Question of Value</a> the other day, where I talked about some important questions to ask when evaluating the plausibility of a smart watch as a viable future device category, Linus Edwards sent me a link to a very interesting and thought-provoking piece of his from July of 2013 titled <a href="http://vintagezen.com/zen/2013/7/25/where-did-the-time-go">Where Did The Time Go? The Failures Of Technology</a>. Part of the reason I found it so noteworthy, though, is because I disagree with it so strongly: I disagree with his statement that &#8220;In terms of design, most computing devices, programs, operating systems, and websites are not designed to simplify people&#8217;s lives, but rather make people more and more reliant on those computing devices, programs, operating systems, and websites.&#8221; He lumped all these very different mediums together and categorically condemned all of them for the more pronounced shortcoming of one or two, a process that I feel he used to form the erroneous conclusion that he then wrote his article in service of.</p>
+<time id='article_time' datetime="2020-05-02 19:53:45-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2020.html">2020</a>/<a href="/blog/2020-05.html">05</a>/02 19:53:45 EST in <a href='/programming.html'>Programming</a></time>
+<p>I spent most of my development time in April working on a project that I can, at best, call tangentially related to First Crack. After fighting with <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a>, <a href="http://bottlepy.org/docs/dev/">Bottle</a>, and then Python’s own <a href="https://docs.python.org/3/library/http.server.html">http.server</a> library, I decided to write my own web framework. I won’t spend much time on this now, since I plan to deploy it in an Intranet soon and then release it after some real use, but I will say this: I liked Flask, but it has far too many dependencies to work in my target environment. I liked Bottle even more, since it mirrors most of Flask’s functionality without any dependencies, but it lacks the ability to handle concurrent connections. The surprisingly capable <code>http.server</code> library has zero dependencies and supports concurrent execution, but is ill-suited for building out an entire web application. My project, <em>Swig</em><sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>, solves all of these problems. For now, though, let’s talk about First Crack&#160;&#8212;&#160;a day late, yes, but I hope not a dollar short. </p>
 </article>
 <article>
 <h2 id='article_title'>
-<a class="original" href="/blog/may-i-have-some-more.html">Please, Sir, May I Have Some More?</a>
+<a class="linkpost" href="http://reverttosaved.com/2014/02/19/who-cares-about-office-for-ipad/">Who cares about Office for iPad?</a>
 </h2>
-<time id='article_time' datetime="2014-01-07 21:51:18-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2014.html">2014</a>/<a href="/blog/2014-01.html">01</a>/07 21:51:18 EST in <a href='/writing.html'>Writing</a></time>
-<p>In my early days as a fledgling internet writer, back when I posted at blog-that-shall-not-be-named-dot-provider-dot-com, I worked hard to increase my readership. Taking lessons from anyone willing to give them, I delved into WordPress.com&#8217;s fantastic blogging community and networked with other like-minded individuals. We read each others&#8217; articles, commented, and even planned to start a number of joint ventures together. Although in its infancy, even back in 2007 I also looked to drive traffic towards my work with podcast advertisements. As the years wore on I unfortunately moved away from these venues and on to Hacker News and Twitter, where I have remained to date with little to show for my efforts.</p>
-</article>
-<article>
-<h2 id='article_title'>
-<a class="linkpost" href="http://www.focustheweb.com/2015/04/06/a-basic-collaboration-workflow-on-gist.html">A basic collaboration workflow on Gist</a>
-</h2>
-<time id='article_time' datetime="2019-07-13 07:55:13-0400" pubdate="pubdate">By <link rel="author">Zac J. Szewczyk</link> on <a href="/blog/2019.html">2019</a>/<a href="/blog/2019-07.html">07</a>/13 07:55:13 EST in <a href='/programming.html'>Programming</a></time>
-<p>I have used GitHub <a href="https://zacs.site/blog/my-setup-2019.html">for a while now</a>, but even more over the last few weeks. Gists have proven especially useful, as a quick and easy way to take notes at work. I had a hunch these might <a href="https://help.github.com/en/articles/forking-and-cloning-gists">work like a GitHub repository</a>, and Giovanni Cappellotto confirmed my suspicion. Hat-tip to him for his nice walkthrough of a simple collaboration workflow.</p>
+<time id='article_time' datetime="2014-02-23 09:04:48-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2014.html">2014</a>/<a href="/blog/2014-02.html">02</a>/23 09:04:48 EST in <a href='/tech.html'>Tech</a></time>
+<p>More of a problem than not having Microsoft Office available for iOS, I think, is the strict siloing Apple&#8217;s mobile operating system enforces: I can fulfill all my Office-related needs with Pages, Numbers, and Keynote, but trying to find away around the cumbersome process of opening a document in Dropbox, sending it to Numbers for editing, and then finding a way to get it back into Dropbox so my seventy-five year old uncle can edit the spreadsheet on his computer is a massive barrier to entry for him buying an iPad; in the end, I had no choice but to recommend a Surface. Although the absence of cellular capabilities in the Surface is thankfully pushing him back towards the iPad, the mere fact that I had no choice but to recommend the former highlights a huge shortcoming in the latter.</p>
 
+
+</article>
+<article>
+<h2 id='article_title'>
+<a class="linkpost" href="http://www.marco.org/2013/03/26/google-reader-readers">What If The Google Reader Readers Just Don't Come Back?</a>
+</h2>
+<time id='article_time' datetime="2013-03-26 16:45:58-0400" pubdate="pubdate">By <link rel="author">Zac Szewczyk</link> on <a href="/blog/2013.html">2013</a>/<a href="/blog/2013-03.html">03</a>/26 16:45:58 EST in <a href='/tech.html'>Tech</a></time>
+<p>Marco Arment and MG Siegler on potential reader loss due to Google Reader&#8217;s impending demise:</p>
+
+<blockquote>
+<p>&#8220;I&#8217;m a little worried about this possibility. Short-term, it will definitely be a problem. Long-term is the question.&#8221;</p>
+
+</blockquote>
 
 </article>
 

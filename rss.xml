@@ -7,9 +7,19 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 18 Nov 2026 04:45:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 08:46:53 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>The Unit of AI Work Is the Loop</title>
+            <link>https://zacs.site/blog/the-unit-of-ai-work-is-the-loop.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/the-unit-of-ai-work-is-the-loop.html</guid>
+            <pubDate>Mon, 12 Oct 2026 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;A prompt can produce an answer, but an answer is seldom the whole job. Ask a model to develop a cyber analytic and it may return an SQL query one time, a Python script another, and a simple pattern match the third. In each case, I would get a plausible response in seconds; and in only one of those cases, if any at all, would the answer have the right shape&amp;#160;&amp;#8212;&amp;#160;let alone whether it actually captures the behavior I care about, runs against the available data, and avoids burying analysts in noise remains an open question.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/the-unit-of-ai-work-is-the-loop.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Artificial Intelligence and the Role of the Analyst</title>
             <link>https://www.lineofdeparture.army.mil/Journals/Gray-Space/Archive/2026-Edition/Artificial-Intelligence/</link>
@@ -23,6 +33,20 @@
             </description>
         </item>
         <item>
+            <title>The Right Person</title>
+            <link>https://chrissanders.org/2021/12/dissertation/</link>
+            <guid isPermaLink='true'>https://chrissanders.org/2021/12/dissertation/</guid>
+            <pubDate>Mon, 28 Sep 2026 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;In my &lt;a href="https://zacs.site/blog/soc-metrics-part-i.html"&gt;&lt;em&gt;SOC Metrics&lt;/em&gt; series&lt;/a&gt;, I argued that success depends on the right people doing the right things in the right ways. Metrics can help clarify the latter two, but that leaves a difficult question: what makes someone the right person?&lt;/p&gt;
+
+&lt;p&gt;Chris Sanders&amp;#8217; &lt;a href="https://chrissanders.org/2021/12/dissertation/"&gt;research on the cognitive skills of digital forensic analysts&lt;/a&gt; offers a useful starting point. His interviews examine how skilled analysts form questions, interpret evidence, and choose what to investigate next. Making those practices explicit gives us a better basis for developing expertise than treating the right person as an inexplicable talent we must somehow find.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://chrissanders.org/2021/12/dissertation/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
             <title>Making Analytic Confidence Visible: An Operational Rubric for Cyber Analysis</title>
             <link>https://cyberdefensereview.army.mil/CDR-Content/Articles/Article-View/Article/4611691/making-analytic-confidence-visible-an-operational-rubric-for-cyber-analysis/</link>
             <guid isPermaLink='true'>https://cyberdefensereview.army.mil/CDR-Content/Articles/Article-View/Article/4611691/making-analytic-confidence-visible-an-operational-rubric-for-cyber-analysis/</guid>
@@ -32,6 +56,30 @@
 
 
                 &lt;p&gt;&lt;a href="https://cyberdefensereview.army.mil/CDR-Content/Articles/Article-View/Article/4611691/making-analytic-confidence-visible-an-operational-rubric-for-cyber-analysis/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Persistent Engagement</title>
+            <link>https://www.lawfaremedia.org/article/persistent-engagement-and-the-illusion-of-cyber-equilibrium</link>
+            <guid isPermaLink='true'>https://www.lawfaremedia.org/article/persistent-engagement-and-the-illusion-of-cyber-equilibrium</guid>
+            <pubDate>Mon, 14 Sep 2026 16:00:00 GMT</pubDate>
+            <description>
+                &lt;p&gt;In &lt;a href="https://www.lawfaremedia.org/article/persistent-engagement-and-the-illusion-of-cyber-equilibrium"&gt;&lt;em&gt;Persistent Engagement and the Illusion of Cyber Equilibrium&lt;/em&gt;&lt;/a&gt;, Jason Healey and Jack Snyder question whether continuous cyber operations can produce a stable equilibrium. Their challenge goes beyond counting the operations conducted: if the strategy is meant to change adversary behavior, its assessment must look for evidence of that change.&lt;/p&gt;
+
+&lt;p&gt;Disruption may have value even when it does not create lasting stability. But a record of activity alone cannot tell us whether persistent engagement achieved the outcome it promised.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://www.lawfaremedia.org/article/persistent-engagement-and-the-illusion-of-cyber-equilibrium"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
+        <item>
+            <title>Interlude</title>
+            <link>https://zacs.site/blog/interlude.html</link>
+            <guid isPermaLink='true'>https://zacs.site/blog/interlude.html</guid>
+            <pubDate>Wed, 09 Sep 2026 11:42:30 GMT</pubDate>
+            <description>
+                &lt;p&gt;It has been a while since I last posted. I have mostly written elsewhere, and on different subjects than I used to cover here: these days, cyber operations, artificial intelligence, and the changing nature of work have all found their way into my writing. But while venues like the &lt;a href="https://mwi.westpoint.edu/advantage-defense-artificial-intelligence-at-the-tactical-cyber-edge/"&gt;Modern War Institute&lt;/a&gt; and &lt;a href="https://warontherocks.com/2024/07/a-cyber-force-is-not-the-only-solution/"&gt;War on the Rocks&lt;/a&gt; have been useful vehicles, nitpicky and pedantic editorial processes and publication delays of weeks to months have made keeping up with the rapid pace of change impossible. I think it&amp;#8217;s time to share more thoughts here again.&lt;/p&gt;
+                &lt;p&gt;&lt;a href="https://zacs.site/blog/interlude.html"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
             </description>
         </item>
         <item>
