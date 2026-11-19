@@ -7,9 +7,27 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 18 Nov 2026 08:46:53 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 01:52:50 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>Detecting &amp; Responding to AI-aided or Agentic Attacks</title>
+            <link>https://www.sudorem.dev/blog/detecting-and-responding-to-ai/</link>
+            <guid isPermaLink='true'>https://www.sudorem.dev/blog/detecting-and-responding-to-ai/</guid>
+            <pubDate>Thu, 19 Nov 2026 13:51:33 GMT</pubDate>
+            <description>
+                &lt;p&gt;Michael Tigges in &lt;a href="https://www.sudorem.dev/blog/detecting-and-responding-to-ai/"&gt;&lt;em&gt;Detecting &amp;#38; Responding to AI-aided or Agentic Attacks&lt;/em&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;Correcting a path or adjusting an argument requires very little work. Changing how a tool handles errors, incorporates discoveries, and orders subsequent operations requires more. As the complexity and novelty of the change increase, so does the amount of effort a human would ordinarily need to implement it. That&amp;#8217;s the relationship I care about: new information, the complexity of the resulting adaptation, and the time between the two. A prepared workflow has already paid much of that implementation cost. When the activity repeatedly accommodates new details and unfamiliar failures within short intervals, I start considering how an LLM could be supplying that adaptation as the operation progresses.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;He has a slew of good advice for investigations in general, whether or not AI plays a role. And while I think it&amp;#8217;s not helpful to hunt for &lt;em&gt;only&lt;/em&gt; activity involving AI, as if C2 bears some indelible watermark if it involves AI in any form, understanding some of the tells that might indicate AI was used could be helpful when &lt;a href="https://www.mitre.org/sites/default/files/2021-11/prs-19-3892-ttp-based-hunting.pdf"&gt;pulling the investigative thread&lt;/a&gt;.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://www.sudorem.dev/blog/detecting-and-responding-to-ai/"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>The Unit of AI Work Is the Loop</title>
             <link>https://zacs.site/blog/the-unit-of-ai-work-is-the-loop.html</link>
