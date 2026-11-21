@@ -7,9 +7,21 @@
     <language>en-us</language>
     <copyright>Copyright 2012-2020, Zac Szewczyk. All rights reserved.</copyright>
     <atom:link href="https://zacs.site/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 21 Nov 2026 04:03:21 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 04:04:54 GMT</lastBuildDate>
     <ttl>5</ttl>
     <generator>First Crack</generator>
+        <item>
+            <title>The Sweet Spot Is a Day Old</title>
+            <link>https://cyb3rops.medium.com/the-sweet-spot-is-a-day-old-11881459f82b)</link>
+            <guid isPermaLink='true'>https://cyb3rops.medium.com/the-sweet-spot-is-a-day-old-11881459f82b)</guid>
+            <pubDate>Sat, 21 Nov 2026 16:04:44 GMT</pubDate>
+            <description>
+                &lt;p&gt;Great advice from Florian Roth.&lt;/p&gt;
+
+
+                &lt;p&gt;&lt;a href="https://cyb3rops.medium.com/the-sweet-spot-is-a-day-old-11881459f82b)"&gt;Permalink.&lt;/a&gt;&lt;/p&gt;
+            </description>
+        </item>
         <item>
             <title>Detecting &amp; Responding to AI-aided or Agentic Attacks</title>
             <link>https://www.sudorem.dev/blog/detecting-and-responding-to-ai/</link>
